@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_PalRandomIncidentPlacementDropItemDataComponent_HPP
+#define UE4SS_SDK_BP_PalRandomIncidentPlacementDropItemDataComponent_HPP
+
+class UBP_PalRandomIncidentPlacementDropItemDataComponent_C : public UPalRandomIncidentPlacementDropItemDataComponent
+{
+}; // Size: 0x600
+
+#endif
