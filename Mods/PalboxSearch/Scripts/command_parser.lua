@@ -9,7 +9,9 @@ CommandParser.CommandName = "pbs"
 CommandParser.ArgumentPrefix = "-"
 
 CommandParser.ArgumentName = {
-	PAL = "pal",
+	-- TODO: There is seemingly no way to get the user facing name for a Pal, so any user input referencing the external
+	-- name for a pal can't be mapped to the internal name. Find a way to do this so we can also search for specific pals
+	-- PAL = "pal",
 	PASSIVES = "passives"
 }
 
@@ -44,11 +46,7 @@ function CommandParser.parse(str)
 
 		local arg_val = input_parts[i + 1]
 
-		if input_parts[i] == CommandParser.ArgumentPrefix .. CommandParser.ArgumentName.PAL then
-			if string.sub(arg_val, 1, 1) ~= "-" then
-				args.pal = arg_val
-			end
-		elseif input_parts[i] == CommandParser.ArgumentPrefix .. CommandParser.ArgumentName.PASSIVES then
+		if input_parts[i] == CommandParser.ArgumentPrefix .. CommandParser.ArgumentName.PASSIVES then
 			if string.sub(arg_val, 1, 1) ~= "-" then
 				args.passives = arg_val
 			end

@@ -5,6 +5,9 @@ local PAL_UTIL = nil
 local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
 
+local PAL_STORAGE_MAX_PAGES = 32
+local PAL_STORAGE_MAX_SLOTS_PER_PAGE = 32
+
 local function init()
 	PAL_UTIL = StaticFindObject("/Script/Pal.Default__PalUtility")
 	if not PAL_UTIL:IsValid() then
@@ -82,19 +85,36 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			return
 		end
 
-		local pal = pal_storage:GetSlot(0, 0):GetHandle():TryGetIndividualParameter()
-		if not pal then
-			UTIL.log("Could not get first pal for player")
-			return
-		end
+		local found_last_pal = false
+		for i = 1, PAL_STORAGE_MAX_PAGES, 1 do
+			for j = 1, PAL_STORAGE_MAX_SLOTS_PER_PAGE, 1 do
+				local pal_slot = pal_storage:GetSlot(i - 1, j - 1)
+				if pal_slot:IsEmpty() then
+					found_last_pal = true
+					break
+				end
 
-		UTIL.log(pal.SaveParameter.CharacterID:ToString())
-		UTIL.log(tostring(pal.GetLevel()))
+				local pal = pal_slot:GetHandle():TryGetIndividualParameter()
+				if not pal then
+					UTIL.log(string.format("Could not get pal at %d, %d for player %s", i, j, player_name))
+					goto continue
+				end
 
-		local passives = pal:GetPassiveSkillList()
-		for _, passive in ipairs(passives) do
-			-- TODO: filter out passives based on player input
-			UTIL.log(passive:get():ToString())
+				local passive_skill_list_str = ""
+				local passives = pal:GetPassiveSkillList()
+				for _, passive in ipairs(passives) do
+					-- TODO: filter out passives based on player input
+					passive_skill_list_str = passive_skill_list_str .. ", " .. passive:get():ToString()
+				end
+
+				UTIL.log(string.format("%s: %s", pal:GetCharacterID():ToString(), passive_skill_list_str))
+
+				::continue::
+			end
+
+			if found_last_pal then
+				break
+			end
 		end
 	end)
 
