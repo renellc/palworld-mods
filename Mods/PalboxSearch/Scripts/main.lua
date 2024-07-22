@@ -136,6 +136,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		-- has to do with getting a Pal's handle and retrieving the localized name for a Pal. This should be
 		-- updated if there's a better way to retrieve this data, or if caching is possible without incurring too much of a
 		-- memory hit
+		local results = {}
 		for page, slot, pal_slot in pal_storage_ipairs(pal_storage) do
 			local pal = pal_slot:GetHandle():TryGetIndividualParameter()
 			if not pal then
@@ -167,19 +168,21 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 				table.insert(passive_skill_names, string.lower(passive_name["outName"]:ToString()))
 			end
 
-			-- I have a sneaking suspicion that getting the localized name for a Pal is a slow operation due to the game's
-			-- data format. This is a small optimization to avoid doing the extra lookup through GetLocalizedCharacterName.
-			if PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] == nil then
-				local localized = {}
-				DB_CHAR_PARAM:GetLocalizedCharacterName(pal_char_id, localized)
-				PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] = string.lower(localized["OutText"]:ToString())
-			end
-
-			UTIL.log(string.format("%s: %s, page %d, slot %d", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
-				table.concat(passive_skill_names, ", "), page, slot))
+			table.insert(results, {
+				name = PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
+				page = page,
+				slot = slot
+			})
 
 			::continue::
 		end
+
+		local alert_message = {}
+		for _, result in ipairs(results) do
+			table.insert(alert_message, string.format("%s Page %d Slot %d", result.name, result.page, result.slot))
+		end
+
+		PAL_UTIL:Alert(WORLD_CTX, FText(table.concat(alert_message, "\n")))
 	end)
 
 	if not is_successful then
