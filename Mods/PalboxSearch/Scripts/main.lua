@@ -45,6 +45,35 @@ local function get_player_character(player_name)
 	return nil
 end
 
+local function pal_storage_ipairs(pal_storage)
+	local page_idx = 0
+	local slot_idx = 0
+
+	local function iterator()
+		if page_idx == PAL_STORAGE_MAX_PAGES then
+			return nil
+		end
+
+		if slot_idx == PAL_STORAGE_MAX_SLOTS_PER_PAGE then
+			page_idx = page_idx + 1
+			slot_idx = 0
+		end
+
+		local curr_page_idx = page_idx
+		local curr_slot_idx = slot_idx
+		local pal_slot = pal_storage:GetSlot(curr_page_idx, curr_slot_idx)
+		if pal_slot:IsEmpty() then
+			return nil
+		end
+
+		slot_idx = slot_idx + 1
+
+		return curr_page_idx + 1, curr_slot_idx + 2, pal_slot
+	end
+
+	return iterator
+end
+
 IS_INITIALIZED = init()
 
 if IS_INITIALIZED then
@@ -112,49 +141,37 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		-- has to do with getting a Pal's handle and retrieving the localized name for a Pal. This should be
 		-- updated if there's a better way to retrieve this data, or if caching is possible without incurring too much of a
 		-- memory hit
-		local found_last_pal = false
-		for i = 1, PAL_STORAGE_MAX_PAGES, 1 do
-			for j = 1, PAL_STORAGE_MAX_SLOTS_PER_PAGE, 1 do
-				local pal_slot = pal_storage:GetSlot(i - 1, j - 1)
-				if pal_slot:IsEmpty() then
-					found_last_pal = true
-					break
-				end
-
-				local pal = pal_slot:GetHandle():TryGetIndividualParameter()
-				if not pal then
-					UTIL.log(string.format("Could not get pal at %d, %d for player %s", i, j, player_name))
-					goto continue
-				end
-
-				local passives = pal:GetPassiveSkillList()
-				local passive_skill_names = {}
-				for _, passive in ipairs(passives) do
-					-- TODO: filter out passives based on player input
-					local passive_name = {}
-					PAL_UI_UTIL:GetPassiveSkillName(WORLD_CTX, passive:get(), passive_name)
-					table.insert(passive_skill_names, string.lower(passive_name["outName"]:ToString()))
-				end
-
-				local pal_char_id = pal:GetCharacterID()
-				local pal_char_id_as_str = pal_char_id:ToString()
-
-				-- I have a sneaking suspicion that getting the localized name for a Pal is a slow operation due to the game's
-				-- data format. This is a small optimization to avoid doing the extra lookup through GetLocalizedCharacterName.
-				if PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] == nil then
-					local localized = {}
-					DB_CHAR_PARAM:GetLocalizedCharacterName(pal_char_id, localized)
-					PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] = string.lower(localized["OutText"]:ToString())
-				end
-
-				UTIL.log(string.format("%s: %s", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
-					table.concat(passive_skill_names, ", ")))
-				::continue::
+		for page, slot, pal_slot in pal_storage_ipairs(pal_storage) do
+			local pal = pal_slot:GetHandle():TryGetIndividualParameter()
+			if not pal then
+				UTIL.log(string.format("Could not get pal at page %d, slot %d for player %s", page, slot, player_name))
+				goto continue
 			end
 
-			if found_last_pal then
-				break
+			local passives = pal:GetPassiveSkillList()
+			local passive_skill_names = {}
+			for _, passive in ipairs(passives) do
+				-- TODO: filter out passives based on player input
+				local passive_name = {}
+				PAL_UI_UTIL:GetPassiveSkillName(WORLD_CTX, passive:get(), passive_name)
+				table.insert(passive_skill_names, string.lower(passive_name["outName"]:ToString()))
 			end
+
+			local pal_char_id = pal:GetCharacterID()
+			local pal_char_id_as_str = pal_char_id:ToString()
+
+			-- I have a sneaking suspicion that getting the localized name for a Pal is a slow operation due to the game's
+			-- data format. This is a small optimization to avoid doing the extra lookup through GetLocalizedCharacterName.
+			if PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] == nil then
+				local localized = {}
+				DB_CHAR_PARAM:GetLocalizedCharacterName(pal_char_id, localized)
+				PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] = string.lower(localized["OutText"]:ToString())
+			end
+
+			UTIL.log(string.format("%s: %s", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
+				table.concat(passive_skill_names, ", ")))
+
+			::continue::
 		end
 	end)
 
