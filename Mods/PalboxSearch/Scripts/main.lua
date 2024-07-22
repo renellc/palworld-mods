@@ -2,14 +2,12 @@ local MOD_NAME = "PalboxSearch"
 
 local PAL_UTIL = nil
 
-local function log(message)
-	print(string.format("[%s]: %s", MOD_NAME, message))
-end
+local UTIL = require("palbox_search_util")
 
 local function init()
 	PAL_UTIL = StaticFindObject("/Script/Pal.Default__PalUtility")
 	if not PAL_UTIL:IsValid() then
-		log("Could not load PalUtility")
+		UTIL.log("Could not load PalUtility")
 		return false
 	end
 
@@ -40,14 +38,14 @@ end
 IS_INITIALIZED = init()
 
 if IS_INITIALIZED then
-	log("Successfully initialized")
+	UTIL.log("Successfully initialized")
 else
-	log("Failed to initialize")
+	UTIL.log("Failed to initialize")
 end
 
-RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(self, data)
+RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, data)
 	if not IS_INITIALIZED then
-		log("Will not process command, PalboxSearch failed to initialize")
+		UTIL.log("Will not process command, PalboxSearch failed to initialize")
 		return
 	end
 
@@ -55,40 +53,40 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(sel
 		local player_name = data:get().Sender:ToString()
 		local player = get_player_character(player_name)
 		if not player then
-			log(string.format("Player %s does not exist", player_name))
+			UTIL.log(string.format("Player %s does not exist", player_name))
 			return
 		end
 
 		local player_state = PAL_UTIL:GetPlayerStateByPlayer(player)
 
 		if not player_state then
-			log(string.format("Could not get player state for %s", data:get().Sender:ToString()))
+			UTIL.log(string.format("Could not get player state for %s", data:get().Sender:ToString()))
 			return
 		end
 
 		local pal_storage = player_state:GetPalStorage()
 		if not pal_storage then
-			log(string.format("Could not get pal storage for player %s", data:get().Sender:ToString()))
+			UTIL.log(string.format("Could not get pal storage for player %s", data:get().Sender:ToString()))
 			return
 		end
 
 		local pal = pal_storage:GetSlot(0, 0):GetHandle():TryGetIndividualParameter()
 		if not pal then
-			log("Could not get first pal for player")
+			UTIL.log("Could not get first pal for player")
 			return
 		end
 
-		log(pal.SaveParameter.CharacterID:ToString())
-		log(tostring(pal.GetLevel()))
+		UTIL.log(pal.SaveParameter.CharacterID:ToString())
+		UTIL.log(tostring(pal.GetLevel()))
 
 		local passives = pal:GetPassiveSkillList()
 		for _, passive in ipairs(passives) do
 			-- TODO: filter out passives based on player input
-			log(passive:get():ToString())
+			UTIL.log(passive:get():ToString())
 		end
 	end)
 
 	if not is_successful then
-		log(error)
+		-- TODO: Add better error handling
 	end
 end)
