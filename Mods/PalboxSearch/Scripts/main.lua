@@ -6,7 +6,7 @@ local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
 
 local PAL_STORAGE_MAX_PAGES = 32
-local PAL_STORAGE_MAX_SLOTS_PER_PAGE = 32
+local PAL_STORAGE_MAX_SLOTS_PER_PAGE = 30
 
 local function init()
 	PAL_UTIL = StaticFindObject("/Script/Pal.Default__PalUtility")
@@ -24,7 +24,7 @@ local function get_player_character(player_name)
 		error("Could not retrieve full list of players")
 	end
 
-	for _, player in pairs(players) do
+	for _, player in pairs(players or {}) do
 		-- TODO: Accessing the player's name like this might be unsafe and might cause the game to dereference a null
 		-- pointer. This should be changed if there is another way to access this data.
 		local params = player.CharacterParameterComponent.IndividualParameter.SaveParameter
