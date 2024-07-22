@@ -18,7 +18,6 @@ local function init()
 	return true
 end
 
-
 local function get_player_character(player_name)
 	local players = FindAllOf("PalPlayerCharacter")
 	if not players then
@@ -47,13 +46,29 @@ else
 	UTIL.log("Failed to initialize")
 end
 
+local PAL_CHAR_ID_TO_LOCALIZED_NAMES = {}
+
+local WORLD_CTX = nil
+local DB_CHAR_PARAM = nil
+
 RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, data)
 	if not IS_INITIALIZED then
 		UTIL.log("Will not process command, PalboxSearch failed to initialize")
 		return
 	end
 
+
 	local is_successful, error = pcall(function()
+		if not WORLD_CTX then
+			UTIL.log("not found world ctx")
+			WORLD_CTX = FindFirstOf("PalGetWorldUObject")
+		end
+
+		if not DB_CHAR_PARAM then
+			UTIL.log("not found db")
+			DB_CHAR_PARAM = PAL_UTIL:GetDatabaseCharacterParameter(WORLD_CTX)
+		end
+
 		local player_name = data:get().Sender:ToString()
 		local player = get_player_character(player_name)
 		if not player then
@@ -73,6 +88,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			UTIL.log(key .. " " .. value)
 		end
 
+
 		local player_state = PAL_UTIL:GetPlayerStateByPlayer(player)
 		if not player_state then
 			UTIL.log(string.format("Could not get player state for %s", data:get().Sender:ToString()))
@@ -85,6 +101,10 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			return
 		end
 
+		-- TODO: This for loop causes the game to lag for a split second when a command is registered. I suspect that it
+		-- has to do with getting a Pal's handle and retrieving the localized name for a Pal. This should be
+		-- updated if there's a better way to retrieve this data, or if caching is possible without incurring too much of a
+		-- memory hit
 		local found_last_pal = false
 		for i = 1, PAL_STORAGE_MAX_PAGES, 1 do
 			for j = 1, PAL_STORAGE_MAX_SLOTS_PER_PAGE, 1 do
@@ -107,8 +127,18 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 					passive_skill_list_str = passive_skill_list_str .. ", " .. passive:get():ToString()
 				end
 
-				UTIL.log(string.format("%s: %s", pal:GetCharacterID():ToString(), passive_skill_list_str))
+				local pal_char_id = pal:GetCharacterID()
+				local pal_char_id_as_str = pal_char_id:ToString()
 
+				-- I have a sneaking suspicion that getting the localized name for a Pal is a slow operation due to the game's
+				-- data format. This is a small optimization to avoid doing the extra lookup through GetLocalizedCharacterName.
+				if PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] == nil then
+					local localized = {}
+					DB_CHAR_PARAM:GetLocalizedCharacterName(pal_char_id, localized)
+					PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] = string.lower(localized["OutText"]:ToString())
+				end
+
+				-- UTIL.log(string.format("%s: %s", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str], passive_skill_list_str))
 				::continue::
 			end
 
