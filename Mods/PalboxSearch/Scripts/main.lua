@@ -120,11 +120,6 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			return
 		end
 
-		for key, value in pairs(ret) do
-			UTIL.log(key .. " " .. value)
-		end
-
-
 		local player_state = PAL_UTIL:GetPlayerStateByPlayer(player)
 		if not player_state then
 			UTIL.log(string.format("Could not get player state for %s", data:get().Sender:ToString()))
@@ -148,15 +143,6 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 				goto continue
 			end
 
-			local passives = pal:GetPassiveSkillList()
-			local passive_skill_names = {}
-			for _, passive in ipairs(passives) do
-				-- TODO: filter out passives based on player input
-				local passive_name = {}
-				PAL_UI_UTIL:GetPassiveSkillName(WORLD_CTX, passive:get(), passive_name)
-				table.insert(passive_skill_names, string.lower(passive_name["outName"]:ToString()))
-			end
-
 			local pal_char_id = pal:GetCharacterID()
 			local pal_char_id_as_str = pal_char_id:ToString()
 
@@ -168,8 +154,29 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 				PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] = string.lower(localized["OutText"]:ToString())
 			end
 
-			UTIL.log(string.format("%s: %s", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
-				table.concat(passive_skill_names, ", ")))
+			if PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] ~= ret.pal then
+				goto continue
+			end
+
+			local passives = pal:GetPassiveSkillList()
+			local passive_skill_names = {}
+			for _, passive in ipairs(passives) do
+				-- TODO: filter out passives based on player input
+				local passive_name = {}
+				PAL_UI_UTIL:GetPassiveSkillName(WORLD_CTX, passive:get(), passive_name)
+				table.insert(passive_skill_names, string.lower(passive_name["outName"]:ToString()))
+			end
+
+			-- I have a sneaking suspicion that getting the localized name for a Pal is a slow operation due to the game's
+			-- data format. This is a small optimization to avoid doing the extra lookup through GetLocalizedCharacterName.
+			if PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] == nil then
+				local localized = {}
+				DB_CHAR_PARAM:GetLocalizedCharacterName(pal_char_id, localized)
+				PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] = string.lower(localized["OutText"]:ToString())
+			end
+
+			UTIL.log(string.format("%s: %s, page %d, slot %d", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
+				table.concat(passive_skill_names, ", "), page, slot))
 
 			::continue::
 		end
