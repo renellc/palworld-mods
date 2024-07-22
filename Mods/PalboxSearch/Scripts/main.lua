@@ -3,6 +3,7 @@ local MOD_NAME = "PalboxSearch"
 local PAL_UTIL = nil
 
 local UTIL = require("palbox_search_util")
+local command_parser = require("command_parser")
 
 local function init()
 	PAL_UTIL = StaticFindObject("/Script/Pal.Default__PalUtility")
@@ -57,8 +58,19 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			return
 		end
 
-		local player_state = PAL_UTIL:GetPlayerStateByPlayer(player)
+		---@type string
+		local message = data:get().Message:ToString()
+		local parse_success, ret = pcall(command_parser.parse, message)
+		if not parse_success then
+			UTIL.log("Error: " .. ret)
+			return
+		end
 
+		for key, value in pairs(ret) do
+			UTIL.log(key .. " " .. value)
+		end
+
+		local player_state = PAL_UTIL:GetPlayerStateByPlayer(player)
 		if not player_state then
 			UTIL.log(string.format("Could not get player state for %s", data:get().Sender:ToString()))
 			return
