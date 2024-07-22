@@ -1,6 +1,7 @@
 local MOD_NAME = "PalboxSearch"
 
 local PAL_UTIL = nil
+local PAL_UI_UTIL = nil
 
 local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
@@ -12,6 +13,12 @@ local function init()
 	PAL_UTIL = StaticFindObject("/Script/Pal.Default__PalUtility")
 	if not PAL_UTIL:IsValid() then
 		UTIL.log("Could not load PalUtility")
+		return false
+	end
+
+	PAL_UI_UTIL = StaticFindObject("/Script/Pal.Default__PalUIUtility")
+	if not PAL_UI_UTIL:IsValid() then
+		UTIL.log("Could not load PalUIUtility")
 		return false
 	end
 
@@ -120,11 +127,13 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 					goto continue
 				end
 
-				local passive_skill_list_str = ""
 				local passives = pal:GetPassiveSkillList()
+				local passive_skill_names = {}
 				for _, passive in ipairs(passives) do
 					-- TODO: filter out passives based on player input
-					passive_skill_list_str = passive_skill_list_str .. ", " .. passive:get():ToString()
+					local passive_name = {}
+					PAL_UI_UTIL:GetPassiveSkillName(WORLD_CTX, passive:get(), passive_name)
+					table.insert(passive_skill_names, string.lower(passive_name["outName"]:ToString()))
 				end
 
 				local pal_char_id = pal:GetCharacterID()
@@ -138,7 +147,8 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 					PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] = string.lower(localized["OutText"]:ToString())
 				end
 
-				-- UTIL.log(string.format("%s: %s", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str], passive_skill_list_str))
+				UTIL.log(string.format("%s: %s", PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
+					table.concat(passive_skill_names, ", ")))
 				::continue::
 			end
 
