@@ -68,7 +68,7 @@ local function pal_storage_ipairs(pal_storage)
 
 		slot_idx = slot_idx + 1
 
-		return curr_page_idx + 1, curr_slot_idx + 2, pal_slot
+		return curr_page_idx + 1, curr_slot_idx + 1, pal_slot
 	end
 
 	return iterator
