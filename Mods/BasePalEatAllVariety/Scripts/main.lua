@@ -47,8 +47,11 @@ struct FPalMonsterControllerBaseCampHungryParameter
 
 }; // Size: 0x24
 ]]
-
+local MOD_NAME = "BasePalEatAllVariety"
 local config = require("config")
+local UTIL = require("hungry_pal_util")
+
+local hungry_pals = {}
 
 local function track_hungry_pal(self)
 
