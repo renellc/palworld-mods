@@ -22,7 +22,7 @@ function hungry_pal_util.track_pal(APalAIActionBase) --param is subclass of UPal
     local SaveParameter = IndividualParameter.SaveParameter                      --@type: struct FPalIndividualCharacterSaveParameter
 
     pal.id = IndividualParameter.GetCharacterID():ToString()
-    pal.max_hunger = CharacterParameterComponent:GetMaxFullStomach()
+    pal.max_hunger = CharacterParameterComponent:GetMaxFullStomach()                                                                                                                                                                                                                                    
 
 end
 
