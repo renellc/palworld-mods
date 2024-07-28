@@ -46,4 +46,7 @@ luac.out
 
 # End of https://www.toptal.com/developers/gitignore/api/lua
 
-.code-workspace
+Mods/CommunalGuildExp/Scripts/party.txt
+Mods/CommunalGuildExp/Scripts/known_players.txt
+
+*.code-workspace
