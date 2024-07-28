@@ -137,13 +137,11 @@ local function level_up()
         print(tostring(cur_lv))
         if cur_lv > party["level"] then
             if cur_lv == 2 then
-                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player
-                .CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[1]
+                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[1]
             end
             if cur_lv ~= 55 then
                 print("Player Level Up")
-                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player
-                .CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[cur_lv]
+                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[cur_lv]
             end
             party["level"] = cur_lv
             party["exp"]   = player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp
@@ -248,13 +246,11 @@ RegisterHook("/Script/Pal.PalTechnologyData:OnUpdateLocalPlayerLevel", function(
         print(tostring(cur_lv))
         if cur_lv > party["level"] then
             if cur_lv == 2 then
-                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player
-                .CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[1]
+                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[1]
             end
             if cur_lv ~= 55 then
                 print("Player Level Up")
-                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player
-                .CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[cur_lv]
+                player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp = player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp + exp_shift[cur_lv]
             end
             party["level"] = cur_lv
             party["exp"]   = player.CharacterParameterComponent.IndividualParameter.SaveParameter.Exp
