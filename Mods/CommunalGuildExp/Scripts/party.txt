@@ -1,2 +1,2 @@
-exp=23341
-level=18
+exp=920401
+level=36
