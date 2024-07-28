@@ -4,9 +4,6 @@ import argparse
 from pathlib import Path
 
 
-PALWORLD_DEFAULT_DIR = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Palworld"
-
-
 def create_mod(mod_name: str):
     mod_dir = f"./Mods/{mod_name}"
     scripts_dir = f"{mod_dir}/Scripts"
@@ -41,6 +38,12 @@ if __name__ == "__main__":
         action=argparse.BooleanOptionalAction,
         help="Syncs the mods in this repository with the mods folder in the Palworld directory",
     )
+    parser.add_argument(
+        "-d",
+        "--directory",
+        required=True,
+        help="The location where Palworld is installed",
+    )
 
     args = parser.parse_args()
 
@@ -48,13 +51,14 @@ if __name__ == "__main__":
         print("No command given! Use help to see available commands")
         exit(1)
 
+    palworld_dir = args.directory
     curr_dir = os.getcwd()
 
     if args.create:
         create_mod(args.create)
 
     if args.sync:
-        palworld_mods_dir = Path(f"{PALWORLD_DEFAULT_DIR}/Pal/Binaries/Win64/Mods")
+        palworld_mods_dir = Path(f"{palworld_dir}/Pal/Binaries/Win64/Mods")
         repo_mods_dir = Path(f"{curr_dir}/Mods")
 
         for mod in palworld_mods_dir.iterdir():
