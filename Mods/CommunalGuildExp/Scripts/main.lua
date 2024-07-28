@@ -21,34 +21,25 @@ Every so often, I need to
 local script_path = debug.getinfo(1, "S").source:sub(2)
 script_path = script_path:match("(.*/.*/)") or script_path:match("(.*\\.*\\)")
 
-local function isEmpty(t)
+local function is_empty(t)
     for _ in pairs(t or {}) do
         return false
     end
     return true
 end
 
-function isInTable(value, tbl)
-    for index, val in ipairs(tbl or {}) do
-        if val == value then
-            return true
-        end
-    end
-    return false
-end
-
 local scale_fac = { 0.875, 0.9736842105263158, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9991941982272361, 0.9987608426270136, 0.9985443959243085, 0.9973035439137135, 0.9959864155603582, 0.994016454749439, 0.9912920210611583, 0.9879338842975207, 0.9830692130570229, 0.9766225091840143, 0.9684519442406456, 0.9579863739591219, 0.9448547821732599, 0.9287861511350679, 0.9092666580744941, 0.885906757912746, 0.8585168087121212, 0.8268961278426552, 0.7909590664786544, 0.7507265095253471, 0.7064154037548066, 0.6584439111613025, 0.6073159507700743, 0.5536989338463043, 0.4984152838576131, 0.4423777954865291, 0.3865257073462337, 0.33183566413003845, 0.2792432372411406, 0.2295878529667023, 0.18360154125113326, 0.1418657612677599, 0.10478130899937067, 0.07256651089015462, 0.04525972706758212, 0.0227363531370106, 0.00472453962281035, -0.009163981042654028, -0.019397890817029324, -0.026495421603432625, -0.030990723258252615, -0.033407177453483844, -0.03423219395281172, -0.03390230341272031, -0.03279185936074959, -0.03120895472392011, -0.02939568676677441 }
 local exp_shift = {}
-if isEmpty(exp_shift) then
-    local PalExpDatabase = FindFirstOf("PalExpDatabase")
+if is_empty(exp_shift) then
+    local PalExpDatabase = FindFirstOf("PalExpDatabase") ---@class UPalExpDatabase
 
     for i = 1, 54 do
-        exp_shift[i] = math.floor(-1.0 * scale_fac[i] * PalExpDatabase.GetNextExp(i + 1, true))
+        exp_shift[i] = math.floor(-1.0 * scale_fac[i] * PalExpDatabase:GetNextExp(i + 1, true))
     end
 end
 
 local function getPlayers()
-    local all_player_list = FindAllOf("PalPlayerCharacter")
+    local all_player_list = FindAllOf("PalPlayerCharacter") ---@type APalPlayerCharacter[]?
     local real_players_list = {}
     local real_players_levels = {}
     local i = 1
@@ -294,10 +285,10 @@ end)
 LoopAsync(1000, function()
     print("Syncing players!")
     syncPlayers()
+    return false
 end)
 
 RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function()
-    local player = FindFirstOf("PalPlayerCharacter")
-    local player_params = player.CharacterParameterComponent.IndividualParameter.SaveParameter
+    print(_VERSION)
 end)
 

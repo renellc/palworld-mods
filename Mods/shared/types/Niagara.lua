@@ -3217,7 +3217,7 @@ UNiagaraScriptSourceBase = {}
 ---@field NDISkelMesh_GpuUniformSamplingFormat ENDISkelMesh_GpuUniformSamplingFormat::Type
 ---@field NDISkelMesh_AdjacencyTriangleIndexFormat ENDISkelMesh_AdjacencyTriangleIndexFormat::Type
 ---@field NDIStaticMesh_AllowDistanceFields boolean
----@field NDICollisionQuery_AsyncGpuTraceProviderOrder TArray<ENDICollisionQuery_AsyncGpuTraceProvider::Type>
+---@field NDICollisionQuery_AsyncGpuTraceProviderOrder TArray<ENDICollisionQuery_AsyncGpuTraceProvider>
 ---@field PlatformSetRedirects TArray<FNiagaraPlatformSetRedirect>
 UNiagaraSettings = {}
 

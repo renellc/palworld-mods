@@ -1,7 +1,7 @@
 local MOD_NAME = "PalboxSearch"
 
-local PAL_UTIL = nil
-local PAL_UI_UTIL = nil
+local PAL_UTIL ---@class UPalUtility
+local PAL_UI_UTIL ---@class UPalUIUtility
 
 local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
@@ -10,13 +10,13 @@ local PAL_STORAGE_MAX_PAGES = 32
 local PAL_STORAGE_MAX_SLOTS_PER_PAGE = 30
 
 local function init()
-	PAL_UTIL = StaticFindObject("/Script/Pal.Default__PalUtility")
+	PAL_UTIL = StaticFindObject("/Script/Pal.Default__PalUtility") ---@class UPalUtility?
 	if not PAL_UTIL:IsValid() then
 		UTIL.log("Could not load PalUtility")
 		return false
 	end
 
-	PAL_UI_UTIL = StaticFindObject("/Script/Pal.Default__PalUIUtility")
+	PAL_UI_UTIL = StaticFindObject("/Script/Pal.Default__PalUIUtility") ---@class UPalUIUtility?
 	if not PAL_UI_UTIL:IsValid() then
 		UTIL.log("Could not load PalUIUtility")
 		return false
@@ -26,7 +26,7 @@ local function init()
 end
 
 local function get_player_character(player_name)
-	local players = FindAllOf("PalPlayerCharacter")
+	local players = FindAllOf("PalPlayerCharacter") ---@type APalPlayerCharacter[]?
 	if not players then
 		error("Could not retrieve full list of players")
 	end
@@ -84,7 +84,7 @@ end
 
 local PAL_CHAR_ID_TO_LOCALIZED_NAMES = {}
 
-local WORLD_CTX = nil
+local WORLD_CTX = nil ---@class UPalGetWorldUObject
 local DB_CHAR_PARAM = nil
 
 RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, data)
@@ -97,7 +97,12 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 	local is_successful, error = pcall(function()
 		if not WORLD_CTX then
 			UTIL.log("not found world ctx")
-			WORLD_CTX = FindFirstOf("PalGetWorldUObject")
+			WORLD_CTX = FindFirstOf("PalGetWorldUObject") ---@class UPalGetWorldUObject?
+
+			if WORLD_CTX == nil then
+				UTIL.log("World context not found")
+				return
+			end
 		end
 
 		if not DB_CHAR_PARAM then

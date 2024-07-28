@@ -14,8 +14,8 @@
 ---@field Test_Content UBP_PalTextBlock_C
 ---@field WBP_PalInvisibleButton UWBP_PalInvisibleButton_C
 ---@field OnClicked FWBP_Title_MenuButton_COnClicked
----@field buttonType E_PalUITitleMenuButtonType::Type
----@field MsgIDMap TMap<E_PalUITitleMenuButtonType::Type, FDataTableRowHandle>
+---@field buttonType E_PalUITitleMenuButtonType
+---@field MsgIDMap TMap<E_PalUITitleMenuButtonType, FDataTableRowHandle>
 UWBP_Title_MenuButton_C = {}
 
 ---@param BindedMenuType E_PalUITitleMenuButtonType::Type
