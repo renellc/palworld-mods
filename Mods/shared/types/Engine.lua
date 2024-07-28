@@ -31378,8 +31378,8 @@ UUserDefinedStruct = {}
 
 ---@class UUserInterfaceSettings : UDeveloperSettings
 ---@field RenderFocusRule ERenderFocusRule
----@field HardwareCursors TMap<EMouseCursor::Type, FHardwareCursorReference>
----@field SoftwareCursors TMap<EMouseCursor::Type, FSoftClassPath>
+---@field HardwareCursors TMap<EMouseCursor, FHardwareCursorReference>
+---@field SoftwareCursors TMap<EMouseCursor, FSoftClassPath>
 ---@field DefaultCursor FSoftClassPath
 ---@field TextEditBeamCursor FSoftClassPath
 ---@field CrosshairsCursor FSoftClassPath

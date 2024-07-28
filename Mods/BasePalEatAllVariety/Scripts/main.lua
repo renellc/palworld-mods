@@ -59,6 +59,7 @@ end
 
 local function try_eat_different_food(self)
     self.EatTime = config.eat_speed
+
 end
 
 
@@ -67,8 +68,8 @@ local hooked = false
 local function hookBaseCampRecoverHungry()
     if not hooked then
         ExecuteWithDelay(5000, function()
-            RegisterHook("/Game/Pal/Blueprint/Controller/AIAction/BaseCamp/RecoverHungry/BP_AIAction_BaseCampRecoverHungry.BP_AIAction_BaseCampRecoverHungry_C:ChangeActionEat", track_hungry_pal(self))
-            RegisterHook("/Game/Pal/Blueprint/Controller/AIAction/BaseCamp/RecoverHungry/BP_AIAction_BaseCampRecoverHungry_Eat.BP_AIAction_BaseCampRecoverHungry_Eat_C:OnFinishEatingTime", try_eat_different_food(self))
+            -- RegisterHook("/Game/Pal/Blueprint/Controller/AIAction/BaseCamp/RecoverHungry/BP_AIAction_BaseCampRecoverHungry.BP_AIAction_BaseCampRecoverHungry_C:ChangeActionEat", track_hungry_pal(self))
+            -- RegisterHook("/Game/Pal/Blueprint/Controller/AIAction/BaseCamp/RecoverHungry/BP_AIAction_BaseCampRecoverHungry_Eat.BP_AIAction_BaseCampRecoverHungry_Eat_C:OnFinishEatingTime", try_eat_different_food(self))
         end)
         hooked = true
     end

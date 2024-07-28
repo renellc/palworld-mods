@@ -12,8 +12,8 @@
 ---@field Text_Main UBP_PalTextBlock_C
 ---@field WBP_PalInvisibleButton UWBP_PalInvisibleButton_C
 ---@field OnClicked FWBP_CharaCre_MenuButton_COnClicked
----@field BindCategory E_UICharacterMakeCategory::Type
----@field MsgIDMap TMap<E_UICharacterMakeCategory::Type, FDataTableRowHandle>
+---@field BindCategory E_UICharacterMakeCategory
+---@field MsgIDMap TMap<E_UICharacterMakeCategory, FDataTableRowHandle>
 UWBP_CharaCre_MenuButton_C = {}
 
 ---@param CategoryType E_UICharacterMakeCategory::Type

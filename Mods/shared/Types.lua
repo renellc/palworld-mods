@@ -583,7 +583,7 @@ function FString:ToString() end
 function FString:Clear() end
 
 
----@class FieldClass : LocalObject
+---@class FieldClass : UObject
 FieldClass = {}
 
 ---Returns the FName of this class by copy.
@@ -592,10 +592,16 @@ function FieldClass:GetFName() end
 
 
 ---@class FName
+FName = {}
 
+---@return string
+function FName:ToString() end
 
 ---@class FText
+FText = {}
 
+---@return string
+function FText:ToString() end
 
 ---@class RemoteObject
 RemoteObject = {}
