@@ -55,3 +55,7 @@ Mods/SandboxMods/*
 *.code-workspace
 
 .env
+
+# Misc
+.fdignore
+.rgignore
