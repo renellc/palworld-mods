@@ -19,7 +19,7 @@ def read_env_file(env_file_path: str):
 
 
 def create_mod(mod_name: str):
-    mod_dir = f"./Mods/{mod_name}"
+    mod_dir = f"../Mods/{mod_name}"
     scripts_dir = f"{mod_dir}/Scripts"
     enabled_txt = f"{mod_dir}/enabled.txt"
     main_file = f"{scripts_dir}/main.lua"
@@ -67,13 +67,11 @@ if __name__ == "__main__":
         print("No command given! Use help to see available commands")
         exit(1)
 
-    curr_dir = os.getcwd()
-
     if args.create:
         create_mod(args.create)
 
     if args.sync:
-        repo_mods_dir = Path(f"{curr_dir}/Mods")
+        repo_mods_dir = Path(f"../Mods")
         repo_shared_dir = Path(f"{repo_mods_dir.resolve()}/shared")
 
         if "PALWORLD_CLIENT_DIR" in env:
@@ -105,7 +103,7 @@ if __name__ == "__main__":
                 for line in lines:
                     key, value = line.split("=")
                     if key == "SERVER":
-                        is_server_mod = True if value == "true" else False
+                        is_server_mod = True if value.strip() == "true" else False
 
                 if is_server_mod:
                     if "PALWORLD_SERVER_DIR" not in env:
@@ -117,7 +115,7 @@ if __name__ == "__main__":
                     symlink_dir = Path(
                         f"{server_dir}/Pal/Binaries/Win64/Mods/{mod.name}"
                     )
-                    symlink_dir.symlink_to(mod)
+                    symlink_dir.symlink_to(mod.resolve())
                     print(f"Synced {mod.name} to Palworld server directory")
                 else:
                     if "PALWORLD_CLIENT_DIR" not in env:
@@ -130,7 +128,7 @@ if __name__ == "__main__":
                     symlink_dir = Path(
                         f"{client_dir}/Pal/Binaries/Win64/Mods/{mod.name}"
                     )
-                    symlink_dir.symlink_to(mod)
+                    symlink_dir.symlink_to(mod.resolve())
                     print(f"Synced {mod.name} to Palworld client directory")
                 f.close()
 

@@ -7,7 +7,7 @@ A collection of custom Palworld mods
 In order to sync mods correctly, you'll first need to set the correct environment variables that specify the
 directories for the Palworld client and/or the Palworld server. To do this:
 
-1. Create a `.env` file in the root of the repository
+1. Create a `.env` file in the `python` directory
 2. In this file, you can specify two variables
     - `PALWORLD_CLIENT_DIR`: The path of the Palworld client directory
     - `PALWORLD_SERVER_DIR`: The path of the Palworld server directory
@@ -21,12 +21,11 @@ PALWORLD_SERVER_DIR=C:\Program Files (x86)\Steam\steamapps\common\Palserver
 
 Replace the values with the ones on your system.
 
-Next, run the Palworld mod manager script by using the following command in your terminal
+Next, run the Palworld mod manager script by using the following command in your terminal. Make sure you have
+Python 3.10+ and Poetry installed before running the following commands.
 
-`python ./scripts/palworld-mods.py -s`
+1. Change directory to the `python` directory
+2. Run `poetry install` to make sure all Python dependencies are installed
+3. Run `poetry shell` to enter the Python virtual environment
+4. Run `python palworld_mod_manager.py -s` to sync the mods from this repo into your Palworld directories.
 
-or 
-
-`python3 ./scripts/palworld-mods.py -s`
-
-This will correctly sync the mods in this repository to the correct Palworld folders.
