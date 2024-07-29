@@ -1,7 +1,11 @@
-import os
-import argparse
+import click
 
 from pathlib import Path
+from typing import Dict, Union
+
+
+REPO_MODS_DIR = Path("../Mods")
+PALWORLD_MODS_DIR_PATH = "/Pal/Binaries/Win64/Mods"
 
 
 def read_env_file(env_file_path: str):
@@ -18,118 +22,160 @@ def read_env_file(env_file_path: str):
     return env_vars
 
 
-def create_mod(mod_name: str):
-    mod_dir = f"../Mods/{mod_name}"
-    scripts_dir = f"{mod_dir}/Scripts"
-    enabled_txt = f"{mod_dir}/enabled.txt"
-    main_file = f"{scripts_dir}/main.lua"
+@click.command()
+@click.option("-c", "--create", type=str, nargs=1, help="Creates a new mod")
+@click.option(
+    "-s",
+    "--sync",
+    type=str,
+    is_flag=True,
+    help="Syncs mods with Palworld",
+)
+def main(create: str, sync: bool):
+    if create:
+        mod_type = click.prompt(
+            "Select the mod type",
+            default="Server",
+            type=click.Choice(["Server", "Client"], case_sensitive=False),
+            show_choices=True,
+            show_default=True,
+        )
 
-    os.makedirs(scripts_dir)
+        create_mod(create, mod_type)
+        click.echo(f'Successfully created {mod_type} mod "{create}"!')
 
-    with open(main_file, "w+") as f:
+    if sync:
+        try:
+            env = read_env_file("./.env")
+            client_dir = (
+                env["PALWORLD_CLIENT_DIR"] if "PALWORLD_CLIENT_DIR" in env else None
+            )
+            server_dir = (
+                env["PALWORLD_SERVER_DIR"] if "PALWORLD_SERVER_DIR" in env else None
+            )
+
+            synced_mods = sync_mods(client_dir, server_dir)
+
+            click.echo("Finished syncing mods!")
+            click.echo("Sync Report:")
+
+            for mod_name, report in synced_mods.items():
+                click.echo(f"{mod_name}: {report}")
+        except Exception as e:
+            click.echo("Failed to sync mods:")
+            click.echo(e)
+            exit(1)
+
+    exit(0)
+
+
+def create_mod(mod_name: str, mod_type: str):
+    mod_dir = Path(f"{REPO_MODS_DIR.resolve()}/{mod_name}")
+    scripts_dir = Path(f"{mod_dir.resolve()}/Scripts")
+
+    scripts_dir.mkdir(parents=True)
+
+    enabled_txt_file = Path(f"{mod_dir.resolve()}/enabled.txt")
+    with open(enabled_txt_file.resolve(), "w+") as f:
+        f.write("SERVER=true" if mod_type == "Server" else "SERVER=false")
         f.close()
 
-    with open(enabled_txt, "w+") as f:
+    main_lua_file = Path(f"{scripts_dir.resolve()}/main.lua")
+    with open(main_lua_file.resolve(), "w+") as f:
         f.close()
+
+
+def sync_mods(
+    palworld_client_dir_path: Union[str, None],
+    palworld_server_dir_path: Union[str, None],
+) -> Dict[str, str]:
+    is_invalid_client_dir_path = (
+        palworld_client_dir_path is None or palworld_client_dir_path.strip() == ""
+    )
+    is_invalid_server_dir_path = (
+        palworld_server_dir_path is None or palworld_server_dir_path.strip() == ""
+    )
+
+    if is_invalid_client_dir_path and is_invalid_server_dir_path:
+        raise Exception(
+            "No valid paths were provided for the client and server directory"
+        )
+
+    client_mod_dir = None
+    server_mod_dir = None
+
+    if palworld_client_dir_path is not None:
+        client_mod_dir = Path(f"{palworld_client_dir_path}{PALWORLD_MODS_DIR_PATH}")
+        print(client_mod_dir.resolve())
+        if not client_mod_dir.is_dir():
+            raise FileNotFoundError("Provided Palworld client directory does not exist")
+
+    if palworld_server_dir_path is not None:
+        server_mod_dir = Path(f"{palworld_server_dir_path}{PALWORLD_MODS_DIR_PATH}")
+        if not server_mod_dir.is_dir():
+            raise FileNotFoundError("Provided Palworld server directory does not exist")
+
+    repo_mods_shared_dir = Path(f"{REPO_MODS_DIR.resolve()}/shared")
+
+    if client_mod_dir is not None:
+        for dir in client_mod_dir.iterdir():
+            if dir.is_symlink():
+                dir.rmdir() if dir.is_dir() else dir.unlink()
+        client_mod_shared_dir = Path(f"{client_mod_dir.resolve()}/shared")
+        client_mod_shared_dir.symlink_to(repo_mods_shared_dir.resolve())
+
+    if server_mod_dir is not None:
+        for dir in server_mod_dir.iterdir():
+            if dir.is_symlink():
+                dir.rmdir() if dir.is_dir() else dir.unlink()
+        client_mod_shared_dir = Path(f"{server_mod_dir.resolve()}/shared")
+        client_mod_shared_dir.symlink_to(repo_mods_shared_dir.resolve())
+
+    mod_sync_report = dict()
+
+    for mod_dir in REPO_MODS_DIR.iterdir():
+        mod_enabled_txt_file = Path(f"{mod_dir.resolve()}/enabled.txt")
+        if not mod_enabled_txt_file.is_file():
+            continue
+
+        is_server_mod = False
+        with open(mod_enabled_txt_file.resolve(), "r") as f:
+            lines = f.readlines()
+            for line in lines:
+                key, value = line.split("=")
+
+                if key.strip() != "SERVER":
+                    continue
+
+                is_server_mod = value.strip() == "true"
+                break
+
+            f.close()
+
+        if is_server_mod:
+            if server_mod_dir is not None:
+                symlinked_dir = Path(f"{server_mod_dir.resolve()}/{mod_dir.name}")
+                symlinked_dir.symlink_to(mod_dir.resolve())
+                mod_sync_report[mod_dir.name] = "[Server]: Synced"
+            else:
+                mod_sync_report[mod_dir.name] = (
+                    "[Server]: Skipped, no Palworld server directory provided"
+                )
+
+            continue
+
+        if client_mod_dir is not None:
+            symlinked_dir = Path(f"{client_mod_dir.resolve()}/{mod_dir.name}")
+            symlinked_dir.symlink_to(mod_dir.resolve())
+            mod_sync_report[mod_dir.name] = "[Client]: Synced"
+            continue
+        else:
+            mod_sync_report[mod_dir.name] = (
+                "[Client]: Skipped, no Palworld client directory provided"
+            )
+
+    return mod_sync_report
 
 
 if __name__ == "__main__":
-    env = read_env_file("./.env")
-
-    if "PALWORLD_CLIENT_DIR" not in env and "PALWORLD_SERVER_DIR" not in env:
-        print(
-            "No environment variable set for PALWORLD_CLIENT_DIR or PALWORLD_SERVER_DIR! One of these must be set"
-        )
-        exit(1)
-
-    parser = argparse.ArgumentParser(
-        prog="Palworld Mod Manager",
-        description="Manages mods in this repo for Palworld",
-    )
-
-    parser.add_argument(
-        "-c",
-        "--create",
-        metavar="MOD_NAME",
-        type=str,
-        help="Create a new mod folder for Palworld",
-    )
-    parser.add_argument(
-        "-s",
-        "--sync",
-        action=argparse.BooleanOptionalAction,
-        help="Syncs the mods in this repository with the mods folder in the Palworld directory",
-    )
-
-    args = parser.parse_args()
-
-    if args.create is None and args.sync is None:
-        print("No command given! Use help to see available commands")
-        exit(1)
-
-    if args.create:
-        create_mod(args.create)
-
-    if args.sync:
-        repo_mods_dir = Path(f"../Mods")
-        repo_shared_dir = Path(f"{repo_mods_dir.resolve()}/shared")
-
-        if "PALWORLD_CLIENT_DIR" in env:
-            dir = env["PALWORLD_CLIENT_DIR"]
-            client_dir = Path(f"{dir}/Pal/Binaries/Win64/Mods")
-            for mod in client_dir.iterdir():
-                if mod.is_symlink():
-                    mod.rmdir()
-            client_shared_dir = Path(f"{client_dir.resolve()}/shared")
-            client_shared_dir.symlink_to(repo_shared_dir.resolve())
-
-        if "PALWORLD_SERVER_DIR" in env:
-            dir = env["PALWORLD_SERVER_DIR"]
-            server_dir = Path(f"{dir}/Pal/Binaries/Win64/Mods")
-            for mod in server_dir.iterdir():
-                if mod.is_symlink():
-                    mod.rmdir()
-            server_shared_dir = Path(f"{server_dir.resolve()}/shared")
-            server_shared_dir.symlink_to(repo_shared_dir.resolve())
-
-        for mod in repo_mods_dir.iterdir():
-            enabled_txt = Path(f"{mod.resolve()}/enabled.txt")
-            if not enabled_txt.exists():
-                continue
-
-            with open(enabled_txt.resolve()) as f:
-                lines = f.readlines()
-                is_server_mod = False
-                for line in lines:
-                    key, value = line.split("=")
-                    if key == "SERVER":
-                        is_server_mod = True if value.strip() == "true" else False
-
-                if is_server_mod:
-                    if "PALWORLD_SERVER_DIR" not in env:
-                        print(
-                            f"Cannot sync {mod.name}. Palworld server directory not specified"
-                        )
-                        continue
-                    server_dir = env["PALWORLD_SERVER_DIR"]
-                    symlink_dir = Path(
-                        f"{server_dir}/Pal/Binaries/Win64/Mods/{mod.name}"
-                    )
-                    symlink_dir.symlink_to(mod.resolve())
-                    print(f"Synced {mod.name} to Palworld server directory")
-                else:
-                    if "PALWORLD_CLIENT_DIR" not in env:
-                        print(
-                            f"Cannot sync {mod.name}. Palworld client directory not specified"
-                        )
-                        continue
-
-                    client_dir = env["PALWORLD_CLIENT_DIR"]
-                    symlink_dir = Path(
-                        f"{client_dir}/Pal/Binaries/Win64/Mods/{mod.name}"
-                    )
-                    symlink_dir.symlink_to(mod.resolve())
-                    print(f"Synced {mod.name} to Palworld client directory")
-                f.close()
-
-    exit(0)
+    main()

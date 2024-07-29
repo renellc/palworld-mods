@@ -26,6 +26,5 @@ Python 3.10+ and Poetry installed before running the following commands.
 
 1. Change directory to the `python` directory
 2. Run `poetry install` to make sure all Python dependencies are installed
-3. Run `poetry shell` to enter the Python virtual environment
-4. Run `python palworld_mod_manager.py -s` to sync the mods from this repo into your Palworld directories.
+3. Run `poetry run palworld_mod_manager.py -s` to sync the mods from this repo into your Palworld directories.
 
