@@ -558,6 +558,9 @@ function IterateGameDirectories() end
 ---@class UFunction : UObject
 UFunction = {}
 
+---@return UFunction
+function UFunction:get() end
+
 ---Attempts to call the UFunction
 ---@param ... UFunctionParams
 function UFunction:__call(...) end
@@ -575,6 +578,9 @@ function UFunction:SetFunctionFlags(Flags) end
 ---@class FString
 FString = {}
 
+---@return FString
+function FString:get() end
+
 ---Returns a string that Lua can understand
 ---@return string
 function FString:ToString() end
@@ -586,6 +592,9 @@ function FString:Clear() end
 ---@class FieldClass : UObject
 FieldClass = {}
 
+---@return FieldClass
+function FieldClass:get() end
+
 ---Returns the FName of this class by copy.
 ---@return FName
 function FieldClass:GetFName() end
@@ -594,17 +603,26 @@ function FieldClass:GetFName() end
 ---@class FName
 FName = {}
 
+---@return FName
+function FName:get() end
+
 ---@return string
 function FName:ToString() end
 
 ---@class FText
 FText = {}
 
+---@return FText
+function FText:get() end
+
 ---@return string
 function FText:ToString() end
 
 ---@class RemoteObject
 RemoteObject = {}
+
+---@return RemoteObject
+function RemoteObject:get() end
 
 ---Returns whether this object is valid or not
 ---@return boolean
@@ -613,6 +631,9 @@ function RemoteObject:IsValid() end
 
 ---@class Property : RemoteObject
 Property = {}
+
+---@return Property
+function Property:get() end
 ---Returns the full name & path for this property.
 ---@return string
 function Property:GetFullName() end
@@ -646,6 +667,9 @@ function Property:ImportText(Buffer, Data, PortFlags, OwnerObject) end
 
 ---@class ObjectProperty : Property
 ObjectProperty = {}
+
+---@return ObjectProperty
+function ObjectProperty:get() end
 
 ---Returns the class that this property holds.
 ---@return UClass
@@ -682,6 +706,9 @@ function GetInner() end
 ---@class UObjectReflection
 UObjectReflection = {}
 
+---@return UObjectReflection
+function UObjectReflection:get() end
+
 ---Returns a property meta-data object
 ---@param PropertyName string
 ---@return Property
@@ -690,6 +717,9 @@ function UObjectReflection:GetProperty(PropertyName) end
 
 ---@class UObject : RemoteObject
 UObject = {}
+
+---@return UObject
+function UObject:get() end
 
 ---Attempts to return either a member variable or a callable UFunction
 ---Can return any type, you can use the `type()` function on the returned value to figure out what Lua class it's using (if non-trivial type)
@@ -793,6 +823,9 @@ function UObject:type() end
 ---@class TArray<T> : { [integer]: T }
 TArray = {}
 
+---@return TArray
+function TArray:get() end
+
 ---@class TSet<K> : { [K]: nil }
 
 ---@class TMap<K, V> : { [K]: V }
@@ -805,6 +838,9 @@ TArray = {}
 ---@generic T
 ---@class RemoteUnrealParam<T> : RemoteObject<T>
 RemoteUnrealParam = {}
+
+---@return RemoteUnrealParam
+function RemoteUnrealParam:get() end
 
 ---Returns the underlying value for this param
 ---@generic T
@@ -831,6 +867,9 @@ function RemoteUnrealParam:type() end
 ---@class UEnum
 
 UEnum = {}
+
+---@return UEnum
+function UEnum:get() end
 
 --- Returns the `FName` that corresponds to the specified value.
 ---@param Value integer

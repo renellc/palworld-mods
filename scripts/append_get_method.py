@@ -41,6 +41,9 @@ def process_directory(directory_path):
             add_get_method_to_classes(full_path)
     print("Finished appending get method to all files")
 
-# Example usage
+
 directory_path = 'Mods/shared/types'
 process_directory(directory_path)
+
+lua_file_path = 'Mods/shared/Types.lua'
+add_get_method_to_classes(lua_file_path)
