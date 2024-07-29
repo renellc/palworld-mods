@@ -3,6 +3,9 @@
 ---@class UDLSSLibrary : UBlueprintFunctionLibrary
 UDLSSLibrary = {}
 
+---@return UDLSSLibrary
+function UDLSSLibrary:get() end
+
 ---@param Sharpness float
 function UDLSSLibrary:SetDLSSSharpness(Sharpness) end
 ---@param WorldContextObject UObject

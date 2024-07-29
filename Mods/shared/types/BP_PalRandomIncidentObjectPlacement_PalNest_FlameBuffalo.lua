@@ -13,5 +13,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PalRandomIncidentObjectPlacement_PalNest_FlameBuffalo_C = {}
 
+---@return ABP_PalRandomIncidentObjectPlacement_PalNest_FlameBuffalo_C
+function ABP_PalRandomIncidentObjectPlacement_PalNest_FlameBuffalo_C:get() end
+
 
 

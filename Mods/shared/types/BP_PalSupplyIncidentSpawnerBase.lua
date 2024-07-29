@@ -6,6 +6,9 @@
 ---@field bWipedOut boolean
 ABP_PalSupplyIncidentSpawnerBase_C = {}
 
+---@return ABP_PalSupplyIncidentSpawnerBase_C
+function ABP_PalSupplyIncidentSpawnerBase_C:get() end
+
 function ABP_PalSupplyIncidentSpawnerBase_C:ReleaseIncident() end
 function ABP_PalSupplyIncidentSpawnerBase_C:WipedOut() end
 function ABP_PalSupplyIncidentSpawnerBase_C:ReceiveBeginPlay() end

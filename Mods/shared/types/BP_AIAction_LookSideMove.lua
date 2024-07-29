@@ -11,6 +11,9 @@
 ---@field IsCheckWalkableSuccess boolean
 UBP_AIAction_LookSideMove_C = {}
 
+---@return UBP_AIAction_LookSideMove_C
+function UBP_AIAction_LookSideMove_C:get() end
+
 ---@param IsRight boolean
 ---@param Success boolean
 ---@param GoalPos FVector

@@ -18,6 +18,9 @@
 ---@field SplineExist boolean
 ABP_PrefabBase_C = {}
 
+---@return ABP_PrefabBase_C
+function ABP_PrefabBase_C:get() end
+
 ---@param Collision ECollisionEnabled::Type
 ---@param CastShadow boolean
 ---@param Material UMaterialInterface

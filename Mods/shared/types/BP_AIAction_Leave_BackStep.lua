@@ -8,6 +8,9 @@
 ---@field JumpFailure boolean
 UBP_AIAction_Leave_BackStep_C = {}
 
+---@return UBP_AIAction_Leave_BackStep_C
+function UBP_AIAction_Leave_BackStep_C:get() end
+
 ---@param GoalPos FVector
 ---@param Success boolean
 ---@param HitLocation FVector

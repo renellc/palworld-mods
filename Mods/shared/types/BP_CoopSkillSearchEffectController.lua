@@ -12,6 +12,9 @@
 ---@field SearchRadiusElapsed double
 UBP_CoopSkillSearchEffectController_C = {}
 
+---@return UBP_CoopSkillSearchEffectController_C
+function UBP_CoopSkillSearchEffectController_C:get() end
+
 ---@return boolean
 function UBP_CoopSkillSearchEffectController_C:IsRunning() end
 ---@return boolean

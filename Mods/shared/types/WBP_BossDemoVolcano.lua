@@ -9,6 +9,9 @@
 ---@field WBP_BossBattle_BossCutBase03 UWBP_BossBattle_BossCutBase03_C
 UWBP_BossDemoVolcano_C = {}
 
+---@return UWBP_BossDemoVolcano_C
+function UWBP_BossDemoVolcano_C:get() end
+
 function UWBP_BossDemoVolcano_C:OnStartEvent() end
 function UWBP_BossDemoVolcano_C:SetupText() end
 function UWBP_BossDemoVolcano_C:Finished_CBE810D944372A21A78534865EDA949A() end

@@ -4,6 +4,9 @@
 ---@field Data TArray<uint8>
 FUdpMockMessage = {}
 
+---@return FUdpMockMessage
+function FUdpMockMessage:get() end
+
 
 
 ---@class UUdpMessagingSettings : UObject
@@ -25,6 +28,9 @@ FUdpMockMessage = {}
 ---@field TunnelMulticastEndpoint FString
 ---@field RemoteTunnelEndpoints TArray<FString>
 UUdpMessagingSettings = {}
+
+---@return UUdpMessagingSettings
+function UUdpMessagingSettings:get() end
 
 
 

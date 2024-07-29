@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UPalBossBattleSequence_Completed_C = {}
 
+---@return UPalBossBattleSequence_Completed_C
+function UPalBossBattleSequence_Completed_C:get() end
+
 function UPalBossBattleSequence_Completed_C:WarpTowerTop() end
 function UPalBossBattleSequence_Completed_C:OnBeginSequence() end
 ---@param EntryPoint int32

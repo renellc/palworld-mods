@@ -12,6 +12,9 @@
 ---@field CraneCameraMount USceneComponent
 ACameraRig_Crane = {}
 
+---@return ACameraRig_Crane
+function ACameraRig_Crane:get() end
+
 
 
 ---@class ACameraRig_Rail : AActor
@@ -22,6 +25,9 @@ ACameraRig_Crane = {}
 ---@field RailCameraMount USceneComponent
 ACameraRig_Rail = {}
 
+---@return ACameraRig_Rail
+function ACameraRig_Rail:get() end
+
 ---@return USplineComponent
 function ACameraRig_Rail:GetRailSplineComponent() end
 
@@ -29,6 +35,9 @@ function ACameraRig_Rail:GetRailSplineComponent() end
 ---@class ACineCameraActor : ACameraActor
 ---@field LookatTrackingSettings FCameraLookatTrackingSettings
 ACineCameraActor = {}
+
+---@return ACineCameraActor
+function ACineCameraActor:get() end
 
 ---@return UCineCameraComponent
 function ACineCameraActor:GetCineCameraComponent() end
@@ -40,6 +49,9 @@ function ACineCameraActor:GetCineCameraComponent() end
 ---@field SensorAspectRatio float
 FCameraFilmbackSettings = {}
 
+---@return FCameraFilmbackSettings
+function FCameraFilmbackSettings:get() end
+
 
 
 ---@class FCameraFocusSettings
@@ -50,6 +62,9 @@ FCameraFilmbackSettings = {}
 ---@field FocusSmoothingInterpSpeed float
 ---@field FocusOffset float
 FCameraFocusSettings = {}
+
+---@return FCameraFocusSettings
+function FCameraFocusSettings:get() end
 
 
 
@@ -63,6 +78,9 @@ FCameraFocusSettings = {}
 ---@field DiaphragmBladeCount int32
 FCameraLensSettings = {}
 
+---@return FCameraLensSettings
+function FCameraLensSettings:get() end
+
 
 
 ---@class FCameraLookatTrackingSettings
@@ -74,6 +92,9 @@ FCameraLensSettings = {}
 ---@field bAllowRoll boolean
 FCameraLookatTrackingSettings = {}
 
+---@return FCameraLookatTrackingSettings
+function FCameraLookatTrackingSettings:get() end
+
 
 
 ---@class FCameraTrackingFocusSettings
@@ -82,12 +103,18 @@ FCameraLookatTrackingSettings = {}
 ---@field bDrawDebugTrackingFocusPoint boolean
 FCameraTrackingFocusSettings = {}
 
+---@return FCameraTrackingFocusSettings
+function FCameraTrackingFocusSettings:get() end
+
 
 
 ---@class FNamedFilmbackPreset
 ---@field Name FString
 ---@field FilmbackSettings FCameraFilmbackSettings
 FNamedFilmbackPreset = {}
+
+---@return FNamedFilmbackPreset
+function FNamedFilmbackPreset:get() end
 
 
 
@@ -96,6 +123,9 @@ FNamedFilmbackPreset = {}
 ---@field LensSettings FCameraLensSettings
 FNamedLensPreset = {}
 
+---@return FNamedLensPreset
+function FNamedLensPreset:get() end
+
 
 
 ---@class FNamedPlateCropPreset
@@ -103,11 +133,17 @@ FNamedLensPreset = {}
 ---@field CropSettings FPlateCropSettings
 FNamedPlateCropPreset = {}
 
+---@return FNamedPlateCropPreset
+function FNamedPlateCropPreset:get() end
+
 
 
 ---@class FPlateCropSettings
 ---@field AspectRatio float
 FPlateCropSettings = {}
+
+---@return FPlateCropSettings
+function FPlateCropSettings:get() end
 
 
 
@@ -130,6 +166,9 @@ FPlateCropSettings = {}
 ---@field DefaultLensFocalLength float
 ---@field DefaultLensFStop float
 UCineCameraComponent = {}
+
+---@return UCineCameraComponent
+function UCineCameraComponent:get() end
 
 ---@param NewLensSettings FCameraLensSettings
 function UCineCameraComponent:SetLensSettings(NewLensSettings) end
@@ -177,6 +216,9 @@ function UCineCameraComponent:GetCropPresetName() end
 ---@field DefaultCropPresetName FString
 ---@field CropPresets TArray<FNamedPlateCropPreset>
 UCineCameraSettings = {}
+
+---@return UCineCameraSettings
+function UCineCameraSettings:get() end
 
 ---@param InLensPresets TArray<FNamedLensPreset>
 function UCineCameraSettings:SetLensPresets(InLensPresets) end

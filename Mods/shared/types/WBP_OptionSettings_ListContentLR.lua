@@ -12,6 +12,9 @@
 ---@field OnSelectionChanged FWBP_OptionSettings_ListContentLR_COnSelectionChanged
 UWBP_OptionSettings_ListContentLR_C = {}
 
+---@return UWBP_OptionSettings_ListContentLR_C
+function UWBP_OptionSettings_ListContentLR_C:get() end
+
 ---@param Index int32
 function UWBP_OptionSettings_ListContentLR_C:SelectByIndex(Index) end
 ---@param Index int32

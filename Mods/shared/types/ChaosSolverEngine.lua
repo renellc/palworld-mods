@@ -22,6 +22,9 @@
 ---@field GameplayEventDispatcherComponent UChaosGameplayEventDispatcher
 AChaosSolverActor = {}
 
+---@return AChaosSolverActor
+function AChaosSolverActor:get() end
+
 ---@param bActive boolean
 function AChaosSolverActor:SetSolverActive(bActive) end
 function AChaosSolverActor:SetAsCurrentWorldSolver() end
@@ -29,6 +32,9 @@ function AChaosSolverActor:SetAsCurrentWorldSolver() end
 
 ---@class FBreakEventCallbackWrapper
 FBreakEventCallbackWrapper = {}
+
+---@return FBreakEventCallbackWrapper
+function FBreakEventCallbackWrapper:get() end
 
 
 ---@class FChaosBreakEvent
@@ -39,6 +45,9 @@ FBreakEventCallbackWrapper = {}
 ---@field Mass float
 ---@field Index int32
 FChaosBreakEvent = {}
+
+---@return FChaosBreakEvent
+function FChaosBreakEvent:get() end
 
 
 
@@ -53,6 +62,9 @@ FChaosBreakEvent = {}
 ---@field Children TArray<int32>
 FChaosCrumblingEvent = {}
 
+---@return FChaosCrumblingEvent
+function FChaosCrumblingEvent:get() end
+
 
 
 ---@class FChaosDebugSubstepControl
@@ -61,11 +73,17 @@ FChaosCrumblingEvent = {}
 ---@field bStep boolean
 FChaosDebugSubstepControl = {}
 
+---@return FChaosDebugSubstepControl
+function FChaosDebugSubstepControl:get() end
+
 
 
 ---@class FChaosHandlerSet
 ---@field ChaosHandlers TSet<UObject>
 FChaosHandlerSet = {}
+
+---@return FChaosHandlerSet
+function FChaosHandlerSet:get() end
 
 
 
@@ -83,6 +101,9 @@ FChaosHandlerSet = {}
 ---@field OtherMass float
 FChaosPhysicsCollisionInfo = {}
 
+---@return FChaosPhysicsCollisionInfo
+function FChaosPhysicsCollisionInfo:get() end
+
 
 
 ---@class FChaosRemovalEvent
@@ -91,26 +112,44 @@ FChaosPhysicsCollisionInfo = {}
 ---@field Mass float
 FChaosRemovalEvent = {}
 
+---@return FChaosRemovalEvent
+function FChaosRemovalEvent:get() end
+
 
 
 ---@class FCrumblingEventCallbackWrapper
 FCrumblingEventCallbackWrapper = {}
 
+---@return FCrumblingEventCallbackWrapper
+function FCrumblingEventCallbackWrapper:get() end
+
 
 ---@class FRemovalEventCallbackWrapper
 FRemovalEventCallbackWrapper = {}
+
+---@return FRemovalEventCallbackWrapper
+function FRemovalEventCallbackWrapper:get() end
 
 
 ---@class IChaosNotifyHandlerInterface : IInterface
 IChaosNotifyHandlerInterface = {}
 
+---@return IChaosNotifyHandlerInterface
+function IChaosNotifyHandlerInterface:get() end
+
 
 ---@class UChaosDebugDrawComponent : UActorComponent
 UChaosDebugDrawComponent = {}
 
+---@return UChaosDebugDrawComponent
+function UChaosDebugDrawComponent:get() end
+
 
 ---@class UChaosEventListenerComponent : UActorComponent
 UChaosEventListenerComponent = {}
+
+---@return UChaosEventListenerComponent
+function UChaosEventListenerComponent:get() end
 
 
 ---@class UChaosGameplayEventDispatcher : UChaosEventListenerComponent
@@ -120,14 +159,23 @@ UChaosEventListenerComponent = {}
 ---@field CrumblingEventRegistrations TMap<UPrimitiveComponent, FCrumblingEventCallbackWrapper>
 UChaosGameplayEventDispatcher = {}
 
+---@return UChaosGameplayEventDispatcher
+function UChaosGameplayEventDispatcher:get() end
+
 
 
 ---@class UChaosSolver : UObject
 UChaosSolver = {}
 
+---@return UChaosSolver
+function UChaosSolver:get() end
+
 
 ---@class UChaosSolverEngineBlueprintLibrary : UBlueprintFunctionLibrary
 UChaosSolverEngineBlueprintLibrary = {}
+
+---@return UChaosSolverEngineBlueprintLibrary
+function UChaosSolverEngineBlueprintLibrary:get() end
 
 ---@param PhysicsCollision FChaosPhysicsCollisionInfo
 ---@return FHitResult
@@ -137,6 +185,9 @@ function UChaosSolverEngineBlueprintLibrary:ConvertPhysicsCollisionToHitResult(P
 ---@class UChaosSolverSettings : UDeveloperSettings
 ---@field DefaultChaosSolverActorClass FSoftClassPath
 UChaosSolverSettings = {}
+
+---@return UChaosSolverSettings
+function UChaosSolverSettings:get() end
 
 
 

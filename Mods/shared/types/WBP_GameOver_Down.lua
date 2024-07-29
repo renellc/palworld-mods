@@ -19,6 +19,9 @@
 ---@field GiveupMsgId FDataTableRowHandle
 UWBP_GameOver_Down_C = {}
 
+---@return UWBP_GameOver_Down_C
+function UWBP_GameOver_Down_C:get() end
+
 ---@return UWidget
 function UWBP_GameOver_Down_C:BP_GetDesiredFocusTarget() end
 function UWBP_GameOver_Down_C:Setup() end

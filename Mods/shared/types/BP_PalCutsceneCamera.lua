@@ -7,6 +7,9 @@
 ---@field NowDisplayingBossDemoWidget UWBP_BossDemoBase_C
 ABP_PalCutsceneCamera_C = {}
 
+---@return ABP_PalCutsceneCamera_C
+function ABP_PalCutsceneCamera_C:get() end
+
 function ABP_PalCutsceneCamera_C:StopBossDemoCapture() end
 ---@param BossType EPalBossType
 function ABP_PalCutsceneCamera_C:StartCaptureBossDemo(BossType) end

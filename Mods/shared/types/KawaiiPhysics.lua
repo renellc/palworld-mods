@@ -47,6 +47,9 @@
 ---@field bInitPhysicsSettings boolean
 FAnimNode_KawaiiPhysics = {}
 
+---@return FAnimNode_KawaiiPhysics
+function FAnimNode_KawaiiPhysics:get() end
+
 
 
 ---@class FCapsuleLimit : FCollisionLimitBase
@@ -54,12 +57,18 @@ FAnimNode_KawaiiPhysics = {}
 ---@field Length float
 FCapsuleLimit = {}
 
+---@return FCapsuleLimit
+function FCapsuleLimit:get() end
+
 
 
 ---@class FCapsuleLimitData : FCollisionLimitDataBase
 ---@field Radius float
 ---@field Length float
 FCapsuleLimitData = {}
+
+---@return FCapsuleLimitData
+function FCapsuleLimitData:get() end
 
 
 
@@ -71,6 +80,9 @@ FCapsuleLimitData = {}
 ---@field Rotation FQuat
 FCollisionLimitBase = {}
 
+---@return FCollisionLimitBase
+function FCollisionLimitBase:get() end
+
 
 
 ---@class FCollisionLimitDataBase
@@ -81,6 +93,9 @@ FCollisionLimitBase = {}
 ---@field Rotation FQuat
 ---@field Guid FGuid
 FCollisionLimitDataBase = {}
+
+---@return FCollisionLimitDataBase
+function FCollisionLimitDataBase:get() end
 
 
 
@@ -99,6 +114,9 @@ FCollisionLimitDataBase = {}
 ---@field bDummy boolean
 FKawaiiPhysicsModifyBone = {}
 
+---@return FKawaiiPhysicsModifyBone
+function FKawaiiPhysicsModifyBone:get() end
+
 
 
 ---@class FKawaiiPhysicsSettings
@@ -110,17 +128,26 @@ FKawaiiPhysicsModifyBone = {}
 ---@field LimitAngle float
 FKawaiiPhysicsSettings = {}
 
+---@return FKawaiiPhysicsSettings
+function FKawaiiPhysicsSettings:get() end
+
 
 
 ---@class FPlanarLimit : FCollisionLimitBase
 ---@field Plane FPlane
 FPlanarLimit = {}
 
+---@return FPlanarLimit
+function FPlanarLimit:get() end
+
 
 
 ---@class FPlanarLimitData : FCollisionLimitDataBase
 ---@field Plane FPlane
 FPlanarLimitData = {}
+
+---@return FPlanarLimitData
+function FPlanarLimitData:get() end
 
 
 
@@ -129,12 +156,18 @@ FPlanarLimitData = {}
 ---@field LimitType ESphericalLimitType
 FSphericalLimit = {}
 
+---@return FSphericalLimit
+function FSphericalLimit:get() end
+
 
 
 ---@class FSphericalLimitData : FCollisionLimitDataBase
 ---@field Radius float
 ---@field LimitType ESphericalLimitType
 FSphericalLimitData = {}
+
+---@return FSphericalLimitData
+function FSphericalLimitData:get() end
 
 
 
@@ -143,6 +176,9 @@ FSphericalLimitData = {}
 ---@field CapsuleLimits TArray<FCapsuleLimit>
 ---@field PlanarLimits TArray<FPlanarLimit>
 UKawaiiPhysicsLimitsDataAsset = {}
+
+---@return UKawaiiPhysicsLimitsDataAsset
+function UKawaiiPhysicsLimitsDataAsset:get() end
 
 
 

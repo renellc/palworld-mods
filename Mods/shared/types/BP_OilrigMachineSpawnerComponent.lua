@@ -5,6 +5,9 @@
 ---@field Handle UPalIndividualCharacterHandle
 UBP_OilrigMachineSpawnerComponent_C = {}
 
+---@return UBP_OilrigMachineSpawnerComponent_C
+function UBP_OilrigMachineSpawnerComponent_C:get() end
+
 UBP_OilrigMachineSpawnerComponent_C['Destroy by Dead'] = function() end
 ---@param DeadInfo FPalDeadInfo
 UBP_OilrigMachineSpawnerComponent_C['On Dead'] = function(DeadInfo) end

@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionEat_C = {}
 
+---@return UBP_ActionEat_C
+function UBP_ActionEat_C:get() end
+
 function UBP_ActionEat_C:OnBeginAction() end
 function UBP_ActionEat_C:OnEndAction() end
 ---@param EntryPoint int32

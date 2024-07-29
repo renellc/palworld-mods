@@ -16,6 +16,9 @@
 ---@field IsPlayStepEffect boolean
 UBP_NPCActionStepBase_C = {}
 
+---@return UBP_NPCActionStepBase_C
+function UBP_NPCActionStepBase_C:get() end
+
 ---@param Location FVector
 function UBP_NPCActionStepBase_C:GetStepEndLocation(Location) end
 function UBP_NPCActionStepBase_C:StepMove() end

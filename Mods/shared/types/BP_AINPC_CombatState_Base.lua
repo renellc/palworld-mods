@@ -4,6 +4,9 @@
 ---@field IsEndSelf boolean
 UBP_AINPC_CombatState_Base_C = {}
 
+---@return UBP_AINPC_CombatState_Base_C
+function UBP_AINPC_CombatState_Base_C:get() end
+
 ---@param IsEnd boolean
 function UBP_AINPC_CombatState_Base_C:IsEndSelfState(IsEnd) end
 ---@param ShootAble boolean

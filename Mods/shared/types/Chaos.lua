@@ -21,10 +21,16 @@
 ---@field bGenerateContactGraph boolean
 FChaosSolverConfiguration = {}
 
+---@return FChaosSolverConfiguration
+function FChaosSolverConfiguration:get() end
+
 
 
 ---@class FManagedArrayCollection
 FManagedArrayCollection = {}
+
+---@return FManagedArrayCollection
+function FManagedArrayCollection:get() end
 
 
 ---@class FRecordedFrame
@@ -38,11 +44,17 @@ FManagedArrayCollection = {}
 ---@field Timestamp float
 FRecordedFrame = {}
 
+---@return FRecordedFrame
+function FRecordedFrame:get() end
+
 
 
 ---@class FRecordedTransformTrack
 ---@field Records TArray<FRecordedFrame>
 FRecordedTransformTrack = {}
+
+---@return FRecordedTransformTrack
+function FRecordedTransformTrack:get() end
 
 
 
@@ -55,6 +67,9 @@ FRecordedTransformTrack = {}
 ---@field ParticleIndexMesh int32
 FSolverBreakingData = {}
 
+---@return FSolverBreakingData
+function FSolverBreakingData:get() end
+
 
 
 ---@class FSolverBreakingFilterSettings
@@ -63,6 +78,9 @@ FSolverBreakingData = {}
 ---@field MinSpeed float
 ---@field MinVolume float
 FSolverBreakingFilterSettings = {}
+
+---@return FSolverBreakingFilterSettings
+function FSolverBreakingFilterSettings:get() end
 
 
 
@@ -82,6 +100,9 @@ FSolverBreakingFilterSettings = {}
 ---@field LevelsetIndexMesh int32
 FSolverCollisionData = {}
 
+---@return FSolverCollisionData
+function FSolverCollisionData:get() end
+
 
 
 ---@class FSolverCollisionFilterSettings
@@ -91,6 +112,9 @@ FSolverCollisionData = {}
 ---@field MinImpulse float
 FSolverCollisionFilterSettings = {}
 
+---@return FSolverCollisionFilterSettings
+function FSolverCollisionFilterSettings:get() end
+
 
 
 ---@class FSolverRemovalFilterSettings
@@ -98,6 +122,9 @@ FSolverCollisionFilterSettings = {}
 ---@field MinMass float
 ---@field MinVolume float
 FSolverRemovalFilterSettings = {}
+
+---@return FSolverRemovalFilterSettings
+function FSolverRemovalFilterSettings:get() end
 
 
 
@@ -110,6 +137,9 @@ FSolverRemovalFilterSettings = {}
 ---@field ParticleIndexMesh int32
 FSolverTrailingData = {}
 
+---@return FSolverTrailingData
+function FSolverTrailingData:get() end
+
 
 
 ---@class FSolverTrailingFilterSettings
@@ -118,6 +148,9 @@ FSolverTrailingData = {}
 ---@field MinSpeed float
 ---@field MinVolume float
 FSolverTrailingFilterSettings = {}
+
+---@return FSolverTrailingFilterSettings
+function FSolverTrailingFilterSettings:get() end
 
 
 

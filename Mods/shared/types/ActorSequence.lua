@@ -6,6 +6,9 @@
 ---@field PathToComponent FString
 FActorSequenceObjectReference = {}
 
+---@return FActorSequenceObjectReference
+function FActorSequenceObjectReference:get() end
+
 
 
 ---@class FActorSequenceObjectReferenceMap
@@ -13,11 +16,17 @@ FActorSequenceObjectReference = {}
 ---@field References TArray<FActorSequenceObjectReferences>
 FActorSequenceObjectReferenceMap = {}
 
+---@return FActorSequenceObjectReferenceMap
+function FActorSequenceObjectReferenceMap:get() end
+
 
 
 ---@class FActorSequenceObjectReferences
 ---@field Array TArray<FActorSequenceObjectReference>
 FActorSequenceObjectReferences = {}
+
+---@return FActorSequenceObjectReferences
+function FActorSequenceObjectReferences:get() end
 
 
 
@@ -25,6 +34,9 @@ FActorSequenceObjectReferences = {}
 ---@field MovieScene UMovieScene
 ---@field ObjectReferences FActorSequenceObjectReferenceMap
 UActorSequence = {}
+
+---@return UActorSequence
+function UActorSequence:get() end
 
 
 
@@ -34,6 +46,9 @@ UActorSequence = {}
 ---@field SequencePlayer UActorSequencePlayer
 UActorSequenceComponent = {}
 
+---@return UActorSequenceComponent
+function UActorSequenceComponent:get() end
+
 function UActorSequenceComponent:StopSequence() end
 function UActorSequenceComponent:PlaySequence() end
 function UActorSequenceComponent:PauseSequence() end
@@ -41,5 +56,8 @@ function UActorSequenceComponent:PauseSequence() end
 
 ---@class UActorSequencePlayer : UMovieSceneSequencePlayer
 UActorSequencePlayer = {}
+
+---@return UActorSequencePlayer
+function UActorSequencePlayer:get() end
 
 

@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_VisualEffect_Dead_C = {}
 
+---@return UBP_VisualEffect_Dead_C
+function UBP_VisualEffect_Dead_C:get() end
+
 function UBP_VisualEffect_Dead_C:OnBeginVisualEffect() end
 function UBP_VisualEffect_Dead_C:OnEndVisualEffect() end
 ---@param EntryPoint int32

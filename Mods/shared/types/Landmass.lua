@@ -5,6 +5,9 @@
 ---@field Radius int32
 FBrushEffectBlurring = {}
 
+---@return FBrushEffectBlurring
+function FBrushEffectBlurring:get() end
+
 
 
 ---@class FBrushEffectCurlNoise
@@ -13,6 +16,9 @@ FBrushEffectBlurring = {}
 ---@field Curl1Tiling float
 ---@field Curl2Tiling float
 FBrushEffectCurlNoise = {}
+
+---@return FBrushEffectCurlNoise
+function FBrushEffectCurlNoise:get() end
 
 
 
@@ -23,6 +29,9 @@ FBrushEffectCurlNoise = {}
 ---@field ChannelDepth float
 ---@field CurveRampWidth float
 FBrushEffectCurves = {}
+
+---@return FBrushEffectCurves
+function FBrushEffectCurves:get() end
 
 
 
@@ -35,12 +44,18 @@ FBrushEffectCurves = {}
 ---@field WeightmapInfluence float
 FBrushEffectDisplacement = {}
 
+---@return FBrushEffectDisplacement
+function FBrushEffectDisplacement:get() end
+
 
 
 ---@class FBrushEffectSmoothBlending
 ---@field InnerSmoothDistance float
 ---@field OuterSmoothDistance float
 FBrushEffectSmoothBlending = {}
+
+---@return FBrushEffectSmoothBlending
+function FBrushEffectSmoothBlending:get() end
 
 
 
@@ -52,6 +67,9 @@ FBrushEffectSmoothBlending = {}
 ---@field MaskStartOffset float
 FBrushEffectTerracing = {}
 
+---@return FBrushEffectTerracing
+function FBrushEffectTerracing:get() end
+
 
 
 ---@class FLandmassBrushEffectsList
@@ -61,6 +79,9 @@ FBrushEffectTerracing = {}
 ---@field SmoothBlending FBrushEffectSmoothBlending
 ---@field Terracing FBrushEffectTerracing
 FLandmassBrushEffectsList = {}
+
+---@return FLandmassBrushEffectsList
+function FLandmassBrushEffectsList:get() end
 
 
 
@@ -72,6 +93,9 @@ FLandmassBrushEffectsList = {}
 ---@field ZOffset float
 FLandmassFalloffSettings = {}
 
+---@return FLandmassFalloffSettings
+function FLandmassFalloffSettings:get() end
+
 
 
 ---@class FLandmassTerrainCarvingSettings
@@ -81,6 +105,9 @@ FLandmassFalloffSettings = {}
 ---@field Effects FLandmassBrushEffectsList
 ---@field Priority int32
 FLandmassTerrainCarvingSettings = {}
+
+---@return FLandmassTerrainCarvingSettings
+function FLandmassTerrainCarvingSettings:get() end
 
 
 

@@ -5,6 +5,9 @@
 ---@field Const_DownTime double
 UBP_Action_LargeDown_C = {}
 
+---@return UBP_Action_LargeDown_C
+function UBP_Action_LargeDown_C:get() end
+
 ---@param MotionType EPalGeneralMontageType
 ---@param Montage UAnimMontage
 function UBP_Action_LargeDown_C:FindMontage(MotionType, Montage) end

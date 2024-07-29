@@ -9,6 +9,9 @@
 ---@field TSCache_AISensorComponent UPalAISensorComponent
 UBP_AIAction_CanCombatBase_C = {}
 
+---@return UBP_AIAction_CanCombatBase_C
+function UBP_AIAction_CanCombatBase_C:get() end
+
 ---@param Goal FVector
 function UBP_AIAction_CanCombatBase_C:SelfMoveToLocation(Goal) end
 ---@param Leader boolean

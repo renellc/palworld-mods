@@ -4,6 +4,9 @@
 ---@field HoudiniAssetComponent UHoudiniAssetComponent
 AHoudiniAssetActor = {}
 
+---@return AHoudiniAssetActor
+function AHoudiniAssetActor:get() end
+
 
 
 ---@class FAggregatedWorkItemTally : FWorkItemTallyBase
@@ -15,6 +18,9 @@ AHoudiniAssetActor = {}
 ---@field ErroredWorkItems int32
 ---@field CookCancelledWorkItems int32
 FAggregatedWorkItemTally = {}
+
+---@return FAggregatedWorkItemTally
+function FAggregatedWorkItemTally:get() end
 
 
 
@@ -40,6 +46,9 @@ FAggregatedWorkItemTally = {}
 ---@field Inputs TArray<UHoudiniInput>
 FHoudiniAssetBlueprintInstanceData = {}
 
+---@return FHoudiniAssetBlueprintInstanceData
+function FHoudiniAssetBlueprintInstanceData:get() end
+
 
 
 ---@class FHoudiniAssetBlueprintOutput
@@ -47,11 +56,17 @@ FHoudiniAssetBlueprintInstanceData = {}
 ---@field OutputObject FHoudiniOutputObject
 FHoudiniAssetBlueprintOutput = {}
 
+---@return FHoudiniAssetBlueprintOutput
+function FHoudiniAssetBlueprintOutput:get() end
+
 
 
 ---@class FHoudiniBakedOutput
 ---@field BakedOutputObjects TMap<FHoudiniBakedOutputObjectIdentifier, FHoudiniBakedOutputObject>
 FHoudiniBakedOutput = {}
+
+---@return FHoudiniBakedOutput
+function FHoudiniBakedOutput:get() end
 
 
 
@@ -66,12 +81,18 @@ FHoudiniBakedOutput = {}
 ---@field LandscapeLayers TMap<FName, FString>
 FHoudiniBakedOutputObject = {}
 
+---@return FHoudiniBakedOutputObject
+function FHoudiniBakedOutputObject:get() end
+
 
 
 ---@class FHoudiniBakedOutputObjectIdentifier
 ---@field PartId int32
 ---@field SplitIdentifier FString
 FHoudiniBakedOutputObjectIdentifier = {}
+
+---@return FHoudiniBakedOutputObjectIdentifier
+function FHoudiniBakedOutputObjectIdentifier:get() end
 
 
 
@@ -84,10 +105,16 @@ FHoudiniBakedOutputObjectIdentifier = {}
 ---@field CachedSurfaceHash uint64
 FHoudiniBrushInfo = {}
 
+---@return FHoudiniBrushInfo
+function FHoudiniBrushInfo:get() end
+
 
 
 ---@class FHoudiniCurveInfo
 FHoudiniCurveInfo = {}
+
+---@return FHoudiniCurveInfo
+function FHoudiniCurveInfo:get() end
 
 
 ---@class FHoudiniCurveOutputProperties
@@ -97,6 +124,9 @@ FHoudiniCurveInfo = {}
 ---@field CurveType EHoudiniCurveType
 ---@field CurveMethod EHoudiniCurveMethod
 FHoudiniCurveOutputProperties = {}
+
+---@return FHoudiniCurveOutputProperties
+function FHoudiniCurveOutputProperties:get() end
 
 
 
@@ -111,16 +141,25 @@ FHoudiniCurveOutputProperties = {}
 ---@field StringValues TArray<FString>
 FHoudiniGenericAttribute = {}
 
+---@return FHoudiniGenericAttribute
+function FHoudiniGenericAttribute:get() end
+
 
 
 ---@class FHoudiniGenericAttributeChangedProperty
 ---@field Object UObject
 FHoudiniGenericAttributeChangedProperty = {}
 
+---@return FHoudiniGenericAttributeChangedProperty
+function FHoudiniGenericAttributeChangedProperty:get() end
+
 
 
 ---@class FHoudiniGeoInfo
 FHoudiniGeoInfo = {}
+
+---@return FHoudiniGeoInfo
+function FHoudiniGeoInfo:get() end
 
 
 ---@class FHoudiniGeoPartObject
@@ -152,6 +191,9 @@ FHoudiniGeoInfo = {}
 ---@field AllMeshSockets TArray<FHoudiniMeshSocket>
 FHoudiniGeoPartObject = {}
 
+---@return FHoudiniGeoPartObject
+function FHoudiniGeoPartObject:get() end
+
 
 
 ---@class FHoudiniInstancedOutput
@@ -166,14 +208,23 @@ FHoudiniGeoPartObject = {}
 ---@field bStale boolean
 FHoudiniInstancedOutput = {}
 
+---@return FHoudiniInstancedOutput
+function FHoudiniInstancedOutput:get() end
+
 
 
 ---@class FHoudiniMeshSocket
 FHoudiniMeshSocket = {}
 
+---@return FHoudiniMeshSocket
+function FHoudiniMeshSocket:get() end
+
 
 ---@class FHoudiniObjectInfo
 FHoudiniObjectInfo = {}
+
+---@return FHoudiniObjectInfo
+function FHoudiniObjectInfo:get() end
 
 
 ---@class FHoudiniOutputObject
@@ -194,6 +245,9 @@ FHoudiniObjectInfo = {}
 ---@field FoliageType UFoliageType
 FHoudiniOutputObject = {}
 
+---@return FHoudiniOutputObject
+function FHoudiniOutputObject:get() end
+
 
 
 ---@class FHoudiniOutputObjectIdentifier
@@ -206,16 +260,25 @@ FHoudiniOutputObject = {}
 ---@field PointIndex int32
 FHoudiniOutputObjectIdentifier = {}
 
+---@return FHoudiniOutputObjectIdentifier
+function FHoudiniOutputObjectIdentifier:get() end
+
 
 
 ---@class FHoudiniPDGWorkResultObjectBakedOutput
 ---@field BakedOutputs TArray<FHoudiniBakedOutput>
 FHoudiniPDGWorkResultObjectBakedOutput = {}
 
+---@return FHoudiniPDGWorkResultObjectBakedOutput
+function FHoudiniPDGWorkResultObjectBakedOutput:get() end
+
 
 
 ---@class FHoudiniPartInfo
 FHoudiniPartInfo = {}
+
+---@return FHoudiniPartInfo
+function FHoudiniPartInfo:get() end
 
 
 ---@class FHoudiniSplineComponentInstanceData : FActorComponentInstanceData
@@ -223,6 +286,9 @@ FHoudiniPartInfo = {}
 ---@field DisplayPoints TArray<FVector>
 ---@field DisplayPointIndexDivider TArray<int32>
 FHoudiniSplineComponentInstanceData = {}
+
+---@return FHoudiniSplineComponentInstanceData
+function FHoudiniSplineComponentInstanceData:get() end
 
 
 
@@ -240,15 +306,24 @@ FHoudiniSplineComponentInstanceData = {}
 ---@field GeneratedAssetUserData TArray<UAssetUserData>
 FHoudiniStaticMeshGenerationProperties = {}
 
+---@return FHoudiniStaticMeshGenerationProperties
+function FHoudiniStaticMeshGenerationProperties:get() end
+
 
 
 ---@class FHoudiniVolumeInfo
 FHoudiniVolumeInfo = {}
 
+---@return FHoudiniVolumeInfo
+function FHoudiniVolumeInfo:get() end
+
 
 ---@class FOutputActorOwner
 ---@field OutputActor AActor
 FOutputActorOwner = {}
+
+---@return FOutputActorOwner
+function FOutputActorOwner:get() end
 
 
 
@@ -257,6 +332,9 @@ FOutputActorOwner = {}
 ---@field WorkItemID int32
 ---@field ResultObjects TArray<FTOPWorkResultObject>
 FTOPWorkResult = {}
+
+---@return FTOPWorkResult
+function FTOPWorkResult:get() end
 
 
 
@@ -270,6 +348,9 @@ FTOPWorkResult = {}
 ---@field OutputActorOwner FOutputActorOwner
 FTOPWorkResultObject = {}
 
+---@return FTOPWorkResultObject
+function FTOPWorkResultObject:get() end
+
 
 
 ---@class FWorkItemTally : FWorkItemTallyBase
@@ -282,18 +363,30 @@ FTOPWorkResultObject = {}
 ---@field CookCancelledWorkItems TSet<int32>
 FWorkItemTally = {}
 
+---@return FWorkItemTally
+function FWorkItemTally:get() end
+
 
 
 ---@class FWorkItemTallyBase
 FWorkItemTallyBase = {}
 
+---@return FWorkItemTallyBase
+function FWorkItemTallyBase:get() end
+
 
 ---@class IHoudiniAssetStateEvents : IInterface
 IHoudiniAssetStateEvents = {}
 
+---@return IHoudiniAssetStateEvents
+function IHoudiniAssetStateEvents:get() end
+
 
 ---@class IHoudiniEngineCopyPropertiesInterface : IInterface
 IHoudiniEngineCopyPropertiesInterface = {}
+
+---@return IHoudiniEngineCopyPropertiesInterface
+function IHoudiniEngineCopyPropertiesInterface:get() end
 
 
 ---@class UHoudiniAsset : UObject
@@ -304,6 +397,9 @@ IHoudiniEngineCopyPropertiesInterface = {}
 ---@field bAssetNonCommercial boolean
 ---@field bAssetExpanded boolean
 UHoudiniAsset = {}
+
+---@return UHoudiniAsset
+function UHoudiniAsset:get() end
 
 
 
@@ -317,6 +413,9 @@ UHoudiniAsset = {}
 ---@field CachedOutputNodes TMap<FHoudiniOutputObjectIdentifier, FGuid>
 ---@field CachedInputNodes TMap<FGuid, FGuid>
 UHoudiniAssetBlueprintComponent = {}
+
+---@return UHoudiniAssetBlueprintComponent
+function UHoudiniAssetBlueprintComponent:get() end
 
 ---@param Name FString
 ---@param Value boolean
@@ -392,10 +491,16 @@ function UHoudiniAssetBlueprintComponent:HasParameter(Name) end
 ---@field LastTickTime double
 UHoudiniAssetComponent = {}
 
+---@return UHoudiniAssetComponent
+function UHoudiniAssetComponent:get() end
+
 
 
 ---@class UHoudiniAssetComponentMaterials_V1 : UObject
 UHoudiniAssetComponentMaterials_V1 = {}
+
+---@return UHoudiniAssetComponentMaterials_V1
+function UHoudiniAssetComponentMaterials_V1:get() end
 
 
 ---@class UHoudiniAssetComponent_V1 : UPrimitiveComponent
@@ -415,78 +520,135 @@ UHoudiniAssetComponentMaterials_V1 = {}
 ---@field TempCookFolder FText
 UHoudiniAssetComponent_V1 = {}
 
+---@return UHoudiniAssetComponent_V1
+function UHoudiniAssetComponent_V1:get() end
+
 
 
 ---@class UHoudiniAssetInput : UHoudiniAssetParameter
 UHoudiniAssetInput = {}
 
+---@return UHoudiniAssetInput
+function UHoudiniAssetInput:get() end
+
 
 ---@class UHoudiniAssetInstanceInput : UHoudiniAssetParameter
 UHoudiniAssetInstanceInput = {}
+
+---@return UHoudiniAssetInstanceInput
+function UHoudiniAssetInstanceInput:get() end
 
 
 ---@class UHoudiniAssetInstanceInputField : UObject
 UHoudiniAssetInstanceInputField = {}
 
+---@return UHoudiniAssetInstanceInputField
+function UHoudiniAssetInstanceInputField:get() end
+
 
 ---@class UHoudiniAssetParameter : UObject
 UHoudiniAssetParameter = {}
+
+---@return UHoudiniAssetParameter
+function UHoudiniAssetParameter:get() end
 
 
 ---@class UHoudiniAssetParameterButton : UHoudiniAssetParameter
 UHoudiniAssetParameterButton = {}
 
+---@return UHoudiniAssetParameterButton
+function UHoudiniAssetParameterButton:get() end
+
 
 ---@class UHoudiniAssetParameterChoice : UHoudiniAssetParameter
 UHoudiniAssetParameterChoice = {}
+
+---@return UHoudiniAssetParameterChoice
+function UHoudiniAssetParameterChoice:get() end
 
 
 ---@class UHoudiniAssetParameterColor : UHoudiniAssetParameter
 UHoudiniAssetParameterColor = {}
 
+---@return UHoudiniAssetParameterColor
+function UHoudiniAssetParameterColor:get() end
+
 
 ---@class UHoudiniAssetParameterFile : UHoudiniAssetParameter
 UHoudiniAssetParameterFile = {}
+
+---@return UHoudiniAssetParameterFile
+function UHoudiniAssetParameterFile:get() end
 
 
 ---@class UHoudiniAssetParameterFloat : UHoudiniAssetParameter
 UHoudiniAssetParameterFloat = {}
 
+---@return UHoudiniAssetParameterFloat
+function UHoudiniAssetParameterFloat:get() end
+
 
 ---@class UHoudiniAssetParameterFolder : UHoudiniAssetParameter
 UHoudiniAssetParameterFolder = {}
+
+---@return UHoudiniAssetParameterFolder
+function UHoudiniAssetParameterFolder:get() end
 
 
 ---@class UHoudiniAssetParameterFolderList : UHoudiniAssetParameter
 UHoudiniAssetParameterFolderList = {}
 
+---@return UHoudiniAssetParameterFolderList
+function UHoudiniAssetParameterFolderList:get() end
+
 
 ---@class UHoudiniAssetParameterInt : UHoudiniAssetParameter
 UHoudiniAssetParameterInt = {}
+
+---@return UHoudiniAssetParameterInt
+function UHoudiniAssetParameterInt:get() end
 
 
 ---@class UHoudiniAssetParameterLabel : UHoudiniAssetParameter
 UHoudiniAssetParameterLabel = {}
 
+---@return UHoudiniAssetParameterLabel
+function UHoudiniAssetParameterLabel:get() end
+
 
 ---@class UHoudiniAssetParameterMultiparm : UHoudiniAssetParameter
 UHoudiniAssetParameterMultiparm = {}
+
+---@return UHoudiniAssetParameterMultiparm
+function UHoudiniAssetParameterMultiparm:get() end
 
 
 ---@class UHoudiniAssetParameterRamp : UHoudiniAssetParameter
 UHoudiniAssetParameterRamp = {}
 
+---@return UHoudiniAssetParameterRamp
+function UHoudiniAssetParameterRamp:get() end
+
 
 ---@class UHoudiniAssetParameterSeparator : UHoudiniAssetParameter
 UHoudiniAssetParameterSeparator = {}
+
+---@return UHoudiniAssetParameterSeparator
+function UHoudiniAssetParameterSeparator:get() end
 
 
 ---@class UHoudiniAssetParameterString : UHoudiniAssetParameter
 UHoudiniAssetParameterString = {}
 
+---@return UHoudiniAssetParameterString
+function UHoudiniAssetParameterString:get() end
+
 
 ---@class UHoudiniAssetParameterToggle : UHoudiniAssetParameter
 UHoudiniAssetParameterToggle = {}
+
+---@return UHoudiniAssetParameterToggle
+function UHoudiniAssetParameterToggle:get() end
 
 
 ---@class UHoudiniHandleComponent : USceneComponent
@@ -497,16 +659,25 @@ UHoudiniAssetParameterToggle = {}
 ---@field HandleName FString
 UHoudiniHandleComponent = {}
 
+---@return UHoudiniHandleComponent
+function UHoudiniHandleComponent:get() end
+
 
 
 ---@class UHoudiniHandleComponent_V1 : USceneComponent
 UHoudiniHandleComponent_V1 = {}
+
+---@return UHoudiniHandleComponent_V1
+function UHoudiniHandleComponent_V1:get() end
 
 
 ---@class UHoudiniHandleParameter : UObject
 ---@field AssetParameter UHoudiniParameter
 ---@field TupleIndex int32
 UHoudiniHandleParameter = {}
+
+---@return UHoudiniHandleParameter
+function UHoudiniHandleParameter:get() end
 
 
 
@@ -569,6 +740,9 @@ UHoudiniHandleParameter = {}
 ---@field bCanDeleteHoudiniNodes boolean
 UHoudiniInput = {}
 
+---@return UHoudiniInput
+function UHoudiniInput:get() end
+
 
 
 ---@class UHoudiniInputActor : UHoudiniInputObject
@@ -577,6 +751,9 @@ UHoudiniInput = {}
 ---@field LastUpdateNumComponentsAdded int32
 ---@field LastUpdateNumComponentsRemoved int32
 UHoudiniInputActor = {}
+
+---@return UHoudiniInputActor
+function UHoudiniInputActor:get() end
 
 
 
@@ -587,6 +764,9 @@ UHoudiniInputActor = {}
 ---@field LastUpdateNumComponentsRemoved int32
 UHoudiniInputBlueprint = {}
 
+---@return UHoudiniInputBlueprint
+function UHoudiniInputBlueprint:get() end
+
 
 
 ---@class UHoudiniInputBrush : UHoudiniInputActor
@@ -595,6 +775,9 @@ UHoudiniInputBlueprint = {}
 ---@field bIgnoreInputObject boolean
 ---@field CachedInputBrushType EBrushType
 UHoudiniInputBrush = {}
+
+---@return UHoudiniInputBrush
+function UHoudiniInputBrush:get() end
 
 
 
@@ -607,27 +790,45 @@ UHoudiniInputBrush = {}
 ---@field OrthoFarClipPlane float
 UHoudiniInputCameraComponent = {}
 
+---@return UHoudiniInputCameraComponent
+function UHoudiniInputCameraComponent:get() end
+
 
 
 ---@class UHoudiniInputDataTable : UHoudiniInputObject
 UHoudiniInputDataTable = {}
 
+---@return UHoudiniInputDataTable
+function UHoudiniInputDataTable:get() end
+
 
 ---@class UHoudiniInputFoliageType_InstancedStaticMesh : UHoudiniInputStaticMesh
 UHoudiniInputFoliageType_InstancedStaticMesh = {}
+
+---@return UHoudiniInputFoliageType_InstancedStaticMesh
+function UHoudiniInputFoliageType_InstancedStaticMesh:get() end
 
 
 ---@class UHoudiniInputGeometryCollection : UHoudiniInputObject
 UHoudiniInputGeometryCollection = {}
 
+---@return UHoudiniInputGeometryCollection
+function UHoudiniInputGeometryCollection:get() end
+
 
 ---@class UHoudiniInputGeometryCollectionComponent : UHoudiniInputSceneComponent
 UHoudiniInputGeometryCollectionComponent = {}
+
+---@return UHoudiniInputGeometryCollectionComponent
+function UHoudiniInputGeometryCollectionComponent:get() end
 
 
 ---@class UHoudiniInputHoudiniAsset : UHoudiniInputObject
 ---@field AssetOutputIndex int32
 UHoudiniInputHoudiniAsset = {}
+
+---@return UHoudiniInputHoudiniAsset
+function UHoudiniInputHoudiniAsset:get() end
 
 
 
@@ -638,11 +839,17 @@ UHoudiniInputHoudiniAsset = {}
 ---@field CachedComponent UHoudiniSplineComponent
 UHoudiniInputHoudiniSplineComponent = {}
 
+---@return UHoudiniInputHoudiniSplineComponent
+function UHoudiniInputHoudiniSplineComponent:get() end
+
 
 
 ---@class UHoudiniInputInstancedMeshComponent : UHoudiniInputMeshComponent
 ---@field InstanceTransforms TArray<FTransform>
 UHoudiniInputInstancedMeshComponent = {}
+
+---@return UHoudiniInputInstancedMeshComponent
+function UHoudiniInputInstancedMeshComponent:get() end
 
 
 
@@ -651,11 +858,17 @@ UHoudiniInputInstancedMeshComponent = {}
 ---@field CachedNumLandscapeComponents int32
 UHoudiniInputLandscape = {}
 
+---@return UHoudiniInputLandscape
+function UHoudiniInputLandscape:get() end
+
 
 
 ---@class UHoudiniInputMeshComponent : UHoudiniInputSceneComponent
 ---@field StaticMesh TSoftObjectPtr<UStaticMesh>
 UHoudiniInputMeshComponent = {}
+
+---@return UHoudiniInputMeshComponent
+function UHoudiniInputMeshComponent:get() end
 
 
 
@@ -677,20 +890,32 @@ UHoudiniInputMeshComponent = {}
 ---@field bCanDeleteHoudiniNodes boolean
 UHoudiniInputObject = {}
 
+---@return UHoudiniInputObject
+function UHoudiniInputObject:get() end
+
 
 
 ---@class UHoudiniInputSceneComponent : UHoudiniInputObject
 ---@field ActorTransform FTransform
 UHoudiniInputSceneComponent = {}
 
+---@return UHoudiniInputSceneComponent
+function UHoudiniInputSceneComponent:get() end
+
 
 
 ---@class UHoudiniInputSkeletalMesh : UHoudiniInputObject
 UHoudiniInputSkeletalMesh = {}
 
+---@return UHoudiniInputSkeletalMesh
+function UHoudiniInputSkeletalMesh:get() end
+
 
 ---@class UHoudiniInputSkeletalMeshComponent : UHoudiniInputSceneComponent
 UHoudiniInputSkeletalMeshComponent = {}
+
+---@return UHoudiniInputSkeletalMeshComponent
+function UHoudiniInputSkeletalMeshComponent:get() end
 
 
 ---@class UHoudiniInputSplineComponent : UHoudiniInputSceneComponent
@@ -701,10 +926,16 @@ UHoudiniInputSkeletalMeshComponent = {}
 ---@field SplineControlPoints TArray<FTransform>
 UHoudiniInputSplineComponent = {}
 
+---@return UHoudiniInputSplineComponent
+function UHoudiniInputSplineComponent:get() end
+
 
 
 ---@class UHoudiniInputStaticMesh : UHoudiniInputObject
 UHoudiniInputStaticMesh = {}
+
+---@return UHoudiniInputStaticMesh
+function UHoudiniInputStaticMesh:get() end
 
 
 ---@class UHoudiniInstancedActorComponent : USceneComponent
@@ -712,16 +943,25 @@ UHoudiniInputStaticMesh = {}
 ---@field InstancedActors TArray<AActor>
 UHoudiniInstancedActorComponent = {}
 
+---@return UHoudiniInstancedActorComponent
+function UHoudiniInstancedActorComponent:get() end
+
 
 
 ---@class UHoudiniInstancedActorComponent_V1 : USceneComponent
 UHoudiniInstancedActorComponent_V1 = {}
+
+---@return UHoudiniInstancedActorComponent_V1
+function UHoudiniInstancedActorComponent_V1:get() end
 
 
 ---@class UHoudiniLandscapeEditLayer : UObject
 ---@field LandscapeSoftPtr TSoftObjectPtr<ALandscapeProxy>
 ---@field LayerName FString
 UHoudiniLandscapeEditLayer = {}
+
+---@return UHoudiniLandscapeEditLayer
+function UHoudiniLandscapeEditLayer:get() end
 
 
 
@@ -731,6 +971,9 @@ UHoudiniLandscapeEditLayer = {}
 ---@field EditLayerName FName
 UHoudiniLandscapePtr = {}
 
+---@return UHoudiniLandscapePtr
+function UHoudiniLandscapePtr:get() end
+
 
 
 ---@class UHoudiniMeshSplitInstancerComponent : USceneComponent
@@ -739,10 +982,16 @@ UHoudiniLandscapePtr = {}
 ---@field InstancedMesh UStaticMesh
 UHoudiniMeshSplitInstancerComponent = {}
 
+---@return UHoudiniMeshSplitInstancerComponent
+function UHoudiniMeshSplitInstancerComponent:get() end
+
 
 
 ---@class UHoudiniMeshSplitInstancerComponent_V1 : USceneComponent
 UHoudiniMeshSplitInstancerComponent_V1 = {}
+
+---@return UHoudiniMeshSplitInstancerComponent_V1
+function UHoudiniMeshSplitInstancerComponent_V1:get() end
 
 
 ---@class UHoudiniOutput : UObject
@@ -760,6 +1009,9 @@ UHoudiniMeshSplitInstancerComponent_V1 = {}
 ---@field bIsUpdating boolean
 ---@field bCanDeleteHoudiniNodes boolean
 UHoudiniOutput = {}
+
+---@return UHoudiniOutput
+function UHoudiniOutput:get() end
 
 
 
@@ -782,6 +1034,9 @@ UHoudiniOutput = {}
 ---@field OutputParentActor AActor
 ---@field BakeFolder FDirectoryPath
 UHoudiniPDGAssetLink = {}
+
+---@return UHoudiniPDGAssetLink
+function UHoudiniPDGAssetLink:get() end
 
 
 
@@ -816,10 +1071,16 @@ UHoudiniPDGAssetLink = {}
 ---@field bAutoUpdate boolean
 UHoudiniParameter = {}
 
+---@return UHoudiniParameter
+function UHoudiniParameter:get() end
+
 
 
 ---@class UHoudiniParameterButton : UHoudiniParameter
 UHoudiniParameterButton = {}
+
+---@return UHoudiniParameterButton
+function UHoudiniParameterButton:get() end
 
 
 ---@class UHoudiniParameterButtonStrip : UHoudiniParameter
@@ -827,6 +1088,9 @@ UHoudiniParameterButton = {}
 ---@field Labels TArray<FString>
 ---@field Values TArray<int32>
 UHoudiniParameterButtonStrip = {}
+
+---@return UHoudiniParameterButtonStrip
+function UHoudiniParameterButtonStrip:get() end
 
 
 
@@ -841,6 +1105,9 @@ UHoudiniParameterButtonStrip = {}
 ---@field IntValuesArray TArray<int32>
 UHoudiniParameterChoice = {}
 
+---@return UHoudiniParameterChoice
+function UHoudiniParameterChoice:get() end
+
 
 
 ---@class UHoudiniParameterColor : UHoudiniParameter
@@ -848,6 +1115,9 @@ UHoudiniParameterChoice = {}
 ---@field DefaultColor FLinearColor
 ---@field bIsChildOfRamp boolean
 UHoudiniParameterColor = {}
+
+---@return UHoudiniParameterColor
+function UHoudiniParameterColor:get() end
 
 
 
@@ -857,6 +1127,9 @@ UHoudiniParameterColor = {}
 ---@field Filters FString
 ---@field bIsReadOnly boolean
 UHoudiniParameterFile = {}
+
+---@return UHoudiniParameterFile
+function UHoudiniParameterFile:get() end
 
 
 
@@ -877,6 +1150,9 @@ UHoudiniParameterFile = {}
 ---@field bIsChildOfRamp boolean
 UHoudiniParameterFloat = {}
 
+---@return UHoudiniParameterFloat
+function UHoudiniParameterFloat:get() end
+
 
 
 ---@class UHoudiniParameterFolder : UHoudiniParameter
@@ -887,6 +1163,9 @@ UHoudiniParameterFloat = {}
 ---@field bIsContentShown boolean
 UHoudiniParameterFolder = {}
 
+---@return UHoudiniParameterFolder
+function UHoudiniParameterFolder:get() end
+
 
 
 ---@class UHoudiniParameterFolderList : UHoudiniParameter
@@ -894,6 +1173,9 @@ UHoudiniParameterFolder = {}
 ---@field bIsTabsShown boolean
 ---@field TabFolders TArray<UHoudiniParameterFolder>
 UHoudiniParameterFolderList = {}
+
+---@return UHoudiniParameterFolderList
+function UHoudiniParameterFolderList:get() end
 
 
 
@@ -912,11 +1194,17 @@ UHoudiniParameterFolderList = {}
 ---@field UIMax int32
 UHoudiniParameterInt = {}
 
+---@return UHoudiniParameterInt
+function UHoudiniParameterInt:get() end
+
 
 
 ---@class UHoudiniParameterLabel : UHoudiniParameter
 ---@field LabelStrings TArray<FString>
 UHoudiniParameterLabel = {}
+
+---@return UHoudiniParameterLabel
+function UHoudiniParameterLabel:get() end
 
 
 
@@ -933,11 +1221,17 @@ UHoudiniParameterLabel = {}
 ---@field DefaultInstanceCount int32
 UHoudiniParameterMultiParm = {}
 
+---@return UHoudiniParameterMultiParm
+function UHoudiniParameterMultiParm:get() end
+
 
 
 ---@class UHoudiniParameterOperatorPath : UHoudiniParameter
 ---@field HoudiniInput TWeakObjectPtr<UHoudiniInput>
 UHoudiniParameterOperatorPath = {}
+
+---@return UHoudiniParameterOperatorPath
+function UHoudiniParameterOperatorPath:get() end
 
 
 
@@ -952,6 +1246,9 @@ UHoudiniParameterOperatorPath = {}
 ---@field ModificationEvents TArray<UHoudiniParameterRampModificationEvent>
 UHoudiniParameterRampColor = {}
 
+---@return UHoudiniParameterRampColor
+function UHoudiniParameterRampColor:get() end
+
 
 
 ---@class UHoudiniParameterRampColorPoint : UObject
@@ -963,6 +1260,9 @@ UHoudiniParameterRampColor = {}
 ---@field ValueParentParm UHoudiniParameterColor
 ---@field InterpolationParentParm UHoudiniParameterChoice
 UHoudiniParameterRampColorPoint = {}
+
+---@return UHoudiniParameterRampColorPoint
+function UHoudiniParameterRampColorPoint:get() end
 
 
 
@@ -977,6 +1277,9 @@ UHoudiniParameterRampColorPoint = {}
 ---@field ModificationEvents TArray<UHoudiniParameterRampModificationEvent>
 UHoudiniParameterRampFloat = {}
 
+---@return UHoudiniParameterRampFloat
+function UHoudiniParameterRampFloat:get() end
+
 
 
 ---@class UHoudiniParameterRampFloatPoint : UObject
@@ -988,6 +1291,9 @@ UHoudiniParameterRampFloat = {}
 ---@field ValueParentParm UHoudiniParameterFloat
 ---@field InterpolationParentParm UHoudiniParameterChoice
 UHoudiniParameterRampFloatPoint = {}
+
+---@return UHoudiniParameterRampFloatPoint
+function UHoudiniParameterRampFloatPoint:get() end
 
 
 
@@ -1001,10 +1307,16 @@ UHoudiniParameterRampFloatPoint = {}
 ---@field InsertInterpolation EHoudiniRampInterpolationType
 UHoudiniParameterRampModificationEvent = {}
 
+---@return UHoudiniParameterRampModificationEvent
+function UHoudiniParameterRampModificationEvent:get() end
+
 
 
 ---@class UHoudiniParameterSeparator : UHoudiniParameter
 UHoudiniParameterSeparator = {}
+
+---@return UHoudiniParameterSeparator
+function UHoudiniParameterSeparator:get() end
 
 
 ---@class UHoudiniParameterString : UHoudiniParameter
@@ -1014,12 +1326,18 @@ UHoudiniParameterSeparator = {}
 ---@field bIsAssetRef boolean
 UHoudiniParameterString = {}
 
+---@return UHoudiniParameterString
+function UHoudiniParameterString:get() end
+
 
 
 ---@class UHoudiniParameterToggle : UHoudiniParameter
 ---@field Values TArray<int32>
 ---@field DefaultValues TArray<int32>
 UHoudiniParameterToggle = {}
+
+---@return UHoudiniParameterToggle
+function UHoudiniParameterToggle:get() end
 
 
 
@@ -1100,6 +1418,9 @@ UHoudiniParameterToggle = {}
 ---@field AudioDsoSearchPath FString
 UHoudiniRuntimeSettings = {}
 
+---@return UHoudiniRuntimeSettings
+function UHoudiniRuntimeSettings:get() end
+
 
 
 ---@class UHoudiniSplineComponent : USceneComponent
@@ -1125,10 +1446,16 @@ UHoudiniRuntimeSettings = {}
 ---@field PartName FString
 UHoudiniSplineComponent = {}
 
+---@return UHoudiniSplineComponent
+function UHoudiniSplineComponent:get() end
+
 
 
 ---@class UHoudiniSplineComponent_V1 : USceneComponent
 UHoudiniSplineComponent_V1 = {}
+
+---@return UHoudiniSplineComponent_V1
+function UHoudiniSplineComponent_V1:get() end
 
 
 ---@class UHoudiniStaticMesh : UObject
@@ -1147,6 +1474,9 @@ UHoudiniSplineComponent_V1 = {}
 ---@field MaterialIDsPerTriangle TArray<int32>
 ---@field StaticMaterials TArray<FStaticMaterial>
 UHoudiniStaticMesh = {}
+
+---@return UHoudiniStaticMesh
+function UHoudiniStaticMesh:get() end
 
 ---@param InVertexIndex uint32
 ---@param InPosition FVector3f
@@ -1265,6 +1595,9 @@ function UHoudiniStaticMesh:AddStaticMaterial(InStaticMaterial) end
 ---@field bHoudiniIconVisible boolean
 UHoudiniStaticMeshComponent = {}
 
+---@return UHoudiniStaticMeshComponent
+function UHoudiniStaticMeshComponent:get() end
+
 ---@param InMesh UHoudiniStaticMesh
 function UHoudiniStaticMeshComponent:SetMesh(InMesh) end
 ---@param bInHoudiniIconVisible boolean
@@ -1286,6 +1619,9 @@ function UHoudiniStaticMeshComponent:GetMesh() end
 ---@field bShowResults boolean
 ---@field bAutoLoadResults boolean
 UTOPNetwork = {}
+
+---@return UTOPNetwork
+function UTOPNetwork:get() end
 
 
 
@@ -1310,6 +1646,9 @@ UTOPNetwork = {}
 ---@field bHasReceivedCookCompleteEvent boolean
 ---@field OutputActorOwner FOutputActorOwner
 UTOPNode = {}
+
+---@return UTOPNode
+function UTOPNode:get() end
 
 
 

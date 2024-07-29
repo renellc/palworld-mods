@@ -11,6 +11,9 @@
 ---@field AnimLayerClass TSubclassOf<UAnimInstance>
 ABP_NPC_Base_C = {}
 
+---@return ABP_NPC_Base_C
+function ABP_NPC_Base_C:get() end
+
 ---@param Material UMaterialInstance
 function ABP_NPC_Base_C:SetMaterial(Material) end
 function ABP_NPC_Base_C:SetupInteraction() end

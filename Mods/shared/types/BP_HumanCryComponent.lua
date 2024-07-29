@@ -6,6 +6,9 @@
 ---@field CurrentActionClass TSubclassOf<UPalActionBase>
 UBP_HumanCryComponent_C = {}
 
+---@return UBP_HumanCryComponent_C
+function UBP_HumanCryComponent_C:get() end
+
 ---@param AkEvent UAkAudioEvent
 function UBP_HumanCryComponent_C:PlayCry(AkEvent) end
 ---@param action UPalActionBase

@@ -7,6 +7,9 @@
 ---@field bExtendToViewport boolean
 FImGuiCanvasSizeInfo = {}
 
+---@return FImGuiCanvasSizeInfo
+function FImGuiCanvasSizeInfo:get() end
+
 
 
 ---@class FImGuiDPIScaleInfo
@@ -15,6 +18,9 @@ FImGuiCanvasSizeInfo = {}
 ---@field DPICurve FRuntimeFloatCurve
 ---@field bScaleWithCurve boolean
 FImGuiDPIScaleInfo = {}
+
+---@return FImGuiDPIScaleInfo
+function FImGuiDPIScaleInfo:get() end
 
 
 
@@ -26,10 +32,16 @@ FImGuiDPIScaleInfo = {}
 ---@field Cmd ECheckBoxState
 FImGuiKeyInfo = {}
 
+---@return FImGuiKeyInfo
+function FImGuiKeyInfo:get() end
+
 
 
 ---@class UImGuiInputHandler : UObject
 UImGuiInputHandler = {}
+
+---@return UImGuiInputHandler
+function UImGuiInputHandler:get() end
 
 
 ---@class UImGuiSettings : UObject
@@ -42,6 +54,9 @@ UImGuiInputHandler = {}
 ---@field CanvasSize FImGuiCanvasSizeInfo
 ---@field DPIScale FImGuiDPIScaleInfo
 UImGuiSettings = {}
+
+---@return UImGuiSettings
+function UImGuiSettings:get() end
 
 
 

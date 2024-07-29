@@ -7,6 +7,9 @@
 ---@field RocketStartDelay float
 ABP_HomingMissile_MissileLauncher_C = {}
 
+---@return ABP_HomingMissile_MissileLauncher_C
+function ABP_HomingMissile_MissileLauncher_C:get() end
+
 ---@param PalCharacter APalCharacter
 ABP_HomingMissile_MissileLauncher_C['Find Target Actor'] = function(PalCharacter) end
 function ABP_HomingMissile_MissileLauncher_C:ReceiveBeginPlay() end

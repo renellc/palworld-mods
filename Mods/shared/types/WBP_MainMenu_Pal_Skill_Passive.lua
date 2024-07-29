@@ -22,6 +22,9 @@
 ---@field BindedPassiveSkillName FName
 UWBP_MainMenu_Pal_Skill_Passive_C = {}
 
+---@return UWBP_MainMenu_Pal_Skill_Passive_C
+function UWBP_MainMenu_Pal_Skill_Passive_C:get() end
+
 ---@param PassiveSkillName FName
 function UWBP_MainMenu_Pal_Skill_Passive_C:GetBindedPassiveSkillName(PassiveSkillName) end
 function UWBP_MainMenu_Pal_Skill_Passive_C:Clear() end

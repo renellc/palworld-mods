@@ -6,6 +6,9 @@
 ---@field TargetLocationDistanceRightList TArray<double>
 UBP_AIAction_FunnelFollow_C = {}
 
+---@return UBP_AIAction_FunnelFollow_C
+function UBP_AIAction_FunnelFollow_C:get() end
+
 UBP_AIAction_FunnelFollow_C['Update Location Distance'] = function() end
 ---@param FollowSpeed double
 function UBP_AIAction_FunnelFollow_C:GetFollowSpeedFromController(FollowSpeed) end

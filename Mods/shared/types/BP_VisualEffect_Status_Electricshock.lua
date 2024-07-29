@@ -5,6 +5,9 @@
 ---@field Niagara UNiagaraComponent
 UBP_VisualEffect_Status_Electricshock_C = {}
 
+---@return UBP_VisualEffect_Status_Electricshock_C
+function UBP_VisualEffect_Status_Electricshock_C:get() end
+
 function UBP_VisualEffect_Status_Electricshock_C:OnBeginVisualEffect() end
 function UBP_VisualEffect_Status_Electricshock_C:OnEndVisualEffect() end
 ---@param EntryPoint int32

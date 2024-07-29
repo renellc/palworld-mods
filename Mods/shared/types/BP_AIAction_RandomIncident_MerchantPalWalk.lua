@@ -6,6 +6,9 @@
 ---@field ['Spawned Position'] FVector
 UBP_AIAction_RandomIncident_MerchantPalWalk_C = {}
 
+---@return UBP_AIAction_RandomIncident_MerchantPalWalk_C
+function UBP_AIAction_RandomIncident_MerchantPalWalk_C:get() end
+
 function UBP_AIAction_RandomIncident_MerchantPalWalk_C:ChangeNextMovePosition() end
 ---@param ControlledPawn APawn
 function UBP_AIAction_RandomIncident_MerchantPalWalk_C:ActionStart(ControlledPawn) end

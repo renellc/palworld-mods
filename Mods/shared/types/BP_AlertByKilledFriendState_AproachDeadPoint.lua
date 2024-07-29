@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AlertByKilledFriendState_AproachDeadPoint_C = {}
 
+---@return UBP_AlertByKilledFriendState_AproachDeadPoint_C
+function UBP_AlertByKilledFriendState_AproachDeadPoint_C:get() end
+
 ---@param DeltaTime float
 function UBP_AlertByKilledFriendState_AproachDeadPoint_C:StateTick(DeltaTime) end
 function UBP_AlertByKilledFriendState_AproachDeadPoint_C:StateExit() end

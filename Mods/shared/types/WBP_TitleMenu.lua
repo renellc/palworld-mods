@@ -24,6 +24,9 @@
 ---@field ServerNoticeMsgID FDataTableRowHandle
 UWBP_TitleMenu_C = {}
 
+---@return UWBP_TitleMenu_C
+function UWBP_TitleMenu_C:get() end
+
 ---@param TargetWidget UWidget
 function UWBP_TitleMenu_C:GetTopButton(TargetWidget) end
 function UWBP_TitleMenu_C:BndEvt__WBP_TitleMenu_WBP_Title_MenuButton_ExitGame_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature() end

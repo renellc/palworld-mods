@@ -28,6 +28,9 @@
 ---@field IsSleep boolean
 UBP_AIAction_WildLife_C = {}
 
+---@return UBP_AIAction_WildLife_C
+function UBP_AIAction_WildLife_C:get() end
+
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBP_AIAction_WildLife_C:ActionTickAnyThread(ControlledPawn, DeltaSeconds) end

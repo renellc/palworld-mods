@@ -11,6 +11,9 @@
 ---@field EndDistance double
 UBP_AIActionEscape_C = {}
 
+---@return UBP_AIActionEscape_C
+function UBP_AIActionEscape_C:get() end
+
 ---@param IsFar boolean
 UBP_AIActionEscape_C['Is Far Spawn Point'] = function(IsFar) end
 ---@param DeadInbfo FPalDeadInfo

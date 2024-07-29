@@ -11,6 +11,9 @@
 ---@field Image_591 UImage
 UWBP_CharaCre_BG_C = {}
 
+---@return UWBP_CharaCre_BG_C
+function UWBP_CharaCre_BG_C:get() end
+
 function UWBP_CharaCre_BG_C:AnmEvent_FloorIn() end
 function UWBP_CharaCre_BG_C:AnmEvent_FloorOut() end
 ---@param EntryPoint int32

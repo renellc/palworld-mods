@@ -7,6 +7,9 @@
 ---@field OverrideImage TMap<ECommonInputType, UTexture2D>
 UWBP_PlayerInputKeyGuideIcon_C = {}
 
+---@return UWBP_PlayerInputKeyGuideIcon_C
+function UWBP_PlayerInputKeyGuideIcon_C:get() end
+
 ---@param Size FVector2D
 function UWBP_PlayerInputKeyGuideIcon_C:SetOverrideSize(Size) end
 function UWBP_PlayerInputKeyGuideIcon_C:Construct() end

@@ -7,6 +7,9 @@
 ---@field IsBinding boolean
 UBP_PalIncidentRandomActionMerchantwithPAL_C = {}
 
+---@return UBP_PalIncidentRandomActionMerchantwithPAL_C
+function UBP_PalIncidentRandomActionMerchantwithPAL_C:get() end
+
 ---@param DamageResult FPalDamageResult
 function UBP_PalIncidentRandomActionMerchantwithPAL_C:OnDamage(DamageResult) end
 function UBP_PalIncidentRandomActionMerchantwithPAL_C:CollectSpawnCharacter() end

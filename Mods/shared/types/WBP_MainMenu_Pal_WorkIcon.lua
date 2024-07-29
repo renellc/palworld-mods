@@ -8,6 +8,9 @@
 ---@field WBP_IconPalWork UWBP_IconPalWork_C
 UWBP_MainMenu_Pal_WorkIcon_C = {}
 
+---@return UWBP_MainMenu_Pal_WorkIcon_C
+function UWBP_MainMenu_Pal_WorkIcon_C:get() end
+
 ---@param Enable boolean
 function UWBP_MainMenu_Pal_WorkIcon_C:SetRankup(Enable) end
 ---@param Rank int32

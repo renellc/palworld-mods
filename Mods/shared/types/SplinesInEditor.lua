@@ -5,5 +5,8 @@
 ---@field SplineProperties_6_D4A203BA4C527B07DC3A6E8BBBEB5970 FRiverSplineElement
 FSplinesInEditor = {}
 
+---@return FSplinesInEditor
+function FSplinesInEditor:get() end
+
 
 

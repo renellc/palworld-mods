@@ -5,5 +5,8 @@
 ---@field CurveSyncOffset float
 UAudioCurveSourceComponent = {}
 
+---@return UAudioCurveSourceComponent
+function UAudioCurveSourceComponent:get() end
+
 
 

@@ -3,11 +3,17 @@
 ---@class FMRMeshConfiguration
 FMRMeshConfiguration = {}
 
+---@return FMRMeshConfiguration
+function FMRMeshConfiguration:get() end
+
 
 ---@class UMRMeshBodyHolder : UObject
 ---@field BodySetup UBodySetup
 ---@field BodyInstance FBodyInstance
 UMRMeshBodyHolder = {}
+
+---@return UMRMeshBodyHolder
+function UMRMeshBodyHolder:get() end
 
 
 
@@ -19,6 +25,9 @@ UMRMeshBodyHolder = {}
 ---@field bNeverCreateCollisionMesh boolean
 ---@field BodyHolders TArray<UMRMeshBodyHolder>
 UMRMeshComponent = {}
+
+---@return UMRMeshComponent
+function UMRMeshComponent:get() end
 
 ---@param InMaterial UMaterialInterface
 function UMRMeshComponent:SetWireframeMaterial(InMaterial) end
@@ -44,6 +53,9 @@ function UMRMeshComponent:Clear() end
 ---@class UMeshReconstructorBase : UObject
 UMeshReconstructorBase = {}
 
+---@return UMeshReconstructorBase
+function UMeshReconstructorBase:get() end
+
 function UMeshReconstructorBase:StopReconstruction() end
 function UMeshReconstructorBase:StartReconstruction() end
 function UMeshReconstructorBase:PauseReconstruction() end
@@ -68,6 +80,9 @@ function UMeshReconstructorBase:ConnectMRMesh(Mesh) end
 ---@field UpdateInterval float
 ---@field MRMesh UMRMeshComponent
 UMockDataMeshTrackerComponent = {}
+
+---@return UMockDataMeshTrackerComponent
+function UMockDataMeshTrackerComponent:get() end
 
 ---@param Index int32
 ---@param Vertices TArray<FVector>

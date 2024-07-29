@@ -5,6 +5,9 @@
 ---@field AIControllerRaidBoss ABP_MonsterAIController_RaidBoss_C
 UBP_AIAction_RaidBossStandby_C = {}
 
+---@return UBP_AIAction_RaidBossStandby_C
+function UBP_AIAction_RaidBossStandby_C:get() end
+
 ---@param DamageResult FPalDamageResult
 UBP_AIAction_RaidBossStandby_C['On Damage'] = function(DamageResult) end
 ---@param ControlledPawn APawn

@@ -13,6 +13,9 @@
 ---@field TitleMsgID FDataTableRowHandle
 UWBP_Chara_Cre_PartsSizeSlider_C = {}
 
+---@return UWBP_Chara_Cre_PartsSizeSlider_C
+function UWBP_Chara_Cre_PartsSizeSlider_C:get() end
+
 ---@param Size double
 function UWBP_Chara_Cre_PartsSizeSlider_C:SetValueForce(Size) end
 function UWBP_Chara_Cre_PartsSizeSlider_C:Construct() end

@@ -15,6 +15,9 @@
 ---@field LastClickedBodyTypeButton UWBP_CharaCre_BodyTypeButton_C
 UWBP_CharaCre_ScrollBoxContent_Body_C = {}
 
+---@return UWBP_CharaCre_ScrollBoxContent_Body_C
+function UWBP_CharaCre_ScrollBoxContent_Body_C:get() end
+
 ---@param PresetName FName
 function UWBP_CharaCre_ScrollBoxContent_Body_C:SetDefaultBodyTypePresetName(PresetName) end
 ---@param Widget UWBP_CharaCre_BodyTypeButton_C

@@ -5,6 +5,9 @@
 ---@field LoadCache TArray<UNiagaraSystem>
 UBP_HitEffectSlot_Player_C = {}
 
+---@return UBP_HitEffectSlot_Player_C
+function UBP_HitEffectSlot_Player_C:get() end
+
 ---@param Element EPalElementType
 ---@param Location FVector
 ---@param EffectScale double

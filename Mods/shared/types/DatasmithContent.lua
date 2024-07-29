@@ -20,11 +20,17 @@
 ---@field SpotlightOuterAngle float
 ADatasmithAreaLightActor = {}
 
+---@return ADatasmithAreaLightActor
+function ADatasmithAreaLightActor:get() end
+
 
 
 ---@class ADatasmithImportedSequencesActor : AActor
 ---@field ImportedSequences TArray<ULevelSequence>
 ADatasmithImportedSequencesActor = {}
+
+---@return ADatasmithImportedSequencesActor
+function ADatasmithImportedSequencesActor:get() end
 
 ---@param SequenceToPlay ULevelSequence
 function ADatasmithImportedSequencesActor:PlayLevelSequence(SequenceToPlay) end
@@ -35,11 +41,17 @@ function ADatasmithImportedSequencesActor:PlayLevelSequence(SequenceToPlay) end
 ---@field RelatedActors TMap<FName, TSoftObjectPtr<AActor>>
 ADatasmithSceneActor = {}
 
+---@return ADatasmithSceneActor
+function ADatasmithSceneActor:get() end
+
 
 
 ---@class FDatasmithAssetImportOptions
 ---@field PackagePath FName
 FDatasmithAssetImportOptions = {}
+
+---@return FDatasmithAssetImportOptions
+function FDatasmithAssetImportOptions:get() end
 
 
 
@@ -48,6 +60,9 @@ FDatasmithAssetImportOptions = {}
 ---@field SensorHeight float
 FDatasmithCameraFilmbackSettingsTemplate = {}
 
+---@return FDatasmithCameraFilmbackSettingsTemplate
+function FDatasmithCameraFilmbackSettingsTemplate:get() end
+
 
 
 ---@class FDatasmithCameraFocusSettingsTemplate
@@ -55,11 +70,17 @@ FDatasmithCameraFilmbackSettingsTemplate = {}
 ---@field ManualFocusDistance float
 FDatasmithCameraFocusSettingsTemplate = {}
 
+---@return FDatasmithCameraFocusSettingsTemplate
+function FDatasmithCameraFocusSettingsTemplate:get() end
+
 
 
 ---@class FDatasmithCameraLensSettingsTemplate
 ---@field MaxFStop float
 FDatasmithCameraLensSettingsTemplate = {}
+
+---@return FDatasmithCameraLensSettingsTemplate
+function FDatasmithCameraLensSettingsTemplate:get() end
 
 
 
@@ -68,6 +89,9 @@ FDatasmithCameraLensSettingsTemplate = {}
 ---@field bAllowRoll boolean
 ---@field ActorToTrack TSoftObjectPtr<AActor>
 FDatasmithCameraLookatTrackingSettingsTemplate = {}
+
+---@return FDatasmithCameraLookatTrackingSettingsTemplate
+function FDatasmithCameraLookatTrackingSettingsTemplate:get() end
 
 
 
@@ -82,10 +106,16 @@ FDatasmithCameraLookatTrackingSettingsTemplate = {}
 ---@field StaticMeshOptions FDatasmithStaticMeshImportOptions
 FDatasmithImportBaseOptions = {}
 
+---@return FDatasmithImportBaseOptions
+function FDatasmithImportBaseOptions:get() end
+
 
 
 ---@class FDatasmithImportInfo
 FDatasmithImportInfo = {}
+
+---@return FDatasmithImportInfo
+function FDatasmithImportInfo:get() end
 
 
 ---@class FDatasmithMeshBuildSettingsTemplate
@@ -101,17 +131,26 @@ FDatasmithImportInfo = {}
 ---@field DstLightmapIndex int32
 FDatasmithMeshBuildSettingsTemplate = {}
 
+---@return FDatasmithMeshBuildSettingsTemplate
+function FDatasmithMeshBuildSettingsTemplate:get() end
+
 
 
 ---@class FDatasmithMeshSectionInfoMapTemplate
 ---@field Map TMap<uint32, FDatasmithMeshSectionInfoTemplate>
 FDatasmithMeshSectionInfoMapTemplate = {}
 
+---@return FDatasmithMeshSectionInfoMapTemplate
+function FDatasmithMeshSectionInfoMapTemplate:get() end
+
 
 
 ---@class FDatasmithMeshSectionInfoTemplate
 ---@field MaterialIndex int32
 FDatasmithMeshSectionInfoTemplate = {}
+
+---@return FDatasmithMeshSectionInfoTemplate
+function FDatasmithMeshSectionInfoTemplate:get() end
 
 
 
@@ -132,6 +171,9 @@ FDatasmithMeshSectionInfoTemplate = {}
 ---@field DepthOfFieldFstop float
 FDatasmithPostProcessSettingsTemplate = {}
 
+---@return FDatasmithPostProcessSettingsTemplate
+function FDatasmithPostProcessSettingsTemplate:get() end
+
 
 
 ---@class FDatasmithReimportOptions
@@ -139,11 +181,17 @@ FDatasmithPostProcessSettingsTemplate = {}
 ---@field bRespawnDeletedActors boolean
 FDatasmithReimportOptions = {}
 
+---@return FDatasmithReimportOptions
+function FDatasmithReimportOptions:get() end
+
 
 
 ---@class FDatasmithRetessellationOptions : FDatasmithTessellationOptions
 ---@field RetessellationRule EDatasmithCADRetessellationRule
 FDatasmithRetessellationOptions = {}
+
+---@return FDatasmithRetessellationOptions
+function FDatasmithRetessellationOptions:get() end
 
 
 
@@ -151,6 +199,9 @@ FDatasmithRetessellationOptions = {}
 ---@field MaterialSlotName FName
 ---@field MaterialInterface UMaterialInterface
 FDatasmithStaticMaterialTemplate = {}
+
+---@return FDatasmithStaticMaterialTemplate
+function FDatasmithStaticMaterialTemplate:get() end
 
 
 
@@ -161,11 +212,17 @@ FDatasmithStaticMaterialTemplate = {}
 ---@field bRemoveDegenerates boolean
 FDatasmithStaticMeshImportOptions = {}
 
+---@return FDatasmithStaticMeshImportOptions
+function FDatasmithStaticMeshImportOptions:get() end
+
 
 
 ---@class FDatasmithStaticParameterSetTemplate
 ---@field StaticSwitchParameters TMap<FName, boolean>
 FDatasmithStaticParameterSetTemplate = {}
+
+---@return FDatasmithStaticParameterSetTemplate
+function FDatasmithStaticParameterSetTemplate:get() end
 
 
 
@@ -176,6 +233,9 @@ FDatasmithStaticParameterSetTemplate = {}
 ---@field StitchingTechnique EDatasmithCADStitchingTechnique
 FDatasmithTessellationOptions = {}
 
+---@return FDatasmithTessellationOptions
+function FDatasmithTessellationOptions:get() end
+
 
 
 ---@class UDatasmithActorTemplate : UDatasmithObjectTemplate
@@ -183,10 +243,16 @@ FDatasmithTessellationOptions = {}
 ---@field Tags TSet<FName>
 UDatasmithActorTemplate = {}
 
+---@return UDatasmithActorTemplate
+function UDatasmithActorTemplate:get() end
+
 
 
 ---@class UDatasmithAdditionalData : UObject
 UDatasmithAdditionalData = {}
+
+---@return UDatasmithAdditionalData
+function UDatasmithAdditionalData:get() end
 
 
 ---@class UDatasmithAreaLightActorTemplate : UDatasmithObjectTemplate
@@ -206,25 +272,40 @@ UDatasmithAdditionalData = {}
 ---@field AttenuationRadius float
 UDatasmithAreaLightActorTemplate = {}
 
+---@return UDatasmithAreaLightActorTemplate
+function UDatasmithAreaLightActorTemplate:get() end
+
 
 
 ---@class UDatasmithAssetImportData : UAssetImportData
 UDatasmithAssetImportData = {}
+
+---@return UDatasmithAssetImportData
+function UDatasmithAssetImportData:get() end
 
 
 ---@class UDatasmithAssetUserData : UAssetUserData
 ---@field MetaData TMap<FName, FString>
 UDatasmithAssetUserData = {}
 
+---@return UDatasmithAssetUserData
+function UDatasmithAssetUserData:get() end
+
 
 
 ---@class UDatasmithCADImportSceneData : UDatasmithSceneImportData
 UDatasmithCADImportSceneData = {}
 
+---@return UDatasmithCADImportSceneData
+function UDatasmithCADImportSceneData:get() end
+
 
 ---@class UDatasmithCineCameraActorTemplate : UDatasmithObjectTemplate
 ---@field LookatTrackingSettings FDatasmithCameraLookatTrackingSettingsTemplate
 UDatasmithCineCameraActorTemplate = {}
+
+---@return UDatasmithCineCameraActorTemplate
+function UDatasmithCineCameraActorTemplate:get() end
 
 
 
@@ -237,16 +318,25 @@ UDatasmithCineCameraActorTemplate = {}
 ---@field PostProcessSettings FDatasmithPostProcessSettingsTemplate
 UDatasmithCineCameraComponentTemplate = {}
 
+---@return UDatasmithCineCameraComponentTemplate
+function UDatasmithCineCameraComponentTemplate:get() end
+
 
 
 ---@class UDatasmithCommonTessellationOptions : UDatasmithOptionsBase
 ---@field Options FDatasmithTessellationOptions
 UDatasmithCommonTessellationOptions = {}
 
+---@return UDatasmithCommonTessellationOptions
+function UDatasmithCommonTessellationOptions:get() end
+
 
 
 ---@class UDatasmithContentBlueprintLibrary : UBlueprintFunctionLibrary
 UDatasmithContentBlueprintLibrary = {}
+
+---@return UDatasmithContentBlueprintLibrary
+function UDatasmithContentBlueprintLibrary:get() end
 
 ---@param Object UObject
 ---@param Key FName
@@ -271,6 +361,9 @@ function UDatasmithContentBlueprintLibrary:GetDatasmithUserData(Object) end
 ---@class UDatasmithCustomActionBase : UObject
 UDatasmithCustomActionBase = {}
 
+---@return UDatasmithCustomActionBase
+function UDatasmithCustomActionBase:get() end
+
 
 ---@class UDatasmithDecalComponentTemplate : UDatasmithObjectTemplate
 ---@field SortOrder int32
@@ -278,10 +371,16 @@ UDatasmithCustomActionBase = {}
 ---@field Material UMaterialInterface
 UDatasmithDecalComponentTemplate = {}
 
+---@return UDatasmithDecalComponentTemplate
+function UDatasmithDecalComponentTemplate:get() end
+
 
 
 ---@class UDatasmithDeltaGenAssetImportData : UDatasmithAssetImportData
 UDatasmithDeltaGenAssetImportData = {}
+
+---@return UDatasmithDeltaGenAssetImportData
+function UDatasmithDeltaGenAssetImportData:get() end
 
 
 ---@class UDatasmithDeltaGenSceneImportData : UDatasmithFBXSceneImportData
@@ -297,6 +396,9 @@ UDatasmithDeltaGenAssetImportData = {}
 ---@field TmlPath FString
 UDatasmithDeltaGenSceneImportData = {}
 
+---@return UDatasmithDeltaGenSceneImportData
+function UDatasmithDeltaGenSceneImportData:get() end
+
 
 
 ---@class UDatasmithFBXSceneImportData : UDatasmithSceneImportData
@@ -305,6 +407,9 @@ UDatasmithDeltaGenSceneImportData = {}
 ---@field IntermediateSerialization uint8
 ---@field bColorizeMaterials boolean
 UDatasmithFBXSceneImportData = {}
+
+---@return UDatasmithFBXSceneImportData
+function UDatasmithFBXSceneImportData:get() end
 
 
 
@@ -316,10 +421,16 @@ UDatasmithFBXSceneImportData = {}
 ---@field Source FString
 UDatasmithGLTFSceneImportData = {}
 
+---@return UDatasmithGLTFSceneImportData
+function UDatasmithGLTFSceneImportData:get() end
+
 
 
 ---@class UDatasmithIFCSceneImportData : UDatasmithSceneImportData
 UDatasmithIFCSceneImportData = {}
+
+---@return UDatasmithIFCSceneImportData
+function UDatasmithIFCSceneImportData:get() end
 
 
 ---@class UDatasmithImportOptions : UDatasmithOptionsBase
@@ -338,12 +449,18 @@ UDatasmithIFCSceneImportData = {}
 ---@field SourceUri FString
 UDatasmithImportOptions = {}
 
+---@return UDatasmithImportOptions
+function UDatasmithImportOptions:get() end
+
 
 
 ---@class UDatasmithLandscapeTemplate : UDatasmithObjectTemplate
 ---@field LandscapeMaterial UMaterialInterface
 ---@field StaticLightingLOD int32
 UDatasmithLandscapeTemplate = {}
+
+---@return UDatasmithLandscapeTemplate
+function UDatasmithLandscapeTemplate:get() end
 
 
 
@@ -360,10 +477,16 @@ UDatasmithLandscapeTemplate = {}
 ---@field IESTexture UTextureLightProfile
 UDatasmithLightComponentTemplate = {}
 
+---@return UDatasmithLightComponentTemplate
+function UDatasmithLightComponentTemplate:get() end
+
 
 
 ---@class UDatasmithMDLSceneImportData : UDatasmithSceneImportData
 UDatasmithMDLSceneImportData = {}
+
+---@return UDatasmithMDLSceneImportData
+function UDatasmithMDLSceneImportData:get() end
 
 
 ---@class UDatasmithMaterialInstanceTemplate : UDatasmithObjectTemplate
@@ -374,14 +497,23 @@ UDatasmithMDLSceneImportData = {}
 ---@field StaticParameters FDatasmithStaticParameterSetTemplate
 UDatasmithMaterialInstanceTemplate = {}
 
+---@return UDatasmithMaterialInstanceTemplate
+function UDatasmithMaterialInstanceTemplate:get() end
+
 
 
 ---@class UDatasmithObjectTemplate : UObject
 UDatasmithObjectTemplate = {}
 
+---@return UDatasmithObjectTemplate
+function UDatasmithObjectTemplate:get() end
+
 
 ---@class UDatasmithOptionsBase : UObject
 UDatasmithOptionsBase = {}
+
+---@return UDatasmithOptionsBase
+function UDatasmithOptionsBase:get() end
 
 
 ---@class UDatasmithPointLightComponentTemplate : UDatasmithObjectTemplate
@@ -391,6 +523,9 @@ UDatasmithOptionsBase = {}
 ---@field AttenuationRadius float
 UDatasmithPointLightComponentTemplate = {}
 
+---@return UDatasmithPointLightComponentTemplate
+function UDatasmithPointLightComponentTemplate:get() end
+
 
 
 ---@class UDatasmithPostProcessVolumeTemplate : UDatasmithObjectTemplate
@@ -399,10 +534,16 @@ UDatasmithPointLightComponentTemplate = {}
 ---@field bUnbound boolean
 UDatasmithPostProcessVolumeTemplate = {}
 
+---@return UDatasmithPostProcessVolumeTemplate
+function UDatasmithPostProcessVolumeTemplate:get() end
+
 
 
 ---@class UDatasmithScene : UObject
 UDatasmithScene = {}
+
+---@return UDatasmithScene
+function UDatasmithScene:get() end
 
 
 ---@class UDatasmithSceneComponentTemplate : UDatasmithObjectTemplate
@@ -414,10 +555,16 @@ UDatasmithScene = {}
 ---@field Tags TSet<FName>
 UDatasmithSceneComponentTemplate = {}
 
+---@return UDatasmithSceneComponentTemplate
+function UDatasmithSceneComponentTemplate:get() end
+
 
 
 ---@class UDatasmithSceneImportData : UAssetImportData
 UDatasmithSceneImportData = {}
+
+---@return UDatasmithSceneImportData
+function UDatasmithSceneImportData:get() end
 
 
 ---@class UDatasmithSkyLightComponentTemplate : UDatasmithObjectTemplate
@@ -426,6 +573,9 @@ UDatasmithSceneImportData = {}
 ---@field Cubemap UTextureCube
 UDatasmithSkyLightComponentTemplate = {}
 
+---@return UDatasmithSkyLightComponentTemplate
+function UDatasmithSkyLightComponentTemplate:get() end
+
 
 
 ---@class UDatasmithSpotLightComponentTemplate : UDatasmithObjectTemplate
@@ -433,10 +583,16 @@ UDatasmithSkyLightComponentTemplate = {}
 ---@field OuterConeAngle float
 UDatasmithSpotLightComponentTemplate = {}
 
+---@return UDatasmithSpotLightComponentTemplate
+function UDatasmithSpotLightComponentTemplate:get() end
+
 
 
 ---@class UDatasmithStaticMeshCADImportData : UDatasmithStaticMeshImportData
 UDatasmithStaticMeshCADImportData = {}
+
+---@return UDatasmithStaticMeshCADImportData
+function UDatasmithStaticMeshCADImportData:get() end
 
 
 ---@class UDatasmithStaticMeshComponentTemplate : UDatasmithObjectTemplate
@@ -444,11 +600,17 @@ UDatasmithStaticMeshCADImportData = {}
 ---@field OverrideMaterials TArray<UMaterialInterface>
 UDatasmithStaticMeshComponentTemplate = {}
 
+---@return UDatasmithStaticMeshComponentTemplate
+function UDatasmithStaticMeshComponentTemplate:get() end
+
 
 
 ---@class UDatasmithStaticMeshGLTFImportData : UDatasmithStaticMeshImportData
 ---@field SourceMeshName FString
 UDatasmithStaticMeshGLTFImportData = {}
+
+---@return UDatasmithStaticMeshGLTFImportData
+function UDatasmithStaticMeshGLTFImportData:get() end
 
 
 
@@ -456,10 +618,16 @@ UDatasmithStaticMeshGLTFImportData = {}
 ---@field SourceGlobalId FString
 UDatasmithStaticMeshIFCImportData = {}
 
+---@return UDatasmithStaticMeshIFCImportData
+function UDatasmithStaticMeshIFCImportData:get() end
+
 
 
 ---@class UDatasmithStaticMeshImportData : UDatasmithAssetImportData
 UDatasmithStaticMeshImportData = {}
+
+---@return UDatasmithStaticMeshImportData
+function UDatasmithStaticMeshImportData:get() end
 
 
 ---@class UDatasmithStaticMeshTemplate : UDatasmithObjectTemplate
@@ -470,14 +638,23 @@ UDatasmithStaticMeshImportData = {}
 ---@field StaticMaterials TArray<FDatasmithStaticMaterialTemplate>
 UDatasmithStaticMeshTemplate = {}
 
+---@return UDatasmithStaticMeshTemplate
+function UDatasmithStaticMeshTemplate:get() end
+
 
 
 ---@class UDatasmithTranslatedSceneImportData : UDatasmithSceneImportData
 UDatasmithTranslatedSceneImportData = {}
 
+---@return UDatasmithTranslatedSceneImportData
+function UDatasmithTranslatedSceneImportData:get() end
+
 
 ---@class UDatasmithVREDAssetImportData : UDatasmithAssetImportData
 UDatasmithVREDAssetImportData = {}
+
+---@return UDatasmithVREDAssetImportData
+function UDatasmithVREDAssetImportData:get() end
 
 
 ---@class UDatasmithVREDSceneImportData : UDatasmithFBXSceneImportData
@@ -493,6 +670,9 @@ UDatasmithVREDAssetImportData = {}
 ---@field bImportClipInfo boolean
 ---@field ClipInfoPath FString
 UDatasmithVREDSceneImportData = {}
+
+---@return UDatasmithVREDSceneImportData
+function UDatasmithVREDSceneImportData:get() end
 
 
 

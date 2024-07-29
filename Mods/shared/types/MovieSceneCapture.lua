@@ -5,21 +5,33 @@
 ---@field ResY int32
 FCaptureResolution = {}
 
+---@return FCaptureResolution
+function FCaptureResolution:get() end
+
 
 
 ---@class FCapturedPixels
 FCapturedPixels = {}
+
+---@return FCapturedPixels
+function FCapturedPixels:get() end
 
 
 ---@class FCapturedPixelsID
 ---@field Identifiers TMap<FName, FName>
 FCapturedPixelsID = {}
 
+---@return FCapturedPixelsID
+function FCapturedPixelsID:get() end
+
 
 
 ---@class FCompositionGraphCapturePasses
 ---@field Value TArray<FString>
 FCompositionGraphCapturePasses = {}
+
+---@return FCompositionGraphCapturePasses
+function FCompositionGraphCapturePasses:get() end
 
 
 
@@ -29,6 +41,9 @@ FCompositionGraphCapturePasses = {}
 ---@field FrameNumber int32
 ---@field NumDroppedFrames int32
 FFrameMetrics = {}
+
+---@return FFrameMetrics
+function FFrameMetrics:get() end
 
 
 
@@ -56,10 +71,16 @@ FFrameMetrics = {}
 ---@field PathTracerSamplePerPixel int32
 FMovieSceneCaptureSettings = {}
 
+---@return FMovieSceneCaptureSettings
+function FMovieSceneCaptureSettings:get() end
+
 
 
 ---@class IMovieSceneCaptureInterface : IInterface
 IMovieSceneCaptureInterface = {}
+
+---@return IMovieSceneCaptureInterface
+function IMovieSceneCaptureInterface:get() end
 
 
 ---@class UCompositionGraphCaptureProtocol : UMovieSceneImageCaptureProtocolBase
@@ -72,24 +93,39 @@ IMovieSceneCaptureInterface = {}
 ---@field PostProcessingMaterialPtr UMaterialInterface
 UCompositionGraphCaptureProtocol = {}
 
+---@return UCompositionGraphCaptureProtocol
+function UCompositionGraphCaptureProtocol:get() end
+
 
 
 ---@class UCompressedImageSequenceProtocol : UImageSequenceProtocol
 ---@field CompressionQuality int32
 UCompressedImageSequenceProtocol = {}
 
+---@return UCompressedImageSequenceProtocol
+function UCompressedImageSequenceProtocol:get() end
+
 
 
 ---@class UFrameGrabberProtocol : UMovieSceneImageCaptureProtocolBase
 UFrameGrabberProtocol = {}
 
+---@return UFrameGrabberProtocol
+function UFrameGrabberProtocol:get() end
+
 
 ---@class UImageSequenceProtocol : UFrameGrabberProtocol
 UImageSequenceProtocol = {}
 
+---@return UImageSequenceProtocol
+function UImageSequenceProtocol:get() end
+
 
 ---@class UImageSequenceProtocol_BMP : UImageSequenceProtocol
 UImageSequenceProtocol_BMP = {}
+
+---@return UImageSequenceProtocol_BMP
+function UImageSequenceProtocol_BMP:get() end
 
 
 ---@class UImageSequenceProtocol_EXR : UImageSequenceProtocol
@@ -97,14 +133,23 @@ UImageSequenceProtocol_BMP = {}
 ---@field CaptureGamut EHDRCaptureGamut
 UImageSequenceProtocol_EXR = {}
 
+---@return UImageSequenceProtocol_EXR
+function UImageSequenceProtocol_EXR:get() end
+
 
 
 ---@class UImageSequenceProtocol_JPG : UCompressedImageSequenceProtocol
 UImageSequenceProtocol_JPG = {}
 
+---@return UImageSequenceProtocol_JPG
+function UImageSequenceProtocol_JPG:get() end
+
 
 ---@class UImageSequenceProtocol_PNG : UCompressedImageSequenceProtocol
 UImageSequenceProtocol_PNG = {}
+
+---@return UImageSequenceProtocol_PNG
+function UImageSequenceProtocol_PNG:get() end
 
 
 ---@class ULevelCapture : UMovieSceneCapture
@@ -112,16 +157,25 @@ UImageSequenceProtocol_PNG = {}
 ---@field PrerequisiteActorId FGuid
 ULevelCapture = {}
 
+---@return ULevelCapture
+function ULevelCapture:get() end
+
 
 
 ---@class UMasterAudioSubmixCaptureProtocol : UMovieSceneAudioCaptureProtocolBase
 ---@field Filename FString
 UMasterAudioSubmixCaptureProtocol = {}
 
+---@return UMasterAudioSubmixCaptureProtocol
+function UMasterAudioSubmixCaptureProtocol:get() end
+
 
 
 ---@class UMovieSceneAudioCaptureProtocolBase : UMovieSceneCaptureProtocolBase
 UMovieSceneAudioCaptureProtocolBase = {}
+
+---@return UMovieSceneAudioCaptureProtocolBase
+function UMovieSceneAudioCaptureProtocolBase:get() end
 
 
 ---@class UMovieSceneCapture : UObject
@@ -136,6 +190,9 @@ UMovieSceneAudioCaptureProtocolBase = {}
 ---@field InheritedCommandLineArguments FString
 UMovieSceneCapture = {}
 
+---@return UMovieSceneCapture
+function UMovieSceneCapture:get() end
+
 ---@param ProtocolType TSubclassOf<UMovieSceneCaptureProtocolBase>
 function UMovieSceneCapture:SetImageCaptureProtocolType(ProtocolType) end
 ---@param ProtocolType TSubclassOf<UMovieSceneCaptureProtocolBase>
@@ -148,6 +205,9 @@ function UMovieSceneCapture:GetAudioCaptureProtocol() end
 
 ---@class UMovieSceneCaptureEnvironment : UObject
 UMovieSceneCaptureEnvironment = {}
+
+---@return UMovieSceneCaptureEnvironment
+function UMovieSceneCaptureEnvironment:get() end
 
 ---@return boolean
 function UMovieSceneCaptureEnvironment:IsCaptureInProgress() end
@@ -165,6 +225,9 @@ function UMovieSceneCaptureEnvironment:FindAudioCaptureProtocol() end
 ---@field State EMovieSceneCaptureProtocolState
 UMovieSceneCaptureProtocolBase = {}
 
+---@return UMovieSceneCaptureProtocolBase
+function UMovieSceneCaptureProtocolBase:get() end
+
 ---@return boolean
 function UMovieSceneCaptureProtocolBase:IsCapturing() end
 ---@return EMovieSceneCaptureProtocolState
@@ -174,14 +237,23 @@ function UMovieSceneCaptureProtocolBase:GetState() end
 ---@class UMovieSceneImageCaptureProtocolBase : UMovieSceneCaptureProtocolBase
 UMovieSceneImageCaptureProtocolBase = {}
 
+---@return UMovieSceneImageCaptureProtocolBase
+function UMovieSceneImageCaptureProtocolBase:get() end
+
 
 ---@class UNullAudioCaptureProtocol : UMovieSceneAudioCaptureProtocolBase
 UNullAudioCaptureProtocol = {}
+
+---@return UNullAudioCaptureProtocol
+function UNullAudioCaptureProtocol:get() end
 
 
 ---@class UUserDefinedCaptureProtocol : UMovieSceneImageCaptureProtocolBase
 ---@field World UWorld
 UUserDefinedCaptureProtocol = {}
+
+---@return UUserDefinedCaptureProtocol
+function UUserDefinedCaptureProtocol:get() end
 
 function UUserDefinedCaptureProtocol:StopCapturingFinalPixels() end
 ---@param StreamID FCapturedPixelsID
@@ -218,6 +290,9 @@ function UUserDefinedCaptureProtocol:GenerateFilename(InFrameMetrics) end
 ---@field CompressionQuality int32
 UUserDefinedImageCaptureProtocol = {}
 
+---@return UUserDefinedImageCaptureProtocol
+function UUserDefinedImageCaptureProtocol:get() end
+
 ---@param PixelData FCapturedPixels
 ---@param StreamID FCapturedPixelsID
 ---@param FrameMetrics FFrameMetrics
@@ -235,6 +310,9 @@ function UUserDefinedImageCaptureProtocol:GenerateFilenameForBuffer(Buffer, Stre
 ---@field bUseCompression boolean
 ---@field CompressionQuality float
 UVideoCaptureProtocol = {}
+
+---@return UVideoCaptureProtocol
+function UVideoCaptureProtocol:get() end
 
 
 

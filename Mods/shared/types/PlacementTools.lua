@@ -8,6 +8,9 @@
 ---@field NotPlaceOnActorTags TArray<FName>
 ABoxPlacement = {}
 
+---@return ABoxPlacement
+function ABoxPlacement:get() end
+
 
 
 ---@class APlacementToolBase : AActor
@@ -37,6 +40,9 @@ ABoxPlacement = {}
 ---@field bHideBrush boolean
 APlacementToolBase = {}
 
+---@return APlacementToolBase
+function APlacementToolBase:get() end
+
 function APlacementToolBase:RandomizeSeed() end
 function APlacementToolBase:Generate() end
 
@@ -49,6 +55,9 @@ function APlacementToolBase:Generate() end
 ---@field NotPlaceOnActorTags TArray<FName>
 ASpherePlacement = {}
 
+---@return ASpherePlacement
+function ASpherePlacement:get() end
+
 
 
 ---@class FDirections
@@ -60,11 +69,17 @@ ASpherePlacement = {}
 ---@field zUp boolean
 FDirections = {}
 
+---@return FDirections
+function FDirections:get() end
+
 
 
 ---@class FLinearDistribution
 ---@field CurvePoints TArray<FVector2D>
 FLinearDistribution = {}
+
+---@return FLinearDistribution
+function FLinearDistribution:get() end
 
 
 
@@ -74,6 +89,9 @@ FLinearDistribution = {}
 ---@field Mesh UStaticMesh
 ---@field Weight float
 FPlacementItem = {}
+
+---@return FPlacementItem
+function FPlacementItem:get() end
 
 
 

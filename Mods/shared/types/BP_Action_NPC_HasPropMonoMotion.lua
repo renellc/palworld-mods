@@ -6,6 +6,9 @@
 ---@field PropActorClass TSubclassOf<ABP_Prop_Base_C>
 UBP_Action_NPC_HasPropMonoMotion_C = {}
 
+---@return UBP_Action_NPC_HasPropMonoMotion_C
+function UBP_Action_NPC_HasPropMonoMotion_C:get() end
+
 function UBP_Action_NPC_HasPropMonoMotion_C:OnBeginAction() end
 function UBP_Action_NPC_HasPropMonoMotion_C:OnEndAction() end
 ---@param EntryPoint int32

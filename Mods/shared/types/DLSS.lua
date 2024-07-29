@@ -7,6 +7,9 @@
 ---@field ShowDLSSSDebugOnScreenMessages EDLSSSettingOverride
 UDLSSOverrideSettings = {}
 
+---@return UDLSSOverrideSettings
+function UDLSSOverrideSettings:get() end
+
 
 
 ---@class UDLSSSettings : UObject
@@ -29,6 +32,9 @@ UDLSSOverrideSettings = {}
 ---@field DLSSPerformancePreset EDLSSPreset
 ---@field DLSSUltraPerformancePreset EDLSSPreset
 UDLSSSettings = {}
+
+---@return UDLSSSettings
+function UDLSSSettings:get() end
 
 
 

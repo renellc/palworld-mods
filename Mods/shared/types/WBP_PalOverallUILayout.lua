@@ -27,6 +27,9 @@
 ---@field LiftSlotModel UPalUILiftSlotModel
 UWBP_PalOverallUILayout_C = {}
 
+---@return UWBP_PalOverallUILayout_C
+function UWBP_PalOverallUILayout_C:get() end
+
 function UWBP_PalOverallUILayout_C:OnInitialized() end
 ---@param TargetWidget UWidget
 function UWBP_PalOverallUILayout_C:ShowFocusCursor(TargetWidget) end

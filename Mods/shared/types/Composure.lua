@@ -9,6 +9,9 @@
 ---@field LastDistortionMID UMaterialInstanceDynamic
 ACompositingCaptureBase = {}
 
+---@return ACompositingCaptureBase
+function ACompositingCaptureBase:get() end
+
 function ACompositingCaptureBase:UpdateDistortion() end
 
 
@@ -39,6 +42,9 @@ function ACompositingCaptureBase:UpdateDistortion() end
 ---@field InternalOutputs TArray<UCompositingElementOutput>
 ---@field InternalAlphaPass UAlphaTransformPass
 ACompositingElement = {}
+
+---@return ACompositingElement
+function ACompositingElement:get() end
 
 ---@param NewCameraActor ACameraActor
 function ACompositingElement:SetTargetCamera(NewCameraActor) end
@@ -154,6 +160,9 @@ function ACompositingElement:AddNewInputPass(PassName, InputType) end
 ---@field bAutoRunChildElementsAndSelf boolean
 AComposurePipelineBaseActor = {}
 
+---@return AComposurePipelineBaseActor
+function AComposurePipelineBaseActor:get() end
+
 ---@param bAutoRunChildAndSelf boolean
 function AComposurePipelineBaseActor:SetAutoRunChildrenAndSelf(bAutoRunChildAndSelf) end
 ---@param bNewAutoRunVal boolean
@@ -173,6 +182,9 @@ function AComposurePipelineBaseActor:AreChildrenAndSelfAutoRun() end
 ---@field CachedMID UMaterialInstanceDynamic
 FCompositingMaterial = {}
 
+---@return FCompositingMaterial
+function FCompositingMaterial:get() end
+
 
 
 ---@class FCompositingParamPayload
@@ -180,6 +192,9 @@ FCompositingMaterial = {}
 ---@field VectorParamOverrides TMap<FName, FLinearColor>
 ---@field TextureParamOverrides TMap<FName, UTexture>
 FCompositingParamPayload = {}
+
+---@return FCompositingParamPayload
+function FCompositingParamPayload:get() end
 
 
 
@@ -189,6 +204,9 @@ FCompositingParamPayload = {}
 ---@field RotationAngle float
 ---@field Scale float
 FComposurePostMoveSettings = {}
+
+---@return FComposurePostMoveSettings
+function FComposurePostMoveSettings:get() end
 
 
 
@@ -200,6 +218,9 @@ FComposurePostMoveSettings = {}
 ---@field bUseDisplacementBlueAndAlphaChannels boolean
 FComposureUVMapSettings = {}
 
+---@return FComposureUVMapSettings
+function FComposureUVMapSettings:get() end
+
 
 
 ---@class FMovieSceneComposureExportPass
@@ -208,11 +229,17 @@ FComposureUVMapSettings = {}
 ---@field ExportedAs FName
 FMovieSceneComposureExportPass = {}
 
+---@return FMovieSceneComposureExportPass
+function FMovieSceneComposureExportPass:get() end
+
 
 
 ---@class FMovieSceneComposureExportSectionTemplate : FMovieSceneEvalTemplate
 ---@field Pass FMovieSceneComposureExportPass
 FMovieSceneComposureExportSectionTemplate = {}
+
+---@return FMovieSceneComposureExportSectionTemplate
+function FMovieSceneComposureExportSectionTemplate:get() end
 
 
 
@@ -224,24 +251,39 @@ FMovieSceneComposureExportSectionTemplate = {}
 ---@field BlendType EMovieSceneBlendType
 FMovieSceneComposurePostMoveSettingsSectionTemplate = {}
 
+---@return FMovieSceneComposurePostMoveSettingsSectionTemplate
+function FMovieSceneComposurePostMoveSettingsSectionTemplate:get() end
+
 
 
 ---@class FNamedCompMaterialParam
 ---@field ParamName FName
 FNamedCompMaterialParam = {}
 
+---@return FNamedCompMaterialParam
+function FNamedCompMaterialParam:get() end
+
 
 
 ---@class ICompEditorImagePreviewInterface : IInterface
 ICompEditorImagePreviewInterface = {}
 
+---@return ICompEditorImagePreviewInterface
+function ICompEditorImagePreviewInterface:get() end
+
 
 ---@class ICompImageColorPickerInterface : ICompEditorImagePreviewInterface
 ICompImageColorPickerInterface = {}
 
+---@return ICompImageColorPickerInterface
+function ICompImageColorPickerInterface:get() end
+
 
 ---@class ICompositingInputInterface : IInterface
 ICompositingInputInterface = {}
+
+---@return ICompositingInputInterface
+function ICompositingInputInterface:get() end
 
 ---@param Proxy UCompositingInputInterfaceProxy
 function ICompositingInputInterface:OnFrameEnd(Proxy) end
@@ -256,6 +298,9 @@ function ICompositingInputInterface:GenerateInput(Proxy) end
 ---@class ICompositingTextureLookupTable : IInterface
 ICompositingTextureLookupTable = {}
 
+---@return ICompositingTextureLookupTable
+function ICompositingTextureLookupTable:get() end
+
 ---@param LookupName FName
 ---@param OutTexture UTexture
 ---@return boolean
@@ -265,9 +310,15 @@ function ICompositingTextureLookupTable:FindNamedPassResult(LookupName, OutTextu
 ---@class IComposurePlayerCompositingInterface : IInterface
 IComposurePlayerCompositingInterface = {}
 
+---@return IComposurePlayerCompositingInterface
+function IComposurePlayerCompositingInterface:get() end
+
 
 ---@class IMovieSceneComposureExportClient : IInterface
 IMovieSceneComposureExportClient = {}
+
+---@return IMovieSceneComposureExportClient
+function IMovieSceneComposureExportClient:get() end
 
 ---@param ExportInitializer UMovieSceneComposureExportInitializer
 function IMovieSceneComposureExportClient:InitializeForExport(ExportInitializer) end
@@ -279,6 +330,9 @@ function IMovieSceneComposureExportClient:InitializeForExport(ExportInitializer)
 ---@field AlphaTransformMID UMaterialInstanceDynamic
 UAlphaTransformPass = {}
 
+---@return UAlphaTransformPass
+function UAlphaTransformPass:get() end
+
 
 
 ---@class UColorConverterOutputPass : UCompositingElementOutput
@@ -286,11 +340,17 @@ UAlphaTransformPass = {}
 ---@field DefaultConverterClass TSubclassOf<UCompositingElementTransform>
 UColorConverterOutputPass = {}
 
+---@return UColorConverterOutputPass
+function UColorConverterOutputPass:get() end
+
 
 
 ---@class UCompositingElementInput : UCompositingElementPass
 ---@field bIntermediate boolean
 UCompositingElementInput = {}
+
+---@return UCompositingElementInput
+function UCompositingElementInput:get() end
 
 ---@return UTexture
 function UCompositingElementInput:GenerateInput() end
@@ -299,6 +359,9 @@ function UCompositingElementInput:GenerateInput() end
 ---@class UCompositingElementMaterialPass : UCompositingPostProcessPass
 ---@field Material FCompositingMaterial
 UCompositingElementMaterialPass = {}
+
+---@return UCompositingElementMaterialPass
+function UCompositingElementMaterialPass:get() end
 
 ---@param TextureParamName FName
 ---@param ComposureLayerName FName
@@ -313,6 +376,9 @@ function UCompositingElementMaterialPass:ApplyMaterialParams(Mid) end
 ---@class UCompositingElementOutput : UCompositingElementPass
 UCompositingElementOutput = {}
 
+---@return UCompositingElementOutput
+function UCompositingElementOutput:get() end
+
 ---@param FinalResult UTexture
 ---@param PostProcessProxy UComposurePostProcessingPassProxy
 function UCompositingElementOutput:RelayOutput(FinalResult, PostProcessProxy) end
@@ -322,6 +388,9 @@ function UCompositingElementOutput:RelayOutput(FinalResult, PostProcessProxy) en
 ---@field bEnabled boolean
 ---@field PassName FName
 UCompositingElementPass = {}
+
+---@return UCompositingElementPass
+function UCompositingElementPass:get() end
 
 ---@param bSetEnabledTo boolean
 function UCompositingElementPass:SetPassEnabled(bSetEnabledTo) end
@@ -349,6 +418,9 @@ function UCompositingElementPass:IsPassEnabled() end
 ---@field bIntermediate boolean
 UCompositingElementTransform = {}
 
+---@return UCompositingElementTransform
+function UCompositingElementTransform:get() end
+
 ---@param PassLookupName FName
 ---@return UTexture
 function UCompositingElementTransform:FindNamedPrePassResult(PassLookupName) end
@@ -363,12 +435,18 @@ function UCompositingElementTransform:ApplyTransform(Input, PostProcessProxy, Ta
 ---@field CompositingInput TScriptInterface<ICompositingInputInterface>
 UCompositingInputInterfaceProxy = {}
 
+---@return UCompositingInputInterfaceProxy
+function UCompositingInputInterfaceProxy:get() end
+
 
 
 ---@class UCompositingMediaCaptureOutput : UColorConverterOutputPass
 ---@field CaptureOutput UMediaOutput
 ---@field ActiveCapture UMediaCapture
 UCompositingMediaCaptureOutput = {}
+
+---@return UCompositingMediaCaptureOutput
+function UCompositingMediaCaptureOutput:get() end
 
 
 
@@ -379,11 +457,17 @@ UCompositingMediaCaptureOutput = {}
 ---@field FallbackMID UMaterialInstanceDynamic
 UCompositingMediaInput = {}
 
+---@return UCompositingMediaInput
+function UCompositingMediaInput:get() end
+
 
 
 ---@class UCompositingOpenColorIOPass : UCompositingElementTransform
 ---@field ColorConversionSettings FOpenColorIOColorConversionSettings
 UCompositingOpenColorIOPass = {}
+
+---@return UCompositingOpenColorIOPass
+function UCompositingOpenColorIOPass:get() end
 
 
 
@@ -394,6 +478,9 @@ UCompositingOpenColorIOPass = {}
 ---@field PickerTarget UTextureRenderTarget2D
 ---@field PickerDisplayImage UTexture
 UCompositingPickerAsyncTask = {}
+
+---@return UCompositingPickerAsyncTask
+function UCompositingPickerAsyncTask:get() end
 
 ---@param PickerTarget UTextureRenderTarget2D
 ---@param DisplayImage UTexture
@@ -409,6 +496,9 @@ function UCompositingPickerAsyncTask:OpenCompositingPicker(PickerTarget, Display
 ---@field PostProcessPasses TArray<UComposurePostProcessPassPolicy>
 UCompositingPostProcessPass = {}
 
+---@return UCompositingPostProcessPass
+function UCompositingPostProcessPass:get() end
+
 
 
 ---@class UCompositingTonemapPass : UCompositingElementTransform
@@ -418,10 +508,16 @@ UCompositingPostProcessPass = {}
 ---@field TonemapPolicy UComposureTonemapperPassPolicy
 UCompositingTonemapPass = {}
 
+---@return UCompositingTonemapPass
+function UCompositingTonemapPass:get() end
+
 
 
 ---@class UComposureBlueprintLibrary : UBlueprintFunctionLibrary
 UComposureBlueprintLibrary = {}
+
+---@return UComposureBlueprintLibrary
+function UComposureBlueprintLibrary:get() end
 
 ---@param UVMapSettings FComposureUVMapSettings
 ---@param Material UMaterialInstanceDynamic
@@ -482,6 +578,9 @@ function UComposureBlueprintLibrary:AttachComposureElement(ParentName, ChildName
 ---@field DisplayTexture UTexture
 UComposureCompositingTargetComponent = {}
 
+---@return UComposureCompositingTargetComponent
+function UComposureCompositingTargetComponent:get() end
+
 ---@param DisplayTexture UTexture
 function UComposureCompositingTargetComponent:SetDisplayTexture(DisplayTexture) end
 ---@return UTexture
@@ -495,12 +594,18 @@ function UComposureCompositingTargetComponent:GetDisplayTexture() end
 ---@field FallbackCompositingTextureObj UTexture
 UComposureGameSettings = {}
 
+---@return UComposureGameSettings
+function UComposureGameSettings:get() end
+
 
 
 ---@class UComposureLensBloomPass : UComposurePostProcessPass
 ---@field Settings FLensBloomSettings
 ---@field TonemapperReplacingMID UMaterialInstanceDynamic
 UComposureLensBloomPass = {}
+
+---@return UComposureLensBloomPass
+function UComposureLensBloomPass:get() end
 
 ---@param Material UMaterialInstanceDynamic
 function UComposureLensBloomPass:SetTonemapperReplacingMaterial(Material) end
@@ -514,11 +619,17 @@ function UComposureLensBloomPass:BloomToRenderTarget() end
 ---@field TonemapperReplacmentMID UMaterialInstanceDynamic
 UComposureLensBloomPassPolicy = {}
 
+---@return UComposureLensBloomPassPolicy
+function UComposureLensBloomPassPolicy:get() end
+
 
 
 ---@class UComposurePlayerCompositingCameraModifier : UCameraModifier
 ---@field Target TScriptInterface<IComposurePlayerCompositingInterface>
 UComposurePlayerCompositingCameraModifier = {}
+
+---@return UComposurePlayerCompositingCameraModifier
+function UComposurePlayerCompositingCameraModifier:get() end
 
 
 
@@ -527,6 +638,9 @@ UComposurePlayerCompositingCameraModifier = {}
 ---@field PlayerCameraModifier UComposurePlayerCompositingCameraModifier
 ---@field ReplaceTonemapperMID UMaterialInstanceDynamic
 UComposurePlayerCompositingTarget = {}
+
+---@return UComposurePlayerCompositingTarget
+function UComposurePlayerCompositingTarget:get() end
 
 ---@param RenderTarget UTextureRenderTarget2D
 function UComposurePlayerCompositingTarget:SetRenderTarget(RenderTarget) end
@@ -541,6 +655,9 @@ function UComposurePlayerCompositingTarget:GetPlayerCameraManager() end
 ---@field Target UComposurePostProcessPass
 UComposurePostProcessBlendable = {}
 
+---@return UComposurePostProcessBlendable
+function UComposurePostProcessBlendable:get() end
+
 
 
 ---@class UComposurePostProcessPass : USceneComponent
@@ -549,6 +666,9 @@ UComposurePostProcessBlendable = {}
 ---@field SetupMaterial UMaterialInterface
 ---@field TonemapperReplacement UMaterialInterface
 UComposurePostProcessPass = {}
+
+---@return UComposurePostProcessPass
+function UComposurePostProcessPass:get() end
 
 ---@param Material UMaterialInterface
 function UComposurePostProcessPass:SetSetupMaterial(Material) end
@@ -563,6 +683,9 @@ function UComposurePostProcessPass:GetOutputRenderTarget() end
 ---@class UComposurePostProcessPassPolicy : UObject
 UComposurePostProcessPassPolicy = {}
 
+---@return UComposurePostProcessPassPolicy
+function UComposurePostProcessPassPolicy:get() end
+
 ---@param SceneCapture USceneCaptureComponent2D
 ---@param TonemapperOverride UMaterialInterface
 function UComposurePostProcessPassPolicy:SetupPostProcess(SceneCapture, TonemapperOverride) end
@@ -571,6 +694,9 @@ function UComposurePostProcessPassPolicy:SetupPostProcess(SceneCapture, Tonemapp
 ---@class UComposurePostProcessingPassProxy : UComposurePostProcessPass
 ---@field SetupMID UMaterialInstanceDynamic
 UComposurePostProcessingPassProxy = {}
+
+---@return UComposurePostProcessingPassProxy
+function UComposurePostProcessingPassProxy:get() end
 
 ---@param PrePassInput UTexture
 ---@param PostProcessPass UComposurePostProcessPassPolicy
@@ -583,6 +709,9 @@ function UComposurePostProcessingPassProxy:Execute(PrePassInput, PostProcessPass
 ---@field ChromaticAberration float
 UComposureTonemapperPass = {}
 
+---@return UComposureTonemapperPass
+function UComposureTonemapperPass:get() end
+
 function UComposureTonemapperPass:TonemapToRenderTarget() end
 
 
@@ -591,6 +720,9 @@ function UComposureTonemapperPass:TonemapToRenderTarget() end
 ---@field FilmStockSettings FFilmStockSettings
 ---@field ChromaticAberration float
 UComposureTonemapperPassPolicy = {}
+
+---@return UComposureTonemapperPassPolicy
+function UComposureTonemapperPassPolicy:get() end
 
 
 
@@ -601,16 +733,25 @@ UComposureTonemapperPassPolicy = {}
 ---@field Compression EExrCompressionOptions
 UEXRFileCompositingOutput = {}
 
+---@return UEXRFileCompositingOutput
+function UEXRFileCompositingOutput:get() end
+
 
 
 ---@class UMediaTextureCompositingInput : UCompositingMediaInput
 ---@field MediaSource UMediaTexture
 UMediaTextureCompositingInput = {}
 
+---@return UMediaTextureCompositingInput
+function UMediaTextureCompositingInput:get() end
+
 
 
 ---@class UMovieSceneComposureExportInitializer : UObject
 UMovieSceneComposureExportInitializer = {}
+
+---@return UMovieSceneComposureExportInitializer
+function UMovieSceneComposureExportInitializer:get() end
 
 ---@param CompShotElement ACompositingElement
 ---@param SceneCapture USceneCaptureComponent2D
@@ -621,11 +762,17 @@ function UMovieSceneComposureExportInitializer:ExportSceneCaptureBuffers(CompSho
 ---@class UMovieSceneComposureExportSection : UMovieSceneSection
 UMovieSceneComposureExportSection = {}
 
+---@return UMovieSceneComposureExportSection
+function UMovieSceneComposureExportSection:get() end
+
 
 ---@class UMovieSceneComposureExportTrack : UMovieSceneTrack
 ---@field Pass FMovieSceneComposureExportPass
 ---@field Sections TArray<UMovieSceneSection>
 UMovieSceneComposureExportTrack = {}
+
+---@return UMovieSceneComposureExportTrack
+function UMovieSceneComposureExportTrack:get() end
 
 
 
@@ -636,10 +783,16 @@ UMovieSceneComposureExportTrack = {}
 ---@field Scale FMovieSceneFloatChannel
 UMovieSceneComposurePostMoveSettingsSection = {}
 
+---@return UMovieSceneComposurePostMoveSettingsSection
+function UMovieSceneComposurePostMoveSettingsSection:get() end
+
 
 
 ---@class UMovieSceneComposurePostMoveSettingsTrack : UMovieScenePropertyTrack
 UMovieSceneComposurePostMoveSettingsTrack = {}
+
+---@return UMovieSceneComposurePostMoveSettingsTrack
+function UMovieSceneComposurePostMoveSettingsTrack:get() end
 
 
 ---@class UMultiPassChromaKeyer : UCompositingElementTransform
@@ -647,6 +800,9 @@ UMovieSceneComposurePostMoveSettingsTrack = {}
 ---@field KeyerMaterial FCompositingMaterial
 ---@field DefaultWhiteTexture UTexture
 UMultiPassChromaKeyer = {}
+
+---@return UMultiPassChromaKeyer
+function UMultiPassChromaKeyer:get() end
 
 
 
@@ -656,11 +812,17 @@ UMultiPassChromaKeyer = {}
 ---@field DefaultWhiteTexture UTexture
 UMultiPassDespill = {}
 
+---@return UMultiPassDespill
+function UMultiPassDespill:get() end
+
 
 
 ---@class UPlayerCompOutputCameraModifier : UCameraModifier
 ---@field Owner UPlayerViewportCompositingOutput
 UPlayerCompOutputCameraModifier = {}
+
+---@return UPlayerCompOutputCameraModifier
+function UPlayerCompOutputCameraModifier:get() end
 
 
 
@@ -673,11 +835,17 @@ UPlayerCompOutputCameraModifier = {}
 ---@field ViewportOverrideMID UMaterialInstanceDynamic
 UPlayerViewportCompositingOutput = {}
 
+---@return UPlayerViewportCompositingOutput
+function UPlayerViewportCompositingOutput:get() end
+
 
 
 ---@class URenderTargetCompositingOutput : UCompositingElementOutput
 ---@field RenderTarget UTextureRenderTarget2D
 URenderTargetCompositingOutput = {}
+
+---@return URenderTargetCompositingOutput
+function URenderTargetCompositingOutput:get() end
 
 
 

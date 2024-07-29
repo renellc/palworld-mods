@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionIdleInSpa_C = {}
 
+---@return UBP_ActionIdleInSpa_C
+function UBP_ActionIdleInSpa_C:get() end
+
 function UBP_ActionIdleInSpa_C:OnBeginAction() end
 function UBP_ActionIdleInSpa_C:OnEndAction() end
 ---@param EntryPoint int32

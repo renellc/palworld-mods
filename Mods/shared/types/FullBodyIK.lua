@@ -7,6 +7,9 @@
 ---@field Limit FVector
 FFBIKBoneLimit = {}
 
+---@return FFBIKBoneLimit
+function FFBIKBoneLimit:get() end
+
 
 
 ---@class FFBIKConstraintOption
@@ -23,6 +26,9 @@ FFBIKBoneLimit = {}
 ---@field OffsetRotation FRotator
 FFBIKConstraintOption = {}
 
+---@return FFBIKConstraintOption
+function FFBIKConstraintOption:get() end
+
 
 
 ---@class FFBIKDebugOption
@@ -35,6 +41,9 @@ FFBIKConstraintOption = {}
 ---@field DrawWorldOffset FTransform
 ---@field DrawSize float
 FFBIKDebugOption = {}
+
+---@return FFBIKDebugOption
+function FFBIKDebugOption:get() end
 
 
 
@@ -49,12 +58,18 @@ FFBIKDebugOption = {}
 ---@field Pull float
 FFBIKEndEffector = {}
 
+---@return FFBIKEndEffector
+function FFBIKEndEffector:get() end
+
 
 
 ---@class FMotionProcessInput
 ---@field bForceEffectorRotationTarget boolean
 ---@field bOnlyApplyWhenReachedToTarget boolean
 FMotionProcessInput = {}
+
+---@return FMotionProcessInput
+function FMotionProcessInput:get() end
 
 
 
@@ -69,10 +84,16 @@ FMotionProcessInput = {}
 ---@field WorkData FRigUnit_FullbodyIK_WorkData
 FRigUnit_FullbodyIK = {}
 
+---@return FRigUnit_FullbodyIK
+function FRigUnit_FullbodyIK:get() end
+
 
 
 ---@class FRigUnit_FullbodyIK_WorkData
 FRigUnit_FullbodyIK_WorkData = {}
+
+---@return FRigUnit_FullbodyIK_WorkData
+function FRigUnit_FullbodyIK_WorkData:get() end
 
 
 ---@class FSolverInput
@@ -86,6 +107,9 @@ FRigUnit_FullbodyIK_WorkData = {}
 ---@field MaxIterations int32
 ---@field bUseJacobianTranspose boolean
 FSolverInput = {}
+
+---@return FSolverInput
+function FSolverInput:get() end
 
 
 

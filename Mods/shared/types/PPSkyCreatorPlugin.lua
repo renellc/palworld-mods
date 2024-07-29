@@ -278,6 +278,9 @@
 ---@field OnLightningStrike FPPSkyCreatorOnLightningStrike
 APPSkyCreator = {}
 
+---@return APPSkyCreator
+function APPSkyCreator:get() end
+
 function APPSkyCreator:UpdateSettingsSequencer() end
 ---@param LightningPosition FVector
 function APPSkyCreator:SpawnLightningStrike(LightningPosition) end
@@ -522,6 +525,9 @@ function APPSkyCreator:FindLightningPosition(Position, OutPosition) end
 ---@field Azimuth float
 FPPCelestialPositionData = {}
 
+---@return FPPCelestialPositionData
+function FPPCelestialPositionData:get() end
+
 
 
 ---@class FPPSkyCreatorBackgroundCloudSettings
@@ -532,6 +538,9 @@ FPPCelestialPositionData = {}
 ---@field BackgroundCloudsLayerC float
 ---@field BackgroundCloudsLightningPhase float
 FPPSkyCreatorBackgroundCloudSettings = {}
+
+---@return FPPSkyCreatorBackgroundCloudSettings
+function FPPSkyCreatorBackgroundCloudSettings:get() end
 
 
 
@@ -551,12 +560,18 @@ FPPSkyCreatorBackgroundCloudSettings = {}
 ---@field VolumetricFogExtinctionScale float
 FPPSkyCreatorExponentialHeightFogSettings = {}
 
+---@return FPPSkyCreatorExponentialHeightFogSettings
+function FPPSkyCreatorExponentialHeightFogSettings:get() end
+
 
 
 ---@class FPPSkyCreatorLightningParameters
 ---@field Position FLinearColor
 ---@field Color FLinearColor
 FPPSkyCreatorLightningParameters = {}
+
+---@return FPPSkyCreatorLightningParameters
+function FPPSkyCreatorLightningParameters:get() end
 
 
 
@@ -572,6 +587,9 @@ FPPSkyCreatorLightningParameters = {}
 ---@field CloudShadowOnSurfaceStrength float
 FPPSkyCreatorMoonLightSettings = {}
 
+---@return FPPSkyCreatorMoonLightSettings
+function FPPSkyCreatorMoonLightSettings:get() end
+
 
 
 ---@class FPPSkyCreatorPostProcessSettings
@@ -579,6 +597,9 @@ FPPSkyCreatorMoonLightSettings = {}
 ---@field BloomThreshold float
 ---@field ExposureCompensation float
 FPPSkyCreatorPostProcessSettings = {}
+
+---@return FPPSkyCreatorPostProcessSettings
+function FPPSkyCreatorPostProcessSettings:get() end
 
 
 
@@ -599,6 +620,9 @@ FPPSkyCreatorPostProcessSettings = {}
 ---@field HeightFogContribution float
 FPPSkyCreatorSkyAtmosphereSettings = {}
 
+---@return FPPSkyCreatorSkyAtmosphereSettings
+function FPPSkyCreatorSkyAtmosphereSettings:get() end
+
 
 
 ---@class FPPSkyCreatorSkyLightSettings
@@ -608,6 +632,9 @@ FPPSkyCreatorSkyAtmosphereSettings = {}
 ---@field LowerHemisphereColor FLinearColor
 ---@field CloudAmbientOcclusionStrength float
 FPPSkyCreatorSkyLightSettings = {}
+
+---@return FPPSkyCreatorSkyLightSettings
+function FPPSkyCreatorSkyLightSettings:get() end
 
 
 
@@ -623,6 +650,9 @@ FPPSkyCreatorSkyLightSettings = {}
 ---@field NightZenithColor FLinearColor
 FPPSkyCreatorStarMapSettings = {}
 
+---@return FPPSkyCreatorStarMapSettings
+function FPPSkyCreatorStarMapSettings:get() end
+
 
 
 ---@class FPPSkyCreatorSunLightSettings
@@ -636,6 +666,9 @@ FPPSkyCreatorStarMapSettings = {}
 ---@field CloudShadowOnAtmosphereStrength float
 ---@field CloudShadowOnSurfaceStrength float
 FPPSkyCreatorSunLightSettings = {}
+
+---@return FPPSkyCreatorSunLightSettings
+function FPPSkyCreatorSunLightSettings:get() end
 
 
 
@@ -674,6 +707,9 @@ FPPSkyCreatorSunLightSettings = {}
 ---@field NoiseShapeIntensityD float
 ---@field TurbulenceIntensity float
 FPPSkyCreatorVolumetricCloudSettings = {}
+
+---@return FPPSkyCreatorVolumetricCloudSettings
+function FPPSkyCreatorVolumetricCloudSettings:get() end
 
 
 
@@ -724,6 +760,9 @@ FPPSkyCreatorVolumetricCloudSettings = {}
 ---@field SecondaryRainbowThickness float
 FPPSkyCreatorWeatherFXSettings = {}
 
+---@return FPPSkyCreatorWeatherFXSettings
+function FPPSkyCreatorWeatherFXSettings:get() end
+
 
 
 ---@class FPPSkyCreatorWeatherMaterialFXSettings
@@ -746,6 +785,9 @@ FPPSkyCreatorWeatherFXSettings = {}
 ---@field SnowSparklesThreshold float
 FPPSkyCreatorWeatherMaterialFXSettings = {}
 
+---@return FPPSkyCreatorWeatherMaterialFXSettings
+function FPPSkyCreatorWeatherMaterialFXSettings:get() end
+
 
 
 ---@class FPPSkyCreatorWeatherSettings
@@ -763,6 +805,9 @@ FPPSkyCreatorWeatherMaterialFXSettings = {}
 ---@field PostProcessSettings FPPSkyCreatorPostProcessSettings
 FPPSkyCreatorWeatherSettings = {}
 
+---@return FPPSkyCreatorWeatherSettings
+function FPPSkyCreatorWeatherSettings:get() end
+
 
 
 ---@class FPPSkyCreatorWindSettings
@@ -775,10 +820,16 @@ FPPSkyCreatorWeatherSettings = {}
 ---@field PrecipitationWindSpeed float
 FPPSkyCreatorWindSettings = {}
 
+---@return FPPSkyCreatorWindSettings
+function FPPSkyCreatorWindSettings:get() end
+
 
 
 ---@class UPPSkyCreatorFunctionLibrary : UBlueprintFunctionLibrary
 UPPSkyCreatorFunctionLibrary = {}
+
+---@return UPPSkyCreatorFunctionLibrary
+function UPPSkyCreatorFunctionLibrary:get() end
 
 ---@param Value float
 ---@return float
@@ -861,6 +912,9 @@ function UPPSkyCreatorFunctionLibrary:CentimetersToKilometers(Value) end
 ---@field WindSettings FPPSkyCreatorWindSettings
 ---@field PostProcessSettings FPPSkyCreatorPostProcessSettings
 UPPSkyCreatorWeatherPreset = {}
+
+---@return UPPSkyCreatorWeatherPreset
+function UPPSkyCreatorWeatherPreset:get() end
 
 ---@return FPPSkyCreatorWeatherSettings
 function UPPSkyCreatorWeatherPreset:GetWeatherPresetSettings() end

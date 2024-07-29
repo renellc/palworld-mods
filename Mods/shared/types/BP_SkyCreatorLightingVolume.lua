@@ -6,6 +6,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_SkyCreatorLightingVolume_C = {}
 
+---@return ABP_SkyCreatorLightingVolume_C
+function ABP_SkyCreatorLightingVolume_C:get() end
+
 ---@param OtherActor AActor
 function ABP_SkyCreatorLightingVolume_C:ReceiveActorBeginOverlap(OtherActor) end
 ---@param OtherActor AActor

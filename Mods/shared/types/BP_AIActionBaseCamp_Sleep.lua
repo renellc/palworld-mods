@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AIActionBaseCamp_Sleep_C = {}
 
+---@return UBP_AIActionBaseCamp_Sleep_C
+function UBP_AIActionBaseCamp_Sleep_C:get() end
+
 ---@param ControlledPawn APawn
 function UBP_AIActionBaseCamp_Sleep_C:ActionStart(ControlledPawn) end
 ---@param ControlledPawn APawn

@@ -8,6 +8,9 @@
 ---@field bIncludeHardManagementReferences boolean
 FAssetRegistryDependencyOptions = {}
 
+---@return FAssetRegistryDependencyOptions
+function FAssetRegistryDependencyOptions:get() end
+
 
 
 ---@class FTagAndValue
@@ -15,10 +18,16 @@ FAssetRegistryDependencyOptions = {}
 ---@field Value FString
 FTagAndValue = {}
 
+---@return FTagAndValue
+function FTagAndValue:get() end
+
 
 
 ---@class IAssetRegistry : IInterface
 IAssetRegistry = {}
+
+---@return IAssetRegistry
+function IAssetRegistry:get() end
 
 ---@param PackageName FString
 function IAssetRegistry:WaitForPackage(PackageName) end
@@ -121,6 +130,9 @@ function IAssetRegistry:GetAllAssets(OutAssetData, bIncludeOnlyOnDiskAssets) end
 ---@class UAssetRegistryHelpers : UObject
 UAssetRegistryHelpers = {}
 
+---@return UAssetRegistryHelpers
+function UAssetRegistryHelpers:get() end
+
 ---@param InAssetData FAssetData
 ---@return FSoftObjectPath
 function UAssetRegistryHelpers:ToSoftObjectPath(InAssetData) end
@@ -170,5 +182,8 @@ function UAssetRegistryHelpers:CreateAssetData(InAsset, bAllowBlueprintClass) en
 
 ---@class UAssetRegistryImpl : UObject
 UAssetRegistryImpl = {}
+
+---@return UAssetRegistryImpl
+function UAssetRegistryImpl:get() end
 
 

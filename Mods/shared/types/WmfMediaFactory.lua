@@ -7,5 +7,8 @@
 ---@field HardwareAcceleratedVideoDecoding boolean
 UWmfMediaSettings = {}
 
+---@return UWmfMediaSettings
+function UWmfMediaSettings:get() end
+
 
 

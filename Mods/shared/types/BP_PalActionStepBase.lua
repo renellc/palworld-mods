@@ -17,6 +17,9 @@
 ---@field StepStartLocation FVector
 UBP_PalActionStepBase_C = {}
 
+---@return UBP_PalActionStepBase_C
+function UBP_PalActionStepBase_C:get() end
+
 ---@param Location FVector
 function UBP_PalActionStepBase_C:GetStepEndLocation(Location) end
 function UBP_PalActionStepBase_C:StepMove() end

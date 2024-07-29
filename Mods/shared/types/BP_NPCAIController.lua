@@ -14,6 +14,9 @@
 ---@field WeaponHandleClass TSubclassOf<UPalNPCAIWeaponHandle>
 ABP_NPCAIController_C = {}
 
+---@return ABP_NPCAIController_C
+function ABP_NPCAIController_C:get() end
+
 ---@param PalBrackboard UBP_PalAIBlackboard_Common_C
 function ABP_NPCAIController_C:GetMyBB(PalBrackboard) end
 ---@param LeaderPalBrackboard UBP_PalAIBlackboard_Common_C

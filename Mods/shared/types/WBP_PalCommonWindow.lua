@@ -9,5 +9,8 @@
 ---@field WinBase UImage
 UWBP_PalCommonWindow_C = {}
 
+---@return UWBP_PalCommonWindow_C
+function UWBP_PalCommonWindow_C:get() end
+
 
 

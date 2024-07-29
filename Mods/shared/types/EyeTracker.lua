@@ -11,6 +11,9 @@
 ---@field RightPupilDiameter float
 FEyeTrackerGazeData = {}
 
+---@return FEyeTrackerGazeData
+function FEyeTrackerGazeData:get() end
+
 
 
 ---@class FEyeTrackerStereoGazeData
@@ -22,10 +25,16 @@ FEyeTrackerGazeData = {}
 ---@field ConfidenceValue float
 FEyeTrackerStereoGazeData = {}
 
+---@return FEyeTrackerStereoGazeData
+function FEyeTrackerStereoGazeData:get() end
+
 
 
 ---@class UEyeTrackerFunctionLibrary : UBlueprintFunctionLibrary
 UEyeTrackerFunctionLibrary = {}
+
+---@return UEyeTrackerFunctionLibrary
+function UEyeTrackerFunctionLibrary:get() end
 
 ---@param PlayerController APlayerController
 function UEyeTrackerFunctionLibrary:SetEyeTrackedPlayer(PlayerController) end

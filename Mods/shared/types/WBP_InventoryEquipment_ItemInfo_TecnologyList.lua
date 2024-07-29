@@ -10,6 +10,9 @@
 ---@field Icon UImage
 UWBP_InventoryEquipment_ItemInfo_TecnologyList_C = {}
 
+---@return UWBP_InventoryEquipment_ItemInfo_TecnologyList_C
+function UWBP_InventoryEquipment_ItemInfo_TecnologyList_C:get() end
+
 ---@param Name FText
 ---@param Num int32
 ---@param Icon TSoftObjectPtr<UTexture2D>

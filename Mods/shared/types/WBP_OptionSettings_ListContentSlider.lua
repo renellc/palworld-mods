@@ -12,6 +12,9 @@
 ---@field IsIntegerMode boolean
 UWBP_OptionSettings_ListContentSlider_C = {}
 
+---@return UWBP_OptionSettings_ListContentSlider_C
+function UWBP_OptionSettings_ListContentSlider_C:get() end
+
 function UWBP_OptionSettings_ListContentSlider_C:PlayChangeValueSound() end
 ---@param Value int32
 ---@param Min int32

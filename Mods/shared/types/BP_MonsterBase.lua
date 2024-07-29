@@ -16,6 +16,9 @@
 ---@field OnInflictDamageEvent FBP_MonsterBase_COnInflictDamageEvent
 ABP_MonsterBase_C = {}
 
+---@return ABP_MonsterBase_C
+function ABP_MonsterBase_C:get() end
+
 ---@param Component UPalCharacterMovementComponent
 ---@param Hit FHitResult
 function ABP_MonsterBase_C:OnLanded_Proc(Component, Hit) end

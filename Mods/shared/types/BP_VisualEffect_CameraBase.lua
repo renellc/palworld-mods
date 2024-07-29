@@ -10,6 +10,9 @@
 ---@field FadeOutTimerHanhdle FTimerHandle
 UBP_VisualEffect_CameraBase_C = {}
 
+---@return UBP_VisualEffect_CameraBase_C
+function UBP_VisualEffect_CameraBase_C:get() end
+
 ---@param WeightValue double
 function UBP_VisualEffect_CameraBase_C:UpdateEffectValue(WeightValue) end
 function UBP_VisualEffect_CameraBase_C:OnBeginVisualEffect() end

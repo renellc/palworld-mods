@@ -6,6 +6,9 @@
 ---@field Niagara UNiagaraComponent
 UBP_VisualEffect_Status_Flamed_C = {}
 
+---@return UBP_VisualEffect_Status_Flamed_C
+function UBP_VisualEffect_Status_Flamed_C:get() end
+
 function UBP_VisualEffect_Status_Flamed_C:OnBeginVisualEffect() end
 ---@param DeltaTime float
 function UBP_VisualEffect_Status_Flamed_C:TickVisualEffect(DeltaTime) end

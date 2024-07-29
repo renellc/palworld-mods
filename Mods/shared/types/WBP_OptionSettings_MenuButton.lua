@@ -10,6 +10,9 @@
 ---@field IsFocusing boolean
 UWBP_OptionSettings_MenuButton_C = {}
 
+---@return UWBP_OptionSettings_MenuButton_C
+function UWBP_OptionSettings_MenuButton_C:get() end
+
 function UWBP_OptionSettings_MenuButton_C:Construct() end
 ---@param Button UCommonButtonBase
 function UWBP_OptionSettings_MenuButton_C:BndEvt__WBP_OptionSettings_MenuButton_WBP_PalInvisibleButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end

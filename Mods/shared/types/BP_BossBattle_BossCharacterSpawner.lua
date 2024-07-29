@@ -9,6 +9,9 @@
 ---@field OtherCharacterHandles TArray<UPalIndividualCharacterHandle>
 ABP_BossBattle_BossCharacterSpawner_C = {}
 
+---@return ABP_BossBattle_BossCharacterSpawner_C
+function ABP_BossBattle_BossCharacterSpawner_C:get() end
+
 ---@param BitFlag int32
 ---@param Result boolean
 function ABP_BossBattle_BossCharacterSpawner_C:GetDebugNo(BitFlag, Result) end

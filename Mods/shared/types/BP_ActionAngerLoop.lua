@@ -6,6 +6,9 @@
 ---@field Timer FTimerHandle
 UBP_ActionAngerLoop_C = {}
 
+---@return UBP_ActionAngerLoop_C
+function UBP_ActionAngerLoop_C:get() end
+
 function UBP_ActionAngerLoop_C:OnBeginAction() end
 function UBP_ActionAngerLoop_C:OnEndAction() end
 ---@param DeltaTime float

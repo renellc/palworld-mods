@@ -11,6 +11,9 @@
 ---@field StepCount int32
 UBP_AnimNotify_FootStep_C = {}
 
+---@return UBP_AnimNotify_FootStep_C
+function UBP_AnimNotify_FootStep_C:get() end
+
 ---@param Owner AActor
 ---@param IsSwimming boolean
 function UBP_AnimNotify_FootStep_C:IsSwimming(Owner, IsSwimming) end

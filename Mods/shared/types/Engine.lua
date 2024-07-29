@@ -82,6 +82,9 @@
 ---@field BlueprintCreatedComponents TArray<UActorComponent>
 AActor = {}
 
+---@return AActor
+function AActor:get() end
+
 ---@param Tolerance float
 ---@return boolean
 function AActor:WasRecentlyRendered(Tolerance) end
@@ -474,6 +477,9 @@ function AActor:ActorHasTag(Tag) end
 ---@field AudioComponent UAudioComponent
 AAmbientSound = {}
 
+---@return AAmbientSound
+function AAmbientSound:get() end
+
 function AAmbientSound:Stop() end
 ---@param StartTime float
 function AAmbientSound:Play(StartTime) end
@@ -492,6 +498,9 @@ function AAmbientSound:AdjustVolume(AdjustVolumeDuration, AdjustVolumeLevel) end
 ---@field AtmosphericFogComponent UAtmosphericFogComponent
 AAtmosphericFog = {}
 
+---@return AAtmosphericFog
+function AAtmosphericFog:get() end
+
 
 
 ---@class AAudioVolume : AVolume
@@ -502,6 +511,9 @@ AAtmosphericFog = {}
 ---@field SubmixSendSettings TArray<FAudioVolumeSubmixSendSettings>
 ---@field SubmixOverrideSettings TArray<FAudioVolumeSubmixOverrideSettings>
 AAudioVolume = {}
+
+---@return AAudioVolume
+function AAudioVolume:get() end
 
 ---@param NewSubmixSendSettings TArray<FAudioVolumeSubmixSendSettings>
 function AAudioVolume:SetSubmixSendSettings(NewSubmixSendSettings) end
@@ -522,14 +534,23 @@ function AAudioVolume:OnRep_bEnabled() end
 ---@field BandwidthGenerator FBandwidthTestGenerator
 ABandwidthTestActor = {}
 
+---@return ABandwidthTestActor
+function ABandwidthTestActor:get() end
+
 
 
 ---@class ABlockingVolume : AVolume
 ABlockingVolume = {}
 
+---@return ABlockingVolume
+function ABlockingVolume:get() end
+
 
 ---@class ABoxReflectionCapture : AReflectionCapture
 ABoxReflectionCapture = {}
+
+---@return ABoxReflectionCapture
+function ABoxReflectionCapture:get() end
 
 
 ---@class ABrush : AActor
@@ -546,10 +567,16 @@ ABoxReflectionCapture = {}
 ---@field SavedSelections TArray<FGeomSelection>
 ABrush = {}
 
+---@return ABrush
+function ABrush:get() end
+
 
 
 ---@class ABrushShape : ABrush
 ABrushShape = {}
+
+---@return ABrushShape
+function ABrushShape:get() end
 
 
 ---@class ACameraActor : AActor
@@ -563,6 +590,9 @@ ABrushShape = {}
 ---@field PostProcessSettings FPostProcessSettings
 ACameraActor = {}
 
+---@return ACameraActor
+function ACameraActor:get() end
+
 ---@return int32
 function ACameraActor:GetAutoActivatePlayerIndex() end
 
@@ -570,10 +600,16 @@ function ACameraActor:GetAutoActivatePlayerIndex() end
 ---@class ACameraBlockingVolume : AVolume
 ACameraBlockingVolume = {}
 
+---@return ACameraBlockingVolume
+function ACameraBlockingVolume:get() end
+
 
 ---@class ACameraShakeSourceActor : AActor
 ---@field CameraShakeSourceComponent UCameraShakeSourceComponent
 ACameraShakeSourceActor = {}
+
+---@return ACameraShakeSourceActor
+function ACameraShakeSourceActor:get() end
 
 
 
@@ -618,6 +654,9 @@ ACameraShakeSourceActor = {}
 ---@field RootMotionRepMoves TArray<FSimulatedRootMotionReplicatedMove>
 ---@field RepRootMotion FRepRootMotionMontage
 ACharacter = {}
+
+---@return ACharacter
+function ACharacter:get() end
 
 ---@param bClientSimulation boolean
 function ACharacter:UnCrouch(bClientSimulation) end
@@ -818,6 +857,9 @@ function ACharacter:CacheInitialMeshOffset(MeshRelativeLocation, MeshRelativeRot
 ---@field bAttachToPawn boolean
 AController = {}
 
+---@return AController
+function AController:get() end
+
 function AController:UnPossess() end
 function AController:StopMovement() end
 ---@param NewLocation FVector
@@ -884,10 +926,16 @@ function AController:ClientSetLocation(NewLocation, NewRotation) end
 ---@field bEnabled boolean
 ACullDistanceVolume = {}
 
+---@return ACullDistanceVolume
+function ACullDistanceVolume:get() end
+
 
 
 ---@class ADEPRECATED_WorldPartitionVolume : AVolume
 ADEPRECATED_WorldPartitionVolume = {}
+
+---@return ADEPRECATED_WorldPartitionVolume
+function ADEPRECATED_WorldPartitionVolume:get() end
 
 
 ---@class ADebugCameraController : APlayerController
@@ -911,6 +959,9 @@ ADEPRECATED_WorldPartitionVolume = {}
 ---@field InitialDecel float
 ADebugCameraController = {}
 
+---@return ADebugCameraController
+function ADebugCameraController:get() end
+
 function ADebugCameraController:ToggleDisplay() end
 function ADebugCameraController:ShowDebugSelectedInfo() end
 ---@param NewSpeedScale float
@@ -931,10 +982,16 @@ function ADebugCameraController:GetSelectedActor() end
 ---@class ADebugCameraHUD : AHUD
 ADebugCameraHUD = {}
 
+---@return ADebugCameraHUD
+function ADebugCameraHUD:get() end
+
 
 ---@class ADecalActor : AActor
 ---@field Decal UDecalComponent
 ADecalActor = {}
+
+---@return ADecalActor
+function ADecalActor:get() end
 
 ---@param NewDecalMaterial UMaterialInterface
 function ADecalActor:SetDecalMaterial(NewDecalMaterial) end
@@ -953,6 +1010,9 @@ function ADecalActor:CreateDynamicMaterialInstance() end
 ---@field bAddDefaultMovementBindings boolean
 ADefaultPawn = {}
 
+---@return ADefaultPawn
+function ADefaultPawn:get() end
+
 ---@param Rate float
 function ADefaultPawn:TurnAtRate(Rate) end
 ---@param Val float
@@ -968,13 +1028,22 @@ function ADefaultPawn:LookUpAtRate(Rate) end
 ---@class ADefaultPhysicsVolume : APhysicsVolume
 ADefaultPhysicsVolume = {}
 
+---@return ADefaultPhysicsVolume
+function ADefaultPhysicsVolume:get() end
+
 
 ---@class ADirectionalLight : ALight
 ADirectionalLight = {}
 
+---@return ADirectionalLight
+function ADirectionalLight:get() end
+
 
 ---@class ADocumentationActor : AActor
 ADocumentationActor = {}
+
+---@return ADocumentationActor
+function ADocumentationActor:get() end
 
 
 ---@class AEmitter : AActor
@@ -987,6 +1056,9 @@ ADocumentationActor = {}
 ---@field OnParticleDeath FEmitterOnParticleDeath
 ---@field OnParticleCollide FEmitterOnParticleCollide
 AEmitter = {}
+
+---@return AEmitter
+function AEmitter:get() end
 
 function AEmitter:ToggleActive() end
 ---@param ParameterName FName
@@ -1026,12 +1098,18 @@ function AEmitter:Activate() end
 ---@field DistFromCamera float
 AEmitterCameraLensEffectBase = {}
 
+---@return AEmitterCameraLensEffectBase
+function AEmitterCameraLensEffectBase:get() end
+
 
 
 ---@class AExponentialHeightFog : AInfo
 ---@field Component UExponentialHeightFogComponent
 ---@field bEnabled boolean
 AExponentialHeightFog = {}
+
+---@return AExponentialHeightFog
+function AExponentialHeightFog:get() end
 
 function AExponentialHeightFog:OnRep_bEnabled() end
 
@@ -1050,6 +1128,9 @@ function AExponentialHeightFog:OnRep_bEnabled() end
 ---@field MaxInactivePlayers int32
 ---@field bHandleDedicatedServerReplays boolean
 AGameMode = {}
+
+---@return AGameMode
+function AGameMode:get() end
 
 function AGameMode:StartMatch() end
 ---@param Msg FString
@@ -1088,6 +1169,9 @@ function AGameMode:AbortMatch() end
 ---@field bStartPlayersAsSpectators boolean
 ---@field bPauseable boolean
 AGameModeBase = {}
+
+---@return AGameModeBase
+function AGameModeBase:get() end
 
 function AGameModeBase:StartPlay() end
 ---@param NewPlayer AController
@@ -1216,6 +1300,9 @@ function AGameModeBase:CanSpectate(Viewer, ViewTarget) end
 ---@field bUseDistanceBasedRelevancy boolean
 AGameNetworkManager = {}
 
+---@return AGameNetworkManager
+function AGameNetworkManager:get() end
+
 
 
 ---@class AGameSession : AInfo
@@ -1227,6 +1314,9 @@ AGameNetworkManager = {}
 ---@field SessionName FName
 AGameSession = {}
 
+---@return AGameSession
+function AGameSession:get() end
+
 
 
 ---@class AGameState : AGameStateBase
@@ -1234,6 +1324,9 @@ AGameSession = {}
 ---@field PreviousMatchState FName
 ---@field ElapsedTime int32
 AGameState = {}
+
+---@return AGameState
+function AGameState:get() end
 
 function AGameState:OnRep_MatchState() end
 function AGameState:OnRep_ElapsedTime() end
@@ -1249,6 +1342,9 @@ function AGameState:OnRep_ElapsedTime() end
 ---@field ServerWorldTimeSecondsDelta float
 ---@field ServerWorldTimeSecondsUpdateFrequency float
 AGameStateBase = {}
+
+---@return AGameStateBase
+function AGameStateBase:get() end
 
 function AGameStateBase:OnRep_SpectatorClass() end
 function AGameStateBase:OnRep_ReplicatedWorldTimeSeconds() end
@@ -1273,6 +1369,9 @@ function AGameStateBase:GetPlayerRespawnDelay(Controller) end
 ---@class AGeneratedMeshAreaLight : ASpotLight
 AGeneratedMeshAreaLight = {}
 
+---@return AGeneratedMeshAreaLight
+function AGeneratedMeshAreaLight:get() end
+
 
 ---@class AHUD : AActor
 ---@field PlayerOwner APlayerController
@@ -1292,6 +1391,9 @@ AGeneratedMeshAreaLight = {}
 ---@field ShowDebugTargetDesiredClass TSubclassOf<AActor>
 ---@field ShowDebugTargetActor AActor
 AHUD = {}
+
+---@return AHUD
+function AHUD:get() end
 
 function AHUD:ShowHUD() end
 ---@param Category FName
@@ -1443,17 +1545,29 @@ function AHUD:AddDebugText(DebugText, SrcActor, Duration, Offset, DesiredOffset,
 ---@class AISMPartitionActor : APartitionActor
 AISMPartitionActor = {}
 
+---@return AISMPartitionActor
+function AISMPartitionActor:get() end
+
 
 ---@class AInfo : AActor
 AInfo = {}
+
+---@return AInfo
+function AInfo:get() end
 
 
 ---@class AInstancedPlacementPartitionActor : AISMPartitionActor
 AInstancedPlacementPartitionActor = {}
 
+---@return AInstancedPlacementPartitionActor
+function AInstancedPlacementPartitionActor:get() end
+
 
 ---@class AKillZVolume : APhysicsVolume
 AKillZVolume = {}
+
+---@return AKillZVolume
+function AKillZVolume:get() end
 
 
 ---@class ALODActor : AActor
@@ -1467,6 +1581,9 @@ AKillZVolume = {}
 ---@field CachedNumHLODLevels uint8
 ALODActor = {}
 
+---@return ALODActor
+function ALODActor:get() end
+
 ---@param Actor AActor
 ---@param Reason EEndPlayReason::Type
 function ALODActor:OnSubActorEndPlay(Actor, Reason) end
@@ -1477,6 +1594,9 @@ function ALODActor:OnSubActorEndPlay(Actor, Reason) end
 ---@field bAutoUpdateBounds boolean
 ALevelBounds = {}
 
+---@return ALevelBounds
+function ALevelBounds:get() end
+
 
 
 ---@class ALevelInstance : AActor
@@ -1484,20 +1604,32 @@ ALevelBounds = {}
 ---@field LevelInstanceSpawnGuid FGuid
 ALevelInstance = {}
 
+---@return ALevelInstance
+function ALevelInstance:get() end
+
 function ALevelInstance:OnRep_LevelInstanceSpawnGuid() end
 
 
 ---@class ALevelInstanceEditorInstanceActor : AActor
 ALevelInstanceEditorInstanceActor = {}
 
+---@return ALevelInstanceEditorInstanceActor
+function ALevelInstanceEditorInstanceActor:get() end
+
 
 ---@class ALevelInstancePivot : AActor
 ALevelInstancePivot = {}
+
+---@return ALevelInstancePivot
+function ALevelInstancePivot:get() end
 
 
 ---@class ALevelScriptActor : AActor
 ---@field bInputEnabled boolean
 ALevelScriptActor = {}
+
+---@return ALevelScriptActor
+function ALevelScriptActor:get() end
 
 ---@param OldOriginLocation FIntVector
 ---@param NewOriginLocation FIntVector
@@ -1521,12 +1653,18 @@ function ALevelScriptActor:LevelReset() end
 ---@field StreamingUsage EStreamingVolumeUsage
 ALevelStreamingVolume = {}
 
+---@return ALevelStreamingVolume
+function ALevelStreamingVolume:get() end
+
 
 
 ---@class ALight : AActor
 ---@field LightComponent ULightComponent
 ---@field bEnabled boolean
 ALight = {}
+
+---@return ALight
+function ALight:get() end
 
 function ALight:ToggleEnabled() end
 ---@param NewLightFunctionScale FVector
@@ -1562,6 +1700,9 @@ function ALight:GetBrightness() end
 ---@field ValidIndices TArray<boolean>
 ALightWeightInstanceManager = {}
 
+---@return ALightWeightInstanceManager
+function ALightWeightInstanceManager:get() end
+
 function ALightWeightInstanceManager:OnRep_Transforms() end
 
 
@@ -1572,20 +1713,32 @@ function ALightWeightInstanceManager:OnRep_Transforms() end
 ---@field DataIndicesToRenderingIndices TArray<int32>
 ALightWeightInstanceStaticMeshManager = {}
 
+---@return ALightWeightInstanceStaticMeshManager
+function ALightWeightInstanceStaticMeshManager:get() end
+
 function ALightWeightInstanceStaticMeshManager:OnRep_StaticMesh() end
 
 
 ---@class ALightmassCharacterIndirectDetailVolume : AVolume
 ALightmassCharacterIndirectDetailVolume = {}
 
+---@return ALightmassCharacterIndirectDetailVolume
+function ALightmassCharacterIndirectDetailVolume:get() end
+
 
 ---@class ALightmassImportanceVolume : AVolume
 ALightmassImportanceVolume = {}
+
+---@return ALightmassImportanceVolume
+function ALightmassImportanceVolume:get() end
 
 
 ---@class ALightmassPortal : AActor
 ---@field PortalComponent ULightmassPortalComponent
 ALightmassPortal = {}
+
+---@return ALightmassPortal
+function ALightmassPortal:get() end
 
 
 
@@ -1593,6 +1746,9 @@ ALightmassPortal = {}
 ---@field DebugColor FColor
 ---@field bIsRuntime boolean
 ALocationVolume = {}
+
+---@return ALocationVolume
+function ALocationVolume:get() end
 
 function ALocationVolume:Unload() end
 function ALocationVolume:Load() end
@@ -1604,16 +1760,25 @@ function ALocationVolume:IsLoaded() end
 ---@field TargetActors TArray<AActor>
 AMaterialInstanceActor = {}
 
+---@return AMaterialInstanceActor
+function AMaterialInstanceActor:get() end
+
 
 
 ---@class AMeshMergeCullingVolume : AVolume
 AMeshMergeCullingVolume = {}
+
+---@return AMeshMergeCullingVolume
+function AMeshMergeCullingVolume:get() end
 
 
 ---@class ANavigationDataChunkActor : APartitionActor
 ---@field NavDataChunks TArray<UNavigationDataChunk>
 ---@field DataChunkActorBounds FBox
 ANavigationDataChunkActor = {}
+
+---@return ANavigationDataChunkActor
+function ANavigationDataChunkActor:get() end
 
 
 
@@ -1624,14 +1789,23 @@ ANavigationDataChunkActor = {}
 ---@field bIsPIEPlayerStart boolean
 ANavigationObjectBase = {}
 
+---@return ANavigationObjectBase
+function ANavigationObjectBase:get() end
+
 
 
 ---@class ANote : AActor
 ANote = {}
 
+---@return ANote
+function ANote:get() end
+
 
 ---@class APackedLevelActor : ALevelInstance
 APackedLevelActor = {}
+
+---@return APackedLevelActor
+function APackedLevelActor:get() end
 
 
 ---@class APainCausingVolume : APhysicsVolume
@@ -1644,14 +1818,23 @@ APackedLevelActor = {}
 ---@field DamageInstigator AController
 APainCausingVolume = {}
 
+---@return APainCausingVolume
+function APainCausingVolume:get() end
+
 
 
 ---@class AParticleEventManager : AActor
 AParticleEventManager = {}
 
+---@return AParticleEventManager
+function AParticleEventManager:get() end
+
 
 ---@class APartitionActor : AActor
 APartitionActor = {}
+
+---@return APartitionActor
+function APartitionActor:get() end
 
 
 ---@class APawn : AActor
@@ -1675,6 +1858,9 @@ APartitionActor = {}
 ---@field LastControlInputVector FVector
 ---@field OverrideInputComponentClass TSubclassOf<UInputComponent>
 APawn = {}
+
+---@return APawn
+function APawn:get() end
 
 function APawn:SpawnDefaultController() end
 ---@param bNewValue boolean
@@ -1752,11 +1938,17 @@ function APawn:AddControllerPitchInput(Val) end
 ---@field bDisableCollision boolean
 APhysicsConstraintActor = {}
 
+---@return APhysicsConstraintActor
+function APhysicsConstraintActor:get() end
+
 
 
 ---@class APhysicsThruster : ARigidBodyBase
 ---@field ThrusterComponent UPhysicsThrusterComponent
 APhysicsThruster = {}
+
+---@return APhysicsThruster
+function APhysicsThruster:get() end
 
 
 
@@ -1768,6 +1960,9 @@ APhysicsThruster = {}
 ---@field bPhysicsOnContact boolean
 APhysicsVolume = {}
 
+---@return APhysicsVolume
+function APhysicsVolume:get() end
+
 
 
 ---@class APlanarReflection : ASceneCapture
@@ -1775,12 +1970,18 @@ APhysicsVolume = {}
 ---@field bShowPreviewPlane boolean
 APlanarReflection = {}
 
+---@return APlanarReflection
+function APlanarReflection:get() end
+
 ---@param bEnable boolean
 function APlanarReflection:OnInterpToggle(bEnable) end
 
 
 ---@class APlaneReflectionCapture : AReflectionCapture
 APlaneReflectionCapture = {}
+
+---@return APlaneReflectionCapture
+function APlaneReflectionCapture:get() end
 
 
 ---@class APlayerCameraManager : AActor
@@ -1818,6 +2019,9 @@ APlaneReflectionCapture = {}
 ---@field ViewRollMax float
 ---@field ServerUpdateCameraTimeout float
 APlayerCameraManager = {}
+
+---@return APlayerCameraManager
+function APlayerCameraManager:get() end
 
 function APlayerCameraManager:SwapPendingViewTargetWhenUsingClientSideCameraUpdates() end
 ---@param ShakeInstance UCameraShakeBase
@@ -1964,6 +2168,9 @@ function APlayerCameraManager:AddCameraLensEffect(LensEffectEmitterClass) end
 ---@field bIsLocalPlayerController boolean
 ---@field SpawnLocation FVector
 APlayerController = {}
+
+---@return APlayerController
+function APlayerController:get() end
 
 ---@param Key FKey
 ---@return boolean
@@ -2409,10 +2616,16 @@ function APlayerController:ActivateTouchInterface(NewTouchInterface) end
 ---@field PlayerStartTag FName
 APlayerStart = {}
 
+---@return APlayerStart
+function APlayerStart:get() end
+
 
 
 ---@class APlayerStartPIE : APlayerStart
 APlayerStartPIE = {}
+
+---@return APlayerStartPIE
+function APlayerStartPIE:get() end
 
 
 ---@class APlayerState : AInfo
@@ -2433,6 +2646,9 @@ APlayerStartPIE = {}
 ---@field PawnPrivate APawn
 ---@field PlayerNamePrivate FString
 APlayerState = {}
+
+---@return APlayerState
+function APlayerState:get() end
 
 ---@param OldPlayerState APlayerState
 function APlayerState:ReceiveOverrideWith(OldPlayerState) end
@@ -2473,6 +2689,9 @@ function APlayerState:BP_GetUniqueId() end
 ---@field PointLightComponent UPointLightComponent
 APointLight = {}
 
+---@return APointLight
+function APointLight:get() end
+
 ---@param NewRadius float
 function APointLight:SetRadius(NewRadius) end
 ---@param NewLightFalloffExponent float
@@ -2488,6 +2707,9 @@ function APointLight:SetLightFalloffExponent(NewLightFalloffExponent) end
 ---@field bUnbound boolean
 APostProcessVolume = {}
 
+---@return APostProcessVolume
+function APostProcessVolume:get() end
+
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
 function APostProcessVolume:AddOrUpdateBlendable(InBlendableObject, InWeight) end
@@ -2499,15 +2721,24 @@ function APostProcessVolume:AddOrUpdateBlendable(InBlendableObject, InWeight) en
 ---@field OverrideInvisibleLevels TArray<FName>
 APrecomputedVisibilityOverrideVolume = {}
 
+---@return APrecomputedVisibilityOverrideVolume
+function APrecomputedVisibilityOverrideVolume:get() end
+
 
 
 ---@class APrecomputedVisibilityVolume : AVolume
 APrecomputedVisibilityVolume = {}
 
+---@return APrecomputedVisibilityVolume
+function APrecomputedVisibilityVolume:get() end
+
 
 ---@class ARadialForceActor : ARigidBodyBase
 ---@field ForceComponent URadialForceComponent
 ARadialForceActor = {}
+
+---@return ARadialForceActor
+function ARadialForceActor:get() end
 
 function ARadialForceActor:ToggleForce() end
 function ARadialForceActor:FireImpulse() end
@@ -2519,21 +2750,33 @@ function ARadialForceActor:DisableForce() end
 ---@field RectLightComponent URectLightComponent
 ARectLight = {}
 
+---@return ARectLight
+function ARectLight:get() end
+
 
 
 ---@class AReflectionCapture : AActor
 ---@field CaptureComponent UReflectionCaptureComponent
 AReflectionCapture = {}
 
+---@return AReflectionCapture
+function AReflectionCapture:get() end
+
 
 
 ---@class ARigidBodyBase : AActor
 ARigidBodyBase = {}
 
+---@return ARigidBodyBase
+function ARigidBodyBase:get() end
+
 
 ---@class ARuntimeVirtualTextureVolume : AActor
 ---@field VirtualTextureComponent URuntimeVirtualTextureComponent
 ARuntimeVirtualTextureVolume = {}
+
+---@return ARuntimeVirtualTextureVolume
+function ARuntimeVirtualTextureVolume:get() end
 
 
 
@@ -2542,11 +2785,17 @@ ARuntimeVirtualTextureVolume = {}
 ---@field SceneComponent USceneComponent
 ASceneCapture = {}
 
+---@return ASceneCapture
+function ASceneCapture:get() end
+
 
 
 ---@class ASceneCapture2D : ASceneCapture
 ---@field CaptureComponent2D USceneCaptureComponent2D
 ASceneCapture2D = {}
+
+---@return ASceneCapture2D
+function ASceneCapture2D:get() end
 
 ---@param bEnable boolean
 function ASceneCapture2D:OnInterpToggle(bEnable) end
@@ -2555,6 +2804,9 @@ function ASceneCapture2D:OnInterpToggle(bEnable) end
 ---@class ASceneCaptureCube : ASceneCapture
 ---@field CaptureComponentCube USceneCaptureComponentCube
 ASceneCaptureCube = {}
+
+---@return ASceneCaptureCube
+function ASceneCaptureCube:get() end
 
 ---@param bEnable boolean
 function ASceneCaptureCube:OnInterpToggle(bEnable) end
@@ -2612,10 +2864,16 @@ function ASceneCaptureCube:OnInterpToggle(bEnable) end
 ---@field NetSaturated uint32
 AServerStatReplicator = {}
 
+---@return AServerStatReplicator
+function AServerStatReplicator:get() end
+
 
 
 ---@class AServerStreamingLevelsVisibility : AActor
 AServerStreamingLevelsVisibility = {}
+
+---@return AServerStreamingLevelsVisibility
+function AServerStreamingLevelsVisibility:get() end
 
 
 ---@class ASkeletalMeshActor : AActor
@@ -2628,6 +2886,9 @@ AServerStreamingLevelsVisibility = {}
 ---@field ReplicatedMaterial1 UMaterialInterface
 ASkeletalMeshActor = {}
 
+---@return ASkeletalMeshActor
+function ASkeletalMeshActor:get() end
+
 function ASkeletalMeshActor:OnRep_ReplicatedPhysAsset() end
 function ASkeletalMeshActor:OnRep_ReplicatedMesh() end
 function ASkeletalMeshActor:OnRep_ReplicatedMaterial1() end
@@ -2638,12 +2899,18 @@ function ASkeletalMeshActor:OnRep_ReplicatedMaterial0() end
 ---@field SkyAtmosphereComponent USkyAtmosphereComponent
 ASkyAtmosphere = {}
 
+---@return ASkyAtmosphere
+function ASkyAtmosphere:get() end
+
 
 
 ---@class ASkyLight : AInfo
 ---@field LightComponent USkyLightComponent
 ---@field bEnabled boolean
 ASkyLight = {}
+
+---@return ASkyLight
+function ASkyLight:get() end
 
 function ASkyLight:OnRep_bEnabled() end
 
@@ -2652,15 +2919,24 @@ function ASkyLight:OnRep_bEnabled() end
 ---@field GridSettings FSpatialHashRuntimeGrid
 ASpatialHashRuntimeGridInfo = {}
 
+---@return ASpatialHashRuntimeGridInfo
+function ASpatialHashRuntimeGridInfo:get() end
+
 
 
 ---@class ASpectatorPawn : ADefaultPawn
 ASpectatorPawn = {}
 
+---@return ASpectatorPawn
+function ASpectatorPawn:get() end
+
 
 ---@class ASphereReflectionCapture : AReflectionCapture
 ---@field DrawCaptureRadius UDrawSphereComponent
 ASphereReflectionCapture = {}
+
+---@return ASphereReflectionCapture
+function ASphereReflectionCapture:get() end
 
 
 
@@ -2668,11 +2944,17 @@ ASphereReflectionCapture = {}
 ---@field SplineMeshComponent USplineMeshComponent
 ASplineMeshActor = {}
 
+---@return ASplineMeshActor
+function ASplineMeshActor:get() end
+
 
 
 ---@class ASpotLight : ALight
 ---@field SpotLightComponent USpotLightComponent
 ASpotLight = {}
+
+---@return ASpotLight
+function ASpotLight:get() end
 
 ---@param NewOuterConeAngle float
 function ASpotLight:SetOuterConeAngle(NewOuterConeAngle) end
@@ -2686,6 +2968,9 @@ function ASpotLight:SetInnerConeAngle(NewInnerConeAngle) end
 ---@field NavigationGeometryGatheringMode ENavDataGatheringMode
 AStaticMeshActor = {}
 
+---@return AStaticMeshActor
+function AStaticMeshActor:get() end
+
 ---@param InMobility EComponentMobility::Type
 function AStaticMeshActor:SetMobility(InMobility) end
 
@@ -2693,10 +2978,16 @@ function AStaticMeshActor:SetMobility(InMobility) end
 ---@class ATargetPoint : AActor
 ATargetPoint = {}
 
+---@return ATargetPoint
+function ATargetPoint:get() end
+
 
 ---@class ATextRenderActor : AActor
 ---@field TextRender UTextRenderComponent
 ATextRenderActor = {}
+
+---@return ATextRenderActor
+function ATextRenderActor:get() end
 
 
 
@@ -2704,41 +2995,68 @@ ATextRenderActor = {}
 ---@field CollisionComponent UShapeComponent
 ATriggerBase = {}
 
+---@return ATriggerBase
+function ATriggerBase:get() end
+
 
 
 ---@class ATriggerBox : ATriggerBase
 ATriggerBox = {}
 
+---@return ATriggerBox
+function ATriggerBox:get() end
+
 
 ---@class ATriggerCapsule : ATriggerBase
 ATriggerCapsule = {}
+
+---@return ATriggerCapsule
+function ATriggerCapsule:get() end
 
 
 ---@class ATriggerSphere : ATriggerBase
 ATriggerSphere = {}
 
+---@return ATriggerSphere
+function ATriggerSphere:get() end
+
 
 ---@class ATriggerVolume : AVolume
 ATriggerVolume = {}
+
+---@return ATriggerVolume
+function ATriggerVolume:get() end
 
 
 ---@class AVectorFieldVolume : AActor
 ---@field VectorFieldComponent UVectorFieldComponent
 AVectorFieldVolume = {}
 
+---@return AVectorFieldVolume
+function AVectorFieldVolume:get() end
+
 
 
 ---@class AVisualLoggerFilterVolume : AVolume
 AVisualLoggerFilterVolume = {}
 
+---@return AVisualLoggerFilterVolume
+function AVisualLoggerFilterVolume:get() end
+
 
 ---@class AVolume : ABrush
 AVolume = {}
+
+---@return AVolume
+function AVolume:get() end
 
 
 ---@class AVolumetricCloud : AInfo
 ---@field VolumetricCloudComponent UVolumetricCloudComponent
 AVolumetricCloud = {}
+
+---@return AVolumetricCloud
+function AVolumetricCloud:get() end
 
 
 
@@ -2746,11 +3064,17 @@ AVolumetricCloud = {}
 ---@field AllowedMipLevelRange FInt32Interval
 AVolumetricLightmapDensityVolume = {}
 
+---@return AVolumetricLightmapDensityVolume
+function AVolumetricLightmapDensityVolume:get() end
+
 
 
 ---@class AWindDirectionalSource : AInfo
 ---@field Component UWindDirectionalSourceComponent
 AWindDirectionalSource = {}
+
+---@return AWindDirectionalSource
+function AWindDirectionalSource:get() end
 
 
 
@@ -2763,6 +3087,9 @@ AWindDirectionalSource = {}
 ---@field RepEffectiveActiveDataLayerNames TArray<FName>
 ---@field RepEffectiveLoadedDataLayerNames TArray<FName>
 AWorldDataLayers = {}
+
+---@return AWorldDataLayers
+function AWorldDataLayers:get() end
 
 function AWorldDataLayers:OnRep_LoadedDataLayerNames() end
 function AWorldDataLayers:OnRep_EffectiveLoadedDataLayerNames() end
@@ -2780,6 +3107,9 @@ function AWorldDataLayers:OnDataLayerRuntimeStateChanged(InDataLayer, InState) e
 ---@field SourceCellName FName
 AWorldPartitionHLOD = {}
 
+---@return AWorldPartitionHLOD
+function AWorldPartitionHLOD:get() end
+
 
 
 ---@class AWorldPartitionMiniMap : AInfo
@@ -2794,15 +3124,24 @@ AWorldPartitionHLOD = {}
 ---@field MiniMapTileSize int32
 AWorldPartitionMiniMap = {}
 
+---@return AWorldPartitionMiniMap
+function AWorldPartitionMiniMap:get() end
+
 
 
 ---@class AWorldPartitionMiniMapVolume : AVolume
 AWorldPartitionMiniMapVolume = {}
 
+---@return AWorldPartitionMiniMapVolume
+function AWorldPartitionMiniMapVolume:get() end
+
 
 ---@class AWorldPartitionReplay : AActor
 ---@field StreamingSourceNames TArray<FName>
 AWorldPartitionReplay = {}
+
+---@return AWorldPartitionReplay
+function AWorldPartitionReplay:get() end
 
 
 
@@ -2865,6 +3204,9 @@ AWorldPartitionReplay = {}
 ---@field LastBookmarkClass TSubclassOf<UBookmarkBase>
 AWorldSettings = {}
 
+---@return AWorldSettings
+function AWorldSettings:get() end
+
 function AWorldSettings:OnRep_WorldGravityZ() end
 
 
@@ -2872,11 +3214,17 @@ function AWorldSettings:OnRep_WorldGravityZ() end
 ---@field ComponentSpaceFlags TArray<uint8>
 FA2CSPose = {}
 
+---@return FA2CSPose
+function FA2CSPose:get() end
+
 
 
 ---@class FA2Pose
 ---@field Bones TArray<FTransform>
 FA2Pose = {}
+
+---@return FA2Pose
+function FA2Pose:get() end
 
 
 
@@ -2886,17 +3234,26 @@ FA2Pose = {}
 ---@field bIsCustomInitialized boolean
 FActiveCameraShakeInfo = {}
 
+---@return FActiveCameraShakeInfo
+function FActiveCameraShakeInfo:get() end
+
 
 
 ---@class FActiveForceFeedbackEffect
 ---@field ForceFeedbackEffect UForceFeedbackEffect
 FActiveForceFeedbackEffect = {}
 
+---@return FActiveForceFeedbackEffect
+function FActiveForceFeedbackEffect:get() end
+
 
 
 ---@class FActiveHapticFeedbackEffect
 ---@field HapticEffect UHapticFeedbackEffect_Base
 FActiveHapticFeedbackEffect = {}
+
+---@return FActiveHapticFeedbackEffect
+function FActiveHapticFeedbackEffect:get() end
 
 
 
@@ -2906,6 +3263,9 @@ FActiveHapticFeedbackEffect = {}
 ---@field SourceComponentTypeSerializedIndex int32
 FActorComponentInstanceData = {}
 
+---@return FActorComponentInstanceData
+function FActorComponentInstanceData:get() end
+
 
 
 ---@class FActorComponentInstanceSourceInfo
@@ -2914,21 +3274,33 @@ FActorComponentInstanceData = {}
 ---@field SourceComponentTypeSerializedIndex int32
 FActorComponentInstanceSourceInfo = {}
 
+---@return FActorComponentInstanceSourceInfo
+function FActorComponentInstanceSourceInfo:get() end
+
 
 
 ---@class FActorComponentTickFunction : FTickFunction
 FActorComponentTickFunction = {}
+
+---@return FActorComponentTickFunction
+function FActorComponentTickFunction:get() end
 
 
 ---@class FActorContainerID
 ---@field ID uint64
 FActorContainerID = {}
 
+---@return FActorContainerID
+function FActorContainerID:get() end
+
 
 
 ---@class FActorDataLayer
 ---@field Name FName
 FActorDataLayer = {}
+
+---@return FActorDataLayer
+function FActorDataLayer:get() end
 
 
 
@@ -2945,11 +3317,17 @@ FActorDataLayer = {}
 ---@field ActorPath FName
 FActorDesc = {}
 
+---@return FActorDesc
+function FActorDesc:get() end
+
 
 
 ---@class FActorFolderSet
 ---@field ActorFolders TSet<UActorFolder>
 FActorFolderSet = {}
+
+---@return FActorFolderSet
+function FActorFolderSet:get() end
 
 
 
@@ -2957,11 +3335,17 @@ FActorFolderSet = {}
 ---@field actorClass TSubclassOf<AActor>
 FActorInstanceData = {}
 
+---@return FActorInstanceData
+function FActorInstanceData:get() end
+
 
 
 ---@class FActorInstanceHandle
 ---@field Actor TWeakObjectPtr<AActor>
 FActorInstanceHandle = {}
+
+---@return FActorInstanceHandle
+function FActorInstanceHandle:get() end
 
 
 
@@ -2970,10 +3354,16 @@ FActorInstanceHandle = {}
 ---@field ContextID int32
 FActorPlacementDataLayers = {}
 
+---@return FActorPlacementDataLayers
+function FActorPlacementDataLayers:get() end
+
 
 
 ---@class FActorTickFunction : FTickFunction
 FActorTickFunction = {}
+
+---@return FActorTickFunction
+function FActorTickFunction:get() end
 
 
 ---@class FAlphaBlend
@@ -2982,6 +3372,9 @@ FActorTickFunction = {}
 ---@field BlendOption EAlphaBlendOption
 FAlphaBlend = {}
 
+---@return FAlphaBlend
+function FAlphaBlend:get() end
+
 
 
 ---@class FAlphaBlendArgs
@@ -2989,6 +3382,9 @@ FAlphaBlend = {}
 ---@field BlendTime float
 ---@field BlendOption EAlphaBlendOption
 FAlphaBlendArgs = {}
+
+---@return FAlphaBlendArgs
+function FAlphaBlendArgs:get() end
 
 
 
@@ -3001,14 +3397,23 @@ FAlphaBlendArgs = {}
 ---@field AngularDriveMode EAngularDriveMode::Type
 FAngularDriveConstraint = {}
 
+---@return FAngularDriveConstraint
+function FAngularDriveConstraint:get() end
+
 
 
 ---@class FAnimBlueprintConstantData
 FAnimBlueprintConstantData = {}
 
+---@return FAnimBlueprintConstantData
+function FAnimBlueprintConstantData:get() end
+
 
 ---@class FAnimBlueprintDebugData
 FAnimBlueprintDebugData = {}
+
+---@return FAnimBlueprintDebugData
+function FAnimBlueprintDebugData:get() end
 
 
 ---@class FAnimBlueprintFunction
@@ -3020,6 +3425,9 @@ FAnimBlueprintDebugData = {}
 ---@field bImplemented boolean
 FAnimBlueprintFunction = {}
 
+---@return FAnimBlueprintFunction
+function FAnimBlueprintFunction:get() end
+
 
 
 ---@class FAnimBlueprintFunctionData
@@ -3028,14 +3436,23 @@ FAnimBlueprintFunction = {}
 ---@field InputProperties TArray<TFieldPath<FProperty>>
 FAnimBlueprintFunctionData = {}
 
+---@return FAnimBlueprintFunctionData
+function FAnimBlueprintFunctionData:get() end
+
 
 
 ---@class FAnimBlueprintMutableData
 FAnimBlueprintMutableData = {}
 
+---@return FAnimBlueprintMutableData
+function FAnimBlueprintMutableData:get() end
+
 
 ---@class FAnimComponentSpacePoseContext : FAnimExecutionContext
 FAnimComponentSpacePoseContext = {}
+
+---@return FAnimComponentSpacePoseContext
+function FAnimComponentSpacePoseContext:get() end
 
 
 ---@class FAnimCurveBase
@@ -3044,24 +3461,39 @@ FAnimComponentSpacePoseContext = {}
 ---@field CurveTypeFlags int32
 FAnimCurveBase = {}
 
+---@return FAnimCurveBase
+function FAnimCurveBase:get() end
+
 
 
 ---@class FAnimCurveParam
 ---@field Name FName
 FAnimCurveParam = {}
 
+---@return FAnimCurveParam
+function FAnimCurveParam:get() end
+
 
 
 ---@class FAnimCurveType
 FAnimCurveType = {}
 
+---@return FAnimCurveType
+function FAnimCurveType:get() end
+
 
 ---@class FAnimDataModelNotifPayload
 FAnimDataModelNotifPayload = {}
 
+---@return FAnimDataModelNotifPayload
+function FAnimDataModelNotifPayload:get() end
+
 
 ---@class FAnimExecutionContext
 FAnimExecutionContext = {}
+
+---@return FAnimExecutionContext
+function FAnimExecutionContext:get() end
 
 
 ---@class FAnimGraphBlendOptions
@@ -3071,6 +3503,9 @@ FAnimExecutionContext = {}
 ---@field BlendOutProfile UBlendProfile
 FAnimGraphBlendOptions = {}
 
+---@return FAnimGraphBlendOptions
+function FAnimGraphBlendOptions:get() end
+
 
 
 ---@class FAnimGroupInfo
@@ -3078,18 +3513,30 @@ FAnimGraphBlendOptions = {}
 ---@field Color FLinearColor
 FAnimGroupInfo = {}
 
+---@return FAnimGroupInfo
+function FAnimGroupInfo:get() end
+
 
 
 ---@class FAnimGroupInstance
 FAnimGroupInstance = {}
 
+---@return FAnimGroupInstance
+function FAnimGroupInstance:get() end
+
 
 ---@class FAnimInitializationContext : FAnimExecutionContext
 FAnimInitializationContext = {}
 
+---@return FAnimInitializationContext
+function FAnimInitializationContext:get() end
+
 
 ---@class FAnimInstanceProxy
 FAnimInstanceProxy = {}
+
+---@return FAnimInstanceProxy
+function FAnimInstanceProxy:get() end
 
 
 ---@class FAnimLinkableElement
@@ -3103,6 +3550,9 @@ FAnimInstanceProxy = {}
 ---@field LinkValue float
 ---@field LinkedSequence UAnimSequenceBase
 FAnimLinkableElement = {}
+
+---@return FAnimLinkableElement
+function FAnimLinkableElement:get() end
 
 
 
@@ -3119,12 +3569,18 @@ FAnimLinkableElement = {}
 ---@field DisableRootMotionCount int32
 FAnimMontageInstance = {}
 
+---@return FAnimMontageInstance
+function FAnimMontageInstance:get() end
+
 
 
 ---@class FAnimNodeConstantData
 ---@field AnimClassInterface TScriptInterface<IAnimClassInterface>
 ---@field NodeIndex int32
 FAnimNodeConstantData = {}
+
+---@return FAnimNodeConstantData
+function FAnimNodeConstantData:get() end
 
 
 
@@ -3135,6 +3591,9 @@ FAnimNodeConstantData = {}
 ---@field Flags EAnimNodeDataFlags
 FAnimNodeData = {}
 
+---@return FAnimNodeData
+function FAnimNodeData:get() end
+
 
 
 ---@class FAnimNodeFunctionRef
@@ -3144,16 +3603,25 @@ FAnimNodeData = {}
 ---@field Function UFunction
 FAnimNodeFunctionRef = {}
 
+---@return FAnimNodeFunctionRef
+function FAnimNodeFunctionRef:get() end
+
 
 
 ---@class FAnimNodeReference
 FAnimNodeReference = {}
+
+---@return FAnimNodeReference
+function FAnimNodeReference:get() end
 
 
 ---@class FAnimNodeStructData
 ---@field NameToIndexMap TMap<FName, int32>
 ---@field NumProperties int32
 FAnimNodeStructData = {}
+
+---@return FAnimNodeStructData
+function FAnimNodeStructData:get() end
 
 
 
@@ -3170,6 +3638,9 @@ FAnimNodeStructData = {}
 ---@field LODThreshold int32
 FAnimNode_ApplyMeshSpaceAdditive = {}
 
+---@return FAnimNode_ApplyMeshSpaceAdditive
+function FAnimNode_ApplyMeshSpaceAdditive:get() end
+
 
 
 ---@class FAnimNode_AssetPlayerBase : FAnimNode_AssetPlayerRelevancyBase
@@ -3177,25 +3648,40 @@ FAnimNode_ApplyMeshSpaceAdditive = {}
 ---@field InternalTimeAccumulator float
 FAnimNode_AssetPlayerBase = {}
 
+---@return FAnimNode_AssetPlayerBase
+function FAnimNode_AssetPlayerBase:get() end
+
 
 
 ---@class FAnimNode_AssetPlayerRelevancyBase : FAnimNode_Base
 FAnimNode_AssetPlayerRelevancyBase = {}
 
+---@return FAnimNode_AssetPlayerRelevancyBase
+function FAnimNode_AssetPlayerRelevancyBase:get() end
+
 
 ---@class FAnimNode_Base
 FAnimNode_Base = {}
+
+---@return FAnimNode_Base
+function FAnimNode_Base:get() end
 
 
 ---@class FAnimNode_ConvertComponentToLocalSpace : FAnimNode_Base
 ---@field ComponentPose FComponentSpacePoseLink
 FAnimNode_ConvertComponentToLocalSpace = {}
 
+---@return FAnimNode_ConvertComponentToLocalSpace
+function FAnimNode_ConvertComponentToLocalSpace:get() end
+
 
 
 ---@class FAnimNode_ConvertLocalToComponentSpace : FAnimNode_Base
 ---@field LocalPose FPoseLink
 FAnimNode_ConvertLocalToComponentSpace = {}
+
+---@return FAnimNode_ConvertLocalToComponentSpace
+function FAnimNode_ConvertLocalToComponentSpace:get() end
 
 
 
@@ -3205,6 +3691,9 @@ FAnimNode_ConvertLocalToComponentSpace = {}
 ---@field TargetInstance UObject
 FAnimNode_CustomProperty = {}
 
+---@return FAnimNode_CustomProperty
+function FAnimNode_CustomProperty:get() end
+
 
 
 ---@class FAnimNode_Inertialization : FAnimNode_Base
@@ -3213,6 +3702,9 @@ FAnimNode_CustomProperty = {}
 ---@field FilteredCurves TArray<FName>
 ---@field RequestQueue TArray<FInertializationRequest>
 FAnimNode_Inertialization = {}
+
+---@return FAnimNode_Inertialization
+function FAnimNode_Inertialization:get() end
 
 
 
@@ -3226,12 +3718,18 @@ FAnimNode_Inertialization = {}
 ---@field bPropagateNotifiesToLinkedInstances boolean
 FAnimNode_LinkedAnimGraph = {}
 
+---@return FAnimNode_LinkedAnimGraph
+function FAnimNode_LinkedAnimGraph:get() end
+
 
 
 ---@class FAnimNode_LinkedAnimLayer : FAnimNode_LinkedAnimGraph
 ---@field Interface TSubclassOf<UAnimLayerInterface>
 ---@field Layer FName
 FAnimNode_LinkedAnimLayer = {}
+
+---@return FAnimNode_LinkedAnimLayer
+function FAnimNode_LinkedAnimLayer:get() end
 
 
 
@@ -3241,11 +3739,17 @@ FAnimNode_LinkedAnimLayer = {}
 ---@field InputPose FPoseLink
 FAnimNode_LinkedInputPose = {}
 
+---@return FAnimNode_LinkedInputPose
+function FAnimNode_LinkedInputPose:get() end
+
 
 
 ---@class FAnimNode_Root : FAnimNode_Base
 ---@field Result FPoseLink
 FAnimNode_Root = {}
+
+---@return FAnimNode_Root
+function FAnimNode_Root:get() end
 
 
 
@@ -3254,17 +3758,26 @@ FAnimNode_Root = {}
 ---@field CachePoseName FName
 FAnimNode_SaveCachedPose = {}
 
+---@return FAnimNode_SaveCachedPose
+function FAnimNode_SaveCachedPose:get() end
+
 
 
 ---@class FAnimNode_SequencePlayer : FAnimNode_SequencePlayerBase
 ---@field Sequence UAnimSequenceBase
 FAnimNode_SequencePlayer = {}
 
+---@return FAnimNode_SequencePlayer
+function FAnimNode_SequencePlayer:get() end
+
 
 
 ---@class FAnimNode_SequencePlayerBase : FAnimNode_AssetPlayerBase
 ---@field PlayRateScaleBiasClampState FInputScaleBiasClampState
 FAnimNode_SequencePlayerBase = {}
+
+---@return FAnimNode_SequencePlayerBase
+function FAnimNode_SequencePlayerBase:get() end
 
 
 
@@ -3282,11 +3795,17 @@ FAnimNode_SequencePlayerBase = {}
 ---@field bStartFromMatchingPose boolean
 FAnimNode_SequencePlayer_Standalone = {}
 
+---@return FAnimNode_SequencePlayer_Standalone
+function FAnimNode_SequencePlayer_Standalone:get() end
+
 
 
 ---@class FAnimNode_SingleNode : FAnimNode_Base
 ---@field SourcePose FPoseLink
 FAnimNode_SingleNode = {}
+
+---@return FAnimNode_SingleNode
+function FAnimNode_SingleNode:get() end
 
 
 
@@ -3300,6 +3819,9 @@ FAnimNode_SingleNode = {}
 ---@field bAllowConduitEntryStates boolean
 FAnimNode_StateMachine = {}
 
+---@return FAnimNode_StateMachine
+function FAnimNode_StateMachine:get() end
+
 
 
 ---@class FAnimNode_TransitionPoseEvaluator : FAnimNode_Base
@@ -3308,11 +3830,17 @@ FAnimNode_StateMachine = {}
 ---@field EvaluatorMode EEvaluatorMode::Type
 FAnimNode_TransitionPoseEvaluator = {}
 
+---@return FAnimNode_TransitionPoseEvaluator
+function FAnimNode_TransitionPoseEvaluator:get() end
+
 
 
 ---@class FAnimNode_TransitionResult : FAnimNode_Base
 ---@field bCanEnterTransition boolean
 FAnimNode_TransitionResult = {}
+
+---@return FAnimNode_TransitionResult
+function FAnimNode_TransitionResult:get() end
 
 
 
@@ -3321,16 +3849,25 @@ FAnimNode_TransitionResult = {}
 ---@field CachePoseName FName
 FAnimNode_UseCachedPose = {}
 
+---@return FAnimNode_UseCachedPose
+function FAnimNode_UseCachedPose:get() end
+
 
 
 ---@class FAnimNotifyArray
 ---@field Notifies TArray<FAnimNotifyEventReference>
 FAnimNotifyArray = {}
 
+---@return FAnimNotifyArray
+function FAnimNotifyArray:get() end
+
 
 
 ---@class FAnimNotifyContext
 FAnimNotifyContext = {}
+
+---@return FAnimNotifyContext
+function FAnimNotifyContext:get() end
 
 
 ---@class FAnimNotifyEvent : FAnimLinkableElement
@@ -3353,12 +3890,18 @@ FAnimNotifyContext = {}
 ---@field TrackIndex int32
 FAnimNotifyEvent = {}
 
+---@return FAnimNotifyEvent
+function FAnimNotifyEvent:get() end
+
 
 
 ---@class FAnimNotifyEventReference
 ---@field MirrorTable UMirrorDataTable
 ---@field NotifySource UObject
 FAnimNotifyEventReference = {}
+
+---@return FAnimNotifyEventReference
+function FAnimNotifyEventReference:get() end
 
 
 
@@ -3367,12 +3910,18 @@ FAnimNotifyEventReference = {}
 ---@field UnfilteredMontageAnimNotifies TMap<FName, FAnimNotifyArray>
 FAnimNotifyQueue = {}
 
+---@return FAnimNotifyQueue
+function FAnimNotifyQueue:get() end
+
 
 
 ---@class FAnimNotifyTrack
 ---@field TrackName FName
 ---@field TrackColor FLinearColor
 FAnimNotifyTrack = {}
+
+---@return FAnimNotifyTrack
+function FAnimNotifyTrack:get() end
 
 
 
@@ -3381,10 +3930,16 @@ FAnimNotifyTrack = {}
 ---@field ParentNodeGuid FGuid
 FAnimParentNodeAssetOverride = {}
 
+---@return FAnimParentNodeAssetOverride
+function FAnimParentNodeAssetOverride:get() end
+
 
 
 ---@class FAnimPoseContext : FAnimExecutionContext
 FAnimPoseContext = {}
+
+---@return FAnimPoseContext
+function FAnimPoseContext:get() end
 
 
 ---@class FAnimSegment
@@ -3396,6 +3951,9 @@ FAnimPoseContext = {}
 ---@field LoopingCount int32
 FAnimSegment = {}
 
+---@return FAnimSegment
+function FAnimSegment:get() end
+
 
 
 ---@class FAnimSequenceTrackContainer
@@ -3403,22 +3961,34 @@ FAnimSegment = {}
 ---@field TrackNames TArray<FName>
 FAnimSequenceTrackContainer = {}
 
+---@return FAnimSequenceTrackContainer
+function FAnimSequenceTrackContainer:get() end
+
 
 
 ---@class FAnimSetMeshLinkup
 ---@field BoneToTrackTable TArray<int32>
 FAnimSetMeshLinkup = {}
 
+---@return FAnimSetMeshLinkup
+function FAnimSetMeshLinkup:get() end
+
 
 
 ---@class FAnimSingleNodeInstanceProxy : FAnimInstanceProxy
 FAnimSingleNodeInstanceProxy = {}
+
+---@return FAnimSingleNodeInstanceProxy
+function FAnimSingleNodeInstanceProxy:get() end
 
 
 ---@class FAnimSlotDesc
 ---@field SlotName FName
 ---@field NumChannels int32
 FAnimSlotDesc = {}
+
+---@return FAnimSlotDesc
+function FAnimSlotDesc:get() end
 
 
 
@@ -3427,23 +3997,38 @@ FAnimSlotDesc = {}
 ---@field SlotNames TArray<FName>
 FAnimSlotGroup = {}
 
+---@return FAnimSlotGroup
+function FAnimSlotGroup:get() end
+
 
 
 ---@class FAnimSubsystem
 FAnimSubsystem = {}
 
+---@return FAnimSubsystem
+function FAnimSubsystem:get() end
+
 
 ---@class FAnimSubsystemInstance
 FAnimSubsystemInstance = {}
+
+---@return FAnimSubsystemInstance
+function FAnimSubsystemInstance:get() end
 
 
 ---@class FAnimSubsystemInstance_NodeRelevancy : FAnimSubsystemInstance
 FAnimSubsystemInstance_NodeRelevancy = {}
 
+---@return FAnimSubsystemInstance_NodeRelevancy
+function FAnimSubsystemInstance_NodeRelevancy:get() end
+
 
 ---@class FAnimSubsystem_Base : FAnimSubsystem
 ---@field ExposedValueHandlers TArray<FExposedValueHandler>
 FAnimSubsystem_Base = {}
+
+---@return FAnimSubsystem_Base
+function FAnimSubsystem_Base:get() end
 
 
 
@@ -3451,17 +4036,26 @@ FAnimSubsystem_Base = {}
 ---@field BlendSpaces TArray<UBlendSpace>
 FAnimSubsystem_BlendSpaceGraph = {}
 
+---@return FAnimSubsystem_BlendSpaceGraph
+function FAnimSubsystem_BlendSpaceGraph:get() end
+
 
 
 ---@class FAnimSubsystem_PropertyAccess : FAnimSubsystem
 ---@field Library FPropertyAccessLibrary
 FAnimSubsystem_PropertyAccess = {}
 
+---@return FAnimSubsystem_PropertyAccess
+function FAnimSubsystem_PropertyAccess:get() end
+
 
 
 ---@class FAnimSubsystem_Tag : FAnimSubsystem
 ---@field NodeIndices TMap<FName, int32>
 FAnimSubsystem_Tag = {}
+
+---@return FAnimSubsystem_Tag
+function FAnimSubsystem_Tag:get() end
 
 
 
@@ -3470,11 +4064,17 @@ FAnimSubsystem_Tag = {}
 ---@field Time float
 FAnimSyncMarker = {}
 
+---@return FAnimSyncMarker
+function FAnimSyncMarker:get() end
+
 
 
 ---@class FAnimTickRecord
 ---@field SourceAsset UAnimationAsset
 FAnimTickRecord = {}
+
+---@return FAnimTickRecord
+function FAnimTickRecord:get() end
 
 
 
@@ -3482,10 +4082,16 @@ FAnimTickRecord = {}
 ---@field AnimSegments TArray<FAnimSegment>
 FAnimTrack = {}
 
+---@return FAnimTrack
+function FAnimTrack:get() end
+
 
 
 ---@class FAnimUpdateContext : FAnimExecutionContext
 FAnimUpdateContext = {}
+
+---@return FAnimUpdateContext
+function FAnimUpdateContext:get() end
 
 
 ---@class FAnimUpdateRateParameters
@@ -3507,6 +4113,9 @@ FAnimUpdateContext = {}
 ---@field SkippedEvalFrames int32
 FAnimUpdateRateParameters = {}
 
+---@return FAnimUpdateRateParameters
+function FAnimUpdateRateParameters:get() end
+
 
 
 ---@class FAnimatedBoneAttribute
@@ -3514,11 +4123,17 @@ FAnimUpdateRateParameters = {}
 ---@field Curve FAttributeCurve
 FAnimatedBoneAttribute = {}
 
+---@return FAnimatedBoneAttribute
+function FAnimatedBoneAttribute:get() end
+
 
 
 ---@class FAnimationActiveTransitionEntry
 ---@field BlendProfile UBlendProfile
 FAnimationActiveTransitionEntry = {}
+
+---@return FAnimationActiveTransitionEntry
+function FAnimationActiveTransitionEntry:get() end
 
 
 
@@ -3530,6 +4145,9 @@ FAnimationActiveTransitionEntry = {}
 ---@field ScriptStructPath FSoftObjectPath
 FAnimationAttributeIdentifier = {}
 
+---@return FAnimationAttributeIdentifier
+function FAnimationAttributeIdentifier:get() end
+
 
 
 ---@class FAnimationCurveData
@@ -3537,18 +4155,30 @@ FAnimationAttributeIdentifier = {}
 ---@field TransformCurves TArray<FTransformCurve>
 FAnimationCurveData = {}
 
+---@return FAnimationCurveData
+function FAnimationCurveData:get() end
+
 
 
 ---@class FAnimationCurveIdentifier
 FAnimationCurveIdentifier = {}
 
+---@return FAnimationCurveIdentifier
+function FAnimationCurveIdentifier:get() end
+
 
 ---@class FAnimationErrorStats
 FAnimationErrorStats = {}
 
+---@return FAnimationErrorStats
+function FAnimationErrorStats:get() end
+
 
 ---@class FAnimationFrameSnapshot
 FAnimationFrameSnapshot = {}
+
+---@return FAnimationFrameSnapshot
+function FAnimationFrameSnapshot:get() end
 
 
 ---@class FAnimationGroupReference
@@ -3557,10 +4187,16 @@ FAnimationFrameSnapshot = {}
 ---@field GroupRole EAnimGroupRole::Type
 FAnimationGroupReference = {}
 
+---@return FAnimationGroupReference
+function FAnimationGroupReference:get() end
+
 
 
 ---@class FAnimationPotentialTransition
 FAnimationPotentialTransition = {}
+
+---@return FAnimationPotentialTransition
+function FAnimationPotentialTransition:get() end
 
 
 ---@class FAnimationRecordingSettings
@@ -3580,6 +4216,9 @@ FAnimationPotentialTransition = {}
 ---@field ExcludeAnimationNames TArray<FString>
 FAnimationRecordingSettings = {}
 
+---@return FAnimationRecordingSettings
+function FAnimationRecordingSettings:get() end
+
 
 
 ---@class FAnimationState : FAnimationStateBase
@@ -3590,11 +4229,17 @@ FAnimationRecordingSettings = {}
 ---@field FullyBlendedNotify int32
 FAnimationState = {}
 
+---@return FAnimationState
+function FAnimationState:get() end
+
 
 
 ---@class FAnimationStateBase
 ---@field StateName FName
 FAnimationStateBase = {}
+
+---@return FAnimationStateBase
+function FAnimationStateBase:get() end
 
 
 
@@ -3602,11 +4247,17 @@ FAnimationStateBase = {}
 ---@field TrackIndex int32
 FAnimationTrackAddedPayload = {}
 
+---@return FAnimationTrackAddedPayload
+function FAnimationTrackAddedPayload:get() end
+
 
 
 ---@class FAnimationTrackPayload : FEmptyPayload
 ---@field Name FName
 FAnimationTrackPayload = {}
+
+---@return FAnimationTrackPayload
+function FAnimationTrackPayload:get() end
 
 
 
@@ -3623,6 +4274,9 @@ FAnimationTrackPayload = {}
 ---@field LogicType ETransitionLogicType::Type
 FAnimationTransitionBetweenStates = {}
 
+---@return FAnimationTransitionBetweenStates
+function FAnimationTransitionBetweenStates:get() end
+
 
 
 ---@class FAnimationTransitionRule
@@ -3631,11 +4285,17 @@ FAnimationTransitionBetweenStates = {}
 ---@field TransitionIndex int32
 FAnimationTransitionRule = {}
 
+---@return FAnimationTransitionRule
+function FAnimationTransitionRule:get() end
+
 
 
 ---@class FAssetCompileData
 ---@field Asset TWeakObjectPtr<UObject>
 FAssetCompileData = {}
+
+---@return FAssetCompileData
+function FAssetCompileData:get() end
 
 
 
@@ -3646,16 +4306,25 @@ FAssetCompileData = {}
 ---@field CamOrbitRotation FRotator
 FAssetEditorOrbitCameraPosition = {}
 
+---@return FAssetEditorOrbitCameraPosition
+function FAssetEditorOrbitCameraPosition:get() end
+
 
 
 ---@class FAssetImportInfo
 FAssetImportInfo = {}
+
+---@return FAssetImportInfo
+function FAssetImportInfo:get() end
 
 
 ---@class FAssetManagerRedirect
 ---@field Old FString
 ---@field New FString
 FAssetManagerRedirect = {}
+
+---@return FAssetManagerRedirect
+function FAssetManagerRedirect:get() end
 
 
 
@@ -3670,6 +4339,9 @@ FAssetManagerRedirect = {}
 ---@field bSkipManagerIncludeCheck boolean
 FAssetManagerSearchRules = {}
 
+---@return FAssetManagerSearchRules
+function FAssetManagerSearchRules:get() end
+
 
 
 ---@class FAssetMapping
@@ -3677,12 +4349,18 @@ FAssetManagerSearchRules = {}
 ---@field TargetAsset UAnimationAsset
 FAssetMapping = {}
 
+---@return FAssetMapping
+function FAssetMapping:get() end
+
 
 
 ---@class FAsyncPhysicsTimestamp
 ---@field ServerFrame int32
 ---@field LocalFrame int32
 FAsyncPhysicsTimestamp = {}
+
+---@return FAsyncPhysicsTimestamp
+function FAsyncPhysicsTimestamp:get() end
 
 
 
@@ -3697,6 +4375,9 @@ FAsyncPhysicsTimestamp = {}
 ---@field CustomSubmixSendCurve FRuntimeFloatCurve
 FAttenuationSubmixSendSettings = {}
 
+---@return FAttenuationSubmixSendSettings
+function FAttenuationSubmixSendSettings:get() end
+
 
 
 ---@class FAttributeCurve : FIndexedCurve
@@ -3706,11 +4387,17 @@ FAttenuationSubmixSendSettings = {}
 ---@field bShouldInterpolate boolean
 FAttributeCurve = {}
 
+---@return FAttributeCurve
+function FAttributeCurve:get() end
+
 
 
 ---@class FAttributeKey
 ---@field Time float
 FAttributeKey = {}
+
+---@return FAttributeKey
+function FAttributeKey:get() end
 
 
 
@@ -3718,11 +4405,17 @@ FAttributeKey = {}
 ---@field Identifier FAnimationAttributeIdentifier
 FAttributePayload = {}
 
+---@return FAttributePayload
+function FAttributePayload:get() end
+
 
 
 ---@class FAudioComponentParam : FAudioParameter
 ---@field SoundWaveParam USoundWave
 FAudioComponentParam = {}
+
+---@return FAudioComponentParam
+function FAudioComponentParam:get() end
 
 
 
@@ -3741,10 +4434,16 @@ FAudioComponentParam = {}
 ---@field Bandwidth3 float
 FAudioEQEffect = {}
 
+---@return FAudioEQEffect
+function FAudioEQEffect:get() end
+
 
 
 ---@class FAudioEffectParameters
 FAudioEffectParameters = {}
+
+---@return FAudioEffectParameters
+function FAudioEffectParameters:get() end
 
 
 ---@class FAudioQualitySettings
@@ -3752,10 +4451,16 @@ FAudioEffectParameters = {}
 ---@field MaxChannels int32
 FAudioQualitySettings = {}
 
+---@return FAudioQualitySettings
+function FAudioQualitySettings:get() end
+
 
 
 ---@class FAudioReverbEffect : FAudioEffectParameters
 FAudioReverbEffect = {}
+
+---@return FAudioReverbEffect
+function FAudioReverbEffect:get() end
 
 
 ---@class FAudioVolumeSubmixOverrideSettings
@@ -3763,6 +4468,9 @@ FAudioReverbEffect = {}
 ---@field SubmixEffectChain TArray<USoundEffectSubmixPreset>
 ---@field CrossfadeTime float
 FAudioVolumeSubmixOverrideSettings = {}
+
+---@return FAudioVolumeSubmixOverrideSettings
+function FAudioVolumeSubmixOverrideSettings:get() end
 
 
 
@@ -3772,6 +4480,9 @@ FAudioVolumeSubmixOverrideSettings = {}
 ---@field SubmixSends TArray<FSoundSubmixSendInfo>
 FAudioVolumeSubmixSendSettings = {}
 
+---@return FAudioVolumeSubmixSendSettings
+function FAudioVolumeSubmixSendSettings:get() end
+
 
 
 ---@class FAutoCompleteNode
@@ -3779,12 +4490,18 @@ FAudioVolumeSubmixSendSettings = {}
 ---@field AutoCompleteListIndices TArray<int32>
 FAutoCompleteNode = {}
 
+---@return FAutoCompleteNode
+function FAutoCompleteNode:get() end
+
 
 
 ---@class FBPComponentClassOverride
 ---@field ComponentName FName
 ---@field ComponentClass TObjectPtr<UClass>
 FBPComponentClassOverride = {}
+
+---@return FBPComponentClassOverride
+function FBPComponentClassOverride:get() end
 
 
 
@@ -3794,12 +4511,18 @@ FBPComponentClassOverride = {}
 ---@field DisplayName FText
 FBPEditorBookmarkNode = {}
 
+---@return FBPEditorBookmarkNode
+function FBPEditorBookmarkNode:get() end
+
 
 
 ---@class FBPInterfaceDescription
 ---@field Interface TSubclassOf<UInterface>
 ---@field Graphs TArray<UEdGraph>
 FBPInterfaceDescription = {}
+
+---@return FBPInterfaceDescription
+function FBPInterfaceDescription:get() end
 
 
 
@@ -3816,12 +4539,18 @@ FBPInterfaceDescription = {}
 ---@field DefaultValue FString
 FBPVariableDescription = {}
 
+---@return FBPVariableDescription
+function FBPVariableDescription:get() end
+
 
 
 ---@class FBPVariableMetaDataEntry
 ---@field DataKey FName
 ---@field DataValue FString
 FBPVariableMetaDataEntry = {}
+
+---@return FBPVariableMetaDataEntry
+function FBPVariableMetaDataEntry:get() end
 
 
 
@@ -3839,6 +4568,9 @@ FBPVariableMetaDataEntry = {}
 ---@field bAlwaysResetOnEntry boolean
 FBakedAnimationState = {}
 
+---@return FBakedAnimationState
+function FBakedAnimationState:get() end
+
 
 
 ---@class FBakedAnimationStateMachine
@@ -3848,18 +4580,30 @@ FBakedAnimationState = {}
 ---@field Transitions TArray<FAnimationTransitionBetweenStates>
 FBakedAnimationStateMachine = {}
 
+---@return FBakedAnimationStateMachine
+function FBakedAnimationStateMachine:get() end
+
 
 
 ---@class FBakedCustomAttributePerBoneData
 FBakedCustomAttributePerBoneData = {}
 
+---@return FBakedCustomAttributePerBoneData
+function FBakedCustomAttributePerBoneData:get() end
+
 
 ---@class FBakedFloatCustomAttribute
 FBakedFloatCustomAttribute = {}
 
+---@return FBakedFloatCustomAttribute
+function FBakedFloatCustomAttribute:get() end
+
 
 ---@class FBakedIntegerCustomAttribute
 FBakedIntegerCustomAttribute = {}
+
+---@return FBakedIntegerCustomAttribute
+function FBakedIntegerCustomAttribute:get() end
 
 
 ---@class FBakedStateExitTransition
@@ -3872,21 +4616,33 @@ FBakedIntegerCustomAttribute = {}
 ---@field PoseEvaluatorLinks TArray<int32>
 FBakedStateExitTransition = {}
 
+---@return FBakedStateExitTransition
+function FBakedStateExitTransition:get() end
+
 
 
 ---@class FBakedStringCustomAttribute
 FBakedStringCustomAttribute = {}
+
+---@return FBakedStringCustomAttribute
+function FBakedStringCustomAttribute:get() end
 
 
 ---@class FBandwidthTestGenerator
 ---@field ReplicatedBuffers TArray<FBandwidthTestItem>
 FBandwidthTestGenerator = {}
 
+---@return FBandwidthTestGenerator
+function FBandwidthTestGenerator:get() end
+
 
 
 ---@class FBandwidthTestItem
 ---@field Kilobyte TArray<uint8>
 FBandwidthTestItem = {}
+
+---@return FBandwidthTestItem
+function FBandwidthTestItem:get() end
 
 
 
@@ -3903,12 +4659,18 @@ FBandwidthTestItem = {}
 ---@field CustomAttenuationCurve FRuntimeFloatCurve
 FBaseAttenuationSettings = {}
 
+---@return FBaseAttenuationSettings
+function FBaseAttenuationSettings:get() end
+
 
 
 ---@class FBaseComponentReference
 ---@field ComponentProperty FName
 ---@field PathToComponent FString
 FBaseComponentReference = {}
+
+---@return FBaseComponentReference
+function FBaseComponentReference:get() end
 
 
 
@@ -3922,6 +4684,9 @@ FBaseComponentReference = {}
 ---@field bServerHasVelocity boolean
 FBasedMovementInfo = {}
 
+---@return FBasedMovementInfo
+function FBasedMovementInfo:get() end
+
 
 
 ---@class FBasedPosition
@@ -3931,6 +4696,9 @@ FBasedMovementInfo = {}
 ---@field CachedBaseRotation FRotator
 ---@field CachedTransPosition FVector
 FBasedPosition = {}
+
+---@return FBasedPosition
+function FBasedPosition:get() end
 
 
 
@@ -3943,6 +4711,9 @@ FBasedPosition = {}
 ---@field DepthPriority uint8
 FBatchedLine = {}
 
+---@return FBatchedLine
+function FBatchedLine:get() end
+
 
 
 ---@class FBatchedPoint
@@ -3953,6 +4724,9 @@ FBatchedLine = {}
 ---@field DepthPriority uint8
 FBatchedPoint = {}
 
+---@return FBatchedPoint
+function FBatchedPoint:get() end
+
 
 
 ---@class FBeamModifierOptions
@@ -3961,6 +4735,9 @@ FBatchedPoint = {}
 ---@field bLock boolean
 FBeamModifierOptions = {}
 
+---@return FBeamModifierOptions
+function FBeamModifierOptions:get() end
+
 
 
 ---@class FBeamTargetData
@@ -3968,10 +4745,16 @@ FBeamModifierOptions = {}
 ---@field TargetPercentage float
 FBeamTargetData = {}
 
+---@return FBeamTargetData
+function FBeamTargetData:get() end
+
 
 
 ---@class FBlendFilter
 FBlendFilter = {}
+
+---@return FBlendFilter
+function FBlendFilter:get() end
 
 
 ---@class FBlendParameter
@@ -3983,12 +4766,18 @@ FBlendFilter = {}
 ---@field bWrapInput boolean
 FBlendParameter = {}
 
+---@return FBlendParameter
+function FBlendParameter:get() end
+
 
 
 ---@class FBlendProfileBoneEntry
 ---@field BoneReference FBoneReference
 ---@field BlendScale float
 FBlendProfileBoneEntry = {}
+
+---@return FBlendProfileBoneEntry
+function FBlendProfileBoneEntry:get() end
 
 
 
@@ -3997,6 +4786,9 @@ FBlendProfileBoneEntry = {}
 ---@field SampleValue FVector
 ---@field RateScale float
 FBlendSample = {}
+
+---@return FBlendSample
+function FBlendSample:get() end
 
 
 
@@ -4010,12 +4802,18 @@ FBlendSample = {}
 ---@field SamplePlayRate float
 FBlendSampleData = {}
 
+---@return FBlendSampleData
+function FBlendSampleData:get() end
+
 
 
 ---@class FBlendSpaceData
 ---@field Segments TArray<FBlendSpaceSegment>
 ---@field Triangles TArray<FBlendSpaceTriangle>
 FBlendSpaceData = {}
+
+---@return FBlendSpaceData
+function FBlendSpaceData:get() end
 
 
 
@@ -4024,6 +4822,9 @@ FBlendSpaceData = {}
 ---@field Vertices float
 FBlendSpaceSegment = {}
 
+---@return FBlendSpaceSegment
+function FBlendSpaceSegment:get() end
+
 
 
 ---@class FBlendSpaceTriangle
@@ -4031,6 +4832,9 @@ FBlendSpaceSegment = {}
 ---@field Vertices FVector2D
 ---@field EdgeInfo FBlendSpaceTriangleEdgeInfo
 FBlendSpaceTriangle = {}
+
+---@return FBlendSpaceTriangle
+function FBlendSpaceTriangle:get() end
 
 
 
@@ -4041,6 +4845,9 @@ FBlendSpaceTriangle = {}
 ---@field AdjacentPerimeterVertexIndices int32
 FBlendSpaceTriangleEdgeInfo = {}
 
+---@return FBlendSpaceTriangleEdgeInfo
+function FBlendSpaceTriangleEdgeInfo:get() end
+
 
 
 ---@class FBlueprintComponentChangedPropertyInfo
@@ -4048,6 +4855,9 @@ FBlendSpaceTriangleEdgeInfo = {}
 ---@field ArrayIndex int32
 ---@field PropertyScope UStruct
 FBlueprintComponentChangedPropertyInfo = {}
+
+---@return FBlueprintComponentChangedPropertyInfo
+function FBlueprintComponentChangedPropertyInfo:get() end
 
 
 
@@ -4057,6 +4867,9 @@ FBlueprintComponentChangedPropertyInfo = {}
 ---@field FunctionNameToBind FName
 FBlueprintComponentDelegateBinding = {}
 
+---@return FBlueprintComponentDelegateBinding
+function FBlueprintComponentDelegateBinding:get() end
+
 
 
 ---@class FBlueprintCookedComponentInstancingData
@@ -4064,10 +4877,16 @@ FBlueprintComponentDelegateBinding = {}
 ---@field bHasValidCookedData boolean
 FBlueprintCookedComponentInstancingData = {}
 
+---@return FBlueprintCookedComponentInstancingData
+function FBlueprintCookedComponentInstancingData:get() end
+
 
 
 ---@class FBlueprintDebugData
 FBlueprintDebugData = {}
+
+---@return FBlueprintDebugData
+function FBlueprintDebugData:get() end
 
 
 ---@class FBlueprintEditorPromotionSettings
@@ -4075,6 +4894,9 @@ FBlueprintDebugData = {}
 ---@field SecondMeshPath FFilePath
 ---@field DefaultParticleAsset FFilePath
 FBlueprintEditorPromotionSettings = {}
+
+---@return FBlueprintEditorPromotionSettings
+function FBlueprintEditorPromotionSettings:get() end
 
 
 
@@ -4084,6 +4906,9 @@ FBlueprintEditorPromotionSettings = {}
 ---@field FunctionNameToBind FName
 FBlueprintInputActionDelegateBinding = {}
 
+---@return FBlueprintInputActionDelegateBinding
+function FBlueprintInputActionDelegateBinding:get() end
+
 
 
 ---@class FBlueprintInputAxisDelegateBinding : FBlueprintInputDelegateBinding
@@ -4091,12 +4916,18 @@ FBlueprintInputActionDelegateBinding = {}
 ---@field FunctionNameToBind FName
 FBlueprintInputAxisDelegateBinding = {}
 
+---@return FBlueprintInputAxisDelegateBinding
+function FBlueprintInputAxisDelegateBinding:get() end
+
 
 
 ---@class FBlueprintInputAxisKeyDelegateBinding : FBlueprintInputDelegateBinding
 ---@field AxisKey FKey
 ---@field FunctionNameToBind FName
 FBlueprintInputAxisKeyDelegateBinding = {}
+
+---@return FBlueprintInputAxisKeyDelegateBinding
+function FBlueprintInputAxisKeyDelegateBinding:get() end
 
 
 
@@ -4106,6 +4937,9 @@ FBlueprintInputAxisKeyDelegateBinding = {}
 ---@field bOverrideParentBinding boolean
 FBlueprintInputDelegateBinding = {}
 
+---@return FBlueprintInputDelegateBinding
+function FBlueprintInputDelegateBinding:get() end
+
 
 
 ---@class FBlueprintInputKeyDelegateBinding : FBlueprintInputDelegateBinding
@@ -4114,6 +4948,9 @@ FBlueprintInputDelegateBinding = {}
 ---@field FunctionNameToBind FName
 FBlueprintInputKeyDelegateBinding = {}
 
+---@return FBlueprintInputKeyDelegateBinding
+function FBlueprintInputKeyDelegateBinding:get() end
+
 
 
 ---@class FBlueprintInputTouchDelegateBinding : FBlueprintInputDelegateBinding
@@ -4121,10 +4958,16 @@ FBlueprintInputKeyDelegateBinding = {}
 ---@field FunctionNameToBind FName
 FBlueprintInputTouchDelegateBinding = {}
 
+---@return FBlueprintInputTouchDelegateBinding
+function FBlueprintInputTouchDelegateBinding:get() end
+
 
 
 ---@class FBlueprintMacroCosmeticInfo
 FBlueprintMacroCosmeticInfo = {}
+
+---@return FBlueprintMacroCosmeticInfo
+function FBlueprintMacroCosmeticInfo:get() end
 
 
 ---@class FBodyInstance : FBodyInstanceCore
@@ -4169,10 +5012,16 @@ FBlueprintMacroCosmeticInfo = {}
 ---@field PhysicsBlendWeight float
 FBodyInstance = {}
 
+---@return FBodyInstance
+function FBodyInstance:get() end
+
 
 
 ---@class FBodyInstanceAsyncPhysicsTickHandle
 FBodyInstanceAsyncPhysicsTickHandle = {}
+
+---@return FBodyInstanceAsyncPhysicsTickHandle
+function FBodyInstanceAsyncPhysicsTickHandle:get() end
 
 
 ---@class FBoneAnimationTrack
@@ -4181,12 +5030,18 @@ FBodyInstanceAsyncPhysicsTickHandle = {}
 ---@field Name FName
 FBoneAnimationTrack = {}
 
+---@return FBoneAnimationTrack
+function FBoneAnimationTrack:get() end
+
 
 
 ---@class FBoneFilter
 ---@field bExcludeSelf boolean
 ---@field BoneName FName
 FBoneFilter = {}
+
+---@return FBoneFilter
+function FBoneFilter:get() end
 
 
 
@@ -4196,12 +5051,18 @@ FBoneFilter = {}
 ---@field BoneFlipAxis EAxis::Type
 FBoneMirrorExport = {}
 
+---@return FBoneMirrorExport
+function FBoneMirrorExport:get() end
+
 
 
 ---@class FBoneMirrorInfo
 ---@field SourceIndex int32
 ---@field BoneFlipAxis EAxis::Type
 FBoneMirrorInfo = {}
+
+---@return FBoneMirrorInfo
+function FBoneMirrorInfo:get() end
 
 
 
@@ -4211,17 +5072,26 @@ FBoneMirrorInfo = {}
 ---@field TranslationRetargetingMode EBoneTranslationRetargetingMode::Type
 FBoneNode = {}
 
+---@return FBoneNode
+function FBoneNode:get() end
+
 
 
 ---@class FBoneReductionSetting
 ---@field BonesToRemove TArray<FName>
 FBoneReductionSetting = {}
 
+---@return FBoneReductionSetting
+function FBoneReductionSetting:get() end
+
 
 
 ---@class FBoneReference
 ---@field BoneName FName
 FBoneReference = {}
+
+---@return FBoneReference
+function FBoneReference:get() end
 
 
 
@@ -4231,23 +5101,38 @@ FBoneReference = {}
 ---@field SocketReference FSocketReference
 FBoneSocketTarget = {}
 
+---@return FBoneSocketTarget
+function FBoneSocketTarget:get() end
+
 
 
 ---@class FBookmark2DJumpToSettings
 FBookmark2DJumpToSettings = {}
 
+---@return FBookmark2DJumpToSettings
+function FBookmark2DJumpToSettings:get() end
+
 
 ---@class FBookmarkBaseJumpToSettings
 FBookmarkBaseJumpToSettings = {}
+
+---@return FBookmarkBaseJumpToSettings
+function FBookmarkBaseJumpToSettings:get() end
 
 
 ---@class FBookmarkJumpToSettings : FBookmarkBaseJumpToSettings
 FBookmarkJumpToSettings = {}
 
+---@return FBookmarkJumpToSettings
+function FBookmarkJumpToSettings:get() end
+
 
 ---@class FBracketPayload : FEmptyPayload
 ---@field Description FString
 FBracketPayload = {}
+
+---@return FBracketPayload
+function FBracketPayload:get() end
 
 
 
@@ -4255,6 +5140,9 @@ FBracketPayload = {}
 ---@field BoneName FName
 ---@field BlendDepth int32
 FBranchFilter = {}
+
+---@return FBranchFilter
+function FBranchFilter:get() end
 
 
 
@@ -4264,6 +5152,9 @@ FBranchFilter = {}
 ---@field TriggerTimeOffset float
 FBranchingPoint = {}
 
+---@return FBranchingPoint
+function FBranchingPoint:get() end
+
 
 
 ---@class FBranchingPointMarker
@@ -4272,10 +5163,16 @@ FBranchingPoint = {}
 ---@field NotifyEventType EAnimNotifyEventType::Type
 FBranchingPointMarker = {}
 
+---@return FBranchingPointMarker
+function FBranchingPointMarker:get() end
+
 
 
 ---@class FBranchingPointNotifyPayload
 FBranchingPointNotifyPayload = {}
+
+---@return FBranchingPointNotifyPayload
+function FBranchingPointNotifyPayload:get() end
 
 
 ---@class FBroadphaseSettings
@@ -4286,6 +5183,9 @@ FBranchingPointNotifyPayload = {}
 ---@field MBPOuterBounds FBox
 ---@field MBPNumSubdivs uint32
 FBroadphaseSettings = {}
+
+---@return FBroadphaseSettings
+function FBroadphaseSettings:get() end
 
 
 
@@ -4303,12 +5203,18 @@ FBroadphaseSettings = {}
 ---@field OtherAssetsToImport TArray<FEditorImportWorkflowDefinition>
 FBuildPromotionImportWorkflowSettings = {}
 
+---@return FBuildPromotionImportWorkflowSettings
+function FBuildPromotionImportWorkflowSettings:get() end
+
 
 
 ---@class FBuildPromotionNewProjectSettings
 ---@field NewProjectFolderOverride FDirectoryPath
 ---@field NewProjectNameOverride FString
 FBuildPromotionNewProjectSettings = {}
+
+---@return FBuildPromotionNewProjectSettings
+function FBuildPromotionNewProjectSettings:get() end
 
 
 
@@ -4321,6 +5227,9 @@ FBuildPromotionNewProjectSettings = {}
 ---@field TextureAsset FFilePath
 FBuildPromotionOpenAssetSettings = {}
 
+---@return FBuildPromotionOpenAssetSettings
+function FBuildPromotionOpenAssetSettings:get() end
+
 
 
 ---@class FBuildPromotionTestSettings
@@ -4331,6 +5240,9 @@ FBuildPromotionOpenAssetSettings = {}
 ---@field SourceControlMaterial FFilePath
 FBuildPromotionTestSettings = {}
 
+---@return FBuildPromotionTestSettings
+function FBuildPromotionTestSettings:get() end
+
 
 
 ---@class FBuilderPoly
@@ -4340,12 +5252,18 @@ FBuildPromotionTestSettings = {}
 ---@field PolyFlags int32
 FBuilderPoly = {}
 
+---@return FBuilderPoly
+function FBuilderPoly:get() end
+
 
 
 ---@class FCachedAnimAssetPlayerData
 ---@field StateMachineName FName
 ---@field StateName FName
 FCachedAnimAssetPlayerData = {}
+
+---@return FCachedAnimAssetPlayerData
+function FCachedAnimAssetPlayerData:get() end
 
 
 
@@ -4354,11 +5272,17 @@ FCachedAnimAssetPlayerData = {}
 ---@field StateName FName
 FCachedAnimRelevancyData = {}
 
+---@return FCachedAnimRelevancyData
+function FCachedAnimRelevancyData:get() end
+
 
 
 ---@class FCachedAnimStateArray
 ---@field States TArray<FCachedAnimStateData>
 FCachedAnimStateArray = {}
+
+---@return FCachedAnimStateArray
+function FCachedAnimStateArray:get() end
 
 
 
@@ -4366,6 +5290,9 @@ FCachedAnimStateArray = {}
 ---@field StateMachineName FName
 ---@field StateName FName
 FCachedAnimStateData = {}
+
+---@return FCachedAnimStateData
+function FCachedAnimStateData:get() end
 
 
 
@@ -4375,11 +5302,17 @@ FCachedAnimStateData = {}
 ---@field ToStateName FName
 FCachedAnimTransitionData = {}
 
+---@return FCachedAnimTransitionData
+function FCachedAnimTransitionData:get() end
+
 
 
 ---@class FCachedFloatCurve
 ---@field CurveName FName
 FCachedFloatCurve = {}
+
+---@return FCachedFloatCurve
+function FCachedFloatCurve:get() end
 
 
 
@@ -4387,11 +5320,17 @@ FCachedFloatCurve = {}
 ---@field PlayerInput TWeakObjectPtr<UPlayerInput>
 FCachedKeyToActionInfo = {}
 
+---@return FCachedKeyToActionInfo
+function FCachedKeyToActionInfo:get() end
+
 
 
 ---@class FCachedPoseIndices
 ---@field OrderedSavedPoseNodeIndices TArray<int32>
 FCachedPoseIndices = {}
+
+---@return FCachedPoseIndices
+function FCachedPoseIndices:get() end
 
 
 
@@ -4399,6 +5338,9 @@ FCachedPoseIndices = {}
 ---@field Timestamp float
 ---@field POV FMinimalViewInfo
 FCameraCacheEntry = {}
+
+---@return FCameraCacheEntry
+function FCameraCacheEntry:get() end
 
 
 
@@ -4419,11 +5361,17 @@ FCameraCacheEntry = {}
 ---@field ApplyPhysicalCameraExposure boolean
 FCameraExposureSettings = {}
 
+---@return FCameraExposureSettings
+function FCameraExposureSettings:get() end
+
 
 
 ---@class FCameraLensInterfaceClassSupport
 ---@field Class TSubclassOf<AActor>
 FCameraLensInterfaceClassSupport = {}
+
+---@return FCameraLensInterfaceClassSupport
+function FCameraLensInterfaceClassSupport:get() end
 
 
 
@@ -4432,6 +5380,9 @@ FCameraLensInterfaceClassSupport = {}
 ---@field Type ECameraShakeDurationType
 FCameraShakeDuration = {}
 
+---@return FCameraShakeDuration
+function FCameraShakeDuration:get() end
+
 
 
 ---@class FCameraShakeInfo
@@ -4439,6 +5390,9 @@ FCameraShakeDuration = {}
 ---@field BlendIn float
 ---@field BlendOut float
 FCameraShakeInfo = {}
+
+---@return FCameraShakeInfo
+function FCameraShakeInfo:get() end
 
 
 
@@ -4450,17 +5404,26 @@ FCameraShakeInfo = {}
 ---@field POV FMinimalViewInfo
 FCameraShakeScrubParams = {}
 
+---@return FCameraShakeScrubParams
+function FCameraShakeScrubParams:get() end
+
 
 
 ---@class FCameraShakeStartParams
 ---@field bIsRestarting boolean
 FCameraShakeStartParams = {}
 
+---@return FCameraShakeStartParams
+function FCameraShakeStartParams:get() end
+
 
 
 ---@class FCameraShakeStopParams
 ---@field bImmediately boolean
 FCameraShakeStopParams = {}
+
+---@return FCameraShakeStopParams
+function FCameraShakeStopParams:get() end
 
 
 
@@ -4472,10 +5435,16 @@ FCameraShakeStopParams = {}
 ---@field POV FMinimalViewInfo
 FCameraShakeUpdateParams = {}
 
+---@return FCameraShakeUpdateParams
+function FCameraShakeUpdateParams:get() end
+
 
 
 ---@class FCameraShakeUpdateResult
 FCameraShakeUpdateResult = {}
+
+---@return FCameraShakeUpdateResult
+function FCameraShakeUpdateResult:get() end
 
 
 ---@class FCanvasIcon
@@ -4485,6 +5454,9 @@ FCameraShakeUpdateResult = {}
 ---@field UL float
 ---@field VL float
 FCanvasIcon = {}
+
+---@return FCanvasIcon
+function FCanvasIcon:get() end
 
 
 
@@ -4500,6 +5472,9 @@ FCanvasIcon = {}
 ---@field V2_Color FLinearColor
 FCanvasUVTri = {}
 
+---@return FCanvasUVTri
+function FCanvasUVTri:get() end
+
 
 
 ---@class FChannelDefinition
@@ -4514,6 +5489,9 @@ FCanvasUVTri = {}
 ---@field bInitialClient boolean
 FChannelDefinition = {}
 
+---@return FChannelDefinition
+function FChannelDefinition:get() end
+
 
 
 ---@class FChaosPhysicsSettings
@@ -4522,22 +5500,37 @@ FChannelDefinition = {}
 ---@field DedicatedThreadBufferMode EChaosBufferMode
 FChaosPhysicsSettings = {}
 
+---@return FChaosPhysicsSettings
+function FChaosPhysicsSettings:get() end
+
 
 
 ---@class FCharacterMoveResponsePackedBits : FCharacterNetworkSerializationPackedBits
 FCharacterMoveResponsePackedBits = {}
 
+---@return FCharacterMoveResponsePackedBits
+function FCharacterMoveResponsePackedBits:get() end
+
 
 ---@class FCharacterMovementComponentPostPhysicsTickFunction : FTickFunction
 FCharacterMovementComponentPostPhysicsTickFunction = {}
+
+---@return FCharacterMovementComponentPostPhysicsTickFunction
+function FCharacterMovementComponentPostPhysicsTickFunction:get() end
 
 
 ---@class FCharacterMovementComponentPrePhysicsTickFunction : FTickFunction
 FCharacterMovementComponentPrePhysicsTickFunction = {}
 
+---@return FCharacterMovementComponentPrePhysicsTickFunction
+function FCharacterMovementComponentPrePhysicsTickFunction:get() end
+
 
 ---@class FCharacterNetworkSerializationPackedBits
 FCharacterNetworkSerializationPackedBits = {}
+
+---@return FCharacterNetworkSerializationPackedBits
+function FCharacterNetworkSerializationPackedBits:get() end
 
 
 ---@class FCharacterNetworkSerializationPackedBitsNetSerializerConfig : FNetSerializerConfig
@@ -4545,10 +5538,16 @@ FCharacterNetworkSerializationPackedBits = {}
 ---@field MaxAllowedObjectReferences uint32
 FCharacterNetworkSerializationPackedBitsNetSerializerConfig = {}
 
+---@return FCharacterNetworkSerializationPackedBitsNetSerializerConfig
+function FCharacterNetworkSerializationPackedBitsNetSerializerConfig:get() end
+
 
 
 ---@class FCharacterServerMovePackedBits : FCharacterNetworkSerializationPackedBits
 FCharacterServerMovePackedBits = {}
+
+---@return FCharacterServerMovePackedBits
+function FCharacterServerMovePackedBits:get() end
 
 
 ---@class FChildActorAttachedActorInfo
@@ -4557,6 +5556,9 @@ FCharacterServerMovePackedBits = {}
 ---@field RelativeTransform FTransform
 FChildActorAttachedActorInfo = {}
 
+---@return FChildActorAttachedActorInfo
+function FChildActorAttachedActorInfo:get() end
+
 
 
 ---@class FChildActorComponentInstanceData : FSceneComponentInstanceData
@@ -4564,6 +5566,9 @@ FChildActorAttachedActorInfo = {}
 ---@field ChildActorName FName
 ---@field AttachedActors TArray<FChildActorAttachedActorInfo>
 FChildActorComponentInstanceData = {}
+
+---@return FChildActorComponentInstanceData
+function FChildActorComponentInstanceData:get() end
 
 
 
@@ -4578,6 +5583,9 @@ FChildActorComponentInstanceData = {}
 ---@field InstanceOnly boolean
 FClassRedirect = {}
 
+---@return FClassRedirect
+function FClassRedirect:get() end
+
 
 
 ---@class FClientReceiveData
@@ -4589,6 +5597,9 @@ FClassRedirect = {}
 ---@field RelatedPlayerState_2 APlayerState
 ---@field OptionalObject UObject
 FClientReceiveData = {}
+
+---@return FClientReceiveData
+function FClientReceiveData:get() end
 
 
 
@@ -4615,6 +5626,9 @@ FClientReceiveData = {}
 ---@field FiberResistance float
 FClothPhysicsProperties_Legacy = {}
 
+---@return FClothPhysicsProperties_Legacy
+function FClothPhysicsProperties_Legacy:get() end
+
 
 
 ---@class FClothingAssetData_Legacy
@@ -4623,6 +5637,9 @@ FClothPhysicsProperties_Legacy = {}
 ---@field bClothPropertiesChanged boolean
 ---@field PhysicsProperties FClothPhysicsProperties_Legacy
 FClothingAssetData_Legacy = {}
+
+---@return FClothingAssetData_Legacy
+function FClothingAssetData_Legacy:get() end
 
 
 
@@ -4637,6 +5654,9 @@ FClothingAssetData_Legacy = {}
 ---@field MaxInstanceScale FVector3f
 FClusterNode = {}
 
+---@return FClusterNode
+function FClusterNode:get() end
+
 
 
 ---@class FClusterNode_DEPRECATED
@@ -4648,6 +5668,9 @@ FClusterNode = {}
 ---@field LastInstance int32
 FClusterNode_DEPRECATED = {}
 
+---@return FClusterNode_DEPRECATED
+function FClusterNode_DEPRECATED:get() end
+
 
 
 ---@class FCollectionParameterBase
@@ -4655,11 +5678,17 @@ FClusterNode_DEPRECATED = {}
 ---@field ID FGuid
 FCollectionParameterBase = {}
 
+---@return FCollectionParameterBase
+function FCollectionParameterBase:get() end
+
 
 
 ---@class FCollectionReference
 ---@field CollectionName FName
 FCollectionReference = {}
+
+---@return FCollectionReference
+function FCollectionReference:get() end
 
 
 
@@ -4667,11 +5696,17 @@ FCollectionReference = {}
 ---@field DefaultValue float
 FCollectionScalarParameter = {}
 
+---@return FCollectionScalarParameter
+function FCollectionScalarParameter:get() end
+
 
 
 ---@class FCollectionVectorParameter : FCollectionParameterBase
 ---@field DefaultValue FLinearColor
 FCollectionVectorParameter = {}
+
+---@return FCollectionVectorParameter
+function FCollectionVectorParameter:get() end
 
 
 
@@ -4682,11 +5717,17 @@ FCollectionVectorParameter = {}
 ---@field bIsVelocityDeltaUnderThreshold boolean
 FCollisionImpactData = {}
 
+---@return FCollisionImpactData
+function FCollisionImpactData:get() end
+
 
 
 ---@class FCollisionProfileName
 ---@field Name FName
 FCollisionProfileName = {}
+
+---@return FCollisionProfileName
+function FCollisionProfileName:get() end
 
 
 
@@ -4694,6 +5735,9 @@ FCollisionProfileName = {}
 ---@field ResponseToChannels FCollisionResponseContainer
 ---@field ResponseArray TArray<FResponseChannel>
 FCollisionResponse = {}
+
+---@return FCollisionResponse
+function FCollisionResponse:get() end
 
 
 
@@ -4732,6 +5776,9 @@ FCollisionResponse = {}
 ---@field GameTraceChannel18 ECollisionResponse
 FCollisionResponseContainer = {}
 
+---@return FCollisionResponseContainer
+function FCollisionResponseContainer:get() end
+
 
 
 ---@class FCollisionResponseTemplate
@@ -4742,6 +5789,9 @@ FCollisionResponseContainer = {}
 ---@field CustomResponses TArray<FResponseChannel>
 FCollisionResponseTemplate = {}
 
+---@return FCollisionResponseTemplate
+function FCollisionResponseTemplate:get() end
+
 
 
 ---@class FColorGradePerRangeSettings
@@ -4751,6 +5801,9 @@ FCollisionResponseTemplate = {}
 ---@field Gain FVector4
 ---@field Offset FVector4
 FColorGradePerRangeSettings = {}
+
+---@return FColorGradePerRangeSettings
+function FColorGradePerRangeSettings:get() end
 
 
 
@@ -4764,12 +5817,18 @@ FColorGradePerRangeSettings = {}
 ---@field HighlightsMax float
 FColorGradingSettings = {}
 
+---@return FColorGradingSettings
+function FColorGradingSettings:get() end
+
 
 
 ---@class FColorMaterialInput : FMaterialInput
 ---@field UseConstant boolean
 ---@field Constant FColor
 FColorMaterialInput = {}
+
+---@return FColorMaterialInput
+function FColorMaterialInput:get() end
 
 
 
@@ -4783,6 +5842,9 @@ FColorMaterialInput = {}
 ---@field ExcludedFolderPaths TArray<FString>
 FCompilerNativizationOptions = {}
 
+---@return FCompilerNativizationOptions
+function FCompilerNativizationOptions:get() end
+
 
 
 ---@class FComponentKey
@@ -4790,6 +5852,9 @@ FCompilerNativizationOptions = {}
 ---@field SCSVariableName FName
 ---@field AssociatedGuid FGuid
 FComponentKey = {}
+
+---@return FComponentKey
+function FComponentKey:get() end
 
 
 
@@ -4800,11 +5865,17 @@ FComponentKey = {}
 ---@field CookedComponentInstancingData FBlueprintCookedComponentInstancingData
 FComponentOverrideRecord = {}
 
+---@return FComponentOverrideRecord
+function FComponentOverrideRecord:get() end
+
 
 
 ---@class FComponentReference : FBaseComponentReference
 ---@field OtherActor TWeakObjectPtr<AActor>
 FComponentReference = {}
+
+---@return FComponentReference
+function FComponentReference:get() end
 
 
 
@@ -4813,10 +5884,16 @@ FComponentReference = {}
 ---@field Names TArray<FName>
 FComponentSpacePose = {}
 
+---@return FComponentSpacePose
+function FComponentSpacePose:get() end
+
 
 
 ---@class FComponentSpacePoseLink : FPoseLinkBase
 FComponentSpacePoseLink = {}
+
+---@return FComponentSpacePoseLink
+function FComponentSpacePoseLink:get() end
 
 
 ---@class FComponentSync
@@ -4824,12 +5901,18 @@ FComponentSpacePoseLink = {}
 ---@field SyncOption ESyncOption
 FComponentSync = {}
 
+---@return FComponentSync
+function FComponentSync:get() end
+
 
 
 ---@class FCompositeReroute
 ---@field Name FName
 ---@field Expression UMaterialExpressionReroute
 FCompositeReroute = {}
+
+---@return FCompositeReroute
+function FCompositeReroute:get() end
 
 
 
@@ -4840,10 +5923,16 @@ FCompositeReroute = {}
 ---@field MetaData TArray<UAnimMetaData>
 FCompositeSection = {}
 
+---@return FCompositeSection
+function FCompositeSection:get() end
+
 
 
 ---@class FCompressedRichCurve
 FCompressedRichCurve = {}
+
+---@return FCompressedRichCurve
+function FCompressedRichCurve:get() end
 
 
 ---@class FCompressedTrack
@@ -4852,6 +5941,9 @@ FCompressedRichCurve = {}
 ---@field Mins float
 ---@field Ranges float
 FCompressedTrack = {}
+
+---@return FCompressedTrack
+function FCompressedTrack:get() end
 
 
 
@@ -4862,11 +5954,17 @@ FCompressedTrack = {}
 ---@field Swing2Motion EAngularConstraintMotion
 FConeConstraint = {}
 
+---@return FConeConstraint
+function FConeConstraint:get() end
+
 
 
 ---@class FConstrainComponentPropName
 ---@field ComponentName FName
 FConstrainComponentPropName = {}
+
+---@return FConstrainComponentPropName
+function FConstrainComponentPropName:get() end
 
 
 
@@ -4878,6 +5976,9 @@ FConstrainComponentPropName = {}
 ---@field bSoftConstraint boolean
 FConstraintBaseParams = {}
 
+---@return FConstraintBaseParams
+function FConstraintBaseParams:get() end
+
 
 
 ---@class FConstraintDrive
@@ -4887,6 +5988,9 @@ FConstraintBaseParams = {}
 ---@field bEnablePositionDrive boolean
 ---@field bEnableVelocityDrive boolean
 FConstraintDrive = {}
+
+---@return FConstraintDrive
+function FConstraintDrive:get() end
 
 
 
@@ -4905,6 +6009,9 @@ FConstraintDrive = {}
 ---@field ProfileInstance FConstraintProfileProperties
 FConstraintInstance = {}
 
+---@return FConstraintInstance
+function FConstraintInstance:get() end
+
 
 
 ---@class FConstraintInstanceAccessor
@@ -4912,10 +6019,16 @@ FConstraintInstance = {}
 ---@field Index uint32
 FConstraintInstanceAccessor = {}
 
+---@return FConstraintInstanceAccessor
+function FConstraintInstanceAccessor:get() end
+
 
 
 ---@class FConstraintInstanceBase
 FConstraintInstanceBase = {}
+
+---@return FConstraintInstanceBase
+function FConstraintInstanceBase:get() end
 
 
 ---@class FConstraintProfileProperties
@@ -4945,6 +6058,9 @@ FConstraintInstanceBase = {}
 ---@field LinearPlasticityType EConstraintPlasticityType
 FConstraintProfileProperties = {}
 
+---@return FConstraintProfileProperties
+function FConstraintProfileProperties:get() end
+
 
 
 ---@class FConvolutionBloomSettings
@@ -4958,12 +6074,18 @@ FConstraintProfileProperties = {}
 ---@field BufferScale float
 FConvolutionBloomSettings = {}
 
+---@return FConvolutionBloomSettings
+function FConvolutionBloomSettings:get() end
+
 
 
 ---@class FCullDistanceSizePair
 ---@field Size float
 ---@field CullDistance float
 FCullDistanceSizePair = {}
+
+---@return FCullDistanceSizePair
+function FCullDistanceSizePair:get() end
 
 
 
@@ -4979,6 +6101,9 @@ FCullDistanceSizePair = {}
 ---@field AdjustMaxAlpha float
 FCurveAtlasColorAdjustments = {}
 
+---@return FCurveAtlasColorAdjustments
+function FCurveAtlasColorAdjustments:get() end
+
 
 
 ---@class FCurveEdEntry
@@ -4993,6 +6118,9 @@ FCurveAtlasColorAdjustments = {}
 ---@field ClampHigh float
 FCurveEdEntry = {}
 
+---@return FCurveEdEntry
+function FCurveEdEntry:get() end
+
 
 
 ---@class FCurveEdTab
@@ -5004,27 +6132,42 @@ FCurveEdEntry = {}
 ---@field ViewEndOutput float
 FCurveEdTab = {}
 
+---@return FCurveEdTab
+function FCurveEdTab:get() end
+
 
 
 ---@class FCurveFlagsChangedPayload : FCurvePayload
 ---@field OldFlags int32
 FCurveFlagsChangedPayload = {}
 
+---@return FCurveFlagsChangedPayload
+function FCurveFlagsChangedPayload:get() end
+
 
 
 ---@class FCurveMetaData
 FCurveMetaData = {}
+
+---@return FCurveMetaData
+function FCurveMetaData:get() end
 
 
 ---@class FCurvePayload : FEmptyPayload
 ---@field Identifier FAnimationCurveIdentifier
 FCurvePayload = {}
 
+---@return FCurvePayload
+function FCurvePayload:get() end
+
 
 
 ---@class FCurveRenamedPayload : FCurvePayload
 ---@field NewIdentifier FAnimationCurveIdentifier
 FCurveRenamedPayload = {}
+
+---@return FCurveRenamedPayload
+function FCurveRenamedPayload:get() end
 
 
 
@@ -5033,12 +6176,18 @@ FCurveRenamedPayload = {}
 ---@field Origin float
 FCurveScaledPayload = {}
 
+---@return FCurveScaledPayload
+function FCurveScaledPayload:get() end
+
 
 
 ---@class FCurveTableRowHandle
 ---@field CurveTable UCurveTable
 ---@field RowName FName
 FCurveTableRowHandle = {}
+
+---@return FCurveTableRowHandle
+function FCurveTableRowHandle:get() end
 
 
 
@@ -5047,20 +6196,32 @@ FCurveTableRowHandle = {}
 ---@field CurveWeights TArray<float>
 FCurveTrack = {}
 
+---@return FCurveTrack
+function FCurveTrack:get() end
+
 
 
 ---@class FCustomAttribute
 FCustomAttribute = {}
 
+---@return FCustomAttribute
+function FCustomAttribute:get() end
+
 
 ---@class FCustomAttributePerBoneData
 FCustomAttributePerBoneData = {}
+
+---@return FCustomAttributePerBoneData
+function FCustomAttributePerBoneData:get() end
 
 
 ---@class FCustomAttributeSetting
 ---@field Name FString
 ---@field Meaning FString
 FCustomAttributeSetting = {}
+
+---@return FCustomAttributeSetting
+function FCustomAttributeSetting:get() end
 
 
 
@@ -5072,12 +6233,18 @@ FCustomAttributeSetting = {}
 ---@field Name FName
 FCustomChannelSetup = {}
 
+---@return FCustomChannelSetup
+function FCustomChannelSetup:get() end
+
 
 
 ---@class FCustomDefine
 ---@field DefineName FString
 ---@field DefineValue FString
 FCustomDefine = {}
+
+---@return FCustomDefine
+function FCustomDefine:get() end
 
 
 
@@ -5086,6 +6253,9 @@ FCustomDefine = {}
 ---@field Input FExpressionInput
 FCustomInput = {}
 
+---@return FCustomInput
+function FCustomInput:get() end
+
 
 
 ---@class FCustomOutput
@@ -5093,11 +6263,17 @@ FCustomInput = {}
 ---@field OutputType ECustomMaterialOutputType
 FCustomOutput = {}
 
+---@return FCustomOutput
+function FCustomOutput:get() end
+
 
 
 ---@class FCustomPrimitiveData
 ---@field Data TArray<float>
 FCustomPrimitiveData = {}
+
+---@return FCustomPrimitiveData
+function FCustomPrimitiveData:get() end
 
 
 
@@ -5105,6 +6281,9 @@ FCustomPrimitiveData = {}
 ---@field Name FName
 ---@field CustomResponses TArray<FResponseChannel>
 FCustomProfile = {}
+
+---@return FCustomProfile
+function FCustomProfile:get() end
 
 
 
@@ -5114,12 +6293,18 @@ FCustomProfile = {}
 ---@field Arg2 FString
 FDPMatchingIfCondition = {}
 
+---@return FDPMatchingIfCondition
+function FDPMatchingIfCondition:get() end
+
 
 
 ---@class FDPMatchingRulestruct : FDPMatchingRulestructBase
 ---@field OnTrue TArray<FDPMatchingRulestructE>
 ---@field OnFalse TArray<FDPMatchingRulestructE>
 FDPMatchingRulestruct = {}
+
+---@return FDPMatchingRulestruct
+function FDPMatchingRulestruct:get() end
 
 
 
@@ -5128,12 +6313,18 @@ FDPMatchingRulestruct = {}
 ---@field OnFalse TArray<FDPMatchingRulestructBase>
 FDPMatchingRulestructA = {}
 
+---@return FDPMatchingRulestructA
+function FDPMatchingRulestructA:get() end
+
 
 
 ---@class FDPMatchingRulestructB : FDPMatchingRulestructBase
 ---@field OnTrue TArray<FDPMatchingRulestructA>
 ---@field OnFalse TArray<FDPMatchingRulestructA>
 FDPMatchingRulestructB = {}
+
+---@return FDPMatchingRulestructB
+function FDPMatchingRulestructB:get() end
 
 
 
@@ -5144,12 +6335,18 @@ FDPMatchingRulestructB = {}
 ---@field SetUserVar FString
 FDPMatchingRulestructBase = {}
 
+---@return FDPMatchingRulestructBase
+function FDPMatchingRulestructBase:get() end
+
 
 
 ---@class FDPMatchingRulestructC : FDPMatchingRulestructBase
 ---@field OnTrue TArray<FDPMatchingRulestructB>
 ---@field OnFalse TArray<FDPMatchingRulestructB>
 FDPMatchingRulestructC = {}
+
+---@return FDPMatchingRulestructC
+function FDPMatchingRulestructC:get() end
 
 
 
@@ -5158,6 +6355,9 @@ FDPMatchingRulestructC = {}
 ---@field OnFalse TArray<FDPMatchingRulestructC>
 FDPMatchingRulestructD = {}
 
+---@return FDPMatchingRulestructD
+function FDPMatchingRulestructD:get() end
+
 
 
 ---@class FDPMatchingRulestructE : FDPMatchingRulestructBase
@@ -5165,16 +6365,25 @@ FDPMatchingRulestructD = {}
 ---@field OnFalse TArray<FDPMatchingRulestructD>
 FDPMatchingRulestructE = {}
 
+---@return FDPMatchingRulestructE
+function FDPMatchingRulestructE:get() end
+
 
 
 ---@class FDamageEvent
 ---@field DamageTypeClass TSubclassOf<UDamageType>
 FDamageEvent = {}
 
+---@return FDamageEvent
+function FDamageEvent:get() end
+
 
 
 ---@class FDataCacheDuplicatedObjectData
 FDataCacheDuplicatedObjectData = {}
+
+---@return FDataCacheDuplicatedObjectData
+function FDataCacheDuplicatedObjectData:get() end
 
 
 ---@class FDataDrivenConsoleVariable
@@ -5186,6 +6395,9 @@ FDataCacheDuplicatedObjectData = {}
 ---@field DefaultValueBool boolean
 FDataDrivenConsoleVariable = {}
 
+---@return FDataDrivenConsoleVariable
+function FDataDrivenConsoleVariable:get() end
+
 
 
 ---@class FDataTableCategoryHandle
@@ -5194,6 +6406,9 @@ FDataDrivenConsoleVariable = {}
 ---@field RowContents FName
 FDataTableCategoryHandle = {}
 
+---@return FDataTableCategoryHandle
+function FDataTableCategoryHandle:get() end
+
 
 
 ---@class FDataTableRowHandle
@@ -5201,11 +6416,17 @@ FDataTableCategoryHandle = {}
 ---@field RowName FName
 FDataTableRowHandle = {}
 
+---@return FDataTableRowHandle
+function FDataTableRowHandle:get() end
+
 
 
 ---@class FDebugCameraControllerSettingsViewModeIndex
 ---@field ViewModeIndex EViewModeIndex
 FDebugCameraControllerSettingsViewModeIndex = {}
+
+---@return FDebugCameraControllerSettingsViewModeIndex
+function FDebugCameraControllerSettingsViewModeIndex:get() end
 
 
 
@@ -5213,6 +6434,9 @@ FDebugCameraControllerSettingsViewModeIndex = {}
 ---@field Obj UObject
 ---@field WithinClass UClass
 FDebugDisplayProperty = {}
+
+---@return FDebugDisplayProperty
+function FDebugDisplayProperty:get() end
 
 
 
@@ -5223,6 +6447,9 @@ FDebugDisplayProperty = {}
 ---@field MaxValue float
 ---@field bAutoAdjustMinMax boolean
 FDebugFloatHistory = {}
+
+---@return FDebugFloatHistory
+function FDebugFloatHistory:get() end
 
 
 
@@ -5242,29 +6469,47 @@ FDebugFloatHistory = {}
 ---@field FontScale float
 FDebugTextInfo = {}
 
+---@return FDebugTextInfo
+function FDebugTextInfo:get() end
+
 
 
 ---@class FDebuggingInfoForSingleFunction
 FDebuggingInfoForSingleFunction = {}
+
+---@return FDebuggingInfoForSingleFunction
+function FDebuggingInfoForSingleFunction:get() end
 
 
 ---@class FDefaultAudioBusSettings
 ---@field AudioBus FSoftObjectPath
 FDefaultAudioBusSettings = {}
 
+---@return FDefaultAudioBusSettings
+function FDefaultAudioBusSettings:get() end
+
 
 
 ---@class FDefault__AnimBlueprintGeneratedStruct
 FDefault__AnimBlueprintGeneratedStruct = {}
 
+---@return FDefault__AnimBlueprintGeneratedStruct
+function FDefault__AnimBlueprintGeneratedStruct:get() end
+
 
 ---@class FDefault__UserDefinedStruct
 FDefault__UserDefinedStruct = {}
+
+---@return FDefault__UserDefinedStruct
+function FDefault__UserDefinedStruct:get() end
 
 
 ---@class FDelegateArray
 ---@field Delegates TArray<FDelegateArrayDelegates>
 FDelegateArray = {}
+
+---@return FDelegateArray
+function FDelegateArray:get() end
 
 
 
@@ -5275,12 +6520,18 @@ FDelegateArray = {}
 ---@field GlowInnerRadius FVector2D
 FDepthFieldGlowInfo = {}
 
+---@return FDepthFieldGlowInfo
+function FDepthFieldGlowInfo:get() end
+
 
 
 ---@class FDialogueContext
 ---@field Speaker UDialogueVoice
 ---@field Targets TArray<UDialogueVoice>
 FDialogueContext = {}
+
+---@return FDialogueContext
+function FDialogueContext:get() end
 
 
 
@@ -5291,12 +6542,18 @@ FDialogueContext = {}
 ---@field Proxy UDialogueSoundWaveProxy
 FDialogueContextMapping = {}
 
+---@return FDialogueContextMapping
+function FDialogueContextMapping:get() end
+
 
 
 ---@class FDialogueWaveParameter
 ---@field DialogueWave UDialogueWave
 ---@field Context FDialogueContext
 FDialogueWaveParameter = {}
+
+---@return FDialogueWaveParameter
+function FDialogueWaveParameter:get() end
 
 
 
@@ -5307,6 +6564,9 @@ FDialogueWaveParameter = {}
 ---@field FadeOutDistanceEnd float
 ---@field Volume float
 FDistanceDatum = {}
+
+---@return FDistanceDatum
+function FDistanceDatum:get() end
 
 
 
@@ -5321,6 +6581,9 @@ FDistanceDatum = {}
 ---@field LockFlag uint8
 FDistributionLookupTable = {}
 
+---@return FDistributionLookupTable
+function FDistributionLookupTable:get() end
+
 
 
 ---@class FDoubleVectorParameterValue
@@ -5329,11 +6592,17 @@ FDistributionLookupTable = {}
 ---@field ExpressionGUID FGuid
 FDoubleVectorParameterValue = {}
 
+---@return FDoubleVectorParameterValue
+function FDoubleVectorParameterValue:get() end
+
 
 
 ---@class FDrawToRenderTargetContext
 ---@field RenderTarget UTextureRenderTarget2D
 FDrawToRenderTargetContext = {}
+
+---@return FDrawToRenderTargetContext
+function FDrawToRenderTargetContext:get() end
 
 
 
@@ -5343,10 +6612,16 @@ FDrawToRenderTargetContext = {}
 ---@field Comment FString
 FDropNoteInfo = {}
 
+---@return FDropNoteInfo
+function FDropNoteInfo:get() end
+
 
 
 ---@class FDummySpacerCameraTypes
 FDummySpacerCameraTypes = {}
+
+---@return FDummySpacerCameraTypes
+function FDummySpacerCameraTypes:get() end
 
 
 ---@class FDynamicTextureInstance : FStreamableTextureInstance
@@ -5355,12 +6630,18 @@ FDummySpacerCameraTypes = {}
 ---@field OriginalRadius float
 FDynamicTextureInstance = {}
 
+---@return FDynamicTextureInstance
+function FDynamicTextureInstance:get() end
+
 
 
 ---@class FEdGraphPinReference
 ---@field OwningNode TWeakObjectPtr<UEdGraphNode>
 ---@field PinId FGuid
 FEdGraphPinReference = {}
+
+---@return FEdGraphPinReference
+function FEdGraphPinReference:get() end
 
 
 
@@ -5378,6 +6659,9 @@ FEdGraphPinReference = {}
 ---@field bIsUObjectWrapper boolean
 ---@field bSerializeAsSinglePrecisionFloat boolean
 FEdGraphPinType = {}
+
+---@return FEdGraphPinType
+function FEdGraphPinType:get() end
 
 
 
@@ -5399,11 +6683,17 @@ FEdGraphPinType = {}
 ---@field SearchText FString
 FEdGraphSchemaAction = {}
 
+---@return FEdGraphSchemaAction
+function FEdGraphSchemaAction:get() end
+
 
 
 ---@class FEdGraphSchemaAction_NewNode : FEdGraphSchemaAction
 ---@field NodeTemplate UEdGraphNode
 FEdGraphSchemaAction_NewNode = {}
+
+---@return FEdGraphSchemaAction_NewNode
+function FEdGraphSchemaAction_NewNode:get() end
 
 
 
@@ -5416,6 +6706,9 @@ FEdGraphSchemaAction_NewNode = {}
 ---@field bTerminalIsUObjectWrapper boolean
 FEdGraphTerminalType = {}
 
+---@return FEdGraphTerminalType
+function FEdGraphTerminalType:get() end
+
 
 
 ---@class FEditedDocumentInfo
@@ -5425,12 +6718,18 @@ FEdGraphTerminalType = {}
 ---@field EditedObject UObject
 FEditedDocumentInfo = {}
 
+---@return FEditedDocumentInfo
+function FEditedDocumentInfo:get() end
+
 
 
 ---@class FEditorElement
 ---@field Indices int32
 ---@field Weights float
 FEditorElement = {}
+
+---@return FEditorElement
+function FEditorElement:get() end
 
 
 
@@ -5441,6 +6740,9 @@ FEditorElement = {}
 ---@field FactorySettings TArray<FImportFactorySettingValues>
 FEditorImportExportTestDefinition = {}
 
+---@return FEditorImportExportTestDefinition
+function FEditorImportExportTestDefinition:get() end
+
 
 
 ---@class FEditorImportWorkflowDefinition
@@ -5448,12 +6750,18 @@ FEditorImportExportTestDefinition = {}
 ---@field FactorySettings TArray<FImportFactorySettingValues>
 FEditorImportWorkflowDefinition = {}
 
+---@return FEditorImportWorkflowDefinition
+function FEditorImportWorkflowDefinition:get() end
+
 
 
 ---@class FEditorMapPerformanceTestDefinition
 ---@field PerformanceTestmap FSoftObjectPath
 ---@field TestTimer int32
 FEditorMapPerformanceTestDefinition = {}
+
+---@return FEditorMapPerformanceTestDefinition
+function FEditorMapPerformanceTestDefinition:get() end
 
 
 
@@ -5466,24 +6774,39 @@ FEditorMapPerformanceTestDefinition = {}
 ---@field ParamValue FRawDistributionFloat
 FEmitterDynamicParameter = {}
 
+---@return FEmitterDynamicParameter
+function FEmitterDynamicParameter:get() end
+
 
 
 ---@class FEmptyPayload
 FEmptyPayload = {}
 
+---@return FEmptyPayload
+function FEmptyPayload:get() end
+
 
 ---@class FEncounteredStateMachineStack
 FEncounteredStateMachineStack = {}
 
+---@return FEncounteredStateMachineStack
+function FEncounteredStateMachineStack:get() end
+
 
 ---@class FEndPhysicsTickFunction : FTickFunction
 FEndPhysicsTickFunction = {}
+
+---@return FEndPhysicsTickFunction
+function FEndPhysicsTickFunction:get() end
 
 
 ---@class FEngineShowFlagsSetting
 ---@field ShowFlagName FString
 ---@field Enabled boolean
 FEngineShowFlagsSetting = {}
+
+---@return FEngineShowFlagsSetting
+function FEngineShowFlagsSetting:get() end
 
 
 
@@ -5496,12 +6819,18 @@ FEngineShowFlagsSetting = {}
 ---@field RightBias FVector2D
 FEquirectProps = {}
 
+---@return FEquirectProps
+function FEquirectProps:get() end
+
 
 
 ---@class FEventGraphFastCallPair
 ---@field FunctionToPatch UFunction
 ---@field EventGraphCallOffset int32
 FEventGraphFastCallPair = {}
+
+---@return FEventGraphFastCallPair
+function FEventGraphFastCallPair:get() end
 
 
 
@@ -5511,12 +6840,18 @@ FEventGraphFastCallPair = {}
 ---@field FogHeightOffset float
 FExponentialHeightFogData = {}
 
+---@return FExponentialHeightFogData
+function FExponentialHeightFogData:get() end
+
 
 
 ---@class FExposedValueCopyRecord
 ---@field CopyIndex int32
 ---@field PostCopyOperation EPostCopyOperation
 FExposedValueCopyRecord = {}
+
+---@return FExposedValueCopyRecord
+function FExposedValueCopyRecord:get() end
 
 
 
@@ -5526,6 +6861,9 @@ FExposedValueCopyRecord = {}
 ---@field BoundFunction FName
 FExposedValueHandler = {}
 
+---@return FExposedValueHandler
+function FExposedValueHandler:get() end
+
 
 
 ---@class FExposureSettings
@@ -5533,11 +6871,17 @@ FExposedValueHandler = {}
 ---@field bFixed boolean
 FExposureSettings = {}
 
+---@return FExposureSettings
+function FExposureSettings:get() end
+
 
 
 ---@class FExpressionExecOutput
 ---@field Expression UMaterialExpression
 FExpressionExecOutput = {}
+
+---@return FExpressionExecOutput
+function FExpressionExecOutput:get() end
 
 
 
@@ -5552,6 +6896,9 @@ FExpressionExecOutput = {}
 ---@field MaskA int32
 FExpressionInput = {}
 
+---@return FExpressionInput
+function FExpressionInput:get() end
+
 
 
 ---@class FExpressionOutput
@@ -5562,6 +6909,9 @@ FExpressionInput = {}
 ---@field MaskB int32
 ---@field MaskA int32
 FExpressionOutput = {}
+
+---@return FExpressionOutput
+function FExpressionOutput:get() end
 
 
 
@@ -5574,15 +6924,24 @@ FExpressionOutput = {}
 ---@field ScriptDirectory FDirectoryPath
 FExternalToolDefinition = {}
 
+---@return FExternalToolDefinition
+function FExternalToolDefinition:get() end
+
 
 
 ---@class FFXSystemSpawnParameters
 FFXSystemSpawnParameters = {}
 
+---@return FFXSystemSpawnParameters
+function FFXSystemSpawnParameters:get() end
+
 
 ---@class FFieldCookedMetaDataStore
 ---@field FieldMetaData TMap<FName, FString>
 FFieldCookedMetaDataStore = {}
+
+---@return FFieldCookedMetaDataStore
+function FFieldCookedMetaDataStore:get() end
 
 
 
@@ -5593,6 +6952,9 @@ FFieldCookedMetaDataStore = {}
 ---@field BlackClip float
 ---@field WhiteClip float
 FFilmStockSettings = {}
+
+---@return FFilmStockSettings
+function FFilmStockSettings:get() end
 
 
 
@@ -5605,11 +6967,17 @@ FFilmStockSettings = {}
 ---@field HitResult FHitResult
 FFindFloorResult = {}
 
+---@return FFindFloorResult
+function FFindFloorResult:get() end
+
 
 
 ---@class FFloatAnimationAttribute
 ---@field Value float
 FFloatAnimationAttribute = {}
+
+---@return FFloatAnimationAttribute
+function FFloatAnimationAttribute:get() end
 
 
 
@@ -5617,11 +6985,17 @@ FFloatAnimationAttribute = {}
 ---@field FloatCurve FRichCurve
 FFloatCurve = {}
 
+---@return FFloatCurve
+function FFloatCurve:get() end
+
 
 
 ---@class FFloatDistribution
 ---@field Table FDistributionLookupTable
 FFloatDistribution = {}
+
+---@return FFloatDistribution
+function FFloatDistribution:get() end
 
 
 
@@ -5630,10 +7004,16 @@ FFloatDistribution = {}
 ---@field DampeningRatio float
 FFloatRK4SpringInterpolator = {}
 
+---@return FFloatRK4SpringInterpolator
+function FFloatRK4SpringInterpolator:get() end
+
 
 
 ---@class FFloatSpringState
 FFloatSpringState = {}
+
+---@return FFloatSpringState
+function FFloatSpringState:get() end
 
 
 ---@class FFontCharacter
@@ -5644,6 +7024,9 @@ FFloatSpringState = {}
 ---@field TextureIndex uint8
 ---@field VerticalOffset int32
 FFontCharacter = {}
+
+---@return FFontCharacter
+function FFontCharacter:get() end
 
 
 
@@ -5679,6 +7062,9 @@ FFontCharacter = {}
 ---@field DistanceFieldScanRadiusScale float
 FFontImportOptionsData = {}
 
+---@return FFontImportOptionsData
+function FFontImportOptionsData:get() end
+
 
 
 ---@class FFontParameterValue
@@ -5688,6 +7074,9 @@ FFontImportOptionsData = {}
 ---@field ExpressionGUID FGuid
 FFontParameterValue = {}
 
+---@return FFontParameterValue
+function FFontParameterValue:get() end
+
 
 
 ---@class FFontRenderInfo
@@ -5696,10 +7085,16 @@ FFontParameterValue = {}
 ---@field GlowInfo FDepthFieldGlowInfo
 FFontRenderInfo = {}
 
+---@return FFontRenderInfo
+function FFontRenderInfo:get() end
+
 
 
 ---@class FForceFeedbackAttenuationSettings : FBaseAttenuationSettings
 FForceFeedbackAttenuationSettings = {}
+
+---@return FForceFeedbackAttenuationSettings
+function FForceFeedbackAttenuationSettings:get() end
 
 
 ---@class FForceFeedbackChannelDetails
@@ -5710,6 +7105,9 @@ FForceFeedbackAttenuationSettings = {}
 ---@field Curve FRuntimeFloatCurve
 FForceFeedbackChannelDetails = {}
 
+---@return FForceFeedbackChannelDetails
+function FForceFeedbackChannelDetails:get() end
+
 
 
 ---@class FForceFeedbackParameters
@@ -5718,6 +7116,9 @@ FForceFeedbackChannelDetails = {}
 ---@field bIgnoreTimeDilation boolean
 ---@field bPlayWhilePaused boolean
 FForceFeedbackParameters = {}
+
+---@return FForceFeedbackParameters
+function FForceFeedbackParameters:get() end
 
 
 
@@ -5731,6 +7132,9 @@ FForceFeedbackParameters = {}
 ---@field ArgumentValueGender ETextGender
 FFormatArgumentData = {}
 
+---@return FFormatArgumentData
+function FFormatArgumentData:get() end
+
 
 
 ---@class FFractureEffect
@@ -5738,16 +7142,25 @@ FFormatArgumentData = {}
 ---@field Sound USoundBase
 FFractureEffect = {}
 
+---@return FFractureEffect
+function FFractureEffect:get() end
+
 
 
 ---@class FFrameRateChangedPayload : FEmptyPayload
 ---@field PreviousFrameRate FFrameRate
 FFrameRateChangedPayload = {}
 
+---@return FFrameRateChangedPayload
+function FFrameRateChangedPayload:get() end
+
 
 
 ---@class FFreezablePerPlatformInt
 FFreezablePerPlatformInt = {}
+
+---@return FFreezablePerPlatformInt
+function FFreezablePerPlatformInt:get() end
 
 
 ---@class FFullyLoadedPackagesInfo
@@ -5757,6 +7170,9 @@ FFreezablePerPlatformInt = {}
 ---@field LoadedObjects TArray<UObject>
 FFullyLoadedPackagesInfo = {}
 
+---@return FFullyLoadedPackagesInfo
+function FFullyLoadedPackagesInfo:get() end
+
 
 
 ---@class FFunctionExpressionInput
@@ -5765,6 +7181,9 @@ FFullyLoadedPackagesInfo = {}
 ---@field Input FExpressionInput
 FFunctionExpressionInput = {}
 
+---@return FFunctionExpressionInput
+function FFunctionExpressionInput:get() end
+
 
 
 ---@class FFunctionExpressionOutput
@@ -5772,6 +7191,9 @@ FFunctionExpressionInput = {}
 ---@field ExpressionOutputId FGuid
 ---@field Output FExpressionOutput
 FFunctionExpressionOutput = {}
+
+---@return FFunctionExpressionOutput
+function FFunctionExpressionOutput:get() end
 
 
 
@@ -5807,6 +7229,9 @@ FFunctionExpressionOutput = {}
 ---@field DynamicAlphaScale FRawDistributionFloat
 FGPUSpriteEmitterInfo = {}
 
+---@return FGPUSpriteEmitterInfo
+function FGPUSpriteEmitterInfo:get() end
+
 
 
 ---@class FGPUSpriteLocalVectorFieldInfo
@@ -5823,6 +7248,9 @@ FGPUSpriteEmitterInfo = {}
 ---@field bTileZ boolean
 ---@field bUseFixDT boolean
 FGPUSpriteLocalVectorFieldInfo = {}
+
+---@return FGPUSpriteLocalVectorFieldInfo
+function FGPUSpriteLocalVectorFieldInfo:get() end
 
 
 
@@ -5869,12 +7297,18 @@ FGPUSpriteLocalVectorFieldInfo = {}
 ---@field MaxFacingCameraBlendDistance float
 FGPUSpriteResourceData = {}
 
+---@return FGPUSpriteResourceData
+function FGPUSpriteResourceData:get() end
+
 
 
 ---@class FGameNameRedirect
 ---@field OldGameName FName
 ---@field NewGameName FName
 FGameNameRedirect = {}
+
+---@return FGameNameRedirect
+function FGameNameRedirect:get() end
 
 
 
@@ -5896,11 +7330,17 @@ FGameNameRedirect = {}
 ---@field Filter6Tint FLinearColor
 FGaussianSumBloomSettings = {}
 
+---@return FGaussianSumBloomSettings
+function FGaussianSumBloomSettings:get() end
+
 
 
 ---@class FGenericStruct
 ---@field Data int32
 FGenericStruct = {}
+
+---@return FGenericStruct
+function FGenericStruct:get() end
 
 
 
@@ -5910,11 +7350,17 @@ FGenericStruct = {}
 ---@field SelectionIndex int32
 FGeomSelection = {}
 
+---@return FGeomSelection
+function FGeomSelection:get() end
+
 
 
 ---@class FGraphAssetPlayerInformation
 ---@field PlayerNodeIndices TArray<int32>
 FGraphAssetPlayerInformation = {}
+
+---@return FGraphAssetPlayerInformation
+function FGraphAssetPlayerInformation:get() end
 
 
 
@@ -5924,12 +7370,18 @@ FGraphAssetPlayerInformation = {}
 ---@field GraphGuid FGuid
 FGraphReference = {}
 
+---@return FGraphReference
+function FGraphReference:get() end
+
 
 
 ---@class FGridBlendSample
 ---@field GridElement FEditorElement
 ---@field BlendWeight float
 FGridBlendSample = {}
+
+---@return FGridBlendSample
+function FGridBlendSample:get() end
 
 
 
@@ -5940,12 +7392,18 @@ FGridBlendSample = {}
 ---@field InstancesCustomPrimitiveData TArray<FCustomPrimitiveData>
 FHLODISMComponentDesc = {}
 
+---@return FHLODISMComponentDesc
+function FHLODISMComponentDesc:get() end
+
 
 
 ---@class FHLODInstancingKey
 ---@field StaticMesh UStaticMesh
 ---@field Material UMaterialInterface
 FHLODInstancingKey = {}
+
+---@return FHLODInstancingKey
+function FHLODInstancingKey:get() end
 
 
 
@@ -5955,14 +7413,23 @@ FHLODInstancingKey = {}
 ---@field Key FName
 FHLODProxyMesh = {}
 
+---@return FHLODProxyMesh
+function FHLODProxyMesh:get() end
+
 
 
 ---@class FHLODSubActor
 FHLODSubActor = {}
 
+---@return FHLODSubActor
+function FHLODSubActor:get() end
+
 
 ---@class FHLODSubActorDesc
 FHLODSubActorDesc = {}
+
+---@return FHLODSubActorDesc
+function FHLODSubActorDesc:get() end
 
 
 ---@class FHapticFeedbackDetails_Curve
@@ -5970,12 +7437,18 @@ FHLODSubActorDesc = {}
 ---@field Amplitude FRuntimeFloatCurve
 FHapticFeedbackDetails_Curve = {}
 
+---@return FHapticFeedbackDetails_Curve
+function FHapticFeedbackDetails_Curve:get() end
+
 
 
 ---@class FHardwareCursorReference
 ---@field CursorPath FName
 ---@field HotSpot FVector2D
 FHardwareCursorReference = {}
+
+---@return FHardwareCursorReference
+function FHardwareCursorReference:get() end
 
 
 
@@ -5994,6 +7467,9 @@ FHardwareCursorReference = {}
 ---@field DesiredFillingPercentage float
 ---@field MinNumberOfActorsToBuild int32
 FHierarchicalSimplification = {}
+
+---@return FHierarchicalSimplification
+function FHierarchicalSimplification:get() end
 
 
 
@@ -6020,11 +7496,17 @@ FHierarchicalSimplification = {}
 ---@field MyBoneName FName
 FHitResult = {}
 
+---@return FHitResult
+function FHitResult:get() end
+
 
 
 ---@class FISMClientData
 ---@field Instances TArray<FISMClientInstance>
 FISMClientData = {}
+
+---@return FISMClientData
+function FISMClientData:get() end
 
 
 
@@ -6033,24 +7515,39 @@ FISMClientData = {}
 ---@field Guid FGuid
 FISMClientHandle = {}
 
+---@return FISMClientHandle
+function FISMClientHandle:get() end
+
 
 
 ---@class FISMClientInstance
 ---@field ComponentIndices TArray<int32>
 FISMClientInstance = {}
 
+---@return FISMClientInstance
+function FISMClientInstance:get() end
+
 
 
 ---@class FISMClientInstanceManagerData
 FISMClientInstanceManagerData = {}
 
+---@return FISMClientInstanceManagerData
+function FISMClientInstanceManagerData:get() end
+
 
 ---@class FISMComponentData
 FISMComponentData = {}
 
+---@return FISMComponentData
+function FISMComponentData:get() end
+
 
 ---@class FISMComponentDescriptor
 FISMComponentDescriptor = {}
+
+---@return FISMComponentDescriptor
+function FISMComponentDescriptor:get() end
 
 
 ---@class FISMComponentInstance
@@ -6059,12 +7556,18 @@ FISMComponentDescriptor = {}
 ---@field InstanceSubIndex int32
 FISMComponentInstance = {}
 
+---@return FISMComponentInstance
+function FISMComponentInstance:get() end
+
 
 
 ---@class FImportFactorySettingValues
 ---@field SettingName FString
 ---@field Value FString
 FImportFactorySettingValues = {}
+
+---@return FImportFactorySettingValues
+function FImportFactorySettingValues:get() end
 
 
 
@@ -6078,34 +7581,55 @@ FImportFactorySettingValues = {}
 ---@field Weighting EImportanceWeight::Type
 FImportanceTexture = {}
 
+---@return FImportanceTexture
+function FImportanceTexture:get() end
+
 
 
 ---@class FIndexedCurve
 ---@field KeyHandlesToIndices FKeyHandleMap
 FIndexedCurve = {}
 
+---@return FIndexedCurve
+function FIndexedCurve:get() end
+
 
 
 ---@class FInertializationBoneDiff
 FInertializationBoneDiff = {}
 
+---@return FInertializationBoneDiff
+function FInertializationBoneDiff:get() end
+
 
 ---@class FInertializationCurveDiff
 FInertializationCurveDiff = {}
+
+---@return FInertializationCurveDiff
+function FInertializationCurveDiff:get() end
 
 
 ---@class FInertializationPose
 FInertializationPose = {}
 
+---@return FInertializationPose
+function FInertializationPose:get() end
+
 
 ---@class FInertializationPoseDiff
 FInertializationPoseDiff = {}
+
+---@return FInertializationPoseDiff
+function FInertializationPoseDiff:get() end
 
 
 ---@class FInertializationRequest
 ---@field Duration float
 ---@field BlendProfile UBlendProfile
 FInertializationRequest = {}
+
+---@return FInertializationRequest
+function FInertializationRequest:get() end
 
 
 
@@ -6118,12 +7642,18 @@ FInertializationRequest = {}
 ---@field Key FKey
 FInputActionKeyMapping = {}
 
+---@return FInputActionKeyMapping
+function FInputActionKeyMapping:get() end
+
 
 
 ---@class FInputActionSpeechMapping
 ---@field ActionName FName
 ---@field SpeechKeyword FName
 FInputActionSpeechMapping = {}
+
+---@return FInputActionSpeechMapping
+function FInputActionSpeechMapping:get() end
 
 
 
@@ -6136,12 +7666,18 @@ FInputActionSpeechMapping = {}
 ---@field AlphaBlend FAlphaBlend
 FInputAlphaBoolBlend = {}
 
+---@return FInputAlphaBoolBlend
+function FInputAlphaBoolBlend:get() end
+
 
 
 ---@class FInputAxisConfigEntry
 ---@field AxisKeyName FName
 ---@field AxisProperties FInputAxisProperties
 FInputAxisConfigEntry = {}
+
+---@return FInputAxisConfigEntry
+function FInputAxisConfigEntry:get() end
 
 
 
@@ -6150,6 +7686,9 @@ FInputAxisConfigEntry = {}
 ---@field Scale float
 ---@field Key FKey
 FInputAxisKeyMapping = {}
+
+---@return FInputAxisKeyMapping
+function FInputAxisKeyMapping:get() end
 
 
 
@@ -6160,11 +7699,17 @@ FInputAxisKeyMapping = {}
 ---@field bInvert boolean
 FInputAxisProperties = {}
 
+---@return FInputAxisProperties
+function FInputAxisProperties:get() end
+
 
 
 ---@class FInputBlendPose
 ---@field BranchFilters TArray<FBranchFilter>
 FInputBlendPose = {}
+
+---@return FInputBlendPose
+function FInputBlendPose:get() end
 
 
 
@@ -6177,10 +7722,16 @@ FInputBlendPose = {}
 ---@field InterpSpeedDecreasing float
 FInputClampConstants = {}
 
+---@return FInputClampConstants
+function FInputClampConstants:get() end
+
 
 
 ---@class FInputClampState
 FInputClampState = {}
+
+---@return FInputClampState
+function FInputClampState:get() end
 
 
 ---@class FInputRange
@@ -6188,12 +7739,18 @@ FInputClampState = {}
 ---@field Max float
 FInputRange = {}
 
+---@return FInputRange
+function FInputRange:get() end
+
 
 
 ---@class FInputScaleBias
 ---@field Scale float
 ---@field Bias float
 FInputScaleBias = {}
+
+---@return FInputScaleBias
+function FInputScaleBias:get() end
 
 
 
@@ -6211,6 +7768,9 @@ FInputScaleBias = {}
 ---@field InterpSpeedDecreasing float
 FInputScaleBiasClamp = {}
 
+---@return FInputScaleBiasClamp
+function FInputScaleBiasClamp:get() end
+
 
 
 ---@class FInputScaleBiasClampConstants
@@ -6227,10 +7787,16 @@ FInputScaleBiasClamp = {}
 ---@field InterpSpeedDecreasing float
 FInputScaleBiasClampConstants = {}
 
+---@return FInputScaleBiasClampConstants
+function FInputScaleBiasClampConstants:get() end
+
 
 
 ---@class FInputScaleBiasClampState
 FInputScaleBiasClampState = {}
+
+---@return FInputScaleBiasClampState
+function FInputScaleBiasClampState:get() end
 
 
 ---@class FInstanceCacheDataBase
@@ -6240,6 +7806,9 @@ FInputScaleBiasClampState = {}
 ---@field ReferencedObjects TArray<UObject>
 ---@field ReferencedNames TArray<FName>
 FInstanceCacheDataBase = {}
+
+---@return FInstanceCacheDataBase
+function FInstanceCacheDataBase:get() end
 
 
 
@@ -6253,11 +7822,17 @@ FInstanceCacheDataBase = {}
 ---@field bHasPerInstanceHitProxies boolean
 FInstancedStaticMeshComponentInstanceData = {}
 
+---@return FInstancedStaticMeshComponentInstanceData
+function FInstancedStaticMeshComponentInstanceData:get() end
+
 
 
 ---@class FInstancedStaticMeshInstanceData
 ---@field Transform FMatrix
 FInstancedStaticMeshInstanceData = {}
+
+---@return FInstancedStaticMeshInstanceData
+function FInstancedStaticMeshInstanceData:get() end
 
 
 
@@ -6266,10 +7841,16 @@ FInstancedStaticMeshInstanceData = {}
 ---@field MapBuildDataIds TArray<FGuid>
 FInstancedStaticMeshLightMapInstanceData = {}
 
+---@return FInstancedStaticMeshLightMapInstanceData
+function FInstancedStaticMeshLightMapInstanceData:get() end
+
 
 
 ---@class FInstancedStaticMeshMappingInfo
 FInstancedStaticMeshMappingInfo = {}
+
+---@return FInstancedStaticMeshMappingInfo
+function FInstancedStaticMeshMappingInfo:get() end
 
 
 ---@class FInstancedStaticMeshRandomSeed
@@ -6277,11 +7858,17 @@ FInstancedStaticMeshMappingInfo = {}
 ---@field RandomSeed int32
 FInstancedStaticMeshRandomSeed = {}
 
+---@return FInstancedStaticMeshRandomSeed
+function FInstancedStaticMeshRandomSeed:get() end
+
 
 
 ---@class FIntegerAnimationAttribute
 ---@field Value int32
 FIntegerAnimationAttribute = {}
+
+---@return FIntegerAnimationAttribute
+function FIntegerAnimationAttribute:get() end
 
 
 
@@ -6291,12 +7878,18 @@ FIntegerAnimationAttribute = {}
 ---@field bUseDefaultValueBeforeFirstKey boolean
 FIntegralCurve = {}
 
+---@return FIntegralCurve
+function FIntegralCurve:get() end
+
 
 
 ---@class FIntegralKey
 ---@field Time float
 ---@field Value int32
 FIntegralKey = {}
+
+---@return FIntegralKey
+function FIntegralKey:get() end
 
 
 
@@ -6312,12 +7905,18 @@ FIntegralKey = {}
 ---@field InteriorLPFTime float
 FInteriorSettings = {}
 
+---@return FInteriorSettings
+function FInteriorSettings:get() end
+
 
 
 ---@class FInterpControlPoint
 ---@field PositionControlPoint FVector
 ---@field bPositionIsRelative boolean
 FInterpControlPoint = {}
+
+---@return FInterpControlPoint
+function FInterpControlPoint:get() end
 
 
 
@@ -6328,6 +7927,9 @@ FInterpControlPoint = {}
 ---@field InterpolationType EFilterInterpolationType
 FInterpolationParameter = {}
 
+---@return FInterpolationParameter
+function FInterpolationParameter:get() end
+
 
 
 ---@class FIrisNetDriverConfig
@@ -6336,6 +7938,9 @@ FInterpolationParameter = {}
 ---@field NetDriverWildcardName FString
 ---@field bEnableIris boolean
 FIrisNetDriverConfig = {}
+
+---@return FIrisNetDriverConfig
+function FIrisNetDriverConfig:get() end
 
 
 
@@ -6348,6 +7953,9 @@ FIrisNetDriverConfig = {}
 ---@field LevelSetElems TArray<FKLevelSetElem>
 FKAggregateGeom = {}
 
+---@return FKAggregateGeom
+function FKAggregateGeom:get() end
+
 
 
 ---@class FKBoxElem : FKShapeElem
@@ -6358,6 +7966,9 @@ FKAggregateGeom = {}
 ---@field Z float
 FKBoxElem = {}
 
+---@return FKBoxElem
+function FKBoxElem:get() end
+
 
 
 ---@class FKConvexElem : FKShapeElem
@@ -6367,11 +7978,17 @@ FKBoxElem = {}
 ---@field Transform FTransform
 FKConvexElem = {}
 
+---@return FKConvexElem
+function FKConvexElem:get() end
+
 
 
 ---@class FKLevelSetElem : FKShapeElem
 ---@field Transform FTransform
 FKLevelSetElem = {}
+
+---@return FKLevelSetElem
+function FKLevelSetElem:get() end
 
 
 
@@ -6382,12 +7999,18 @@ FKLevelSetElem = {}
 ---@field CollisionEnabled ECollisionEnabled::Type
 FKShapeElem = {}
 
+---@return FKShapeElem
+function FKShapeElem:get() end
+
 
 
 ---@class FKSphereElem : FKShapeElem
 ---@field Center FVector
 ---@field Radius float
 FKSphereElem = {}
+
+---@return FKSphereElem
+function FKSphereElem:get() end
 
 
 
@@ -6398,6 +8021,9 @@ FKSphereElem = {}
 ---@field Length float
 FKSphylElem = {}
 
+---@return FKSphylElem
+function FKSphylElem:get() end
+
 
 
 ---@class FKTaperedCapsuleElem : FKShapeElem
@@ -6407,6 +8033,9 @@ FKSphylElem = {}
 ---@field Radius1 float
 ---@field Length float
 FKTaperedCapsuleElem = {}
+
+---@return FKTaperedCapsuleElem
+function FKTaperedCapsuleElem:get() end
 
 
 
@@ -6424,14 +8053,23 @@ FKTaperedCapsuleElem = {}
 ---@field bDisabled boolean
 FKeyBind = {}
 
+---@return FKeyBind
+function FKeyBind:get() end
+
 
 
 ---@class FKeyHandleLookupTable
 FKeyHandleLookupTable = {}
 
+---@return FKeyHandleLookupTable
+function FKeyHandleLookupTable:get() end
+
 
 ---@class FKeyHandleMap
 FKeyHandleMap = {}
+
+---@return FKeyHandleMap
+function FKeyHandleMap:get() end
 
 
 ---@class FLODMappingData
@@ -6439,11 +8077,17 @@ FKeyHandleMap = {}
 ---@field InverseMapping TArray<int32>
 FLODMappingData = {}
 
+---@return FLODMappingData
+function FLODMappingData:get() end
+
 
 
 ---@class FLODSoloTrack
 ---@field SoloEnableSetting TArray<uint8>
 FLODSoloTrack = {}
+
+---@return FLODSoloTrack
+function FLODSoloTrack:get() end
 
 
 
@@ -6454,10 +8098,16 @@ FLODSoloTrack = {}
 ---@field CallbackTarget UObject
 FLatentActionInfo = {}
 
+---@return FLatentActionInfo
+function FLatentActionInfo:get() end
+
 
 
 ---@class FLatentActionManager
 FLatentActionManager = {}
+
+---@return FLatentActionManager
+function FLatentActionManager:get() end
 
 
 ---@class FLaunchOnTestSettings
@@ -6465,12 +8115,18 @@ FLatentActionManager = {}
 ---@field DeviceID FString
 FLaunchOnTestSettings = {}
 
+---@return FLaunchOnTestSettings
+function FLaunchOnTestSettings:get() end
+
 
 
 ---@class FLayerActorStats
 ---@field Type TObjectPtr<UClass>
 ---@field Total int32
 FLayerActorStats = {}
+
+---@return FLayerActorStats
+function FLayerActorStats:get() end
 
 
 
@@ -6480,6 +8136,9 @@ FLayerActorStats = {}
 ---@field Method EBloomMethod
 FLensBloomSettings = {}
 
+---@return FLensBloomSettings
+function FLensBloomSettings:get() end
+
 
 
 ---@class FLensImperfectionSettings
@@ -6488,6 +8147,9 @@ FLensBloomSettings = {}
 ---@field DirtMaskTint FLinearColor
 FLensImperfectionSettings = {}
 
+---@return FLensImperfectionSettings
+function FLensImperfectionSettings:get() end
+
 
 
 ---@class FLensSettings
@@ -6495,6 +8157,9 @@ FLensImperfectionSettings = {}
 ---@field Imperfections FLensImperfectionSettings
 ---@field ChromaticAberration float
 FLensSettings = {}
+
+---@return FLensSettings
+function FLensSettings:get() end
 
 
 
@@ -6506,12 +8171,18 @@ FLensSettings = {}
 ---@field Levels TSet<ULevel>
 FLevelCollection = {}
 
+---@return FLevelCollection
+function FLevelCollection:get() end
+
 
 
 ---@class FLevelNameAndTime
 ---@field LevelName FString
 ---@field LevelChangeTimeInMS uint32
 FLevelNameAndTime = {}
+
+---@return FLevelNameAndTime
+function FLevelNameAndTime:get() end
 
 
 
@@ -6526,6 +8197,9 @@ FLevelNameAndTime = {}
 ---@field bBakeGrassToLandscape boolean
 FLevelSimplificationDetails = {}
 
+---@return FLevelSimplificationDetails
+function FLevelSimplificationDetails:get() end
+
 
 
 ---@class FLevelStreamingStatus
@@ -6534,6 +8208,9 @@ FLevelSimplificationDetails = {}
 ---@field bShouldBeVisible boolean
 ---@field LODIndex uint32
 FLevelStreamingStatus = {}
+
+---@return FLevelStreamingStatus
+function FLevelStreamingStatus:get() end
 
 
 
@@ -6544,6 +8221,9 @@ FLevelStreamingStatus = {}
 ---@field CamUpdated boolean
 FLevelViewportInfo = {}
 
+---@return FLevelViewportInfo
+function FLevelViewportInfo:get() end
+
 
 
 ---@class FLightingChannels
@@ -6551,6 +8231,9 @@ FLevelViewportInfo = {}
 ---@field bChannel1 boolean
 ---@field bChannel2 boolean
 FLightingChannels = {}
+
+---@return FLightingChannels
+function FLightingChannels:get() end
 
 
 
@@ -6573,11 +8256,17 @@ FLightingChannels = {}
 ---@field ExecutionTimeDivisor float
 FLightmassDebugOptions = {}
 
+---@return FLightmassDebugOptions
+function FLightmassDebugOptions:get() end
+
 
 
 ---@class FLightmassDirectionalLightSettings : FLightmassLightSettings
 ---@field LightSourceAngle float
 FLightmassDirectionalLightSettings = {}
+
+---@return FLightmassDirectionalLightSettings
+function FLightmassDirectionalLightSettings:get() end
 
 
 
@@ -6586,6 +8275,9 @@ FLightmassDirectionalLightSettings = {}
 ---@field ShadowExponent float
 ---@field bUseAreaShadowsForStationaryLight boolean
 FLightmassLightSettings = {}
+
+---@return FLightmassLightSettings
+function FLightmassLightSettings:get() end
 
 
 
@@ -6600,10 +8292,16 @@ FLightmassLightSettings = {}
 ---@field bOverrideExportResolutionScale boolean
 FLightmassMaterialInterfaceSettings = {}
 
+---@return FLightmassMaterialInterfaceSettings
+function FLightmassMaterialInterfaceSettings:get() end
+
 
 
 ---@class FLightmassPointLightSettings : FLightmassLightSettings
 FLightmassPointLightSettings = {}
+
+---@return FLightmassPointLightSettings
+function FLightmassPointLightSettings:get() end
 
 
 ---@class FLightmassPrimitiveSettings
@@ -6617,6 +8315,9 @@ FLightmassPointLightSettings = {}
 ---@field DiffuseBoost float
 ---@field FullyOccludedSamplesFraction float
 FLightmassPrimitiveSettings = {}
+
+---@return FLightmassPrimitiveSettings
+function FLightmassPrimitiveSettings:get() end
 
 
 
@@ -6647,6 +8348,9 @@ FLightmassPrimitiveSettings = {}
 ---@field MaxOcclusionDistance float
 FLightmassWorldInfoSettings = {}
 
+---@return FLightmassWorldInfoSettings
+function FLightmassWorldInfoSettings:get() end
+
 
 
 ---@class FLinearConstraint : FConstraintBaseParams
@@ -6655,6 +8359,9 @@ FLightmassWorldInfoSettings = {}
 ---@field YMotion ELinearConstraintMotion
 ---@field ZMotion ELinearConstraintMotion
 FLinearConstraint = {}
+
+---@return FLinearConstraint
+function FLinearConstraint:get() end
 
 
 
@@ -6667,12 +8374,18 @@ FLinearConstraint = {}
 ---@field bEnablePositionDrive boolean
 FLinearDriveConstraint = {}
 
+---@return FLinearDriveConstraint
+function FLinearDriveConstraint:get() end
+
 
 
 ---@class FLocalSpacePose
 ---@field Transforms TArray<FTransform>
 ---@field Names TArray<FName>
 FLocalSpacePose = {}
+
+---@return FLocalSpacePose
+function FLocalSpacePose:get() end
 
 
 
@@ -6681,12 +8394,18 @@ FLocalSpacePose = {}
 ---@field Offset FVector
 FLocationBoneSocketInfo = {}
 
+---@return FLocationBoneSocketInfo
+function FLocationBoneSocketInfo:get() end
+
 
 
 ---@class FMTDResult
 ---@field Direction FVector
 ---@field Distance float
 FMTDResult = {}
+
+---@return FMTDResult
+function FMTDResult:get() end
 
 
 
@@ -6696,17 +8415,26 @@ FMTDResult = {}
 ---@field PositionBetweenMarkers float
 FMarkerSyncAnimPosition = {}
 
+---@return FMarkerSyncAnimPosition
+function FMarkerSyncAnimPosition:get() end
+
 
 
 ---@class FMarkerSyncData
 ---@field AuthoredSyncMarkers TArray<FAnimSyncMarker>
 FMarkerSyncData = {}
 
+---@return FMarkerSyncData
+function FMarkerSyncData:get() end
+
 
 
 ---@class FMaterialAttributesInput : FExpressionInput
 ---@field PropertyConnectedBitmask int32
 FMaterialAttributesInput = {}
+
+---@return FMaterialAttributesInput
+function FMaterialAttributesInput:get() end
 
 
 
@@ -6737,6 +8465,9 @@ FMaterialAttributesInput = {}
 ---@field PropertyConnectedBitmask uint32
 FMaterialCachedExpressionData = {}
 
+---@return FMaterialCachedExpressionData
+function FMaterialCachedExpressionData:get() end
+
 
 
 ---@class FMaterialCachedExpressionEditorOnlyData
@@ -6755,11 +8486,17 @@ FMaterialCachedExpressionData = {}
 ---@field LandscapeLayerNames TArray<FName>
 FMaterialCachedExpressionEditorOnlyData = {}
 
+---@return FMaterialCachedExpressionEditorOnlyData
+function FMaterialCachedExpressionEditorOnlyData:get() end
+
 
 
 ---@class FMaterialCachedParameterEditorEntry
 ---@field EditorInfo TArray<FMaterialCachedParameterEditorInfo>
 FMaterialCachedParameterEditorEntry = {}
+
+---@return FMaterialCachedParameterEditorEntry
+function FMaterialCachedParameterEditorEntry:get() end
 
 
 
@@ -6771,11 +8508,17 @@ FMaterialCachedParameterEditorEntry = {}
 ---@field ExpressionGUID FGuid
 FMaterialCachedParameterEditorInfo = {}
 
+---@return FMaterialCachedParameterEditorInfo
+function FMaterialCachedParameterEditorInfo:get() end
+
 
 
 ---@class FMaterialCachedParameterEntry
 ---@field ParameterInfoSet TSet<FMaterialParameterInfo>
 FMaterialCachedParameterEntry = {}
+
+---@return FMaterialCachedParameterEntry
+function FMaterialCachedParameterEntry:get() end
 
 
 
@@ -6784,6 +8527,9 @@ FMaterialCachedParameterEntry = {}
 ---@field DefaultDiffuseTexture FFilePath
 ---@field DefaultNormalTexture FFilePath
 FMaterialEditorPromotionSettings = {}
+
+---@return FMaterialEditorPromotionSettings
+function FMaterialEditorPromotionSettings:get() end
 
 
 
@@ -6794,12 +8540,18 @@ FMaterialEditorPromotionSettings = {}
 ---@field ExpressionExecEnd UMaterialExpressionExecEnd
 FMaterialExpressionCollection = {}
 
+---@return FMaterialExpressionCollection
+function FMaterialExpressionCollection:get() end
+
 
 
 ---@class FMaterialFunctionInfo
 ---@field StateId FGuid
 ---@field Function UMaterialFunctionInterface
 FMaterialFunctionInfo = {}
+
+---@return FMaterialFunctionInfo
+function FMaterialFunctionInfo:get() end
 
 
 
@@ -6813,6 +8565,9 @@ FMaterialFunctionInfo = {}
 ---@field MaskB int32
 ---@field MaskA int32
 FMaterialInput = {}
+
+---@return FMaterialInput
+function FMaterialInput:get() end
 
 
 
@@ -6833,11 +8588,17 @@ FMaterialInput = {}
 ---@field OpacityMaskClipValue float
 FMaterialInstanceBasePropertyOverrides = {}
 
+---@return FMaterialInstanceBasePropertyOverrides
+function FMaterialInstanceBasePropertyOverrides:get() end
+
 
 
 ---@class FMaterialInstanceCachedData
 ---@field ParentLayerIndexRemap TArray<int32>
 FMaterialInstanceCachedData = {}
+
+---@return FMaterialInstanceCachedData
+function FMaterialInstanceCachedData:get() end
 
 
 
@@ -6852,6 +8613,9 @@ FMaterialInstanceCachedData = {}
 ---@field DeletedParentLayerGuids TArray<FGuid>
 FMaterialLayersFunctions = {}
 
+---@return FMaterialLayersFunctions
+function FMaterialLayersFunctions:get() end
+
 
 
 ---@class FMaterialLayersFunctionsEditorOnlyData
@@ -6864,12 +8628,18 @@ FMaterialLayersFunctions = {}
 ---@field DeletedParentLayerGuids TArray<FGuid>
 FMaterialLayersFunctionsEditorOnlyData = {}
 
+---@return FMaterialLayersFunctionsEditorOnlyData
+function FMaterialLayersFunctionsEditorOnlyData:get() end
+
 
 
 ---@class FMaterialLayersFunctionsRuntimeData
 ---@field Layers TArray<UMaterialFunctionInterface>
 ---@field Blends TArray<UMaterialFunctionInterface>
 FMaterialLayersFunctionsRuntimeData = {}
+
+---@return FMaterialLayersFunctionsRuntimeData
+function FMaterialLayersFunctionsRuntimeData:get() end
 
 
 
@@ -6879,12 +8649,18 @@ FMaterialLayersFunctionsRuntimeData = {}
 ---@field OverrideMaterial UMaterialInterface
 FMaterialOverrideNanite = {}
 
+---@return FMaterialOverrideNanite
+function FMaterialOverrideNanite:get() end
+
 
 
 ---@class FMaterialParameterCollectionInfo
 ---@field StateId FGuid
 ---@field ParameterCollection UMaterialParameterCollection
 FMaterialParameterCollectionInfo = {}
+
+---@return FMaterialParameterCollectionInfo
+function FMaterialParameterCollectionInfo:get() end
 
 
 
@@ -6893,6 +8669,9 @@ FMaterialParameterCollectionInfo = {}
 ---@field Association EMaterialParameterAssociation
 ---@field Index int32
 FMaterialParameterInfo = {}
+
+---@return FMaterialParameterInfo
+function FMaterialParameterInfo:get() end
 
 
 
@@ -6936,6 +8715,9 @@ FMaterialParameterInfo = {}
 ---@field AmbientOcclusionTextureSize FIntPoint
 FMaterialProxySettings = {}
 
+---@return FMaterialProxySettings
+function FMaterialProxySettings:get() end
+
 
 
 ---@class FMaterialRemapIndex
@@ -6943,11 +8725,17 @@ FMaterialProxySettings = {}
 ---@field MaterialRemap TArray<int32>
 FMaterialRemapIndex = {}
 
+---@return FMaterialRemapIndex
+function FMaterialRemapIndex:get() end
+
 
 
 ---@class FMaterialShadingModelField
 ---@field ShadingModelField uint16
 FMaterialShadingModelField = {}
+
+---@return FMaterialShadingModelField
+function FMaterialShadingModelField:get() end
 
 
 
@@ -6960,6 +8748,9 @@ FMaterialShadingModelField = {}
 ---@field DistanceToSizeCurve UCurveFloat
 FMaterialSpriteElement = {}
 
+---@return FMaterialSpriteElement
+function FMaterialSpriteElement:get() end
+
 
 
 ---@class FMaterialTextureInfo
@@ -6967,6 +8758,9 @@ FMaterialSpriteElement = {}
 ---@field UVChannelIndex int32
 ---@field TextureName FName
 FMaterialTextureInfo = {}
+
+---@return FMaterialTextureInfo
+function FMaterialTextureInfo:get() end
 
 
 
@@ -6978,6 +8772,9 @@ FMaterialTextureInfo = {}
 ---@field bSelfContext boolean
 ---@field bWasDeprecated boolean
 FMemberReference = {}
+
+---@return FMemberReference
+function FMemberReference:get() end
 
 
 
@@ -7024,6 +8821,9 @@ FMemberReference = {}
 ---@field bEmitFullDebugMesh boolean
 FMeshApproximationSettings = {}
 
+---@return FMeshApproximationSettings
+function FMeshApproximationSettings:get() end
+
 
 
 ---@class FMeshBuildSettings
@@ -7049,6 +8849,9 @@ FMeshApproximationSettings = {}
 ---@field MaxLumenMeshCards int32
 FMeshBuildSettings = {}
 
+---@return FMeshBuildSettings
+function FMeshBuildSettings:get() end
+
 
 
 ---@class FMeshInstancingSettings
@@ -7058,6 +8861,9 @@ FMeshBuildSettings = {}
 ---@field bUseHLODVolumes boolean
 ---@field ISMComponentToUse TSubclassOf<UInstancedStaticMeshComponent>
 FMeshInstancingSettings = {}
+
+---@return FMeshInstancingSettings
+function FMeshInstancingSettings:get() end
 
 
 
@@ -7086,6 +8892,9 @@ FMeshInstancingSettings = {}
 ---@field NaniteSettings FMeshNaniteSettings
 FMeshMergingSettings = {}
 
+---@return FMeshMergingSettings
+function FMeshMergingSettings:get() end
+
 
 
 ---@class FMeshNaniteSettings
@@ -7098,6 +8907,9 @@ FMeshMergingSettings = {}
 ---@field FallbackPercentTriangles float
 ---@field FallbackRelativeError float
 FMeshNaniteSettings = {}
+
+---@return FMeshNaniteSettings
+function FMeshNaniteSettings:get() end
 
 
 
@@ -7129,6 +8941,9 @@ FMeshNaniteSettings = {}
 ---@field NaniteSettings FMeshNaniteSettings
 FMeshProxySettings = {}
 
+---@return FMeshProxySettings
+function FMeshProxySettings:get() end
+
 
 
 ---@class FMeshReductionSettings
@@ -7152,6 +8967,9 @@ FMeshProxySettings = {}
 ---@field VertexColorImportance EMeshFeatureImportance::Type
 FMeshReductionSettings = {}
 
+---@return FMeshReductionSettings
+function FMeshReductionSettings:get() end
+
 
 
 ---@class FMeshSectionInfo
@@ -7163,11 +8981,17 @@ FMeshReductionSettings = {}
 ---@field bForceOpaque boolean
 FMeshSectionInfo = {}
 
+---@return FMeshSectionInfo
+function FMeshSectionInfo:get() end
+
 
 
 ---@class FMeshSectionInfoMap
 ---@field Map TMap<uint32, FMeshSectionInfo>
 FMeshSectionInfoMap = {}
+
+---@return FMeshSectionInfoMap
+function FMeshSectionInfoMap:get() end
 
 
 
@@ -7176,6 +9000,9 @@ FMeshSectionInfoMap = {}
 ---@field bOverrideDensities boolean
 ---@field LocalUVDensities float
 FMeshUVChannelInfo = {}
+
+---@return FMeshUVChannelInfo
+function FMeshUVChannelInfo:get() end
 
 
 
@@ -7197,6 +9024,9 @@ FMeshUVChannelInfo = {}
 ---@field OffCenterProjectionOffset FVector2D
 FMinimalViewInfo = {}
 
+---@return FMinimalViewInfo
+function FMinimalViewInfo:get() end
+
 
 
 ---@class FMirrorFindReplaceExpression
@@ -7205,6 +9035,9 @@ FMinimalViewInfo = {}
 ---@field FindReplaceMethod EMirrorFindReplaceMethod::Type
 FMirrorFindReplaceExpression = {}
 
+---@return FMirrorFindReplaceExpression
+function FMirrorFindReplaceExpression:get() end
+
 
 
 ---@class FMirrorTableRow : FTableRowBase
@@ -7212,6 +9045,9 @@ FMirrorFindReplaceExpression = {}
 ---@field MirroredName FName
 ---@field MirrorEntryType EMirrorRowType::Type
 FMirrorTableRow = {}
+
+---@return FMirrorTableRow
+function FMirrorTableRow:get() end
 
 
 
@@ -7225,6 +9061,9 @@ FMirrorTableRow = {}
 ---@field ParamMode ModulationParamMode
 FModulatorContinuousParams = {}
 
+---@return FModulatorContinuousParams
+function FModulatorContinuousParams:get() end
+
 
 
 ---@class FMontageBlendSettings
@@ -7232,6 +9071,9 @@ FModulatorContinuousParams = {}
 ---@field Blend FAlphaBlendArgs
 ---@field BlendMode EMontageBlendMode
 FMontageBlendSettings = {}
+
+---@return FMontageBlendSettings
+function FMontageBlendSettings:get() end
 
 
 
@@ -7243,6 +9085,9 @@ FMontageBlendSettings = {}
 ---@field bCanFly boolean
 FMovementProperties = {}
 
+---@return FMovementProperties
+function FMovementProperties:get() end
+
 
 
 ---@class FMulticastRecordOptions
@@ -7251,11 +9096,17 @@ FMovementProperties = {}
 ---@field bClientSkip boolean
 FMulticastRecordOptions = {}
 
+---@return FMulticastRecordOptions
+function FMulticastRecordOptions:get() end
+
 
 
 ---@class FNameCurve : FIndexedCurve
 ---@field Keys TArray<FNameCurveKey>
 FNameCurve = {}
+
+---@return FNameCurve
+function FNameCurve:get() end
 
 
 
@@ -7264,12 +9115,18 @@ FNameCurve = {}
 ---@field Value FName
 FNameCurveKey = {}
 
+---@return FNameCurveKey
+function FNameCurveKey:get() end
+
 
 
 ---@class FNameMapping
 ---@field NodeName FName
 ---@field BoneName FName
 FNameMapping = {}
+
+---@return FNameMapping
+function FNameMapping:get() end
 
 
 
@@ -7278,12 +9135,18 @@ FNameMapping = {}
 ---@field Name FName
 FNamedColor = {}
 
+---@return FNamedColor
+function FNamedColor:get() end
+
 
 
 ---@class FNamedCurveValue
 ---@field Name FName
 ---@field Value float
 FNamedCurveValue = {}
+
+---@return FNamedCurveValue
+function FNamedCurveValue:get() end
 
 
 
@@ -7292,6 +9155,9 @@ FNamedCurveValue = {}
 ---@field Material UMaterialInterface
 FNamedEmitterMaterial = {}
 
+---@return FNamedEmitterMaterial
+function FNamedEmitterMaterial:get() end
+
 
 
 ---@class FNamedFloat
@@ -7299,11 +9165,17 @@ FNamedEmitterMaterial = {}
 ---@field Name FName
 FNamedFloat = {}
 
+---@return FNamedFloat
+function FNamedFloat:get() end
+
 
 
 ---@class FNamedNetDriver
 ---@field NetDriver UNetDriver
 FNamedNetDriver = {}
+
+---@return FNamedNetDriver
+function FNamedNetDriver:get() end
 
 
 
@@ -7312,12 +9184,18 @@ FNamedNetDriver = {}
 ---@field Name FName
 FNamedTransform = {}
 
+---@return FNamedTransform
+function FNamedTransform:get() end
+
 
 
 ---@class FNamedVector
 ---@field Value FVector
 ---@field Name FName
 FNamedVector = {}
+
+---@return FNamedVector
+function FNamedVector:get() end
 
 
 
@@ -7328,6 +9206,9 @@ FNamedVector = {}
 ---@field NavWalkingSearchHeightScale float
 ---@field PreferredNavData FSoftClassPath
 FNavAgentProperties = {}
+
+---@return FNavAgentProperties
+function FNavAgentProperties:get() end
 
 
 
@@ -7350,10 +9231,16 @@ FNavAgentProperties = {}
 ---@field bSupportsAgent15 boolean
 FNavAgentSelector = {}
 
+---@return FNavAgentSelector
+function FNavAgentSelector:get() end
+
 
 
 ---@class FNavAvoidanceData
 FNavAvoidanceData = {}
+
+---@return FNavAvoidanceData
+function FNavAvoidanceData:get() end
 
 
 ---@class FNavAvoidanceMask
@@ -7391,6 +9278,9 @@ FNavAvoidanceData = {}
 ---@field bGroup31 boolean
 FNavAvoidanceMask = {}
 
+---@return FNavAvoidanceMask
+function FNavAvoidanceMask:get() end
+
 
 
 ---@class FNavDataConfig : FNavAgentProperties
@@ -7401,12 +9291,18 @@ FNavAvoidanceMask = {}
 ---@field NavDataClass TSoftClassPtr<AActor>
 FNavDataConfig = {}
 
+---@return FNavDataConfig
+function FNavDataConfig:get() end
+
 
 
 ---@class FNavigationLink : FNavigationLinkBase
 ---@field Left FVector
 ---@field Right FVector
 FNavigationLink = {}
+
+---@return FNavigationLink
+function FNavigationLink:get() end
 
 
 
@@ -7446,6 +9342,9 @@ FNavigationLink = {}
 ---@field AreaClass TSubclassOf<UNavAreaBase>
 FNavigationLinkBase = {}
 
+---@return FNavigationLinkBase
+function FNavigationLinkBase:get() end
+
 
 
 ---@class FNavigationSegmentLink : FNavigationLinkBase
@@ -7454,6 +9353,9 @@ FNavigationLinkBase = {}
 ---@field RightStart FVector
 ---@field RightEnd FVector
 FNavigationSegmentLink = {}
+
+---@return FNavigationSegmentLink
+function FNavigationSegmentLink:get() end
 
 
 
@@ -7464,11 +9366,17 @@ FNavigationSegmentLink = {}
 ---@field MaxChannelsOverride int32
 FNetDriverDefinition = {}
 
+---@return FNetDriverDefinition
+function FNetDriverDefinition:get() end
+
 
 
 ---@class FNetLevelVisibilityTransactionId
 ---@field Data uint32
 FNetLevelVisibilityTransactionId = {}
+
+---@return FNetLevelVisibilityTransactionId
+function FNetLevelVisibilityTransactionId:get() end
 
 
 
@@ -7480,12 +9388,18 @@ FNetLevelVisibilityTransactionId = {}
 ---@field ViewDir FVector
 FNetViewer = {}
 
+---@return FNetViewer
+function FNetViewer:get() end
+
 
 
 ---@class FNetworkEmulationProfileDescription
 ---@field ProfileName FString
 ---@field Tooltip FString
 FNetworkEmulationProfileDescription = {}
+
+---@return FNetworkEmulationProfileDescription
+function FNetworkEmulationProfileDescription:get() end
 
 
 
@@ -7503,6 +9417,9 @@ FNetworkEmulationProfileDescription = {}
 ---@field bHideCreationType boolean
 FNewLevelInstanceParams = {}
 
+---@return FNewLevelInstanceParams
+function FNewLevelInstanceParams:get() end
+
 
 
 ---@class FNode
@@ -7513,6 +9430,9 @@ FNewLevelInstanceParams = {}
 ---@field bAdvanced boolean
 FNode = {}
 
+---@return FNode
+function FNode:get() end
+
 
 
 ---@class FNodeItem
@@ -7520,35 +9440,59 @@ FNode = {}
 ---@field Transform FTransform
 FNodeItem = {}
 
+---@return FNodeItem
+function FNodeItem:get() end
+
 
 
 ---@class FNodeToCodeAssociation
 FNodeToCodeAssociation = {}
 
+---@return FNodeToCodeAssociation
+function FNodeToCodeAssociation:get() end
+
 
 ---@class FNonBlendableFloatAnimationAttribute : FFloatAnimationAttribute
 FNonBlendableFloatAnimationAttribute = {}
+
+---@return FNonBlendableFloatAnimationAttribute
+function FNonBlendableFloatAnimationAttribute:get() end
 
 
 ---@class FNonBlendableIntegerAnimationAttribute : FIntegerAnimationAttribute
 FNonBlendableIntegerAnimationAttribute = {}
 
+---@return FNonBlendableIntegerAnimationAttribute
+function FNonBlendableIntegerAnimationAttribute:get() end
+
 
 ---@class FNonBlendableQuaternionAnimationAttribute : FQuaternionAnimationAttribute
 FNonBlendableQuaternionAnimationAttribute = {}
+
+---@return FNonBlendableQuaternionAnimationAttribute
+function FNonBlendableQuaternionAnimationAttribute:get() end
 
 
 ---@class FNonBlendableTransformAnimationAttribute : FTransformAnimationAttribute
 FNonBlendableTransformAnimationAttribute = {}
 
+---@return FNonBlendableTransformAnimationAttribute
+function FNonBlendableTransformAnimationAttribute:get() end
+
 
 ---@class FNonBlendableVectorAnimationAttribute : FVectorAnimationAttribute
 FNonBlendableVectorAnimationAttribute = {}
+
+---@return FNonBlendableVectorAnimationAttribute
+function FNonBlendableVectorAnimationAttribute:get() end
 
 
 ---@class FObjectCookedMetaDataStore
 ---@field ObjectMetaData TMap<FName, FString>
 FObjectCookedMetaDataStore = {}
+
+---@return FObjectCookedMetaDataStore
+function FObjectCookedMetaDataStore:get() end
 
 
 
@@ -7558,6 +9502,9 @@ FObjectCookedMetaDataStore = {}
 ---@field bUseEmitterTime boolean
 FOrbitOptions = {}
 
+---@return FOrbitOptions
+function FOrbitOptions:get() end
+
 
 
 ---@class FOverlapResult
@@ -7565,6 +9512,9 @@ FOrbitOptions = {}
 ---@field Component TWeakObjectPtr<UPrimitiveComponent>
 ---@field bBlockingHit boolean
 FOverlapResult = {}
+
+---@return FOverlapResult
+function FOverlapResult:get() end
 
 
 
@@ -7574,17 +9524,26 @@ FOverlapResult = {}
 ---@field FOV float
 FPOV = {}
 
+---@return FPOV
+function FPOV:get() end
+
 
 
 ---@class FPSCPool
 ---@field FreeElements TArray<FPSCPoolElem>
 FPSCPool = {}
 
+---@return FPSCPool
+function FPSCPool:get() end
+
 
 
 ---@class FPSCPoolElem
 ---@field PSC UParticleSystemComponent
 FPSCPoolElem = {}
+
+---@return FPSCPoolElem
+function FPSCPoolElem:get() end
 
 
 
@@ -7604,6 +9563,9 @@ FPSCPoolElem = {}
 ---@field PktJitter int32
 FPacketSimulationSettings = {}
 
+---@return FPacketSimulationSettings
+function FPacketSimulationSettings:get() end
+
 
 
 ---@class FPaintedVertex
@@ -7611,6 +9573,9 @@ FPacketSimulationSettings = {}
 ---@field Color FColor
 ---@field Normal FVector4
 FPaintedVertex = {}
+
+---@return FPaintedVertex
+function FPaintedVertex:get() end
 
 
 
@@ -7621,12 +9586,18 @@ FPaintedVertex = {}
 ---@field A FText
 FParameterChannelNames = {}
 
+---@return FParameterChannelNames
+function FParameterChannelNames:get() end
+
 
 
 ---@class FParameterGroupData
 ---@field GroupName FString
 ---@field GroupSortPriority int32
 FParameterGroupData = {}
+
+---@return FParameterGroupData
+function FParameterGroupData:get() end
 
 
 
@@ -7636,6 +9607,9 @@ FParameterGroupData = {}
 ---@field Time float
 FParticleBurst = {}
 
+---@return FParticleBurst
+function FParticleBurst:get() end
+
 
 
 ---@class FParticleCurvePair
@@ -7643,16 +9617,25 @@ FParticleBurst = {}
 ---@field CurveObject UObject
 FParticleCurvePair = {}
 
+---@return FParticleCurvePair
+function FParticleCurvePair:get() end
+
 
 
 ---@class FParticleEditorPromotionSettings
 ---@field DefaultParticleAsset FFilePath
 FParticleEditorPromotionSettings = {}
 
+---@return FParticleEditorPromotionSettings
+function FParticleEditorPromotionSettings:get() end
+
 
 
 ---@class FParticleEmitterReplayFrame
 FParticleEmitterReplayFrame = {}
+
+---@return FParticleEmitterReplayFrame
+function FParticleEmitterReplayFrame:get() end
 
 
 ---@class FParticleEvent_GenerateInfo
@@ -7667,6 +9650,9 @@ FParticleEmitterReplayFrame = {}
 ---@field ParticleModuleEventsToSendToGame TArray<UParticleModuleEventSendToGame>
 FParticleEvent_GenerateInfo = {}
 
+---@return FParticleEvent_GenerateInfo
+function FParticleEvent_GenerateInfo:get() end
+
 
 
 ---@class FParticleRandomSeedInfo
@@ -7677,6 +9663,9 @@ FParticleEvent_GenerateInfo = {}
 ---@field bRandomlySelectSeedArray boolean
 ---@field RandomSeeds TArray<int32>
 FParticleRandomSeedInfo = {}
+
+---@return FParticleRandomSeedInfo
+function FParticleRandomSeedInfo:get() end
 
 
 
@@ -7692,18 +9681,30 @@ FParticleRandomSeedInfo = {}
 ---@field Material UMaterialInterface
 FParticleSysParam = {}
 
+---@return FParticleSysParam
+function FParticleSysParam:get() end
+
 
 
 ---@class FParticleSystemLOD
 FParticleSystemLOD = {}
 
+---@return FParticleSystemLOD
+function FParticleSystemLOD:get() end
+
 
 ---@class FParticleSystemReplayFrame
 FParticleSystemReplayFrame = {}
 
+---@return FParticleSystemReplayFrame
+function FParticleSystemReplayFrame:get() end
+
 
 ---@class FParticleSystemWorldManagerTickFunction : FTickFunction
 FParticleSystemWorldManagerTickFunction = {}
+
+---@return FParticleSystemWorldManagerTickFunction
+function FParticleSystemWorldManagerTickFunction:get() end
 
 
 ---@class FPassiveSoundMixModifier
@@ -7712,6 +9713,9 @@ FParticleSystemWorldManagerTickFunction = {}
 ---@field MaxVolumeThreshold float
 FPassiveSoundMixModifier = {}
 
+---@return FPassiveSoundMixModifier
+function FPassiveSoundMixModifier:get() end
+
 
 
 ---@class FPerBoneBlendWeight
@@ -7719,11 +9723,17 @@ FPassiveSoundMixModifier = {}
 ---@field BlendWeight float
 FPerBoneBlendWeight = {}
 
+---@return FPerBoneBlendWeight
+function FPerBoneBlendWeight:get() end
+
 
 
 ---@class FPerBoneBlendWeights
 ---@field BoneBlendWeights TArray<FPerBoneBlendWeight>
 FPerBoneBlendWeights = {}
+
+---@return FPerBoneBlendWeights
+function FPerBoneBlendWeights:get() end
 
 
 
@@ -7732,11 +9742,17 @@ FPerBoneBlendWeights = {}
 ---@field InterpolationSpeedPerSec float
 FPerBoneInterpolation = {}
 
+---@return FPerBoneInterpolation
+function FPerBoneInterpolation:get() end
+
 
 
 ---@class FPerPlatformBool
 ---@field Default boolean
 FPerPlatformBool = {}
+
+---@return FPerPlatformBool
+function FPerPlatformBool:get() end
 
 
 
@@ -7744,11 +9760,17 @@ FPerPlatformBool = {}
 ---@field Default float
 FPerPlatformFloat = {}
 
+---@return FPerPlatformFloat
+function FPerPlatformFloat:get() end
+
 
 
 ---@class FPerPlatformInt
 ---@field Default int32
 FPerPlatformInt = {}
+
+---@return FPerPlatformInt
+function FPerPlatformInt:get() end
 
 
 
@@ -7756,6 +9778,9 @@ FPerPlatformInt = {}
 ---@field Default int32
 ---@field PerQuality TMap<int32, int32>
 FPerQualityLevelInt = {}
+
+---@return FPerQualityLevelInt
+function FPerQualityLevelInt:get() end
 
 
 
@@ -7770,6 +9795,9 @@ FPerQualityLevelInt = {}
 ---@field MaxAngularForce float
 FPhysicalAnimationData = {}
 
+---@return FPhysicalAnimationData
+function FPhysicalAnimationData:get() end
+
 
 
 ---@class FPhysicalAnimationProfile
@@ -7777,12 +9805,18 @@ FPhysicalAnimationData = {}
 ---@field PhysicalAnimationData FPhysicalAnimationData
 FPhysicalAnimationProfile = {}
 
+---@return FPhysicalAnimationProfile
+function FPhysicalAnimationProfile:get() end
+
 
 
 ---@class FPhysicalSurfaceName
 ---@field Type EPhysicalSurface
 ---@field Name FName
 FPhysicalSurfaceName = {}
+
+---@return FPhysicalSurfaceName
+function FPhysicalSurfaceName:get() end
 
 
 
@@ -7796,12 +9830,18 @@ FPhysicalSurfaceName = {}
 ---@field bUseLinearJointSolver boolean
 FPhysicsAssetSolverSettings = {}
 
+---@return FPhysicsAssetSolverSettings
+function FPhysicsAssetSolverSettings:get() end
+
 
 
 ---@class FPhysicsConstraintProfileHandle
 ---@field ProfileProperties FConstraintProfileProperties
 ---@field ProfileName FName
 FPhysicsConstraintProfileHandle = {}
+
+---@return FPhysicsConstraintProfileHandle
+function FPhysicsConstraintProfileHandle:get() end
 
 
 
@@ -7814,12 +9854,18 @@ FPhysicsConstraintProfileHandle = {}
 ---@field ObjectValue UObject
 FPlatformInterfaceData = {}
 
+---@return FPlatformInterfaceData
+function FPlatformInterfaceData:get() end
+
 
 
 ---@class FPlatformInterfaceDelegateResult
 ---@field bSuccessful boolean
 ---@field Data FPlatformInterfaceData
 FPlatformInterfaceDelegateResult = {}
+
+---@return FPlatformInterfaceDelegateResult
+function FPlatformInterfaceDelegateResult:get() end
 
 
 
@@ -7828,12 +9874,18 @@ FPlatformInterfaceDelegateResult = {}
 ---@field VoiceChannelIdx int32
 FPlayerMuteList = {}
 
+---@return FPlayerMuteList
+function FPlayerMuteList:get() end
+
 
 
 ---@class FPluginRedirect
 ---@field OldPluginName FString
 ---@field NewPluginName FString
 FPluginRedirect = {}
+
+---@return FPluginRedirect
+function FPluginRedirect:get() end
 
 
 
@@ -7843,15 +9895,24 @@ FPluginRedirect = {}
 ---@field HitInfo FHitResult
 FPointDamageEvent = {}
 
+---@return FPointDamageEvent
+function FPointDamageEvent:get() end
+
 
 
 ---@class FPointerToUberGraphFrame
 FPointerToUberGraphFrame = {}
 
+---@return FPointerToUberGraphFrame
+function FPointerToUberGraphFrame:get() end
+
 
 ---@class FPooledCameraShakes
 ---@field PooledShakes TArray<UCameraShakeBase>
 FPooledCameraShakes = {}
+
+---@return FPooledCameraShakes
+function FPooledCameraShakes:get() end
 
 
 
@@ -7860,11 +9921,17 @@ FPooledCameraShakes = {}
 ---@field BoneTransformIndex int32
 FPoseAssetInfluence = {}
 
+---@return FPoseAssetInfluence
+function FPoseAssetInfluence:get() end
+
 
 
 ---@class FPoseAssetInfluences
 ---@field Influences TArray<FPoseAssetInfluence>
 FPoseAssetInfluences = {}
+
+---@return FPoseAssetInfluences
+function FPoseAssetInfluences:get() end
 
 
 
@@ -7872,6 +9939,9 @@ FPoseAssetInfluences = {}
 ---@field LocalSpacePose TArray<FTransform>
 ---@field CurveData TArray<float>
 FPoseData = {}
+
+---@return FPoseData
+function FPoseData:get() end
 
 
 
@@ -7884,15 +9954,24 @@ FPoseData = {}
 ---@field Curves TArray<FAnimCurveBase>
 FPoseDataContainer = {}
 
+---@return FPoseDataContainer
+function FPoseDataContainer:get() end
+
 
 
 ---@class FPoseLink : FPoseLinkBase
 FPoseLink = {}
 
+---@return FPoseLink
+function FPoseLink:get() end
+
 
 ---@class FPoseLinkBase
 ---@field LinkID int32
 FPoseLinkBase = {}
+
+---@return FPoseLinkBase
+function FPoseLinkBase:get() end
 
 
 
@@ -7903,6 +9982,9 @@ FPoseLinkBase = {}
 ---@field SnapshotName FName
 ---@field bIsValid boolean
 FPoseSnapshot = {}
+
+---@return FPoseSnapshot
+function FPoseSnapshot:get() end
 
 
 
@@ -8333,6 +10415,9 @@ FPoseSnapshot = {}
 ---@field WeightedBlendables FWeightedBlendables
 FPostProcessSettings = {}
 
+---@return FPostProcessSettings
+function FPostProcessSettings:get() end
+
 
 
 ---@class FPrecomputedLightInstanceData : FSceneComponentInstanceData
@@ -8341,12 +10426,18 @@ FPostProcessSettings = {}
 ---@field PreviewShadowMapChannel int32
 FPrecomputedLightInstanceData = {}
 
+---@return FPrecomputedLightInstanceData
+function FPrecomputedLightInstanceData:get() end
+
 
 
 ---@class FPrecomputedSkyLightInstanceData : FSceneComponentInstanceData
 ---@field LightGuid FGuid
 ---@field AverageBrightness float
 FPrecomputedSkyLightInstanceData = {}
+
+---@return FPrecomputedSkyLightInstanceData
+function FPrecomputedSkyLightInstanceData:get() end
 
 
 
@@ -8367,6 +10458,9 @@ FPrecomputedSkyLightInstanceData = {}
 ---@field bTraceComplex boolean
 FPredictProjectilePathParams = {}
 
+---@return FPredictProjectilePathParams
+function FPredictProjectilePathParams:get() end
+
 
 
 ---@class FPredictProjectilePathPointData
@@ -8374,6 +10468,9 @@ FPredictProjectilePathParams = {}
 ---@field Velocity FVector
 ---@field Time float
 FPredictProjectilePathPointData = {}
+
+---@return FPredictProjectilePathPointData
+function FPredictProjectilePathPointData:get() end
 
 
 
@@ -8383,11 +10480,17 @@ FPredictProjectilePathPointData = {}
 ---@field HitResult FHitResult
 FPredictProjectilePathResult = {}
 
+---@return FPredictProjectilePathResult
+function FPredictProjectilePathResult:get() end
+
 
 
 ---@class FPreviewAssetAttachContainer
 ---@field AttachedObjects TArray<FPreviewAttachedObjectPair>
 FPreviewAssetAttachContainer = {}
+
+---@return FPreviewAssetAttachContainer
+function FPreviewAssetAttachContainer:get() end
 
 
 
@@ -8397,12 +10500,18 @@ FPreviewAssetAttachContainer = {}
 ---@field AttachedTo FName
 FPreviewAttachedObjectPair = {}
 
+---@return FPreviewAttachedObjectPair
+function FPreviewAttachedObjectPair:get() end
+
 
 
 ---@class FPreviewMeshCollectionEntry
 ---@field SkeletalMesh TSoftObjectPtr<USkeletalMesh>
 ---@field AnimBlueprint TSoftObjectPtr<UAnimBlueprint>
 FPreviewMeshCollectionEntry = {}
+
+---@return FPreviewMeshCollectionEntry
+function FPreviewMeshCollectionEntry:get() end
 
 
 
@@ -8413,6 +10522,9 @@ FPreviewMeshCollectionEntry = {}
 ---@field CookRule EPrimaryAssetCookRule
 FPrimaryAssetRules = {}
 
+---@return FPrimaryAssetRules
+function FPrimaryAssetRules:get() end
+
 
 
 ---@class FPrimaryAssetRulesCustomOverride
@@ -8422,12 +10534,18 @@ FPrimaryAssetRules = {}
 ---@field Rules FPrimaryAssetRules
 FPrimaryAssetRulesCustomOverride = {}
 
+---@return FPrimaryAssetRulesCustomOverride
+function FPrimaryAssetRulesCustomOverride:get() end
+
 
 
 ---@class FPrimaryAssetRulesOverride
 ---@field PrimaryAssetId FPrimaryAssetId
 ---@field Rules FPrimaryAssetRules
 FPrimaryAssetRulesOverride = {}
+
+---@return FPrimaryAssetRulesOverride
+function FPrimaryAssetRulesOverride:get() end
 
 
 
@@ -8445,6 +10563,9 @@ FPrimaryAssetRulesOverride = {}
 ---@field NumberOfAssets int32
 FPrimaryAssetTypeInfo = {}
 
+---@return FPrimaryAssetTypeInfo
+function FPrimaryAssetTypeInfo:get() end
+
 
 
 ---@class FPrimitiveComponentInstanceData : FSceneComponentInstanceData
@@ -8452,6 +10573,9 @@ FPrimaryAssetTypeInfo = {}
 ---@field VisibilityId int32
 ---@field LODParent UPrimitiveComponent
 FPrimitiveComponentInstanceData = {}
+
+---@return FPrimitiveComponentInstanceData
+function FPrimitiveComponentInstanceData:get() end
 
 
 
@@ -8462,11 +10586,17 @@ FPrimitiveComponentInstanceData = {}
 ---@field Type EPropertyAccessCopyType
 FPropertyAccessCopy = {}
 
+---@return FPropertyAccessCopy
+function FPropertyAccessCopy:get() end
+
 
 
 ---@class FPropertyAccessCopyBatch
 ---@field Copies TArray<FPropertyAccessCopy>
 FPropertyAccessCopyBatch = {}
+
+---@return FPropertyAccessCopyBatch
+function FPropertyAccessCopyBatch:get() end
 
 
 
@@ -8481,6 +10611,9 @@ FPropertyAccessCopyBatch = {}
 ---@field Type EPropertyAccessIndirectionType
 FPropertyAccessIndirection = {}
 
+---@return FPropertyAccessIndirection
+function FPropertyAccessIndirection:get() end
+
 
 
 ---@class FPropertyAccessIndirectionChain
@@ -8488,6 +10621,9 @@ FPropertyAccessIndirection = {}
 ---@field IndirectionStartIndex int32
 ---@field IndirectionEndIndex int32
 FPropertyAccessIndirectionChain = {}
+
+---@return FPropertyAccessIndirectionChain
+function FPropertyAccessIndirectionChain:get() end
 
 
 
@@ -8498,12 +10634,18 @@ FPropertyAccessIndirectionChain = {}
 ---@field CopyBatchArray TArray<FPropertyAccessCopyBatch>
 FPropertyAccessLibrary = {}
 
+---@return FPropertyAccessLibrary
+function FPropertyAccessLibrary:get() end
+
 
 
 ---@class FPropertyAccessPath
 ---@field PathSegmentStartIndex int32
 ---@field PathSegmentCount int32
 FPropertyAccessPath = {}
+
+---@return FPropertyAccessPath
+function FPropertyAccessPath:get() end
 
 
 
@@ -8516,6 +10658,9 @@ FPropertyAccessPath = {}
 ---@field Flags uint16
 FPropertyAccessSegment = {}
 
+---@return FPropertyAccessSegment
+function FPropertyAccessSegment:get() end
+
 
 
 ---@class FPurchaseInfo
@@ -8525,6 +10670,9 @@ FPropertyAccessSegment = {}
 ---@field DisplayPrice FString
 FPurchaseInfo = {}
 
+---@return FPurchaseInfo
+function FPurchaseInfo:get() end
+
 
 
 ---@class FQuartzClockSettings
@@ -8532,12 +10680,18 @@ FPurchaseInfo = {}
 ---@field bIgnoreLevelChange boolean
 FQuartzClockSettings = {}
 
+---@return FQuartzClockSettings
+function FQuartzClockSettings:get() end
+
 
 
 ---@class FQuartzPulseOverrideStep
 ---@field NumberOfPulses int32
 ---@field PulseDuration EQuartzCommandQuantization
 FQuartzPulseOverrideStep = {}
+
+---@return FQuartzPulseOverrideStep
+function FQuartzPulseOverrideStep:get() end
 
 
 
@@ -8551,6 +10705,9 @@ FQuartzPulseOverrideStep = {}
 ---@field bResumeClockOnQueued boolean
 FQuartzQuantizationBoundary = {}
 
+---@return FQuartzQuantizationBoundary
+function FQuartzQuantizationBoundary:get() end
+
 
 
 ---@class FQuartzTimeSignature
@@ -8558,6 +10715,9 @@ FQuartzQuantizationBoundary = {}
 ---@field BeatType EQuartzTimeSignatureQuantization
 ---@field OptionalPulseOverride TArray<FQuartzPulseOverrideStep>
 FQuartzTimeSignature = {}
+
+---@return FQuartzTimeSignature
+function FQuartzTimeSignature:get() end
 
 
 
@@ -8568,16 +10728,25 @@ FQuartzTimeSignature = {}
 ---@field Seconds float
 FQuartzTransportTimeStamp = {}
 
+---@return FQuartzTransportTimeStamp
+function FQuartzTransportTimeStamp:get() end
+
 
 
 ---@class FQuaternionAnimationAttribute
 ---@field Value FQuat
 FQuaternionAnimationAttribute = {}
 
+---@return FQuaternionAnimationAttribute
+function FQuaternionAnimationAttribute:get() end
+
 
 
 ---@class FQuaternionSpringState
 FQuaternionSpringState = {}
+
+---@return FQuaternionSpringState
+function FQuaternionSpringState:get() end
 
 
 ---@class FRPCAnalyticsThreshold
@@ -8585,6 +10754,9 @@ FQuaternionSpringState = {}
 ---@field CountPerSec int32
 ---@field TimePerSec double
 FRPCAnalyticsThreshold = {}
+
+---@return FRPCAnalyticsThreshold
+function FRPCAnalyticsThreshold:get() end
 
 
 
@@ -8607,10 +10779,16 @@ FRPCAnalyticsThreshold = {}
 ---@field AutoEscalateTime int16
 FRPCDoSState = {}
 
+---@return FRPCDoSState
+function FRPCDoSState:get() end
+
 
 
 ---@class FRPCDoSStateConfig : FRPCDoSState
 FRPCDoSStateConfig = {}
+
+---@return FRPCDoSStateConfig
+function FRPCDoSStateConfig:get() end
 
 
 ---@class FRadialDamageEvent : FDamageEvent
@@ -8618,6 +10796,9 @@ FRPCDoSStateConfig = {}
 ---@field Origin FVector
 ---@field ComponentHits TArray<FHitResult>
 FRadialDamageEvent = {}
+
+---@return FRadialDamageEvent
+function FRadialDamageEvent:get() end
 
 
 
@@ -8629,6 +10810,9 @@ FRadialDamageEvent = {}
 ---@field DamageFalloff float
 FRadialDamageParams = {}
 
+---@return FRadialDamageParams
+function FRadialDamageParams:get() end
+
 
 
 ---@class FRawAnimSequenceTrack
@@ -8637,17 +10821,26 @@ FRadialDamageParams = {}
 ---@field ScaleKeys TArray<FVector3f>
 FRawAnimSequenceTrack = {}
 
+---@return FRawAnimSequenceTrack
+function FRawAnimSequenceTrack:get() end
+
 
 
 ---@class FRawCurveTracks
 ---@field FloatCurves TArray<FFloatCurve>
 FRawCurveTracks = {}
 
+---@return FRawCurveTracks
+function FRawCurveTracks:get() end
+
 
 
 ---@class FRawDistribution
 ---@field Table FDistributionLookupTable
 FRawDistribution = {}
+
+---@return FRawDistribution
+function FRawDistribution:get() end
 
 
 
@@ -8656,6 +10849,9 @@ FRawDistribution = {}
 ---@field MaxValue float
 ---@field Distribution UDistributionFloat
 FRawDistributionFloat = {}
+
+---@return FRawDistributionFloat
+function FRawDistributionFloat:get() end
 
 
 
@@ -8667,6 +10863,9 @@ FRawDistributionFloat = {}
 ---@field Distribution UDistributionVector
 FRawDistributionVector = {}
 
+---@return FRawDistributionVector
+function FRawDistributionVector:get() end
+
 
 
 ---@class FRealCurve : FIndexedCurve
@@ -8675,6 +10874,9 @@ FRawDistributionVector = {}
 ---@field PostInfinityExtrap ERichCurveExtrapolation
 FRealCurve = {}
 
+---@return FRealCurve
+function FRealCurve:get() end
+
 
 
 ---@class FRedirector
@@ -8682,12 +10884,18 @@ FRealCurve = {}
 ---@field NewName FName
 FRedirector = {}
 
+---@return FRedirector
+function FRedirector:get() end
+
 
 
 ---@class FReferencePose
 ---@field PoseName FName
 ---@field ReferencePose TArray<FTransform>
 FReferencePose = {}
+
+---@return FReferencePose
+function FReferencePose:get() end
 
 
 
@@ -8699,6 +10907,9 @@ FReferencePose = {}
 ---@field AttachSocket FName
 ---@field AttachComponent USceneComponent
 FRepAttachment = {}
+
+---@return FRepAttachment
+function FRepAttachment:get() end
 
 
 
@@ -8716,10 +10927,16 @@ FRepAttachment = {}
 ---@field RotationQuantizationLevel ERotatorQuantization
 FRepMovement = {}
 
+---@return FRepMovement
+function FRepMovement:get() end
+
 
 
 ---@class FRepMovementNetSerializerConfig : FNetSerializerConfig
 FRepMovementNetSerializerConfig = {}
+
+---@return FRepMovementNetSerializerConfig
+function FRepMovementNetSerializerConfig:get() end
 
 
 ---@class FRepRootMotionMontage
@@ -8737,11 +10954,17 @@ FRepMovementNetSerializerConfig = {}
 ---@field LinearVelocity FVector_NetQuantize10
 FRepRootMotionMontage = {}
 
+---@return FRepRootMotionMontage
+function FRepRootMotionMontage:get() end
+
 
 
 ---@class FReplicatedStaticActorDestructionInfo
 ---@field ObjClass TObjectPtr<UClass>
 FReplicatedStaticActorDestructionInfo = {}
+
+---@return FReplicatedStaticActorDestructionInfo
+function FReplicatedStaticActorDestructionInfo:get() end
 
 
 
@@ -8749,6 +10972,9 @@ FReplicatedStaticActorDestructionInfo = {}
 ---@field Channel FName
 ---@field Response ECollisionResponse
 FResponseChannel = {}
+
+---@return FResponseChannel
+function FResponseChannel:get() end
 
 
 
@@ -8760,11 +10986,17 @@ FResponseChannel = {}
 ---@field FadeTime float
 FReverbSettings = {}
 
+---@return FReverbSettings
+function FReverbSettings:get() end
+
 
 
 ---@class FRichCurve : FRealCurve
 ---@field Keys TArray<FRichCurveKey>
 FRichCurve = {}
+
+---@return FRichCurve
+function FRichCurve:get() end
 
 
 
@@ -8780,12 +11012,18 @@ FRichCurve = {}
 ---@field LeaveTangentWeight float
 FRichCurveKey = {}
 
+---@return FRichCurveKey
+function FRichCurveKey:get() end
+
 
 
 ---@class FRigConfiguration
 ---@field Rig URig
 ---@field BoneMappingTable TArray<FNameMapping>
 FRigConfiguration = {}
+
+---@return FRigConfiguration
+function FRigConfiguration:get() end
 
 
 
@@ -8794,6 +11032,9 @@ FRigConfiguration = {}
 ---@field ParentSpace FName
 ---@field Weight float
 FRigTransformConstraint = {}
+
+---@return FRigTransformConstraint
+function FRigTransformConstraint:get() end
 
 
 
@@ -8804,6 +11045,9 @@ FRigTransformConstraint = {}
 ---@field bContactProbe boolean
 ---@field PhysMaterial UPhysicalMaterial
 FRigidBodyContactInfo = {}
+
+---@return FRigidBodyContactInfo
+function FRigidBodyContactInfo:get() end
 
 
 
@@ -8823,6 +11067,9 @@ FRigidBodyContactInfo = {}
 ---@field ErrorAccumulationSimilarity float
 FRigidBodyErrorCorrection = {}
 
+---@return FRigidBodyErrorCorrection
+function FRigidBodyErrorCorrection:get() end
+
 
 
 ---@class FRigidBodyState
@@ -8833,12 +11080,18 @@ FRigidBodyErrorCorrection = {}
 ---@field Flags uint8
 FRigidBodyState = {}
 
+---@return FRigidBodyState
+function FRigidBodyState:get() end
+
 
 
 ---@class FRollbackNetStartupActorInfo
 ---@field Archetype UObject
 ---@field ObjReferences TArray<UObject>
 FRollbackNetStartupActorInfo = {}
+
+---@return FRollbackNetStartupActorInfo
+function FRollbackNetStartupActorInfo:get() end
 
 
 
@@ -8848,6 +11101,9 @@ FRollbackNetStartupActorInfo = {}
 ---@field EndPosition float
 FRootMotionExtractionStep = {}
 
+---@return FRootMotionExtractionStep
+function FRootMotionExtractionStep:get() end
+
 
 
 ---@class FRootMotionFinishVelocitySettings
@@ -8856,6 +11112,9 @@ FRootMotionExtractionStep = {}
 ---@field ClampVelocity float
 FRootMotionFinishVelocitySettings = {}
 
+---@return FRootMotionFinishVelocitySettings
+function FRootMotionFinishVelocitySettings:get() end
+
 
 
 ---@class FRootMotionMovementParams
@@ -8863,6 +11122,9 @@ FRootMotionFinishVelocitySettings = {}
 ---@field BlendWeight float
 ---@field RootMotionTransform FTransform
 FRootMotionMovementParams = {}
+
+---@return FRootMotionMovementParams
+function FRootMotionMovementParams:get() end
 
 
 
@@ -8882,6 +11144,9 @@ FRootMotionMovementParams = {}
 ---@field FinishVelocityParams FRootMotionFinishVelocitySettings
 FRootMotionSource = {}
 
+---@return FRootMotionSource
+function FRootMotionSource:get() end
+
 
 
 ---@class FRootMotionSourceGroup
@@ -8893,11 +11158,17 @@ FRootMotionSource = {}
 ---@field LastPreAdditiveVelocity FVector_NetQuantize10
 FRootMotionSourceGroup = {}
 
+---@return FRootMotionSourceGroup
+function FRootMotionSourceGroup:get() end
+
 
 
 ---@class FRootMotionSourceSettings
 ---@field Flags uint8
 FRootMotionSourceSettings = {}
+
+---@return FRootMotionSourceSettings
+function FRootMotionSourceSettings:get() end
 
 
 
@@ -8905,12 +11176,18 @@ FRootMotionSourceSettings = {}
 ---@field Flags uint8
 FRootMotionSourceStatus = {}
 
+---@return FRootMotionSourceStatus
+function FRootMotionSourceStatus:get() end
+
 
 
 ---@class FRootMotionSource_ConstantForce : FRootMotionSource
 ---@field Force FVector
 ---@field StrengthOverTime UCurveFloat
 FRootMotionSource_ConstantForce = {}
+
+---@return FRootMotionSource_ConstantForce
+function FRootMotionSource_ConstantForce:get() end
 
 
 
@@ -8923,6 +11200,9 @@ FRootMotionSource_ConstantForce = {}
 ---@field TimeMappingCurve UCurveFloat
 FRootMotionSource_JumpForce = {}
 
+---@return FRootMotionSource_JumpForce
+function FRootMotionSource_JumpForce:get() end
+
 
 
 ---@class FRootMotionSource_MoveToDynamicForce : FRootMotionSource
@@ -8934,6 +11214,9 @@ FRootMotionSource_JumpForce = {}
 ---@field TimeMappingCurve UCurveFloat
 FRootMotionSource_MoveToDynamicForce = {}
 
+---@return FRootMotionSource_MoveToDynamicForce
+function FRootMotionSource_MoveToDynamicForce:get() end
+
 
 
 ---@class FRootMotionSource_MoveToForce : FRootMotionSource
@@ -8942,6 +11225,9 @@ FRootMotionSource_MoveToDynamicForce = {}
 ---@field bRestrictSpeedToExpected boolean
 ---@field PathOffsetCurve UCurveVector
 FRootMotionSource_MoveToForce = {}
+
+---@return FRootMotionSource_MoveToForce
+function FRootMotionSource_MoveToForce:get() end
 
 
 
@@ -8958,12 +11244,18 @@ FRootMotionSource_MoveToForce = {}
 ---@field FixedWorldDirection FRotator
 FRootMotionSource_RadialForce = {}
 
+---@return FRootMotionSource_RadialForce
+function FRootMotionSource_RadialForce:get() end
+
 
 
 ---@class FRotationTrack
 ---@field RotKeys TArray<FQuat4f>
 ---@field Times TArray<float>
 FRotationTrack = {}
+
+---@return FRotationTrack
+function FRotationTrack:get() end
 
 
 
@@ -8972,6 +11264,9 @@ FRotationTrack = {}
 ---@field ExternalCurve UCurveLinearColor
 FRuntimeCurveLinearColor = {}
 
+---@return FRuntimeCurveLinearColor
+function FRuntimeCurveLinearColor:get() end
+
 
 
 ---@class FRuntimeFloatCurve
@@ -8979,12 +11274,18 @@ FRuntimeCurveLinearColor = {}
 ---@field ExternalCurve UCurveFloat
 FRuntimeFloatCurve = {}
 
+---@return FRuntimeFloatCurve
+function FRuntimeFloatCurve:get() end
+
 
 
 ---@class FRuntimeVectorCurve
 ---@field VectorCurves FRichCurve
 ---@field ExternalCurve UCurveVector
 FRuntimeVectorCurve = {}
+
+---@return FRuntimeVectorCurve
+function FRuntimeVectorCurve:get() end
 
 
 
@@ -8994,12 +11295,18 @@ FRuntimeVectorCurve = {}
 ---@field ExpressionGUID FGuid
 FRuntimeVirtualTextureParameterValue = {}
 
+---@return FRuntimeVirtualTextureParameterValue
+function FRuntimeVirtualTextureParameterValue:get() end
+
 
 
 ---@class FScalarMaterialInput : FMaterialInput
 ---@field UseConstant boolean
 ---@field Constant float
 FScalarMaterialInput = {}
+
+---@return FScalarMaterialInput
+function FScalarMaterialInput:get() end
 
 
 
@@ -9009,6 +11316,9 @@ FScalarMaterialInput = {}
 ---@field Atlas TSoftObjectPtr<UCurveLinearColorAtlas>
 FScalarParameterAtlasInstanceData = {}
 
+---@return FScalarParameterAtlasInstanceData
+function FScalarParameterAtlasInstanceData:get() end
+
 
 
 ---@class FScalarParameterValue
@@ -9017,6 +11327,9 @@ FScalarParameterAtlasInstanceData = {}
 ---@field ExpressionGUID FGuid
 FScalarParameterValue = {}
 
+---@return FScalarParameterValue
+function FScalarParameterValue:get() end
+
 
 
 ---@class FScaleTrack
@@ -9024,16 +11337,25 @@ FScalarParameterValue = {}
 ---@field Times TArray<float>
 FScaleTrack = {}
 
+---@return FScaleTrack
+function FScaleTrack:get() end
+
 
 
 ---@class FSceneComponentInstanceData : FActorComponentInstanceData
 ---@field AttachedInstanceComponents TMap<USceneComponent, FTransform>
 FSceneComponentInstanceData = {}
 
+---@return FSceneComponentInstanceData
+function FSceneComponentInstanceData:get() end
+
 
 
 ---@class FSceneViewExtensionIsActiveFunctor
 FSceneViewExtensionIsActiveFunctor = {}
+
+---@return FSceneViewExtensionIsActiveFunctor
+function FSceneViewExtensionIsActiveFunctor:get() end
 
 
 ---@class FScreenMessageString
@@ -9045,11 +11367,17 @@ FSceneViewExtensionIsActiveFunctor = {}
 ---@field TextScale FVector2D
 FScreenMessageString = {}
 
+---@return FScreenMessageString
+function FScreenMessageString:get() end
+
 
 
 ---@class FSectionReference
 ---@field SectionIndex int32
 FSectionReference = {}
+
+---@return FSectionReference
+function FSectionReference:get() end
 
 
 
@@ -9059,6 +11387,9 @@ FSectionReference = {}
 ---@field bEnabled boolean
 FSelectedFragmentProperties = {}
 
+---@return FSelectedFragmentProperties
+function FSelectedFragmentProperties:get() end
+
 
 
 ---@class FSequenceLengthChangedPayload : FEmptyPayload
@@ -9067,10 +11398,16 @@ FSelectedFragmentProperties = {}
 ---@field T1 float
 FSequenceLengthChangedPayload = {}
 
+---@return FSequenceLengthChangedPayload
+function FSequenceLengthChangedPayload:get() end
+
 
 
 ---@class FShadingModelMaterialInput : FMaterialInput
 FShadingModelMaterialInput = {}
+
+---@return FShadingModelMaterialInput
+function FShadingModelMaterialInput:get() end
 
 
 ---@class FSimpleCurve : FRealCurve
@@ -9078,12 +11415,18 @@ FShadingModelMaterialInput = {}
 ---@field Keys TArray<FSimpleCurveKey>
 FSimpleCurve = {}
 
+---@return FSimpleCurve
+function FSimpleCurve:get() end
+
 
 
 ---@class FSimpleCurveKey
 ---@field Time float
 ---@field Value float
 FSimpleCurveKey = {}
+
+---@return FSimpleCurveKey
+function FSimpleCurveKey:get() end
 
 
 
@@ -9093,12 +11436,18 @@ FSimpleCurveKey = {}
 ---@field MemberGuid FGuid
 FSimpleMemberReference = {}
 
+---@return FSimpleMemberReference
+function FSimpleMemberReference:get() end
+
 
 
 ---@class FSimulatedRootMotionReplicatedMove
 ---@field Time float
 ---@field RootMotion FRepRootMotionMontage
 FSimulatedRootMotionReplicatedMove = {}
+
+---@return FSimulatedRootMotionReplicatedMove
+function FSimulatedRootMotionReplicatedMove:get() end
 
 
 
@@ -9110,11 +11459,17 @@ FSimulatedRootMotionReplicatedMove = {}
 ---@field SavedPlayRate float
 FSingleAnimationPlayData = {}
 
+---@return FSingleAnimationPlayData
+function FSingleAnimationPlayData:get() end
+
 
 
 ---@class FSkelMeshComponentLODInfo
 ---@field HiddenMaterials TArray<boolean>
 FSkelMeshComponentLODInfo = {}
+
+---@return FSkelMeshComponentLODInfo
+function FSkelMeshComponentLODInfo:get() end
 
 
 
@@ -9122,17 +11477,26 @@ FSkelMeshComponentLODInfo = {}
 ---@field UVTransforms TArray<FTransform>
 FSkelMeshMergeMeshUVTransforms = {}
 
+---@return FSkelMeshMergeMeshUVTransforms
+function FSkelMeshMergeMeshUVTransforms:get() end
+
 
 
 ---@class FSkelMeshMergeSectionMapping
 ---@field SectionIDs TArray<int32>
 FSkelMeshMergeSectionMapping = {}
 
+---@return FSkelMeshMergeSectionMapping
+function FSkelMeshMergeSectionMapping:get() end
+
 
 
 ---@class FSkelMeshMergeUVTransformMapping
 ---@field UVTransformsPerMesh TArray<FSkelMeshMergeMeshUVTransforms>
 FSkelMeshMergeUVTransformMapping = {}
+
+---@return FSkelMeshMergeUVTransformMapping
+function FSkelMeshMergeUVTransformMapping:get() end
 
 
 
@@ -9141,6 +11505,9 @@ FSkelMeshMergeUVTransformMapping = {}
 ---@field Weights uint8
 FSkelMeshSkinWeightInfo = {}
 
+---@return FSkelMeshSkinWeightInfo
+function FSkelMeshSkinWeightInfo:get() end
+
 
 
 ---@class FSkeletalMaterial
@@ -9148,6 +11515,9 @@ FSkelMeshSkinWeightInfo = {}
 ---@field MaterialSlotName FName
 ---@field UVChannelData FMeshUVChannelInfo
 FSkeletalMaterial = {}
+
+---@return FSkeletalMaterial
+function FSkeletalMaterial:get() end
 
 
 
@@ -9166,6 +11536,9 @@ FSkeletalMaterial = {}
 ---@field MorphThresholdPosition float
 FSkeletalMeshBuildSettings = {}
 
+---@return FSkeletalMeshBuildSettings
+function FSkeletalMeshBuildSettings:get() end
+
 
 
 ---@class FSkeletalMeshClothBuildParams
@@ -9179,14 +11552,23 @@ FSkeletalMeshBuildSettings = {}
 ---@field PhysicsAsset TSoftObjectPtr<UPhysicsAsset>
 FSkeletalMeshClothBuildParams = {}
 
+---@return FSkeletalMeshClothBuildParams
+function FSkeletalMeshClothBuildParams:get() end
+
 
 
 ---@class FSkeletalMeshComponentClothTickFunction : FTickFunction
 FSkeletalMeshComponentClothTickFunction = {}
 
+---@return FSkeletalMeshComponentClothTickFunction
+function FSkeletalMeshComponentClothTickFunction:get() end
+
 
 ---@class FSkeletalMeshComponentEndPhysicsTickFunction : FTickFunction
 FSkeletalMeshComponentEndPhysicsTickFunction = {}
+
+---@return FSkeletalMeshComponentEndPhysicsTickFunction
+function FSkeletalMeshComponentEndPhysicsTickFunction:get() end
 
 
 ---@class FSkeletalMeshLODGroupSettings
@@ -9200,6 +11582,9 @@ FSkeletalMeshComponentEndPhysicsTickFunction = {}
 ---@field BakePose UAnimSequence
 ---@field ReductionSettings FSkeletalMeshOptimizationSettings
 FSkeletalMeshLODGroupSettings = {}
+
+---@return FSkeletalMeshLODGroupSettings
+function FSkeletalMeshLODGroupSettings:get() end
 
 
 
@@ -9223,6 +11608,9 @@ FSkeletalMeshLODGroupSettings = {}
 ---@field bAllowCPUAccess boolean
 ---@field bSupportUniformlyDistributedSampling boolean
 FSkeletalMeshLODInfo = {}
+
+---@return FSkeletalMeshLODInfo
+function FSkeletalMeshLODInfo:get() end
 
 
 
@@ -9251,12 +11639,18 @@ FSkeletalMeshLODInfo = {}
 ---@field BaseLOD int32
 FSkeletalMeshOptimizationSettings = {}
 
+---@return FSkeletalMeshOptimizationSettings
+function FSkeletalMeshOptimizationSettings:get() end
+
 
 
 ---@class FSkeletalMeshSamplingBuiltData
 ---@field WholeMeshBuiltData TArray<FSkeletalMeshSamplingLODBuiltData>
 ---@field RegionBuiltData TArray<FSkeletalMeshSamplingRegionBuiltData>
 FSkeletalMeshSamplingBuiltData = {}
+
+---@return FSkeletalMeshSamplingBuiltData
+function FSkeletalMeshSamplingBuiltData:get() end
 
 
 
@@ -9265,10 +11659,16 @@ FSkeletalMeshSamplingBuiltData = {}
 ---@field BuiltData FSkeletalMeshSamplingBuiltData
 FSkeletalMeshSamplingInfo = {}
 
+---@return FSkeletalMeshSamplingInfo
+function FSkeletalMeshSamplingInfo:get() end
+
 
 
 ---@class FSkeletalMeshSamplingLODBuiltData
 FSkeletalMeshSamplingLODBuiltData = {}
+
+---@return FSkeletalMeshSamplingLODBuiltData
+function FSkeletalMeshSamplingLODBuiltData:get() end
 
 
 ---@class FSkeletalMeshSamplingRegion
@@ -9279,6 +11679,9 @@ FSkeletalMeshSamplingLODBuiltData = {}
 ---@field BoneFilters TArray<FSkeletalMeshSamplingRegionBoneFilter>
 FSkeletalMeshSamplingRegion = {}
 
+---@return FSkeletalMeshSamplingRegion
+function FSkeletalMeshSamplingRegion:get() end
+
 
 
 ---@class FSkeletalMeshSamplingRegionBoneFilter
@@ -9287,15 +11690,24 @@ FSkeletalMeshSamplingRegion = {}
 ---@field bApplyToChildren boolean
 FSkeletalMeshSamplingRegionBoneFilter = {}
 
+---@return FSkeletalMeshSamplingRegionBoneFilter
+function FSkeletalMeshSamplingRegionBoneFilter:get() end
+
 
 
 ---@class FSkeletalMeshSamplingRegionBuiltData
 FSkeletalMeshSamplingRegionBuiltData = {}
 
+---@return FSkeletalMeshSamplingRegionBuiltData
+function FSkeletalMeshSamplingRegionBuiltData:get() end
+
 
 ---@class FSkeletalMeshSamplingRegionMaterialFilter
 ---@field MaterialName FName
 FSkeletalMeshSamplingRegionMaterialFilter = {}
+
+---@return FSkeletalMeshSamplingRegionMaterialFilter
+function FSkeletalMeshSamplingRegionMaterialFilter:get() end
 
 
 
@@ -9303,6 +11715,9 @@ FSkeletalMeshSamplingRegionMaterialFilter = {}
 ---@field SkeletonToMeshTable TArray<int32>
 ---@field MeshToSkeletonTable TArray<int32>
 FSkeletonToMeshLinkup = {}
+
+---@return FSkeletonToMeshLinkup
+function FSkeletonToMeshLinkup:get() end
 
 
 
@@ -9312,15 +11727,24 @@ FSkeletonToMeshLinkup = {}
 ---@field DefaultProfileFromLODIndex FPerPlatformInt
 FSkinWeightProfileInfo = {}
 
+---@return FSkinWeightProfileInfo
+function FSkinWeightProfileInfo:get() end
+
 
 
 ---@class FSkinWeightProfileManagerTickFunction : FTickFunction
 FSkinWeightProfileManagerTickFunction = {}
 
+---@return FSkinWeightProfileManagerTickFunction
+function FSkinWeightProfileManagerTickFunction:get() end
+
 
 ---@class FSlateModifierKeysState
 ---@field ModifierKeysStateMask uint8
 FSlateModifierKeysState = {}
+
+---@return FSlateModifierKeysState
+function FSlateModifierKeysState:get() end
 
 
 
@@ -9329,6 +11753,9 @@ FSlateModifierKeysState = {}
 ---@field AnimTrack FAnimTrack
 FSlotAnimationTrack = {}
 
+---@return FSlotAnimationTrack
+function FSlotAnimationTrack:get() end
+
 
 
 ---@class FSlotEvaluationPose
@@ -9336,31 +11763,49 @@ FSlotAnimationTrack = {}
 ---@field Weight float
 FSlotEvaluationPose = {}
 
+---@return FSlotEvaluationPose
+function FSlotEvaluationPose:get() end
+
 
 
 ---@class FSmartName
 ---@field DisplayName FName
 FSmartName = {}
 
+---@return FSmartName
+function FSmartName:get() end
+
 
 
 ---@class FSmartNameContainer
 FSmartNameContainer = {}
 
+---@return FSmartNameContainer
+function FSmartNameContainer:get() end
+
 
 ---@class FSmartNameMapping
 FSmartNameMapping = {}
+
+---@return FSmartNameMapping
+function FSmartNameMapping:get() end
 
 
 ---@class FSocketReference
 ---@field SocketName FName
 FSocketReference = {}
 
+---@return FSocketReference
+function FSocketReference:get() end
+
 
 
 ---@class FSoftComponentReference : FBaseComponentReference
 ---@field OtherActor TSoftObjectPtr<AActor>
 FSoftComponentReference = {}
+
+---@return FSoftComponentReference
+function FSoftComponentReference:get() end
 
 
 
@@ -9373,6 +11818,9 @@ FSoftComponentReference = {}
 ---@field CollisionPushOutIterations int32
 FSolverIterations = {}
 
+---@return FSolverIterations
+function FSolverIterations:get() end
+
 
 
 ---@class FSoundAttenuationPluginSettings
@@ -9381,6 +11829,9 @@ FSolverIterations = {}
 ---@field ReverbPluginSettingsArray TArray<UReverbPluginSourceSettingsBase>
 ---@field SourceDataOverridePluginSettingsArray TArray<USourceDataOverridePluginSourceSettingsBase>
 FSoundAttenuationPluginSettings = {}
+
+---@return FSoundAttenuationPluginSettings
+function FSoundAttenuationPluginSettings:get() end
 
 
 
@@ -9445,6 +11896,9 @@ FSoundAttenuationPluginSettings = {}
 ---@field PluginSettings FSoundAttenuationPluginSettings
 FSoundAttenuationSettings = {}
 
+---@return FSoundAttenuationSettings
+function FSoundAttenuationSettings:get() end
+
 
 
 ---@class FSoundClassAdjuster
@@ -9456,10 +11910,16 @@ FSoundAttenuationSettings = {}
 ---@field VoiceCenterChannelVolumeAdjuster float
 FSoundClassAdjuster = {}
 
+---@return FSoundClassAdjuster
+function FSoundClassAdjuster:get() end
+
 
 
 ---@class FSoundClassEditorData
 FSoundClassEditorData = {}
+
+---@return FSoundClassEditorData
+function FSoundClassEditorData:get() end
 
 
 ---@class FSoundClassProperties
@@ -9485,6 +11945,9 @@ FSoundClassEditorData = {}
 ---@field DefaultSubmix USoundSubmix
 FSoundClassProperties = {}
 
+---@return FSoundClassProperties
+function FSoundClassProperties:get() end
+
 
 
 ---@class FSoundConcurrencySettings
@@ -9500,12 +11963,18 @@ FSoundClassProperties = {}
 ---@field VoiceStealReleaseTime float
 FSoundConcurrencySettings = {}
 
+---@return FSoundConcurrencySettings
+function FSoundConcurrencySettings:get() end
+
 
 
 ---@class FSoundDebugEntry
 ---@field DebugName FName
 ---@field Sound FSoftObjectPath
 FSoundDebugEntry = {}
+
+---@return FSoundDebugEntry
+function FSoundDebugEntry:get() end
 
 
 
@@ -9516,6 +11985,9 @@ FSoundDebugEntry = {}
 ---@field DecompressedDuration float
 FSoundGroup = {}
 
+---@return FSoundGroup
+function FSoundGroup:get() end
+
 
 
 ---@class FSoundModulationDefaultRoutingSettings : FSoundModulationDefaultSettings
@@ -9524,6 +11996,9 @@ FSoundGroup = {}
 ---@field HighpassRouting EModulationRouting
 ---@field LowpassRouting EModulationRouting
 FSoundModulationDefaultRoutingSettings = {}
+
+---@return FSoundModulationDefaultRoutingSettings
+function FSoundModulationDefaultRoutingSettings:get() end
 
 
 
@@ -9534,6 +12009,9 @@ FSoundModulationDefaultRoutingSettings = {}
 ---@field LowpassModulationDestination FSoundModulationDestinationSettings
 FSoundModulationDefaultSettings = {}
 
+---@return FSoundModulationDefaultSettings
+function FSoundModulationDefaultSettings:get() end
+
 
 
 ---@class FSoundModulationDestinationSettings
@@ -9542,10 +12020,16 @@ FSoundModulationDefaultSettings = {}
 ---@field Modulators TSet<USoundModulatorBase>
 FSoundModulationDestinationSettings = {}
 
+---@return FSoundModulationDestinationSettings
+function FSoundModulationDestinationSettings:get() end
+
 
 
 ---@class FSoundNodeEditorData
 FSoundNodeEditorData = {}
+
+---@return FSoundNodeEditorData
+function FSoundNodeEditorData:get() end
 
 
 ---@class FSoundSourceBusSendInfo
@@ -9559,6 +12043,9 @@ FSoundNodeEditorData = {}
 ---@field MaxSendDistance float
 ---@field CustomSendLevelCurve FRuntimeFloatCurve
 FSoundSourceBusSendInfo = {}
+
+---@return FSoundSourceBusSendInfo
+function FSoundSourceBusSendInfo:get() end
 
 
 
@@ -9575,6 +12062,9 @@ FSoundSourceBusSendInfo = {}
 ---@field CustomSendLevelCurve FRuntimeFloatCurve
 FSoundSubmixSendInfo = {}
 
+---@return FSoundSubmixSendInfo
+function FSoundSubmixSendInfo:get() end
+
 
 
 ---@class FSoundSubmixSpectralAnalysisBandSettings
@@ -9584,11 +12074,17 @@ FSoundSubmixSendInfo = {}
 ---@field QFactor float
 FSoundSubmixSpectralAnalysisBandSettings = {}
 
+---@return FSoundSubmixSpectralAnalysisBandSettings
+function FSoundSubmixSpectralAnalysisBandSettings:get() end
+
 
 
 ---@class FSoundTimecodeOffset
 ---@field NumOfSecondsSinceMidnight double
 FSoundTimecodeOffset = {}
+
+---@return FSoundTimecodeOffset
+function FSoundTimecodeOffset:get() end
 
 
 
@@ -9599,6 +12095,9 @@ FSoundTimecodeOffset = {}
 ---@field FrameLength int32
 FSoundWaveCuePoint = {}
 
+---@return FSoundWaveCuePoint
+function FSoundWaveCuePoint:get() end
+
 
 
 ---@class FSoundWaveEnvelopeDataPerSound
@@ -9607,12 +12106,18 @@ FSoundWaveCuePoint = {}
 ---@field SoundWave USoundWave
 FSoundWaveEnvelopeDataPerSound = {}
 
+---@return FSoundWaveEnvelopeDataPerSound
+function FSoundWaveEnvelopeDataPerSound:get() end
+
 
 
 ---@class FSoundWaveEnvelopeTimeData
 ---@field Amplitude float
 ---@field TimeSec float
 FSoundWaveEnvelopeTimeData = {}
+
+---@return FSoundWaveEnvelopeTimeData
+function FSoundWaveEnvelopeTimeData:get() end
 
 
 
@@ -9622,12 +12127,18 @@ FSoundWaveEnvelopeTimeData = {}
 ---@field NormalizedMagnitude float
 FSoundWaveSpectralData = {}
 
+---@return FSoundWaveSpectralData
+function FSoundWaveSpectralData:get() end
+
 
 
 ---@class FSoundWaveSpectralDataEntry
 ---@field Magnitude float
 ---@field NormalizedMagnitude float
 FSoundWaveSpectralDataEntry = {}
+
+---@return FSoundWaveSpectralDataEntry
+function FSoundWaveSpectralDataEntry:get() end
 
 
 
@@ -9637,12 +12148,18 @@ FSoundWaveSpectralDataEntry = {}
 ---@field SoundWave USoundWave
 FSoundWaveSpectralDataPerSound = {}
 
+---@return FSoundWaveSpectralDataPerSound
+function FSoundWaveSpectralDataPerSound:get() end
+
 
 
 ---@class FSoundWaveSpectralTimeData
 ---@field Data TArray<FSoundWaveSpectralDataEntry>
 ---@field TimeSec float
 FSoundWaveSpectralTimeData = {}
+
+---@return FSoundWaveSpectralTimeData
+function FSoundWaveSpectralTimeData:get() end
 
 
 
@@ -9658,6 +12175,9 @@ FSoundWaveSpectralTimeData = {}
 ---@field bTimecodeIsDropFrame boolean
 FSoundWaveTimecodeInfo = {}
 
+---@return FSoundWaveTimecodeInfo
+function FSoundWaveTimecodeInfo:get() end
+
 
 
 ---@class FSourceEffectChainEntry
@@ -9665,10 +12185,16 @@ FSoundWaveTimecodeInfo = {}
 ---@field bBypass boolean
 FSourceEffectChainEntry = {}
 
+---@return FSourceEffectChainEntry
+function FSourceEffectChainEntry:get() end
+
 
 
 ---@class FSpatialHashRuntimeGrid
 FSpatialHashRuntimeGrid = {}
+
+---@return FSpatialHashRuntimeGrid
+function FSpatialHashRuntimeGrid:get() end
 
 
 ---@class FSpatialHashStreamingGrid
@@ -9684,11 +12210,17 @@ FSpatialHashRuntimeGrid = {}
 ---@field HLODLayer UHLODLayer
 FSpatialHashStreamingGrid = {}
 
+---@return FSpatialHashStreamingGrid
+function FSpatialHashStreamingGrid:get() end
+
 
 
 ---@class FSpatialHashStreamingGridLayerCell
 ---@field GridCells TArray<UWorldPartitionRuntimeSpatialHashCell>
 FSpatialHashStreamingGridLayerCell = {}
+
+---@return FSpatialHashStreamingGridLayerCell
+function FSpatialHashStreamingGridLayerCell:get() end
 
 
 
@@ -9696,6 +12228,9 @@ FSpatialHashStreamingGridLayerCell = {}
 ---@field LayerCells TArray<FSpatialHashStreamingGridLayerCell>
 ---@field LayerCellsMapping TMap<int64, int32>
 FSpatialHashStreamingGridLevel = {}
+
+---@return FSpatialHashStreamingGridLevel
+function FSpatialHashStreamingGridLevel:get() end
 
 
 
@@ -9708,6 +12243,9 @@ FSpatialHashStreamingGridLevel = {}
 ---@field Version uint32
 FSplineCurves = {}
 
+---@return FSplineCurves
+function FSplineCurves:get() end
+
 
 
 ---@class FSplineInstanceData : FSceneComponentInstanceData
@@ -9715,6 +12253,9 @@ FSplineCurves = {}
 ---@field SplineCurves FSplineCurves
 ---@field SplineCurvesPreUCS FSplineCurves
 FSplineInstanceData = {}
+
+---@return FSplineInstanceData
+function FSplineInstanceData:get() end
 
 
 
@@ -9724,6 +12265,9 @@ FSplineInstanceData = {}
 ---@field StartTangent FVector
 ---@field EndTangent FVector
 FSplineMeshInstanceData = {}
+
+---@return FSplineMeshInstanceData
+function FSplineMeshInstanceData:get() end
 
 
 
@@ -9740,6 +12284,9 @@ FSplineMeshInstanceData = {}
 ---@field EndOffset FVector2D
 FSplineMeshParams = {}
 
+---@return FSplineMeshParams
+function FSplineMeshParams:get() end
+
 
 
 ---@class FSplinePoint
@@ -9752,6 +12299,9 @@ FSplineMeshParams = {}
 ---@field Type ESplinePointType::Type
 FSplinePoint = {}
 
+---@return FSplinePoint
+function FSplinePoint:get() end
+
 
 
 ---@class FSpriteCategoryInfo
@@ -9760,16 +12310,25 @@ FSplinePoint = {}
 ---@field Description FText
 FSpriteCategoryInfo = {}
 
+---@return FSpriteCategoryInfo
+function FSpriteCategoryInfo:get() end
+
 
 
 ---@class FStartPhysicsTickFunction : FTickFunction
 FStartPhysicsTickFunction = {}
+
+---@return FStartPhysicsTickFunction
+function FStartPhysicsTickFunction:get() end
 
 
 ---@class FStatColorMapEntry
 ---@field In float
 ---@field Out FColor
 FStatColorMapEntry = {}
+
+---@return FStatColorMapEntry
+function FStatColorMapEntry:get() end
 
 
 
@@ -9779,14 +12338,23 @@ FStatColorMapEntry = {}
 ---@field DisableBlend boolean
 FStatColorMapping = {}
 
+---@return FStatColorMapping
+function FStatColorMapping:get() end
+
 
 
 ---@class FStateMachineDebugData
 FStateMachineDebugData = {}
 
+---@return FStateMachineDebugData
+function FStateMachineDebugData:get() end
+
 
 ---@class FStateMachineStateDebugData
 FStateMachineStateDebugData = {}
+
+---@return FStateMachineStateDebugData
+function FStateMachineStateDebugData:get() end
 
 
 ---@class FStaticComponentMaskParameter : FStaticParameterBase
@@ -9795,6 +12363,9 @@ FStateMachineStateDebugData = {}
 ---@field B boolean
 ---@field A boolean
 FStaticComponentMaskParameter = {}
+
+---@return FStaticComponentMaskParameter
+function FStaticComponentMaskParameter:get() end
 
 
 
@@ -9805,6 +12376,9 @@ FStaticComponentMaskParameter = {}
 ---@field A boolean
 FStaticComponentMaskValue = {}
 
+---@return FStaticComponentMaskValue
+function FStaticComponentMaskValue:get() end
+
 
 
 ---@class FStaticMaterial
@@ -9814,11 +12388,17 @@ FStaticComponentMaskValue = {}
 ---@field UVChannelData FMeshUVChannelInfo
 FStaticMaterial = {}
 
+---@return FStaticMaterial
+function FStaticMaterial:get() end
+
 
 
 ---@class FStaticMaterialLayersParameter : FStaticParameterBase
 ---@field Value FMaterialLayersFunctions
 FStaticMaterialLayersParameter = {}
+
+---@return FStaticMaterialLayersParameter
+function FStaticMaterialLayersParameter:get() end
 
 
 
@@ -9829,10 +12409,16 @@ FStaticMaterialLayersParameter = {}
 ---@field StreamingTextureData TArray<FStreamingTextureBuildInfo>
 FStaticMeshComponentInstanceData = {}
 
+---@return FStaticMeshComponentInstanceData
+function FStaticMeshComponentInstanceData:get() end
+
 
 
 ---@class FStaticMeshComponentLODInfo
 FStaticMeshComponentLODInfo = {}
+
+---@return FStaticMeshComponentLODInfo
+function FStaticMeshComponentLODInfo:get() end
 
 
 ---@class FStaticMeshOptimizationSettings
@@ -9847,6 +12433,9 @@ FStaticMeshComponentLODInfo = {}
 ---@field ShadingImportance uint8
 FStaticMeshOptimizationSettings = {}
 
+---@return FStaticMeshOptimizationSettings
+function FStaticMeshOptimizationSettings:get() end
+
 
 
 ---@class FStaticMeshSourceModel
@@ -9857,6 +12446,9 @@ FStaticMeshOptimizationSettings = {}
 ---@field SourceImportFilename FString
 FStaticMeshSourceModel = {}
 
+---@return FStaticMeshSourceModel
+function FStaticMeshSourceModel:get() end
+
 
 
 ---@class FStaticMeshVertexColorLODData
@@ -9864,6 +12456,9 @@ FStaticMeshSourceModel = {}
 ---@field VertexBufferColors TArray<FColor>
 ---@field LODIndex uint32
 FStaticMeshVertexColorLODData = {}
+
+---@return FStaticMeshVertexColorLODData
+function FStaticMeshVertexColorLODData:get() end
 
 
 
@@ -9873,10 +12468,16 @@ FStaticMeshVertexColorLODData = {}
 ---@field ExpressionGUID FGuid
 FStaticParameterBase = {}
 
+---@return FStaticParameterBase
+function FStaticParameterBase:get() end
+
 
 
 ---@class FStaticParameterSet : FStaticParameterSetRuntimeData
 FStaticParameterSet = {}
+
+---@return FStaticParameterSet
+function FStaticParameterSet:get() end
 
 
 ---@class FStaticParameterSetEditorOnlyData
@@ -9886,6 +12487,9 @@ FStaticParameterSet = {}
 ---@field MaterialLayers FMaterialLayersFunctionsEditorOnlyData
 FStaticParameterSetEditorOnlyData = {}
 
+---@return FStaticParameterSetEditorOnlyData
+function FStaticParameterSetEditorOnlyData:get() end
+
 
 
 ---@class FStaticParameterSetRuntimeData
@@ -9893,11 +12497,17 @@ FStaticParameterSetEditorOnlyData = {}
 ---@field bHasMaterialLayers boolean
 FStaticParameterSetRuntimeData = {}
 
+---@return FStaticParameterSetRuntimeData
+function FStaticParameterSetRuntimeData:get() end
+
 
 
 ---@class FStaticSwitchParameter : FStaticParameterBase
 ---@field Value boolean
 FStaticSwitchParameter = {}
+
+---@return FStaticSwitchParameter
+function FStaticSwitchParameter:get() end
 
 
 
@@ -9910,6 +12520,9 @@ FStaticSwitchParameter = {}
 ---@field bWeightBasedBlend boolean
 FStaticTerrainLayerWeightParameter = {}
 
+---@return FStaticTerrainLayerWeightParameter
+function FStaticTerrainLayerWeightParameter:get() end
+
 
 
 ---@class FStrataMaterialInfo
@@ -9919,27 +12532,45 @@ FStaticTerrainLayerWeightParameter = {}
 ---@field SubsurfaceProfiles TArray<USubsurfaceProfile>
 FStrataMaterialInfo = {}
 
+---@return FStrataMaterialInfo
+function FStrataMaterialInfo:get() end
+
 
 
 ---@class FStrataMaterialInput : FMaterialInput
 FStrataMaterialInput = {}
 
+---@return FStrataMaterialInput
+function FStrataMaterialInput:get() end
+
 
 ---@class FStreamableTexture
 FStreamableTexture = {}
+
+---@return FStreamableTexture
+function FStreamableTexture:get() end
 
 
 ---@class FStreamableTextureInstance
 FStreamableTextureInstance = {}
 
+---@return FStreamableTextureInstance
+function FStreamableTextureInstance:get() end
+
 
 ---@class FStreamedAudioPlatformData
 FStreamedAudioPlatformData = {}
+
+---@return FStreamedAudioPlatformData
+function FStreamedAudioPlatformData:get() end
 
 
 ---@class FStreamingLevelsToConsider
 ---@field StreamingLevels TArray<ULevelStreaming>
 FStreamingLevelsToConsider = {}
+
+---@return FStreamingLevelsToConsider
+function FStreamingLevelsToConsider:get() end
 
 
 
@@ -9952,6 +12583,9 @@ FStreamingLevelsToConsider = {}
 ---@field bAffectedByComponentScale boolean
 FStreamingRenderAssetPrimitiveInfo = {}
 
+---@return FStreamingRenderAssetPrimitiveInfo
+function FStreamingRenderAssetPrimitiveInfo:get() end
+
 
 
 ---@class FStreamingSourceShape
@@ -9963,6 +12597,9 @@ FStreamingRenderAssetPrimitiveInfo = {}
 ---@field Rotation FRotator
 FStreamingSourceShape = {}
 
+---@return FStreamingSourceShape
+function FStreamingSourceShape:get() end
+
 
 
 ---@class FStreamingTextureBuildInfo
@@ -9971,11 +12608,17 @@ FStreamingSourceShape = {}
 ---@field TexelFactor float
 FStreamingTextureBuildInfo = {}
 
+---@return FStreamingTextureBuildInfo
+function FStreamingTextureBuildInfo:get() end
+
 
 
 ---@class FStringAnimationAttribute
 ---@field Value FString
 FStringAnimationAttribute = {}
+
+---@return FStringAnimationAttribute
+function FStringAnimationAttribute:get() end
 
 
 
@@ -9984,12 +12627,18 @@ FStringAnimationAttribute = {}
 ---@field Keys TArray<FStringCurveKey>
 FStringCurve = {}
 
+---@return FStringCurve
+function FStringCurve:get() end
+
 
 
 ---@class FStringCurveKey
 ---@field Time float
 ---@field Value FString
 FStringCurveKey = {}
+
+---@return FStringCurveKey
+function FStringCurveKey:get() end
 
 
 
@@ -9998,12 +12647,18 @@ FStringCurveKey = {}
 ---@field PropertiesMetaData TMap<FName, FFieldCookedMetaDataStore>
 FStructCookedMetaDataStore = {}
 
+---@return FStructCookedMetaDataStore
+function FStructCookedMetaDataStore:get() end
+
 
 
 ---@class FStructRedirect
 ---@field OldStructName FName
 ---@field NewStructName FName
 FStructRedirect = {}
+
+---@return FStructRedirect
+function FStructRedirect:get() end
 
 
 
@@ -10029,12 +12684,18 @@ FStructRedirect = {}
 ---@field TransmissionTintColor FLinearColor
 FSubsurfaceProfileStruct = {}
 
+---@return FSubsurfaceProfileStruct
+function FSubsurfaceProfileStruct:get() end
+
 
 
 ---@class FSubtitleCue
 ---@field Text FText
 ---@field Time float
 FSubtitleCue = {}
+
+---@return FSubtitleCue
+function FSubtitleCue:get() end
 
 
 
@@ -10044,6 +12705,9 @@ FSubtitleCue = {}
 ---@field bInitialized boolean
 FSwarmDebugOptions = {}
 
+---@return FSwarmDebugOptions
+function FSwarmDebugOptions:get() end
+
 
 
 ---@class FTTEventTrack : FTTTrackBase
@@ -10051,11 +12715,17 @@ FSwarmDebugOptions = {}
 ---@field CurveKeys UCurveFloat
 FTTEventTrack = {}
 
+---@return FTTEventTrack
+function FTTEventTrack:get() end
+
 
 
 ---@class FTTFloatTrack : FTTPropertyTrack
 ---@field CurveFloat UCurveFloat
 FTTFloatTrack = {}
+
+---@return FTTFloatTrack
+function FTTFloatTrack:get() end
 
 
 
@@ -10063,11 +12733,17 @@ FTTFloatTrack = {}
 ---@field CurveLinearColor UCurveLinearColor
 FTTLinearColorTrack = {}
 
+---@return FTTLinearColorTrack
+function FTTLinearColorTrack:get() end
+
 
 
 ---@class FTTPropertyTrack : FTTTrackBase
 ---@field PropertyName FName
 FTTPropertyTrack = {}
+
+---@return FTTPropertyTrack
+function FTTPropertyTrack:get() end
 
 
 
@@ -10076,6 +12752,9 @@ FTTPropertyTrack = {}
 ---@field bIsExternalCurve boolean
 FTTTrackBase = {}
 
+---@return FTTTrackBase
+function FTTTrackBase:get() end
+
 
 
 ---@class FTTTrackId
@@ -10083,11 +12762,17 @@ FTTTrackBase = {}
 ---@field TrackIndex int32
 FTTTrackId = {}
 
+---@return FTTTrackId
+function FTTTrackId:get() end
+
 
 
 ---@class FTTVectorTrack : FTTPropertyTrack
 ---@field CurveVector UCurveVector
 FTTVectorTrack = {}
+
+---@return FTTVectorTrack
+function FTTVectorTrack:get() end
 
 
 
@@ -10097,10 +12782,16 @@ FTTVectorTrack = {}
 ---@field PlayerState APlayerState
 FTViewTarget = {}
 
+---@return FTViewTarget
+function FTViewTarget:get() end
+
 
 
 ---@class FTableRowBase
 FTableRowBase = {}
+
+---@return FTableRowBase
+function FTableRowBase:get() end
 
 
 ---@class FTentDistribution
@@ -10108,6 +12799,9 @@ FTableRowBase = {}
 ---@field TipValue float
 ---@field Width float
 FTentDistribution = {}
+
+---@return FTentDistribution
+function FTentDistribution:get() end
 
 
 
@@ -10121,6 +12815,9 @@ FTentDistribution = {}
 ---@field SpacingAdjust FVector2D
 FTextSizingParameters = {}
 
+---@return FTextSizingParameters
+function FTextSizingParameters:get() end
+
 
 
 ---@class FTextureFormatSettings
@@ -10131,6 +12828,9 @@ FTextSizingParameters = {}
 ---@field CompressionYCoCg boolean
 ---@field SRGB boolean
 FTextureFormatSettings = {}
+
+---@return FTextureFormatSettings
+function FTextureFormatSettings:get() end
 
 
 
@@ -10160,6 +12860,9 @@ FTextureFormatSettings = {}
 ---@field LossyCompressionAmount ETextureLossyCompressionAmount
 FTextureLODGroup = {}
 
+---@return FTextureLODGroup
+function FTextureLODGroup:get() end
+
 
 
 ---@class FTextureParameterValue
@@ -10168,14 +12871,23 @@ FTextureLODGroup = {}
 ---@field ExpressionGUID FGuid
 FTextureParameterValue = {}
 
+---@return FTextureParameterValue
+function FTextureParameterValue:get() end
+
 
 
 ---@class FTexturePlatformData
 FTexturePlatformData = {}
 
+---@return FTexturePlatformData
+function FTexturePlatformData:get() end
+
 
 ---@class FTextureSource
 FTextureSource = {}
+
+---@return FTextureSource
+function FTextureSource:get() end
 
 
 ---@class FTextureSourceBlock
@@ -10186,6 +12898,9 @@ FTextureSource = {}
 ---@field NumSlices int32
 ---@field NumMips int32
 FTextureSourceBlock = {}
+
+---@return FTextureSourceBlock
+function FTextureSourceBlock:get() end
 
 
 
@@ -10199,6 +12914,9 @@ FTextureSourceBlock = {}
 ---@field ChromaticAdaptationMethod ETextureChromaticAdaptationMethod
 FTextureSourceColorSettings = {}
 
+---@return FTextureSourceColorSettings
+function FTextureSourceColorSettings:get() end
+
 
 
 ---@class FTickFunction
@@ -10211,10 +12929,16 @@ FTextureSourceColorSettings = {}
 ---@field TickInterval float
 FTickFunction = {}
 
+---@return FTickFunction
+function FTickFunction:get() end
+
 
 
 ---@class FTickPrerequisite
 FTickPrerequisite = {}
+
+---@return FTickPrerequisite
+function FTickPrerequisite:get() end
 
 
 ---@class FTimeStretchCurve
@@ -10224,11 +12948,17 @@ FTickPrerequisite = {}
 ---@field Sum_dT_i_by_C_i float
 FTimeStretchCurve = {}
 
+---@return FTimeStretchCurve
+function FTimeStretchCurve:get() end
+
 
 
 ---@class FTimeStretchCurveInstance
 ---@field bHasValidData boolean
 FTimeStretchCurveInstance = {}
+
+---@return FTimeStretchCurveInstance
+function FTimeStretchCurveInstance:get() end
 
 
 
@@ -10236,6 +12966,9 @@ FTimeStretchCurveInstance = {}
 ---@field Time float
 ---@field Alpha float
 FTimeStretchCurveMarker = {}
+
+---@return FTimeStretchCurveMarker
+function FTimeStretchCurveMarker:get() end
 
 
 
@@ -10248,6 +12981,9 @@ FTimeStretchCurveMarker = {}
 ---@field RateAttributeName FName
 ---@field TakenameAttributeName FName
 FTimecodeCustomAttributeNameSettings = {}
+
+---@return FTimecodeCustomAttributeNameSettings
+function FTimecodeCustomAttributeNameSettings:get() end
 
 
 
@@ -10269,12 +13005,18 @@ FTimecodeCustomAttributeNameSettings = {}
 ---@field DirectionPropertyName FName
 FTimeline = {}
 
+---@return FTimeline
+function FTimeline:get() end
+
 
 
 ---@class FTimelineEventEntry
 ---@field Time float
 ---@field EventFunc FTimelineEventEntryEventFunc
 FTimelineEventEntry = {}
+
+---@return FTimelineEventEntry
+function FTimelineEventEntry:get() end
 
 
 
@@ -10285,6 +13027,9 @@ FTimelineEventEntry = {}
 ---@field FloatPropertyName FName
 FTimelineFloatTrack = {}
 
+---@return FTimelineFloatTrack
+function FTimelineFloatTrack:get() end
+
 
 
 ---@class FTimelineLinearColorTrack
@@ -10293,6 +13038,9 @@ FTimelineFloatTrack = {}
 ---@field TrackName FName
 ---@field LinearColorPropertyName FName
 FTimelineLinearColorTrack = {}
+
+---@return FTimelineLinearColorTrack
+function FTimelineLinearColorTrack:get() end
 
 
 
@@ -10303,11 +13051,17 @@ FTimelineLinearColorTrack = {}
 ---@field VectorPropertyName FName
 FTimelineVectorTrack = {}
 
+---@return FTimelineVectorTrack
+function FTimelineVectorTrack:get() end
+
 
 
 ---@class FTimerHandle
 ---@field Handle uint64
 FTimerHandle = {}
+
+---@return FTimerHandle
+function FTimerHandle:get() end
 
 
 
@@ -10323,11 +13077,17 @@ FTimerHandle = {}
 ---@field AltInputKey FKey
 FTouchInputControl = {}
 
+---@return FTouchInputControl
+function FTouchInputControl:get() end
+
 
 
 ---@class FTrackToSkeletonMap
 ---@field BoneTreeIndex int32
 FTrackToSkeletonMap = {}
+
+---@return FTrackToSkeletonMap
+function FTrackToSkeletonMap:get() end
 
 
 
@@ -10338,6 +13098,9 @@ FTrackToSkeletonMap = {}
 ---@field LinearVelocity FVector
 FTrajectorySample = {}
 
+---@return FTrajectorySample
+function FTrajectorySample:get() end
+
 
 
 ---@class FTrajectorySampleRange
@@ -10345,11 +13108,17 @@ FTrajectorySample = {}
 ---@field SampleRate int32
 FTrajectorySampleRange = {}
 
+---@return FTrajectorySampleRange
+function FTrajectorySampleRange:get() end
+
 
 
 ---@class FTransformAnimationAttribute
 ---@field Value FTransform
 FTransformAnimationAttribute = {}
+
+---@return FTransformAnimationAttribute
+function FTransformAnimationAttribute:get() end
 
 
 
@@ -10358,11 +13127,17 @@ FTransformAnimationAttribute = {}
 ---@field Constraints FTransformBaseConstraint
 FTransformBase = {}
 
+---@return FTransformBase
+function FTransformBase:get() end
+
 
 
 ---@class FTransformBaseConstraint
 ---@field TransformConstraints TArray<FRigTransformConstraint>
 FTransformBaseConstraint = {}
+
+---@return FTransformBaseConstraint
+function FTransformBaseConstraint:get() end
 
 
 
@@ -10372,12 +13147,18 @@ FTransformBaseConstraint = {}
 ---@field ScaleCurve FVectorCurve
 FTransformCurve = {}
 
+---@return FTransformCurve
+function FTransformCurve:get() end
+
 
 
 ---@class FTranslationTrack
 ---@field PosKeys TArray<FVector3f>
 ---@field Times TArray<float>
 FTranslationTrack = {}
+
+---@return FTranslationTrack
+function FTranslationTrack:get() end
 
 
 
@@ -10386,6 +13167,9 @@ FTranslationTrack = {}
 ---@field TwistMotion EAngularConstraintMotion
 FTwistConstraint = {}
 
+---@return FTwistConstraint
+function FTwistConstraint:get() end
+
 
 
 ---@class FTypedElementDeletionOptions
@@ -10393,6 +13177,9 @@ FTwistConstraint = {}
 ---@field bWarnAboutReferences boolean
 ---@field bWarnAboutSoftReferences boolean
 FTypedElementDeletionOptions = {}
+
+---@return FTypedElementDeletionOptions
+function FTypedElementDeletionOptions:get() end
 
 
 
@@ -10407,27 +13194,42 @@ FTypedElementDeletionOptions = {}
 ---@field Portal FString
 FURL = {}
 
+---@return FURL
+function FURL:get() end
+
 
 
 ---@class FUniqueNetIdRepl : FUniqueNetIdWrapper
 ---@field ReplicationBytes TArray<uint8>
 FUniqueNetIdRepl = {}
 
+---@return FUniqueNetIdRepl
+function FUniqueNetIdRepl:get() end
+
 
 
 ---@class FUniqueNetIdReplNetSerializerConfig : FNetSerializerConfig
 FUniqueNetIdReplNetSerializerConfig = {}
+
+---@return FUniqueNetIdReplNetSerializerConfig
+function FUniqueNetIdReplNetSerializerConfig:get() end
 
 
 ---@class FUniqueNetIdReplNetSerializerNameStruct
 ---@field Name FName
 FUniqueNetIdReplNetSerializerNameStruct = {}
 
+---@return FUniqueNetIdReplNetSerializerNameStruct
+function FUniqueNetIdReplNetSerializerNameStruct:get() end
+
 
 
 ---@class FUniqueNetIdReplNetSerializerStringStruct
 ---@field String FString
 FUniqueNetIdReplNetSerializerStringStruct = {}
+
+---@return FUniqueNetIdReplNetSerializerStringStruct
+function FUniqueNetIdReplNetSerializerStringStruct:get() end
 
 
 
@@ -10439,6 +13241,9 @@ FUniqueNetIdReplNetSerializerStringStruct = {}
 ---@field bNewShouldBlockOnLoad boolean
 FUpdateLevelStreamingLevelStatus = {}
 
+---@return FUpdateLevelStreamingLevelStatus
+function FUpdateLevelStreamingLevelStatus:get() end
+
 
 
 ---@class FUpdateLevelVisibilityLevelInfo
@@ -10449,11 +13254,17 @@ FUpdateLevelStreamingLevelStatus = {}
 ---@field bTryMakeVisible boolean
 FUpdateLevelVisibilityLevelInfo = {}
 
+---@return FUpdateLevelVisibilityLevelInfo
+function FUpdateLevelVisibilityLevelInfo:get() end
+
 
 
 ---@class FUserActivity
 ---@field ActionName FString
 FUserActivity = {}
+
+---@return FUserActivity
+function FUserActivity:get() end
 
 
 
@@ -10463,11 +13274,17 @@ FUserActivity = {}
 ---@field ConstantY float
 FVector2MaterialInput = {}
 
+---@return FVector2MaterialInput
+function FVector2MaterialInput:get() end
+
 
 
 ---@class FVector4Distribution
 ---@field Table FDistributionLookupTable
 FVector4Distribution = {}
+
+---@return FVector4Distribution
+function FVector4Distribution:get() end
 
 
 
@@ -10475,11 +13292,17 @@ FVector4Distribution = {}
 ---@field Value FVector
 FVectorAnimationAttribute = {}
 
+---@return FVectorAnimationAttribute
+function FVectorAnimationAttribute:get() end
+
 
 
 ---@class FVectorCurve : FAnimCurveBase
 ---@field FloatCurves FRichCurve
 FVectorCurve = {}
+
+---@return FVectorCurve
+function FVectorCurve:get() end
 
 
 
@@ -10487,12 +13310,18 @@ FVectorCurve = {}
 ---@field Table FDistributionLookupTable
 FVectorDistribution = {}
 
+---@return FVectorDistribution
+function FVectorDistribution:get() end
+
 
 
 ---@class FVectorMaterialInput : FMaterialInput
 ---@field UseConstant boolean
 ---@field Constant FVector3f
 FVectorMaterialInput = {}
+
+---@return FVectorMaterialInput
+function FVectorMaterialInput:get() end
 
 
 
@@ -10502,6 +13331,9 @@ FVectorMaterialInput = {}
 ---@field ExpressionGUID FGuid
 FVectorParameterValue = {}
 
+---@return FVectorParameterValue
+function FVectorParameterValue:get() end
+
 
 
 ---@class FVectorRK4SpringInterpolator
@@ -10509,31 +13341,52 @@ FVectorParameterValue = {}
 ---@field DampeningRatio float
 FVectorRK4SpringInterpolator = {}
 
+---@return FVectorRK4SpringInterpolator
+function FVectorRK4SpringInterpolator:get() end
+
 
 
 ---@class FVectorSpringState
 FVectorSpringState = {}
 
+---@return FVectorSpringState
+function FVectorSpringState:get() end
+
 
 ---@class FVector_NetQuantize : FVector
 FVector_NetQuantize = {}
+
+---@return FVector_NetQuantize
+function FVector_NetQuantize:get() end
 
 
 ---@class FVector_NetQuantize10 : FVector
 FVector_NetQuantize10 = {}
 
+---@return FVector_NetQuantize10
+function FVector_NetQuantize10:get() end
+
 
 ---@class FVector_NetQuantize100 : FVector
 FVector_NetQuantize100 = {}
+
+---@return FVector_NetQuantize100
+function FVector_NetQuantize100:get() end
 
 
 ---@class FVector_NetQuantizeNormal : FVector
 FVector_NetQuantizeNormal = {}
 
+---@return FVector_NetQuantizeNormal
+function FVector_NetQuantizeNormal:get() end
+
 
 ---@class FVertexOffsetUsage
 ---@field Usage int32
 FVertexOffsetUsage = {}
+
+---@return FVertexOffsetUsage
+function FVertexOffsetUsage:get() end
 
 
 
@@ -10544,6 +13397,9 @@ FVertexOffsetUsage = {}
 ---@field bLockOutgoing boolean
 FViewTargetTransitionParams = {}
 
+---@return FViewTargetTransitionParams
+function FViewTargetTransitionParams:get() end
+
 
 
 ---@class FVirtualBone
@@ -10552,12 +13408,18 @@ FViewTargetTransitionParams = {}
 ---@field VirtualBoneName FName
 FVirtualBone = {}
 
+---@return FVirtualBone
+function FVirtualBone:get() end
+
 
 
 ---@class FVirtualTextureBuildSettings
 ---@field TileSize int32
 ---@field TileBorderSize int32
 FVirtualTextureBuildSettings = {}
+
+---@return FVirtualTextureBuildSettings
+function FVirtualTextureBuildSettings:get() end
 
 
 
@@ -10573,6 +13435,9 @@ FVirtualTextureBuildSettings = {}
 ---@field MaxScaledSizeInMegabyte int32
 FVirtualTextureSpacePoolConfig = {}
 
+---@return FVirtualTextureSpacePoolConfig
+function FVirtualTextureSpacePoolConfig:get() end
+
 
 
 ---@class FVoiceSettings
@@ -10581,12 +13446,18 @@ FVirtualTextureSpacePoolConfig = {}
 ---@field SourceEffectChain USoundEffectSourcePresetChain
 FVoiceSettings = {}
 
+---@return FVoiceSettings
+function FVoiceSettings:get() end
+
 
 
 ---@class FWalkableSlopeOverride
 ---@field WalkableSlopeBehavior EWalkableSlopeBehavior
 ---@field WalkableSlopeAngle float
 FWalkableSlopeOverride = {}
+
+---@return FWalkableSlopeOverride
+function FWalkableSlopeOverride:get() end
 
 
 
@@ -10595,6 +13466,9 @@ FWalkableSlopeOverride = {}
 ---@field SampleWeight float
 FWeightedBlendSample = {}
 
+---@return FWeightedBlendSample
+function FWeightedBlendSample:get() end
+
 
 
 ---@class FWeightedBlendable
@@ -10602,11 +13476,17 @@ FWeightedBlendSample = {}
 ---@field Object UObject
 FWeightedBlendable = {}
 
+---@return FWeightedBlendable
+function FWeightedBlendable:get() end
+
 
 
 ---@class FWeightedBlendables
 ---@field Array TArray<FWeightedBlendable>
 FWeightedBlendables = {}
+
+---@return FWeightedBlendables
+function FWeightedBlendables:get() end
 
 
 
@@ -10623,16 +13503,25 @@ FWeightedBlendables = {}
 ---@field ActiveNetDrivers TArray<FNamedNetDriver>
 FWorldContext = {}
 
+---@return FWorldContext
+function FWorldContext:get() end
+
 
 
 ---@class FWorldPSCPool
 ---@field WorldParticleSystemPools TMap<UParticleSystem, FPSCPool>
 FWorldPSCPool = {}
 
+---@return FWorldPSCPool
+function FWorldPSCPool:get() end
+
 
 
 ---@class FWorldPartitionPerWorldSettings
 FWorldPartitionPerWorldSettings = {}
+
+---@return FWorldPartitionPerWorldSettings
+function FWorldPartitionPerWorldSettings:get() end
 
 
 ---@class FWorldPartitionRuntimeCellDebugInfo
@@ -10643,14 +13532,23 @@ FWorldPartitionPerWorldSettings = {}
 ---@field CoordZ int64
 FWorldPartitionRuntimeCellDebugInfo = {}
 
+---@return FWorldPartitionRuntimeCellDebugInfo
+function FWorldPartitionRuntimeCellDebugInfo:get() end
+
 
 
 ---@class FWorldPartitionRuntimeCellObjectMapping
 FWorldPartitionRuntimeCellObjectMapping = {}
 
+---@return FWorldPartitionRuntimeCellObjectMapping
+function FWorldPartitionRuntimeCellObjectMapping:get() end
+
 
 ---@class FWorldPartitionRuntimeSpatialHashGridPreviewer
 FWorldPartitionRuntimeSpatialHashGridPreviewer = {}
+
+---@return FWorldPartitionRuntimeSpatialHashGridPreviewer
+function FWorldPartitionRuntimeSpatialHashGridPreviewer:get() end
 
 
 ---@class FWorldPartitionStreamingQuerySource
@@ -10662,6 +13560,9 @@ FWorldPartitionRuntimeSpatialHashGridPreviewer = {}
 ---@field bSpatialQuery boolean
 FWorldPartitionStreamingQuerySource = {}
 
+---@return FWorldPartitionStreamingQuerySource
+function FWorldPartitionStreamingQuerySource:get() end
+
 
 
 ---@class FWrappedStringElement
@@ -10669,14 +13570,23 @@ FWorldPartitionStreamingQuerySource = {}
 ---@field LineExtent FVector2D
 FWrappedStringElement = {}
 
+---@return FWrappedStringElement
+function FWrappedStringElement:get() end
+
 
 
 ---@class IActiveSoundUpdateInterface : IInterface
 IActiveSoundUpdateInterface = {}
 
+---@return IActiveSoundUpdateInterface
+function IActiveSoundUpdateInterface:get() end
+
 
 ---@class IActorSoundParameterInterface : IInterface
 IActorSoundParameterInterface = {}
+
+---@return IActorSoundParameterInterface
+function IActorSoundParameterInterface:get() end
 
 ---@param Params TArray<FAudioParameter>
 function IActorSoundParameterInterface:GetActorSoundParams(Params) end
@@ -10685,13 +13595,22 @@ function IActorSoundParameterInterface:GetActorSoundParams(Params) end
 ---@class IAnimClassInterface : IInterface
 IAnimClassInterface = {}
 
+---@return IAnimClassInterface
+function IAnimClassInterface:get() end
+
 
 ---@class IAnimLayerInterface : IInterface
 IAnimLayerInterface = {}
 
+---@return IAnimLayerInterface
+function IAnimLayerInterface:get() end
+
 
 ---@class IAnimationDataController : IInterface
 IAnimationDataController = {}
+
+---@return IAnimationDataController
+function IAnimationDataController:get() end
 
 ---@param Skeleton USkeleton
 ---@param SupportedCurveType ERawCurveTrackTypes
@@ -10854,6 +13773,9 @@ function IAnimationDataController:AddAttribute(AttributeIdentifier, bShouldTrans
 ---@class IAudioPanelWidgetInterface : IInterface
 IAudioPanelWidgetInterface = {}
 
+---@return IAudioPanelWidgetInterface
+function IAudioPanelWidgetInterface:get() end
+
 ---@return FName
 function IAudioPanelWidgetInterface:GetIconBrushName() end
 ---@return FText
@@ -10863,13 +13785,22 @@ function IAudioPanelWidgetInterface:GetEditorName() end
 ---@class IBlendableInterface : IInterface
 IBlendableInterface = {}
 
+---@return IBlendableInterface
+function IBlendableInterface:get() end
+
 
 ---@class IBoneReferenceSkeletonProvider : IInterface
 IBoneReferenceSkeletonProvider = {}
 
+---@return IBoneReferenceSkeletonProvider
+function IBoneReferenceSkeletonProvider:get() end
+
 
 ---@class ICameraLensEffectInterface : IInterface
 ICameraLensEffectInterface = {}
+
+---@return ICameraLensEffectInterface
+function ICameraLensEffectInterface:get() end
 
 ---@return UFXSystemComponent
 function ICameraLensEffectInterface:GetPrimaryParticleComponent() end
@@ -10879,6 +13810,9 @@ function ICameraLensEffectInterface:GetParticleComponents() end
 
 ---@class ICurveSourceInterface : IInterface
 ICurveSourceInterface = {}
+
+---@return ICurveSourceInterface
+function ICurveSourceInterface:get() end
 
 ---@param CurveName FName
 ---@return float
@@ -10892,113 +13826,197 @@ function ICurveSourceInterface:GetBindingName() end
 ---@class IDestructibleInterface : IInterface
 IDestructibleInterface = {}
 
+---@return IDestructibleInterface
+function IDestructibleInterface:get() end
+
 
 ---@class IISMPartitionInstanceManager : IInterface
 IISMPartitionInstanceManager = {}
+
+---@return IISMPartitionInstanceManager
+function IISMPartitionInstanceManager:get() end
 
 
 ---@class IISMPartitionInstanceManagerProvider : IInterface
 IISMPartitionInstanceManagerProvider = {}
 
+---@return IISMPartitionInstanceManagerProvider
+function IISMPartitionInstanceManagerProvider:get() end
+
 
 ---@class IImportantToggleSettingInterface : IInterface
 IImportantToggleSettingInterface = {}
+
+---@return IImportantToggleSettingInterface
+function IImportantToggleSettingInterface:get() end
 
 
 ---@class IInterface_ActorSubobject : IInterface
 IInterface_ActorSubobject = {}
 
+---@return IInterface_ActorSubobject
+function IInterface_ActorSubobject:get() end
+
 
 ---@class IInterface_AssetUserData : IInterface
 IInterface_AssetUserData = {}
+
+---@return IInterface_AssetUserData
+function IInterface_AssetUserData:get() end
 
 
 ---@class IInterface_AsyncCompilation : IInterface
 IInterface_AsyncCompilation = {}
 
+---@return IInterface_AsyncCompilation
+function IInterface_AsyncCompilation:get() end
+
 
 ---@class IInterface_CollisionDataProvider : IInterface
 IInterface_CollisionDataProvider = {}
+
+---@return IInterface_CollisionDataProvider
+function IInterface_CollisionDataProvider:get() end
 
 
 ---@class IInterface_PostProcessVolume : IInterface
 IInterface_PostProcessVolume = {}
 
+---@return IInterface_PostProcessVolume
+function IInterface_PostProcessVolume:get() end
+
 
 ---@class IInterface_PreviewMeshProvider : IInterface
 IInterface_PreviewMeshProvider = {}
+
+---@return IInterface_PreviewMeshProvider
+function IInterface_PreviewMeshProvider:get() end
 
 
 ---@class ILODSyncInterface : IInterface
 ILODSyncInterface = {}
 
+---@return ILODSyncInterface
+function ILODSyncInterface:get() end
+
 
 ---@class ILevelInstanceEditorPivotInterface : IInterface
 ILevelInstanceEditorPivotInterface = {}
+
+---@return ILevelInstanceEditorPivotInterface
+function ILevelInstanceEditorPivotInterface:get() end
 
 
 ---@class ILevelInstanceInterface : IInterface
 ILevelInstanceInterface = {}
 
+---@return ILevelInstanceInterface
+function ILevelInstanceInterface:get() end
+
 
 ---@class ILevelPartitionInterface : IInterface
 ILevelPartitionInterface = {}
+
+---@return ILevelPartitionInterface
+function ILevelPartitionInterface:get() end
 
 
 ---@class INavAgentInterface : IInterface
 INavAgentInterface = {}
 
+---@return INavAgentInterface
+function INavAgentInterface:get() end
+
 
 ---@class INavEdgeProviderInterface : IInterface
 INavEdgeProviderInterface = {}
+
+---@return INavEdgeProviderInterface
+function INavEdgeProviderInterface:get() end
 
 
 ---@class INavPathObserverInterface : IInterface
 INavPathObserverInterface = {}
 
+---@return INavPathObserverInterface
+function INavPathObserverInterface:get() end
+
 
 ---@class INavRelevantInterface : IInterface
 INavRelevantInterface = {}
+
+---@return INavRelevantInterface
+function INavRelevantInterface:get() end
 
 
 ---@class INavigationDataInterface : IInterface
 INavigationDataInterface = {}
 
+---@return INavigationDataInterface
+function INavigationDataInterface:get() end
+
 
 ---@class INetworkPredictionInterface : IInterface
 INetworkPredictionInterface = {}
+
+---@return INetworkPredictionInterface
+function INetworkPredictionInterface:get() end
 
 
 ---@class INodeMappingProviderInterface : IInterface
 INodeMappingProviderInterface = {}
 
+---@return INodeMappingProviderInterface
+function INodeMappingProviderInterface:get() end
+
 
 ---@class IPathFollowingAgentInterface : IInterface
 IPathFollowingAgentInterface = {}
+
+---@return IPathFollowingAgentInterface
+function IPathFollowingAgentInterface:get() end
 
 
 ---@class IPreviewCollectionInterface : IInterface
 IPreviewCollectionInterface = {}
 
+---@return IPreviewCollectionInterface
+function IPreviewCollectionInterface:get() end
+
 
 ---@class IRVOAvoidanceInterface : IInterface
 IRVOAvoidanceInterface = {}
+
+---@return IRVOAvoidanceInterface
+function IRVOAvoidanceInterface:get() end
 
 
 ---@class ISMInstanceManager : IInterface
 ISMInstanceManager = {}
 
+---@return ISMInstanceManager
+function ISMInstanceManager:get() end
+
 
 ---@class ISMInstanceManagerProvider : IInterface
 ISMInstanceManagerProvider = {}
+
+---@return ISMInstanceManagerProvider
+function ISMInstanceManagerProvider:get() end
 
 
 ---@class ISlateTextureAtlasInterface : IInterface
 ISlateTextureAtlasInterface = {}
 
+---@return ISlateTextureAtlasInterface
+function ISlateTextureAtlasInterface:get() end
+
 
 ---@class ISoundEffectPresetWidgetInterface : IAudioPanelWidgetInterface
 ISoundEffectPresetWidgetInterface = {}
+
+---@return ISoundEffectPresetWidgetInterface
+function ISoundEffectPresetWidgetInterface:get() end
 
 ---@param Preset USoundEffectPreset
 ---@param PropertyName FName
@@ -11012,9 +14030,15 @@ function ISoundEffectPresetWidgetInterface:GetClass() end
 ---@class ISoundParameterControllerInterface : IAudioParameterControllerInterface
 ISoundParameterControllerInterface = {}
 
+---@return ISoundParameterControllerInterface
+function ISoundParameterControllerInterface:get() end
+
 
 ---@class ISoundSubmixWidgetInterface : IInterface
 ISoundSubmixWidgetInterface = {}
+
+---@return ISoundSubmixWidgetInterface
+function ISoundSubmixWidgetInterface:get() end
 
 ---@param SoundSubmix USoundSubmixBase
 function ISoundSubmixWidgetInterface:OnConstructed(SoundSubmix) end
@@ -11022,6 +14046,9 @@ function ISoundSubmixWidgetInterface:OnConstructed(SoundSubmix) end
 
 ---@class ITypedElementWorldInterface : IInterface
 ITypedElementWorldInterface = {}
+
+---@return ITypedElementWorldInterface
+function ITypedElementWorldInterface:get() end
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InTransform FTransform
@@ -11102,13 +14129,22 @@ function ITypedElementWorldInterface:CanDeleteElement(InElementHandle) end
 ---@class IVisualLoggerDebugSnapshotInterface : IInterface
 IVisualLoggerDebugSnapshotInterface = {}
 
+---@return IVisualLoggerDebugSnapshotInterface
+function IVisualLoggerDebugSnapshotInterface:get() end
+
 
 ---@class IWorldPartitionActorLoaderInterface : IInterface
 IWorldPartitionActorLoaderInterface = {}
 
+---@return IWorldPartitionActorLoaderInterface
+function IWorldPartitionActorLoaderInterface:get() end
+
 
 ---@class IWorldPartitionRuntimeCellOwner : IInterface
 IWorldPartitionRuntimeCellOwner = {}
+
+---@return IWorldPartitionRuntimeCellOwner
+function IWorldPartitionRuntimeCellOwner:get() end
 
 
 ---@class UAISystemBase : UObject
@@ -11117,12 +14153,18 @@ IWorldPartitionRuntimeCellOwner = {}
 ---@field bInstantiateAISystemOnClient boolean
 UAISystemBase = {}
 
+---@return UAISystemBase
+function UAISystemBase:get() end
+
 
 
 ---@class UActorChannel : UChannel
 ---@field Actor AActor
 ---@field CreateSubObjects TArray<UObject>
 UActorChannel = {}
+
+---@return UActorChannel
+function UActorChannel:get() end
 
 
 
@@ -11143,6 +14185,9 @@ UActorChannel = {}
 ---@field OnComponentActivated FActorComponentOnComponentActivated
 ---@field OnComponentDeactivated FActorComponentOnComponentDeactivated
 UActorComponent = {}
+
+---@return UActorComponent
+function UActorComponent:get() end
 
 function UActorComponent:ToggleActive() end
 ---@param NewTickGroup ETickingGroup
@@ -11202,10 +14247,16 @@ function UActorComponent:Activate(bReset) end
 ---@class UActorComponentInstanceDataTransientOuter : UObject
 UActorComponentInstanceDataTransientOuter = {}
 
+---@return UActorComponentInstanceDataTransientOuter
+function UActorComponentInstanceDataTransientOuter:get() end
+
 
 ---@class UActorContainer : UObject
 ---@field Actors TMap<FName, AActor>
 UActorContainer = {}
+
+---@return UActorContainer
+function UActorContainer:get() end
 
 
 
@@ -11213,63 +14264,108 @@ UActorContainer = {}
 ---@field World UWorld
 UActorDescContainer = {}
 
+---@return UActorDescContainer
+function UActorDescContainer:get() end
+
 
 
 ---@class UActorElementAssetDataInterface : UObject
 UActorElementAssetDataInterface = {}
 
+---@return UActorElementAssetDataInterface
+function UActorElementAssetDataInterface:get() end
+
 
 ---@class UActorElementCounterInterface : UObject
 UActorElementCounterInterface = {}
+
+---@return UActorElementCounterInterface
+function UActorElementCounterInterface:get() end
 
 
 ---@class UActorElementHierarchyInterface : UObject
 UActorElementHierarchyInterface = {}
 
+---@return UActorElementHierarchyInterface
+function UActorElementHierarchyInterface:get() end
+
 
 ---@class UActorElementObjectInterface : UObject
 UActorElementObjectInterface = {}
+
+---@return UActorElementObjectInterface
+function UActorElementObjectInterface:get() end
 
 
 ---@class UActorElementSelectionInterface : UObject
 UActorElementSelectionInterface = {}
 
+---@return UActorElementSelectionInterface
+function UActorElementSelectionInterface:get() end
+
 
 ---@class UActorElementWorldInterface : UObject
 UActorElementWorldInterface = {}
+
+---@return UActorElementWorldInterface
+function UActorElementWorldInterface:get() end
 
 
 ---@class UActorFolder : UObject
 UActorFolder = {}
 
+---@return UActorFolder
+function UActorFolder:get() end
+
 
 ---@class UActorInstanceHandleInterface : UObject
 UActorInstanceHandleInterface = {}
+
+---@return UActorInstanceHandleInterface
+function UActorInstanceHandleInterface:get() end
 
 
 ---@class UActorPartitionSubsystem : UWorldSubsystem
 UActorPartitionSubsystem = {}
 
+---@return UActorPartitionSubsystem
+function UActorPartitionSubsystem:get() end
+
 
 ---@class UActorReplicationBridge : UObjectReplicationBridge
 UActorReplicationBridge = {}
+
+---@return UActorReplicationBridge
+function UActorReplicationBridge:get() end
 
 
 ---@class UActorTextureStreamingBuildDataComponent : UActorComponent
 UActorTextureStreamingBuildDataComponent = {}
 
+---@return UActorTextureStreamingBuildDataComponent
+function UActorTextureStreamingBuildDataComponent:get() end
+
 
 ---@class UAimOffsetBlendSpace : UBlendSpace
 UAimOffsetBlendSpace = {}
+
+---@return UAimOffsetBlendSpace
+function UAimOffsetBlendSpace:get() end
 
 
 ---@class UAimOffsetBlendSpace1D : UBlendSpace1D
 UAimOffsetBlendSpace1D = {}
 
+---@return UAimOffsetBlendSpace1D
+function UAimOffsetBlendSpace1D:get() end
+
 
 ---@class UAnalysisProperties : UObject
 ---@field Function FString
 UAnalysisProperties = {}
+
+---@return UAnalysisProperties
+function UAnalysisProperties:get() end
 
 
 
@@ -11281,10 +14377,16 @@ UAnalysisProperties = {}
 ---@field bWarnAboutBlueprintUsage boolean
 UAnimBlueprint = {}
 
+---@return UAnimBlueprint
+function UAnimBlueprint:get() end
+
 
 
 ---@class UAnimBlueprintClassSubsystem_PropertyAccess : UObject
 UAnimBlueprintClassSubsystem_PropertyAccess = {}
+
+---@return UAnimBlueprintClassSubsystem_PropertyAccess
+function UAnimBlueprintClassSubsystem_PropertyAccess:get() end
 
 
 ---@class UAnimBlueprintGeneratedClass : UBlueprintGeneratedClass
@@ -11299,21 +14401,33 @@ UAnimBlueprintClassSubsystem_PropertyAccess = {}
 ---@field NodeTypeMap TMap<UScriptStruct, FAnimNodeStructData>
 UAnimBlueprintGeneratedClass = {}
 
+---@return UAnimBlueprintGeneratedClass
+function UAnimBlueprintGeneratedClass:get() end
+
 
 
 ---@class UAnimBlueprintGeneratedStruct : UScriptStruct
 UAnimBlueprintGeneratedStruct = {}
+
+---@return UAnimBlueprintGeneratedStruct
+function UAnimBlueprintGeneratedStruct:get() end
 
 
 ---@class UAnimBoneCompressionCodec : UObject
 ---@field Description FString
 UAnimBoneCompressionCodec = {}
 
+---@return UAnimBoneCompressionCodec
+function UAnimBoneCompressionCodec:get() end
+
 
 
 ---@class UAnimBoneCompressionSettings : UObject
 ---@field Codecs TArray<UAnimBoneCompressionCodec>
 UAnimBoneCompressionSettings = {}
+
+---@return UAnimBoneCompressionSettings
+function UAnimBoneCompressionSettings:get() end
 
 
 
@@ -11336,16 +14450,25 @@ UAnimBoneCompressionSettings = {}
 ---@field GraphBlendOptions TMap<FName, FAnimGraphBlendOptions>
 UAnimClassData = {}
 
+---@return UAnimClassData
+function UAnimClassData:get() end
+
 
 
 ---@class UAnimComposite : UAnimCompositeBase
 ---@field AnimationTrack FAnimTrack
 UAnimComposite = {}
 
+---@return UAnimComposite
+function UAnimComposite:get() end
+
 
 
 ---@class UAnimCompositeBase : UAnimSequenceBase
 UAnimCompositeBase = {}
+
+---@return UAnimCompositeBase
+function UAnimCompositeBase:get() end
 
 
 ---@class UAnimCompress : UAnimBoneCompressionCodec
@@ -11355,14 +14478,23 @@ UAnimCompositeBase = {}
 ---@field ScaleCompressionFormat AnimationCompressionFormat
 UAnimCompress = {}
 
+---@return UAnimCompress
+function UAnimCompress:get() end
+
 
 
 ---@class UAnimCompress_BitwiseCompressOnly : UAnimCompress
 UAnimCompress_BitwiseCompressOnly = {}
 
+---@return UAnimCompress_BitwiseCompressOnly
+function UAnimCompress_BitwiseCompressOnly:get() end
+
 
 ---@class UAnimCompress_LeastDestructive : UAnimCompress_BitwiseCompressOnly
 UAnimCompress_LeastDestructive = {}
+
+---@return UAnimCompress_LeastDestructive
+function UAnimCompress_LeastDestructive:get() end
 
 
 ---@class UAnimCompress_PerTrackCompression : UAnimCompress_RemoveLinearKeys
@@ -11389,12 +14521,18 @@ UAnimCompress_LeastDestructive = {}
 ---@field PerturbationProbeSize float
 UAnimCompress_PerTrackCompression = {}
 
+---@return UAnimCompress_PerTrackCompression
+function UAnimCompress_PerTrackCompression:get() end
+
 
 
 ---@class UAnimCompress_RemoveEverySecondKey : UAnimCompress
 ---@field MinKeys int32
 ---@field bStartAtSecondKey boolean
 UAnimCompress_RemoveEverySecondKey = {}
+
+---@return UAnimCompress_RemoveEverySecondKey
+function UAnimCompress_RemoveEverySecondKey:get() end
 
 
 
@@ -11410,6 +14548,9 @@ UAnimCompress_RemoveEverySecondKey = {}
 ---@field bActuallyFilterLinearKeys boolean
 UAnimCompress_RemoveLinearKeys = {}
 
+---@return UAnimCompress_RemoveLinearKeys
+function UAnimCompress_RemoveLinearKeys:get() end
+
 
 
 ---@class UAnimCompress_RemoveTrivialKeys : UAnimCompress
@@ -11418,27 +14559,45 @@ UAnimCompress_RemoveLinearKeys = {}
 ---@field MaxScaleDiff float
 UAnimCompress_RemoveTrivialKeys = {}
 
+---@return UAnimCompress_RemoveTrivialKeys
+function UAnimCompress_RemoveTrivialKeys:get() end
+
 
 
 ---@class UAnimCurveCompressionCodec : UObject
 UAnimCurveCompressionCodec = {}
 
+---@return UAnimCurveCompressionCodec
+function UAnimCurveCompressionCodec:get() end
+
 
 ---@class UAnimCurveCompressionCodec_CompressedRichCurve : UAnimCurveCompressionCodec
 UAnimCurveCompressionCodec_CompressedRichCurve = {}
+
+---@return UAnimCurveCompressionCodec_CompressedRichCurve
+function UAnimCurveCompressionCodec_CompressedRichCurve:get() end
 
 
 ---@class UAnimCurveCompressionCodec_UniformIndexable : UAnimCurveCompressionCodec
 UAnimCurveCompressionCodec_UniformIndexable = {}
 
+---@return UAnimCurveCompressionCodec_UniformIndexable
+function UAnimCurveCompressionCodec_UniformIndexable:get() end
+
 
 ---@class UAnimCurveCompressionCodec_UniformlySampled : UAnimCurveCompressionCodec
 UAnimCurveCompressionCodec_UniformlySampled = {}
+
+---@return UAnimCurveCompressionCodec_UniformlySampled
+function UAnimCurveCompressionCodec_UniformlySampled:get() end
 
 
 ---@class UAnimCurveCompressionSettings : UObject
 ---@field Codec UAnimCurveCompressionCodec
 UAnimCurveCompressionSettings = {}
+
+---@return UAnimCurveCompressionSettings
+function UAnimCurveCompressionSettings:get() end
 
 
 
@@ -11453,6 +14612,9 @@ UAnimCurveCompressionSettings = {}
 ---@field CurveData FAnimationCurveData
 ---@field AnimatedBoneAttributes TArray<FAnimatedBoneAttribute>
 UAnimDataModel = {}
+
+---@return UAnimDataModel
+function UAnimDataModel:get() end
 
 ---@param TrackIndex int32
 ---@return boolean
@@ -11508,6 +14670,9 @@ function UAnimDataModel:GetAnimationSequence() end
 ---@field ActiveAnimNotifyState TArray<FAnimNotifyEvent>
 ---@field ActiveAnimNotifyEventReference TArray<FAnimNotifyEventReference>
 UAnimInstance = {}
+
+---@return UAnimInstance
+function UAnimInstance:get() end
 
 ---@param MachineIndex int32
 ---@param AnimNotifyType TSubclassOf<UAnimNotify>
@@ -11865,6 +15030,9 @@ function UAnimInstance:BlueprintBeginPlay() end
 ---@class UAnimMetaData : UObject
 UAnimMetaData = {}
 
+---@return UAnimMetaData
+function UAnimMetaData:get() end
+
 
 ---@class UAnimMontage : UAnimCompositeBase
 ---@field BlendModeIn EMontageBlendMode
@@ -11891,6 +15059,9 @@ UAnimMetaData = {}
 ---@field TimeStretchCurve FTimeStretchCurve
 ---@field TimeStretchCurveName FName
 UAnimMontage = {}
+
+---@return UAnimMontage
+function UAnimMontage:get() end
 
 ---@param InSectionName FName
 ---@return boolean
@@ -11925,6 +15096,9 @@ function UAnimMontage:CreateSlotAnimationAsDynamicMontage_WithBlendSettings(Asse
 ---@class UAnimNotify : UObject
 UAnimNotify = {}
 
+---@return UAnimNotify
+function UAnimNotify:get() end
+
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
 ---@param EventReference FAnimNotifyEventReference
@@ -11939,6 +15113,9 @@ function UAnimNotify:GetDefaultTriggerWeightThreshold() end
 ---@class UAnimNotifyLibrary : UBlueprintFunctionLibrary
 UAnimNotifyLibrary = {}
 
+---@return UAnimNotifyLibrary
+function UAnimNotifyLibrary:get() end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UAnimNotifyLibrary:NotifyStateReachedEnd(EventReference) end
@@ -11946,6 +15123,9 @@ function UAnimNotifyLibrary:NotifyStateReachedEnd(EventReference) end
 
 ---@class UAnimNotifyMirrorInspectionLibrary : UBlueprintFunctionLibrary
 UAnimNotifyMirrorInspectionLibrary = {}
+
+---@return UAnimNotifyMirrorInspectionLibrary
+function UAnimNotifyMirrorInspectionLibrary:get() end
 
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
@@ -11957,6 +15137,9 @@ function UAnimNotifyMirrorInspectionLibrary:GetMirrorDataTable(EventReference) e
 
 ---@class UAnimNotifyState : UObject
 UAnimNotifyState = {}
+
+---@return UAnimNotifyState
+function UAnimNotifyState:get() end
 
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
@@ -11984,6 +15167,9 @@ function UAnimNotifyState:GetDefaultTriggerWeightThreshold() end
 ---@class UAnimNotifyStateMachineInspectionLibrary : UBlueprintFunctionLibrary
 UAnimNotifyStateMachineInspectionLibrary = {}
 
+---@return UAnimNotifyStateMachineInspectionLibrary
+function UAnimNotifyStateMachineInspectionLibrary:get() end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@param AnimInstance UAnimInstance
 ---@param StateMachineName FName
@@ -12005,6 +15191,9 @@ function UAnimNotifyStateMachineInspectionLibrary:IsTriggeredByState(EventRefere
 ---@class UAnimNotifyState_DisableRootMotion : UAnimNotifyState
 UAnimNotifyState_DisableRootMotion = {}
 
+---@return UAnimNotifyState_DisableRootMotion
+function UAnimNotifyState_DisableRootMotion:get() end
+
 
 ---@class UAnimNotifyState_TimedParticleEffect : UAnimNotifyState
 ---@field PSTemplate UParticleSystem
@@ -12013,6 +15202,9 @@ UAnimNotifyState_DisableRootMotion = {}
 ---@field RotationOffset FRotator
 ---@field bDestroyAtEnd boolean
 UAnimNotifyState_TimedParticleEffect = {}
+
+---@return UAnimNotifyState_TimedParticleEffect
+function UAnimNotifyState_TimedParticleEffect:get() end
 
 
 
@@ -12025,6 +15217,9 @@ UAnimNotifyState_TimedParticleEffect = {}
 ---@field bRecycleSpawnedSystems boolean
 UAnimNotifyState_Trail = {}
 
+---@return UAnimNotifyState_Trail
+function UAnimNotifyState_Trail:get() end
+
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
 ---@return UParticleSystem
@@ -12033,6 +15228,9 @@ function UAnimNotifyState_Trail:OverridePSTemplate(MeshComp, Animation) end
 
 ---@class UAnimNotify_PauseClothingSimulation : UAnimNotify
 UAnimNotify_PauseClothingSimulation = {}
+
+---@return UAnimNotify_PauseClothingSimulation
+function UAnimNotify_PauseClothingSimulation:get() end
 
 
 ---@class UAnimNotify_PlayParticleEffect : UAnimNotify
@@ -12044,6 +15242,9 @@ UAnimNotify_PauseClothingSimulation = {}
 ---@field SocketName FName
 UAnimNotify_PlayParticleEffect = {}
 
+---@return UAnimNotify_PlayParticleEffect
+function UAnimNotify_PlayParticleEffect:get() end
+
 
 
 ---@class UAnimNotify_PlaySound : UAnimNotify
@@ -12054,18 +15255,30 @@ UAnimNotify_PlayParticleEffect = {}
 ---@field AttachName FName
 UAnimNotify_PlaySound = {}
 
+---@return UAnimNotify_PlaySound
+function UAnimNotify_PlaySound:get() end
+
 
 
 ---@class UAnimNotify_ResetClothingSimulation : UAnimNotify
 UAnimNotify_ResetClothingSimulation = {}
 
+---@return UAnimNotify_ResetClothingSimulation
+function UAnimNotify_ResetClothingSimulation:get() end
+
 
 ---@class UAnimNotify_ResetDynamics : UAnimNotify
 UAnimNotify_ResetDynamics = {}
 
+---@return UAnimNotify_ResetDynamics
+function UAnimNotify_ResetDynamics:get() end
+
 
 ---@class UAnimNotify_ResumeClothingSimulation : UAnimNotify
 UAnimNotify_ResumeClothingSimulation = {}
+
+---@return UAnimNotify_ResumeClothingSimulation
+function UAnimNotify_ResumeClothingSimulation:get() end
 
 
 ---@class UAnimSequence : UAnimSequenceBase
@@ -12088,6 +15301,9 @@ UAnimNotify_ResumeClothingSimulation = {}
 ---@field AttributeCurves TMap<FAnimationAttributeIdentifier, FAttributeCurve>
 UAnimSequence = {}
 
+---@return UAnimSequence
+function UAnimSequence:get() end
+
 
 
 ---@class UAnimSequenceBase : UAnimationAsset
@@ -12097,6 +15313,9 @@ UAnimSequence = {}
 ---@field bLoop boolean
 ---@field RawCurveData FRawCurveTracks
 UAnimSequenceBase = {}
+
+---@return UAnimSequenceBase
+function UAnimSequenceBase:get() end
 
 
 
@@ -12112,12 +15331,18 @@ UAnimSequenceBase = {}
 ---@field BestRatioSkelMeshName FName
 UAnimSet = {}
 
+---@return UAnimSet
+function UAnimSet:get() end
+
 
 
 ---@class UAnimSingleNodeInstance : UAnimInstance
 ---@field CurrentAsset UAnimationAsset
 ---@field PostEvaluateAnimEvent FAnimSingleNodeInstancePostEvaluateAnimEvent
 UAnimSingleNodeInstance = {}
+
+---@return UAnimSingleNodeInstance
+function UAnimSingleNodeInstance:get() end
 
 function UAnimSingleNodeInstance:StopAnim() end
 ---@param bInReverse boolean
@@ -12162,6 +15387,9 @@ function UAnimSingleNodeInstance:GetAnimationAsset() end
 ---@class UAnimStateMachineTypes : UObject
 UAnimStateMachineTypes = {}
 
+---@return UAnimStateMachineTypes
+function UAnimStateMachineTypes:get() end
+
 
 ---@class UAnimStreamable : UAnimSequenceBase
 ---@field NumberOfKeys int32
@@ -12175,6 +15403,9 @@ UAnimStateMachineTypes = {}
 ---@field bUseNormalizedRootMotionScale boolean
 UAnimStreamable = {}
 
+---@return UAnimStreamable
+function UAnimStreamable:get() end
+
 
 
 ---@class UAnimationAsset : UObject
@@ -12183,6 +15414,9 @@ UAnimStreamable = {}
 ---@field AssetUserData TArray<UAssetUserData>
 UAnimationAsset = {}
 
+---@return UAnimationAsset
+function UAnimationAsset:get() end
+
 ---@return float
 function UAnimationAsset:GetPlayLength() end
 
@@ -12190,9 +15424,15 @@ function UAnimationAsset:GetPlayLength() end
 ---@class UAnimationAssetExtensions : UBlueprintFunctionLibrary
 UAnimationAssetExtensions = {}
 
+---@return UAnimationAssetExtensions
+function UAnimationAssetExtensions:get() end
+
 
 ---@class UAnimationAttributeIdentifierExtensions : UBlueprintFunctionLibrary
 UAnimationAttributeIdentifierExtensions = {}
+
+---@return UAnimationAttributeIdentifierExtensions
+function UAnimationAttributeIdentifierExtensions:get() end
 
 ---@param Identifier FAnimationAttributeIdentifier
 ---@return boolean
@@ -12201,6 +15441,9 @@ function UAnimationAttributeIdentifierExtensions:IsValid(Identifier) end
 
 ---@class UAnimationCurveIdentifierExtensions : UBlueprintFunctionLibrary
 UAnimationCurveIdentifierExtensions = {}
+
+---@return UAnimationCurveIdentifierExtensions
+function UAnimationCurveIdentifierExtensions:get() end
 
 ---@param Identifier FAnimationCurveIdentifier
 ---@return boolean
@@ -12215,6 +15458,9 @@ function UAnimationCurveIdentifierExtensions:GetName(Identifier) end
 
 ---@class UAnimationDataModelNotifiesExtensions : UBlueprintFunctionLibrary
 UAnimationDataModelNotifiesExtensions = {}
+
+---@return UAnimationDataModelNotifiesExtensions
+function UAnimationDataModelNotifiesExtensions:get() end
 
 
 ---@class UAnimationSettings : UDeveloperSettings
@@ -12237,6 +15483,9 @@ UAnimationDataModelNotifiesExtensions = {}
 ---@field MirrorFindReplaceExpressions TArray<FMirrorFindReplaceExpression>
 UAnimationSettings = {}
 
+---@return UAnimationSettings
+function UAnimationSettings:get() end
+
 ---@return TArray<FString>
 function UAnimationSettings:GetBoneCustomAttributeNamesToImport() end
 
@@ -12253,6 +15502,9 @@ function UAnimationSettings:GetBoneCustomAttributeNamesToImport() end
 ---@field OnLowPowerModeDelegate FApplicationLifecycleComponentOnLowPowerModeDelegate
 UApplicationLifecycleComponent = {}
 
+---@return UApplicationLifecycleComponent
+function UApplicationLifecycleComponent:get() end
+
 
 
 ---@class UArrowComponent : UPrimitiveComponent
@@ -12264,6 +15516,9 @@ UApplicationLifecycleComponent = {}
 ---@field bTreatAsASprite boolean
 ---@field bReverseDirection boolean
 UArrowComponent = {}
+
+---@return UArrowComponent
+function UArrowComponent:get() end
 
 ---@param NewColor FLinearColor
 function UArrowComponent:SetArrowColor(NewColor) end
@@ -12284,10 +15539,16 @@ function UArrowComponent:SetArrowColor(NewColor) end
 ---@field Errors TArray<FString>
 UAssetExportTask = {}
 
+---@return UAssetExportTask
+function UAssetExportTask:get() end
+
 
 
 ---@class UAssetImportData : UObject
 UAssetImportData = {}
+
+---@return UAssetImportData
+function UAssetImportData:get() end
 
 
 ---@class UAssetManager : UObject
@@ -12307,6 +15568,9 @@ UAssetImportData = {}
 ---@field NumberOfSpawnedNotifications int32
 UAssetManager = {}
 
+---@return UAssetManager
+function UAssetManager:get() end
+
 
 
 ---@class UAssetManagerSettings : UDeveloperSettings
@@ -12325,21 +15589,33 @@ UAssetManager = {}
 ---@field MetaDataTagsForAssetRegistry TSet<FName>
 UAssetManagerSettings = {}
 
+---@return UAssetManagerSettings
+function UAssetManagerSettings:get() end
+
 
 
 ---@class UAssetMappingTable : UObject
 ---@field MappedAssets TArray<FAssetMapping>
 UAssetMappingTable = {}
 
+---@return UAssetMappingTable
+function UAssetMappingTable:get() end
+
 
 
 ---@class UAssetUserData : UObject
 UAssetUserData = {}
 
+---@return UAssetUserData
+function UAssetUserData:get() end
+
 
 ---@class UAsyncActionChangePrimaryAssetBundles : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionChangePrimaryAssetBundlesCompleted
 UAsyncActionChangePrimaryAssetBundles = {}
+
+---@return UAsyncActionChangePrimaryAssetBundles
+function UAsyncActionChangePrimaryAssetBundles:get() end
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAssetList TArray<FPrimaryAssetId>
@@ -12359,6 +15635,9 @@ function UAsyncActionChangePrimaryAssetBundles:AsyncChangeBundleStateForMatching
 ---@field SaveGameObject USaveGame
 UAsyncActionHandleSaveGame = {}
 
+---@return UAsyncActionHandleSaveGame
+function UAsyncActionHandleSaveGame:get() end
+
 ---@param WorldContextObject UObject
 ---@param SaveGameObject USaveGame
 ---@param SlotName FString
@@ -12376,6 +15655,9 @@ function UAsyncActionHandleSaveGame:AsyncLoadGameFromSlot(WorldContextObject, Sl
 ---@field Completed FAsyncActionLoadPrimaryAssetCompleted
 UAsyncActionLoadPrimaryAsset = {}
 
+---@return UAsyncActionLoadPrimaryAsset
+function UAsyncActionLoadPrimaryAsset:get() end
+
 ---@param WorldContextObject UObject
 ---@param PrimaryAsset FPrimaryAssetId
 ---@param LoadBundles TArray<FName>
@@ -12386,10 +15668,16 @@ function UAsyncActionLoadPrimaryAsset:AsyncLoadPrimaryAsset(WorldContextObject, 
 ---@class UAsyncActionLoadPrimaryAssetBase : UBlueprintAsyncActionBase
 UAsyncActionLoadPrimaryAssetBase = {}
 
+---@return UAsyncActionLoadPrimaryAssetBase
+function UAsyncActionLoadPrimaryAssetBase:get() end
+
 
 ---@class UAsyncActionLoadPrimaryAssetClass : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetClassCompleted
 UAsyncActionLoadPrimaryAssetClass = {}
+
+---@return UAsyncActionLoadPrimaryAssetClass
+function UAsyncActionLoadPrimaryAssetClass:get() end
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAsset FPrimaryAssetId
@@ -12402,6 +15690,9 @@ function UAsyncActionLoadPrimaryAssetClass:AsyncLoadPrimaryAssetClass(WorldConte
 ---@field Completed FAsyncActionLoadPrimaryAssetClassListCompleted
 UAsyncActionLoadPrimaryAssetClassList = {}
 
+---@return UAsyncActionLoadPrimaryAssetClassList
+function UAsyncActionLoadPrimaryAssetClassList:get() end
+
 ---@param WorldContextObject UObject
 ---@param PrimaryAssetList TArray<FPrimaryAssetId>
 ---@param LoadBundles TArray<FName>
@@ -12412,6 +15703,9 @@ function UAsyncActionLoadPrimaryAssetClassList:AsyncLoadPrimaryAssetClassList(Wo
 ---@class UAsyncActionLoadPrimaryAssetList : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetListCompleted
 UAsyncActionLoadPrimaryAssetList = {}
+
+---@return UAsyncActionLoadPrimaryAssetList
+function UAsyncActionLoadPrimaryAssetList:get() end
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAssetList TArray<FPrimaryAssetId>
@@ -12425,6 +15719,9 @@ function UAsyncActionLoadPrimaryAssetList:AsyncLoadPrimaryAssetList(WorldContext
 ---@field ReplicationRedundancy int32
 UAsyncPhysicsData = {}
 
+---@return UAsyncPhysicsData
+function UAsyncPhysicsData:get() end
+
 
 
 ---@class UAsyncPhysicsInputComponent : UActorComponent
@@ -12433,6 +15730,9 @@ UAsyncPhysicsData = {}
 ---@field DataToConsume UAsyncPhysicsData
 ---@field DataToWrite UAsyncPhysicsData
 UAsyncPhysicsInputComponent = {}
+
+---@return UAsyncPhysicsInputComponent
+function UAsyncPhysicsInputComponent:get() end
 
 ---@param AsyncPhysicsData UAsyncPhysicsData
 function UAsyncPhysicsInputComponent:ServerRPCBufferInput(AsyncPhysicsData) end
@@ -12444,6 +15744,9 @@ function UAsyncPhysicsInputComponent:GetDataToConsume() end
 
 ---@class UAtmosphericFogComponent : USkyAtmosphereComponent
 UAtmosphericFogComponent = {}
+
+---@return UAtmosphericFogComponent
+function UAtmosphericFogComponent:get() end
 
 ---@param NewSunMultiplier float
 function UAtmosphericFogComponent:SetSunMultiplier(NewSunMultiplier) end
@@ -12478,6 +15781,9 @@ function UAtmosphericFogComponent:DisableGroundScattering(NewGroundScattering) e
 ---@class UAudioBus : UObject
 ---@field AudioBusChannels EAudioBusChannels
 UAudioBus = {}
+
+---@return UAudioBus
+function UAudioBus:get() end
 
 
 
@@ -12530,6 +15836,9 @@ UAudioBus = {}
 ---@field AutoAttachParent TWeakObjectPtr<USceneComponent>
 ---@field AutoAttachSocketName FName
 UAudioComponent = {}
+
+---@return UAudioComponent
+function UAudioComponent:get() end
 
 ---@param DelayTime float
 function UAudioComponent:StopDelayed(DelayTime) end
@@ -12634,9 +15943,15 @@ function UAudioComponent:AdjustAttenuation(InAttenuationSettings) end
 ---@class UAudioEngineSubsystem : UDynamicSubsystem
 UAudioEngineSubsystem = {}
 
+---@return UAudioEngineSubsystem
+function UAudioEngineSubsystem:get() end
+
 
 ---@class UAudioParameterConversionStatics : UBlueprintFunctionLibrary
 UAudioParameterConversionStatics = {}
+
+---@return UAudioParameterConversionStatics
+function UAudioParameterConversionStatics:get() end
 
 ---@param Name FName
 ---@param String FString
@@ -12711,19 +16026,31 @@ function UAudioParameterConversionStatics:BooleanArrayToAudioParameter(Name, Boo
 ---@field DefaultSoundConcurrency USoundConcurrency
 UAudioSettings = {}
 
+---@return UAudioSettings
+function UAudioSettings:get() end
+
 
 
 ---@class UAudioSubsystemCollectionRoot : UObject
 UAudioSubsystemCollectionRoot = {}
 
+---@return UAudioSubsystemCollectionRoot
+function UAudioSubsystemCollectionRoot:get() end
+
 
 ---@class UAudioWidgetSubsystem : UEngineSubsystem
 UAudioWidgetSubsystem = {}
+
+---@return UAudioWidgetSubsystem
+function UAudioWidgetSubsystem:get() end
 
 
 ---@class UAutoDestroySubsystem : UTickableWorldSubsystem
 ---@field ActorsToPoll TArray<AActor>
 UAutoDestroySubsystem = {}
+
+---@return UAutoDestroySubsystem
+function UAutoDestroySubsystem:get() end
 
 ---@param Actor AActor
 ---@param EndPlayReason EEndPlayReason::Type
@@ -12753,6 +16080,9 @@ function UAutoDestroySubsystem:OnActorEndPlay(Actor, EndPlayReason) end
 ---@field DefaultInteractiveFramerateDuration float
 UAutomationTestSettings = {}
 
+---@return UAutomationTestSettings
+function UAutomationTestSettings:get() end
+
 
 
 ---@class UAvoidanceManager : UObject
@@ -12764,6 +16094,9 @@ UAutomationTestSettings = {}
 ---@field TestHeightDifference float
 ---@field HeightCheckMargin float
 UAvoidanceManager = {}
+
+---@return UAvoidanceManager
+function UAvoidanceManager:get() end
 
 ---@param MovementComp UMovementComponent
 ---@param AvoidanceWeight float
@@ -12789,6 +16122,9 @@ function UAvoidanceManager:GetAvoidanceVelocityForComponent(MovementComp) end
 ---@field OpacityMaskRefVal float
 UBillboardComponent = {}
 
+---@return UBillboardComponent
+function UBillboardComponent:get() end
+
 ---@param NewU int32
 ---@param NewUL int32
 ---@param NewV int32
@@ -12811,6 +16147,9 @@ function UBillboardComponent:SetOpacityMaskRefVal(RefVal) end
 ---@field ProfileEntries TArray<FBlendProfileBoneEntry>
 ---@field Mode EBlendProfileMode
 UBlendProfile = {}
+
+---@return UBlendProfile
+function UBlendProfile:get() end
 
 
 
@@ -12835,11 +16174,17 @@ UBlendProfile = {}
 ---@field DimensionIndices TArray<int32>
 UBlendSpace = {}
 
+---@return UBlendSpace
+function UBlendSpace:get() end
+
 
 
 ---@class UBlendSpace1D : UBlendSpace
 ---@field bScaleAnimation boolean
 UBlendSpace1D = {}
+
+---@return UBlendSpace1D
+function UBlendSpace1D:get() end
 
 
 
@@ -12857,10 +16202,16 @@ UBlendSpace1D = {}
 ---@field InheritableComponentHandler UInheritableComponentHandler
 UBlueprint = {}
 
+---@return UBlueprint
+function UBlueprint:get() end
+
 
 
 ---@class UBlueprintAsyncActionBase : UObject
 UBlueprintAsyncActionBase = {}
+
+---@return UBlueprintAsyncActionBase
+function UBlueprintAsyncActionBase:get() end
 
 function UBlueprintAsyncActionBase:Activate() end
 
@@ -12872,14 +16223,23 @@ function UBlueprintAsyncActionBase:Activate() end
 ---@field BlueprintGuid FGuid
 UBlueprintCore = {}
 
+---@return UBlueprintCore
+function UBlueprintCore:get() end
+
 
 
 ---@class UBlueprintExtension : UObject
 UBlueprintExtension = {}
 
+---@return UBlueprintExtension
+function UBlueprintExtension:get() end
+
 
 ---@class UBlueprintFunctionLibrary : UObject
 UBlueprintFunctionLibrary = {}
+
+---@return UBlueprintFunctionLibrary
+function UBlueprintFunctionLibrary:get() end
 
 
 ---@class UBlueprintGeneratedClass : UClass
@@ -12898,10 +16258,16 @@ UBlueprintFunctionLibrary = {}
 ---@field CookedComponentInstancingData TMap<FName, FBlueprintCookedComponentInstancingData>
 UBlueprintGeneratedClass = {}
 
+---@return UBlueprintGeneratedClass
+function UBlueprintGeneratedClass:get() end
+
 
 
 ---@class UBlueprintMapLibrary : UBlueprintFunctionLibrary
 UBlueprintMapLibrary = {}
+
+---@return UBlueprintMapLibrary
+function UBlueprintMapLibrary:get() end
 
 ---@param Object UObject
 ---@param PropertyName FName
@@ -12945,6 +16311,9 @@ function UBlueprintMapLibrary:Map_Add(TargetMap, Key, Value) end
 
 ---@class UBlueprintPathsLibrary : UBlueprintFunctionLibrary
 UBlueprintPathsLibrary = {}
+
+---@return UBlueprintPathsLibrary
+function UBlueprintPathsLibrary:get() end
 
 ---@return FString
 function UBlueprintPathsLibrary:VideoCaptureDir() end
@@ -13159,6 +16528,9 @@ function UBlueprintPathsLibrary:AutomationDir() end
 ---@class UBlueprintPlatformLibrary : UBlueprintFunctionLibrary
 UBlueprintPlatformLibrary = {}
 
+---@return UBlueprintPlatformLibrary
+function UBlueprintPlatformLibrary:get() end
+
 ---@param NewAllowedDeviceOrientation EScreenOrientation::Type
 function UBlueprintPlatformLibrary:SetAllowedDeviceOrientation(NewAllowedDeviceOrientation) end
 ---@param inSecondsFromNow int32
@@ -13201,6 +16573,9 @@ function UBlueprintPlatformLibrary:CancelLocalNotification(ActivationEvent) end
 
 ---@class UBlueprintSetLibrary : UBlueprintFunctionLibrary
 UBlueprintSetLibrary = {}
+
+---@return UBlueprintSetLibrary
+function UBlueprintSetLibrary:get() end
 
 ---@param Object UObject
 ---@param PropertyName FName
@@ -13253,6 +16628,9 @@ function UBlueprintSetLibrary:Set_Add(TargetSet, NewItem) end
 
 ---@class UBlueprintTypeConversions : UObject
 UBlueprintTypeConversions = {}
+
+---@return UBlueprintTypeConversions
+function UBlueprintTypeConversions:get() end
 
 ---@param Inset TSet<int32>
 ---@return TSet<int32>
@@ -13336,11 +16714,17 @@ function UBlueprintTypeConversions:ConvertArrayType(inArray) end
 ---@field BuildScale3D FVector
 UBodySetup = {}
 
+---@return UBodySetup
+function UBodySetup:get() end
+
 
 
 ---@class UBoneMaskFilter : UObject
 ---@field BlendPoses TArray<FInputBlendPose>
 UBoneMaskFilter = {}
+
+---@return UBoneMaskFilter
+function UBoneMaskFilter:get() end
 
 
 
@@ -13350,6 +16734,9 @@ UBoneMaskFilter = {}
 ---@field HiddenLevels TArray<FString>
 UBookMark = {}
 
+---@return UBookMark
+function UBookMark:get() end
+
 
 
 ---@class UBookMark2D : UBookmarkBase
@@ -13357,10 +16744,16 @@ UBookMark = {}
 ---@field Location FIntPoint
 UBookMark2D = {}
 
+---@return UBookMark2D
+function UBookMark2D:get() end
+
 
 
 ---@class UBookmarkBase : UObject
 UBookmarkBase = {}
+
+---@return UBookmarkBase
+function UBookmarkBase:get() end
 
 
 ---@class UBoundsCopyComponent : UActorComponent
@@ -13374,12 +16767,18 @@ UBookmarkBase = {}
 ---@field bCopyZBounds boolean
 UBoundsCopyComponent = {}
 
+---@return UBoundsCopyComponent
+function UBoundsCopyComponent:get() end
+
 
 
 ---@class UBoxComponent : UShapeComponent
 ---@field BoxExtent FVector
 ---@field LineThickness float
 UBoxComponent = {}
+
+---@return UBoxComponent
+function UBoxComponent:get() end
 
 ---@param Thickness float
 function UBoxComponent:SetLineThickness(Thickness) end
@@ -13398,6 +16797,9 @@ function UBoxComponent:GetScaledBoxExtent() end
 ---@field PreviewCaptureBox UBoxComponent
 UBoxReflectionCaptureComponent = {}
 
+---@return UBoxReflectionCaptureComponent
+function UBoxReflectionCaptureComponent:get() end
+
 
 
 ---@class UBrushBuilder : UObject
@@ -13410,6 +16812,9 @@ UBoxReflectionCaptureComponent = {}
 ---@field MergeCoplanars boolean
 UBrushBuilder = {}
 
+---@return UBrushBuilder
+function UBrushBuilder:get() end
+
 
 
 ---@class UBrushComponent : UPrimitiveComponent
@@ -13417,20 +16822,32 @@ UBrushBuilder = {}
 ---@field BrushBodySetup UBodySetup
 UBrushComponent = {}
 
+---@return UBrushComponent
+function UBrushComponent:get() end
+
 
 
 ---@class UBuiltInAttributesExtensions : UBlueprintFunctionLibrary
 UBuiltInAttributesExtensions = {}
+
+---@return UBuiltInAttributesExtensions
+function UBuiltInAttributesExtensions:get() end
 
 
 ---@class UButtonStyleAsset : UObject
 ---@field ButtonStyle FButtonStyle
 UButtonStyleAsset = {}
 
+---@return UButtonStyleAsset
+function UButtonStyleAsset:get() end
+
 
 
 ---@class UCachedAnimDataLibrary : UBlueprintFunctionLibrary
 UCachedAnimDataLibrary = {}
+
+---@return UCachedAnimDataLibrary
+function UCachedAnimDataLibrary:get() end
 
 ---@param InAnimInstance UAnimInstance
 ---@param CachedAnimStateData FCachedAnimStateData
@@ -13460,6 +16877,9 @@ function UCachedAnimDataLibrary:StateMachine_GetGlobalWeight(InAnimInstance, Cac
 ---@field PostProcessBlendWeight float
 ---@field PostProcessSettings FPostProcessSettings
 UCameraComponent = {}
+
+---@return UCameraComponent
+function UCameraComponent:get() end
 
 ---@param bInUseFieldOfViewForLOD boolean
 function UCameraComponent:SetUseFieldOfViewForLOD(bInUseFieldOfViewForLOD) end
@@ -13493,6 +16913,9 @@ function UCameraComponent:AddOrUpdateBlendable(InBlendableObject, InWeight) end
 ---@class UCameraLensEffectInterfaceClassSupportLibrary : UBlueprintFunctionLibrary
 UCameraLensEffectInterfaceClassSupportLibrary = {}
 
+---@return UCameraLensEffectInterfaceClassSupportLibrary
+function UCameraLensEffectInterfaceClassSupportLibrary:get() end
+
 ---@param Class TSubclassOf<AActor>
 ---@param Var FCameraLensInterfaceClassSupport
 ---@param Result EInterfaceValidResult
@@ -13517,6 +16940,9 @@ function UCameraLensEffectInterfaceClassSupportLibrary:GetInterfaceClass(CameraL
 ---@field AlphaOutTime float
 ---@field Alpha float
 UCameraModifier = {}
+
+---@return UCameraModifier
+function UCameraModifier:get() end
 
 ---@param InOwner AActor
 function UCameraModifier:OnCameraOwnerDestroyed(InOwner) end
@@ -13547,6 +16973,9 @@ function UCameraModifier:BlueprintModifyCamera(DeltaTime, ViewLocation, ViewRota
 ---@field SplitScreenShakeScale float
 UCameraModifier_CameraShake = {}
 
+---@return UCameraModifier_CameraShake
+function UCameraModifier_CameraShake:get() end
+
 
 
 ---@class UCameraShakeBase : UObject
@@ -13555,6 +16984,9 @@ UCameraModifier_CameraShake = {}
 ---@field RootShakePattern UCameraShakePattern
 ---@field CameraManager APlayerCameraManager
 UCameraShakeBase = {}
+
+---@return UCameraShakeBase
+function UCameraShakeBase:get() end
 
 ---@param InPattern UCameraShakePattern
 function UCameraShakeBase:SetRootShakePattern(InPattern) end
@@ -13565,6 +16997,9 @@ function UCameraShakeBase:GetRootShakePattern() end
 ---@class UCameraShakePattern : UObject
 UCameraShakePattern = {}
 
+---@return UCameraShakePattern
+function UCameraShakePattern:get() end
+
 
 ---@class UCameraShakeSourceComponent : USceneComponent
 ---@field Attenuation ECameraShakeAttenuation
@@ -13573,6 +17008,9 @@ UCameraShakePattern = {}
 ---@field CameraShake TSubclassOf<UCameraShakeBase>
 ---@field bAutoStart boolean
 UCameraShakeSourceComponent = {}
+
+---@return UCameraShakeSourceComponent
+function UCameraShakeSourceComponent:get() end
 
 ---@param InCameraShake TSubclassOf<UCameraShakeBase>
 ---@param bImmediately boolean
@@ -13592,6 +17030,9 @@ function UCameraShakeSourceComponent:GetAttenuationFactor(Location) end
 
 ---@class UCancellableAsyncAction : UBlueprintAsyncActionBase
 UCancellableAsyncAction = {}
+
+---@return UCancellableAsyncAction
+function UCancellableAsyncAction:get() end
 
 ---@return boolean
 function UCancellableAsyncAction:IsActive() end
@@ -13614,6 +17055,9 @@ function UCancellableAsyncAction:Cancel() end
 ---@field GradientTexture0 UTexture2D
 ---@field ReporterGraph UReporterGraph
 UCanvas = {}
+
+---@return UCanvas
+function UCanvas:get() end
 
 ---@param RenderFont UFont
 ---@param RenderText FString
@@ -13709,6 +17153,9 @@ function UCanvas:K2_Deproject(ScreenPosition, WorldOrigin, WorldDirection) end
 ---@field bShouldClearRenderTargetOnReceiveUpdate boolean
 UCanvasRenderTarget2D = {}
 
+---@return UCanvasRenderTarget2D
+function UCanvasRenderTarget2D:get() end
+
 function UCanvasRenderTarget2D:UpdateResource() end
 ---@param Canvas UCanvas
 ---@param Width int32
@@ -13729,6 +17176,9 @@ function UCanvasRenderTarget2D:CreateCanvasRenderTarget2D(WorldContextObject, Ca
 ---@field CapsuleHalfHeight float
 ---@field CapsuleRadius float
 UCapsuleComponent = {}
+
+---@return UCapsuleComponent
+function UCapsuleComponent:get() end
 
 ---@param InRadius float
 ---@param InHalfHeight float
@@ -13771,6 +17221,9 @@ function UCapsuleComponent:GetScaledCapsuleHalfHeight() end
 ---@class UChannel : UObject
 ---@field Connection UNetConnection
 UChannel = {}
+
+---@return UChannel
+function UChannel:get() end
 
 
 
@@ -13931,6 +17384,9 @@ UChannel = {}
 ---@field AnimRootMotionVelocity FVector
 UCharacterMovementComponent = {}
 
+---@return UCharacterMovementComponent
+function UCharacterMovementComponent:get() end
+
 ---@param InWalkableFloorZ float
 function UCharacterMovementComponent:SetWalkableFloorZ(InWalkableFloorZ) end
 ---@param InWalkableFloorAngle float
@@ -14033,6 +17489,9 @@ function UCharacterMovementComponent:AddForce(Force) end
 ---@field CheatManagerExtensions TArray<UCheatManagerExtension>
 UCheatManager = {}
 
+---@return UCheatManager
+function UCheatManager:get() end
+
 function UCheatManager:Walk() end
 function UCheatManager:ViewSelf() end
 ---@param S FString
@@ -14127,6 +17586,9 @@ function UCheatManager:BugIt(ScreenShotDescription) end
 ---@class UCheatManagerExtension : UObject
 UCheatManagerExtension = {}
 
+---@return UCheatManagerExtension
+function UCheatManagerExtension:get() end
+
 function UCheatManagerExtension:RemovedFromCheatManager() end
 ---@return APlayerController
 function UCheatManagerExtension:GetPlayerController() end
@@ -14137,6 +17599,9 @@ function UCheatManagerExtension:AddedToCheatManager() end
 ---@field CheckBoxStyle FCheckBoxStyle
 UCheckBoxStyleAsset = {}
 
+---@return UCheckBoxStyleAsset
+function UCheckBoxStyleAsset:get() end
+
 
 
 ---@class UChildActorComponent : USceneComponent
@@ -14144,6 +17609,9 @@ UCheckBoxStyleAsset = {}
 ---@field ChildActor AActor
 ---@field ChildActorTemplate AActor
 UChildActorComponent = {}
+
+---@return UChildActorComponent
+function UChildActorComponent:get() end
 
 ---@param InClass TSubclassOf<AActor>
 function UChildActorComponent:SetChildActorClass(InClass) end
@@ -14158,6 +17626,9 @@ function UChildActorComponent:OnChildActorDestroyed(DestroyedActor) end
 ---@field Parent UNetConnection
 UChildConnection = {}
 
+---@return UChildConnection
+function UChildConnection:get() end
+
 
 
 ---@class UClassCookedMetaData : UObject
@@ -14165,12 +17636,18 @@ UChildConnection = {}
 ---@field FunctionsMetaData TMap<FName, FStructCookedMetaDataStore>
 UClassCookedMetaData = {}
 
+---@return UClassCookedMetaData
+function UClassCookedMetaData:get() end
+
 
 
 ---@class UCloudStorageBase : UPlatformInterfaceBase
 ---@field LocalCloudFiles TArray<FString>
 ---@field bSuppressDelegateCalls boolean
 UCloudStorageBase = {}
+
+---@return UCloudStorageBase
+function UCloudStorageBase:get() end
 
 
 
@@ -14181,6 +17658,9 @@ UCloudStorageBase = {}
 ---@field ProfileRedirects TArray<FRedirector>
 ---@field CollisionChannelRedirects TArray<FRedirector>
 UCollisionProfile = {}
+
+---@return UCollisionProfile
+function UCollisionProfile:get() end
 
 
 
@@ -14198,32 +17678,53 @@ UCollisionProfile = {}
 ---@field ShowProgress boolean
 UCommandlet = {}
 
+---@return UCommandlet
+function UCommandlet:get() end
+
 
 
 ---@class UComponentDelegateBinding : UDynamicBlueprintBinding
 ---@field ComponentDelegateBindings TArray<FBlueprintComponentDelegateBinding>
 UComponentDelegateBinding = {}
 
+---@return UComponentDelegateBinding
+function UComponentDelegateBinding:get() end
+
 
 
 ---@class UComponentElementCounterInterface : UObject
 UComponentElementCounterInterface = {}
 
+---@return UComponentElementCounterInterface
+function UComponentElementCounterInterface:get() end
+
 
 ---@class UComponentElementHierarchyInterface : UObject
 UComponentElementHierarchyInterface = {}
+
+---@return UComponentElementHierarchyInterface
+function UComponentElementHierarchyInterface:get() end
 
 
 ---@class UComponentElementObjectInterface : UObject
 UComponentElementObjectInterface = {}
 
+---@return UComponentElementObjectInterface
+function UComponentElementObjectInterface:get() end
+
 
 ---@class UComponentElementSelectionInterface : UObject
 UComponentElementSelectionInterface = {}
 
+---@return UComponentElementSelectionInterface
+function UComponentElementSelectionInterface:get() end
+
 
 ---@class UComponentElementWorldInterface : UObject
 UComponentElementWorldInterface = {}
+
+---@return UComponentElementWorldInterface
+function UComponentElementWorldInterface:get() end
 
 
 ---@class UCompositeCurveTable : UCurveTable
@@ -14231,12 +17732,18 @@ UComponentElementWorldInterface = {}
 ---@field OldParentTables TArray<UCurveTable>
 UCompositeCurveTable = {}
 
+---@return UCompositeCurveTable
+function UCompositeCurveTable:get() end
+
 
 
 ---@class UCompositeDataTable : UDataTable
 ---@field ParentTables TArray<UDataTable>
 ---@field OldParentTables TArray<UDataTable>
 UCompositeDataTable = {}
+
+---@return UCompositeDataTable
+function UCompositeDataTable:get() end
 
 
 
@@ -14247,10 +17754,16 @@ UCompositeDataTable = {}
 ---@field HistoryBuffer TArray<FString>
 UConsole = {}
 
+---@return UConsole
+function UConsole:get() end
+
 
 
 ---@class UConstraintInstanceBlueprintLibrary : UBlueprintFunctionLibrary
 UConstraintInstanceBlueprintLibrary = {}
+
+---@return UConstraintInstanceBlueprintLibrary
+function UConstraintInstanceBlueprintLibrary:get() end
 
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableProjection boolean
@@ -14499,30 +18012,51 @@ function UConstraintInstanceBlueprintLibrary:CopyParams(Accessor, SourceAccessor
 ---@field PackageRoot FString
 UContentBundleDescriptor = {}
 
+---@return UContentBundleDescriptor
+function UContentBundleDescriptor:get() end
+
 
 
 ---@class UContentBundleDuplicateForPIEHelper : UObject
 UContentBundleDuplicateForPIEHelper = {}
 
+---@return UContentBundleDuplicateForPIEHelper
+function UContentBundleDuplicateForPIEHelper:get() end
+
 
 ---@class UContentBundleEngineSubsystem : UEngineSubsystem
 UContentBundleEngineSubsystem = {}
+
+---@return UContentBundleEngineSubsystem
+function UContentBundleEngineSubsystem:get() end
 
 
 ---@class UContentBundleManager : UObject
 UContentBundleManager = {}
 
+---@return UContentBundleManager
+function UContentBundleManager:get() end
+
 
 ---@class UContentBundleUnsavedActorMonitor : UObject
 UContentBundleUnsavedActorMonitor = {}
+
+---@return UContentBundleUnsavedActorMonitor
+function UContentBundleUnsavedActorMonitor:get() end
 
 
 ---@class UControlChannel : UChannel
 UControlChannel = {}
 
+---@return UControlChannel
+function UControlChannel:get() end
+
 
 ---@class UCurveBase : UObject
 UCurveBase = {}
+
+---@return UCurveBase
+function UCurveBase:get() end
 
 ---@param MinValue float
 ---@param MaxValue float
@@ -14536,6 +18070,9 @@ function UCurveBase:GetTimeRange(MinTime, MaxTime) end
 ---@field FloatCurve FRichCurve
 ---@field bIsEventCurve boolean
 UCurveFloat = {}
+
+---@return UCurveFloat
+function UCurveFloat:get() end
 
 ---@param InTime float
 ---@return float
@@ -14552,6 +18089,9 @@ function UCurveFloat:GetFloatValue(InTime) end
 ---@field AdjustMinAlpha float
 ---@field AdjustMaxAlpha float
 UCurveLinearColor = {}
+
+---@return UCurveLinearColor
+function UCurveLinearColor:get() end
 
 ---@param InTime float
 ---@return FLinearColor
@@ -14571,6 +18111,9 @@ function UCurveLinearColor:GetClampedLinearColorValue(InTime) end
 ---@field GradientCurves TArray<UCurveLinearColor>
 UCurveLinearColorAtlas = {}
 
+---@return UCurveLinearColorAtlas
+function UCurveLinearColorAtlas:get() end
+
 ---@param InCurve UCurveLinearColor
 ---@param Position float
 ---@return boolean
@@ -14580,10 +18123,16 @@ function UCurveLinearColorAtlas:GetCurvePosition(InCurve, Position) end
 ---@class UCurveTable : UObject
 UCurveTable = {}
 
+---@return UCurveTable
+function UCurveTable:get() end
+
 
 ---@class UCurveVector : UCurveBase
 ---@field FloatCurves FRichCurve
 UCurveVector = {}
+
+---@return UCurveVector
+function UCurveVector:get() end
 
 ---@param InTime float
 ---@return FVector
@@ -14593,9 +18142,15 @@ function UCurveVector:GetVectorValue(InTime) end
 ---@class UDEPRECATED_Breakpoint : UObject
 UDEPRECATED_Breakpoint = {}
 
+---@return UDEPRECATED_Breakpoint
+function UDEPRECATED_Breakpoint:get() end
+
 
 ---@class UDEPRECATED_CurveEdPresetCurve : UObject
 UDEPRECATED_CurveEdPresetCurve = {}
+
+---@return UDEPRECATED_CurveEdPresetCurve
+function UDEPRECATED_CurveEdPresetCurve:get() end
 
 
 ---@class UDEPRECATED_DataLayer : UObject
@@ -14606,6 +18161,9 @@ UDEPRECATED_CurveEdPresetCurve = {}
 ---@field Parent UDEPRECATED_DataLayer
 ---@field Children TArray<UDEPRECATED_DataLayer>
 UDEPRECATED_DataLayer = {}
+
+---@return UDEPRECATED_DataLayer
+function UDEPRECATED_DataLayer:get() end
 
 ---@return boolean
 function UDEPRECATED_DataLayer:IsVisible() end
@@ -14635,6 +18193,9 @@ function UDEPRECATED_DataLayer:Equals(ActorDataLayer) end
 ---@class UDPICustomScalingRule : UObject
 UDPICustomScalingRule = {}
 
+---@return UDPICustomScalingRule
+function UDPICustomScalingRule:get() end
+
 
 ---@class UDamageType : UObject
 ---@field bCausedByWorld boolean
@@ -14646,11 +18207,17 @@ UDPICustomScalingRule = {}
 ---@field DamageFalloff float
 UDamageType = {}
 
+---@return UDamageType
+function UDamageType:get() end
+
 
 
 ---@class UDataAsset : UObject
 ---@field NativeClass TSubclassOf<UDataAsset>
 UDataAsset = {}
+
+---@return UDataAsset
+function UDataAsset:get() end
 
 
 
@@ -14658,11 +18225,17 @@ UDataAsset = {}
 ---@field OnDataDrivenCVarDelegate FDataDrivenCVarEngineSubsystemOnDataDrivenCVarDelegate
 UDataDrivenCVarEngineSubsystem = {}
 
+---@return UDataDrivenCVarEngineSubsystem
+function UDataDrivenCVarEngineSubsystem:get() end
+
 
 
 ---@class UDataDrivenConsoleVariableSettings : UDeveloperSettings
 ---@field CVarsArray TArray<FDataDrivenConsoleVariable>
 UDataDrivenConsoleVariableSettings = {}
+
+---@return UDataDrivenConsoleVariableSettings
+function UDataDrivenConsoleVariableSettings:get() end
 
 
 
@@ -14670,6 +18243,9 @@ UDataDrivenConsoleVariableSettings = {}
 ---@field DataLayerType EDataLayerType
 ---@field DebugColor FColor
 UDataLayerAsset = {}
+
+---@return UDataLayerAsset
+function UDataLayerAsset:get() end
 
 ---@return boolean
 function UDataLayerAsset:IsRuntime() end
@@ -14684,6 +18260,9 @@ function UDataLayerAsset:GetDebugColor() end
 ---@field Parent UDataLayerInstance
 ---@field Children TArray<UDataLayerInstance>
 UDataLayerInstance = {}
+
+---@return UDataLayerInstance
+function UDataLayerInstance:get() end
 
 ---@return boolean
 function UDataLayerInstance:IsVisible() end
@@ -14705,11 +18284,17 @@ function UDataLayerInstance:GetDebugColor() end
 ---@field DataLayerAsset UDataLayerAsset
 UDataLayerInstanceWithAsset = {}
 
+---@return UDataLayerInstanceWithAsset
+function UDataLayerInstanceWithAsset:get() end
+
 
 
 ---@class UDataLayerSubsystem : UWorldSubsystem
 ---@field OnDataLayerRuntimeStateChanged FDataLayerSubsystemOnDataLayerRuntimeStateChanged
 UDataLayerSubsystem = {}
+
+---@return UDataLayerSubsystem
+function UDataLayerSubsystem:get() end
 
 ---@param InDataLayerLabel FName
 ---@param InState EDataLayerState
@@ -14774,6 +18359,9 @@ function UDataLayerSubsystem:GetActiveDataLayerNames() end
 ---@class UDataStreamChannel : UChannel
 UDataStreamChannel = {}
 
+---@return UDataStreamChannel
+function UDataStreamChannel:get() end
+
 
 ---@class UDataTable : UObject
 ---@field RowStruct UScriptStruct
@@ -14783,10 +18371,16 @@ UDataStreamChannel = {}
 ---@field ImportKeyField FString
 UDataTable = {}
 
+---@return UDataTable
+function UDataTable:get() end
+
 
 
 ---@class UDataTableFunctionLibrary : UBlueprintFunctionLibrary
 UDataTableFunctionLibrary = {}
+
+---@return UDataTableFunctionLibrary
+function UDataTableFunctionLibrary:get() end
 
 ---@param Table UDataTable
 ---@param OutRowNames TArray<FName>
@@ -14817,14 +18411,23 @@ function UDataTableFunctionLibrary:DoesDataTableRowExist(Table, RowName) end
 ---@field CycleViewModes TArray<FDebugCameraControllerSettingsViewModeIndex>
 UDebugCameraControllerSettings = {}
 
+---@return UDebugCameraControllerSettings
+function UDebugCameraControllerSettings:get() end
+
 
 
 ---@class UDebugDrawComponent : UPrimitiveComponent
 UDebugDrawComponent = {}
 
+---@return UDebugDrawComponent
+function UDebugDrawComponent:get() end
+
 
 ---@class UDebugDrawService : UBlueprintFunctionLibrary
 UDebugDrawService = {}
+
+---@return UDebugDrawService
+function UDebugDrawService:get() end
 
 
 ---@class UDecalComponent : USceneComponent
@@ -14838,6 +18441,9 @@ UDebugDrawService = {}
 ---@field bDestroyOwnerAfterFade boolean
 ---@field DecalSize FVector
 UDecalComponent = {}
+
+---@return UDecalComponent
+function UDecalComponent:get() end
 
 ---@param Value int32
 function UDecalComponent:SetSortOrder(Value) end
@@ -14869,13 +18475,22 @@ function UDecalComponent:CreateDynamicMaterialInstance() end
 ---@class UDefault__AnimBlueprintGeneratedClass
 UDefault__AnimBlueprintGeneratedClass = {}
 
+---@return UDefault__AnimBlueprintGeneratedClass
+function UDefault__AnimBlueprintGeneratedClass:get() end
+
 
 ---@class UDefault__BlueprintGeneratedClass
 UDefault__BlueprintGeneratedClass = {}
 
+---@return UDefault__BlueprintGeneratedClass
+function UDefault__BlueprintGeneratedClass:get() end
+
 
 ---@class UDemoNetConnection : UNetConnection
 UDemoNetConnection = {}
+
+---@return UDemoNetConnection
+function UDemoNetConnection:get() end
 
 
 ---@class UDemoNetDriver : UNetDriver
@@ -14885,10 +18500,16 @@ UDemoNetConnection = {}
 ---@field SpectatorControllers TArray<APlayerController>
 UDemoNetDriver = {}
 
+---@return UDemoNetDriver
+function UDemoNetDriver:get() end
+
 
 
 ---@class UDemoPendingNetGame : UPendingNetGame
 UDemoPendingNetGame = {}
+
+---@return UDemoPendingNetGame
+function UDemoPendingNetGame:get() end
 
 
 ---@class UDeprecatedDataLayerInstance : UDataLayerInstance
@@ -14897,6 +18518,9 @@ UDemoPendingNetGame = {}
 ---@field DataLayerType EDataLayerType
 ---@field DebugColor FColor
 UDeprecatedDataLayerInstance = {}
+
+---@return UDeprecatedDataLayerInstance
+function UDeprecatedDataLayerInstance:get() end
 
 
 
@@ -14909,11 +18533,17 @@ UDeprecatedDataLayerInstance = {}
 ---@field MatchingRules TArray<FDPMatchingRulestruct>
 UDeviceProfile = {}
 
+---@return UDeviceProfile
+function UDeviceProfile:get() end
+
 
 
 ---@class UDeviceProfileFragment : UObject
 ---@field CVars TArray<FString>
 UDeviceProfileFragment = {}
+
+---@return UDeviceProfileFragment
+function UDeviceProfileFragment:get() end
 
 
 
@@ -14922,10 +18552,16 @@ UDeviceProfileFragment = {}
 ---@field BackupProfiles TArray<UDeviceProfile>
 UDeviceProfileManager = {}
 
+---@return UDeviceProfileManager
+function UDeviceProfileManager:get() end
+
 
 
 ---@class UDialogueSoundWaveProxy : USoundBase
 UDialogueSoundWaveProxy = {}
+
+---@return UDialogueSoundWaveProxy
+function UDialogueSoundWaveProxy:get() end
 
 
 ---@class UDialogueVoice : UObject
@@ -14933,6 +18569,9 @@ UDialogueSoundWaveProxy = {}
 ---@field Plurality EGrammaticalNumber::Type
 ---@field LocalizationGUID FGuid
 UDialogueVoice = {}
+
+---@return UDialogueVoice
+function UDialogueVoice:get() end
 
 
 
@@ -14944,6 +18583,9 @@ UDialogueVoice = {}
 ---@field ContextMappings TArray<FDialogueContextMapping>
 ---@field LocalizationGUID FGuid
 UDialogueWave = {}
+
+---@return UDialogueWave
+function UDialogueWave:get() end
 
 
 
@@ -14991,6 +18633,9 @@ UDialogueWave = {}
 ---@field ShadowAmount float
 UDirectionalLightComponent = {}
 
+---@return UDirectionalLightComponent
+function UDirectionalLightComponent:get() end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetShadowSourceAngleFactor(NewValue) end
 ---@param NewValue float
@@ -15030,11 +18675,17 @@ function UDirectionalLightComponent:SetAtmosphereSunLight(bNewValue) end
 ---@class UDistribution : UObject
 UDistribution = {}
 
+---@return UDistribution
+function UDistribution:get() end
+
 
 ---@class UDistributionFloat : UDistribution
 ---@field bCanBeBaked boolean
 ---@field bBakedDataSuccesfully boolean
 UDistributionFloat = {}
+
+---@return UDistributionFloat
+function UDistributionFloat:get() end
 
 
 
@@ -15042,11 +18693,17 @@ UDistributionFloat = {}
 ---@field Constant float
 UDistributionFloatConstant = {}
 
+---@return UDistributionFloatConstant
+function UDistributionFloatConstant:get() end
+
 
 
 ---@class UDistributionFloatConstantCurve : UDistributionFloat
 ---@field ConstantCurve FInterpCurveFloat
 UDistributionFloatConstantCurve = {}
+
+---@return UDistributionFloatConstantCurve
+function UDistributionFloatConstantCurve:get() end
 
 
 
@@ -15059,10 +18716,16 @@ UDistributionFloatConstantCurve = {}
 ---@field ParamMode DistributionParamMode
 UDistributionFloatParameterBase = {}
 
+---@return UDistributionFloatParameterBase
+function UDistributionFloatParameterBase:get() end
+
 
 
 ---@class UDistributionFloatParticleParameter : UDistributionFloatParameterBase
 UDistributionFloatParticleParameter = {}
+
+---@return UDistributionFloatParticleParameter
+function UDistributionFloatParticleParameter:get() end
 
 
 ---@class UDistributionFloatUniform : UDistributionFloat
@@ -15070,11 +18733,17 @@ UDistributionFloatParticleParameter = {}
 ---@field Max float
 UDistributionFloatUniform = {}
 
+---@return UDistributionFloatUniform
+function UDistributionFloatUniform:get() end
+
 
 
 ---@class UDistributionFloatUniformCurve : UDistributionFloat
 ---@field ConstantCurve FInterpCurveVector2D
 UDistributionFloatUniformCurve = {}
+
+---@return UDistributionFloatUniformCurve
+function UDistributionFloatUniformCurve:get() end
 
 
 
@@ -15084,6 +18753,9 @@ UDistributionFloatUniformCurve = {}
 ---@field bBakedDataSuccesfully boolean
 UDistributionVector = {}
 
+---@return UDistributionVector
+function UDistributionVector:get() end
+
 
 
 ---@class UDistributionVectorConstant : UDistributionVector
@@ -15092,6 +18764,9 @@ UDistributionVector = {}
 ---@field LockedAxes EDistributionVectorLockFlags
 UDistributionVectorConstant = {}
 
+---@return UDistributionVectorConstant
+function UDistributionVectorConstant:get() end
+
 
 
 ---@class UDistributionVectorConstantCurve : UDistributionVector
@@ -15099,6 +18774,9 @@ UDistributionVectorConstant = {}
 ---@field bLockAxes boolean
 ---@field LockedAxes EDistributionVectorLockFlags
 UDistributionVectorConstantCurve = {}
+
+---@return UDistributionVectorConstantCurve
+function UDistributionVectorConstantCurve:get() end
 
 
 
@@ -15111,10 +18789,16 @@ UDistributionVectorConstantCurve = {}
 ---@field ParamModes DistributionParamMode
 UDistributionVectorParameterBase = {}
 
+---@return UDistributionVectorParameterBase
+function UDistributionVectorParameterBase:get() end
+
 
 
 ---@class UDistributionVectorParticleParameter : UDistributionVectorParameterBase
 UDistributionVectorParticleParameter = {}
+
+---@return UDistributionVectorParticleParameter
+function UDistributionVectorParticleParameter:get() end
 
 
 ---@class UDistributionVectorUniform : UDistributionVector
@@ -15126,6 +18810,9 @@ UDistributionVectorParticleParameter = {}
 ---@field bUseExtremes boolean
 UDistributionVectorUniform = {}
 
+---@return UDistributionVectorUniform
+function UDistributionVectorUniform:get() end
+
 
 
 ---@class UDistributionVectorUniformCurve : UDistributionVector
@@ -15136,6 +18823,9 @@ UDistributionVectorUniform = {}
 ---@field MirrorFlags EDistributionVectorMirrorFlags
 ---@field bUseExtremes boolean
 UDistributionVectorUniformCurve = {}
+
+---@return UDistributionVectorUniformCurve
+function UDistributionVectorUniformCurve:get() end
 
 
 
@@ -15149,18 +18839,30 @@ UDistributionVectorUniformCurve = {}
 ---@field Texture UTexture
 UDrawFrustumComponent = {}
 
+---@return UDrawFrustumComponent
+function UDrawFrustumComponent:get() end
+
 
 
 ---@class UDrawSphereComponent : USphereComponent
 UDrawSphereComponent = {}
 
+---@return UDrawSphereComponent
+function UDrawSphereComponent:get() end
+
 
 ---@class UDynamicBlueprintBinding : UObject
 UDynamicBlueprintBinding = {}
 
+---@return UDynamicBlueprintBinding
+function UDynamicBlueprintBinding:get() end
+
 
 ---@class UDynamicSubsystem : USubsystem
 UDynamicSubsystem = {}
+
+---@return UDynamicSubsystem
+function UDynamicSubsystem:get() end
 
 
 ---@class UEdGraph : UObject
@@ -15170,6 +18872,9 @@ UDynamicSubsystem = {}
 ---@field bAllowDeletion boolean
 ---@field bAllowRenaming boolean
 UEdGraph = {}
+
+---@return UEdGraph
+function UEdGraph:get() end
 
 
 
@@ -15191,12 +18896,18 @@ UEdGraph = {}
 ---@field NodeGuid FGuid
 UEdGraphNode = {}
 
+---@return UEdGraphNode
+function UEdGraphNode:get() end
+
 
 
 ---@class UEdGraphNode_Documentation : UEdGraphNode
 ---@field Link FString
 ---@field Excerpt FString
 UEdGraphNode_Documentation = {}
+
+---@return UEdGraphNode_Documentation
+function UEdGraphNode_Documentation:get() end
 
 
 
@@ -15215,10 +18926,16 @@ UEdGraphNode_Documentation = {}
 ---@field ReferencePassThroughConnection UEdGraphPin_Deprecated
 UEdGraphPin_Deprecated = {}
 
+---@return UEdGraphPin_Deprecated
+function UEdGraphPin_Deprecated:get() end
+
 
 
 ---@class UEdGraphSchema : UObject
 UEdGraphSchema = {}
+
+---@return UEdGraphSchema
+function UEdGraphSchema:get() end
 
 
 ---@class UEndpointSubmix : USoundSubmixBase
@@ -15226,6 +18943,9 @@ UEdGraphSchema = {}
 ---@field EndpointSettingsClass TSubclassOf<UAudioEndpointSettingsBase>
 ---@field EndpointSettings UAudioEndpointSettingsBase
 UEndpointSubmix = {}
+
+---@return UEndpointSubmix
+function UEndpointSubmix:get() end
 
 
 
@@ -15460,22 +19180,37 @@ UEndpointSubmix = {}
 ---@field NextWorldContextHandle int32
 UEngine = {}
 
+---@return UEngine
+function UEngine:get() end
+
 
 
 ---@class UEngineBaseTypes : UObject
 UEngineBaseTypes = {}
 
+---@return UEngineBaseTypes
+function UEngineBaseTypes:get() end
+
 
 ---@class UEngineCustomTimeStep : UObject
 UEngineCustomTimeStep = {}
+
+---@return UEngineCustomTimeStep
+function UEngineCustomTimeStep:get() end
 
 
 ---@class UEngineElementsLibrary : UBlueprintFunctionLibrary
 UEngineElementsLibrary = {}
 
+---@return UEngineElementsLibrary
+function UEngineElementsLibrary:get() end
+
 
 ---@class UEngineHandlerComponentFactory : UHandlerComponentFactory
 UEngineHandlerComponentFactory = {}
+
+---@return UEngineHandlerComponentFactory
+function UEngineHandlerComponentFactory:get() end
 
 
 ---@class UEngineMessage : ULocalMessage
@@ -15489,19 +19224,31 @@ UEngineHandlerComponentFactory = {}
 ---@field NewSpecMessage FString
 UEngineMessage = {}
 
+---@return UEngineMessage
+function UEngineMessage:get() end
+
 
 
 ---@class UEngineSubsystem : UDynamicSubsystem
 UEngineSubsystem = {}
 
+---@return UEngineSubsystem
+function UEngineSubsystem:get() end
+
 
 ---@class UEngineTypes : UObject
 UEngineTypes = {}
+
+---@return UEngineTypes
+function UEngineTypes:get() end
 
 
 ---@class UEnumCookedMetaData : UObject
 ---@field EnumMetaData FObjectCookedMetaDataStore
 UEnumCookedMetaData = {}
+
+---@return UEnumCookedMetaData
+function UEnumCookedMetaData:get() end
 
 
 
@@ -15535,6 +19282,9 @@ UEnumCookedMetaData = {}
 ---@field VolumetricFogStaticLightingScatteringIntensity float
 ---@field bOverrideLightColorsWithFogInscatteringColors boolean
 UExponentialHeightFogComponent = {}
+
+---@return UExponentialHeightFogComponent
+function UExponentialHeightFogComponent:get() end
 
 ---@param NewValue float
 function UExponentialHeightFogComponent:SetVolumetricFogScatteringDistribution(NewValue) end
@@ -15599,6 +19349,9 @@ function UExponentialHeightFogComponent:SetDirectionalInscatteringColor(Value) e
 ---@field ExportTask UAssetExportTask
 UExporter = {}
 
+---@return UExporter
+function UExporter:get() end
+
 ---@param Task UAssetExportTask
 ---@return boolean
 function UExporter:ScriptRunAssetExportTask(Task) end
@@ -15615,10 +19368,16 @@ function UExporter:RunAssetExportTask(Task) end
 ---@field PoolPrimeSize uint32
 UFXSystemAsset = {}
 
+---@return UFXSystemAsset
+function UFXSystemAsset:get() end
+
 
 
 ---@class UFXSystemComponent : UPrimitiveComponent
 UFXSystemComponent = {}
+
+---@return UFXSystemComponent
+function UFXSystemComponent:get() end
 
 ---@param ParameterName FName
 ---@param Param FVector
@@ -15662,6 +19421,9 @@ function UFXSystemComponent:GetFXSystemAsset() end
 ---@field bPositionCorrected boolean
 UFloatingPawnMovement = {}
 
+---@return UFloatingPawnMovement
+function UFloatingPawnMovement:get() end
+
 
 
 ---@class UFont : UObject
@@ -15683,6 +19445,9 @@ UFloatingPawnMovement = {}
 ---@field CompositeFont FCompositeFont
 UFont = {}
 
+---@return UFont
+function UFont:get() end
+
 
 
 ---@class UFontFace : UObject
@@ -15692,17 +19457,26 @@ UFont = {}
 ---@field LayoutMethod EFontLayoutMethod
 UFontFace = {}
 
+---@return UFontFace
+function UFontFace:get() end
+
 
 
 ---@class UFontImportOptions : UObject
 ---@field Data FFontImportOptionsData
 UFontImportOptions = {}
 
+---@return UFontImportOptions
+function UFontImportOptions:get() end
+
 
 
 ---@class UForceFeedbackAttenuation : UObject
 ---@field Attenuation FForceFeedbackAttenuationSettings
 UForceFeedbackAttenuation = {}
+
+---@return UForceFeedbackAttenuation
+function UForceFeedbackAttenuation:get() end
 
 
 
@@ -15718,6 +19492,9 @@ UForceFeedbackAttenuation = {}
 ---@field AttenuationOverrides FForceFeedbackAttenuationSettings
 ---@field OnForceFeedbackFinished FForceFeedbackComponentOnForceFeedbackFinished
 UForceFeedbackComponent = {}
+
+---@return UForceFeedbackComponent
+function UForceFeedbackComponent:get() end
 
 function UForceFeedbackComponent:Stop() end
 ---@param NewIntensityMultiplier float
@@ -15738,6 +19515,9 @@ function UForceFeedbackComponent:AdjustAttenuation(InAttenuationSettings) end
 ---@field Duration float
 UForceFeedbackEffect = {}
 
+---@return UForceFeedbackEffect
+function UForceFeedbackEffect:get() end
+
 
 
 ---@class UGameEngine : UEngine
@@ -15745,6 +19525,9 @@ UForceFeedbackEffect = {}
 ---@field ServerFlushLogInterval float
 ---@field GameInstance UGameInstance
 UGameEngine = {}
+
+---@return UGameEngine
+function UGameEngine:get() end
 
 
 
@@ -15756,6 +19539,9 @@ UGameEngine = {}
 ---@field OnInputDeviceConnectionChange FGameInstanceOnInputDeviceConnectionChange
 ---@field OnUserInputDevicePairingChange FGameInstanceOnUserInputDevicePairingChange
 UGameInstance = {}
+
+---@return UGameInstance
+function UGameInstance:get() end
 
 function UGameInstance:ReceiveShutdown() end
 function UGameInstance:ReceiveInit() end
@@ -15772,6 +19558,9 @@ function UGameInstance:DebugCreatePlayer(ControllerId) end
 
 ---@class UGameInstanceSubsystem : USubsystem
 UGameInstanceSubsystem = {}
+
+---@return UGameInstanceSubsystem
+function UGameInstanceSubsystem:get() end
 
 
 ---@class UGameUserSettings : UObject
@@ -15806,6 +19595,9 @@ UGameInstanceSubsystem = {}
 ---@field HDRDisplayOutputNits int32
 ---@field OnGameUserSettingsUINeedsUpdate FGameUserSettingsOnGameUserSettingsUINeedsUpdate
 UGameUserSettings = {}
+
+---@return UGameUserSettings
+function UGameUserSettings:get() end
 
 function UGameUserSettings:ValidateSettings() end
 ---@return boolean
@@ -15965,6 +19757,9 @@ function UGameUserSettings:ApplyHardwareBenchmarkResults() end
 ---@field GameInstance UGameInstance
 UGameViewportClient = {}
 
+---@return UGameViewportClient
+function UGameViewportClient:get() end
+
 function UGameViewportClient:SSSwapControllers() end
 function UGameViewportClient:ShowTitleSafeArea() end
 ---@param PlayerIndex int32
@@ -15973,6 +19768,9 @@ function UGameViewportClient:SetConsoleTarget(PlayerIndex) end
 
 ---@class UGameplayStatics : UBlueprintFunctionLibrary
 UGameplayStatics = {}
+
+---@return UGameplayStatics
+function UGameplayStatics:get() end
 
 ---@param InSoundClass USoundClass
 function UGameplayStatics:UnRetainAllSoundsInSoundClass(InSoundClass) end
@@ -16752,6 +20550,9 @@ function UGameplayStatics:ActivateReverbEffect(WorldContextObject, ReverbEffect,
 ---@field MaxObjectsInEditor int32
 UGarbageCollectionSettings = {}
 
+---@return UGarbageCollectionSettings
+function UGarbageCollectionSettings:get() end
+
 
 
 ---@class UGraphNodeContextMenuContext : UObject
@@ -16761,18 +20562,30 @@ UGarbageCollectionSettings = {}
 ---@field bIsDebugging boolean
 UGraphNodeContextMenuContext = {}
 
+---@return UGraphNodeContextMenuContext
+function UGraphNodeContextMenuContext:get() end
+
 
 
 ---@class UHLODBuilder : UObject
 UHLODBuilder = {}
 
+---@return UHLODBuilder
+function UHLODBuilder:get() end
+
 
 ---@class UHLODBuilderSettings : UObject
 UHLODBuilderSettings = {}
 
+---@return UHLODBuilderSettings
+function UHLODBuilderSettings:get() end
+
 
 ---@class UHLODEngineSubsystem : UEngineSubsystem
 UHLODEngineSubsystem = {}
+
+---@return UHLODEngineSubsystem
+function UHLODEngineSubsystem:get() end
 
 
 ---@class UHLODLayer : UObject
@@ -16785,6 +20598,9 @@ UHLODEngineSubsystem = {}
 ---@field ParentLayer TSoftObjectPtr<UHLODLayer>
 UHLODLayer = {}
 
+---@return UHLODLayer
+function UHLODLayer:get() end
+
 
 
 ---@class UHLODProxy : UObject
@@ -16792,18 +20608,30 @@ UHLODLayer = {}
 ---@field HLODActors TMap<UHLODProxyDesc, FHLODProxyMesh>
 UHLODProxy = {}
 
+---@return UHLODProxy
+function UHLODProxy:get() end
+
 
 
 ---@class UHLODProxyDesc : UObject
 UHLODProxyDesc = {}
 
+---@return UHLODProxyDesc
+function UHLODProxyDesc:get() end
+
 
 ---@class UHLODSubsystem : UWorldSubsystem
 UHLODSubsystem = {}
 
+---@return UHLODSubsystem
+function UHLODSubsystem:get() end
+
 
 ---@class UHapticFeedbackEffect_Base : UObject
 UHapticFeedbackEffect_Base = {}
+
+---@return UHapticFeedbackEffect_Base
+function UHapticFeedbackEffect_Base:get() end
 
 
 ---@class UHapticFeedbackEffect_Buffer : UHapticFeedbackEffect_Base
@@ -16811,11 +20639,17 @@ UHapticFeedbackEffect_Base = {}
 ---@field SampleRate int32
 UHapticFeedbackEffect_Buffer = {}
 
+---@return UHapticFeedbackEffect_Buffer
+function UHapticFeedbackEffect_Buffer:get() end
+
 
 
 ---@class UHapticFeedbackEffect_Curve : UHapticFeedbackEffect_Base
 ---@field HapticDetails FHapticFeedbackDetails_Curve
 UHapticFeedbackEffect_Curve = {}
+
+---@return UHapticFeedbackEffect_Curve
+function UHapticFeedbackEffect_Curve:get() end
 
 
 
@@ -16824,10 +20658,16 @@ UHapticFeedbackEffect_Curve = {}
 ---@field bUseStereo boolean
 UHapticFeedbackEffect_SoundWave = {}
 
+---@return UHapticFeedbackEffect_SoundWave
+function UHapticFeedbackEffect_SoundWave:get() end
+
 
 
 ---@class UHealthSnapshotBlueprintLibrary : UBlueprintFunctionLibrary
 UHealthSnapshotBlueprintLibrary = {}
+
+---@return UHealthSnapshotBlueprintLibrary
+function UHealthSnapshotBlueprintLibrary:get() end
 
 function UHealthSnapshotBlueprintLibrary:StopPerformanceSnapshots() end
 function UHealthSnapshotBlueprintLibrary:StartPerformanceSnapshots() end
@@ -16851,6 +20691,9 @@ function UHealthSnapshotBlueprintLibrary:LogPerformanceSnapshot(SnapshotTitle, b
 ---@field InstanceCountToRender int32
 UHierarchicalInstancedStaticMeshComponent = {}
 
+---@return UHierarchicalInstancedStaticMeshComponent
+function UHierarchicalInstancedStaticMeshComponent:get() end
+
 
 
 ---@class UHierarchicalLODSetup : UObject
@@ -16858,10 +20701,16 @@ UHierarchicalInstancedStaticMeshComponent = {}
 ---@field OverrideBaseMaterial TSoftObjectPtr<UMaterialInterface>
 UHierarchicalLODSetup = {}
 
+---@return UHierarchicalLODSetup
+function UHierarchicalLODSetup:get() end
+
 
 
 ---@class UImportanceSamplingLibrary : UBlueprintFunctionLibrary
 UImportanceSamplingLibrary = {}
+
+---@return UImportanceSamplingLibrary
+function UImportanceSamplingLibrary:get() end
 
 ---@param Index int32
 ---@param Dimension int32
@@ -16920,6 +20769,9 @@ function UImportanceSamplingLibrary:BreakImportanceTexture(ImportanceTexture, Te
 ---@field ClosedAdDelegates TArray<FInGameAdManagerClosedAdDelegates>
 UInGameAdManager = {}
 
+---@return UInGameAdManager
+function UInGameAdManager:get() end
+
 
 
 ---@class UInheritableComponentHandler : UObject
@@ -16927,11 +20779,17 @@ UInGameAdManager = {}
 ---@field UnnecessaryComponents TArray<UActorComponent>
 UInheritableComponentHandler = {}
 
+---@return UInheritableComponentHandler
+function UInheritableComponentHandler:get() end
+
 
 
 ---@class UInitialActiveSoundParams : UObject
 ---@field AudioParams TArray<FAudioParameter>
 UInitialActiveSoundParams = {}
+
+---@return UInitialActiveSoundParams
+function UInitialActiveSoundParams:get() end
 
 
 
@@ -16939,11 +20797,17 @@ UInitialActiveSoundParams = {}
 ---@field InputActionDelegateBindings TArray<FBlueprintInputActionDelegateBinding>
 UInputActionDelegateBinding = {}
 
+---@return UInputActionDelegateBinding
+function UInputActionDelegateBinding:get() end
+
 
 
 ---@class UInputAxisDelegateBinding : UInputDelegateBinding
 ---@field InputAxisDelegateBindings TArray<FBlueprintInputAxisDelegateBinding>
 UInputAxisDelegateBinding = {}
+
+---@return UInputAxisDelegateBinding
+function UInputAxisDelegateBinding:get() end
 
 
 
@@ -16951,11 +20815,17 @@ UInputAxisDelegateBinding = {}
 ---@field InputAxisKeyDelegateBindings TArray<FBlueprintInputAxisKeyDelegateBinding>
 UInputAxisKeyDelegateBinding = {}
 
+---@return UInputAxisKeyDelegateBinding
+function UInputAxisKeyDelegateBinding:get() end
+
 
 
 ---@class UInputComponent : UActorComponent
 ---@field CachedKeyToActionInfo TArray<FCachedKeyToActionInfo>
 UInputComponent = {}
+
+---@return UInputComponent
+function UInputComponent:get() end
 
 ---@param Key FKey
 ---@return boolean
@@ -16995,10 +20865,16 @@ function UInputComponent:GetControllerAnalogKeyState(Key) end
 ---@class UInputDelegateBinding : UDynamicBlueprintBinding
 UInputDelegateBinding = {}
 
+---@return UInputDelegateBinding
+function UInputDelegateBinding:get() end
+
 
 ---@class UInputKeyDelegateBinding : UInputDelegateBinding
 ---@field InputKeyDelegateBindings TArray<FBlueprintInputKeyDelegateBinding>
 UInputKeyDelegateBinding = {}
+
+---@return UInputKeyDelegateBinding
+function UInputKeyDelegateBinding:get() end
 
 
 
@@ -17035,6 +20911,9 @@ UInputKeyDelegateBinding = {}
 ---@field ConsoleKeys TArray<FKey>
 UInputSettings = {}
 
+---@return UInputSettings
+function UInputSettings:get() end
+
 function UInputSettings:SaveKeyMappings() end
 ---@param KeyMapping FInputAxisKeyMapping
 ---@param bForceRebuildKeymaps boolean
@@ -17067,14 +20946,23 @@ function UInputSettings:AddActionMapping(KeyMapping, bForceRebuildKeymaps) end
 ---@field InputTouchDelegateBindings TArray<FBlueprintInputTouchDelegateBinding>
 UInputTouchDelegateBinding = {}
 
+---@return UInputTouchDelegateBinding
+function UInputTouchDelegateBinding:get() end
+
 
 
 ---@class UInputVectorAxisDelegateBinding : UInputAxisKeyDelegateBinding
 UInputVectorAxisDelegateBinding = {}
 
+---@return UInputVectorAxisDelegateBinding
+function UInputVectorAxisDelegateBinding:get() end
+
 
 ---@class UInstancedPlacemenClientSettings : UObject
 UInstancedPlacemenClientSettings = {}
+
+---@return UInstancedPlacemenClientSettings
+function UInstancedPlacemenClientSettings:get() end
 
 
 ---@class UInstancedStaticMeshComponent : UStaticMeshComponent
@@ -17090,6 +20978,9 @@ UInstancedPlacemenClientSettings = {}
 ---@field NumPendingLightmaps int32
 ---@field CachedMappings TArray<FInstancedStaticMeshMappingInfo>
 UInstancedStaticMeshComponent = {}
+
+---@return UInstancedStaticMeshComponent
+function UInstancedStaticMeshComponent:get() end
 
 ---@param InstanceIndex int32
 ---@param NewInstanceTransform FTransform
@@ -17173,12 +21064,18 @@ function UInstancedStaticMeshComponent:AddInstance(InstanceTransform, bWorldSpac
 ---@field SignedInt32Variable int32
 UIntSerialization = {}
 
+---@return UIntSerialization
+function UIntSerialization:get() end
+
 
 
 ---@class UInterpCurveEdSetup : UObject
 ---@field Tabs TArray<FCurveEdTab>
 ---@field ActiveTab int32
 UInterpCurveEdSetup = {}
+
+---@return UInterpCurveEdSetup
+function UInterpCurveEdSetup:get() end
 
 
 
@@ -17199,6 +21096,9 @@ UInterpCurveEdSetup = {}
 ---@field MaxSimulationIterations int32
 ---@field ControlPoints TArray<FInterpControlPoint>
 UInterpToMovementComponent = {}
+
+---@return UInterpToMovementComponent
+function UInterpToMovementComponent:get() end
 
 ---@param HitResult FHitResult
 function UInterpToMovementComponent:StopSimulating(HitResult) end
@@ -17228,6 +21128,9 @@ function UInterpToMovementComponent:AddControlPointPosition(Pos, bPositionIsRela
 
 ---@class UKismetArrayLibrary : UBlueprintFunctionLibrary
 UKismetArrayLibrary = {}
+
+---@return UKismetArrayLibrary
+function UKismetArrayLibrary:get() end
 
 ---@param Object UObject
 ---@param PropertyName FName
@@ -17323,6 +21226,9 @@ function UKismetArrayLibrary:Array_Add(TargetArray, NewItem) end
 ---@class UKismetGuidLibrary : UBlueprintFunctionLibrary
 UKismetGuidLibrary = {}
 
+---@return UKismetGuidLibrary
+function UKismetGuidLibrary:get() end
+
 ---@param GuidString FString
 ---@param OutGuid FGuid
 ---@param Success boolean
@@ -17349,6 +21255,9 @@ function UKismetGuidLibrary:Conv_GuidToString(InGuid) end
 
 ---@class UKismetInputLibrary : UBlueprintFunctionLibrary
 UKismetInputLibrary = {}
+
+---@return UKismetInputLibrary
+function UKismetInputLibrary:get() end
 
 ---@param Input FPointerEvent
 ---@return boolean
@@ -17518,6 +21427,9 @@ function UKismetInputLibrary:CalibrateTilt() end
 ---@class UKismetInternationalizationLibrary : UBlueprintFunctionLibrary
 UKismetInternationalizationLibrary = {}
 
+---@return UKismetInternationalizationLibrary
+function UKismetInternationalizationLibrary:get() end
+
 ---@param Culture FString
 ---@param SaveToConfig boolean
 ---@return boolean
@@ -17574,6 +21486,9 @@ function UKismetInternationalizationLibrary:ClearCurrentAssetGroupCulture(AssetG
 ---@class UKismetMaterialLibrary : UBlueprintFunctionLibrary
 UKismetMaterialLibrary = {}
 
+---@return UKismetMaterialLibrary
+function UKismetMaterialLibrary:get() end
+
 ---@param WorldContextObject UObject
 ---@param Collection UMaterialParameterCollection
 ---@param ParameterName FName
@@ -17604,6 +21519,9 @@ function UKismetMaterialLibrary:CreateDynamicMaterialInstance(WorldContextObject
 
 ---@class UKismetMathLibrary : UBlueprintFunctionLibrary
 UKismetMathLibrary = {}
+
+---@return UKismetMathLibrary
+function UKismetMathLibrary:get() end
 
 ---@param A int32
 ---@param B int32
@@ -20383,6 +24301,9 @@ function UKismetMathLibrary:Abs(A) end
 ---@class UKismetNodeHelperLibrary : UBlueprintFunctionLibrary
 UKismetNodeHelperLibrary = {}
 
+---@return UKismetNodeHelperLibrary
+function UKismetNodeHelperLibrary:get() end
+
 ---@param Data int32
 ---@param Index int32
 function UKismetNodeHelperLibrary:MarkBit(Data, Index) end
@@ -20439,6 +24360,9 @@ function UKismetNodeHelperLibrary:BitIsMarked(Data, Index) end
 
 ---@class UKismetRenderingLibrary : UBlueprintFunctionLibrary
 UKismetRenderingLibrary = {}
+
+---@return UKismetRenderingLibrary
+function UKismetRenderingLibrary:get() end
 
 ---@param PrimitiveComponent UPrimitiveComponent
 ---@param bCastInsetShadow boolean
@@ -20601,6 +24525,9 @@ function UKismetRenderingLibrary:BeginDrawCanvasToRenderTarget(WorldContextObjec
 
 ---@class UKismetStringLibrary : UBlueprintFunctionLibrary
 UKismetStringLibrary = {}
+
+---@return UKismetStringLibrary
+function UKismetStringLibrary:get() end
 
 ---@param SourceString FString
 ---@return FString
@@ -20902,6 +24829,9 @@ function UKismetStringLibrary:BuildString_Bool(AppendTo, Prefix, InBool, Suffix)
 ---@class UKismetStringTableLibrary : UBlueprintFunctionLibrary
 UKismetStringTableLibrary = {}
 
+---@return UKismetStringTableLibrary
+function UKismetStringTableLibrary:get() end
+
 ---@param TableId FName
 ---@return boolean
 function UKismetStringTableLibrary:IsRegisteredTableId(TableId) end
@@ -20934,6 +24864,9 @@ function UKismetStringTableLibrary:GetKeysFromStringTable(TableId) end
 
 ---@class UKismetSystemLibrary : UBlueprintFunctionLibrary
 UKismetSystemLibrary = {}
+
+---@return UKismetSystemLibrary
+function UKismetSystemLibrary:get() end
 
 function UKismetSystemLibrary:UnregisterForRemoteNotifications() end
 ---@param PrimaryAssetIdList TArray<FPrimaryAssetId>
@@ -22205,6 +26138,9 @@ function UKismetSystemLibrary:AddFloatHistorySample(Value, FloatHistory) end
 ---@class UKismetTextLibrary : UBlueprintFunctionLibrary
 UKismetTextLibrary = {}
 
+---@return UKismetTextLibrary
+function UKismetTextLibrary:get() end
+
 ---@param InText FText
 ---@return FText
 function UKismetTextLibrary:TextTrimTrailing(InText) end
@@ -22406,6 +26342,9 @@ function UKismetTextLibrary:AsCurrency_Float(Value, RoundingMode, bAlwaysSign, b
 ---@field SubComponents TArray<UPrimitiveComponent>
 ULODSyncComponent = {}
 
+---@return ULODSyncComponent
+function ULODSyncComponent:get() end
+
 ---@return FString
 function ULODSyncComponent:GetLODSyncDebugText() end
 
@@ -22415,6 +26354,9 @@ function ULODSyncComponent:GetLODSyncDebugText() end
 ---@field bIsVisible boolean
 ---@field ActorStats TArray<FLayerActorStats>
 ULayer = {}
+
+---@return ULayer
+function ULayer:get() end
 
 
 
@@ -22450,28 +26392,46 @@ ULayer = {}
 ---@field DestroyedReplicatedStaticActors TArray<FReplicatedStaticActorDestructionInfo>
 ULevel = {}
 
+---@return ULevel
+function ULevel:get() end
+
 
 
 ---@class ULevelActorContainer : UObject
 ---@field Actors TArray<AActor>
 ULevelActorContainer = {}
 
+---@return ULevelActorContainer
+function ULevelActorContainer:get() end
+
 
 
 ---@class ULevelInstanceComponent : USceneComponent
 ULevelInstanceComponent = {}
 
+---@return ULevelInstanceComponent
+function ULevelInstanceComponent:get() end
+
 
 ---@class ULevelInstanceEditorObject : UObject
 ULevelInstanceEditorObject = {}
+
+---@return ULevelInstanceEditorObject
+function ULevelInstanceEditorObject:get() end
 
 
 ---@class ULevelInstanceSubsystem : UWorldSubsystem
 ULevelInstanceSubsystem = {}
 
+---@return ULevelInstanceSubsystem
+function ULevelInstanceSubsystem:get() end
+
 
 ---@class ULevelScriptBlueprint : UBlueprint
 ULevelScriptBlueprint = {}
+
+---@return ULevelScriptBlueprint
+function ULevelScriptBlueprint:get() end
 
 
 ---@class ULevelStreaming : UObject
@@ -22500,6 +26460,9 @@ ULevelScriptBlueprint = {}
 ---@field LoadedLevel ULevel
 ---@field PendingUnloadLevel ULevel
 ULevelStreaming = {}
+
+---@return ULevelStreaming
+function ULevelStreaming:get() end
 
 ---@return boolean
 function ULevelStreaming:ShouldBeLoaded() end
@@ -22535,11 +26498,17 @@ function ULevelStreaming:CreateInstance(UniqueInstanceName) end
 ---@class ULevelStreamingAlwaysLoaded : ULevelStreaming
 ULevelStreamingAlwaysLoaded = {}
 
+---@return ULevelStreamingAlwaysLoaded
+function ULevelStreamingAlwaysLoaded:get() end
+
 
 ---@class ULevelStreamingDynamic : ULevelStreaming
 ---@field bInitiallyLoaded boolean
 ---@field bInitiallyVisible boolean
 ULevelStreamingDynamic = {}
+
+---@return ULevelStreamingDynamic
+function ULevelStreamingDynamic:get() end
 
 ---@param WorldContextObject UObject
 ---@param Level TSoftObjectPtr<UWorld>
@@ -22566,13 +26535,22 @@ function ULevelStreamingDynamic:LoadLevelInstance(WorldContextObject, LevelName,
 ---@class ULevelStreamingLevelInstance : ULevelStreamingDynamic
 ULevelStreamingLevelInstance = {}
 
+---@return ULevelStreamingLevelInstance
+function ULevelStreamingLevelInstance:get() end
+
 
 ---@class ULevelStreamingLevelInstanceEditor : ULevelStreamingAlwaysLoaded
 ULevelStreamingLevelInstanceEditor = {}
 
+---@return ULevelStreamingLevelInstanceEditor
+function ULevelStreamingLevelInstanceEditor:get() end
+
 
 ---@class ULevelStreamingPersistent : ULevelStreaming
 ULevelStreamingPersistent = {}
+
+---@return ULevelStreamingPersistent
+function ULevelStreamingPersistent:get() end
 
 
 ---@class ULightComponent : ULightComponentBase
@@ -22610,6 +26588,9 @@ ULevelStreamingPersistent = {}
 ---@field bUseRayTracedDistanceFieldShadows boolean
 ---@field RayStartOffsetDepthScale float
 ULightComponent = {}
+
+---@return ULightComponent
+function ULightComponent:get() end
 
 ---@param NewIntensity float
 function ULightComponent:SetVolumetricScatteringIntensity(NewIntensity) end
@@ -22693,6 +26674,9 @@ function ULightComponent:SetAffectDynamicIndirectLighting(bNewValue) end
 ---@field SamplesPerPixel int32
 ULightComponentBase = {}
 
+---@return ULightComponentBase
+function ULightComponentBase:get() end
+
 ---@param NewValue int32
 function ULightComponentBase:SetSamplesPerPixel(NewValue) end
 ---@param bNewValue boolean
@@ -22716,19 +26700,31 @@ function ULightComponentBase:GetLightColor() end
 ---@class ULightMapTexture2D : UTexture2D
 ULightMapTexture2D = {}
 
+---@return ULightMapTexture2D
+function ULightMapTexture2D:get() end
+
 
 ---@class ULightMapVirtualTexture : UVirtualTexture
 ULightMapVirtualTexture = {}
+
+---@return ULightMapVirtualTexture
+function ULightMapVirtualTexture:get() end
 
 
 ---@class ULightMapVirtualTexture2D : UTexture2D
 ---@field TypeToLayer TArray<int8>
 ULightMapVirtualTexture2D = {}
 
+---@return ULightMapVirtualTexture2D
+function ULightMapVirtualTexture2D:get() end
+
 
 
 ---@class ULightWeightInstanceBlueprintFunctionLibrary : UBlueprintFunctionLibrary
 ULightWeightInstanceBlueprintFunctionLibrary = {}
+
+---@return ULightWeightInstanceBlueprintFunctionLibrary
+function ULightWeightInstanceBlueprintFunctionLibrary:get() end
 
 ---@param actorClass UClass
 ---@param Transform FTransform
@@ -22746,11 +26742,17 @@ function ULightWeightInstanceBlueprintFunctionLibrary:ConvertActorToLightWeightI
 ---@field Surfaces TArray<int32>
 ULightmappedSurfaceCollection = {}
 
+---@return ULightmappedSurfaceCollection
+function ULightmappedSurfaceCollection:get() end
+
 
 
 ---@class ULightmassPortalComponent : USceneComponent
 ---@field PreviewBox UBoxComponent
 ULightmassPortalComponent = {}
+
+---@return ULightmassPortalComponent
+function ULightmassPortalComponent:get() end
 
 
 
@@ -22758,10 +26760,16 @@ ULightmassPortalComponent = {}
 ---@field LightmassSettings FLightmassPrimitiveSettings
 ULightmassPrimitiveSettingsObject = {}
 
+---@return ULightmassPrimitiveSettingsObject
+function ULightmassPrimitiveSettingsObject:get() end
+
 
 
 ---@class ULineBatchComponent : UPrimitiveComponent
 ULineBatchComponent = {}
+
+---@return ULineBatchComponent
+function ULineBatchComponent:get() end
 
 
 ---@class ULocalLightComponent : ULightComponent
@@ -22771,6 +26779,9 @@ ULineBatchComponent = {}
 ---@field AttenuationRadius float
 ---@field LightmassSettings FLightmassPointLightSettings
 ULocalLightComponent = {}
+
+---@return ULocalLightComponent
+function ULocalLightComponent:get() end
 
 ---@param NewIntensityUnits ELightUnits
 function ULocalLightComponent:SetIntensityUnits(NewIntensityUnits) end
@@ -22786,6 +26797,9 @@ function ULocalLightComponent:GetUnitsConversionFactor(SrcUnits, TargetUnits, Co
 ---@class ULocalMessage : UObject
 ULocalMessage = {}
 
+---@return ULocalMessage
+function ULocalMessage:get() end
+
 
 ---@class ULocalPlayer : UPlayer
 ---@field ViewportClient UGameViewportClient
@@ -22795,15 +26809,24 @@ ULocalMessage = {}
 ---@field ControllerId int32
 ULocalPlayer = {}
 
+---@return ULocalPlayer
+function ULocalPlayer:get() end
+
 
 
 ---@class ULocalPlayerSubsystem : USubsystem
 ULocalPlayerSubsystem = {}
 
+---@return ULocalPlayerSubsystem
+function ULocalPlayerSubsystem:get() end
+
 
 ---@class UMapBuildDataRegistry : UObject
 ---@field LevelLightingQuality ELightingBuildQuality
 UMapBuildDataRegistry = {}
+
+---@return UMapBuildDataRegistry
+function UMapBuildDataRegistry:get() end
 
 
 
@@ -22914,11 +26937,17 @@ UMapBuildDataRegistry = {}
 ---@field StateId FGuid
 UMaterial = {}
 
+---@return UMaterial
+function UMaterial:get() end
+
 
 
 ---@class UMaterialBillboardComponent : UPrimitiveComponent
 ---@field Elements TArray<FMaterialSpriteElement>
 UMaterialBillboardComponent = {}
+
+---@return UMaterialBillboardComponent
+function UMaterialBillboardComponent:get() end
 
 ---@param NewElements TArray<FMaterialSpriteElement>
 function UMaterialBillboardComponent:SetElements(NewElements) end
@@ -22957,6 +26986,9 @@ function UMaterialBillboardComponent:AddElement(Material, DistanceToOpacityCurve
 ---@field ParameterGroupData TArray<FParameterGroupData>
 UMaterialEditorOnlyData = {}
 
+---@return UMaterialEditorOnlyData
+function UMaterialEditorOnlyData:get() end
+
 
 
 ---@class UMaterialExpression : UObject
@@ -22983,11 +27015,17 @@ UMaterialEditorOnlyData = {}
 ---@field Outputs TArray<FExpressionOutput>
 UMaterialExpression = {}
 
+---@return UMaterialExpression
+function UMaterialExpression:get() end
+
 
 
 ---@class UMaterialExpressionAbs : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionAbs = {}
+
+---@return UMaterialExpressionAbs
+function UMaterialExpressionAbs:get() end
 
 
 
@@ -22995,10 +27033,16 @@ UMaterialExpressionAbs = {}
 ---@field TransmittanceColor FExpressionInput
 UMaterialExpressionAbsorptionMediumMaterialOutput = {}
 
+---@return UMaterialExpressionAbsorptionMediumMaterialOutput
+function UMaterialExpressionAbsorptionMediumMaterialOutput:get() end
+
 
 
 ---@class UMaterialExpressionActorPositionWS : UMaterialExpression
 UMaterialExpressionActorPositionWS = {}
+
+---@return UMaterialExpressionActorPositionWS
+function UMaterialExpressionActorPositionWS:get() end
 
 
 ---@class UMaterialExpressionAdd : UMaterialExpression
@@ -23008,12 +27052,18 @@ UMaterialExpressionActorPositionWS = {}
 ---@field ConstB float
 UMaterialExpressionAdd = {}
 
+---@return UMaterialExpressionAdd
+function UMaterialExpressionAdd:get() end
+
 
 
 ---@class UMaterialExpressionAntialiasedTextureMask : UMaterialExpressionTextureSampleParameter2D
 ---@field Threshold float
 ---@field Channel ETextureColorChannel
 UMaterialExpressionAntialiasedTextureMask = {}
+
+---@return UMaterialExpressionAntialiasedTextureMask
+function UMaterialExpressionAntialiasedTextureMask:get() end
 
 
 
@@ -23022,11 +27072,17 @@ UMaterialExpressionAntialiasedTextureMask = {}
 ---@field B FExpressionInput
 UMaterialExpressionAppendVector = {}
 
+---@return UMaterialExpressionAppendVector
+function UMaterialExpressionAppendVector:get() end
+
 
 
 ---@class UMaterialExpressionArccosine : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionArccosine = {}
+
+---@return UMaterialExpressionArccosine
+function UMaterialExpressionArccosine:get() end
 
 
 
@@ -23034,11 +27090,17 @@ UMaterialExpressionArccosine = {}
 ---@field Input FExpressionInput
 UMaterialExpressionArccosineFast = {}
 
+---@return UMaterialExpressionArccosineFast
+function UMaterialExpressionArccosineFast:get() end
+
 
 
 ---@class UMaterialExpressionArcsine : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionArcsine = {}
+
+---@return UMaterialExpressionArcsine
+function UMaterialExpressionArcsine:get() end
 
 
 
@@ -23046,11 +27108,17 @@ UMaterialExpressionArcsine = {}
 ---@field Input FExpressionInput
 UMaterialExpressionArcsineFast = {}
 
+---@return UMaterialExpressionArcsineFast
+function UMaterialExpressionArcsineFast:get() end
+
 
 
 ---@class UMaterialExpressionArctangent : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionArctangent = {}
+
+---@return UMaterialExpressionArctangent
+function UMaterialExpressionArctangent:get() end
 
 
 
@@ -23059,6 +27127,9 @@ UMaterialExpressionArctangent = {}
 ---@field X FExpressionInput
 UMaterialExpressionArctangent2 = {}
 
+---@return UMaterialExpressionArctangent2
+function UMaterialExpressionArctangent2:get() end
+
 
 
 ---@class UMaterialExpressionArctangent2Fast : UMaterialExpression
@@ -23066,11 +27137,17 @@ UMaterialExpressionArctangent2 = {}
 ---@field X FExpressionInput
 UMaterialExpressionArctangent2Fast = {}
 
+---@return UMaterialExpressionArctangent2Fast
+function UMaterialExpressionArctangent2Fast:get() end
+
 
 
 ---@class UMaterialExpressionArctangentFast : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionArctangentFast = {}
+
+---@return UMaterialExpressionArctangentFast
+function UMaterialExpressionArctangentFast:get() end
 
 
 
@@ -23078,19 +27155,31 @@ UMaterialExpressionArctangentFast = {}
 ---@field WorldPosition FExpressionInput
 UMaterialExpressionAtmosphericFogColor = {}
 
+---@return UMaterialExpressionAtmosphericFogColor
+function UMaterialExpressionAtmosphericFogColor:get() end
+
 
 
 ---@class UMaterialExpressionAtmosphericLightColor : UMaterialExpression
 UMaterialExpressionAtmosphericLightColor = {}
 
+---@return UMaterialExpressionAtmosphericLightColor
+function UMaterialExpressionAtmosphericLightColor:get() end
+
 
 ---@class UMaterialExpressionAtmosphericLightVector : UMaterialExpression
 UMaterialExpressionAtmosphericLightVector = {}
+
+---@return UMaterialExpressionAtmosphericLightVector
+function UMaterialExpressionAtmosphericLightVector:get() end
 
 
 ---@class UMaterialExpressionBentNormalCustomOutput : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
 UMaterialExpressionBentNormalCustomOutput = {}
+
+---@return UMaterialExpressionBentNormalCustomOutput
+function UMaterialExpressionBentNormalCustomOutput:get() end
 
 
 
@@ -23101,11 +27190,17 @@ UMaterialExpressionBentNormalCustomOutput = {}
 ---@field ConstB float
 UMaterialExpressionBinaryOp = {}
 
+---@return UMaterialExpressionBinaryOp
+function UMaterialExpressionBinaryOp:get() end
+
 
 
 ---@class UMaterialExpressionBlackBody : UMaterialExpression
 ---@field Temp FExpressionInput
 UMaterialExpressionBlackBody = {}
+
+---@return UMaterialExpressionBlackBody
+function UMaterialExpressionBlackBody:get() end
 
 
 
@@ -23117,11 +27212,17 @@ UMaterialExpressionBlackBody = {}
 ---@field VertexAttributeBlendType EMaterialAttributeBlend::Type
 UMaterialExpressionBlendMaterialAttributes = {}
 
+---@return UMaterialExpressionBlendMaterialAttributes
+function UMaterialExpressionBlendMaterialAttributes:get() end
+
 
 
 ---@class UMaterialExpressionBreakMaterialAttributes : UMaterialExpression
 ---@field MaterialAttributes FMaterialAttributesInput
 UMaterialExpressionBreakMaterialAttributes = {}
+
+---@return UMaterialExpressionBreakMaterialAttributes
+function UMaterialExpressionBreakMaterialAttributes:get() end
 
 
 
@@ -23134,19 +27235,31 @@ UMaterialExpressionBreakMaterialAttributes = {}
 ---@field ConstCoordinate uint32
 UMaterialExpressionBumpOffset = {}
 
+---@return UMaterialExpressionBumpOffset
+function UMaterialExpressionBumpOffset:get() end
+
 
 
 ---@class UMaterialExpressionCameraPositionWS : UMaterialExpression
 UMaterialExpressionCameraPositionWS = {}
 
+---@return UMaterialExpressionCameraPositionWS
+function UMaterialExpressionCameraPositionWS:get() end
+
 
 ---@class UMaterialExpressionCameraVectorWS : UMaterialExpression
 UMaterialExpressionCameraVectorWS = {}
+
+---@return UMaterialExpressionCameraVectorWS
+function UMaterialExpressionCameraVectorWS:get() end
 
 
 ---@class UMaterialExpressionCeil : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionCeil = {}
+
+---@return UMaterialExpressionCeil
+function UMaterialExpressionCeil:get() end
 
 
 
@@ -23154,6 +27267,9 @@ UMaterialExpressionCeil = {}
 ---@field MaskChannel EChannelMaskParameterColor::Type
 ---@field Input FExpressionInput
 UMaterialExpressionChannelMaskParameter = {}
+
+---@return UMaterialExpressionChannelMaskParameter
+function UMaterialExpressionChannelMaskParameter:get() end
 
 
 
@@ -23166,16 +27282,25 @@ UMaterialExpressionChannelMaskParameter = {}
 ---@field MaxDefault float
 UMaterialExpressionClamp = {}
 
+---@return UMaterialExpressionClamp
+function UMaterialExpressionClamp:get() end
+
 
 
 ---@class UMaterialExpressionClearCoatNormalCustomOutput : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
 UMaterialExpressionClearCoatNormalCustomOutput = {}
 
+---@return UMaterialExpressionClearCoatNormalCustomOutput
+function UMaterialExpressionClearCoatNormalCustomOutput:get() end
+
 
 
 ---@class UMaterialExpressionCloudSampleAttribute : UMaterialExpression
 UMaterialExpressionCloudSampleAttribute = {}
+
+---@return UMaterialExpressionCloudSampleAttribute
+function UMaterialExpressionCloudSampleAttribute:get() end
 
 
 ---@class UMaterialExpressionCollectionParameter : UMaterialExpression
@@ -23183,6 +27308,9 @@ UMaterialExpressionCloudSampleAttribute = {}
 ---@field ParameterName FName
 ---@field ParameterId FGuid
 UMaterialExpressionCollectionParameter = {}
+
+---@return UMaterialExpressionCollectionParameter
+function UMaterialExpressionCollectionParameter:get() end
 
 
 
@@ -23194,6 +27322,9 @@ UMaterialExpressionCollectionParameter = {}
 ---@field FontSize int32
 UMaterialExpressionComment = {}
 
+---@return UMaterialExpressionComment
+function UMaterialExpressionComment:get() end
+
 
 
 ---@class UMaterialExpressionComponentMask : UMaterialExpression
@@ -23204,6 +27335,9 @@ UMaterialExpressionComment = {}
 ---@field A boolean
 UMaterialExpressionComponentMask = {}
 
+---@return UMaterialExpressionComponentMask
+function UMaterialExpressionComponentMask:get() end
+
 
 
 ---@class UMaterialExpressionComposite : UMaterialExpression
@@ -23212,11 +27346,17 @@ UMaterialExpressionComponentMask = {}
 ---@field OutputExpressions UMaterialExpressionPinBase
 UMaterialExpressionComposite = {}
 
+---@return UMaterialExpressionComposite
+function UMaterialExpressionComposite:get() end
+
 
 
 ---@class UMaterialExpressionConstant : UMaterialExpression
 ---@field R float
 UMaterialExpressionConstant = {}
+
+---@return UMaterialExpressionConstant
+function UMaterialExpressionConstant:get() end
 
 
 
@@ -23225,17 +27365,26 @@ UMaterialExpressionConstant = {}
 ---@field G float
 UMaterialExpressionConstant2Vector = {}
 
+---@return UMaterialExpressionConstant2Vector
+function UMaterialExpressionConstant2Vector:get() end
+
 
 
 ---@class UMaterialExpressionConstant3Vector : UMaterialExpression
 ---@field Constant FLinearColor
 UMaterialExpressionConstant3Vector = {}
 
+---@return UMaterialExpressionConstant3Vector
+function UMaterialExpressionConstant3Vector:get() end
+
 
 
 ---@class UMaterialExpressionConstant4Vector : UMaterialExpression
 ---@field Constant FLinearColor
 UMaterialExpressionConstant4Vector = {}
+
+---@return UMaterialExpressionConstant4Vector
+function UMaterialExpressionConstant4Vector:get() end
 
 
 
@@ -23245,11 +27394,17 @@ UMaterialExpressionConstant4Vector = {}
 ---@field Scale float
 UMaterialExpressionConstantBiasScale = {}
 
+---@return UMaterialExpressionConstantBiasScale
+function UMaterialExpressionConstantBiasScale:get() end
+
 
 
 ---@class UMaterialExpressionConstantDouble : UMaterialExpressionGenericConstant
 ---@field Value double
 UMaterialExpressionConstantDouble = {}
+
+---@return UMaterialExpressionConstantDouble
+function UMaterialExpressionConstantDouble:get() end
 
 
 
@@ -23258,12 +27413,18 @@ UMaterialExpressionConstantDouble = {}
 ---@field Period float
 UMaterialExpressionCosine = {}
 
+---@return UMaterialExpressionCosine
+function UMaterialExpressionCosine:get() end
+
 
 
 ---@class UMaterialExpressionCrossProduct : UMaterialExpression
 ---@field A FExpressionInput
 ---@field B FExpressionInput
 UMaterialExpressionCrossProduct = {}
+
+---@return UMaterialExpressionCrossProduct
+function UMaterialExpressionCrossProduct:get() end
 
 
 
@@ -23272,6 +27433,9 @@ UMaterialExpressionCrossProduct = {}
 ---@field Atlas UCurveLinearColorAtlas
 ---@field InputTime FExpressionInput
 UMaterialExpressionCurveAtlasRowParameter = {}
+
+---@return UMaterialExpressionCurveAtlasRowParameter
+function UMaterialExpressionCurveAtlasRowParameter:get() end
 
 
 
@@ -23285,10 +27449,16 @@ UMaterialExpressionCurveAtlasRowParameter = {}
 ---@field IncludeFilePaths TArray<FString>
 UMaterialExpressionCustom = {}
 
+---@return UMaterialExpressionCustom
+function UMaterialExpressionCustom:get() end
+
 
 
 ---@class UMaterialExpressionCustomOutput : UMaterialExpression
 UMaterialExpressionCustomOutput = {}
+
+---@return UMaterialExpressionCustomOutput
+function UMaterialExpressionCustomOutput:get() end
 
 
 ---@class UMaterialExpressionDBufferTexture : UMaterialExpression
@@ -23296,11 +27466,17 @@ UMaterialExpressionCustomOutput = {}
 ---@field DBufferTextureId EDBufferTextureId
 UMaterialExpressionDBufferTexture = {}
 
+---@return UMaterialExpressionDBufferTexture
+function UMaterialExpressionDBufferTexture:get() end
+
 
 
 ---@class UMaterialExpressionDDX : UMaterialExpression
 ---@field Value FExpressionInput
 UMaterialExpressionDDX = {}
+
+---@return UMaterialExpressionDDX
+function UMaterialExpressionDDX:get() end
 
 
 
@@ -23308,14 +27484,23 @@ UMaterialExpressionDDX = {}
 ---@field Value FExpressionInput
 UMaterialExpressionDDY = {}
 
+---@return UMaterialExpressionDDY
+function UMaterialExpressionDDY:get() end
+
 
 
 ---@class UMaterialExpressionDecalDerivative : UMaterialExpression
 UMaterialExpressionDecalDerivative = {}
 
+---@return UMaterialExpressionDecalDerivative
+function UMaterialExpressionDecalDerivative:get() end
+
 
 ---@class UMaterialExpressionDecalLifetimeOpacity : UMaterialExpression
 UMaterialExpressionDecalLifetimeOpacity = {}
+
+---@return UMaterialExpressionDecalLifetimeOpacity
+function UMaterialExpressionDecalLifetimeOpacity:get() end
 
 
 ---@class UMaterialExpressionDecalMipmapLevel : UMaterialExpression
@@ -23324,10 +27509,16 @@ UMaterialExpressionDecalLifetimeOpacity = {}
 ---@field ConstHeight float
 UMaterialExpressionDecalMipmapLevel = {}
 
+---@return UMaterialExpressionDecalMipmapLevel
+function UMaterialExpressionDecalMipmapLevel:get() end
+
 
 
 ---@class UMaterialExpressionDeltaTime : UMaterialExpression
 UMaterialExpressionDeltaTime = {}
+
+---@return UMaterialExpressionDeltaTime
+function UMaterialExpressionDeltaTime:get() end
 
 
 ---@class UMaterialExpressionDepthFade : UMaterialExpression
@@ -23337,6 +27528,9 @@ UMaterialExpressionDeltaTime = {}
 ---@field FadeDistanceDefault float
 UMaterialExpressionDepthFade = {}
 
+---@return UMaterialExpressionDepthFade
+function UMaterialExpressionDepthFade:get() end
+
 
 
 ---@class UMaterialExpressionDepthOfFieldFunction : UMaterialExpression
@@ -23344,11 +27538,17 @@ UMaterialExpressionDepthFade = {}
 ---@field Depth FExpressionInput
 UMaterialExpressionDepthOfFieldFunction = {}
 
+---@return UMaterialExpressionDepthOfFieldFunction
+function UMaterialExpressionDepthOfFieldFunction:get() end
+
 
 
 ---@class UMaterialExpressionDeriveNormalZ : UMaterialExpression
 ---@field InXY FExpressionInput
 UMaterialExpressionDeriveNormalZ = {}
+
+---@return UMaterialExpressionDeriveNormalZ
+function UMaterialExpressionDeriveNormalZ:get() end
 
 
 
@@ -23358,6 +27558,9 @@ UMaterialExpressionDeriveNormalZ = {}
 ---@field LuminanceFactors FLinearColor
 UMaterialExpressionDesaturation = {}
 
+---@return UMaterialExpressionDesaturation
+function UMaterialExpressionDesaturation:get() end
+
 
 
 ---@class UMaterialExpressionDistance : UMaterialExpression
@@ -23365,10 +27568,16 @@ UMaterialExpressionDesaturation = {}
 ---@field B FExpressionInput
 UMaterialExpressionDistance = {}
 
+---@return UMaterialExpressionDistance
+function UMaterialExpressionDistance:get() end
+
 
 
 ---@class UMaterialExpressionDistanceCullFade : UMaterialExpression
 UMaterialExpressionDistanceCullFade = {}
+
+---@return UMaterialExpressionDistanceCullFade
+function UMaterialExpressionDistanceCullFade:get() end
 
 
 ---@class UMaterialExpressionDistanceFieldApproxAO : UMaterialExpression
@@ -23382,11 +27591,17 @@ UMaterialExpressionDistanceCullFade = {}
 ---@field StepScaleDefault float
 UMaterialExpressionDistanceFieldApproxAO = {}
 
+---@return UMaterialExpressionDistanceFieldApproxAO
+function UMaterialExpressionDistanceFieldApproxAO:get() end
+
 
 
 ---@class UMaterialExpressionDistanceFieldGradient : UMaterialExpression
 ---@field Position FExpressionInput
 UMaterialExpressionDistanceFieldGradient = {}
+
+---@return UMaterialExpressionDistanceFieldGradient
+function UMaterialExpressionDistanceFieldGradient:get() end
 
 
 
@@ -23395,11 +27610,17 @@ UMaterialExpressionDistanceFieldGradient = {}
 ---@field Yes FExpressionInput
 UMaterialExpressionDistanceFieldsRenderingSwitch = {}
 
+---@return UMaterialExpressionDistanceFieldsRenderingSwitch
+function UMaterialExpressionDistanceFieldsRenderingSwitch:get() end
+
 
 
 ---@class UMaterialExpressionDistanceToNearestSurface : UMaterialExpression
 ---@field Position FExpressionInput
 UMaterialExpressionDistanceToNearestSurface = {}
+
+---@return UMaterialExpressionDistanceToNearestSurface
+function UMaterialExpressionDistanceToNearestSurface:get() end
 
 
 
@@ -23410,6 +27631,9 @@ UMaterialExpressionDistanceToNearestSurface = {}
 ---@field ConstB float
 UMaterialExpressionDivide = {}
 
+---@return UMaterialExpressionDivide
+function UMaterialExpressionDivide:get() end
+
 
 
 ---@class UMaterialExpressionDotProduct : UMaterialExpression
@@ -23417,11 +27641,17 @@ UMaterialExpressionDivide = {}
 ---@field B FExpressionInput
 UMaterialExpressionDotProduct = {}
 
+---@return UMaterialExpressionDotProduct
+function UMaterialExpressionDotProduct:get() end
+
 
 
 ---@class UMaterialExpressionDoubleVectorParameter : UMaterialExpressionParameter
 ---@field DefaultValue FVector4d
 UMaterialExpressionDoubleVectorParameter = {}
+
+---@return UMaterialExpressionDoubleVectorParameter
+function UMaterialExpressionDoubleVectorParameter:get() end
 
 
 
@@ -23431,26 +27661,41 @@ UMaterialExpressionDoubleVectorParameter = {}
 ---@field ParameterIndex uint32
 UMaterialExpressionDynamicParameter = {}
 
+---@return UMaterialExpressionDynamicParameter
+function UMaterialExpressionDynamicParameter:get() end
+
 
 
 ---@class UMaterialExpressionExecBegin : UMaterialExpression
 ---@field Exec FExpressionExecOutput
 UMaterialExpressionExecBegin = {}
 
+---@return UMaterialExpressionExecBegin
+function UMaterialExpressionExecBegin:get() end
+
 
 
 ---@class UMaterialExpressionExecEnd : UMaterialExpression
 UMaterialExpressionExecEnd = {}
 
+---@return UMaterialExpressionExecEnd
+function UMaterialExpressionExecEnd:get() end
+
 
 ---@class UMaterialExpressionEyeAdaptation : UMaterialExpression
 UMaterialExpressionEyeAdaptation = {}
+
+---@return UMaterialExpressionEyeAdaptation
+function UMaterialExpressionEyeAdaptation:get() end
 
 
 ---@class UMaterialExpressionEyeAdaptationInverse : UMaterialExpression
 ---@field LightValueInput FExpressionInput
 ---@field AlphaInput FExpressionInput
 UMaterialExpressionEyeAdaptationInverse = {}
+
+---@return UMaterialExpressionEyeAdaptationInverse
+function UMaterialExpressionEyeAdaptationInverse:get() end
 
 
 
@@ -23459,11 +27704,17 @@ UMaterialExpressionEyeAdaptationInverse = {}
 ---@field Inputs FExpressionInput
 UMaterialExpressionFeatureLevelSwitch = {}
 
+---@return UMaterialExpressionFeatureLevelSwitch
+function UMaterialExpressionFeatureLevelSwitch:get() end
+
 
 
 ---@class UMaterialExpressionFloor : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionFloor = {}
+
+---@return UMaterialExpressionFloor
+function UMaterialExpressionFloor:get() end
 
 
 
@@ -23472,12 +27723,18 @@ UMaterialExpressionFloor = {}
 ---@field B FExpressionInput
 UMaterialExpressionFmod = {}
 
+---@return UMaterialExpressionFmod
+function UMaterialExpressionFmod:get() end
+
 
 
 ---@class UMaterialExpressionFontSample : UMaterialExpression
 ---@field Font UFont
 ---@field FontTexturePage int32
 UMaterialExpressionFontSample = {}
+
+---@return UMaterialExpressionFontSample
+function UMaterialExpressionFontSample:get() end
 
 
 
@@ -23487,6 +27744,9 @@ UMaterialExpressionFontSample = {}
 ---@field Group FName
 ---@field SortPriority int32
 UMaterialExpressionFontSampleParameter = {}
+
+---@return UMaterialExpressionFontSampleParameter
+function UMaterialExpressionFontSampleParameter:get() end
 
 
 
@@ -23498,11 +27758,17 @@ UMaterialExpressionFontSampleParameter = {}
 ---@field IndexStep FExpressionInput
 UMaterialExpressionForLoop = {}
 
+---@return UMaterialExpressionForLoop
+function UMaterialExpressionForLoop:get() end
+
 
 
 ---@class UMaterialExpressionFrac : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionFrac = {}
+
+---@return UMaterialExpressionFrac
+function UMaterialExpressionFrac:get() end
 
 
 
@@ -23513,6 +27779,9 @@ UMaterialExpressionFrac = {}
 ---@field BaseReflectFraction float
 ---@field Normal FExpressionInput
 UMaterialExpressionFresnel = {}
+
+---@return UMaterialExpressionFresnel
+function UMaterialExpressionFresnel:get() end
 
 
 
@@ -23528,6 +27797,9 @@ UMaterialExpressionFresnel = {}
 ---@field bCompilingFunctionPreview boolean
 UMaterialExpressionFunctionInput = {}
 
+---@return UMaterialExpressionFunctionInput
+function UMaterialExpressionFunctionInput:get() end
+
 
 
 ---@class UMaterialExpressionFunctionOutput : UMaterialExpression
@@ -23539,6 +27811,9 @@ UMaterialExpressionFunctionInput = {}
 ---@field ID FGuid
 UMaterialExpressionFunctionOutput = {}
 
+---@return UMaterialExpressionFunctionOutput
+function UMaterialExpressionFunctionOutput:get() end
+
 
 
 ---@class UMaterialExpressionGIReplace : UMaterialExpression
@@ -23547,15 +27822,24 @@ UMaterialExpressionFunctionOutput = {}
 ---@field DynamicIndirect FExpressionInput
 UMaterialExpressionGIReplace = {}
 
+---@return UMaterialExpressionGIReplace
+function UMaterialExpressionGIReplace:get() end
+
 
 
 ---@class UMaterialExpressionGenericConstant : UMaterialExpression
 UMaterialExpressionGenericConstant = {}
 
+---@return UMaterialExpressionGenericConstant
+function UMaterialExpressionGenericConstant:get() end
+
 
 ---@class UMaterialExpressionGetLocal : UMaterialExpression
 ---@field LocalName FName
 UMaterialExpressionGetLocal = {}
+
+---@return UMaterialExpressionGetLocal
+function UMaterialExpressionGetLocal:get() end
 
 
 
@@ -23564,11 +27848,17 @@ UMaterialExpressionGetLocal = {}
 ---@field AttributeGetTypes TArray<FGuid>
 UMaterialExpressionGetMaterialAttributes = {}
 
+---@return UMaterialExpressionGetMaterialAttributes
+function UMaterialExpressionGetMaterialAttributes:get() end
+
 
 
 ---@class UMaterialExpressionHairAttributes : UMaterialExpression
 ---@field bUseTangentSpace boolean
 UMaterialExpressionHairAttributes = {}
+
+---@return UMaterialExpressionHairAttributes
+function UMaterialExpressionHairAttributes:get() end
 
 
 
@@ -23577,6 +27867,9 @@ UMaterialExpressionHairAttributes = {}
 ---@field Redness FExpressionInput
 ---@field DyeColor FExpressionInput
 UMaterialExpressionHairColor = {}
+
+---@return UMaterialExpressionHairColor
+function UMaterialExpressionHairColor:get() end
 
 
 
@@ -23591,6 +27884,9 @@ UMaterialExpressionHairColor = {}
 ---@field ConstAEqualsB float
 UMaterialExpressionIf = {}
 
+---@return UMaterialExpressionIf
+function UMaterialExpressionIf:get() end
+
 
 
 ---@class UMaterialExpressionIfThenElse : UMaterialExpression
@@ -23598,6 +27894,9 @@ UMaterialExpressionIf = {}
 ---@field Else FExpressionExecOutput
 ---@field Condition FExpressionInput
 UMaterialExpressionIfThenElse = {}
+
+---@return UMaterialExpressionIfThenElse
+function UMaterialExpressionIfThenElse:get() end
 
 
 
@@ -23611,28 +27910,46 @@ UMaterialExpressionIfThenElse = {}
 ---@field bClampResult boolean
 UMaterialExpressionInverseLinearInterpolate = {}
 
+---@return UMaterialExpressionInverseLinearInterpolate
+function UMaterialExpressionInverseLinearInterpolate:get() end
+
 
 
 ---@class UMaterialExpressionIsOrthographic : UMaterialExpression
 UMaterialExpressionIsOrthographic = {}
 
+---@return UMaterialExpressionIsOrthographic
+function UMaterialExpressionIsOrthographic:get() end
+
 
 ---@class UMaterialExpressionLess : UMaterialExpressionBinaryOp
 UMaterialExpressionLess = {}
+
+---@return UMaterialExpressionLess
+function UMaterialExpressionLess:get() end
 
 
 ---@class UMaterialExpressionLightVector : UMaterialExpression
 UMaterialExpressionLightVector = {}
 
+---@return UMaterialExpressionLightVector
+function UMaterialExpressionLightVector:get() end
+
 
 ---@class UMaterialExpressionLightmapUVs : UMaterialExpression
 UMaterialExpressionLightmapUVs = {}
+
+---@return UMaterialExpressionLightmapUVs
+function UMaterialExpressionLightmapUVs:get() end
 
 
 ---@class UMaterialExpressionLightmassReplace : UMaterialExpression
 ---@field Realtime FExpressionInput
 ---@field Lightmass FExpressionInput
 UMaterialExpressionLightmassReplace = {}
+
+---@return UMaterialExpressionLightmassReplace
+function UMaterialExpressionLightmassReplace:get() end
 
 
 
@@ -23645,17 +27962,26 @@ UMaterialExpressionLightmassReplace = {}
 ---@field ConstAlpha float
 UMaterialExpressionLinearInterpolate = {}
 
+---@return UMaterialExpressionLinearInterpolate
+function UMaterialExpressionLinearInterpolate:get() end
+
 
 
 ---@class UMaterialExpressionLogarithm10 : UMaterialExpression
 ---@field X FExpressionInput
 UMaterialExpressionLogarithm10 = {}
 
+---@return UMaterialExpressionLogarithm10
+function UMaterialExpressionLogarithm10:get() end
+
 
 
 ---@class UMaterialExpressionLogarithm2 : UMaterialExpression
 ---@field X FExpressionInput
 UMaterialExpressionLogarithm2 = {}
+
+---@return UMaterialExpressionLogarithm2
+function UMaterialExpressionLogarithm2:get() end
 
 
 
@@ -23681,11 +28007,17 @@ UMaterialExpressionLogarithm2 = {}
 ---@field ShadingModel FExpressionInput
 UMaterialExpressionMakeMaterialAttributes = {}
 
+---@return UMaterialExpressionMakeMaterialAttributes
+function UMaterialExpressionMakeMaterialAttributes:get() end
+
 
 
 ---@class UMaterialExpressionMapARPassthroughCameraUV : UMaterialExpression
 ---@field Coordinates FExpressionInput
 UMaterialExpressionMapARPassthroughCameraUV = {}
+
+---@return UMaterialExpressionMapARPassthroughCameraUV
+function UMaterialExpressionMapARPassthroughCameraUV:get() end
 
 
 
@@ -23699,6 +28031,9 @@ UMaterialExpressionMapARPassthroughCameraUV = {}
 ---@field bIsLayerGraphBuilt boolean
 UMaterialExpressionMaterialAttributeLayers = {}
 
+---@return UMaterialExpressionMaterialAttributeLayers
+function UMaterialExpressionMaterialAttributeLayers:get() end
+
 
 
 ---@class UMaterialExpressionMaterialFunctionCall : UMaterialExpression
@@ -23708,16 +28043,25 @@ UMaterialExpressionMaterialAttributeLayers = {}
 ---@field FunctionParameterInfo FMaterialParameterInfo
 UMaterialExpressionMaterialFunctionCall = {}
 
+---@return UMaterialExpressionMaterialFunctionCall
+function UMaterialExpressionMaterialFunctionCall:get() end
+
 
 
 ---@class UMaterialExpressionMaterialLayerOutput : UMaterialExpressionFunctionOutput
 UMaterialExpressionMaterialLayerOutput = {}
+
+---@return UMaterialExpressionMaterialLayerOutput
+function UMaterialExpressionMaterialLayerOutput:get() end
 
 
 ---@class UMaterialExpressionMaterialProxyReplace : UMaterialExpression
 ---@field Realtime FExpressionInput
 ---@field MaterialProxy FExpressionInput
 UMaterialExpressionMaterialProxyReplace = {}
+
+---@return UMaterialExpressionMaterialProxyReplace
+function UMaterialExpressionMaterialProxyReplace:get() end
 
 
 
@@ -23728,6 +28072,9 @@ UMaterialExpressionMaterialProxyReplace = {}
 ---@field ConstB float
 UMaterialExpressionMax = {}
 
+---@return UMaterialExpressionMax
+function UMaterialExpressionMax:get() end
+
 
 
 ---@class UMaterialExpressionMin : UMaterialExpression
@@ -23736,6 +28083,9 @@ UMaterialExpressionMax = {}
 ---@field ConstA float
 ---@field ConstB float
 UMaterialExpressionMin = {}
+
+---@return UMaterialExpressionMin
+function UMaterialExpressionMin:get() end
 
 
 
@@ -23746,10 +28096,16 @@ UMaterialExpressionMin = {}
 ---@field ConstB float
 UMaterialExpressionMultiply = {}
 
+---@return UMaterialExpressionMultiply
+function UMaterialExpressionMultiply:get() end
+
 
 
 ---@class UMaterialExpressionNamedRerouteBase : UMaterialExpressionRerouteBase
 UMaterialExpressionNamedRerouteBase = {}
+
+---@return UMaterialExpressionNamedRerouteBase
+function UMaterialExpressionNamedRerouteBase:get() end
 
 
 ---@class UMaterialExpressionNamedRerouteDeclaration : UMaterialExpressionNamedRerouteBase
@@ -23759,6 +28115,9 @@ UMaterialExpressionNamedRerouteBase = {}
 ---@field VariableGuid FGuid
 UMaterialExpressionNamedRerouteDeclaration = {}
 
+---@return UMaterialExpressionNamedRerouteDeclaration
+function UMaterialExpressionNamedRerouteDeclaration:get() end
+
 
 
 ---@class UMaterialExpressionNamedRerouteUsage : UMaterialExpressionNamedRerouteBase
@@ -23766,12 +28125,18 @@ UMaterialExpressionNamedRerouteDeclaration = {}
 ---@field DeclarationGuid FGuid
 UMaterialExpressionNamedRerouteUsage = {}
 
+---@return UMaterialExpressionNamedRerouteUsage
+function UMaterialExpressionNamedRerouteUsage:get() end
+
 
 
 ---@class UMaterialExpressionNaniteReplace : UMaterialExpression
 ---@field Default FExpressionInput
 ---@field Nanite FExpressionInput
 UMaterialExpressionNaniteReplace = {}
+
+---@return UMaterialExpressionNaniteReplace
+function UMaterialExpressionNaniteReplace:get() end
 
 
 
@@ -23790,33 +28155,54 @@ UMaterialExpressionNaniteReplace = {}
 ---@field RepeatSize uint32
 UMaterialExpressionNoise = {}
 
+---@return UMaterialExpressionNoise
+function UMaterialExpressionNoise:get() end
+
 
 
 ---@class UMaterialExpressionNormalize : UMaterialExpression
 ---@field VectorInput FExpressionInput
 UMaterialExpressionNormalize = {}
 
+---@return UMaterialExpressionNormalize
+function UMaterialExpressionNormalize:get() end
+
 
 
 ---@class UMaterialExpressionObjectBounds : UMaterialExpression
 UMaterialExpressionObjectBounds = {}
 
+---@return UMaterialExpressionObjectBounds
+function UMaterialExpressionObjectBounds:get() end
+
 
 ---@class UMaterialExpressionObjectOrientation : UMaterialExpression
 UMaterialExpressionObjectOrientation = {}
+
+---@return UMaterialExpressionObjectOrientation
+function UMaterialExpressionObjectOrientation:get() end
 
 
 ---@class UMaterialExpressionObjectPositionWS : UMaterialExpression
 UMaterialExpressionObjectPositionWS = {}
 
+---@return UMaterialExpressionObjectPositionWS
+function UMaterialExpressionObjectPositionWS:get() end
+
 
 ---@class UMaterialExpressionObjectRadius : UMaterialExpression
 UMaterialExpressionObjectRadius = {}
+
+---@return UMaterialExpressionObjectRadius
+function UMaterialExpressionObjectRadius:get() end
 
 
 ---@class UMaterialExpressionOneMinus : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionOneMinus = {}
+
+---@return UMaterialExpressionOneMinus
+function UMaterialExpressionOneMinus:get() end
 
 
 
@@ -23830,6 +28216,9 @@ UMaterialExpressionOneMinus = {}
 ---@field bFractionalPart boolean
 UMaterialExpressionPanner = {}
 
+---@return UMaterialExpressionPanner
+function UMaterialExpressionPanner:get() end
+
 
 
 ---@class UMaterialExpressionParameter : UMaterialExpression
@@ -23839,62 +28228,104 @@ UMaterialExpressionPanner = {}
 ---@field SortPriority int32
 UMaterialExpressionParameter = {}
 
+---@return UMaterialExpressionParameter
+function UMaterialExpressionParameter:get() end
+
 
 
 ---@class UMaterialExpressionParticleColor : UMaterialExpression
 UMaterialExpressionParticleColor = {}
 
+---@return UMaterialExpressionParticleColor
+function UMaterialExpressionParticleColor:get() end
+
 
 ---@class UMaterialExpressionParticleDirection : UMaterialExpression
 UMaterialExpressionParticleDirection = {}
+
+---@return UMaterialExpressionParticleDirection
+function UMaterialExpressionParticleDirection:get() end
 
 
 ---@class UMaterialExpressionParticleMacroUV : UMaterialExpression
 UMaterialExpressionParticleMacroUV = {}
 
+---@return UMaterialExpressionParticleMacroUV
+function UMaterialExpressionParticleMacroUV:get() end
+
 
 ---@class UMaterialExpressionParticleMotionBlurFade : UMaterialExpression
 UMaterialExpressionParticleMotionBlurFade = {}
+
+---@return UMaterialExpressionParticleMotionBlurFade
+function UMaterialExpressionParticleMotionBlurFade:get() end
 
 
 ---@class UMaterialExpressionParticlePositionWS : UMaterialExpression
 UMaterialExpressionParticlePositionWS = {}
 
+---@return UMaterialExpressionParticlePositionWS
+function UMaterialExpressionParticlePositionWS:get() end
+
 
 ---@class UMaterialExpressionParticleRadius : UMaterialExpression
 UMaterialExpressionParticleRadius = {}
+
+---@return UMaterialExpressionParticleRadius
+function UMaterialExpressionParticleRadius:get() end
 
 
 ---@class UMaterialExpressionParticleRandom : UMaterialExpression
 UMaterialExpressionParticleRandom = {}
 
+---@return UMaterialExpressionParticleRandom
+function UMaterialExpressionParticleRandom:get() end
+
 
 ---@class UMaterialExpressionParticleRelativeTime : UMaterialExpression
 UMaterialExpressionParticleRelativeTime = {}
+
+---@return UMaterialExpressionParticleRelativeTime
+function UMaterialExpressionParticleRelativeTime:get() end
 
 
 ---@class UMaterialExpressionParticleSize : UMaterialExpression
 UMaterialExpressionParticleSize = {}
 
+---@return UMaterialExpressionParticleSize
+function UMaterialExpressionParticleSize:get() end
+
 
 ---@class UMaterialExpressionParticleSpeed : UMaterialExpression
 UMaterialExpressionParticleSpeed = {}
+
+---@return UMaterialExpressionParticleSpeed
+function UMaterialExpressionParticleSpeed:get() end
 
 
 ---@class UMaterialExpressionParticleSubUV : UMaterialExpressionTextureSample
 ---@field bBlend boolean
 UMaterialExpressionParticleSubUV = {}
 
+---@return UMaterialExpressionParticleSubUV
+function UMaterialExpressionParticleSubUV:get() end
+
 
 
 ---@class UMaterialExpressionParticleSubUVProperties : UMaterialExpression
 UMaterialExpressionParticleSubUVProperties = {}
+
+---@return UMaterialExpressionParticleSubUVProperties
+function UMaterialExpressionParticleSubUVProperties:get() end
 
 
 ---@class UMaterialExpressionPathTracingQualitySwitch : UMaterialExpression
 ---@field Normal FExpressionInput
 ---@field PathTraced FExpressionInput
 UMaterialExpressionPathTracingQualitySwitch = {}
+
+---@return UMaterialExpressionPathTracingQualitySwitch
+function UMaterialExpressionPathTracingQualitySwitch:get() end
 
 
 
@@ -23904,6 +28335,9 @@ UMaterialExpressionPathTracingQualitySwitch = {}
 ---@field DataIndex uint32
 UMaterialExpressionPerInstanceCustomData = {}
 
+---@return UMaterialExpressionPerInstanceCustomData
+function UMaterialExpressionPerInstanceCustomData:get() end
+
 
 
 ---@class UMaterialExpressionPerInstanceCustomData3Vector : UMaterialExpression
@@ -23912,14 +28346,23 @@ UMaterialExpressionPerInstanceCustomData = {}
 ---@field DataIndex uint32
 UMaterialExpressionPerInstanceCustomData3Vector = {}
 
+---@return UMaterialExpressionPerInstanceCustomData3Vector
+function UMaterialExpressionPerInstanceCustomData3Vector:get() end
+
 
 
 ---@class UMaterialExpressionPerInstanceFadeAmount : UMaterialExpression
 UMaterialExpressionPerInstanceFadeAmount = {}
 
+---@return UMaterialExpressionPerInstanceFadeAmount
+function UMaterialExpressionPerInstanceFadeAmount:get() end
+
 
 ---@class UMaterialExpressionPerInstanceRandom : UMaterialExpression
 UMaterialExpressionPerInstanceRandom = {}
+
+---@return UMaterialExpressionPerInstanceRandom
+function UMaterialExpressionPerInstanceRandom:get() end
 
 
 ---@class UMaterialExpressionPinBase : UMaterialExpression
@@ -23927,14 +28370,23 @@ UMaterialExpressionPerInstanceRandom = {}
 ---@field PinDirection EEdGraphPinDirection
 UMaterialExpressionPinBase = {}
 
+---@return UMaterialExpressionPinBase
+function UMaterialExpressionPinBase:get() end
+
 
 
 ---@class UMaterialExpressionPixelDepth : UMaterialExpression
 UMaterialExpressionPixelDepth = {}
 
+---@return UMaterialExpressionPixelDepth
+function UMaterialExpressionPixelDepth:get() end
+
 
 ---@class UMaterialExpressionPixelNormalWS : UMaterialExpression
 UMaterialExpressionPixelNormalWS = {}
+
+---@return UMaterialExpressionPixelNormalWS
+function UMaterialExpressionPixelNormalWS:get() end
 
 
 ---@class UMaterialExpressionPower : UMaterialExpression
@@ -23943,28 +28395,46 @@ UMaterialExpressionPixelNormalWS = {}
 ---@field ConstExponent float
 UMaterialExpressionPower = {}
 
+---@return UMaterialExpressionPower
+function UMaterialExpressionPower:get() end
+
 
 
 ---@class UMaterialExpressionPreSkinnedLocalBounds : UMaterialExpression
 UMaterialExpressionPreSkinnedLocalBounds = {}
 
+---@return UMaterialExpressionPreSkinnedLocalBounds
+function UMaterialExpressionPreSkinnedLocalBounds:get() end
+
 
 ---@class UMaterialExpressionPreSkinnedNormal : UMaterialExpression
 UMaterialExpressionPreSkinnedNormal = {}
+
+---@return UMaterialExpressionPreSkinnedNormal
+function UMaterialExpressionPreSkinnedNormal:get() end
 
 
 ---@class UMaterialExpressionPreSkinnedPosition : UMaterialExpression
 UMaterialExpressionPreSkinnedPosition = {}
 
+---@return UMaterialExpressionPreSkinnedPosition
+function UMaterialExpressionPreSkinnedPosition:get() end
+
 
 ---@class UMaterialExpressionPrecomputedAOMask : UMaterialExpression
 UMaterialExpressionPrecomputedAOMask = {}
+
+---@return UMaterialExpressionPrecomputedAOMask
+function UMaterialExpressionPrecomputedAOMask:get() end
 
 
 ---@class UMaterialExpressionPreviousFrameSwitch : UMaterialExpression
 ---@field CurrentFrame FExpressionInput
 ---@field PreviousFrame FExpressionInput
 UMaterialExpressionPreviousFrameSwitch = {}
+
+---@return UMaterialExpressionPreviousFrameSwitch
+function UMaterialExpressionPreviousFrameSwitch:get() end
 
 
 
@@ -23973,12 +28443,18 @@ UMaterialExpressionPreviousFrameSwitch = {}
 ---@field Inputs FExpressionInput
 UMaterialExpressionQualitySwitch = {}
 
+---@return UMaterialExpressionQualitySwitch
+function UMaterialExpressionQualitySwitch:get() end
+
 
 
 ---@class UMaterialExpressionRayTracingQualitySwitch : UMaterialExpression
 ---@field Normal FExpressionInput
 ---@field RayTraced FExpressionInput
 UMaterialExpressionRayTracingQualitySwitch = {}
+
+---@return UMaterialExpressionRayTracingQualitySwitch
+function UMaterialExpressionRayTracingQualitySwitch:get() end
 
 
 
@@ -23987,6 +28463,9 @@ UMaterialExpressionRayTracingQualitySwitch = {}
 ---@field Reflection FExpressionInput
 UMaterialExpressionReflectionCapturePassSwitch = {}
 
+---@return UMaterialExpressionReflectionCapturePassSwitch
+function UMaterialExpressionReflectionCapturePassSwitch:get() end
+
 
 
 ---@class UMaterialExpressionReflectionVectorWS : UMaterialExpression
@@ -23994,16 +28473,25 @@ UMaterialExpressionReflectionCapturePassSwitch = {}
 ---@field bNormalizeCustomWorldNormal boolean
 UMaterialExpressionReflectionVectorWS = {}
 
+---@return UMaterialExpressionReflectionVectorWS
+function UMaterialExpressionReflectionVectorWS:get() end
+
 
 
 ---@class UMaterialExpressionReroute : UMaterialExpressionRerouteBase
 ---@field Input FExpressionInput
 UMaterialExpressionReroute = {}
 
+---@return UMaterialExpressionReroute
+function UMaterialExpressionReroute:get() end
+
 
 
 ---@class UMaterialExpressionRerouteBase : UMaterialExpression
 UMaterialExpressionRerouteBase = {}
+
+---@return UMaterialExpressionRerouteBase
+function UMaterialExpressionRerouteBase:get() end
 
 
 ---@class UMaterialExpressionRotateAboutAxis : UMaterialExpression
@@ -24013,6 +28501,9 @@ UMaterialExpressionRerouteBase = {}
 ---@field Position FExpressionInput
 ---@field Period float
 UMaterialExpressionRotateAboutAxis = {}
+
+---@return UMaterialExpressionRotateAboutAxis
+function UMaterialExpressionRotateAboutAxis:get() end
 
 
 
@@ -24025,11 +28516,17 @@ UMaterialExpressionRotateAboutAxis = {}
 ---@field ConstCoordinate uint32
 UMaterialExpressionRotator = {}
 
+---@return UMaterialExpressionRotator
+function UMaterialExpressionRotator:get() end
+
 
 
 ---@class UMaterialExpressionRound : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionRound = {}
+
+---@return UMaterialExpressionRound
+function UMaterialExpressionRound:get() end
 
 
 
@@ -24043,12 +28540,18 @@ UMaterialExpressionRound = {}
 ---@field mask FExpressionInput
 UMaterialExpressionRuntimeVirtualTextureOutput = {}
 
+---@return UMaterialExpressionRuntimeVirtualTextureOutput
+function UMaterialExpressionRuntimeVirtualTextureOutput:get() end
+
 
 
 ---@class UMaterialExpressionRuntimeVirtualTextureReplace : UMaterialExpression
 ---@field Default FExpressionInput
 ---@field VirtualTextureOutput FExpressionInput
 UMaterialExpressionRuntimeVirtualTextureReplace = {}
+
+---@return UMaterialExpressionRuntimeVirtualTextureReplace
+function UMaterialExpressionRuntimeVirtualTextureReplace:get() end
 
 
 
@@ -24064,6 +28567,9 @@ UMaterialExpressionRuntimeVirtualTextureReplace = {}
 ---@field TextureAddressMode ERuntimeVirtualTextureTextureAddressMode
 UMaterialExpressionRuntimeVirtualTextureSample = {}
 
+---@return UMaterialExpressionRuntimeVirtualTextureSample
+function UMaterialExpressionRuntimeVirtualTextureSample:get() end
+
 
 
 ---@class UMaterialExpressionRuntimeVirtualTextureSampleParameter : UMaterialExpressionRuntimeVirtualTextureSample
@@ -24073,12 +28579,18 @@ UMaterialExpressionRuntimeVirtualTextureSample = {}
 ---@field SortPriority int32
 UMaterialExpressionRuntimeVirtualTextureSampleParameter = {}
 
+---@return UMaterialExpressionRuntimeVirtualTextureSampleParameter
+function UMaterialExpressionRuntimeVirtualTextureSampleParameter:get() end
+
 
 
 ---@class UMaterialExpressionSamplePhysicsIntegerField : UMaterialExpression
 ---@field WorldPosition FExpressionInput
 ---@field FieldTarget EFieldIntegerType
 UMaterialExpressionSamplePhysicsIntegerField = {}
+
+---@return UMaterialExpressionSamplePhysicsIntegerField
+function UMaterialExpressionSamplePhysicsIntegerField:get() end
 
 
 
@@ -24087,6 +28599,9 @@ UMaterialExpressionSamplePhysicsIntegerField = {}
 ---@field FieldTarget EFieldScalarType
 UMaterialExpressionSamplePhysicsScalarField = {}
 
+---@return UMaterialExpressionSamplePhysicsScalarField
+function UMaterialExpressionSamplePhysicsScalarField:get() end
+
 
 
 ---@class UMaterialExpressionSamplePhysicsVectorField : UMaterialExpression
@@ -24094,11 +28609,17 @@ UMaterialExpressionSamplePhysicsScalarField = {}
 ---@field FieldTarget EFieldVectorType
 UMaterialExpressionSamplePhysicsVectorField = {}
 
+---@return UMaterialExpressionSamplePhysicsVectorField
+function UMaterialExpressionSamplePhysicsVectorField:get() end
+
 
 
 ---@class UMaterialExpressionSaturate : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionSaturate = {}
+
+---@return UMaterialExpressionSaturate
+function UMaterialExpressionSaturate:get() end
 
 
 
@@ -24110,6 +28631,9 @@ UMaterialExpressionSaturate = {}
 ---@field SliderMax float
 UMaterialExpressionScalarParameter = {}
 
+---@return UMaterialExpressionScalarParameter
+function UMaterialExpressionScalarParameter:get() end
+
 
 
 ---@class UMaterialExpressionSceneColor : UMaterialExpression
@@ -24118,6 +28642,9 @@ UMaterialExpressionScalarParameter = {}
 ---@field OffsetFraction FExpressionInput
 ---@field ConstInput FVector2D
 UMaterialExpressionSceneColor = {}
+
+---@return UMaterialExpressionSceneColor
+function UMaterialExpressionSceneColor:get() end
 
 
 
@@ -24128,6 +28655,9 @@ UMaterialExpressionSceneColor = {}
 ---@field ConstInput FVector2D
 UMaterialExpressionSceneDepth = {}
 
+---@return UMaterialExpressionSceneDepth
+function UMaterialExpressionSceneDepth:get() end
+
 
 
 ---@class UMaterialExpressionSceneDepthWithoutWater : UMaterialExpression
@@ -24137,10 +28667,16 @@ UMaterialExpressionSceneDepth = {}
 ---@field FallbackDepth float
 UMaterialExpressionSceneDepthWithoutWater = {}
 
+---@return UMaterialExpressionSceneDepthWithoutWater
+function UMaterialExpressionSceneDepthWithoutWater:get() end
+
 
 
 ---@class UMaterialExpressionSceneTexelSize : UMaterialExpression
 UMaterialExpressionSceneTexelSize = {}
+
+---@return UMaterialExpressionSceneTexelSize
+function UMaterialExpressionSceneTexelSize:get() end
 
 
 ---@class UMaterialExpressionSceneTexture : UMaterialExpression
@@ -24149,10 +28685,16 @@ UMaterialExpressionSceneTexelSize = {}
 ---@field bFiltered boolean
 UMaterialExpressionSceneTexture = {}
 
+---@return UMaterialExpressionSceneTexture
+function UMaterialExpressionSceneTexture:get() end
+
 
 
 ---@class UMaterialExpressionScreenPosition : UMaterialExpression
 UMaterialExpressionScreenPosition = {}
+
+---@return UMaterialExpressionScreenPosition
+function UMaterialExpressionScreenPosition:get() end
 
 
 ---@class UMaterialExpressionSetLocal : UMaterialExpression
@@ -24161,12 +28703,18 @@ UMaterialExpressionScreenPosition = {}
 ---@field LocalName FName
 UMaterialExpressionSetLocal = {}
 
+---@return UMaterialExpressionSetLocal
+function UMaterialExpressionSetLocal:get() end
+
 
 
 ---@class UMaterialExpressionSetMaterialAttributes : UMaterialExpression
 ---@field Inputs TArray<FExpressionInput>
 ---@field AttributeSetTypes TArray<FGuid>
 UMaterialExpressionSetMaterialAttributes = {}
+
+---@return UMaterialExpressionSetMaterialAttributes
+function UMaterialExpressionSetMaterialAttributes:get() end
 
 
 
@@ -24175,11 +28723,17 @@ UMaterialExpressionSetMaterialAttributes = {}
 ---@field VertexShader FExpressionInput
 UMaterialExpressionShaderStageSwitch = {}
 
+---@return UMaterialExpressionShaderStageSwitch
+function UMaterialExpressionShaderStageSwitch:get() end
+
 
 
 ---@class UMaterialExpressionShadingModel : UMaterialExpression
 ---@field ShadingModel EMaterialShadingModel
 UMaterialExpressionShadingModel = {}
+
+---@return UMaterialExpressionShadingModel
+function UMaterialExpressionShadingModel:get() end
 
 
 
@@ -24188,6 +28742,9 @@ UMaterialExpressionShadingModel = {}
 ---@field Inputs FExpressionInput
 UMaterialExpressionShadingPathSwitch = {}
 
+---@return UMaterialExpressionShadingPathSwitch
+function UMaterialExpressionShadingPathSwitch:get() end
+
 
 
 ---@class UMaterialExpressionShadowReplace : UMaterialExpression
@@ -24195,11 +28752,17 @@ UMaterialExpressionShadingPathSwitch = {}
 ---@field Shadow FExpressionInput
 UMaterialExpressionShadowReplace = {}
 
+---@return UMaterialExpressionShadowReplace
+function UMaterialExpressionShadowReplace:get() end
+
 
 
 ---@class UMaterialExpressionSign : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionSign = {}
+
+---@return UMaterialExpressionSign
+function UMaterialExpressionSign:get() end
 
 
 
@@ -24207,6 +28770,9 @@ UMaterialExpressionSign = {}
 ---@field Input FExpressionInput
 ---@field Period float
 UMaterialExpressionSine = {}
+
+---@return UMaterialExpressionSine
+function UMaterialExpressionSine:get() end
 
 
 
@@ -24217,21 +28783,33 @@ UMaterialExpressionSine = {}
 ---@field ColorScaleBehindWater FExpressionInput
 UMaterialExpressionSingleLayerWaterMaterialOutput = {}
 
+---@return UMaterialExpressionSingleLayerWaterMaterialOutput
+function UMaterialExpressionSingleLayerWaterMaterialOutput:get() end
+
 
 
 ---@class UMaterialExpressionSkyAtmosphereAerialPerspective : UMaterialExpression
 ---@field WorldPosition FExpressionInput
 UMaterialExpressionSkyAtmosphereAerialPerspective = {}
 
+---@return UMaterialExpressionSkyAtmosphereAerialPerspective
+function UMaterialExpressionSkyAtmosphereAerialPerspective:get() end
+
 
 
 ---@class UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance : UMaterialExpression
 UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance = {}
 
+---@return UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance
+function UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance:get() end
+
 
 ---@class UMaterialExpressionSkyAtmosphereLightDirection : UMaterialExpression
 ---@field LightIndex int32
 UMaterialExpressionSkyAtmosphereLightDirection = {}
+
+---@return UMaterialExpressionSkyAtmosphereLightDirection
+function UMaterialExpressionSkyAtmosphereLightDirection:get() end
 
 
 
@@ -24240,6 +28818,9 @@ UMaterialExpressionSkyAtmosphereLightDirection = {}
 ---@field DiskAngularDiameterOverride FExpressionInput
 UMaterialExpressionSkyAtmosphereLightDiskLuminance = {}
 
+---@return UMaterialExpressionSkyAtmosphereLightDiskLuminance
+function UMaterialExpressionSkyAtmosphereLightDiskLuminance:get() end
+
 
 
 ---@class UMaterialExpressionSkyAtmosphereLightIlluminance : UMaterialExpression
@@ -24247,16 +28828,25 @@ UMaterialExpressionSkyAtmosphereLightDiskLuminance = {}
 ---@field WorldPosition FExpressionInput
 UMaterialExpressionSkyAtmosphereLightIlluminance = {}
 
+---@return UMaterialExpressionSkyAtmosphereLightIlluminance
+function UMaterialExpressionSkyAtmosphereLightIlluminance:get() end
+
 
 
 ---@class UMaterialExpressionSkyAtmosphereViewLuminance : UMaterialExpression
 UMaterialExpressionSkyAtmosphereViewLuminance = {}
+
+---@return UMaterialExpressionSkyAtmosphereViewLuminance
+function UMaterialExpressionSkyAtmosphereViewLuminance:get() end
 
 
 ---@class UMaterialExpressionSkyLightEnvMapSample : UMaterialExpression
 ---@field Direction FExpressionInput
 ---@field Roughness FExpressionInput
 UMaterialExpressionSkyLightEnvMapSample = {}
+
+---@return UMaterialExpressionSkyLightEnvMapSample
+function UMaterialExpressionSkyLightEnvMapSample:get() end
 
 
 
@@ -24269,6 +28859,9 @@ UMaterialExpressionSkyLightEnvMapSample = {}
 ---@field ConstValue float
 UMaterialExpressionSmoothStep = {}
 
+---@return UMaterialExpressionSmoothStep
+function UMaterialExpressionSmoothStep:get() end
+
 
 
 ---@class UMaterialExpressionSobol : UMaterialExpression
@@ -24278,6 +28871,9 @@ UMaterialExpressionSmoothStep = {}
 ---@field ConstIndex uint32
 ---@field ConstSeed FVector2D
 UMaterialExpressionSobol = {}
+
+---@return UMaterialExpressionSobol
+function UMaterialExpressionSobol:get() end
 
 
 
@@ -24293,6 +28889,9 @@ UMaterialExpressionSobol = {}
 ---@field bAccurateWindVelocities boolean
 UMaterialExpressionSpeedTree = {}
 
+---@return UMaterialExpressionSpeedTree
+function UMaterialExpressionSpeedTree:get() end
+
 
 
 ---@class UMaterialExpressionSphereMask : UMaterialExpression
@@ -24304,6 +28903,9 @@ UMaterialExpressionSpeedTree = {}
 ---@field HardnessPercent float
 UMaterialExpressionSphereMask = {}
 
+---@return UMaterialExpressionSphereMask
+function UMaterialExpressionSphereMask:get() end
+
 
 
 ---@class UMaterialExpressionSphericalParticleOpacity : UMaterialExpression
@@ -24311,11 +28913,17 @@ UMaterialExpressionSphereMask = {}
 ---@field ConstantDensity float
 UMaterialExpressionSphericalParticleOpacity = {}
 
+---@return UMaterialExpressionSphericalParticleOpacity
+function UMaterialExpressionSphericalParticleOpacity:get() end
+
 
 
 ---@class UMaterialExpressionSquareRoot : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionSquareRoot = {}
+
+---@return UMaterialExpressionSquareRoot
+function UMaterialExpressionSquareRoot:get() end
 
 
 
@@ -24323,11 +28931,17 @@ UMaterialExpressionSquareRoot = {}
 ---@field Value boolean
 UMaterialExpressionStaticBool = {}
 
+---@return UMaterialExpressionStaticBool
+function UMaterialExpressionStaticBool:get() end
+
 
 
 ---@class UMaterialExpressionStaticBoolParameter : UMaterialExpressionParameter
 ---@field DefaultValue boolean
 UMaterialExpressionStaticBoolParameter = {}
+
+---@return UMaterialExpressionStaticBoolParameter
+function UMaterialExpressionStaticBoolParameter:get() end
 
 
 
@@ -24339,6 +28953,9 @@ UMaterialExpressionStaticBoolParameter = {}
 ---@field DefaultA boolean
 UMaterialExpressionStaticComponentMaskParameter = {}
 
+---@return UMaterialExpressionStaticComponentMaskParameter
+function UMaterialExpressionStaticComponentMaskParameter:get() end
+
 
 
 ---@class UMaterialExpressionStaticSwitch : UMaterialExpression
@@ -24348,12 +28965,18 @@ UMaterialExpressionStaticComponentMaskParameter = {}
 ---@field Value FExpressionInput
 UMaterialExpressionStaticSwitch = {}
 
+---@return UMaterialExpressionStaticSwitch
+function UMaterialExpressionStaticSwitch:get() end
+
 
 
 ---@class UMaterialExpressionStaticSwitchParameter : UMaterialExpressionStaticBoolParameter
 ---@field A FExpressionInput
 ---@field B FExpressionInput
 UMaterialExpressionStaticSwitchParameter = {}
+
+---@return UMaterialExpressionStaticSwitchParameter
+function UMaterialExpressionStaticSwitchParameter:get() end
 
 
 
@@ -24364,6 +28987,9 @@ UMaterialExpressionStaticSwitchParameter = {}
 ---@field ConstX float
 UMaterialExpressionStep = {}
 
+---@return UMaterialExpressionStep
+function UMaterialExpressionStep:get() end
+
 
 
 ---@class UMaterialExpressionStrataAdd : UMaterialExpressionStrataBSDF
@@ -24372,16 +28998,25 @@ UMaterialExpressionStep = {}
 ---@field bUseParameterBlending boolean
 UMaterialExpressionStrataAdd = {}
 
+---@return UMaterialExpressionStrataAdd
+function UMaterialExpressionStrataAdd:get() end
+
 
 
 ---@class UMaterialExpressionStrataBSDF : UMaterialExpression
 UMaterialExpressionStrataBSDF = {}
+
+---@return UMaterialExpressionStrataBSDF
+function UMaterialExpressionStrataBSDF:get() end
 
 
 ---@class UMaterialExpressionStrataConvertToDecal : UMaterialExpressionStrataBSDF
 ---@field DecalMaterial FExpressionInput
 ---@field Coverage FExpressionInput
 UMaterialExpressionStrataConvertToDecal = {}
+
+---@return UMaterialExpressionStrataConvertToDecal
+function UMaterialExpressionStrataConvertToDecal:get() end
 
 
 
@@ -24397,6 +29032,9 @@ UMaterialExpressionStrataConvertToDecal = {}
 ---@field SubsurfaceProfile USubsurfaceProfile
 UMaterialExpressionStrataEyeBSDF = {}
 
+---@return UMaterialExpressionStrataEyeBSDF
+function UMaterialExpressionStrataEyeBSDF:get() end
+
 
 
 ---@class UMaterialExpressionStrataHairBSDF : UMaterialExpressionStrataBSDF
@@ -24409,12 +29047,18 @@ UMaterialExpressionStrataEyeBSDF = {}
 ---@field EmissiveColor FExpressionInput
 UMaterialExpressionStrataHairBSDF = {}
 
+---@return UMaterialExpressionStrataHairBSDF
+function UMaterialExpressionStrataHairBSDF:get() end
+
 
 
 ---@class UMaterialExpressionStrataHazinessToSecondaryRoughness : UMaterialExpressionStrataUtilityBase
 ---@field BaseRoughness FExpressionInput
 ---@field Haziness FExpressionInput
 UMaterialExpressionStrataHazinessToSecondaryRoughness = {}
+
+---@return UMaterialExpressionStrataHazinessToSecondaryRoughness
+function UMaterialExpressionStrataHazinessToSecondaryRoughness:get() end
 
 
 
@@ -24424,6 +29068,9 @@ UMaterialExpressionStrataHazinessToSecondaryRoughness = {}
 ---@field Mix FExpressionInput
 ---@field bUseParameterBlending boolean
 UMaterialExpressionStrataHorizontalMixing = {}
+
+---@return UMaterialExpressionStrataHorizontalMixing
+function UMaterialExpressionStrataHorizontalMixing:get() end
 
 
 
@@ -24452,11 +29099,17 @@ UMaterialExpressionStrataHorizontalMixing = {}
 ---@field ConvertedStrataMaterialInfo FStrataMaterialInfo
 UMaterialExpressionStrataLegacyConversion = {}
 
+---@return UMaterialExpressionStrataLegacyConversion
+function UMaterialExpressionStrataLegacyConversion:get() end
+
 
 
 ---@class UMaterialExpressionStrataLightFunction : UMaterialExpressionStrataBSDF
 ---@field Color FExpressionInput
 UMaterialExpressionStrataLightFunction = {}
+
+---@return UMaterialExpressionStrataLightFunction
+function UMaterialExpressionStrataLightFunction:get() end
 
 
 
@@ -24466,12 +29119,18 @@ UMaterialExpressionStrataLightFunction = {}
 ---@field Specular FExpressionInput
 UMaterialExpressionStrataMetalnessToDiffuseAlbedoF0 = {}
 
+---@return UMaterialExpressionStrataMetalnessToDiffuseAlbedoF0
+function UMaterialExpressionStrataMetalnessToDiffuseAlbedoF0:get() end
+
 
 
 ---@class UMaterialExpressionStrataPostProcess : UMaterialExpressionStrataBSDF
 ---@field Color FExpressionInput
 ---@field Opacity FExpressionInput
 UMaterialExpressionStrataPostProcess = {}
+
+---@return UMaterialExpressionStrataPostProcess
+function UMaterialExpressionStrataPostProcess:get() end
 
 
 
@@ -24485,6 +29144,9 @@ UMaterialExpressionStrataPostProcess = {}
 ---@field Normal FExpressionInput
 ---@field EmissiveColor FExpressionInput
 UMaterialExpressionStrataSimpleClearCoatBSDF = {}
+
+---@return UMaterialExpressionStrataSimpleClearCoatBSDF
+function UMaterialExpressionStrataSimpleClearCoatBSDF:get() end
 
 
 
@@ -24501,6 +29163,9 @@ UMaterialExpressionStrataSimpleClearCoatBSDF = {}
 ---@field WaterPhaseG FExpressionInput
 ---@field ColorScaleBehindWater FExpressionInput
 UMaterialExpressionStrataSingleLayerWaterBSDF = {}
+
+---@return UMaterialExpressionStrataSingleLayerWaterBSDF
+function UMaterialExpressionStrataSingleLayerWaterBSDF:get() end
 
 
 
@@ -24530,6 +29195,9 @@ UMaterialExpressionStrataSingleLayerWaterBSDF = {}
 ---@field bUseSSSDiffusion boolean
 UMaterialExpressionStrataSlabBSDF = {}
 
+---@return UMaterialExpressionStrataSlabBSDF
+function UMaterialExpressionStrataSlabBSDF:get() end
+
 
 
 ---@class UMaterialExpressionStrataThinFilm : UMaterialExpressionStrataBSDF
@@ -24538,12 +29206,18 @@ UMaterialExpressionStrataSlabBSDF = {}
 ---@field IOR FExpressionInput
 UMaterialExpressionStrataThinFilm = {}
 
+---@return UMaterialExpressionStrataThinFilm
+function UMaterialExpressionStrataThinFilm:get() end
+
 
 
 ---@class UMaterialExpressionStrataTransmittanceToMFP : UMaterialExpressionStrataUtilityBase
 ---@field TransmittanceColor FExpressionInput
 ---@field Thickness FExpressionInput
 UMaterialExpressionStrataTransmittanceToMFP = {}
+
+---@return UMaterialExpressionStrataTransmittanceToMFP
+function UMaterialExpressionStrataTransmittanceToMFP:get() end
 
 
 
@@ -24552,10 +29226,16 @@ UMaterialExpressionStrataTransmittanceToMFP = {}
 ---@field TransmittanceColor FExpressionInput
 UMaterialExpressionStrataUnlitBSDF = {}
 
+---@return UMaterialExpressionStrataUnlitBSDF
+function UMaterialExpressionStrataUnlitBSDF:get() end
+
 
 
 ---@class UMaterialExpressionStrataUtilityBase : UMaterialExpression
 UMaterialExpressionStrataUtilityBase = {}
+
+---@return UMaterialExpressionStrataUtilityBase
+function UMaterialExpressionStrataUtilityBase:get() end
 
 
 ---@class UMaterialExpressionStrataVerticalLayering : UMaterialExpressionStrataBSDF
@@ -24563,6 +29243,9 @@ UMaterialExpressionStrataUtilityBase = {}
 ---@field Base FExpressionInput
 ---@field bUseParameterBlending boolean
 UMaterialExpressionStrataVerticalLayering = {}
+
+---@return UMaterialExpressionStrataVerticalLayering
+function UMaterialExpressionStrataVerticalLayering:get() end
 
 
 
@@ -24573,12 +29256,18 @@ UMaterialExpressionStrataVerticalLayering = {}
 ---@field AmbientOcclusion FExpressionInput
 UMaterialExpressionStrataVolumetricFogCloudBSDF = {}
 
+---@return UMaterialExpressionStrataVolumetricFogCloudBSDF
+function UMaterialExpressionStrataVolumetricFogCloudBSDF:get() end
+
 
 
 ---@class UMaterialExpressionStrataWeight : UMaterialExpressionStrataBSDF
 ---@field A FExpressionInput
 ---@field Weight FExpressionInput
 UMaterialExpressionStrataWeight = {}
+
+---@return UMaterialExpressionStrataWeight
+function UMaterialExpressionStrataWeight:get() end
 
 
 
@@ -24589,6 +29278,9 @@ UMaterialExpressionStrataWeight = {}
 ---@field ConstB float
 UMaterialExpressionSubtract = {}
 
+---@return UMaterialExpressionSubtract
+function UMaterialExpressionSubtract:get() end
+
 
 
 ---@class UMaterialExpressionTangent : UMaterialExpression
@@ -24596,11 +29288,17 @@ UMaterialExpressionSubtract = {}
 ---@field Period float
 UMaterialExpressionTangent = {}
 
+---@return UMaterialExpressionTangent
+function UMaterialExpressionTangent:get() end
+
 
 
 ---@class UMaterialExpressionTangentOutput : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
 UMaterialExpressionTangentOutput = {}
+
+---@return UMaterialExpressionTangentOutput
+function UMaterialExpressionTangentOutput:get() end
 
 
 
@@ -24611,6 +29309,9 @@ UMaterialExpressionTangentOutput = {}
 ---@field ConstSeed FVector2D
 UMaterialExpressionTemporalSobol = {}
 
+---@return UMaterialExpressionTemporalSobol
+function UMaterialExpressionTemporalSobol:get() end
+
 
 
 ---@class UMaterialExpressionTextureBase : UMaterialExpression
@@ -24618,6 +29319,9 @@ UMaterialExpressionTemporalSobol = {}
 ---@field SamplerType EMaterialSamplerType
 ---@field IsDefaultMeshpaintTexture boolean
 UMaterialExpressionTextureBase = {}
+
+---@return UMaterialExpressionTextureBase
+function UMaterialExpressionTextureBase:get() end
 
 
 
@@ -24629,20 +29333,32 @@ UMaterialExpressionTextureBase = {}
 ---@field UnMirrorV boolean
 UMaterialExpressionTextureCoordinate = {}
 
+---@return UMaterialExpressionTextureCoordinate
+function UMaterialExpressionTextureCoordinate:get() end
+
 
 
 ---@class UMaterialExpressionTextureObject : UMaterialExpressionTextureBase
 UMaterialExpressionTextureObject = {}
 
+---@return UMaterialExpressionTextureObject
+function UMaterialExpressionTextureObject:get() end
+
 
 ---@class UMaterialExpressionTextureObjectParameter : UMaterialExpressionTextureSampleParameter
 UMaterialExpressionTextureObjectParameter = {}
+
+---@return UMaterialExpressionTextureObjectParameter
+function UMaterialExpressionTextureObjectParameter:get() end
 
 
 ---@class UMaterialExpressionTextureProperty : UMaterialExpression
 ---@field TextureObject FExpressionInput
 ---@field Property EMaterialExposedTextureProperty
 UMaterialExpressionTextureProperty = {}
+
+---@return UMaterialExpressionTextureProperty
+function UMaterialExpressionTextureProperty:get() end
 
 
 
@@ -24660,6 +29376,9 @@ UMaterialExpressionTextureProperty = {}
 ---@field ConstMipValue int32
 UMaterialExpressionTextureSample = {}
 
+---@return UMaterialExpressionTextureSample
+function UMaterialExpressionTextureSample:get() end
+
 
 
 ---@class UMaterialExpressionTextureSampleParameter : UMaterialExpressionTextureSample
@@ -24670,37 +29389,61 @@ UMaterialExpressionTextureSample = {}
 ---@field ChannelNames FParameterChannelNames
 UMaterialExpressionTextureSampleParameter = {}
 
+---@return UMaterialExpressionTextureSampleParameter
+function UMaterialExpressionTextureSampleParameter:get() end
+
 
 
 ---@class UMaterialExpressionTextureSampleParameter2D : UMaterialExpressionTextureSampleParameter
 UMaterialExpressionTextureSampleParameter2D = {}
 
+---@return UMaterialExpressionTextureSampleParameter2D
+function UMaterialExpressionTextureSampleParameter2D:get() end
+
 
 ---@class UMaterialExpressionTextureSampleParameter2DArray : UMaterialExpressionTextureSampleParameter
 UMaterialExpressionTextureSampleParameter2DArray = {}
+
+---@return UMaterialExpressionTextureSampleParameter2DArray
+function UMaterialExpressionTextureSampleParameter2DArray:get() end
 
 
 ---@class UMaterialExpressionTextureSampleParameterCube : UMaterialExpressionTextureSampleParameter
 UMaterialExpressionTextureSampleParameterCube = {}
 
+---@return UMaterialExpressionTextureSampleParameterCube
+function UMaterialExpressionTextureSampleParameterCube:get() end
+
 
 ---@class UMaterialExpressionTextureSampleParameterCubeArray : UMaterialExpressionTextureSampleParameter
 UMaterialExpressionTextureSampleParameterCubeArray = {}
+
+---@return UMaterialExpressionTextureSampleParameterCubeArray
+function UMaterialExpressionTextureSampleParameterCubeArray:get() end
 
 
 ---@class UMaterialExpressionTextureSampleParameterSubUV : UMaterialExpressionTextureSampleParameter2D
 ---@field bBlend boolean
 UMaterialExpressionTextureSampleParameterSubUV = {}
 
+---@return UMaterialExpressionTextureSampleParameterSubUV
+function UMaterialExpressionTextureSampleParameterSubUV:get() end
+
 
 
 ---@class UMaterialExpressionTextureSampleParameterVolume : UMaterialExpressionTextureSampleParameter
 UMaterialExpressionTextureSampleParameterVolume = {}
 
+---@return UMaterialExpressionTextureSampleParameterVolume
+function UMaterialExpressionTextureSampleParameterVolume:get() end
+
 
 ---@class UMaterialExpressionThinTranslucentMaterialOutput : UMaterialExpressionCustomOutput
 ---@field TransmittanceColor FExpressionInput
 UMaterialExpressionThinTranslucentMaterialOutput = {}
+
+---@return UMaterialExpressionThinTranslucentMaterialOutput
+function UMaterialExpressionThinTranslucentMaterialOutput:get() end
 
 
 
@@ -24710,6 +29453,9 @@ UMaterialExpressionThinTranslucentMaterialOutput = {}
 ---@field Period float
 UMaterialExpressionTime = {}
 
+---@return UMaterialExpressionTime
+function UMaterialExpressionTime:get() end
+
 
 
 ---@class UMaterialExpressionTransform : UMaterialExpression
@@ -24717,6 +29463,9 @@ UMaterialExpressionTime = {}
 ---@field TransformSourceType EMaterialVectorCoordTransformSource
 ---@field TransformType EMaterialVectorCoordTransform
 UMaterialExpressionTransform = {}
+
+---@return UMaterialExpressionTransform
+function UMaterialExpressionTransform:get() end
 
 
 
@@ -24726,16 +29475,25 @@ UMaterialExpressionTransform = {}
 ---@field TransformType EMaterialPositionTransformSource
 UMaterialExpressionTransformPosition = {}
 
+---@return UMaterialExpressionTransformPosition
+function UMaterialExpressionTransformPosition:get() end
+
 
 
 ---@class UMaterialExpressionTruncate : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionTruncate = {}
 
+---@return UMaterialExpressionTruncate
+function UMaterialExpressionTruncate:get() end
+
 
 
 ---@class UMaterialExpressionTwoSidedSign : UMaterialExpression
 UMaterialExpressionTwoSidedSign = {}
+
+---@return UMaterialExpressionTwoSidedSign
+function UMaterialExpressionTwoSidedSign:get() end
 
 
 ---@class UMaterialExpressionVectorNoise : UMaterialExpression
@@ -24746,6 +29504,9 @@ UMaterialExpressionTwoSidedSign = {}
 ---@field TileSize uint32
 UMaterialExpressionVectorNoise = {}
 
+---@return UMaterialExpressionVectorNoise
+function UMaterialExpressionVectorNoise:get() end
+
 
 
 ---@class UMaterialExpressionVectorParameter : UMaterialExpressionParameter
@@ -24755,34 +29516,55 @@ UMaterialExpressionVectorNoise = {}
 ---@field ChannelNames FParameterChannelNames
 UMaterialExpressionVectorParameter = {}
 
+---@return UMaterialExpressionVectorParameter
+function UMaterialExpressionVectorParameter:get() end
+
 
 
 ---@class UMaterialExpressionVertexColor : UMaterialExpression
 UMaterialExpressionVertexColor = {}
+
+---@return UMaterialExpressionVertexColor
+function UMaterialExpressionVertexColor:get() end
 
 
 ---@class UMaterialExpressionVertexInterpolator : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
 UMaterialExpressionVertexInterpolator = {}
 
+---@return UMaterialExpressionVertexInterpolator
+function UMaterialExpressionVertexInterpolator:get() end
+
 
 
 ---@class UMaterialExpressionVertexNormalWS : UMaterialExpression
 UMaterialExpressionVertexNormalWS = {}
 
+---@return UMaterialExpressionVertexNormalWS
+function UMaterialExpressionVertexNormalWS:get() end
+
 
 ---@class UMaterialExpressionVertexTangentWS : UMaterialExpression
 UMaterialExpressionVertexTangentWS = {}
+
+---@return UMaterialExpressionVertexTangentWS
+function UMaterialExpressionVertexTangentWS:get() end
 
 
 ---@class UMaterialExpressionViewProperty : UMaterialExpression
 ---@field Property EMaterialExposedViewProperty
 UMaterialExpressionViewProperty = {}
 
+---@return UMaterialExpressionViewProperty
+function UMaterialExpressionViewProperty:get() end
+
 
 
 ---@class UMaterialExpressionViewSize : UMaterialExpression
 UMaterialExpressionViewSize = {}
+
+---@return UMaterialExpressionViewSize
+function UMaterialExpressionViewSize:get() end
 
 
 ---@class UMaterialExpressionVirtualTextureFeatureSwitch : UMaterialExpression
@@ -24790,10 +29572,16 @@ UMaterialExpressionViewSize = {}
 ---@field Yes FExpressionInput
 UMaterialExpressionVirtualTextureFeatureSwitch = {}
 
+---@return UMaterialExpressionVirtualTextureFeatureSwitch
+function UMaterialExpressionVirtualTextureFeatureSwitch:get() end
+
 
 
 ---@class UMaterialExpressionVolumetricAdvancedMaterialInput : UMaterialExpression
 UMaterialExpressionVolumetricAdvancedMaterialInput = {}
+
+---@return UMaterialExpressionVolumetricAdvancedMaterialInput
+function UMaterialExpressionVolumetricAdvancedMaterialInput:get() end
 
 
 ---@class UMaterialExpressionVolumetricAdvancedMaterialOutput : UMaterialExpressionCustomOutput
@@ -24818,15 +29606,24 @@ UMaterialExpressionVolumetricAdvancedMaterialInput = {}
 ---@field bClampMultiScatteringContribution boolean
 UMaterialExpressionVolumetricAdvancedMaterialOutput = {}
 
+---@return UMaterialExpressionVolumetricAdvancedMaterialOutput
+function UMaterialExpressionVolumetricAdvancedMaterialOutput:get() end
+
 
 
 ---@class UMaterialExpressionVolumetricCloudEmptySpaceSkippingInput : UMaterialExpression
 UMaterialExpressionVolumetricCloudEmptySpaceSkippingInput = {}
 
+---@return UMaterialExpressionVolumetricCloudEmptySpaceSkippingInput
+function UMaterialExpressionVolumetricCloudEmptySpaceSkippingInput:get() end
+
 
 ---@class UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput : UMaterialExpressionCustomOutput
 ---@field ContainsMatter FExpressionInput
 UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput = {}
+
+---@return UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput
+function UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput:get() end
 
 
 
@@ -24836,11 +29633,17 @@ UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput = {}
 ---@field Condition FExpressionInput
 UMaterialExpressionWhileLoop = {}
 
+---@return UMaterialExpressionWhileLoop
+function UMaterialExpressionWhileLoop:get() end
+
 
 
 ---@class UMaterialExpressionWorldPosition : UMaterialExpression
 ---@field WorldPositionShaderOffset EWorldPositionIncludedOffsets
 UMaterialExpressionWorldPosition = {}
+
+---@return UMaterialExpressionWorldPosition
+function UMaterialExpressionWorldPosition:get() end
 
 
 
@@ -24852,11 +29655,17 @@ UMaterialExpressionWorldPosition = {}
 ---@field bEnableNewHLSLGenerator boolean
 UMaterialFunction = {}
 
+---@return UMaterialFunction
+function UMaterialFunction:get() end
+
 
 
 ---@class UMaterialFunctionEditorOnlyData : UMaterialFunctionInterfaceEditorOnlyData
 ---@field ExpressionCollection FMaterialExpressionCollection
 UMaterialFunctionEditorOnlyData = {}
+
+---@return UMaterialFunctionEditorOnlyData
+function UMaterialFunctionEditorOnlyData:get() end
 
 
 
@@ -24873,6 +29682,9 @@ UMaterialFunctionEditorOnlyData = {}
 ---@field RuntimeVirtualTextureParameterValues TArray<FRuntimeVirtualTextureParameterValue>
 UMaterialFunctionInstance = {}
 
+---@return UMaterialFunctionInstance
+function UMaterialFunctionInstance:get() end
+
 
 
 ---@class UMaterialFunctionInterface : UObject
@@ -24880,26 +29692,44 @@ UMaterialFunctionInstance = {}
 ---@field MaterialFunctionUsage EMaterialFunctionUsage
 UMaterialFunctionInterface = {}
 
+---@return UMaterialFunctionInterface
+function UMaterialFunctionInterface:get() end
+
 
 
 ---@class UMaterialFunctionInterfaceEditorOnlyData : UObject
 UMaterialFunctionInterfaceEditorOnlyData = {}
 
+---@return UMaterialFunctionInterfaceEditorOnlyData
+function UMaterialFunctionInterfaceEditorOnlyData:get() end
+
 
 ---@class UMaterialFunctionMaterialLayer : UMaterialFunction
 UMaterialFunctionMaterialLayer = {}
+
+---@return UMaterialFunctionMaterialLayer
+function UMaterialFunctionMaterialLayer:get() end
 
 
 ---@class UMaterialFunctionMaterialLayerBlend : UMaterialFunction
 UMaterialFunctionMaterialLayerBlend = {}
 
+---@return UMaterialFunctionMaterialLayerBlend
+function UMaterialFunctionMaterialLayerBlend:get() end
+
 
 ---@class UMaterialFunctionMaterialLayerBlendInstance : UMaterialFunctionInstance
 UMaterialFunctionMaterialLayerBlendInstance = {}
 
+---@return UMaterialFunctionMaterialLayerBlendInstance
+function UMaterialFunctionMaterialLayerBlendInstance:get() end
+
 
 ---@class UMaterialFunctionMaterialLayerInstance : UMaterialFunctionInstance
 UMaterialFunctionMaterialLayerInstance = {}
+
+---@return UMaterialFunctionMaterialLayerInstance
+function UMaterialFunctionMaterialLayerInstance:get() end
 
 
 ---@class UMaterialInstance : UMaterialInterface
@@ -24919,11 +29749,17 @@ UMaterialFunctionMaterialLayerInstance = {}
 ---@field StaticParametersRuntime FStaticParameterSetRuntimeData
 UMaterialInstance = {}
 
+---@return UMaterialInstance
+function UMaterialInstance:get() end
+
 
 
 ---@class UMaterialInstanceConstant : UMaterialInstance
 ---@field PhysMaterialMask UPhysicalMaterialMask
 UMaterialInstanceConstant = {}
+
+---@return UMaterialInstanceConstant
+function UMaterialInstanceConstant:get() end
 
 ---@param ParameterName FName
 ---@return FLinearColor
@@ -24938,6 +29774,9 @@ function UMaterialInstanceConstant:K2_GetScalarParameterValue(ParameterName) end
 
 ---@class UMaterialInstanceDynamic : UMaterialInstance
 UMaterialInstanceDynamic = {}
+
+---@return UMaterialInstanceDynamic
+function UMaterialInstanceDynamic:get() end
 
 ---@param ParameterInfo FMaterialParameterInfo
 ---@param Value FLinearColor
@@ -25010,6 +29849,9 @@ function UMaterialInstanceDynamic:CopyInterpParameters(Source) end
 ---@field StaticParameters FStaticParameterSetEditorOnlyData
 UMaterialInstanceEditorOnlyData = {}
 
+---@return UMaterialInstanceEditorOnlyData
+function UMaterialInstanceEditorOnlyData:get() end
+
 
 
 ---@class UMaterialInterface : UObject
@@ -25018,6 +29860,9 @@ UMaterialInstanceEditorOnlyData = {}
 ---@field TextureStreamingData TArray<FMaterialTextureInfo>
 ---@field AssetUserData TArray<UAssetUserData>
 UMaterialInterface = {}
+
+---@return UMaterialInterface
+function UMaterialInterface:get() end
 
 ---@param OverrideForceMiplevelsToBeResident boolean
 ---@param bForceMiplevelsToBeResidentValue boolean
@@ -25046,12 +29891,18 @@ function UMaterialInterface:GetBaseMaterial() end
 ---@class UMaterialInterfaceEditorOnlyData : UObject
 UMaterialInterfaceEditorOnlyData = {}
 
+---@return UMaterialInterfaceEditorOnlyData
+function UMaterialInterfaceEditorOnlyData:get() end
+
 
 ---@class UMaterialParameterCollection : UObject
 ---@field StateId FGuid
 ---@field ScalarParameters TArray<FCollectionScalarParameter>
 ---@field VectorParameters TArray<FCollectionVectorParameter>
 UMaterialParameterCollection = {}
+
+---@return UMaterialParameterCollection
+function UMaterialParameterCollection:get() end
 
 ---@return TArray<FName>
 function UMaterialParameterCollection:GetVectorParameterNames() end
@@ -25071,6 +29922,9 @@ function UMaterialParameterCollection:GetScalarParameterDefaultValue(ParameterNa
 ---@field Collection UMaterialParameterCollection
 UMaterialParameterCollectionInstance = {}
 
+---@return UMaterialParameterCollectionInstance
+function UMaterialParameterCollectionInstance:get() end
+
 
 
 ---@class UMeshComponent : UPrimitiveComponent
@@ -25079,6 +29933,9 @@ UMaterialParameterCollectionInstance = {}
 ---@field OverlayMaterialMaxDrawDistance float
 ---@field bEnableMaterialParameterCaching boolean
 UMeshComponent = {}
+
+---@return UMeshComponent
+function UMeshComponent:get() end
 
 ---@param ParameterName FName
 ---@param ParameterValue FVector
@@ -25111,13 +29968,22 @@ function UMeshComponent:GetMaterialIndex(MaterialSlotName) end
 ---@class UMeshDeformer : UObject
 UMeshDeformer = {}
 
+---@return UMeshDeformer
+function UMeshDeformer:get() end
+
 
 ---@class UMeshDeformerInstance : UObject
 UMeshDeformerInstance = {}
 
+---@return UMeshDeformerInstance
+function UMeshDeformerInstance:get() end
+
 
 ---@class UMeshDeformerInstanceSettings : UObject
 UMeshDeformerInstanceSettings = {}
+
+---@return UMeshDeformerInstanceSettings
+function UMeshDeformerInstanceSettings:get() end
 
 
 ---@class UMeshSimplificationSettings : UDeveloperSettings
@@ -25125,10 +29991,16 @@ UMeshDeformerInstanceSettings = {}
 ---@field bMeshReductionBackwardCompatible boolean
 UMeshSimplificationSettings = {}
 
+---@return UMeshSimplificationSettings
+function UMeshSimplificationSettings:get() end
+
 
 
 ---@class UMeshVertexPainterKismetLibrary : UBlueprintFunctionLibrary
 UMeshVertexPainterKismetLibrary = {}
+
+---@return UMeshVertexPainterKismetLibrary
+function UMeshVertexPainterKismetLibrary:get() end
 
 ---@param StaticMeshComponent UStaticMeshComponent
 function UMeshVertexPainterKismetLibrary:RemovePaintedVertices(StaticMeshComponent) end
@@ -25150,6 +30022,9 @@ function UMeshVertexPainterKismetLibrary:PaintVerticesLerpAlongAxis(StaticMeshCo
 ---@field LastErrorSolution FString
 UMicroTransactionBase = {}
 
+---@return UMicroTransactionBase
+function UMicroTransactionBase:get() end
+
 
 
 ---@class UMirrorDataTable : UDataTable
@@ -25158,21 +30033,33 @@ UMicroTransactionBase = {}
 ---@field Skeleton USkeleton
 UMirrorDataTable = {}
 
+---@return UMirrorDataTable
+function UMirrorDataTable:get() end
+
 
 
 ---@class UModel : UObject
 UModel = {}
+
+---@return UModel
+function UModel:get() end
 
 
 ---@class UModelComponent : UPrimitiveComponent
 ---@field ModelBodySetup UBodySetup
 UModelComponent = {}
 
+---@return UModelComponent
+function UModelComponent:get() end
+
 
 
 ---@class UMorphTarget : UObject
 ---@field BaseSkelMesh USkeletalMesh
 UMorphTarget = {}
+
+---@return UMorphTarget
+function UMorphTarget:get() end
 
 
 
@@ -25192,6 +30079,9 @@ UMorphTarget = {}
 ---@field bComponentShouldUpdatePhysicsVolume boolean
 ---@field PlaneConstraintAxisSetting EPlaneConstraintAxisSetting
 UMovementComponent = {}
+
+---@return UMovementComponent
+function UMovementComponent:get() end
 
 function UMovementComponent:StopMovementImmediately() end
 function UMovementComponent:SnapUpdatedComponentToPlane() end
@@ -25246,10 +30136,16 @@ function UMovementComponent:ConstrainDirectionToPlane(Direction) end
 ---@class UNavAreaBase : UObject
 UNavAreaBase = {}
 
+---@return UNavAreaBase
+function UNavAreaBase:get() end
+
 
 ---@class UNavCollisionBase : UObject
 ---@field bIsDynamicObstacle boolean
 UNavCollisionBase = {}
+
+---@return UNavCollisionBase
+function UNavCollisionBase:get() end
 
 
 
@@ -25257,6 +30153,9 @@ UNavCollisionBase = {}
 ---@field Links TArray<FNavigationLink>
 ---@field SegmentLinks TArray<FNavigationSegmentLink>
 UNavLinkDefinition = {}
+
+---@return UNavLinkDefinition
+function UNavLinkDefinition:get() end
 
 
 
@@ -25269,6 +30168,9 @@ UNavLinkDefinition = {}
 ---@field MovementState FMovementProperties
 ---@field PathFollowingComp UObject
 UNavMovementComponent = {}
+
+---@return UNavMovementComponent
+function UNavMovementComponent:get() end
 
 function UNavMovementComponent:StopMovementKeepPathing() end
 function UNavMovementComponent:StopActiveMovement() end
@@ -25288,10 +30190,16 @@ function UNavMovementComponent:IsCrouching() end
 ---@field NavigationDataName FName
 UNavigationDataChunk = {}
 
+---@return UNavigationDataChunk
+function UNavigationDataChunk:get() end
+
 
 
 ---@class UNavigationSystemBase : UObject
 UNavigationSystemBase = {}
+
+---@return UNavigationSystemBase
+function UNavigationSystemBase:get() end
 
 
 ---@class UNavigationSystemConfig : UObject
@@ -25300,6 +30208,9 @@ UNavigationSystemBase = {}
 ---@field DefaultAgentName FName
 ---@field bIsOverriden boolean
 UNavigationSystemConfig = {}
+
+---@return UNavigationSystemConfig
+function UNavigationSystemConfig:get() end
 
 
 
@@ -25319,6 +30230,9 @@ UNavigationSystemConfig = {}
 ---@field DefaultMaxChannelSize int32
 ---@field ChannelsToTick TArray<UChannel>
 UNetConnection = {}
+
+---@return UNetConnection
+function UNetConnection:get() end
 
 
 
@@ -25356,14 +30270,23 @@ UNetConnection = {}
 ---@field ReplicationDriver UReplicationDriver
 UNetDriver = {}
 
+---@return UNetDriver
+function UNetDriver:get() end
+
 
 
 ---@class UNetFaultConfig : UEscalationManagerConfig
 UNetFaultConfig = {}
 
+---@return UNetFaultConfig
+function UNetFaultConfig:get() end
+
 
 ---@class UNetPushModelHelpers : UBlueprintFunctionLibrary
 UNetPushModelHelpers = {}
+
+---@return UNetPushModelHelpers
+function UNetPushModelHelpers:get() end
 
 ---@param Object UObject
 ---@param RepIndex int32
@@ -25380,10 +30303,16 @@ function UNetPushModelHelpers:MarkPropertyDirty(Object, PropertyName) end
 ---@field NetworkEmulationProfiles TArray<FNetworkEmulationProfileDescription>
 UNetworkSettings = {}
 
+---@return UNetworkSettings
+function UNetworkSettings:get() end
+
 
 
 ---@class UNetworkSubsystem : UWorldSubsystem
 UNetworkSubsystem = {}
+
+---@return UNetworkSubsystem
+function UNetworkSubsystem:get() end
 
 
 ---@class UNodeMappingContainer : UObject
@@ -25394,30 +30323,51 @@ UNetworkSubsystem = {}
 ---@field TargetAsset TSoftObjectPtr<UObject>
 UNodeMappingContainer = {}
 
+---@return UNodeMappingContainer
+function UNodeMappingContainer:get() end
+
 
 
 ---@class UNullHLODBuilder : UHLODBuilder
 UNullHLODBuilder = {}
 
+---@return UNullHLODBuilder
+function UNullHLODBuilder:get() end
+
 
 ---@class UNullNavSysConfig : UNavigationSystemConfig
 UNullNavSysConfig = {}
+
+---@return UNullNavSysConfig
+function UNullNavSysConfig:get() end
 
 
 ---@class UObjectElementAssetDataInterface : UObject
 UObjectElementAssetDataInterface = {}
 
+---@return UObjectElementAssetDataInterface
+function UObjectElementAssetDataInterface:get() end
+
 
 ---@class UObjectElementCounterInterface : UObject
 UObjectElementCounterInterface = {}
+
+---@return UObjectElementCounterInterface
+function UObjectElementCounterInterface:get() end
 
 
 ---@class UObjectElementObjectInterface : UObject
 UObjectElementObjectInterface = {}
 
+---@return UObjectElementObjectInterface
+function UObjectElementObjectInterface:get() end
+
 
 ---@class UObjectElementSelectionInterface : UObject
 UObjectElementSelectionInterface = {}
+
+---@return UObjectElementSelectionInterface
+function UObjectElementSelectionInterface:get() end
 
 
 ---@class UObjectLibrary : UObject
@@ -25429,32 +30379,53 @@ UObjectElementSelectionInterface = {}
 ---@field bIsFullyLoaded boolean
 UObjectLibrary = {}
 
+---@return UObjectLibrary
+function UObjectLibrary:get() end
+
 
 
 ---@class UObjectReferencer : UObject
 ---@field ReferencedObjects TArray<UObject>
 UObjectReferencer = {}
 
+---@return UObjectReferencer
+function UObjectReferencer:get() end
+
 
 
 ---@class UObjectTraceWorldSubsystem : UWorldSubsystem
 UObjectTraceWorldSubsystem = {}
 
+---@return UObjectTraceWorldSubsystem
+function UObjectTraceWorldSubsystem:get() end
+
 
 ---@class UOnlineBlueprintCallProxyBase : UBlueprintAsyncActionBase
 UOnlineBlueprintCallProxyBase = {}
+
+---@return UOnlineBlueprintCallProxyBase
+function UOnlineBlueprintCallProxyBase:get() end
 
 
 ---@class UOnlineEngineInterface : UObject
 UOnlineEngineInterface = {}
 
+---@return UOnlineEngineInterface
+function UOnlineEngineInterface:get() end
+
 
 ---@class UOnlineSession : UObject
 UOnlineSession = {}
 
+---@return UOnlineSession
+function UOnlineSession:get() end
+
 
 ---@class UPackageMapClient : UPackageMap
 UPackageMapClient = {}
+
+---@return UPackageMapClient
+function UPackageMapClient:get() end
 
 
 ---@class UParticleEmitter : UObject
@@ -25475,6 +30446,9 @@ UPackageMapClient = {}
 ---@field DetailModeBitmask uint32
 UParticleEmitter = {}
 
+---@return UParticleEmitter
+function UParticleEmitter:get() end
+
 
 
 ---@class UParticleLODLevel : UObject
@@ -25494,6 +30468,9 @@ UParticleEmitter = {}
 ---@field PeakActiveParticles int32
 UParticleLODLevel = {}
 
+---@return UParticleLODLevel
+function UParticleLODLevel:get() end
+
 
 
 ---@class UParticleModule : UObject
@@ -25512,6 +30489,9 @@ UParticleLODLevel = {}
 ---@field LODValidity uint8
 UParticleModule = {}
 
+---@return UParticleModule
+function UParticleModule:get() end
+
 
 
 ---@class UParticleModuleAcceleration : UParticleModuleAccelerationBase
@@ -25519,17 +30499,26 @@ UParticleModule = {}
 ---@field bApplyOwnerScale boolean
 UParticleModuleAcceleration = {}
 
+---@return UParticleModuleAcceleration
+function UParticleModuleAcceleration:get() end
+
 
 
 ---@class UParticleModuleAccelerationBase : UParticleModule
 ---@field bAlwaysInWorldSpace boolean
 UParticleModuleAccelerationBase = {}
 
+---@return UParticleModuleAccelerationBase
+function UParticleModuleAccelerationBase:get() end
+
 
 
 ---@class UParticleModuleAccelerationConstant : UParticleModuleAccelerationBase
 ---@field Acceleration FVector
 UParticleModuleAccelerationConstant = {}
+
+---@return UParticleModuleAccelerationConstant
+function UParticleModuleAccelerationConstant:get() end
 
 
 
@@ -25538,6 +30527,9 @@ UParticleModuleAccelerationConstant = {}
 ---@field DragCoefficientRaw FRawDistributionFloat
 UParticleModuleAccelerationDrag = {}
 
+---@return UParticleModuleAccelerationDrag
+function UParticleModuleAccelerationDrag:get() end
+
 
 
 ---@class UParticleModuleAccelerationDragScaleOverLife : UParticleModuleAccelerationBase
@@ -25545,16 +30537,25 @@ UParticleModuleAccelerationDrag = {}
 ---@field DragScaleRaw FRawDistributionFloat
 UParticleModuleAccelerationDragScaleOverLife = {}
 
+---@return UParticleModuleAccelerationDragScaleOverLife
+function UParticleModuleAccelerationDragScaleOverLife:get() end
+
 
 
 ---@class UParticleModuleAccelerationOverLifetime : UParticleModuleAccelerationBase
 ---@field AccelOverLife FRawDistributionVector
 UParticleModuleAccelerationOverLifetime = {}
 
+---@return UParticleModuleAccelerationOverLifetime
+function UParticleModuleAccelerationOverLifetime:get() end
+
 
 
 ---@class UParticleModuleAttractorBase : UParticleModule
 UParticleModuleAttractorBase = {}
+
+---@return UParticleModuleAttractorBase
+function UParticleModuleAttractorBase:get() end
 
 
 ---@class UParticleModuleAttractorLine : UParticleModuleAttractorBase
@@ -25563,6 +30564,9 @@ UParticleModuleAttractorBase = {}
 ---@field Range FRawDistributionFloat
 ---@field Strength FRawDistributionFloat
 UParticleModuleAttractorLine = {}
+
+---@return UParticleModuleAttractorLine
+function UParticleModuleAttractorLine:get() end
 
 
 
@@ -25577,6 +30581,9 @@ UParticleModuleAttractorLine = {}
 ---@field bInheritSourceVel boolean
 ---@field LastSelIndex int32
 UParticleModuleAttractorParticle = {}
+
+---@return UParticleModuleAttractorParticle
+function UParticleModuleAttractorParticle:get() end
 
 
 
@@ -25596,6 +30603,9 @@ UParticleModuleAttractorParticle = {}
 ---@field Negative_Z boolean
 UParticleModuleAttractorPoint = {}
 
+---@return UParticleModuleAttractorPoint
+function UParticleModuleAttractorPoint:get() end
+
 
 
 ---@class UParticleModuleAttractorPointGravity : UParticleModuleAttractorBase
@@ -25605,10 +30615,16 @@ UParticleModuleAttractorPoint = {}
 ---@field StrengthRaw FRawDistributionFloat
 UParticleModuleAttractorPointGravity = {}
 
+---@return UParticleModuleAttractorPointGravity
+function UParticleModuleAttractorPointGravity:get() end
+
 
 
 ---@class UParticleModuleBeamBase : UParticleModule
 UParticleModuleBeamBase = {}
+
+---@return UParticleModuleBeamBase
+function UParticleModuleBeamBase:get() end
 
 
 ---@class UParticleModuleBeamModifier : UParticleModuleBeamBase
@@ -25621,6 +30637,9 @@ UParticleModuleBeamBase = {}
 ---@field StrengthOptions FBeamModifierOptions
 ---@field Strength FRawDistributionFloat
 UParticleModuleBeamModifier = {}
+
+---@return UParticleModuleBeamModifier
+function UParticleModuleBeamModifier:get() end
 
 
 
@@ -25647,6 +30666,9 @@ UParticleModuleBeamModifier = {}
 ---@field NoiseScale FRawDistributionFloat
 UParticleModuleBeamNoise = {}
 
+---@return UParticleModuleBeamNoise
+function UParticleModuleBeamNoise:get() end
+
 
 
 ---@class UParticleModuleBeamSource : UParticleModuleBeamBase
@@ -25661,6 +30683,9 @@ UParticleModuleBeamNoise = {}
 ---@field SourceStrength FRawDistributionFloat
 ---@field bLockSourceStength boolean
 UParticleModuleBeamSource = {}
+
+---@return UParticleModuleBeamSource
+function UParticleModuleBeamSource:get() end
 
 
 
@@ -25678,10 +30703,16 @@ UParticleModuleBeamSource = {}
 ---@field LockRadius float
 UParticleModuleBeamTarget = {}
 
+---@return UParticleModuleBeamTarget
+function UParticleModuleBeamTarget:get() end
+
 
 
 ---@class UParticleModuleCameraBase : UParticleModule
 UParticleModuleCameraBase = {}
+
+---@return UParticleModuleCameraBase
+function UParticleModuleCameraBase:get() end
 
 
 ---@class UParticleModuleCameraOffset : UParticleModuleCameraBase
@@ -25689,6 +30720,9 @@ UParticleModuleCameraBase = {}
 ---@field bSpawnTimeOnly boolean
 ---@field UpdateMethod EParticleCameraOffsetUpdateMethod
 UParticleModuleCameraOffset = {}
+
+---@return UParticleModuleCameraOffset
+function UParticleModuleCameraOffset:get() end
 
 
 
@@ -25712,10 +30746,16 @@ UParticleModuleCameraOffset = {}
 ---@field MaxCollisionDistance float
 UParticleModuleCollision = {}
 
+---@return UParticleModuleCollision
+function UParticleModuleCollision:get() end
+
 
 
 ---@class UParticleModuleCollisionBase : UParticleModule
 UParticleModuleCollisionBase = {}
+
+---@return UParticleModuleCollisionBase
+function UParticleModuleCollisionBase:get() end
 
 
 ---@class UParticleModuleCollisionGPU : UParticleModuleCollisionBase
@@ -25730,6 +30770,9 @@ UParticleModuleCollisionBase = {}
 ---@field CollisionMode EParticleCollisionMode::Type
 UParticleModuleCollisionGPU = {}
 
+---@return UParticleModuleCollisionGPU
+function UParticleModuleCollisionGPU:get() end
+
 
 
 ---@class UParticleModuleColor : UParticleModuleColorBase
@@ -25738,10 +30781,16 @@ UParticleModuleCollisionGPU = {}
 ---@field bClampAlpha boolean
 UParticleModuleColor = {}
 
+---@return UParticleModuleColor
+function UParticleModuleColor:get() end
+
 
 
 ---@class UParticleModuleColorBase : UParticleModule
 UParticleModuleColorBase = {}
+
+---@return UParticleModuleColorBase
+function UParticleModuleColorBase:get() end
 
 
 ---@class UParticleModuleColorOverLife : UParticleModuleColorBase
@@ -25749,6 +30798,9 @@ UParticleModuleColorBase = {}
 ---@field AlphaOverLife FRawDistributionFloat
 ---@field bClampAlpha boolean
 UParticleModuleColorOverLife = {}
+
+---@return UParticleModuleColorOverLife
+function UParticleModuleColorOverLife:get() end
 
 
 
@@ -25758,21 +30810,33 @@ UParticleModuleColorOverLife = {}
 ---@field bEmitterTime boolean
 UParticleModuleColorScaleOverLife = {}
 
+---@return UParticleModuleColorScaleOverLife
+function UParticleModuleColorScaleOverLife:get() end
+
 
 
 ---@class UParticleModuleColor_Seeded : UParticleModuleColor
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleColor_Seeded = {}
 
+---@return UParticleModuleColor_Seeded
+function UParticleModuleColor_Seeded:get() end
+
 
 
 ---@class UParticleModuleEventBase : UParticleModule
 UParticleModuleEventBase = {}
 
+---@return UParticleModuleEventBase
+function UParticleModuleEventBase:get() end
+
 
 ---@class UParticleModuleEventGenerator : UParticleModuleEventBase
 ---@field Events TArray<FParticleEvent_GenerateInfo>
 UParticleModuleEventGenerator = {}
+
+---@return UParticleModuleEventGenerator
+function UParticleModuleEventGenerator:get() end
 
 
 
@@ -25781,11 +30845,17 @@ UParticleModuleEventGenerator = {}
 ---@field EventName FName
 UParticleModuleEventReceiverBase = {}
 
+---@return UParticleModuleEventReceiverBase
+function UParticleModuleEventReceiverBase:get() end
+
 
 
 ---@class UParticleModuleEventReceiverKillParticles : UParticleModuleEventReceiverBase
 ---@field bStopSpawning boolean
 UParticleModuleEventReceiverKillParticles = {}
+
+---@return UParticleModuleEventReceiverKillParticles
+function UParticleModuleEventReceiverKillParticles:get() end
 
 
 
@@ -25799,14 +30869,23 @@ UParticleModuleEventReceiverKillParticles = {}
 ---@field bBanPhysicalMaterials boolean
 UParticleModuleEventReceiverSpawn = {}
 
+---@return UParticleModuleEventReceiverSpawn
+function UParticleModuleEventReceiverSpawn:get() end
+
 
 
 ---@class UParticleModuleEventSendToGame : UObject
 UParticleModuleEventSendToGame = {}
 
+---@return UParticleModuleEventSendToGame
+function UParticleModuleEventSendToGame:get() end
+
 
 ---@class UParticleModuleKillBase : UParticleModule
 UParticleModuleKillBase = {}
+
+---@return UParticleModuleKillBase
+function UParticleModuleKillBase:get() end
 
 
 ---@class UParticleModuleKillBox : UParticleModuleKillBase
@@ -25817,6 +30896,9 @@ UParticleModuleKillBase = {}
 ---@field bAxisAlignedAndFixedSize boolean
 UParticleModuleKillBox = {}
 
+---@return UParticleModuleKillBox
+function UParticleModuleKillBox:get() end
+
 
 
 ---@class UParticleModuleKillHeight : UParticleModuleKillBase
@@ -25826,21 +30908,33 @@ UParticleModuleKillBox = {}
 ---@field bApplyPSysScale boolean
 UParticleModuleKillHeight = {}
 
+---@return UParticleModuleKillHeight
+function UParticleModuleKillHeight:get() end
+
 
 
 ---@class UParticleModuleLifetime : UParticleModuleLifetimeBase
 ---@field LifeTime FRawDistributionFloat
 UParticleModuleLifetime = {}
 
+---@return UParticleModuleLifetime
+function UParticleModuleLifetime:get() end
+
 
 
 ---@class UParticleModuleLifetimeBase : UParticleModule
 UParticleModuleLifetimeBase = {}
 
+---@return UParticleModuleLifetimeBase
+function UParticleModuleLifetimeBase:get() end
+
 
 ---@class UParticleModuleLifetime_Seeded : UParticleModuleLifetime
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleLifetime_Seeded = {}
+
+---@return UParticleModuleLifetime_Seeded
+function UParticleModuleLifetime_Seeded:get() end
 
 
 
@@ -25861,15 +30955,24 @@ UParticleModuleLifetime_Seeded = {}
 ---@field bShadowCastingLights boolean
 UParticleModuleLight = {}
 
+---@return UParticleModuleLight
+function UParticleModuleLight:get() end
+
 
 
 ---@class UParticleModuleLightBase : UParticleModule
 UParticleModuleLightBase = {}
 
+---@return UParticleModuleLightBase
+function UParticleModuleLightBase:get() end
+
 
 ---@class UParticleModuleLight_Seeded : UParticleModuleLight
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleLight_Seeded = {}
+
+---@return UParticleModuleLight_Seeded
+function UParticleModuleLight_Seeded:get() end
 
 
 
@@ -25879,10 +30982,16 @@ UParticleModuleLight_Seeded = {}
 ---@field DistributeThreshold float
 UParticleModuleLocation = {}
 
+---@return UParticleModuleLocation
+function UParticleModuleLocation:get() end
+
 
 
 ---@class UParticleModuleLocationBase : UParticleModule
 UParticleModuleLocationBase = {}
+
+---@return UParticleModuleLocationBase
+function UParticleModuleLocationBase:get() end
 
 
 ---@class UParticleModuleLocationBoneSocket : UParticleModuleLocationBase
@@ -25898,6 +31007,9 @@ UParticleModuleLocationBase = {}
 ---@field NumPreSelectedIndices int32
 UParticleModuleLocationBoneSocket = {}
 
+---@return UParticleModuleLocationBoneSocket
+function UParticleModuleLocationBoneSocket:get() end
+
 
 
 ---@class UParticleModuleLocationDirect : UParticleModuleLocationBase
@@ -25906,6 +31018,9 @@ UParticleModuleLocationBoneSocket = {}
 ---@field ScaleFactor FRawDistributionVector
 ---@field Direction FRawDistributionVector
 UParticleModuleLocationDirect = {}
+
+---@return UParticleModuleLocationDirect
+function UParticleModuleLocationDirect:get() end
 
 
 
@@ -25918,11 +31033,17 @@ UParticleModuleLocationDirect = {}
 ---@field InheritSourceRotationScale float
 UParticleModuleLocationEmitter = {}
 
+---@return UParticleModuleLocationEmitter
+function UParticleModuleLocationEmitter:get() end
+
 
 
 ---@class UParticleModuleLocationEmitterDirect : UParticleModuleLocationBase
 ---@field EmitterName FName
 UParticleModuleLocationEmitterDirect = {}
+
+---@return UParticleModuleLocationEmitterDirect
+function UParticleModuleLocationEmitterDirect:get() end
 
 
 
@@ -25939,6 +31060,9 @@ UParticleModuleLocationEmitterDirect = {}
 ---@field StartLocation FRawDistributionVector
 UParticleModuleLocationPrimitiveBase = {}
 
+---@return UParticleModuleLocationPrimitiveBase
+function UParticleModuleLocationPrimitiveBase:get() end
+
 
 
 ---@class UParticleModuleLocationPrimitiveCylinder : UParticleModuleLocationPrimitiveBase
@@ -25948,11 +31072,17 @@ UParticleModuleLocationPrimitiveBase = {}
 ---@field HeightAxis CylinderHeightAxis
 UParticleModuleLocationPrimitiveCylinder = {}
 
+---@return UParticleModuleLocationPrimitiveCylinder
+function UParticleModuleLocationPrimitiveCylinder:get() end
+
 
 
 ---@class UParticleModuleLocationPrimitiveCylinder_Seeded : UParticleModuleLocationPrimitiveCylinder
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleLocationPrimitiveCylinder_Seeded = {}
+
+---@return UParticleModuleLocationPrimitiveCylinder_Seeded
+function UParticleModuleLocationPrimitiveCylinder_Seeded:get() end
 
 
 
@@ -25960,11 +31090,17 @@ UParticleModuleLocationPrimitiveCylinder_Seeded = {}
 ---@field StartRadius FRawDistributionFloat
 UParticleModuleLocationPrimitiveSphere = {}
 
+---@return UParticleModuleLocationPrimitiveSphere
+function UParticleModuleLocationPrimitiveSphere:get() end
+
 
 
 ---@class UParticleModuleLocationPrimitiveSphere_Seeded : UParticleModuleLocationPrimitiveSphere
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleLocationPrimitiveSphere_Seeded = {}
+
+---@return UParticleModuleLocationPrimitiveSphere_Seeded
+function UParticleModuleLocationPrimitiveSphere_Seeded:get() end
 
 
 
@@ -25974,6 +31110,9 @@ UParticleModuleLocationPrimitiveSphere_Seeded = {}
 ---@field Angle FRawDistributionFloat
 ---@field Thickness FRawDistributionFloat
 UParticleModuleLocationPrimitiveTriangle = {}
+
+---@return UParticleModuleLocationPrimitiveTriangle
+function UParticleModuleLocationPrimitiveTriangle:get() end
 
 
 
@@ -25996,15 +31135,24 @@ UParticleModuleLocationPrimitiveTriangle = {}
 ---@field InheritUVChannel uint32
 UParticleModuleLocationSkelVertSurface = {}
 
+---@return UParticleModuleLocationSkelVertSurface
+function UParticleModuleLocationSkelVertSurface:get() end
+
 
 
 ---@class UParticleModuleLocationWorldOffset : UParticleModuleLocation
 UParticleModuleLocationWorldOffset = {}
 
+---@return UParticleModuleLocationWorldOffset
+function UParticleModuleLocationWorldOffset:get() end
+
 
 ---@class UParticleModuleLocationWorldOffset_Seeded : UParticleModuleLocationWorldOffset
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleLocationWorldOffset_Seeded = {}
+
+---@return UParticleModuleLocationWorldOffset_Seeded
+function UParticleModuleLocationWorldOffset_Seeded:get() end
 
 
 
@@ -26012,15 +31160,24 @@ UParticleModuleLocationWorldOffset_Seeded = {}
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleLocation_Seeded = {}
 
+---@return UParticleModuleLocation_Seeded
+function UParticleModuleLocation_Seeded:get() end
+
 
 
 ---@class UParticleModuleMaterialBase : UParticleModule
 UParticleModuleMaterialBase = {}
 
+---@return UParticleModuleMaterialBase
+function UParticleModuleMaterialBase:get() end
+
 
 ---@class UParticleModuleMeshMaterial : UParticleModuleMaterialBase
 ---@field MeshMaterials TArray<UMaterialInterface>
 UParticleModuleMeshMaterial = {}
+
+---@return UParticleModuleMeshMaterial
+function UParticleModuleMeshMaterial:get() end
 
 
 
@@ -26029,17 +31186,26 @@ UParticleModuleMeshMaterial = {}
 ---@field bInheritParent boolean
 UParticleModuleMeshRotation = {}
 
+---@return UParticleModuleMeshRotation
+function UParticleModuleMeshRotation:get() end
+
 
 
 ---@class UParticleModuleMeshRotationRate : UParticleModuleRotationRateBase
 ---@field StartRotationRate FRawDistributionVector
 UParticleModuleMeshRotationRate = {}
 
+---@return UParticleModuleMeshRotationRate
+function UParticleModuleMeshRotationRate:get() end
+
 
 
 ---@class UParticleModuleMeshRotationRateMultiplyLife : UParticleModuleRotationRateBase
 ---@field LifeMultiplier FRawDistributionVector
 UParticleModuleMeshRotationRateMultiplyLife = {}
+
+---@return UParticleModuleMeshRotationRateMultiplyLife
+function UParticleModuleMeshRotationRateMultiplyLife:get() end
 
 
 
@@ -26048,17 +31214,26 @@ UParticleModuleMeshRotationRateMultiplyLife = {}
 ---@field bScaleRotRate boolean
 UParticleModuleMeshRotationRateOverLife = {}
 
+---@return UParticleModuleMeshRotationRateOverLife
+function UParticleModuleMeshRotationRateOverLife:get() end
+
 
 
 ---@class UParticleModuleMeshRotationRate_Seeded : UParticleModuleMeshRotationRate
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleMeshRotationRate_Seeded = {}
 
+---@return UParticleModuleMeshRotationRate_Seeded
+function UParticleModuleMeshRotationRate_Seeded:get() end
+
 
 
 ---@class UParticleModuleMeshRotation_Seeded : UParticleModuleMeshRotation
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleMeshRotation_Seeded = {}
+
+---@return UParticleModuleMeshRotation_Seeded
+function UParticleModuleMeshRotation_Seeded:get() end
 
 
 
@@ -26072,11 +31247,17 @@ UParticleModuleMeshRotation_Seeded = {}
 ---@field RotationRateOptions FOrbitOptions
 UParticleModuleOrbit = {}
 
+---@return UParticleModuleOrbit
+function UParticleModuleOrbit:get() end
+
 
 
 ---@class UParticleModuleOrbitBase : UParticleModule
 ---@field bUseEmitterTime boolean
 UParticleModuleOrbitBase = {}
+
+---@return UParticleModuleOrbitBase
+function UParticleModuleOrbitBase:get() end
 
 
 
@@ -26084,14 +31265,23 @@ UParticleModuleOrbitBase = {}
 ---@field LockAxisFlags EParticleAxisLock
 UParticleModuleOrientationAxisLock = {}
 
+---@return UParticleModuleOrientationAxisLock
+function UParticleModuleOrientationAxisLock:get() end
+
 
 
 ---@class UParticleModuleOrientationBase : UParticleModule
 UParticleModuleOrientationBase = {}
 
+---@return UParticleModuleOrientationBase
+function UParticleModuleOrientationBase:get() end
+
 
 ---@class UParticleModuleParameterBase : UParticleModule
 UParticleModuleParameterBase = {}
+
+---@return UParticleModuleParameterBase
+function UParticleModuleParameterBase:get() end
 
 
 ---@class UParticleModuleParameterDynamic : UParticleModuleParameterBase
@@ -26100,17 +31290,26 @@ UParticleModuleParameterBase = {}
 ---@field bUsesVelocity boolean
 UParticleModuleParameterDynamic = {}
 
+---@return UParticleModuleParameterDynamic
+function UParticleModuleParameterDynamic:get() end
+
 
 
 ---@class UParticleModuleParameterDynamic_Seeded : UParticleModuleParameterDynamic
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleParameterDynamic_Seeded = {}
 
+---@return UParticleModuleParameterDynamic_Seeded
+function UParticleModuleParameterDynamic_Seeded:get() end
+
 
 
 ---@class UParticleModulePivotOffset : UParticleModuleLocationBase
 ---@field PivotOffset FVector2D
 UParticleModulePivotOffset = {}
+
+---@return UParticleModulePivotOffset
+function UParticleModulePivotOffset:get() end
 
 
 
@@ -26163,16 +31362,25 @@ UParticleModulePivotOffset = {}
 ---@field NamedMaterialOverrides TArray<FName>
 UParticleModuleRequired = {}
 
+---@return UParticleModuleRequired
+function UParticleModuleRequired:get() end
+
 
 
 ---@class UParticleModuleRotation : UParticleModuleRotationBase
 ---@field StartRotation FRawDistributionFloat
 UParticleModuleRotation = {}
 
+---@return UParticleModuleRotation
+function UParticleModuleRotation:get() end
+
 
 
 ---@class UParticleModuleRotationBase : UParticleModule
 UParticleModuleRotationBase = {}
+
+---@return UParticleModuleRotationBase
+function UParticleModuleRotationBase:get() end
 
 
 ---@class UParticleModuleRotationOverLifetime : UParticleModuleRotationBase
@@ -26180,21 +31388,33 @@ UParticleModuleRotationBase = {}
 ---@field Scale boolean
 UParticleModuleRotationOverLifetime = {}
 
+---@return UParticleModuleRotationOverLifetime
+function UParticleModuleRotationOverLifetime:get() end
+
 
 
 ---@class UParticleModuleRotationRate : UParticleModuleRotationRateBase
 ---@field StartRotationRate FRawDistributionFloat
 UParticleModuleRotationRate = {}
 
+---@return UParticleModuleRotationRate
+function UParticleModuleRotationRate:get() end
+
 
 
 ---@class UParticleModuleRotationRateBase : UParticleModule
 UParticleModuleRotationRateBase = {}
 
+---@return UParticleModuleRotationRateBase
+function UParticleModuleRotationRateBase:get() end
+
 
 ---@class UParticleModuleRotationRateMultiplyLife : UParticleModuleRotationRateBase
 ---@field LifeMultiplier FRawDistributionFloat
 UParticleModuleRotationRateMultiplyLife = {}
+
+---@return UParticleModuleRotationRateMultiplyLife
+function UParticleModuleRotationRateMultiplyLife:get() end
 
 
 
@@ -26202,11 +31422,17 @@ UParticleModuleRotationRateMultiplyLife = {}
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleRotationRate_Seeded = {}
 
+---@return UParticleModuleRotationRate_Seeded
+function UParticleModuleRotationRate_Seeded:get() end
+
 
 
 ---@class UParticleModuleRotation_Seeded : UParticleModuleRotation
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleRotation_Seeded = {}
+
+---@return UParticleModuleRotation_Seeded
+function UParticleModuleRotation_Seeded:get() end
 
 
 
@@ -26214,10 +31440,16 @@ UParticleModuleRotation_Seeded = {}
 ---@field StartSize FRawDistributionVector
 UParticleModuleSize = {}
 
+---@return UParticleModuleSize
+function UParticleModuleSize:get() end
+
 
 
 ---@class UParticleModuleSizeBase : UParticleModule
 UParticleModuleSizeBase = {}
+
+---@return UParticleModuleSizeBase
+function UParticleModuleSizeBase:get() end
 
 
 ---@class UParticleModuleSizeMultiplyLife : UParticleModuleSizeBase
@@ -26226,6 +31458,9 @@ UParticleModuleSizeBase = {}
 ---@field MultiplyY boolean
 ---@field MultiplyZ boolean
 UParticleModuleSizeMultiplyLife = {}
+
+---@return UParticleModuleSizeMultiplyLife
+function UParticleModuleSizeMultiplyLife:get() end
 
 
 
@@ -26236,6 +31471,9 @@ UParticleModuleSizeMultiplyLife = {}
 ---@field EnableZ boolean
 UParticleModuleSizeScale = {}
 
+---@return UParticleModuleSizeScale
+function UParticleModuleSizeScale:get() end
+
 
 
 ---@class UParticleModuleSizeScaleBySpeed : UParticleModuleSizeBase
@@ -26243,17 +31481,26 @@ UParticleModuleSizeScale = {}
 ---@field MaxScale FVector2D
 UParticleModuleSizeScaleBySpeed = {}
 
+---@return UParticleModuleSizeScaleBySpeed
+function UParticleModuleSizeScaleBySpeed:get() end
+
 
 
 ---@class UParticleModuleSize_Seeded : UParticleModuleSize
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleSize_Seeded = {}
 
+---@return UParticleModuleSize_Seeded
+function UParticleModuleSize_Seeded:get() end
+
 
 
 ---@class UParticleModuleSourceMovement : UParticleModuleLocationBase
 ---@field SourceMovementScale FRawDistributionVector
 UParticleModuleSourceMovement = {}
+
+---@return UParticleModuleSourceMovement
+function UParticleModuleSourceMovement:get() end
 
 
 
@@ -26266,12 +31513,18 @@ UParticleModuleSourceMovement = {}
 ---@field bApplyGlobalSpawnRateScale boolean
 UParticleModuleSpawn = {}
 
+---@return UParticleModuleSpawn
+function UParticleModuleSpawn:get() end
+
 
 
 ---@class UParticleModuleSpawnBase : UParticleModule
 ---@field bProcessSpawnRate boolean
 ---@field bProcessBurstList boolean
 UParticleModuleSpawnBase = {}
+
+---@return UParticleModuleSpawnBase
+function UParticleModuleSpawnBase:get() end
 
 
 
@@ -26286,6 +31539,9 @@ UParticleModuleSpawnBase = {}
 ---@field bIgnoreMovementAlongZ boolean
 UParticleModuleSpawnPerUnit = {}
 
+---@return UParticleModuleSpawnPerUnit
+function UParticleModuleSpawnPerUnit:get() end
+
 
 
 ---@class UParticleModuleSubUV : UParticleModuleSubUVBase
@@ -26294,10 +31550,16 @@ UParticleModuleSpawnPerUnit = {}
 ---@field bUseRealTime boolean
 UParticleModuleSubUV = {}
 
+---@return UParticleModuleSubUV
+function UParticleModuleSubUV:get() end
+
 
 
 ---@class UParticleModuleSubUVBase : UParticleModule
 UParticleModuleSubUVBase = {}
+
+---@return UParticleModuleSubUVBase
+function UParticleModuleSubUVBase:get() end
 
 
 ---@class UParticleModuleSubUVMovie : UParticleModuleSubUV
@@ -26306,10 +31568,16 @@ UParticleModuleSubUVBase = {}
 ---@field StartingFrame int32
 UParticleModuleSubUVMovie = {}
 
+---@return UParticleModuleSubUVMovie
+function UParticleModuleSubUVMovie:get() end
+
 
 
 ---@class UParticleModuleTrailBase : UParticleModule
 UParticleModuleTrailBase = {}
+
+---@return UParticleModuleTrailBase
+function UParticleModuleTrailBase:get() end
 
 
 ---@class UParticleModuleTrailSource : UParticleModuleTrailBase
@@ -26323,6 +31591,9 @@ UParticleModuleTrailBase = {}
 ---@field bInheritRotation boolean
 UParticleModuleTrailSource = {}
 
+---@return UParticleModuleTrailSource
+function UParticleModuleTrailSource:get() end
+
 
 
 ---@class UParticleModuleTypeDataAnimTrail : UParticleModuleTypeDataBase
@@ -26335,10 +31606,16 @@ UParticleModuleTrailSource = {}
 ---@field WidthTessellationStepSize float
 UParticleModuleTypeDataAnimTrail = {}
 
+---@return UParticleModuleTypeDataAnimTrail
+function UParticleModuleTypeDataAnimTrail:get() end
+
 
 
 ---@class UParticleModuleTypeDataBase : UParticleModule
 UParticleModuleTypeDataBase = {}
+
+---@return UParticleModuleTypeDataBase
+function UParticleModuleTypeDataBase:get() end
 
 
 ---@class UParticleModuleTypeDataBeam2 : UParticleModuleTypeDataBase
@@ -26362,6 +31639,9 @@ UParticleModuleTypeDataBase = {}
 ---@field RenderTessellation boolean
 UParticleModuleTypeDataBeam2 = {}
 
+---@return UParticleModuleTypeDataBeam2
+function UParticleModuleTypeDataBeam2:get() end
+
 
 
 ---@class UParticleModuleTypeDataGpu : UParticleModuleTypeDataBase
@@ -26370,6 +31650,9 @@ UParticleModuleTypeDataBeam2 = {}
 ---@field CameraMotionBlurAmount float
 ---@field bClearExistingParticlesOnInit boolean
 UParticleModuleTypeDataGpu = {}
+
+---@return UParticleModuleTypeDataGpu
+function UParticleModuleTypeDataGpu:get() end
 
 
 
@@ -26392,6 +31675,9 @@ UParticleModuleTypeDataGpu = {}
 ---@field bFaceCameraDirectionRatherThanPosition boolean
 ---@field bCollisionsConsiderPartilceSize boolean
 UParticleModuleTypeDataMesh = {}
+
+---@return UParticleModuleTypeDataMesh
+function UParticleModuleTypeDataMesh:get() end
 
 
 
@@ -26418,10 +31704,16 @@ UParticleModuleTypeDataMesh = {}
 ---@field TangentTessellationScalar float
 UParticleModuleTypeDataRibbon = {}
 
+---@return UParticleModuleTypeDataRibbon
+function UParticleModuleTypeDataRibbon:get() end
+
 
 
 ---@class UParticleModuleVectorFieldBase : UParticleModule
 UParticleModuleVectorFieldBase = {}
+
+---@return UParticleModuleVectorFieldBase
+function UParticleModuleVectorFieldBase:get() end
 
 
 ---@class UParticleModuleVectorFieldGlobal : UParticleModuleVectorFieldBase
@@ -26429,6 +31721,9 @@ UParticleModuleVectorFieldBase = {}
 ---@field GlobalVectorFieldScale float
 ---@field GlobalVectorFieldTightness float
 UParticleModuleVectorFieldGlobal = {}
+
+---@return UParticleModuleVectorFieldGlobal
+function UParticleModuleVectorFieldGlobal:get() end
 
 
 
@@ -26446,6 +31741,9 @@ UParticleModuleVectorFieldGlobal = {}
 ---@field bUseFixDT boolean
 UParticleModuleVectorFieldLocal = {}
 
+---@return UParticleModuleVectorFieldLocal
+function UParticleModuleVectorFieldLocal:get() end
+
 
 
 ---@class UParticleModuleVectorFieldRotation : UParticleModuleVectorFieldBase
@@ -26453,11 +31751,17 @@ UParticleModuleVectorFieldLocal = {}
 ---@field MaxInitialRotation FVector
 UParticleModuleVectorFieldRotation = {}
 
+---@return UParticleModuleVectorFieldRotation
+function UParticleModuleVectorFieldRotation:get() end
+
 
 
 ---@class UParticleModuleVectorFieldRotationRate : UParticleModuleVectorFieldBase
 ---@field RotationRate FVector
 UParticleModuleVectorFieldRotationRate = {}
+
+---@return UParticleModuleVectorFieldRotationRate
+function UParticleModuleVectorFieldRotationRate:get() end
 
 
 
@@ -26466,12 +31770,18 @@ UParticleModuleVectorFieldRotationRate = {}
 ---@field VectorFieldScaleRaw FRawDistributionFloat
 UParticleModuleVectorFieldScale = {}
 
+---@return UParticleModuleVectorFieldScale
+function UParticleModuleVectorFieldScale:get() end
+
 
 
 ---@class UParticleModuleVectorFieldScaleOverLife : UParticleModuleVectorFieldBase
 ---@field VectorFieldScaleOverLife UDistributionFloat
 ---@field VectorFieldScaleOverLifeRaw FRawDistributionFloat
 UParticleModuleVectorFieldScaleOverLife = {}
+
+---@return UParticleModuleVectorFieldScaleOverLife
+function UParticleModuleVectorFieldScaleOverLife:get() end
 
 
 
@@ -26480,12 +31790,18 @@ UParticleModuleVectorFieldScaleOverLife = {}
 ---@field StartVelocityRadial FRawDistributionFloat
 UParticleModuleVelocity = {}
 
+---@return UParticleModuleVelocity
+function UParticleModuleVelocity:get() end
+
 
 
 ---@class UParticleModuleVelocityBase : UParticleModule
 ---@field bInWorldSpace boolean
 ---@field bApplyOwnerScale boolean
 UParticleModuleVelocityBase = {}
+
+---@return UParticleModuleVelocityBase
+function UParticleModuleVelocityBase:get() end
 
 
 
@@ -26495,11 +31811,17 @@ UParticleModuleVelocityBase = {}
 ---@field Direction FVector
 UParticleModuleVelocityCone = {}
 
+---@return UParticleModuleVelocityCone
+function UParticleModuleVelocityCone:get() end
+
 
 
 ---@class UParticleModuleVelocityInheritParent : UParticleModuleVelocityBase
 ---@field Scale FRawDistributionVector
 UParticleModuleVelocityInheritParent = {}
+
+---@return UParticleModuleVelocityInheritParent
+function UParticleModuleVelocityInheritParent:get() end
 
 
 
@@ -26508,16 +31830,25 @@ UParticleModuleVelocityInheritParent = {}
 ---@field Absolute boolean
 UParticleModuleVelocityOverLifetime = {}
 
+---@return UParticleModuleVelocityOverLifetime
+function UParticleModuleVelocityOverLifetime:get() end
+
 
 
 ---@class UParticleModuleVelocity_Seeded : UParticleModuleVelocity
 ---@field RandomSeedInfo FParticleRandomSeedInfo
 UParticleModuleVelocity_Seeded = {}
 
+---@return UParticleModuleVelocity_Seeded
+function UParticleModuleVelocity_Seeded:get() end
+
 
 
 ---@class UParticleSpriteEmitter : UParticleEmitter
 UParticleSpriteEmitter = {}
+
+---@return UParticleSpriteEmitter
+function UParticleSpriteEmitter:get() end
 
 
 ---@class UParticleSystem : UFXSystemAsset
@@ -26559,6 +31890,9 @@ UParticleSpriteEmitter = {}
 ---@field NamedMaterialSlots TArray<FNamedEmitterMaterial>
 UParticleSystem = {}
 
+---@return UParticleSystem
+function UParticleSystem:get() end
+
 ---@param TypeData UClass
 ---@return boolean
 function UParticleSystem:ContainsEmitterType(TypeData) end
@@ -26599,6 +31933,9 @@ function UParticleSystem:ContainsEmitterType(TypeData) end
 ---@field AutoAttachScaleRule EAttachmentRule
 ---@field OnSystemFinished FParticleSystemComponentOnSystemFinished
 UParticleSystemComponent = {}
+
+---@return UParticleSystemComponent
+function UParticleSystemComponent:get() end
 
 ---@param InFirstSocketName FName
 ---@param InSecondSocketName FName
@@ -26702,11 +32039,17 @@ function UParticleSystemComponent:BeginTrails(InFirstSocketName, InSecondSocketN
 ---@field ClipIDNumber int32
 UParticleSystemReplay = {}
 
+---@return UParticleSystemReplay
+function UParticleSystemReplay:get() end
+
 
 
 ---@class UPawnMovementComponent : UNavMovementComponent
 ---@field PawnOwner APawn
 UPawnMovementComponent = {}
+
+---@return UPawnMovementComponent
+function UPawnMovementComponent:get() end
 
 ---@return boolean
 function UPawnMovementComponent:IsMoveInputIgnored() end
@@ -26733,6 +32076,9 @@ function UPawnMovementComponent:AddInputVector(WorldVector, bForce) end
 ---@field LastLocalNoiseTime float
 UPawnNoiseEmitterComponent = {}
 
+---@return UPawnNoiseEmitterComponent
+function UPawnNoiseEmitterComponent:get() end
+
 ---@param NoiseMaker AActor
 ---@param Loudness float
 ---@param NoiseLocation FVector
@@ -26744,12 +32090,18 @@ function UPawnNoiseEmitterComponent:MakeNoise(NoiseMaker, Loudness, NoiseLocatio
 ---@field DemoNetDriver UDemoNetDriver
 UPendingNetGame = {}
 
+---@return UPendingNetGame
+function UPendingNetGame:get() end
+
 
 
 ---@class UPhysicalAnimationComponent : UActorComponent
 ---@field StrengthMultiplyer float
 ---@field SkeletalMeshComponent USkeletalMeshComponent
 UPhysicalAnimationComponent = {}
+
+---@return UPhysicalAnimationComponent
+function UPhysicalAnimationComponent:get() end
 
 ---@param InStrengthMultiplyer float
 function UPhysicalAnimationComponent:SetStrengthMultiplyer(InStrengthMultiplyer) end
@@ -26778,6 +32130,9 @@ function UPhysicalAnimationComponent:ApplyPhysicalAnimationProfileBelow(BodyName
 ---@field AddressY TextureAddress
 UPhysicalMaterialMask = {}
 
+---@return UPhysicalMaterialMask
+function UPhysicalMaterialMask:get() end
+
 
 
 ---@class UPhysicsAsset : UObject
@@ -26792,6 +32147,9 @@ UPhysicalMaterialMask = {}
 ---@field BodySetup TArray<UBodySetup>
 UPhysicsAsset = {}
 
+---@return UPhysicsAsset
+function UPhysicsAsset:get() end
+
 
 
 ---@class UPhysicsCollisionHandler : UObject
@@ -26800,6 +32158,9 @@ UPhysicsAsset = {}
 ---@field DefaultImpactSound USoundBase
 ---@field LastImpactSoundTime float
 UPhysicsCollisionHandler = {}
+
+---@return UPhysicsCollisionHandler
+function UPhysicsCollisionHandler:get() end
 
 
 
@@ -26813,6 +32174,9 @@ UPhysicsCollisionHandler = {}
 ---@field OnPlasticDeformation FPhysicsConstraintComponentOnPlasticDeformation
 ---@field ConstraintInstance FConstraintInstance
 UPhysicsConstraintComponent = {}
+
+---@return UPhysicsConstraintComponent
+function UPhysicsConstraintComponent:get() end
 
 ---@param bEnableTwistDrive boolean
 ---@param bEnableSwingDrive boolean
@@ -26933,14 +32297,23 @@ function UPhysicsConstraintComponent:BreakConstraint() end
 ---@field DefaultProfile FConstraintProfileProperties
 UPhysicsConstraintTemplate = {}
 
+---@return UPhysicsConstraintTemplate
+function UPhysicsConstraintTemplate:get() end
+
 
 
 ---@class UPhysicsFieldComponent : USceneComponent
 UPhysicsFieldComponent = {}
 
+---@return UPhysicsFieldComponent
+function UPhysicsFieldComponent:get() end
+
 
 ---@class UPhysicsFieldStatics : UBlueprintFunctionLibrary
 UPhysicsFieldStatics = {}
+
+---@return UPhysicsFieldStatics
+function UPhysicsFieldStatics:get() end
 
 ---@param WorldContextObject UObject
 ---@param WorldPosition FVector
@@ -26970,6 +32343,9 @@ function UPhysicsFieldStatics:EvalPhysicsIntegerField(WorldContextObject, WorldP
 ---@field AngularStiffness float
 ---@field InterpolationSpeed float
 UPhysicsHandleComponent = {}
+
+---@return UPhysicsHandleComponent
+function UPhysicsHandleComponent:get() end
 
 ---@param NewRotation FRotator
 function UPhysicsHandleComponent:SetTargetRotation(NewRotation) end
@@ -27040,6 +32416,9 @@ function UPhysicsHandleComponent:GetGrabbedComponent() end
 ---@field ChaosSettings FChaosPhysicsSettings
 UPhysicsSettings = {}
 
+---@return UPhysicsSettings
+function UPhysicsSettings:get() end
+
 
 
 ---@class UPhysicsSpringComponent : USceneComponent
@@ -27051,6 +32430,9 @@ UPhysicsSettings = {}
 ---@field bIgnoreSelf boolean
 ---@field SpringCompression float
 UPhysicsSpringComponent = {}
+
+---@return UPhysicsSpringComponent
+function UPhysicsSpringComponent:get() end
 
 ---@return FVector
 function UPhysicsSpringComponent:GetSpringRestingPoint() end
@@ -27065,6 +32447,9 @@ function UPhysicsSpringComponent:GetNormalizedCompressionScalar() end
 ---@class UPhysicsThreadLibrary : UBlueprintFunctionLibrary
 UPhysicsThreadLibrary = {}
 
+---@return UPhysicsThreadLibrary
+function UPhysicsThreadLibrary:get() end
+
 ---@param Handle FBodyInstanceAsyncPhysicsTickHandle
 ---@param Force FVector
 ---@param bAccelChange boolean
@@ -27074,6 +32459,9 @@ function UPhysicsThreadLibrary:AddForce(Handle, Force, bAccelChange) end
 ---@class UPhysicsThrusterComponent : USceneComponent
 ---@field ThrustStrength float
 UPhysicsThrusterComponent = {}
+
+---@return UPhysicsThrusterComponent
+function UPhysicsThrusterComponent:get() end
 
 
 
@@ -27094,6 +32482,9 @@ UPhysicsThrusterComponent = {}
 ---@field bRenderSceneTwoSided boolean
 UPlanarReflectionComponent = {}
 
+---@return UPlanarReflectionComponent
+function UPlanarReflectionComponent:get() end
+
 
 
 ---@class UPlaneReflectionCaptureComponent : UReflectionCaptureComponent
@@ -27102,12 +32493,18 @@ UPlanarReflectionComponent = {}
 ---@field PreviewCaptureBox UBoxComponent
 UPlaneReflectionCaptureComponent = {}
 
+---@return UPlaneReflectionCaptureComponent
+function UPlaneReflectionCaptureComponent:get() end
+
 
 
 ---@class UPlatformEventsComponent : UActorComponent
 ---@field PlatformChangedToLaptopModeDelegate FPlatformEventsComponentPlatformChangedToLaptopModeDelegate
 ---@field PlatformChangedToTabletModeDelegate FPlatformEventsComponentPlatformChangedToTabletModeDelegate
 UPlatformEventsComponent = {}
+
+---@return UPlatformEventsComponent
+function UPlatformEventsComponent:get() end
 
 ---@return boolean
 function UPlatformEventsComponent:SupportsConvertibleLaptops() end
@@ -27134,10 +32531,16 @@ function UPlatformEventsComponent:IsInLaptopMode() end
 ---@field ApplicationReceivedScreenOrientationChangedNotificationDelegate FPlatformGameInstanceApplicationReceivedScreenOrientationChangedNotificationDelegate
 UPlatformGameInstance = {}
 
+---@return UPlatformGameInstance
+function UPlatformGameInstance:get() end
+
 
 
 ---@class UPlatformInputDeviceMapperLibrary : UBlueprintFunctionLibrary
 UPlatformInputDeviceMapperLibrary = {}
+
+---@return UPlatformInputDeviceMapperLibrary
+function UPlatformInputDeviceMapperLibrary:get() end
 
 ---@return FPlatformUserId
 function UPlatformInputDeviceMapperLibrary:PlatformUserId_None() end
@@ -27203,6 +32606,9 @@ function UPlatformInputDeviceMapperLibrary:EqualEqual_InputDeviceId(A, B) end
 ---@field AllDelegates TArray<FDelegateArray>
 UPlatformInterfaceBase = {}
 
+---@return UPlatformInterfaceBase
+function UPlatformInterfaceBase:get() end
+
 
 
 ---@class UPlatformInterfaceWebResponse : UObject
@@ -27212,6 +32618,9 @@ UPlatformInterfaceBase = {}
 ---@field StringResponse FString
 ---@field BinaryResponse TArray<uint8>
 UPlatformInterfaceWebResponse = {}
+
+---@return UPlatformInterfaceWebResponse
+function UPlatformInterfaceWebResponse:get() end
 
 ---@return int32
 function UPlatformInterfaceWebResponse:GetNumHeaders() end
@@ -27231,12 +32640,18 @@ function UPlatformInterfaceWebResponse:GetHeader(HeaderIndex, Header, Value) end
 ---@field ConfiguredLanSpeed int32
 UPlayer = {}
 
+---@return UPlayer
+function UPlayer:get() end
+
 
 
 ---@class UPlayerInput : UObject
 ---@field DebugExecBindings TArray<FKeyBind>
 ---@field InvertedAxis TArray<FName>
 UPlayerInput = {}
+
+---@return UPlayerInput
+function UPlayerInput:get() end
 
 ---@param Sensitivity float
 function UPlayerInput:SetMouseSensitivity(Sensitivity) end
@@ -27255,9 +32670,15 @@ function UPlayerInput:ClearSmoothing() end
 ---@class UPlayerStateCountLimiterConfig : UNetObjectCountLimiterConfig
 UPlayerStateCountLimiterConfig = {}
 
+---@return UPlayerStateCountLimiterConfig
+function UPlayerStateCountLimiterConfig:get() end
+
 
 ---@class UPluginCommandlet : UCommandlet
 UPluginCommandlet = {}
+
+---@return UPluginCommandlet
+function UPluginCommandlet:get() end
 
 
 ---@class UPointLightComponent : ULocalLightComponent
@@ -27267,6 +32688,9 @@ UPluginCommandlet = {}
 ---@field SoftSourceRadius float
 ---@field SourceLength float
 UPointLightComponent = {}
+
+---@return UPointLightComponent
+function UPointLightComponent:get() end
 
 ---@param bNewValue boolean
 function UPointLightComponent:SetUseInverseSquaredFalloff(bNewValue) end
@@ -27285,6 +32709,9 @@ function UPointLightComponent:SetInverseExposureBlend(NewInverseExposureBlend) e
 ---@class UPolys : UObject
 UPolys = {}
 
+---@return UPolys
+function UPolys:get() end
+
 
 ---@class UPoseAsset : UAnimationAsset
 ---@field PoseContainer FPoseDataContainer
@@ -27294,26 +32721,44 @@ UPolys = {}
 ---@field RetargetSourceAssetReferencePose TArray<FTransform>
 UPoseAsset = {}
 
+---@return UPoseAsset
+function UPoseAsset:get() end
+
 
 
 ---@class UPoseWatch : UObject
 UPoseWatch = {}
 
+---@return UPoseWatch
+function UPoseWatch:get() end
+
 
 ---@class UPoseWatchElement : UObject
 UPoseWatchElement = {}
+
+---@return UPoseWatchElement
+function UPoseWatchElement:get() end
 
 
 ---@class UPoseWatchFolder : UObject
 UPoseWatchFolder = {}
 
+---@return UPoseWatchFolder
+function UPoseWatchFolder:get() end
+
 
 ---@class UPoseWatchPoseElement : UPoseWatchElement
 UPoseWatchPoseElement = {}
 
+---@return UPoseWatchPoseElement
+function UPoseWatchPoseElement:get() end
+
 
 ---@class UPoseableMeshComponent : USkinnedMeshComponent
 UPoseableMeshComponent = {}
+
+---@return UPoseableMeshComponent
+function UPoseableMeshComponent:get() end
 
 ---@param BoneName FName
 ---@param InTransform FTransform
@@ -27362,6 +32807,9 @@ function UPoseableMeshComponent:CopyPoseFromSkeletalComponent(InComponentToCopy)
 ---@field bUnbound boolean
 UPostProcessComponent = {}
 
+---@return UPostProcessComponent
+function UPostProcessComponent:get() end
+
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
 function UPostProcessComponent:AddOrUpdateBlendable(InBlendableObject, InWeight) end
@@ -27371,6 +32819,9 @@ function UPostProcessComponent:AddOrUpdateBlendable(InBlendableObject, InWeight)
 ---@field Skeleton USkeleton
 ---@field SkeletalMeshes TArray<FPreviewMeshCollectionEntry>
 UPreviewMeshCollection = {}
+
+---@return UPreviewMeshCollection
+function UPreviewMeshCollection:get() end
 
 
 
@@ -27383,10 +32834,16 @@ UPreviewMeshCollection = {}
 ---@field AssetCollection FCollectionReference
 UPrimaryAssetLabel = {}
 
+---@return UPrimaryAssetLabel
+function UPrimaryAssetLabel:get() end
+
 
 
 ---@class UPrimaryDataAsset : UDataAsset
 UPrimaryDataAsset = {}
+
+---@return UPrimaryDataAsset
+function UPrimaryDataAsset:get() end
 
 
 ---@class UPrimitiveComponent : USceneComponent
@@ -27490,6 +32947,9 @@ UPrimaryDataAsset = {}
 ---@field CustomDepthStencilWriteMask ERendererStencilMask
 ---@field LODParentPrimitive UPrimitiveComponent
 UPrimitiveComponent = {}
+
+---@return UPrimitiveComponent
+function UPrimitiveComponent:get() end
 
 ---@param Tolerance float
 ---@return boolean
@@ -27921,6 +33381,9 @@ function UPrimitiveComponent:AddAngularImpulseInDegrees(Impulse, BoneName, bVelC
 ---@field InterpLocationSnapToTargetDistance float
 UProjectileMovementComponent = {}
 
+---@return UProjectileMovementComponent
+function UProjectileMovementComponent:get() end
+
 ---@param HitResult FHitResult
 function UProjectileMovementComponent:StopSimulating(HitResult) end
 ---@param NewVelocity FVector
@@ -27949,6 +33412,9 @@ function UProjectileMovementComponent:IsInterpolationComplete() end
 ---@field ProxyLODMeshReductionModuleName FName
 UProxyLODMeshSimplificationSettings = {}
 
+---@return UProxyLODMeshSimplificationSettings
+function UProxyLODMeshSimplificationSettings:get() end
+
 
 
 ---@class URPCDoSDetectionConfig : UObject
@@ -27964,6 +33430,9 @@ UProxyLODMeshSimplificationSettings = {}
 ---@field RPCAnalyticsOverrideChance double
 URPCDoSDetectionConfig = {}
 
+---@return URPCDoSDetectionConfig
+function URPCDoSDetectionConfig:get() end
+
 
 
 ---@class URadialForceComponent : USceneComponent
@@ -27977,6 +33446,9 @@ URPCDoSDetectionConfig = {}
 ---@field ObjectTypesToAffect TArray<EObjectTypeQuery>
 URadialForceComponent = {}
 
+---@return URadialForceComponent
+function URadialForceComponent:get() end
+
 ---@param ObjectType EObjectTypeQuery
 function URadialForceComponent:RemoveObjectTypeToAffect(ObjectType) end
 function URadialForceComponent:FireImpulse() end
@@ -27986,6 +33458,9 @@ function URadialForceComponent:AddObjectTypeToAffect(ObjectType) end
 
 ---@class URawAnimSequenceTrackExtensions : UBlueprintFunctionLibrary
 URawAnimSequenceTrackExtensions = {}
+
+---@return URawAnimSequenceTrackExtensions
+function URawAnimSequenceTrackExtensions:get() end
 
 ---@param Track FRawAnimSequenceTrack
 ---@return TArray<FVector>
@@ -28005,6 +33480,9 @@ function URawAnimSequenceTrackExtensions:GetPositionalKeys(Track) end
 ---@field BarnDoorLength float
 ---@field SourceTexture UTexture
 URectLightComponent = {}
+
+---@return URectLightComponent
+function URectLightComponent:get() end
 
 ---@param NewValue float
 function URectLightComponent:SetSourceWidth(NewValue) end
@@ -28028,11 +33506,17 @@ function URectLightComponent:SetBarnDoorAngle(NewValue) end
 ---@field MapBuildDataId FGuid
 UReflectionCaptureComponent = {}
 
+---@return UReflectionCaptureComponent
+function UReflectionCaptureComponent:get() end
+
 
 
 ---@class URendererOverrideSettings : UDeveloperSettings
 ---@field bSupportAllShaderPermutations boolean
 URendererOverrideSettings = {}
+
+---@return URendererOverrideSettings
+function URendererOverrideSettings:get() end
 
 
 
@@ -28178,15 +33662,24 @@ URendererOverrideSettings = {}
 ---@field VisualizeCalibrationGrayscaleMaterialPath FSoftObjectPath
 URendererSettings = {}
 
+---@return URendererSettings
+function URendererSettings:get() end
+
 
 
 ---@class UReplayNetConnection : UNetConnection
 UReplayNetConnection = {}
 
+---@return UReplayNetConnection
+function UReplayNetConnection:get() end
+
 
 ---@class UReplaySubsystem : UGameInstanceSubsystem
 ---@field bLoadDefaultMapOnStop boolean
 UReplaySubsystem = {}
+
+---@return UReplaySubsystem
+function UReplaySubsystem:get() end
 
 function UReplaySubsystem:RequestCheckpoint() end
 ---@return boolean
@@ -28202,17 +33695,29 @@ function UReplaySubsystem:GetActiveReplayName() end
 ---@class UReplicationConnectionDriver : UObject
 UReplicationConnectionDriver = {}
 
+---@return UReplicationConnectionDriver
+function UReplicationConnectionDriver:get() end
+
 
 ---@class UReplicationDriver : UObject
 UReplicationDriver = {}
+
+---@return UReplicationDriver
+function UReplicationDriver:get() end
 
 
 ---@class UReporterBase : UObject
 UReporterBase = {}
 
+---@return UReporterBase
+function UReporterBase:get() end
+
 
 ---@class UReporterGraph : UReporterBase
 UReporterGraph = {}
+
+---@return UReporterGraph
+function UReporterGraph:get() end
 
 
 ---@class UReverbEffect : UObject
@@ -28232,12 +33737,18 @@ UReporterGraph = {}
 ---@field RoomRolloffFactor float
 UReverbEffect = {}
 
+---@return UReverbEffect
+function UReverbEffect:get() end
+
 
 
 ---@class URig : UObject
 ---@field TransformBases TArray<FTransformBase>
 ---@field Nodes TArray<FNode>
 URig = {}
+
+---@return URig
+function URig:get() end
 
 
 
@@ -28247,6 +33758,9 @@ URig = {}
 ---@field bRotationInLocalSpace boolean
 URotatingMovementComponent = {}
 
+---@return URotatingMovementComponent
+function URotatingMovementComponent:get() end
+
 
 
 ---@class URuntimeHashExternalStreamingObjectBase : UObject
@@ -28254,16 +33768,25 @@ URotatingMovementComponent = {}
 ---@field OuterWorld TSoftObjectPtr<UWorld>
 URuntimeHashExternalStreamingObjectBase = {}
 
+---@return URuntimeHashExternalStreamingObjectBase
+function URuntimeHashExternalStreamingObjectBase:get() end
+
 
 
 ---@class URuntimeOptionsBase : UObject
 URuntimeOptionsBase = {}
+
+---@return URuntimeOptionsBase
+function URuntimeOptionsBase:get() end
 
 
 ---@class URuntimeSpatialHashExternalStreamingObject : URuntimeHashExternalStreamingObjectBase
 ---@field StreamingGrids TArray<FSpatialHashStreamingGrid>
 ---@field CellToLevelStreamingPackage TMap<FName, FName>
 URuntimeSpatialHashExternalStreamingObject = {}
+
+---@return URuntimeSpatialHashExternalStreamingObject
+function URuntimeSpatialHashExternalStreamingObject:get() end
 
 
 
@@ -28284,6 +33807,9 @@ URuntimeSpatialHashExternalStreamingObject = {}
 ---@field Size int32
 ---@field StreamingTexture URuntimeVirtualTextureStreamingProxy
 URuntimeVirtualTexture = {}
+
+---@return URuntimeVirtualTexture
+function URuntimeVirtualTexture:get() end
 
 ---@return int32
 function URuntimeVirtualTexture:GetTileSize() end
@@ -28313,12 +33839,18 @@ function URuntimeVirtualTexture:GetPageTableSize() end
 ---@field bBuildDebugStreamingMips boolean
 URuntimeVirtualTextureComponent = {}
 
+---@return URuntimeVirtualTextureComponent
+function URuntimeVirtualTextureComponent:get() end
+
 ---@param WorldBounds FBoxSphereBounds
 function URuntimeVirtualTextureComponent:Invalidate(WorldBounds) end
 
 
 ---@class URuntimeVirtualTextureStreamingProxy : UTexture2D
 URuntimeVirtualTextureStreamingProxy = {}
+
+---@return URuntimeVirtualTextureStreamingProxy
+function URuntimeVirtualTextureStreamingProxy:get() end
 
 
 ---@class USCS_Node : UObject
@@ -28335,34 +33867,58 @@ URuntimeVirtualTextureStreamingProxy = {}
 ---@field InternalVariableName FName
 USCS_Node = {}
 
+---@return USCS_Node
+function USCS_Node:get() end
+
 
 
 ---@class USMInstanceElementAssetDataInterface : UObject
 USMInstanceElementAssetDataInterface = {}
 
+---@return USMInstanceElementAssetDataInterface
+function USMInstanceElementAssetDataInterface:get() end
+
 
 ---@class USMInstanceElementHierarchyInterface : UObject
 USMInstanceElementHierarchyInterface = {}
+
+---@return USMInstanceElementHierarchyInterface
+function USMInstanceElementHierarchyInterface:get() end
 
 
 ---@class USMInstanceElementIdMapTransactor : UObject
 USMInstanceElementIdMapTransactor = {}
 
+---@return USMInstanceElementIdMapTransactor
+function USMInstanceElementIdMapTransactor:get() end
+
 
 ---@class USMInstanceElementSelectionInterface : UObject
 USMInstanceElementSelectionInterface = {}
+
+---@return USMInstanceElementSelectionInterface
+function USMInstanceElementSelectionInterface:get() end
 
 
 ---@class USMInstanceElementWorldInterface : UObject
 USMInstanceElementWorldInterface = {}
 
+---@return USMInstanceElementWorldInterface
+function USMInstanceElementWorldInterface:get() end
+
 
 ---@class USaveGame : UObject
 USaveGame = {}
 
+---@return USaveGame
+function USaveGame:get() end
+
 
 ---@class UScene : UObject
 UScene = {}
+
+---@return UScene
+function UScene:get() end
 
 
 ---@class USceneCaptureComponent : USceneComponent
@@ -28382,6 +33938,9 @@ UScene = {}
 ---@field ShowFlagSettings TArray<FEngineShowFlagsSetting>
 ---@field ProfilingEventName FString
 USceneCaptureComponent = {}
+
+---@return USceneCaptureComponent
+function USceneCaptureComponent:get() end
 
 ---@param InComponent UPrimitiveComponent
 function USceneCaptureComponent:ShowOnlyComponent(InComponent) end
@@ -28427,6 +33986,9 @@ function USceneCaptureComponent:ClearHiddenComponents() end
 ---@field bConsiderUnrenderedOpaquePixelAsFullyTranslucent boolean
 USceneCaptureComponent2D = {}
 
+---@return USceneCaptureComponent2D
+function USceneCaptureComponent2D:get() end
+
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 function USceneCaptureComponent2D:RemoveBlendable(InBlendableObject) end
 function USceneCaptureComponent2D:CaptureScene() end
@@ -28439,6 +34001,9 @@ function USceneCaptureComponent2D:AddOrUpdateBlendable(InBlendableObject, InWeig
 ---@field TextureTarget UTextureRenderTargetCube
 ---@field bCaptureRotation boolean
 USceneCaptureComponentCube = {}
+
+---@return USceneCaptureComponentCube
+function USceneCaptureComponentCube:get() end
 
 function USceneCaptureComponentCube:CaptureScene() end
 
@@ -28474,6 +34039,9 @@ function USceneCaptureComponentCube:CaptureScene() end
 ---@field DetailMode EDetailMode
 ---@field PhysicsVolumeChangedDelegate FSceneComponentPhysicsVolumeChangedDelegate
 USceneComponent = {}
+
+---@return USceneComponent
+function USceneComponent:get() end
 
 ---@param bPropagateToChildren boolean
 function USceneComponent:ToggleVisibility(bPropagateToChildren) end
@@ -28677,10 +34245,16 @@ function USceneComponent:DetachFromParent(bMaintainWorldPosition, bCallModify) e
 ---@class UScriptViewportClient : UObject
 UScriptViewportClient = {}
 
+---@return UScriptViewportClient
+function UScriptViewportClient:get() end
+
 
 ---@class UShadowMapTexture2D : UTexture2D
 ---@field ShadowmapFlags EShadowMapFlags
 UShadowMapTexture2D = {}
+
+---@return UShadowMapTexture2D
+function UShadowMapTexture2D:get() end
 
 
 
@@ -28694,6 +34268,9 @@ UShadowMapTexture2D = {}
 ---@field bUseSystemDefaultObstacleAreaClass boolean
 UShapeComponent = {}
 
+---@return UShapeComponent
+function UShapeComponent:get() end
+
 
 
 ---@class USimpleConstructionScript : UObject
@@ -28702,16 +34279,25 @@ UShapeComponent = {}
 ---@field DefaultSceneRootNode USCS_Node
 USimpleConstructionScript = {}
 
+---@return USimpleConstructionScript
+function USimpleConstructionScript:get() end
+
 
 
 ---@class USimulatedClientNetConnection : UNetConnection
 USimulatedClientNetConnection = {}
+
+---@return USimulatedClientNetConnection
+function USimulatedClientNetConnection:get() end
 
 
 ---@class USkeletalBodySetup : UBodySetup
 ---@field bSkipScaleFromAnimation boolean
 ---@field PhysicalAnimationData TArray<FPhysicalAnimationProfile>
 USkeletalBodySetup = {}
+
+---@return USkeletalBodySetup
+function USkeletalBodySetup:get() end
 
 
 
@@ -28750,6 +34336,9 @@ USkeletalBodySetup = {}
 ---@field SkinWeightProfiles TArray<FSkinWeightProfileInfo>
 ---@field DefaultMeshDeformer UMeshDeformer
 USkeletalMesh = {}
+
+---@return USkeletalMesh
+function USkeletalMesh:get() end
 
 ---@param InSkeleton USkeleton
 function USkeletalMesh:SetSkeleton(InSkeleton) end
@@ -28876,6 +34465,9 @@ function USkeletalMesh:FindSocketAndIndex(InSocketName, OutIndex) end
 ---@field ClothingInteractor UClothingSimulationInteractor
 ---@field OnAnimInitialized FSkeletalMeshComponentOnAnimInitialized
 USkeletalMeshComponent = {}
+
+---@return USkeletalMeshComponent
+function USkeletalMeshComponent:get() end
 
 ---@param InClass TSubclassOf<UAnimInstance>
 function USkeletalMeshComponent:UnlinkAnimClassLayers(InClass) end
@@ -29191,6 +34783,9 @@ function USkeletalMeshComponent:AccumulateAllBodiesBelowPhysicsBlendWeight(InBon
 ---@class USkeletalMeshEditorData : UObject
 USkeletalMeshEditorData = {}
 
+---@return USkeletalMeshEditorData
+function USkeletalMeshEditorData:get() end
+
 
 ---@class USkeletalMeshLODSettings : UDataAsset
 ---@field MinQualityLevelLOD FPerQualityLevelInt
@@ -29203,11 +34798,17 @@ USkeletalMeshEditorData = {}
 ---@field LODGroups TArray<FSkeletalMeshLODGroupSettings>
 USkeletalMeshLODSettings = {}
 
+---@return USkeletalMeshLODSettings
+function USkeletalMeshLODSettings:get() end
+
 
 
 ---@class USkeletalMeshSimplificationSettings : UDeveloperSettings
 ---@field SkeletalMeshReductionModuleName FName
 USkeletalMeshSimplificationSettings = {}
+
+---@return USkeletalMeshSimplificationSettings
+function USkeletalMeshSimplificationSettings:get() end
 
 
 
@@ -29219,6 +34820,9 @@ USkeletalMeshSimplificationSettings = {}
 ---@field RelativeScale FVector
 ---@field bForceAlwaysAnimated boolean
 USkeletalMeshSocket = {}
+
+---@return USkeletalMeshSocket
+function USkeletalMeshSocket:get() end
 
 ---@param SkelComp USkeletalMeshComponent
 ---@param WorldLocation FVector
@@ -29242,6 +34846,9 @@ function USkeletalMeshSocket:GetSocketLocation(SkelComp) end
 ---@field AssetUserData TArray<UAssetUserData>
 USkeleton = {}
 
+---@return USkeleton
+function USkeleton:get() end
+
 ---@param InProfileName FName
 ---@return UBlendProfile
 function USkeleton:GetBlendProfile(InProfileName) end
@@ -29251,6 +34858,9 @@ function USkeleton:AddCompatibleSkeleton(SourceSkeleton) end
 
 ---@class USkinnedAsset : UStreamableRenderAsset
 USkinnedAsset = {}
+
+---@return USkinnedAsset
+function USkinnedAsset:get() end
 
 ---@param InSocketName FName
 ---@param OutTransform FTransform
@@ -29305,6 +34915,9 @@ function USkinnedAsset:FindSocket(InSocketName) end
 ---@field CachedWorldOrLocalSpaceBounds FBoxSphereBounds
 ---@field CachedWorldToLocalTransform FMatrix
 USkinnedMeshComponent = {}
+
+---@return USkinnedMeshComponent
+function USkinnedMeshComponent:get() end
 
 ---@param InProfileName FName
 function USkinnedMeshComponent:UnloadSkinWeightProfile(InProfileName) end
@@ -29471,6 +35084,9 @@ function USkinnedMeshComponent:BoneIsChildOf(BoneName, ParentBoneName) end
 ---@field bStaticLightingBuiltGUID FGuid
 USkyAtmosphereComponent = {}
 
+---@return USkyAtmosphereComponent
+function USkyAtmosphereComponent:get() end
+
 ---@param NewValue FLinearColor
 function USkyAtmosphereComponent:SetSkyLuminanceFactor(NewValue) end
 ---@param NewValue float
@@ -29535,6 +35151,9 @@ function USkyAtmosphereComponent:GetAtmosphereTransmitanceOnGroundAtPlanetTop(Di
 ---@field BlendDestinationCubemap UTextureCube
 USkyLightComponent = {}
 
+---@return USkyLightComponent
+function USkyLightComponent:get() end
+
 ---@param NewIntensity float
 function USkyLightComponent:SetVolumetricScatteringIntensity(NewIntensity) end
 ---@param NewValue float
@@ -29568,15 +35187,24 @@ function USkyLightComponent:RecaptureSky() end
 ---@field Brush FSlateBrush
 USlateBrushAsset = {}
 
+---@return USlateBrushAsset
+function USlateBrushAsset:get() end
+
 
 
 ---@class USmokeTestCommandlet : UCommandlet
 USmokeTestCommandlet = {}
 
+---@return USmokeTestCommandlet
+function USmokeTestCommandlet:get() end
+
 
 ---@class USoundAttenuation : UObject
 ---@field Attenuation FSoundAttenuationSettings
 USoundAttenuation = {}
+
+---@return USoundAttenuation
+function USoundAttenuation:get() end
 
 
 
@@ -29606,6 +35234,9 @@ USoundAttenuation = {}
 ---@field AssetUserData TArray<UAssetUserData>
 USoundBase = {}
 
+---@return USoundBase
+function USoundBase:get() end
+
 
 
 ---@class USoundClass : UObject
@@ -29615,11 +35246,17 @@ USoundBase = {}
 ---@field ParentClass USoundClass
 USoundClass = {}
 
+---@return USoundClass
+function USoundClass:get() end
+
 
 
 ---@class USoundConcurrency : UObject
 ---@field Concurrency FSoundConcurrencySettings
 USoundConcurrency = {}
+
+---@return USoundConcurrency
+function USoundConcurrency:get() end
 
 
 
@@ -29636,14 +35273,23 @@ USoundConcurrency = {}
 ---@field CookedQualityIndex int32
 USoundCue = {}
 
+---@return USoundCue
+function USoundCue:get() end
+
 
 
 ---@class USoundEffectPreset : UObject
 USoundEffectPreset = {}
 
+---@return USoundEffectPreset
+function USoundEffectPreset:get() end
+
 
 ---@class USoundEffectSourcePreset : USoundEffectPreset
 USoundEffectSourcePreset = {}
+
+---@return USoundEffectSourcePreset
+function USoundEffectSourcePreset:get() end
 
 
 ---@class USoundEffectSourcePresetChain : UObject
@@ -29651,15 +35297,24 @@ USoundEffectSourcePreset = {}
 ---@field bPlayEffectChainTails boolean
 USoundEffectSourcePresetChain = {}
 
+---@return USoundEffectSourcePresetChain
+function USoundEffectSourcePresetChain:get() end
+
 
 
 ---@class USoundEffectSubmixPreset : USoundEffectPreset
 USoundEffectSubmixPreset = {}
 
+---@return USoundEffectSubmixPreset
+function USoundEffectSubmixPreset:get() end
+
 
 ---@class USoundGroups : UObject
 ---@field SoundGroupProfiles TArray<FSoundGroup>
 USoundGroups = {}
+
+---@return USoundGroups
+function USoundGroups:get() end
 
 
 
@@ -29674,16 +35329,25 @@ USoundGroups = {}
 ---@field FadeOutTime float
 USoundMix = {}
 
+---@return USoundMix
+function USoundMix:get() end
+
 
 
 ---@class USoundNode : UObject
 ---@field ChildNodes TArray<USoundNode>
 USoundNode = {}
 
+---@return USoundNode
+function USoundNode:get() end
+
 
 
 ---@class USoundNodeAssetReferencer : USoundNode
 USoundNodeAssetReferencer = {}
+
+---@return USoundNodeAssetReferencer
+function USoundNodeAssetReferencer:get() end
 
 
 ---@class USoundNodeAttenuation : USoundNode
@@ -29692,17 +35356,26 @@ USoundNodeAssetReferencer = {}
 ---@field bOverrideAttenuation boolean
 USoundNodeAttenuation = {}
 
+---@return USoundNodeAttenuation
+function USoundNodeAttenuation:get() end
+
 
 
 ---@class USoundNodeBranch : USoundNode
 ---@field BoolParameterName FName
 USoundNodeBranch = {}
 
+---@return USoundNodeBranch
+function USoundNodeBranch:get() end
+
 
 
 ---@class USoundNodeConcatenator : USoundNode
 ---@field InputVolume TArray<float>
 USoundNodeConcatenator = {}
+
+---@return USoundNodeConcatenator
+function USoundNodeConcatenator:get() end
 
 
 
@@ -29711,6 +35384,9 @@ USoundNodeConcatenator = {}
 ---@field DelayMax float
 USoundNodeDelay = {}
 
+---@return USoundNodeDelay
+function USoundNodeDelay:get() end
+
 
 
 ---@class USoundNodeDialoguePlayer : USoundNode
@@ -29718,11 +35394,17 @@ USoundNodeDelay = {}
 ---@field bLooping boolean
 USoundNodeDialoguePlayer = {}
 
+---@return USoundNodeDialoguePlayer
+function USoundNodeDialoguePlayer:get() end
+
 
 
 ---@class USoundNodeDistanceCrossFade : USoundNode
 ---@field CrossFadeInput TArray<FDistanceDatum>
 USoundNodeDistanceCrossFade = {}
+
+---@return USoundNodeDistanceCrossFade
+function USoundNodeDistanceCrossFade:get() end
 
 
 
@@ -29731,6 +35413,9 @@ USoundNodeDistanceCrossFade = {}
 ---@field bUseSmoothing boolean
 ---@field SmoothingInterpSpeed float
 USoundNodeDoppler = {}
+
+---@return USoundNodeDoppler
+function USoundNodeDoppler:get() end
 
 
 
@@ -29751,11 +35436,17 @@ USoundNodeDoppler = {}
 ---@field VolumeMax float
 USoundNodeEnveloper = {}
 
+---@return USoundNodeEnveloper
+function USoundNodeEnveloper:get() end
+
 
 
 ---@class USoundNodeGroupControl : USoundNode
 ---@field GroupSizes TArray<int32>
 USoundNodeGroupControl = {}
+
+---@return USoundNodeGroupControl
+function USoundNodeGroupControl:get() end
 
 
 
@@ -29764,15 +35455,24 @@ USoundNodeGroupControl = {}
 ---@field bLoopIndefinitely boolean
 USoundNodeLooping = {}
 
+---@return USoundNodeLooping
+function USoundNodeLooping:get() end
+
 
 
 ---@class USoundNodeMature : USoundNode
 USoundNodeMature = {}
 
+---@return USoundNodeMature
+function USoundNodeMature:get() end
+
 
 ---@class USoundNodeMixer : USoundNode
 ---@field InputVolume TArray<float>
 USoundNodeMixer = {}
+
+---@return USoundNodeMixer
+function USoundNodeMixer:get() end
 
 
 
@@ -29783,12 +35483,18 @@ USoundNodeMixer = {}
 ---@field VolumeMax float
 USoundNodeModulator = {}
 
+---@return USoundNodeModulator
+function USoundNodeModulator:get() end
+
 
 
 ---@class USoundNodeModulatorContinuous : USoundNode
 ---@field PitchModulationParams FModulatorContinuousParams
 ---@field VolumeModulationParams FModulatorContinuousParams
 USoundNodeModulatorContinuous = {}
+
+---@return USoundNodeModulatorContinuous
+function USoundNodeModulatorContinuous:get() end
 
 
 
@@ -29805,17 +35511,26 @@ USoundNodeModulatorContinuous = {}
 ---@field CenterMax float
 USoundNodeOscillator = {}
 
+---@return USoundNodeOscillator
+function USoundNodeOscillator:get() end
+
 
 
 ---@class USoundNodeParamCrossFade : USoundNodeDistanceCrossFade
 ---@field ParamName FName
 USoundNodeParamCrossFade = {}
 
+---@return USoundNodeParamCrossFade
+function USoundNodeParamCrossFade:get() end
+
 
 
 ---@class USoundNodeQualityLevel : USoundNode
 ---@field CookedQualityLevelIndex int32
 USoundNodeQualityLevel = {}
+
+---@return USoundNodeQualityLevel
+function USoundNodeQualityLevel:get() end
 
 
 
@@ -29829,11 +35544,17 @@ USoundNodeQualityLevel = {}
 ---@field bRandomizeWithoutReplacement boolean
 USoundNodeRandom = {}
 
+---@return USoundNodeRandom
+function USoundNodeRandom:get() end
+
 
 
 ---@class USoundNodeSoundClass : USoundNode
 ---@field SoundClassOverride USoundClass
 USoundNodeSoundClass = {}
+
+---@return USoundNodeSoundClass
+function USoundNodeSoundClass:get() end
 
 
 
@@ -29841,11 +35562,17 @@ USoundNodeSoundClass = {}
 ---@field IntParameterName FName
 USoundNodeSwitch = {}
 
+---@return USoundNodeSwitch
+function USoundNodeSwitch:get() end
+
 
 
 ---@class USoundNodeWaveParam : USoundNode
 ---@field WaveParameterName FName
 USoundNodeWaveParam = {}
+
+---@return USoundNodeWaveParam
+function USoundNodeWaveParam:get() end
 
 
 
@@ -29855,6 +35582,9 @@ USoundNodeWaveParam = {}
 ---@field bLooping boolean
 USoundNodeWavePlayer = {}
 
+---@return USoundNodeWavePlayer
+function USoundNodeWavePlayer:get() end
+
 
 
 ---@class USoundSourceBus : USoundWave
@@ -29863,6 +35593,9 @@ USoundNodeWavePlayer = {}
 ---@field AudioBus UAudioBus
 ---@field bAutoDeactivateWhenSilent boolean
 USoundSourceBus = {}
+
+---@return USoundSourceBus
+function USoundSourceBus:get() end
 
 
 
@@ -29882,6 +35615,9 @@ USoundSourceBus = {}
 ---@field AudioLinkSettings UAudioLinkSettingsAbstract
 ---@field OnSubmixRecordedFileDone FSoundSubmixOnSubmixRecordedFileDone
 USoundSubmix = {}
+
+---@return USoundSubmix
+function USoundSubmix:get() end
 
 ---@param WorldContextObject UObject
 function USoundSubmix:StopSpectralAnalysis(WorldContextObject) end
@@ -29938,11 +35674,17 @@ function USoundSubmix:AddEnvelopeFollowerDelegate(WorldContextObject, OnSubmixEn
 ---@field ChildSubmixes TArray<USoundSubmixBase>
 USoundSubmixBase = {}
 
+---@return USoundSubmixBase
+function USoundSubmixBase:get() end
+
 
 
 ---@class USoundSubmixWithParentBase : USoundSubmixBase
 ---@field ParentSubmix USoundSubmixBase
 USoundSubmixWithParentBase = {}
+
+---@return USoundSubmixWithParentBase
+function USoundSubmixWithParentBase:get() end
 
 
 
@@ -29978,6 +35720,9 @@ USoundSubmixWithParentBase = {}
 ---@field InternalCurves UCurveTable
 USoundWave = {}
 
+---@return USoundWave
+function USoundWave:get() end
+
 ---@param InSoundAssetCompressionType ESoundAssetCompressionType
 ---@param bMarkDirty boolean
 function USoundWave:SetSoundAssetCompressionType(InSoundAssetCompressionType, bMarkDirty) end
@@ -29987,6 +35732,9 @@ function USoundWave:GetSoundAssetCompressionType() end
 
 ---@class USoundWaveProcedural : USoundWave
 USoundWaveProcedural = {}
+
+---@return USoundWaveProcedural
+function USoundWaveProcedural:get() end
 
 
 ---@class USoundfieldEndpointSubmix : USoundSubmixBase
@@ -29998,6 +35746,9 @@ USoundWaveProcedural = {}
 ---@field SoundfieldEffectChain TArray<USoundfieldEffectBase>
 USoundfieldEndpointSubmix = {}
 
+---@return USoundfieldEndpointSubmix
+function USoundfieldEndpointSubmix:get() end
+
 
 
 ---@class USoundfieldSubmix : USoundSubmixWithParentBase
@@ -30007,17 +35758,26 @@ USoundfieldEndpointSubmix = {}
 ---@field EncodingSettingsClass TSubclassOf<USoundfieldEncodingSettingsBase>
 USoundfieldSubmix = {}
 
+---@return USoundfieldSubmix
+function USoundfieldSubmix:get() end
+
 
 
 ---@class USpectatorPawnMovement : UFloatingPawnMovement
 ---@field bIgnoreTimeDilation boolean
 USpectatorPawnMovement = {}
 
+---@return USpectatorPawnMovement
+function USpectatorPawnMovement:get() end
+
 
 
 ---@class USphereComponent : UShapeComponent
 ---@field SphereRadius float
 USphereComponent = {}
+
+---@return USphereComponent
+function USphereComponent:get() end
 
 ---@param InSphereRadius float
 ---@param bUpdateOverlaps boolean
@@ -30035,6 +35795,9 @@ function USphereComponent:GetScaledSphereRadius() end
 ---@field CaptureDistanceScale float
 ---@field PreviewInfluenceRadius UDrawSphereComponent
 USphereReflectionCaptureComponent = {}
+
+---@return USphereReflectionCaptureComponent
+function USphereReflectionCaptureComponent:get() end
 
 
 
@@ -30057,6 +35820,9 @@ USphereReflectionCaptureComponent = {}
 ---@field LoopPosition float
 ---@field DefaultUpVector FVector
 USplineComponent = {}
+
+---@return USplineComponent
+function USplineComponent:get() end
 
 function USplineComponent:UpdateSpline() end
 ---@param PointIndex int32
@@ -30469,6 +36235,9 @@ function USplineComponent:AddPoint(Point, bUpdateSpline) end
 ---@field VirtualTextureMainPassMaxDrawDistance float
 USplineMeshComponent = {}
 
+---@return USplineMeshComponent
+function USplineMeshComponent:get() end
+
 function USplineMeshComponent:UpdateMesh() end
 ---@param StartTangent FVector
 ---@param bUpdateMesh boolean
@@ -30551,11 +36320,17 @@ function USplineMeshComponent:GetBoundaryMax() end
 ---@class USplineMetadata : UObject
 USplineMetadata = {}
 
+---@return USplineMetadata
+function USplineMetadata:get() end
+
 
 ---@class USpotLightComponent : UPointLightComponent
 ---@field InnerConeAngle float
 ---@field OuterConeAngle float
 USpotLightComponent = {}
+
+---@return USpotLightComponent
+function USpotLightComponent:get() end
 
 ---@param NewOuterConeAngle float
 function USpotLightComponent:SetOuterConeAngle(NewOuterConeAngle) end
@@ -30584,6 +36359,9 @@ function USpotLightComponent:SetInnerConeAngle(NewInnerConeAngle) end
 ---@field CameraLagMaxDistance float
 ---@field bClampToMaxPhysicsDeltaTime boolean
 USpringArmComponent = {}
+
+---@return USpringArmComponent
+function USpringArmComponent:get() end
 
 ---@return boolean
 function USpringArmComponent:IsCollisionFixApplied() end
@@ -30621,6 +36399,9 @@ function USpringArmComponent:GetTargetRotation() end
 ---@field AssetUserData TArray<UAssetUserData>
 ---@field NavCollision UNavCollisionBase
 UStaticMesh = {}
+
+---@return UStaticMesh
+function UStaticMesh:get() end
 
 ---@param InStaticMaterials TArray<FStaticMaterial>
 function UStaticMesh:SetStaticMaterials(InStaticMaterials) end
@@ -30723,6 +36504,9 @@ function UStaticMesh:AddMaterial(Material) end
 ---@field LightmassSettings FLightmassPrimitiveSettings
 UStaticMeshComponent = {}
 
+---@return UStaticMeshComponent
+function UStaticMeshComponent:get() end
+
 ---@param NewMesh UStaticMesh
 ---@return boolean
 function UStaticMeshComponent:SetStaticMesh(NewMesh) end
@@ -30748,6 +36532,9 @@ function UStaticMeshComponent:GetInitialEvaluateWorldPositionOffset() end
 ---@class UStaticMeshDescriptionBulkData : UMeshDescriptionBaseBulkData
 UStaticMeshDescriptionBulkData = {}
 
+---@return UStaticMeshDescriptionBulkData
+function UStaticMeshDescriptionBulkData:get() end
+
 
 ---@class UStaticMeshSocket : UObject
 ---@field SocketName FName
@@ -30756,6 +36543,9 @@ UStaticMeshDescriptionBulkData = {}
 ---@field RelativeScale FVector
 ---@field Tag FString
 UStaticMeshSocket = {}
+
+---@return UStaticMeshSocket
+function UStaticMeshSocket:get() end
 
 
 
@@ -30777,6 +36567,9 @@ UStaticMeshSocket = {}
 ---@field Shape UStereoLayerShape
 ---@field Priority int32
 UStereoLayerComponent = {}
+
+---@return UStereoLayerComponent
+function UStereoLayerComponent:get() end
 
 ---@param InUVRect FBox2D
 function UStereoLayerComponent:SetUVRect(InUVRect) end
@@ -30806,6 +36599,9 @@ function UStereoLayerComponent:GetLeftTexture() end
 ---@class UStereoLayerFunctionLibrary : UBlueprintFunctionLibrary
 UStereoLayerFunctionLibrary = {}
 
+---@return UStereoLayerFunctionLibrary
+function UStereoLayerFunctionLibrary:get() end
+
 function UStereoLayerFunctionLibrary:ShowSplashScreen() end
 ---@param Texture UTexture
 ---@param Scale FVector2D
@@ -30821,9 +36617,15 @@ function UStereoLayerFunctionLibrary:EnableAutoLoadingSplashScreen(InAutoShowEna
 ---@class UStereoLayerShape : UObject
 UStereoLayerShape = {}
 
+---@return UStereoLayerShape
+function UStereoLayerShape:get() end
+
 
 ---@class UStereoLayerShapeCubemap : UStereoLayerShape
 UStereoLayerShapeCubemap = {}
+
+---@return UStereoLayerShapeCubemap
+function UStereoLayerShapeCubemap:get() end
 
 
 ---@class UStereoLayerShapeCylinder : UStereoLayerShape
@@ -30831,6 +36633,9 @@ UStereoLayerShapeCubemap = {}
 ---@field OverlayArc float
 ---@field Height int32
 UStereoLayerShapeCylinder = {}
+
+---@return UStereoLayerShapeCylinder
+function UStereoLayerShapeCylinder:get() end
 
 ---@param InRadius float
 function UStereoLayerShapeCylinder:SetRadius(InRadius) end
@@ -30849,12 +36654,18 @@ function UStereoLayerShapeCylinder:SetHeight(InHeight) end
 ---@field RightBias FVector2D
 UStereoLayerShapeEquirect = {}
 
+---@return UStereoLayerShapeEquirect
+function UStereoLayerShapeEquirect:get() end
+
 ---@param InScaleBiases FEquirectProps
 function UStereoLayerShapeEquirect:SetEquirectProps(InScaleBiases) end
 
 
 ---@class UStereoLayerShapeQuad : UStereoLayerShape
 UStereoLayerShapeQuad = {}
+
+---@return UStereoLayerShapeQuad
+function UStereoLayerShapeQuad:get() end
 
 
 ---@class UStreamableRenderAsset : UObject
@@ -30870,6 +36681,9 @@ UStereoLayerShapeQuad = {}
 ---@field bIgnoreStreamingMipBias boolean
 ---@field bUseCinematicMipLevels boolean
 UStreamableRenderAsset = {}
+
+---@return UStreamableRenderAsset
+function UStreamableRenderAsset:get() end
 
 ---@param Seconds float
 ---@param CinematicLODGroupMask int32
@@ -30896,15 +36710,24 @@ function UStreamableRenderAsset:SetForceMipLevelsToBeResident(Seconds, Cinematic
 ---@field EventDrivenLoaderEnabled boolean
 UStreamingSettings = {}
 
+---@return UStreamingSettings
+function UStreamingSettings:get() end
+
 
 
 ---@class UStringTable : UObject
 UStringTable = {}
 
+---@return UStringTable
+function UStringTable:get() end
+
 
 ---@class UStructCookedMetaData : UObject
 ---@field StructMetaData FStructCookedMetaDataStore
 UStructCookedMetaData = {}
+
+---@return UStructCookedMetaData
+function UStructCookedMetaData:get() end
 
 
 
@@ -30917,20 +36740,32 @@ UStructCookedMetaData = {}
 ---@field AlphaThreshold float
 USubUVAnimation = {}
 
+---@return USubUVAnimation
+function USubUVAnimation:get() end
+
 
 
 ---@class USubsurfaceProfile : UObject
 ---@field Settings FSubsurfaceProfileStruct
 USubsurfaceProfile = {}
 
+---@return USubsurfaceProfile
+function USubsurfaceProfile:get() end
+
 
 
 ---@class USubsystem : UObject
 USubsystem = {}
 
+---@return USubsystem
+function USubsystem:get() end
+
 
 ---@class USubsystemBlueprintLibrary : UBlueprintFunctionLibrary
 USubsystemBlueprintLibrary = {}
+
+---@return USubsystemBlueprintLibrary
+function USubsystemBlueprintLibrary:get() end
 
 ---@param ContextObject UObject
 ---@param Class TSubclassOf<UWorldSubsystem>
@@ -30963,6 +36798,9 @@ function USubsystemBlueprintLibrary:GetAudioEngineSubsystem(ContextObject, Class
 ---@field bUseHighPerformanceClock boolean
 USystemTimeTimecodeProvider = {}
 
+---@return USystemTimeTimecodeProvider
+function USystemTimeTimecodeProvider:get() end
+
 
 
 ---@class UTextPropertyTestObject : UObject
@@ -30970,6 +36808,9 @@ USystemTimeTimecodeProvider = {}
 ---@field UndefaultedText FText
 ---@field TransientText FText
 UTextPropertyTestObject = {}
+
+---@return UTextPropertyTestObject
+function UTextPropertyTestObject:get() end
 
 
 
@@ -30988,6 +36829,9 @@ UTextPropertyTestObject = {}
 ---@field VertSpacingAdjust float
 ---@field bAlwaysRenderAsText boolean
 UTextRenderComponent = {}
+
+---@return UTextRenderComponent
+function UTextRenderComponent:get() end
 
 ---@param Value float
 function UTextRenderComponent:SetYScale(Value) end
@@ -31036,6 +36880,9 @@ function UTextRenderComponent:GetTextLocalSize() end
 ---@field AssetUserData TArray<UAssetUserData>
 UTexture = {}
 
+---@return UTexture
+function UTexture:get() end
+
 ---@return int64
 function UTexture:Blueprint_GetMemorySize() end
 
@@ -31047,6 +36894,9 @@ function UTexture:Blueprint_GetMemorySize() end
 ---@field AddressY TextureAddress
 ---@field ImportedSize FIntPoint
 UTexture2D = {}
+
+---@return UTexture2D
+function UTexture2D:get() end
 
 ---@return int32
 function UTexture2D:Blueprint_GetSizeY() end
@@ -31060,20 +36910,32 @@ function UTexture2D:Blueprint_GetSizeX() end
 ---@field AddressZ TextureAddress
 UTexture2DArray = {}
 
+---@return UTexture2DArray
+function UTexture2DArray:get() end
+
 
 
 ---@class UTexture2DDynamic : UTexture
 ---@field Format EPixelFormat
 UTexture2DDynamic = {}
 
+---@return UTexture2DDynamic
+function UTexture2DDynamic:get() end
+
 
 
 ---@class UTextureCube : UTexture
 UTextureCube = {}
 
+---@return UTextureCube
+function UTextureCube:get() end
+
 
 ---@class UTextureCubeArray : UTexture
 UTextureCubeArray = {}
+
+---@return UTextureCubeArray
+function UTextureCubeArray:get() end
 
 
 ---@class UTextureEncodingProjectSettings : UDeveloperSettings
@@ -31089,17 +36951,26 @@ UTextureCubeArray = {}
 ---@field EditorUsesSpeed ETextureEncodeSpeed
 UTextureEncodingProjectSettings = {}
 
+---@return UTextureEncodingProjectSettings
+function UTextureEncodingProjectSettings:get() end
+
 
 
 ---@class UTextureEncodingUserSettings : UDeveloperSettings
 ---@field ForceEncodeSpeed ETextureEncodeSpeedOverride
 UTextureEncodingUserSettings = {}
 
+---@return UTextureEncodingUserSettings
+function UTextureEncodingUserSettings:get() end
+
 
 
 ---@class UTextureLODSettings : UObject
 ---@field TextureLODGroups TArray<FTextureLODGroup>
 UTextureLODSettings = {}
+
+---@return UTextureLODSettings
+function UTextureLODSettings:get() end
 
 
 
@@ -31108,15 +36979,24 @@ UTextureLODSettings = {}
 ---@field TextureMultiplier float
 UTextureLightProfile = {}
 
+---@return UTextureLightProfile
+function UTextureLightProfile:get() end
+
 
 
 ---@class UTextureMipDataProviderFactory : UAssetUserData
 UTextureMipDataProviderFactory = {}
 
+---@return UTextureMipDataProviderFactory
+function UTextureMipDataProviderFactory:get() end
+
 
 ---@class UTextureRenderTarget : UTexture
 ---@field TargetGamma float
 UTextureRenderTarget = {}
+
+---@return UTextureRenderTarget
+function UTextureRenderTarget:get() end
 
 
 
@@ -31137,6 +37017,9 @@ UTextureRenderTarget = {}
 ---@field OverrideFormat EPixelFormat
 UTextureRenderTarget2D = {}
 
+---@return UTextureRenderTarget2D
+function UTextureRenderTarget2D:get() end
+
 
 
 ---@class UTextureRenderTarget2DArray : UTextureRenderTarget
@@ -31149,6 +37032,9 @@ UTextureRenderTarget2D = {}
 ---@field bForceLinearGamma boolean
 UTextureRenderTarget2DArray = {}
 
+---@return UTextureRenderTarget2DArray
+function UTextureRenderTarget2DArray:get() end
+
 
 
 ---@class UTextureRenderTargetCube : UTextureRenderTarget
@@ -31158,6 +37044,9 @@ UTextureRenderTarget2DArray = {}
 ---@field bHDR boolean
 ---@field bForceLinearGamma boolean
 UTextureRenderTargetCube = {}
+
+---@return UTextureRenderTargetCube
+function UTextureRenderTargetCube:get() end
 
 
 
@@ -31171,19 +37060,31 @@ UTextureRenderTargetCube = {}
 ---@field bForceLinearGamma boolean
 UTextureRenderTargetVolume = {}
 
+---@return UTextureRenderTargetVolume
+function UTextureRenderTargetVolume:get() end
+
 
 
 ---@class UThumbnailInfo : UObject
 UThumbnailInfo = {}
 
+---@return UThumbnailInfo
+function UThumbnailInfo:get() end
+
 
 ---@class UTickableWorldSubsystem : UWorldSubsystem
 UTickableWorldSubsystem = {}
+
+---@return UTickableWorldSubsystem
+function UTickableWorldSubsystem:get() end
 
 
 ---@class UTimecodeProvider : UObject
 ---@field FrameDelay float
 UTimecodeProvider = {}
+
+---@return UTimecodeProvider
+function UTimecodeProvider:get() end
 
 ---@return FTimecode
 function UTimecodeProvider:GetTimecode() end
@@ -31207,6 +37108,9 @@ function UTimecodeProvider:FetchAndUpdate() end
 ---@field TheTimeline FTimeline
 ---@field bIgnoreTimeDilation boolean
 UTimelineComponent = {}
+
+---@return UTimelineComponent
+function UTimelineComponent:get() end
 
 function UTimelineComponent:Stop() end
 ---@param NewVectorCurve UCurveVector
@@ -31278,11 +37182,17 @@ function UTimelineComponent:GetIgnoreTimeDilation() end
 ---@field FinishedFunctionName FName
 UTimelineTemplate = {}
 
+---@return UTimelineTemplate
+function UTimelineTemplate:get() end
+
 
 
 ---@class UTireType : UDataAsset
 ---@field FrictionScale float
 UTireType = {}
+
+---@return UTireType
+function UTireType:get() end
 
 
 
@@ -31297,6 +37207,9 @@ UTireType = {}
 ---@field StartupDelay float
 UTouchInterface = {}
 
+---@return UTouchInterface
+function UTouchInterface:get() end
+
 
 
 ---@class UTransactionDiffingTestObject : UObject
@@ -31309,10 +37222,16 @@ UTouchInterface = {}
 ---@field PropertyData int32
 UTransactionDiffingTestObject = {}
 
+---@return UTransactionDiffingTestObject
+function UTransactionDiffingTestObject:get() end
+
 
 
 ---@class UTwitterIntegrationBase : UPlatformInterfaceBase
 UTwitterIntegrationBase = {}
+
+---@return UTwitterIntegrationBase
+function UTwitterIntegrationBase:get() end
 
 ---@param URL FString
 ---@param ParamKeysAndValues TArray<FString>
@@ -31339,6 +37258,9 @@ function UTwitterIntegrationBase:AuthorizeAccounts() end
 
 ---@class UTypedElementCommonActions : UObject
 UTypedElementCommonActions = {}
+
+---@return UTypedElementCommonActions
+function UTypedElementCommonActions:get() end
 
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param World UWorld
@@ -31367,12 +37289,18 @@ function UTypedElementCommonActions:DeleteNormalizedElements(ElementList, World,
 ---@field DisplayNameMap TMap<FName, FText>
 UUserDefinedEnum = {}
 
+---@return UUserDefinedEnum
+function UUserDefinedEnum:get() end
+
 
 
 ---@class UUserDefinedStruct : UScriptStruct
 ---@field Status EUserDefinedStructureStatus
 ---@field Guid FGuid
 UUserDefinedStruct = {}
+
+---@return UUserDefinedStruct
+function UUserDefinedStruct:get() end
 
 
 
@@ -31399,10 +37327,16 @@ UUserDefinedStruct = {}
 ---@field CustomScalingRule UDPICustomScalingRule
 UUserInterfaceSettings = {}
 
+---@return UUserInterfaceSettings
+function UUserInterfaceSettings:get() end
+
 
 
 ---@class UVOIPStatics : UBlueprintFunctionLibrary
 UVOIPStatics = {}
+
+---@return UVOIPStatics
+function UVOIPStatics:get() end
 
 ---@param InThreshold float
 function UVOIPStatics:SetMicThreshold(InThreshold) end
@@ -31411,6 +37345,9 @@ function UVOIPStatics:SetMicThreshold(InThreshold) end
 ---@class UVOIPTalker : UActorComponent
 ---@field Settings FVoiceSettings
 UVOIPTalker = {}
+
+---@return UVOIPTalker
+function UVOIPTalker:get() end
 
 ---@param OwningState APlayerState
 function UVOIPTalker:RegisterWithPlayerState(OwningState) end
@@ -31428,6 +37365,9 @@ function UVOIPTalker:BPOnTalkingBegin(AudioComponent) end
 ---@field Bounds FBox
 ---@field Intensity float
 UVectorField = {}
+
+---@return UVectorField
+function UVectorField:get() end
 
 
 
@@ -31447,6 +37387,9 @@ UVectorField = {}
 ---@field NoiseMax float
 UVectorFieldAnimated = {}
 
+---@return UVectorFieldAnimated
+function UVectorFieldAnimated:get() end
+
 
 
 ---@class UVectorFieldComponent : UPrimitiveComponent
@@ -31455,6 +37398,9 @@ UVectorFieldAnimated = {}
 ---@field Tightness float
 ---@field bPreviewVectorField boolean
 UVectorFieldComponent = {}
+
+---@return UVectorFieldComponent
+function UVectorFieldComponent:get() end
 
 ---@param NewIntensity float
 function UVectorFieldComponent:SetIntensity(NewIntensity) end
@@ -31467,14 +37413,23 @@ function UVectorFieldComponent:SetIntensity(NewIntensity) end
 ---@field bAllowCPUAccess boolean
 UVectorFieldStatic = {}
 
+---@return UVectorFieldStatic
+function UVectorFieldStatic:get() end
+
 
 
 ---@class UViewModeUtils : UObject
 UViewModeUtils = {}
 
+---@return UViewModeUtils
+function UViewModeUtils:get() end
+
 
 ---@class UViewportStatsSubsystem : UWorldSubsystem
 UViewportStatsSubsystem = {}
+
+---@return UViewportStatsSubsystem
+function UViewportStatsSubsystem:get() end
 
 ---@param IndexToRemove int32
 function UViewportStatsSubsystem:RemoveDisplayDelegate(IndexToRemove) end
@@ -31491,12 +37446,18 @@ function UViewportStatsSubsystem:AddDisplayDelegate(Delegate) end
 ---@class UVirtualTexture : UObject
 UVirtualTexture = {}
 
+---@return UVirtualTexture
+function UVirtualTexture:get() end
+
 
 ---@class UVirtualTexture2D : UTexture2D
 ---@field Settings FVirtualTextureBuildSettings
 ---@field bContinuousUpdate boolean
 ---@field bSinglePhysicalSpace boolean
 UVirtualTexture2D = {}
+
+---@return UVirtualTexture2D
+function UVirtualTexture2D:get() end
 
 
 
@@ -31505,6 +37466,9 @@ UVirtualTexture2D = {}
 ---@field BuildHash uint64
 UVirtualTextureBuilder = {}
 
+---@return UVirtualTextureBuilder
+function UVirtualTextureBuilder:get() end
+
 
 
 ---@class UVirtualTexturePoolConfig : UObject
@@ -31512,14 +37476,23 @@ UVirtualTextureBuilder = {}
 ---@field Pools TArray<FVirtualTextureSpacePoolConfig>
 UVirtualTexturePoolConfig = {}
 
+---@return UVirtualTexturePoolConfig
+function UVirtualTexturePoolConfig:get() end
+
 
 
 ---@class UVisualLoggerAutomationTests : UObject
 UVisualLoggerAutomationTests = {}
 
+---@return UVisualLoggerAutomationTests
+function UVisualLoggerAutomationTests:get() end
+
 
 ---@class UVisualLoggerKismetLibrary : UBlueprintFunctionLibrary
 UVisualLoggerKismetLibrary = {}
+
+---@return UVisualLoggerKismetLibrary
+function UVisualLoggerKismetLibrary:get() end
 
 ---@param SourceOwner UObject
 ---@param DestinationOwner UObject
@@ -31560,10 +37533,16 @@ function UVisualLoggerKismetLibrary:EnableRecording(bEnabled) end
 ---@class UVoiceChannel : UChannel
 UVoiceChannel = {}
 
+---@return UVoiceChannel
+function UVoiceChannel:get() end
+
 
 ---@class UVolumeTexture : UTexture
 ---@field AddressMode TextureAddress
 UVolumeTexture = {}
+
+---@return UVolumeTexture
+function UVolumeTexture:get() end
 
 
 
@@ -31589,6 +37568,9 @@ UVolumeTexture = {}
 ---@field ShadowTracingDistance float
 ---@field StopTracingTransmittanceThreshold float
 UVolumetricCloudComponent = {}
+
+---@return UVolumetricCloudComponent
+function UVolumetricCloudComponent:get() end
 
 ---@param NewValue float
 function UVolumetricCloudComponent:SetViewSampleCountScale(NewValue) end
@@ -31634,6 +37616,9 @@ function UVolumetricCloudComponent:SetbUsePerSampleAtmosphericLightTransmittance
 ---@field Radius float
 ---@field bPointWind boolean
 UWindDirectionalSourceComponent = {}
+
+---@return UWindDirectionalSourceComponent
+function UWindDirectionalSourceComponent:get() end
 
 ---@param InNewType EWindSourceType
 function UWindDirectionalSourceComponent:SetWindType(InNewType) end
@@ -31690,6 +37675,9 @@ function UWindDirectionalSourceComponent:SetMaximumGustAmount(InNewMaxGust) end
 ---@field PSCPool FWorldPSCPool
 UWorld = {}
 
+---@return UWorld
+function UWorld:get() end
+
 ---@return AWorldSettings
 function UWorld:K2_GetWorldSettings() end
 function UWorld:HandleTimelineScrubbed() end
@@ -31703,6 +37691,9 @@ function UWorld:HandleTimelineScrubbed() end
 ---@field RebaseOriginDistance float
 UWorldComposition = {}
 
+---@return UWorldComposition
+function UWorldComposition:get() end
+
 
 
 ---@class UWorldPartition : UObject
@@ -31713,10 +37704,16 @@ UWorldComposition = {}
 ---@field StreamingPolicy UWorldPartitionStreamingPolicy
 UWorldPartition = {}
 
+---@return UWorldPartition
+function UWorldPartition:get() end
+
 
 
 ---@class UWorldPartitionBlueprintLibrary : UBlueprintFunctionLibrary
 UWorldPartitionBlueprintLibrary = {}
+
+---@return UWorldPartitionBlueprintLibrary
+function UWorldPartitionBlueprintLibrary:get() end
 
 ---@param InActorsToLoad TArray<FGuid>
 function UWorldPartitionBlueprintLibrary:UnloadActors(InActorsToLoad) end
@@ -31738,17 +37735,29 @@ function UWorldPartitionBlueprintLibrary:GetActorDescs(OutActorDescs) end
 ---@class UWorldPartitionEditorHash : UObject
 UWorldPartitionEditorHash = {}
 
+---@return UWorldPartitionEditorHash
+function UWorldPartitionEditorHash:get() end
+
 
 ---@class UWorldPartitionEditorLoaderAdapter : UObject
 UWorldPartitionEditorLoaderAdapter = {}
+
+---@return UWorldPartitionEditorLoaderAdapter
+function UWorldPartitionEditorLoaderAdapter:get() end
 
 
 ---@class UWorldPartitionEditorPerProjectUserSettings : UObject
 UWorldPartitionEditorPerProjectUserSettings = {}
 
+---@return UWorldPartitionEditorPerProjectUserSettings
+function UWorldPartitionEditorPerProjectUserSettings:get() end
+
 
 ---@class UWorldPartitionEditorSpatialHash : UWorldPartitionEditorHash
 UWorldPartitionEditorSpatialHash = {}
+
+---@return UWorldPartitionEditorSpatialHash
+function UWorldPartitionEditorSpatialHash:get() end
 
 
 ---@class UWorldPartitionLevelStreamingDynamic : ULevelStreamingDynamic
@@ -31757,11 +37766,17 @@ UWorldPartitionEditorSpatialHash = {}
 ---@field OuterWorldPartition TWeakObjectPtr<UWorldPartition>
 UWorldPartitionLevelStreamingDynamic = {}
 
+---@return UWorldPartitionLevelStreamingDynamic
+function UWorldPartitionLevelStreamingDynamic:get() end
+
 
 
 ---@class UWorldPartitionLevelStreamingPolicy : UWorldPartitionStreamingPolicy
 ---@field SubObjectsToCellRemapping TMap<FName, FName>
 UWorldPartitionLevelStreamingPolicy = {}
+
+---@return UWorldPartitionLevelStreamingPolicy
+function UWorldPartitionLevelStreamingPolicy:get() end
 
 
 
@@ -31777,15 +37792,24 @@ UWorldPartitionLevelStreamingPolicy = {}
 ---@field ContentBundleID FGuid
 UWorldPartitionRuntimeCell = {}
 
+---@return UWorldPartitionRuntimeCell
+function UWorldPartitionRuntimeCell:get() end
+
 
 
 ---@class UWorldPartitionRuntimeHash : UObject
 UWorldPartitionRuntimeHash = {}
 
+---@return UWorldPartitionRuntimeHash
+function UWorldPartitionRuntimeHash:get() end
+
 
 ---@class UWorldPartitionRuntimeLevelStreamingCell : UWorldPartitionRuntimeSpatialHashCell
 ---@field LevelStreaming UWorldPartitionLevelStreamingDynamic
 UWorldPartitionRuntimeLevelStreamingCell = {}
+
+---@return UWorldPartitionRuntimeLevelStreamingCell
+function UWorldPartitionRuntimeLevelStreamingCell:get() end
 
 function UWorldPartitionRuntimeLevelStreamingCell:OnLevelShown() end
 function UWorldPartitionRuntimeLevelStreamingCell:OnLevelHidden() end
@@ -31797,6 +37821,9 @@ function UWorldPartitionRuntimeLevelStreamingCell:OnLevelHidden() end
 ---@field ExternalStreamingObjects TArray<TWeakObjectPtr<URuntimeSpatialHashExternalStreamingObject>>
 UWorldPartitionRuntimeSpatialHash = {}
 
+---@return UWorldPartitionRuntimeSpatialHash
+function UWorldPartitionRuntimeSpatialHash:get() end
+
 
 
 ---@class UWorldPartitionRuntimeSpatialHashCell : UWorldPartitionRuntimeCell
@@ -31805,10 +37832,16 @@ UWorldPartitionRuntimeSpatialHash = {}
 ---@field Level int32
 UWorldPartitionRuntimeSpatialHashCell = {}
 
+---@return UWorldPartitionRuntimeSpatialHashCell
+function UWorldPartitionRuntimeSpatialHashCell:get() end
+
 
 
 ---@class UWorldPartitionStreamingPolicy : UObject
 UWorldPartitionStreamingPolicy = {}
+
+---@return UWorldPartitionStreamingPolicy
+function UWorldPartitionStreamingPolicy:get() end
 
 
 ---@class UWorldPartitionStreamingSourceComponent : UActorComponent
@@ -31821,6 +37854,9 @@ UWorldPartitionStreamingPolicy = {}
 ---@field TargetState EStreamingSourceTargetState
 UWorldPartitionStreamingSourceComponent = {}
 
+---@return UWorldPartitionStreamingSourceComponent
+function UWorldPartitionStreamingSourceComponent:get() end
+
 ---@return boolean
 function UWorldPartitionStreamingSourceComponent:IsStreamingSourceEnabled() end
 ---@return boolean
@@ -31831,6 +37867,9 @@ function UWorldPartitionStreamingSourceComponent:DisableStreamingSource() end
 
 ---@class UWorldPartitionSubsystem : UTickableWorldSubsystem
 UWorldPartitionSubsystem = {}
+
+---@return UWorldPartitionSubsystem
+function UWorldPartitionSubsystem:get() end
 
 ---@param QueryState EWorldPartitionRuntimeCellState
 ---@param QuerySources TArray<FWorldPartitionStreamingQuerySource>
@@ -31843,5 +37882,8 @@ function UWorldPartitionSubsystem:IsAllStreamingCompleted() end
 
 ---@class UWorldSubsystem : USubsystem
 UWorldSubsystem = {}
+
+---@return UWorldSubsystem
+function UWorldSubsystem:get() end
 
 

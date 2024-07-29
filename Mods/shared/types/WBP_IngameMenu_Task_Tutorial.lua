@@ -6,6 +6,9 @@
 ---@field CreatedWidgetMap TMap<UWBP_IngameMenu_Task_Tutorial_List_C, UPalQuestData>
 UWBP_IngameMenu_Task_Tutorial_C = {}
 
+---@return UWBP_IngameMenu_Task_Tutorial_C
+function UWBP_IngameMenu_Task_Tutorial_C:get() end
+
 ---@param Num int32
 function UWBP_IngameMenu_Task_Tutorial_C:GetNowDisplayQuestWidgetNum(Num) end
 ---@param Widget UWBP_IngameMenu_Task_Tutorial_List_C

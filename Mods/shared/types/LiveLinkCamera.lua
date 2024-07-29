@@ -10,6 +10,9 @@
 ---@field bApplyFocusDistance boolean
 FLiveLinkCameraControllerUpdateFlags = {}
 
+---@return FLiveLinkCameraControllerUpdateFlags
+function FLiveLinkCameraControllerUpdateFlags:get() end
+
 
 
 ---@class ULiveLinkCameraController : ULiveLinkControllerBase
@@ -17,6 +20,9 @@ FLiveLinkCameraControllerUpdateFlags = {}
 ---@field LensFilePicker FLensFilePicker
 ---@field UpdateFlags FLiveLinkCameraControllerUpdateFlags
 ULiveLinkCameraController = {}
+
+---@return ULiveLinkCameraController
+function ULiveLinkCameraController:get() end
 
 
 

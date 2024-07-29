@@ -8,6 +8,9 @@
 ---@field Image_Reticle_1 UImage
 UWBP_OptionSettings_ListContent_ReticlePreview_C = {}
 
+---@return UWBP_OptionSettings_ListContent_ReticlePreview_C
+function UWBP_OptionSettings_ListContent_ReticlePreview_C:get() end
+
 ---@param ColorIndex int32
 function UWBP_OptionSettings_ListContent_ReticlePreview_C:SetReticleColor(ColorIndex) end
 ---@param OutlineOpacity double

@@ -13,6 +13,9 @@
 ---@field Options FString
 UWBP_TitleLocalWorldSelect_C = {}
 
+---@return UWBP_TitleLocalWorldSelect_C
+function UWBP_TitleLocalWorldSelect_C:get() end
+
 ---@param bResult boolean
 function UWBP_TitleLocalWorldSelect_C:WBP_TitleLocalWorldSelect_AutoGenFunc(bResult) end
 ---@param Param UPalHUDDispatchParameterBase

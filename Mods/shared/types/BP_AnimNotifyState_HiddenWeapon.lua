@@ -3,6 +3,9 @@
 ---@class UBP_AnimNotifyState_HiddenWeapon_C : UAnimNotifyState
 UBP_AnimNotifyState_HiddenWeapon_C = {}
 
+---@return UBP_AnimNotifyState_HiddenWeapon_C
+function UBP_AnimNotifyState_HiddenWeapon_C:get() end
+
 ---@return FString
 function UBP_AnimNotifyState_HiddenWeapon_C:GetNotifyName() end
 ---@param MeshComp USkeletalMeshComponent

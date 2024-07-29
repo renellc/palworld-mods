@@ -44,6 +44,9 @@
 ---@field ColorSelections TArray<FDataTableRowHandle>
 UWBP_Control_Settings_C = {}
 
+---@return UWBP_Control_Settings_C
+function UWBP_Control_Settings_C:get() end
+
 function UWBP_Control_Settings_C:SetDefault() end
 ---@param Target UWidget
 function UWBP_Control_Settings_C:GetDesiredFocusTarget(Target) end

@@ -5,6 +5,9 @@
 ---@field ProgressBar_Rescue UProgressBar
 UWBP_GameOver_Rescue_C = {}
 
+---@return UWBP_GameOver_Rescue_C
+function UWBP_GameOver_Rescue_C:get() end
+
 ---@param Remain double
 function UWBP_GameOver_Rescue_C:UpdateRescue(Remain) end
 ---@param EntryPoint int32

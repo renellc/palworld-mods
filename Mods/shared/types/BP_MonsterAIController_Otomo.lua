@@ -9,6 +9,9 @@
 ---@field FollowSpeed double
 ABP_MonsterAIController_Otomo_C = {}
 
+---@return ABP_MonsterAIController_Otomo_C
+function ABP_MonsterAIController_Otomo_C:get() end
+
 ---@return TSubclassOf<UPalAIControllerWorkerModule>
 function ABP_MonsterAIController_Otomo_C:GetWorkerModuleClass() end
 ---@param DamageResult FPalDamageResult

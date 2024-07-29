@@ -5,6 +5,9 @@
 ---@field Image_56 UImage
 UWBP_OptionSettings_ListContentLRBar_C = {}
 
+---@return UWBP_OptionSettings_ListContentLRBar_C
+function UWBP_OptionSettings_ListContentLRBar_C:get() end
+
 ---@param IsActive boolean
 function UWBP_OptionSettings_ListContentLRBar_C:SetActive(IsActive) end
 ---@param EntryPoint int32

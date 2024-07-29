@@ -6,6 +6,9 @@
 ---@field Const_NotifyInterval double
 UBP_AIActionRideCall_C = {}
 
+---@return UBP_AIActionRideCall_C
+function UBP_AIActionRideCall_C:get() end
+
 ---@param HitWall boolean
 function UBP_AIActionRideCall_C:CheckWallRaycast(HitWall) end
 ---@param CanRide boolean

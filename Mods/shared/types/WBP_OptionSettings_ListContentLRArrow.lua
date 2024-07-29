@@ -9,6 +9,9 @@
 ---@field OnClicked FWBP_OptionSettings_ListContentLRArrow_COnClicked
 UWBP_OptionSettings_ListContentLRArrow_C = {}
 
+---@return UWBP_OptionSettings_ListContentLRArrow_C
+function UWBP_OptionSettings_ListContentLRArrow_C:get() end
+
 function UWBP_OptionSettings_ListContentLRArrow_C:ClickInternal() end
 function UWBP_OptionSettings_ListContentLRArrow_C:Click() end
 ---@param Button UCommonButtonBase

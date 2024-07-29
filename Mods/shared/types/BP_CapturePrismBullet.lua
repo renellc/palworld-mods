@@ -8,6 +8,9 @@
 ---@field ThrowRotator FRotator
 ABP_CapturePrismBullet_C = {}
 
+---@return ABP_CapturePrismBullet_C
+function ABP_CapturePrismBullet_C:get() end
+
 ---@param DeltaTime double
 function ABP_CapturePrismBullet_C:UpdateRotation(DeltaTime) end
 ---@param Guid FGuid

@@ -11,6 +11,9 @@
 ---@field SkyCreatorCache TSoftObjectPtr<APPSkyCreator>
 ABP_Lamp_C = {}
 
+---@return ABP_Lamp_C
+function ABP_Lamp_C:get() end
+
 function ABP_Lamp_C:CheckLightEnable() end
 ---@param IsEnable boolean
 function ABP_Lamp_C:SetLightEnable(IsEnable) end

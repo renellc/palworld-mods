@@ -5,5 +5,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PlantingSack_C = {}
 
+---@return ABP_PlantingSack_C
+function ABP_PlantingSack_C:get() end
+
 
 

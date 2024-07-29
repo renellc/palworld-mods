@@ -5,6 +5,9 @@
 ---@field Explosive UNiagaraComponent
 ABP_Explosion_Missile_C = {}
 
+---@return ABP_Explosion_Missile_C
+function ABP_Explosion_Missile_C:get() end
+
 ---@param Value int32
 function ABP_Explosion_Missile_C:GetEffectValue(Value) end
 ---@param Effect EPalAdditionalEffectType

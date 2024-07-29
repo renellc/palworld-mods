@@ -3,6 +3,9 @@
 ---@class UBP_PalIncidentInvaderVisitorNPC_C : UBP_PalIncidentInvaderBase_C
 UBP_PalIncidentInvaderVisitorNPC_C = {}
 
+---@return UBP_PalIncidentInvaderVisitorNPC_C
+function UBP_PalIncidentInvaderVisitorNPC_C:get() end
+
 ---@param Result boolean
 function UBP_PalIncidentInvaderVisitorNPC_C:IsSquad(Result) end
 ---@param ChosenRowData FPalVisitorNPCDatabaseRow

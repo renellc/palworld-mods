@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionPalLiftup_C = {}
 
+---@return UBP_ActionPalLiftup_C
+function UBP_ActionPalLiftup_C:get() end
+
 function UBP_ActionPalLiftup_C:StopAnimation() end
 function UBP_ActionPalLiftup_C:OnEndAction() end
 function UBP_ActionPalLiftup_C:OnBreakAction() end

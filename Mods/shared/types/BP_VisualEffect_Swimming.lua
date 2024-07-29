@@ -25,6 +25,9 @@
 ---@field MovimgVelocityThreshold double
 UBP_VisualEffect_Swimming_C = {}
 
+---@return UBP_VisualEffect_Swimming_C
+function UBP_VisualEffect_Swimming_C:get() end
+
 ---@param DeltaTime double
 UBP_VisualEffect_Swimming_C['Update NS InWater'] = function(DeltaTime) end
 function UBP_VisualEffect_Swimming_C:Create_NS_InWater() end

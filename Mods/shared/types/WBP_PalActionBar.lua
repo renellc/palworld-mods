@@ -9,6 +9,9 @@
 ---@field lastEntryNum int32
 UWBP_PalActionBar_C = {}
 
+---@return UWBP_PalActionBar_C
+function UWBP_PalActionBar_C:get() end
+
 function UWBP_PalActionBar_C:OnAddedAction() end
 function UWBP_PalActionBar_C:OnRemovedAllAction() end
 function UWBP_PalActionBar_C:AnmEvent_Open() end

@@ -13,6 +13,9 @@
 ---@field Cursor_RT_1 UImage
 UWBP_MainMenu_Cursor_C = {}
 
+---@return UWBP_MainMenu_Cursor_C
+function UWBP_MainMenu_Cursor_C:get() end
+
 function UWBP_MainMenu_Cursor_C:Construct() end
 ---@param EntryPoint int32
 function UWBP_MainMenu_Cursor_C:ExecuteUbergraph_WBP_MainMenu_Cursor(EntryPoint) end

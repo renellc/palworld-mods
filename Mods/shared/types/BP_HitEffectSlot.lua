@@ -11,6 +11,9 @@
 ---@field RockBPName FString
 UBP_HitEffectSlot_C = {}
 
+---@return UBP_HitEffectSlot_C
+function UBP_HitEffectSlot_C:get() end
+
 ---@param PalDamageInfo FPalDamageInfo
 function UBP_HitEffectSlot_C:PlayHitSound(PalDamageInfo) end
 ---@param IsEnable boolean

@@ -11,6 +11,9 @@
 ---@field Source FNiagaraCompileEventSource
 FNiagaraCompileEvent = {}
 
+---@return FNiagaraCompileEvent
+function FNiagaraCompileEvent:get() end
+
 
 
 ---@class FNiagaraDataInterfaceGPUParamInfo
@@ -20,16 +23,25 @@ FNiagaraCompileEvent = {}
 ---@field GeneratedFunctions TArray<FNiagaraDataInterfaceGeneratedFunction>
 FNiagaraDataInterfaceGPUParamInfo = {}
 
+---@return FNiagaraDataInterfaceGPUParamInfo
+function FNiagaraDataInterfaceGPUParamInfo:get() end
+
 
 
 ---@class FNiagaraDataInterfaceGeneratedFunction
 FNiagaraDataInterfaceGeneratedFunction = {}
+
+---@return FNiagaraDataInterfaceGeneratedFunction
+function FNiagaraDataInterfaceGeneratedFunction:get() end
 
 
 ---@class FNiagaraShaderScriptExternalConstant
 ---@field Type FName
 ---@field Name FString
 FNiagaraShaderScriptExternalConstant = {}
+
+---@return FNiagaraShaderScriptExternalConstant
+function FNiagaraShaderScriptExternalConstant:get() end
 
 
 
@@ -39,6 +51,9 @@ FNiagaraShaderScriptExternalConstant = {}
 ---@field bExternalConstantsInterpolated boolean
 ---@field ExternalConstants TArray<FNiagaraShaderScriptExternalConstant>
 FNiagaraShaderScriptParametersMetadata = {}
+
+---@return FNiagaraShaderScriptParametersMetadata
+function FNiagaraShaderScriptParametersMetadata:get() end
 
 
 
@@ -64,9 +79,15 @@ FNiagaraShaderScriptParametersMetadata = {}
 ---@field GpuDispatchNumThreads FIntVector
 FSimulationStageMetaData = {}
 
+---@return FSimulationStageMetaData
+function FSimulationStageMetaData:get() end
+
 
 
 ---@class UNiagaraScriptBase : UObject
 UNiagaraScriptBase = {}
+
+---@return UNiagaraScriptBase
+function UNiagaraScriptBase:get() end
 
 

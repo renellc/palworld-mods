@@ -5,5 +5,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_DeforestAxe_C = {}
 
+---@return ABP_DeforestAxe_C
+function ABP_DeforestAxe_C:get() end
+
 
 

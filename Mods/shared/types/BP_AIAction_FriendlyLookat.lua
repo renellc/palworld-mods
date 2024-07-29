@@ -9,6 +9,9 @@
 ---@field SingleEffectAble boolean
 UBP_AIAction_FriendlyLookat_C = {}
 
+---@return UBP_AIAction_FriendlyLookat_C
+function UBP_AIAction_FriendlyLookat_C:get() end
+
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBP_AIAction_FriendlyLookat_C:ActionTick(ControlledPawn, DeltaSeconds) end

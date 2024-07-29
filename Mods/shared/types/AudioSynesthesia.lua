@@ -7,6 +7,9 @@
 ---@field TimeSeconds float
 FLoudnessResults = {}
 
+---@return FLoudnessResults
+function FLoudnessResults:get() end
+
 
 
 ---@class FMeterResults
@@ -17,6 +20,9 @@ FLoudnessResults = {}
 ---@field ClippingValue float
 FMeterResults = {}
 
+---@return FMeterResults
+function FMeterResults:get() end
+
 
 
 ---@class FSynesthesiaSpectrumResults
@@ -24,23 +30,38 @@ FMeterResults = {}
 ---@field SpectrumValues TArray<float>
 FSynesthesiaSpectrumResults = {}
 
+---@return FSynesthesiaSpectrumResults
+function FSynesthesiaSpectrumResults:get() end
+
 
 
 ---@class UAudioSynesthesiaNRT : UAudioAnalyzerNRT
 UAudioSynesthesiaNRT = {}
 
+---@return UAudioSynesthesiaNRT
+function UAudioSynesthesiaNRT:get() end
+
 
 ---@class UAudioSynesthesiaNRTSettings : UAudioAnalyzerNRTSettings
 UAudioSynesthesiaNRTSettings = {}
+
+---@return UAudioSynesthesiaNRTSettings
+function UAudioSynesthesiaNRTSettings:get() end
 
 
 ---@class UAudioSynesthesiaSettings : UAudioAnalyzerSettings
 UAudioSynesthesiaSettings = {}
 
+---@return UAudioSynesthesiaSettings
+function UAudioSynesthesiaSettings:get() end
+
 
 ---@class UConstantQNRT : UAudioSynesthesiaNRT
 ---@field Settings UConstantQNRTSettings
 UConstantQNRT = {}
+
+---@return UConstantQNRT
+function UConstantQNRT:get() end
 
 ---@param InSeconds float
 ---@param InChannel int32
@@ -66,6 +87,9 @@ function UConstantQNRT:GetChannelConstantQAtTime(InSeconds, InChannel, OutConsta
 ---@field NoiseFloorDb float
 UConstantQNRTSettings = {}
 
+---@return UConstantQNRTSettings
+function UConstantQNRTSettings:get() end
+
 
 
 ---@class ULoudnessAnalyzer : UAudioAnalyzer
@@ -76,11 +100,17 @@ UConstantQNRTSettings = {}
 ---@field OnLatestPerChannelLoudnessResults FLoudnessAnalyzerOnLatestPerChannelLoudnessResults
 ULoudnessAnalyzer = {}
 
+---@return ULoudnessAnalyzer
+function ULoudnessAnalyzer:get() end
+
 
 
 ---@class ULoudnessNRT : UAudioSynesthesiaNRT
 ---@field Settings ULoudnessNRTSettings
 ULoudnessNRT = {}
+
+---@return ULoudnessNRT
+function ULoudnessNRT:get() end
 
 ---@param InSeconds float
 ---@param OutLoudness float
@@ -106,6 +136,9 @@ function ULoudnessNRT:GetChannelLoudnessAtTime(InSeconds, InChannel, OutLoudness
 ---@field NoiseFloorDb float
 ULoudnessNRTSettings = {}
 
+---@return ULoudnessNRTSettings
+function ULoudnessNRTSettings:get() end
+
 
 
 ---@class ULoudnessSettings : UAudioSynesthesiaSettings
@@ -117,6 +150,9 @@ ULoudnessNRTSettings = {}
 ---@field ExpectedMaxLoudness float
 ULoudnessSettings = {}
 
+---@return ULoudnessSettings
+function ULoudnessSettings:get() end
+
 
 
 ---@class UMeterAnalyzer : UAudioAnalyzer
@@ -126,6 +162,9 @@ ULoudnessSettings = {}
 ---@field OnLatestOverallMeterResults FMeterAnalyzerOnLatestOverallMeterResults
 ---@field OnLatestPerChannelMeterResults FMeterAnalyzerOnLatestPerChannelMeterResults
 UMeterAnalyzer = {}
+
+---@return UMeterAnalyzer
+function UMeterAnalyzer:get() end
 
 
 
@@ -138,11 +177,17 @@ UMeterAnalyzer = {}
 ---@field ClippingThreshold float
 UMeterSettings = {}
 
+---@return UMeterSettings
+function UMeterSettings:get() end
+
 
 
 ---@class UOnsetNRT : UAudioSynesthesiaNRT
 ---@field Settings UOnsetNRTSettings
 UOnsetNRT = {}
+
+---@return UOnsetNRT
+function UOnsetNRT:get() end
 
 ---@param InStartSeconds float
 ---@param InEndSeconds float
@@ -166,6 +211,9 @@ function UOnsetNRT:GetChannelOnsetsBetweenTimes(InStartSeconds, InEndSeconds, In
 ---@field MaximumFrequency float
 UOnsetNRTSettings = {}
 
+---@return UOnsetNRTSettings
+function UOnsetNRTSettings:get() end
+
 
 
 ---@class USynesthesiaSpectrumAnalysisSettings : UAudioSynesthesiaSettings
@@ -176,6 +224,9 @@ UOnsetNRTSettings = {}
 ---@field bDownmixToMono boolean
 USynesthesiaSpectrumAnalysisSettings = {}
 
+---@return USynesthesiaSpectrumAnalysisSettings
+function USynesthesiaSpectrumAnalysisSettings:get() end
+
 
 
 ---@class USynesthesiaSpectrumAnalyzer : UAudioAnalyzer
@@ -183,6 +234,9 @@ USynesthesiaSpectrumAnalysisSettings = {}
 ---@field OnSpectrumResults FSynesthesiaSpectrumAnalyzerOnSpectrumResults
 ---@field OnLatestSpectrumResults FSynesthesiaSpectrumAnalyzerOnLatestSpectrumResults
 USynesthesiaSpectrumAnalyzer = {}
+
+---@return USynesthesiaSpectrumAnalyzer
+function USynesthesiaSpectrumAnalyzer:get() end
 
 ---@return int32
 function USynesthesiaSpectrumAnalyzer:GetNumCenterFrequencies() end

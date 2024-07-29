@@ -3,6 +3,9 @@
 ---@class UGooglePADFunctionLibrary : UBlueprintFunctionLibrary
 UGooglePADFunctionLibrary = {}
 
+---@return UGooglePADFunctionLibrary
+function UGooglePADFunctionLibrary:get() end
+
 ---@return EGooglePADErrorCode
 function UGooglePADFunctionLibrary:ShowCellularDataConfirmation() end
 ---@param Name FString

@@ -5,6 +5,9 @@
 ---@field HammerActor AActor
 UBP_ActionCooking_C = {}
 
+---@return UBP_ActionCooking_C
+function UBP_ActionCooking_C:get() end
+
 function UBP_ActionCooking_C:OnBeginAction() end
 function UBP_ActionCooking_C:OnEndAction() end
 ---@param EntryPoint int32

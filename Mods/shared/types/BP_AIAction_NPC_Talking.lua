@@ -10,6 +10,9 @@
 ---@field TalkingPlayers TArray<AActor>
 UBP_AIAction_NPC_Talking_C = {}
 
+---@return UBP_AIAction_NPC_Talking_C
+function UBP_AIAction_NPC_Talking_C:get() end
+
 ---@param IsTalking boolean
 function UBP_AIAction_NPC_Talking_C:GetIsTalking(IsTalking) end
 function UBP_AIAction_NPC_Talking_C:UpdateTalkTarget() end

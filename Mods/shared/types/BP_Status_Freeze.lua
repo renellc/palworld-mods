@@ -6,6 +6,9 @@
 ---@field StartLocation FVector
 UBP_Status_Freeze_C = {}
 
+---@return UBP_Status_Freeze_C
+function UBP_Status_Freeze_C:get() end
+
 ---@param IsFreeze boolean
 function UBP_Status_Freeze_C:SetFlag(IsFreeze) end
 function UBP_Status_Freeze_C:OnBeginStatus() end

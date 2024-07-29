@@ -5,6 +5,9 @@
 ---@field ConnectionManager UNetReplicationGraphConnection
 AReplicationGraphDebugActor = {}
 
+---@return AReplicationGraphDebugActor
+function AReplicationGraphDebugActor:get() end
+
 function AReplicationGraphDebugActor:ServerStopDebugging() end
 function AReplicationGraphDebugActor:ServerStartDebugging() end
 ---@param Class UClass
@@ -31,6 +34,9 @@ function AReplicationGraphDebugActor:ClientCellInfo(CellLocation, CellExtent, Ac
 ---@field LastViewTarget AActor
 FAlwaysRelevantActorInfo = {}
 
+---@return FAlwaysRelevantActorInfo
+function FAlwaysRelevantActorInfo:get() end
+
 
 
 ---@class FClassReplicationInfo
@@ -44,12 +50,18 @@ FAlwaysRelevantActorInfo = {}
 ---@field CullDistanceSquared float
 FClassReplicationInfo = {}
 
+---@return FClassReplicationInfo
+function FClassReplicationInfo:get() end
+
 
 
 ---@class FConnectionAlwaysRelevantNodePair
 ---@field NetConnection UNetConnection
 ---@field Node UReplicationGraphNode_AlwaysRelevant_ForConnection
 FConnectionAlwaysRelevantNodePair = {}
+
+---@return FConnectionAlwaysRelevantNodePair
+function FConnectionAlwaysRelevantNodePair:get() end
 
 
 
@@ -59,11 +71,17 @@ FConnectionAlwaysRelevantNodePair = {}
 ---@field LastOutOfRangeLocationCheck FVector
 FLastLocationGatherInfo = {}
 
+---@return FLastLocationGatherInfo
+function FLastLocationGatherInfo:get() end
+
 
 
 ---@class FTearOffActorInfo
 ---@field Actor AActor
 FTearOffActorInfo = {}
+
+---@return FTearOffActorInfo
+function FTearOffActorInfo:get() end
 
 
 
@@ -74,6 +92,9 @@ FTearOffActorInfo = {}
 ---@field ActorsWithoutNetConnection TArray<AActor>
 UBasicReplicationGraph = {}
 
+---@return UBasicReplicationGraph
+function UBasicReplicationGraph:get() end
+
 
 
 ---@class UNetReplicationGraphConnection : UReplicationConnectionDriver
@@ -83,6 +104,9 @@ UBasicReplicationGraph = {}
 ---@field ConnectionGraphNodes TArray<UReplicationGraphNode>
 ---@field TearOffNode UReplicationGraphNode_TearOff_ForConnection
 UNetReplicationGraphConnection = {}
+
+---@return UNetReplicationGraphConnection
+function UNetReplicationGraphConnection:get() end
 
 
 
@@ -95,25 +119,40 @@ UNetReplicationGraphConnection = {}
 ---@field PrepareForReplicationNodes TArray<UReplicationGraphNode>
 UReplicationGraph = {}
 
+---@return UReplicationGraph
+function UReplicationGraph:get() end
+
 
 
 ---@class UReplicationGraphNode : UObject
 ---@field AllChildNodes TArray<UReplicationGraphNode>
 UReplicationGraphNode = {}
 
+---@return UReplicationGraphNode
+function UReplicationGraphNode:get() end
+
 
 
 ---@class UReplicationGraphNode_ActorList : UReplicationGraphNode
 UReplicationGraphNode_ActorList = {}
 
+---@return UReplicationGraphNode_ActorList
+function UReplicationGraphNode_ActorList:get() end
+
 
 ---@class UReplicationGraphNode_ActorListFrequencyBuckets : UReplicationGraphNode
 UReplicationGraphNode_ActorListFrequencyBuckets = {}
+
+---@return UReplicationGraphNode_ActorListFrequencyBuckets
+function UReplicationGraphNode_ActorListFrequencyBuckets:get() end
 
 
 ---@class UReplicationGraphNode_AlwaysRelevant : UReplicationGraphNode
 ---@field ChildNode UReplicationGraphNode
 UReplicationGraphNode_AlwaysRelevant = {}
+
+---@return UReplicationGraphNode_AlwaysRelevant
+function UReplicationGraphNode_AlwaysRelevant:get() end
 
 
 
@@ -121,18 +160,30 @@ UReplicationGraphNode_AlwaysRelevant = {}
 ---@field PastRelevantActors TArray<FAlwaysRelevantActorInfo>
 UReplicationGraphNode_AlwaysRelevant_ForConnection = {}
 
+---@return UReplicationGraphNode_AlwaysRelevant_ForConnection
+function UReplicationGraphNode_AlwaysRelevant_ForConnection:get() end
+
 
 
 ---@class UReplicationGraphNode_ConnectionDormancyNode : UReplicationGraphNode_ActorList
 UReplicationGraphNode_ConnectionDormancyNode = {}
 
+---@return UReplicationGraphNode_ConnectionDormancyNode
+function UReplicationGraphNode_ConnectionDormancyNode:get() end
+
 
 ---@class UReplicationGraphNode_DormancyNode : UReplicationGraphNode_ActorList
 UReplicationGraphNode_DormancyNode = {}
 
+---@return UReplicationGraphNode_DormancyNode
+function UReplicationGraphNode_DormancyNode:get() end
+
 
 ---@class UReplicationGraphNode_DynamicSpatialFrequency : UReplicationGraphNode_ActorList
 UReplicationGraphNode_DynamicSpatialFrequency = {}
+
+---@return UReplicationGraphNode_DynamicSpatialFrequency
+function UReplicationGraphNode_DynamicSpatialFrequency:get() end
 
 
 ---@class UReplicationGraphNode_GridCell : UReplicationGraphNode_ActorList
@@ -140,15 +191,24 @@ UReplicationGraphNode_DynamicSpatialFrequency = {}
 ---@field DormancyNode UReplicationGraphNode_DormancyNode
 UReplicationGraphNode_GridCell = {}
 
+---@return UReplicationGraphNode_GridCell
+function UReplicationGraphNode_GridCell:get() end
+
 
 
 ---@class UReplicationGraphNode_GridSpatialization2D : UReplicationGraphNode
 UReplicationGraphNode_GridSpatialization2D = {}
 
+---@return UReplicationGraphNode_GridSpatialization2D
+function UReplicationGraphNode_GridSpatialization2D:get() end
+
 
 ---@class UReplicationGraphNode_TearOff_ForConnection : UReplicationGraphNode
 ---@field TearOffActors TArray<FTearOffActorInfo>
 UReplicationGraphNode_TearOff_ForConnection = {}
+
+---@return UReplicationGraphNode_TearOff_ForConnection
+function UReplicationGraphNode_TearOff_ForConnection:get() end
 
 
 

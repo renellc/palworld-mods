@@ -6,6 +6,9 @@
 ---@field Timer double
 UBP_ActionHappy_C = {}
 
+---@return UBP_ActionHappy_C
+function UBP_ActionHappy_C:get() end
+
 ---@param Smile boolean
 function UBP_ActionHappy_C:ChangeFace(Smile) end
 ---@param Loaded UObject

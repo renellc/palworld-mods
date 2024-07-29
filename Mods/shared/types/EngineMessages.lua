@@ -5,12 +5,18 @@
 ---@field UserToDeny FString
 FEngineServiceAuthDeny = {}
 
+---@return FEngineServiceAuthDeny
+function FEngineServiceAuthDeny:get() end
+
 
 
 ---@class FEngineServiceAuthGrant
 ---@field UserName FString
 ---@field UserToGrant FString
 FEngineServiceAuthGrant = {}
+
+---@return FEngineServiceAuthGrant
+function FEngineServiceAuthGrant:get() end
 
 
 
@@ -19,6 +25,9 @@ FEngineServiceAuthGrant = {}
 ---@field UserName FString
 FEngineServiceExecuteCommand = {}
 
+---@return FEngineServiceExecuteCommand
+function FEngineServiceExecuteCommand:get() end
+
 
 
 ---@class FEngineServiceNotification
@@ -26,10 +35,16 @@ FEngineServiceExecuteCommand = {}
 ---@field TimeSeconds double
 FEngineServiceNotification = {}
 
+---@return FEngineServiceNotification
+function FEngineServiceNotification:get() end
+
 
 
 ---@class FEngineServicePing
 FEngineServicePing = {}
+
+---@return FEngineServicePing
+function FEngineServicePing:get() end
 
 
 ---@class FEngineServicePong
@@ -42,11 +57,17 @@ FEngineServicePing = {}
 ---@field WorldTimeSeconds float
 FEngineServicePong = {}
 
+---@return FEngineServicePong
+function FEngineServicePong:get() end
+
 
 
 ---@class FEngineServiceTerminate
 ---@field UserName FString
 FEngineServiceTerminate = {}
+
+---@return FEngineServiceTerminate
+function FEngineServiceTerminate:get() end
 
 
 

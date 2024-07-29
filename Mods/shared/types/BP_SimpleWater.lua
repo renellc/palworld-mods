@@ -16,6 +16,9 @@
 ---@field bWorldOceanPlane boolean
 ABP_SimpleWater_C = {}
 
+---@return ABP_SimpleWater_C
+function ABP_SimpleWater_C:get() end
+
 function ABP_SimpleWater_C:GenerateOpenSeePlane() end
 function ABP_SimpleWater_C:GenerateWaterPlane() end
 ---@param StartIndex int32

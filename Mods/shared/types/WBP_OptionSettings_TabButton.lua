@@ -10,6 +10,9 @@
 ---@field SwitchTabTo FWBP_OptionSettings_TabButton_CSwitchTabTo
 UWBP_OptionSettings_TabButton_C = {}
 
+---@return UWBP_OptionSettings_TabButton_C
+function UWBP_OptionSettings_TabButton_C:get() end
+
 ---@param Name FText
 ---@param Index int32
 function UWBP_OptionSettings_TabButton_C:SetName(Name, Index) end

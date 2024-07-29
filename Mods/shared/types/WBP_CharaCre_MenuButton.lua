@@ -16,6 +16,9 @@
 ---@field MsgIDMap TMap<E_UICharacterMakeCategory, FDataTableRowHandle>
 UWBP_CharaCre_MenuButton_C = {}
 
+---@return UWBP_CharaCre_MenuButton_C
+function UWBP_CharaCre_MenuButton_C:get() end
+
 ---@param CategoryType E_UICharacterMakeCategory::Type
 function UWBP_CharaCre_MenuButton_C:GetBindedCategory(CategoryType) end
 function UWBP_CharaCre_MenuButton_C:AnmEvent_Select() end

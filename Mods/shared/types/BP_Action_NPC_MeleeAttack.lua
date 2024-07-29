@@ -5,6 +5,9 @@
 ---@field AttackAnime UAnimMontage
 UBP_Action_NPC_MeleeAttack_C = {}
 
+---@return UBP_Action_NPC_MeleeAttack_C
+function UBP_Action_NPC_MeleeAttack_C:get() end
+
 ---@param NotifyName FName
 function UBP_Action_NPC_MeleeAttack_C:OnNotifyEnd_B1694066412380A7CADF2F9E8FC00237(NotifyName) end
 ---@param NotifyName FName

@@ -9,6 +9,9 @@
 ---@field IsUI boolean
 UBP_HUDDispatchParameter_KeyConfig_C = {}
 
+---@return UBP_HUDDispatchParameter_KeyConfig_C
+function UBP_HUDDispatchParameter_KeyConfig_C:get() end
+
 ---@param ActionName FName
 ---@param NewKey FKey
 ---@param InputType EPalKeyConfigCategory

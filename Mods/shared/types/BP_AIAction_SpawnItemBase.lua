@@ -10,6 +10,9 @@
 ---@field SpawnItemRotator FRotator
 UBP_AIAction_SpawnItemBase_C = {}
 
+---@return UBP_AIAction_SpawnItemBase_C
+function UBP_AIAction_SpawnItemBase_C:get() end
+
 ---@param Notify FName
 function UBP_AIAction_SpawnItemBase_C:OnActionNotify_Proc(Notify) end
 ---@param IsRunning boolean

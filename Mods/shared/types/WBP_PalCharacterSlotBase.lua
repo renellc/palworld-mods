@@ -24,6 +24,9 @@
 ---@field WaitingSync boolean
 UWBP_PalCharacterSlotBase_C = {}
 
+---@return UWBP_PalCharacterSlotBase_C
+function UWBP_PalCharacterSlotBase_C:get() end
+
 function UWBP_PalCharacterSlotBase_C:OnUpdateFavorite_Internal() end
 ---@param Parameter UPalCharacterParameterComponent
 function UWBP_PalCharacterSlotBase_C:OnUpdateWorkId_Internal(Parameter) end

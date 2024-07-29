@@ -9,6 +9,9 @@
 ---@field WBP_PalCommonWindow UWBP_PalCommonWindow_C
 UWBP_Title_DeleteWorldWindow_C = {}
 
+---@return UWBP_Title_DeleteWorldWindow_C
+function UWBP_Title_DeleteWorldWindow_C:get() end
+
 ---@param bResult boolean
 function UWBP_Title_DeleteWorldWindow_C:OnClosedDeleteCheckDialog(bResult) end
 function UWBP_Title_DeleteWorldWindow_C:OpenCheckDialog() end

@@ -86,6 +86,9 @@
 ---@field AdditionalInfoArray TArray<UWBP_InventoryEquipment_ItemInfo_addeffect_C>
 UWBP_InventoryEquipment_ItemInfo_C = {}
 
+---@return UWBP_InventoryEquipment_ItemInfo_C
+function UWBP_InventoryEquipment_ItemInfo_C:get() end
+
 ---@param PassiveSkillNameArray TArray<FName>
 ---@param OutTextArray TArray<FText>
 function UWBP_InventoryEquipment_ItemInfo_C:ConvertPassiveSkillNameToText(PassiveSkillNameArray, OutTextArray) end

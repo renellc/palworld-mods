@@ -7,6 +7,9 @@
 ---@field WBP_PalKeyGuideIcon UWBP_PalKeyGuideIcon_C
 UWBP_OptionSettings_ListContentButton_C = {}
 
+---@return UWBP_OptionSettings_ListContentButton_C
+function UWBP_OptionSettings_ListContentButton_C:get() end
+
 ---@param Brush FSlateBrush
 function UWBP_OptionSettings_ListContentButton_C:GetCurrentIcon(Brush) end
 ---@param KeyIcon FSlateBrush

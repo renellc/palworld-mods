@@ -36,6 +36,9 @@
 ---@field OnTriedEquipSlot FWBP_PalItemSlotButtonBase_COnTriedEquipSlot
 UWBP_PalItemSlotButtonBase_C = {}
 
+---@return UWBP_PalItemSlotButtonBase_C
+function UWBP_PalItemSlotButtonBase_C:get() end
+
 ---@param DisplayNum int32
 function UWBP_PalItemSlotButtonBase_C:GetDisplayDragItemNum(DisplayNum) end
 function UWBP_PalItemSlotButtonBase_C:TryEquipSlot() end

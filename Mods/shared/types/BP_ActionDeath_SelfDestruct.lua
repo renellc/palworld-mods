@@ -5,6 +5,9 @@
 ---@field ExClass TSubclassOf<ABP_SkillEffect_SelfDestruct_C>
 UBP_ActionDeath_SelfDestruct_C = {}
 
+---@return UBP_ActionDeath_SelfDestruct_C
+function UBP_ActionDeath_SelfDestruct_C:get() end
+
 function UBP_ActionDeath_SelfDestruct_C:GetExClass() end
 function UBP_ActionDeath_SelfDestruct_C:OnBeginAction() end
 ---@param EntryPoint int32

@@ -5,12 +5,18 @@
 ---@field KeyBrush FSlateBrush
 FCommonInputKeyBrushConfiguration = {}
 
+---@return FCommonInputKeyBrushConfiguration
+function FCommonInputKeyBrushConfiguration:get() end
+
 
 
 ---@class FCommonInputKeySetBrushConfiguration
 ---@field Keys TArray<FKey>
 ---@field KeyBrush FSlateBrush
 FCommonInputKeySetBrushConfiguration = {}
+
+---@return FCommonInputKeySetBrushConfiguration
+function FCommonInputKeySetBrushConfiguration:get() end
 
 
 
@@ -25,12 +31,18 @@ FCommonInputKeySetBrushConfiguration = {}
 ---@field ControllerDataClasses TArray<TSubclassOf<UCommonInputBaseControllerData>>
 FCommonInputPlatformBaseData = {}
 
+---@return FCommonInputPlatformBaseData
+function FCommonInputPlatformBaseData:get() end
+
 
 
 ---@class FInputDeviceIdentifierPair
 ---@field InputDeviceName FName
 ---@field HardwareDeviceIdentifier FString
 FInputDeviceIdentifierPair = {}
+
+---@return FInputDeviceIdentifierPair
+function FInputDeviceIdentifierPair:get() end
 
 
 
@@ -42,6 +54,9 @@ FInputDeviceIdentifierPair = {}
 ---@field MouseCaptureMode EMouseCaptureMode
 UCommonInputActionDomain = {}
 
+---@return UCommonInputActionDomain
+function UCommonInputActionDomain:get() end
+
 
 
 ---@class UCommonInputActionDomainTable : UDataAsset
@@ -49,6 +64,9 @@ UCommonInputActionDomain = {}
 ---@field InputMode ECommonInputMode
 ---@field MouseCaptureMode EMouseCaptureMode
 UCommonInputActionDomainTable = {}
+
+---@return UCommonInputActionDomainTable
+function UCommonInputActionDomainTable:get() end
 
 
 
@@ -65,6 +83,9 @@ UCommonInputActionDomainTable = {}
 ---@field InputBrushKeySets TArray<FCommonInputKeySetBrushConfiguration>
 UCommonInputBaseControllerData = {}
 
+---@return UCommonInputBaseControllerData
+function UCommonInputBaseControllerData:get() end
+
 ---@return TArray<FName>
 function UCommonInputBaseControllerData:GetRegisteredGamepads() end
 
@@ -79,6 +100,9 @@ function UCommonInputBaseControllerData:GetRegisteredGamepads() end
 ---@field ControllerData TArray<TSoftClassPtr<UCommonInputBaseControllerData>>
 ---@field ControllerDataClasses TArray<TSubclassOf<UCommonInputBaseControllerData>>
 UCommonInputPlatformSettings = {}
+
+---@return UCommonInputPlatformSettings
+function UCommonInputPlatformSettings:get() end
 
 
 
@@ -97,6 +121,9 @@ UCommonInputPlatformSettings = {}
 ---@field ActionDomainTablePtr UCommonInputActionDomainTable
 UCommonInputSettings = {}
 
+---@return UCommonInputSettings
+function UCommonInputSettings:get() end
+
 
 
 ---@class UCommonInputSubsystem : ULocalPlayerSubsystem
@@ -111,6 +138,9 @@ UCommonInputSettings = {}
 ---@field ActionDomainTable UCommonInputActionDomainTable
 ---@field bIsGamepadSimulatedClick boolean
 UCommonInputSubsystem = {}
+
+---@return UCommonInputSubsystem
+function UCommonInputSubsystem:get() end
 
 ---@return boolean
 function UCommonInputSubsystem:ShouldShowInputKeys() end
@@ -135,6 +165,9 @@ function UCommonInputSubsystem:GetCurrentGamepadName() end
 ---@field DefaultClickAction FDataTableRowHandle
 ---@field DefaultBackAction FDataTableRowHandle
 UCommonUIInputData = {}
+
+---@return UCommonUIInputData
+function UCommonUIInputData:get() end
 
 
 

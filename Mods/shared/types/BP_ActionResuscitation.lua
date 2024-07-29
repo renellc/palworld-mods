@@ -8,6 +8,9 @@
 ---@field RescueWidget UWBP_GameOver_Rescue_C
 UBP_ActionResuscitation_C = {}
 
+---@return UBP_ActionResuscitation_C
+function UBP_ActionResuscitation_C:get() end
+
 ---@param isDisable boolean
 function UBP_ActionResuscitation_C:FlagControll(isDisable) end
 ---@param DeltaTime float

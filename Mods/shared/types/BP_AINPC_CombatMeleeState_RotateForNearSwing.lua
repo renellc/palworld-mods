@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AINPC_CombatMeleeState_RotateForNearSwing_C = {}
 
+---@return UBP_AINPC_CombatMeleeState_RotateForNearSwing_C
+function UBP_AINPC_CombatMeleeState_RotateForNearSwing_C:get() end
+
 ---@param DeltaTime float
 function UBP_AINPC_CombatMeleeState_RotateForNearSwing_C:StateTick(DeltaTime) end
 ---@param EntryPoint int32

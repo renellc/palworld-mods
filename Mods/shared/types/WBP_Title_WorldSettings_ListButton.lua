@@ -14,6 +14,9 @@
 ---@field OnClicked FWBP_Title_WorldSettings_ListButton_COnClicked
 UWBP_Title_WorldSettings_ListButton_C = {}
 
+---@return UWBP_Title_WorldSettings_ListButton_C
+function UWBP_Title_WorldSettings_ListButton_C:get() end
+
 ---@param ButtonText FText
 function UWBP_Title_WorldSettings_ListButton_C:GetButtonText(ButtonText) end
 function UWBP_Title_WorldSettings_ListButton_C:Click() end

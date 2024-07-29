@@ -5,6 +5,9 @@
 ---@field TempVelocity FVector
 UBP_Action_Rolling_C = {}
 
+---@return UBP_Action_Rolling_C
+function UBP_Action_Rolling_C:get() end
+
 function UBP_Action_Rolling_C:OnBeginAction() end
 function UBP_Action_Rolling_C:EndStep() end
 function UBP_Action_Rolling_C:OnBreakAction() end

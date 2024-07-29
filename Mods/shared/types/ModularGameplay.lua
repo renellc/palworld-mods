@@ -7,10 +7,16 @@
 ---@field FeatureState FGameplayTag
 FActorInitStateChangedParams = {}
 
+---@return FActorInitStateChangedParams
+function FActorInitStateChangedParams:get() end
+
 
 
 ---@class IGameFrameworkInitStateInterface : IInterface
 IGameFrameworkInitStateInterface = {}
+
+---@return IGameFrameworkInitStateInterface
+function IGameFrameworkInitStateInterface:get() end
 
 ---@param Delegate FUnregisterInitStateDelegateDelegate
 ---@return boolean
@@ -32,13 +38,22 @@ function IGameFrameworkInitStateInterface:GetFeatureName() end
 ---@class UControllerComponent : UGameFrameworkComponent
 UControllerComponent = {}
 
+---@return UControllerComponent
+function UControllerComponent:get() end
+
 
 ---@class UGameFrameworkComponent : UActorComponent
 UGameFrameworkComponent = {}
 
+---@return UGameFrameworkComponent
+function UGameFrameworkComponent:get() end
+
 
 ---@class UGameFrameworkComponentManager : UGameInstanceSubsystem
 UGameFrameworkComponentManager = {}
+
+---@return UGameFrameworkComponentManager
+function UGameFrameworkComponentManager:get() end
 
 ---@param actorClass TSoftClassPtr<AActor>
 ---@param DelegateToRemove FUnregisterClassInitStateDelegateDelegateToRemove
@@ -76,12 +91,21 @@ function UGameFrameworkComponentManager:AddReceiver(Receiver, bAddOnlyInGameWorl
 ---@class UGameStateComponent : UGameFrameworkComponent
 UGameStateComponent = {}
 
+---@return UGameStateComponent
+function UGameStateComponent:get() end
+
 
 ---@class UPawnComponent : UGameFrameworkComponent
 UPawnComponent = {}
 
+---@return UPawnComponent
+function UPawnComponent:get() end
+
 
 ---@class UPlayerStateComponent : UGameFrameworkComponent
 UPlayerStateComponent = {}
+
+---@return UPlayerStateComponent
+function UPlayerStateComponent:get() end
 
 

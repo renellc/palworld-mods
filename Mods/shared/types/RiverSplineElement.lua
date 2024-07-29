@@ -14,5 +14,8 @@
 ---@field Enabled_44_0E2207EB4FCC91374AFAF6A98B71185D boolean
 FRiverSplineElement = {}
 
+---@return FRiverSplineElement
+function FRiverSplineElement:get() end
+
 
 

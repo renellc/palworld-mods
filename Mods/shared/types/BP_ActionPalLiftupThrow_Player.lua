@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionPalLiftupThrow_Player_C = {}
 
+---@return UBP_ActionPalLiftupThrow_Player_C
+function UBP_ActionPalLiftupThrow_Player_C:get() end
+
 ---@param Disable boolean
 function UBP_ActionPalLiftupThrow_Player_C:MovementSetFlag(Disable) end
 ---@param Disable boolean

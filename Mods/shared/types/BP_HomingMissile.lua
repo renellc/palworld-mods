@@ -10,6 +10,9 @@
 ---@field HpmingAccele double
 ABP_HomingMissile_C = {}
 
+---@return ABP_HomingMissile_C
+function ABP_HomingMissile_C:get() end
+
 ---@param HitComp UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent

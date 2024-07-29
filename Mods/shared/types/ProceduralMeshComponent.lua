@@ -8,12 +8,18 @@
 ---@field bSectionVisible boolean
 FProcMeshSection = {}
 
+---@return FProcMeshSection
+function FProcMeshSection:get() end
+
 
 
 ---@class FProcMeshTangent
 ---@field TangentX FVector
 ---@field bFlipTangentY boolean
 FProcMeshTangent = {}
+
+---@return FProcMeshTangent
+function FProcMeshTangent:get() end
 
 
 
@@ -28,10 +34,16 @@ FProcMeshTangent = {}
 ---@field UV3 FVector2D
 FProcMeshVertex = {}
 
+---@return FProcMeshVertex
+function FProcMeshVertex:get() end
+
 
 
 ---@class UKismetProceduralMeshLibrary : UBlueprintFunctionLibrary
 UKismetProceduralMeshLibrary = {}
+
+---@return UKismetProceduralMeshLibrary
+function UKismetProceduralMeshLibrary:get() end
 
 ---@param InProcMesh UProceduralMeshComponent
 ---@param PlanePosition FVector
@@ -113,6 +125,9 @@ function UKismetProceduralMeshLibrary:CalculateTangentsForMesh(Vertices, Triangl
 ---@field LocalBounds FBoxSphereBounds
 ---@field AsyncBodySetupQueue TArray<UBodySetup>
 UProceduralMeshComponent = {}
+
+---@return UProceduralMeshComponent
+function UProceduralMeshComponent:get() end
 
 ---@param SectionIndex int32
 ---@param Vertices TArray<FVector>

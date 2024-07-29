@@ -32,5 +32,8 @@
 ---@field ReactiveHistoryTranslucencyLumaBias float
 UFSR2Settings = {}
 
+---@return UFSR2Settings
+function UFSR2Settings:get() end
+
 
 

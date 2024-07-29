@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_PalIncidentSystem_C = {}
 
+---@return UBP_PalIncidentSystem_C
+function UBP_PalIncidentSystem_C:get() end
+
 ---@param Weights TArray<double>
 ---@param Index int32
 UBP_PalIncidentSystem_C['Lottery Index by Weights'] = function(Weights, Index) end

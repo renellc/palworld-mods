@@ -5,6 +5,9 @@
 ---@field bDestroyOnSystemFinish boolean
 ANiagaraActor = {}
 
+---@return ANiagaraActor
+function ANiagaraActor:get() end
+
 ---@param bShouldDestroyOnSystemFinish boolean
 function ANiagaraActor:SetDestroyOnSystemFinish(bShouldDestroyOnSystemFinish) end
 ---@param FinishedComponent UNiagaraComponent
@@ -20,6 +23,9 @@ function ANiagaraActor:OnNiagaraSystemFinished(FinishedComponent) end
 ---@field OwningCameraManager APlayerCameraManager
 ANiagaraLensEffectBase = {}
 
+---@return ANiagaraLensEffectBase
+function ANiagaraLensEffectBase:get() end
+
 
 
 ---@class ANiagaraPerfBaselineActor : AActor
@@ -27,10 +33,16 @@ ANiagaraLensEffectBase = {}
 ---@field Label UTextRenderComponent
 ANiagaraPerfBaselineActor = {}
 
+---@return ANiagaraPerfBaselineActor
+function ANiagaraPerfBaselineActor:get() end
+
 
 
 ---@class ANiagaraPreviewBase : AActor
 ANiagaraPreviewBase = {}
+
+---@return ANiagaraPreviewBase
+function ANiagaraPreviewBase:get() end
 
 ---@param InSystem UNiagaraSystem
 function ANiagaraPreviewBase:SetSystem(InSystem) end
@@ -52,6 +64,9 @@ function ANiagaraPreviewBase:SetLabelText(InXAxisText, InYAxisText) end
 ---@field PreviewComponents TArray<UChildActorComponent>
 ANiagaraPreviewGrid = {}
 
+---@return ANiagaraPreviewGrid
+function ANiagaraPreviewGrid:get() end
+
 ---@param bPaused boolean
 function ANiagaraPreviewGrid:SetPaused(bPaused) end
 ---@param OutPreviews TArray<UNiagaraComponent>
@@ -67,10 +82,16 @@ function ANiagaraPreviewGrid:ActivatePreviews(bReset) end
 ---@field Velocity FVector
 FBasicParticleData = {}
 
+---@return FBasicParticleData
+function FBasicParticleData:get() end
+
 
 
 ---@class FEmitterCompiledScriptPair
 FEmitterCompiledScriptPair = {}
+
+---@return FEmitterCompiledScriptPair
+function FEmitterCompiledScriptPair:get() end
 
 
 ---@class FMeshTriCoordinate
@@ -78,11 +99,17 @@ FEmitterCompiledScriptPair = {}
 ---@field BaryCoord FVector3f
 FMeshTriCoordinate = {}
 
+---@return FMeshTriCoordinate
+function FMeshTriCoordinate:get() end
+
 
 
 ---@class FMovieSceneNiagaraBoolParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 ---@field BoolChannel FMovieSceneBoolChannel
 FMovieSceneNiagaraBoolParameterSectionTemplate = {}
+
+---@return FMovieSceneNiagaraBoolParameterSectionTemplate
+function FMovieSceneNiagaraBoolParameterSectionTemplate:get() end
 
 
 
@@ -93,11 +120,17 @@ FMovieSceneNiagaraBoolParameterSectionTemplate = {}
 ---@field AlphaChannel FMovieSceneFloatChannel
 FMovieSceneNiagaraColorParameterSectionTemplate = {}
 
+---@return FMovieSceneNiagaraColorParameterSectionTemplate
+function FMovieSceneNiagaraColorParameterSectionTemplate:get() end
+
 
 
 ---@class FMovieSceneNiagaraFloatParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
 ---@field FloatChannel FMovieSceneFloatChannel
 FMovieSceneNiagaraFloatParameterSectionTemplate = {}
+
+---@return FMovieSceneNiagaraFloatParameterSectionTemplate
+function FMovieSceneNiagaraFloatParameterSectionTemplate:get() end
 
 
 
@@ -105,11 +138,17 @@ FMovieSceneNiagaraFloatParameterSectionTemplate = {}
 ---@field IntegerChannel FMovieSceneIntegerChannel
 FMovieSceneNiagaraIntegerParameterSectionTemplate = {}
 
+---@return FMovieSceneNiagaraIntegerParameterSectionTemplate
+function FMovieSceneNiagaraIntegerParameterSectionTemplate:get() end
+
 
 
 ---@class FMovieSceneNiagaraParameterSectionTemplate : FMovieSceneEvalTemplate
 ---@field Parameter FNiagaraVariable
 FMovieSceneNiagaraParameterSectionTemplate = {}
+
+---@return FMovieSceneNiagaraParameterSectionTemplate
+function FMovieSceneNiagaraParameterSectionTemplate:get() end
 
 
 
@@ -123,10 +162,16 @@ FMovieSceneNiagaraParameterSectionTemplate = {}
 ---@field bAllowScalability boolean
 FMovieSceneNiagaraSystemTrackImplementation = {}
 
+---@return FMovieSceneNiagaraSystemTrackImplementation
+function FMovieSceneNiagaraSystemTrackImplementation:get() end
+
 
 
 ---@class FMovieSceneNiagaraSystemTrackTemplate : FMovieSceneEvalTemplate
 FMovieSceneNiagaraSystemTrackTemplate = {}
+
+---@return FMovieSceneNiagaraSystemTrackTemplate
+function FMovieSceneNiagaraSystemTrackTemplate:get() end
 
 
 ---@class FMovieSceneNiagaraVectorParameterSectionTemplate : FMovieSceneNiagaraParameterSectionTemplate
@@ -134,11 +179,17 @@ FMovieSceneNiagaraSystemTrackTemplate = {}
 ---@field ChannelsUsed int32
 FMovieSceneNiagaraVectorParameterSectionTemplate = {}
 
+---@return FMovieSceneNiagaraVectorParameterSectionTemplate
+function FMovieSceneNiagaraVectorParameterSectionTemplate:get() end
+
 
 
 ---@class FNCPool
 ---@field FreeElements TArray<FNCPoolElement>
 FNCPool = {}
+
+---@return FNCPool
+function FNCPool:get() end
 
 
 
@@ -146,11 +197,17 @@ FNCPool = {}
 ---@field Component UNiagaraComponent
 FNCPoolElement = {}
 
+---@return FNCPoolElement
+function FNCPoolElement:get() end
+
 
 
 ---@class FNDIStaticMeshSectionFilter
 ---@field AllowedMaterialSlots TArray<int32>
 FNDIStaticMeshSectionFilter = {}
+
+---@return FNDIStaticMeshSectionFilter
+function FNDIStaticMeshSectionFilter:get() end
 
 
 
@@ -160,6 +217,9 @@ FNDIStaticMeshSectionFilter = {}
 ---@field VersionGuid FGuid
 ---@field bIsVisibleInVersionSelector boolean
 FNiagaraAssetVersion = {}
+
+---@return FNiagaraAssetVersion
+function FNiagaraAssetVersion:get() end
 
 
 
@@ -174,6 +234,9 @@ FNiagaraAssetVersion = {}
 ---@field AspectRatio float
 FNiagaraBakerCameraSettings = {}
 
+---@return FNiagaraBakerCameraSettings
+function FNiagaraBakerCameraSettings:get() end
+
 
 
 ---@class FNiagaraBakerTextureSettings
@@ -185,6 +248,9 @@ FNiagaraBakerCameraSettings = {}
 ---@field GeneratedTexture UTexture2D
 FNiagaraBakerTextureSettings = {}
 
+---@return FNiagaraBakerTextureSettings
+function FNiagaraBakerTextureSettings:get() end
+
 
 
 ---@class FNiagaraBakerTextureSource
@@ -192,11 +258,17 @@ FNiagaraBakerTextureSettings = {}
 ---@field SourceName FName
 FNiagaraBakerTextureSource = {}
 
+---@return FNiagaraBakerTextureSource
+function FNiagaraBakerTextureSource:get() end
+
 
 
 ---@class FNiagaraBool
 ---@field Value int32
 FNiagaraBool = {}
+
+---@return FNiagaraBool
+function FNiagaraBool:get() end
 
 
 
@@ -208,6 +280,9 @@ FNiagaraBool = {}
 ---@field IconOverrideFalse UTexture2D
 FNiagaraBoolParameterMetaData = {}
 
+---@return FNiagaraBoolParameterMetaData
+function FNiagaraBoolParameterMetaData:get() end
+
 
 
 ---@class FNiagaraBoundParameter
@@ -215,6 +290,9 @@ FNiagaraBoolParameterMetaData = {}
 ---@field SrcOffset int32
 ---@field DestOffset int32
 FNiagaraBoundParameter = {}
+
+---@return FNiagaraBoundParameter
+function FNiagaraBoundParameter:get() end
 
 
 
@@ -225,6 +303,9 @@ FNiagaraBoundParameter = {}
 ---@field ParticleIndex int32
 ---@field PhysicalMaterialIndex int32
 FNiagaraCollisionEventPayload = {}
+
+---@return FNiagaraCollisionEventPayload
+function FNiagaraCollisionEventPayload:get() end
 
 
 
@@ -237,6 +318,9 @@ FNiagaraCollisionEventPayload = {}
 ---@field bDependentVariableFromCustomIterationNamespace boolean
 FNiagaraCompileDependency = {}
 
+---@return FNiagaraCompileDependency
+function FNiagaraCompileDependency:get() end
+
 
 
 ---@class FNiagaraCompileHashVisitorDebugInfo
@@ -245,12 +329,18 @@ FNiagaraCompileDependency = {}
 ---@field PropertyValues TArray<FString>
 FNiagaraCompileHashVisitorDebugInfo = {}
 
+---@return FNiagaraCompileHashVisitorDebugInfo
+function FNiagaraCompileHashVisitorDebugInfo:get() end
+
 
 
 ---@class FNiagaraCompilerTag
 ---@field Variable FNiagaraVariable
 ---@field StringValue FString
 FNiagaraCompilerTag = {}
+
+---@return FNiagaraCompilerTag
+function FNiagaraCompilerTag:get() end
 
 
 
@@ -262,16 +352,25 @@ FNiagaraCompilerTag = {}
 ---@field PropertySetterParameterDefaults TMap<FString, FString>
 FNiagaraComponentPropertyBinding = {}
 
+---@return FNiagaraComponentPropertyBinding
+function FNiagaraComponentPropertyBinding:get() end
+
 
 
 ---@class FNiagaraCulledComponentInfo
 FNiagaraCulledComponentInfo = {}
+
+---@return FNiagaraCulledComponentInfo
+function FNiagaraCulledComponentInfo:get() end
 
 
 ---@class FNiagaraDataInterfaceEmitterBinding
 ---@field BindingMode ENiagaraDataInterfaceEmitterBindingMode
 ---@field EmitterName FName
 FNiagaraDataInterfaceEmitterBinding = {}
+
+---@return FNiagaraDataInterfaceEmitterBinding
+function FNiagaraDataInterfaceEmitterBinding:get() end
 
 
 
@@ -284,6 +383,9 @@ FNiagaraDataInterfaceEmitterBinding = {}
 ---@field InvSplineDistanceStep float
 ---@field MaxIndex int32
 FNiagaraDataInterfaceSplineLUT = {}
+
+---@return FNiagaraDataInterfaceSplineLUT
+function FNiagaraDataInterfaceSplineLUT:get() end
 
 
 
@@ -298,6 +400,9 @@ FNiagaraDataInterfaceSplineLUT = {}
 ---@field SimTarget ENiagaraSimTarget
 FNiagaraDataSetCompiledData = {}
 
+---@return FNiagaraDataSetCompiledData
+function FNiagaraDataSetCompiledData:get() end
+
 
 
 ---@class FNiagaraDataSetID
@@ -305,12 +410,18 @@ FNiagaraDataSetCompiledData = {}
 ---@field Type ENiagaraDataSetType
 FNiagaraDataSetID = {}
 
+---@return FNiagaraDataSetID
+function FNiagaraDataSetID:get() end
+
 
 
 ---@class FNiagaraDataSetProperties
 ---@field ID FNiagaraDataSetID
 ---@field Variables TArray<FNiagaraVariable>
 FNiagaraDataSetProperties = {}
+
+---@return FNiagaraDataSetProperties
+function FNiagaraDataSetProperties:get() end
 
 
 
@@ -384,12 +495,18 @@ FNiagaraDataSetProperties = {}
 ---@field bShowGlobalBudgetInfo boolean
 FNiagaraDebugHUDSettingsData = {}
 
+---@return FNiagaraDebugHUDSettingsData
+function FNiagaraDebugHUDSettingsData:get() end
+
 
 
 ---@class FNiagaraDebugHUDVariable
 ---@field bEnabled boolean
 ---@field Name FString
 FNiagaraDebugHUDVariable = {}
+
+---@return FNiagaraDebugHUDVariable
+function FNiagaraDebugHUDVariable:get() end
 
 
 
@@ -400,12 +517,18 @@ FNiagaraDebugHUDVariable = {}
 ---@field ScreenOffset FVector2D
 FNiagaraDebugHudTextOptions = {}
 
+---@return FNiagaraDebugHudTextOptions
+function FNiagaraDebugHudTextOptions:get() end
+
 
 
 ---@class FNiagaraDebuggerAcceptConnection
 ---@field SessionId FGuid
 ---@field InstanceId FGuid
 FNiagaraDebuggerAcceptConnection = {}
+
+---@return FNiagaraDebuggerAcceptConnection
+function FNiagaraDebuggerAcceptConnection:get() end
 
 
 
@@ -414,6 +537,9 @@ FNiagaraDebuggerAcceptConnection = {}
 ---@field InstanceId FGuid
 FNiagaraDebuggerConnectionClosed = {}
 
+---@return FNiagaraDebuggerConnectionClosed
+function FNiagaraDebuggerConnectionClosed:get() end
+
 
 
 ---@class FNiagaraDebuggerExecuteConsoleCommand
@@ -421,11 +547,17 @@ FNiagaraDebuggerConnectionClosed = {}
 ---@field bRequiresWorld boolean
 FNiagaraDebuggerExecuteConsoleCommand = {}
 
+---@return FNiagaraDebuggerExecuteConsoleCommand
+function FNiagaraDebuggerExecuteConsoleCommand:get() end
+
 
 
 ---@class FNiagaraDebuggerOutlinerUpdate
 ---@field OutlinerData FNiagaraOutlinerData
 FNiagaraDebuggerOutlinerUpdate = {}
+
+---@return FNiagaraDebuggerOutlinerUpdate
+function FNiagaraDebuggerOutlinerUpdate:get() end
 
 
 
@@ -433,6 +565,9 @@ FNiagaraDebuggerOutlinerUpdate = {}
 ---@field SessionId FGuid
 ---@field InstanceId FGuid
 FNiagaraDebuggerRequestConnection = {}
+
+---@return FNiagaraDebuggerRequestConnection
+function FNiagaraDebuggerRequestConnection:get() end
 
 
 
@@ -444,6 +579,9 @@ FNiagaraDebuggerRequestConnection = {}
 ---@field Cine float
 FNiagaraDetailsLevelScaleOverrides = {}
 
+---@return FNiagaraDetailsLevelScaleOverrides
+function FNiagaraDetailsLevelScaleOverrides:get() end
+
 
 
 ---@class FNiagaraDeviceProfileStateEntry
@@ -451,6 +589,9 @@ FNiagaraDetailsLevelScaleOverrides = {}
 ---@field QualityLevelMask uint32
 ---@field SetQualityLevelMask uint32
 FNiagaraDeviceProfileStateEntry = {}
+
+---@return FNiagaraDeviceProfileStateEntry
+function FNiagaraDeviceProfileStateEntry:get() end
 
 
 
@@ -466,6 +607,9 @@ FNiagaraDeviceProfileStateEntry = {}
 ---@field DataSetCompiledData FNiagaraDataSetCompiledData
 FNiagaraEmitterCompiledData = {}
 
+---@return FNiagaraEmitterCompiledData
+function FNiagaraEmitterCompiledData:get() end
+
 
 
 ---@class FNiagaraEmitterHandle
@@ -477,6 +621,9 @@ FNiagaraEmitterCompiledData = {}
 ---@field VersionedInstance FVersionedNiagaraEmitter
 FNiagaraEmitterHandle = {}
 
+---@return FNiagaraEmitterHandle
+function FNiagaraEmitterHandle:get() end
+
 
 
 ---@class FNiagaraEmitterNameSettingsRef
@@ -484,17 +631,26 @@ FNiagaraEmitterHandle = {}
 ---@field EmitterName FString
 FNiagaraEmitterNameSettingsRef = {}
 
+---@return FNiagaraEmitterNameSettingsRef
+function FNiagaraEmitterNameSettingsRef:get() end
+
 
 
 ---@class FNiagaraEmitterScalabilityOverride : FNiagaraEmitterScalabilitySettings
 ---@field bOverrideSpawnCountScale boolean
 FNiagaraEmitterScalabilityOverride = {}
 
+---@return FNiagaraEmitterScalabilityOverride
+function FNiagaraEmitterScalabilityOverride:get() end
+
 
 
 ---@class FNiagaraEmitterScalabilityOverrides
 ---@field Overrides TArray<FNiagaraEmitterScalabilityOverride>
 FNiagaraEmitterScalabilityOverrides = {}
+
+---@return FNiagaraEmitterScalabilityOverrides
+function FNiagaraEmitterScalabilityOverrides:get() end
 
 
 
@@ -504,11 +660,17 @@ FNiagaraEmitterScalabilityOverrides = {}
 ---@field SpawnCountScale float
 FNiagaraEmitterScalabilitySettings = {}
 
+---@return FNiagaraEmitterScalabilitySettings
+function FNiagaraEmitterScalabilitySettings:get() end
+
 
 
 ---@class FNiagaraEmitterScalabilitySettingsArray
 ---@field Settings TArray<FNiagaraEmitterScalabilitySettings>
 FNiagaraEmitterScalabilitySettingsArray = {}
+
+---@return FNiagaraEmitterScalabilitySettingsArray
+function FNiagaraEmitterScalabilitySettingsArray:get() end
 
 
 
@@ -517,6 +679,9 @@ FNiagaraEmitterScalabilitySettingsArray = {}
 ---@field EventReceivers TArray<FNiagaraEventReceiverProperties>
 ---@field EventGenerators TArray<FNiagaraEventGeneratorProperties>
 FNiagaraEmitterScriptProperties = {}
+
+---@return FNiagaraEmitterScriptProperties
+function FNiagaraEmitterScriptProperties:get() end
 
 
 
@@ -527,6 +692,9 @@ FNiagaraEmitterScriptProperties = {}
 ---@field ColorOverride FLinearColor
 FNiagaraEnumParameterMetaData = {}
 
+---@return FNiagaraEnumParameterMetaData
+function FNiagaraEnumParameterMetaData:get() end
+
 
 
 ---@class FNiagaraEventGeneratorProperties
@@ -535,6 +703,9 @@ FNiagaraEnumParameterMetaData = {}
 ---@field DataSetCompiledData FNiagaraDataSetCompiledData
 FNiagaraEventGeneratorProperties = {}
 
+---@return FNiagaraEventGeneratorProperties
+function FNiagaraEventGeneratorProperties:get() end
+
 
 
 ---@class FNiagaraEventReceiverProperties
@@ -542,6 +713,9 @@ FNiagaraEventGeneratorProperties = {}
 ---@field SourceEventGenerator FName
 ---@field SourceEmitter FName
 FNiagaraEventReceiverProperties = {}
+
+---@return FNiagaraEventReceiverProperties
+function FNiagaraEventReceiverProperties:get() end
 
 
 
@@ -556,11 +730,17 @@ FNiagaraEventReceiverProperties = {}
 ---@field UpdateAttributeInitialValues boolean
 FNiagaraEventScriptProperties = {}
 
+---@return FNiagaraEventScriptProperties
+function FNiagaraEventScriptProperties:get() end
+
 
 
 ---@class FNiagaraFloat
 ---@field Value float
 FNiagaraFloat = {}
+
+---@return FNiagaraFloat
+function FNiagaraFloat:get() end
 
 
 
@@ -585,6 +765,9 @@ FNiagaraFloat = {}
 ---@field FunctionSpecifiers TMap<FName, FName>
 FNiagaraFunctionSignature = {}
 
+---@return FNiagaraFunctionSignature
+function FNiagaraFunctionSignature:get() end
+
 
 
 ---@class FNiagaraGlobalBudgetScaling
@@ -598,6 +781,9 @@ FNiagaraFunctionSignature = {}
 ---@field MaxSystemInstanceCountScaleByGlobalBudgetUse FNiagaraLinearRamp
 FNiagaraGlobalBudgetScaling = {}
 
+---@return FNiagaraGlobalBudgetScaling
+function FNiagaraGlobalBudgetScaling:get() end
+
 
 
 ---@class FNiagaraGraphViewSettings
@@ -606,11 +792,17 @@ FNiagaraGlobalBudgetScaling = {}
 ---@field bIsValid boolean
 FNiagaraGraphViewSettings = {}
 
+---@return FNiagaraGraphViewSettings
+function FNiagaraGraphViewSettings:get() end
+
 
 
 ---@class FNiagaraHalf
 ---@field Value uint16
 FNiagaraHalf = {}
+
+---@return FNiagaraHalf
+function FNiagaraHalf:get() end
 
 
 
@@ -619,6 +811,9 @@ FNiagaraHalf = {}
 ---@field Y uint16
 FNiagaraHalfVector2 = {}
 
+---@return FNiagaraHalfVector2
+function FNiagaraHalfVector2:get() end
+
 
 
 ---@class FNiagaraHalfVector3
@@ -626,6 +821,9 @@ FNiagaraHalfVector2 = {}
 ---@field Y uint16
 ---@field Z uint16
 FNiagaraHalfVector3 = {}
+
+---@return FNiagaraHalfVector3
+function FNiagaraHalfVector3:get() end
 
 
 
@@ -636,12 +834,18 @@ FNiagaraHalfVector3 = {}
 ---@field W uint16
 FNiagaraHalfVector4 = {}
 
+---@return FNiagaraHalfVector4
+function FNiagaraHalfVector4:get() end
+
 
 
 ---@class FNiagaraID
 ---@field Index int32
 ---@field AcquireTag int32
 FNiagaraID = {}
+
+---@return FNiagaraID
+function FNiagaraID:get() end
 
 
 
@@ -650,11 +854,17 @@ FNiagaraID = {}
 ---@field TargetValues TArray<FString>
 FNiagaraInputConditionMetadata = {}
 
+---@return FNiagaraInputConditionMetadata
+function FNiagaraInputConditionMetadata:get() end
+
 
 
 ---@class FNiagaraInt32
 ---@field Value int32
 FNiagaraInt32 = {}
+
+---@return FNiagaraInt32
+function FNiagaraInt32:get() end
 
 
 
@@ -665,11 +875,17 @@ FNiagaraInt32 = {}
 ---@field EndY float
 FNiagaraLinearRamp = {}
 
+---@return FNiagaraLinearRamp
+function FNiagaraLinearRamp:get() end
+
 
 
 ---@class FNiagaraLwcStructConverter
 ---@field ConversionSteps TArray<FNiagaraStructConversionStep>
 FNiagaraLwcStructConverter = {}
+
+---@return FNiagaraLwcStructConverter
+function FNiagaraLwcStructConverter:get() end
 
 
 
@@ -680,6 +896,9 @@ FNiagaraLwcStructConverter = {}
 ---@field NiagaraChildVariable FNiagaraVariableBase
 FNiagaraMaterialAttributeBinding = {}
 
+---@return FNiagaraMaterialAttributeBinding
+function FNiagaraMaterialAttributeBinding:get() end
+
 
 
 ---@class FNiagaraMatrix
@@ -689,12 +908,18 @@ FNiagaraMaterialAttributeBinding = {}
 ---@field Row3 FVector4f
 FNiagaraMatrix = {}
 
+---@return FNiagaraMatrix
+function FNiagaraMatrix:get() end
+
 
 
 ---@class FNiagaraMeshMaterialOverride
 ---@field ExplicitMat UMaterialInterface
 ---@field UserParamBinding FNiagaraUserParameterBinding
 FNiagaraMeshMaterialOverride = {}
+
+---@return FNiagaraMeshMaterialOverride
+function FNiagaraMeshMaterialOverride:get() end
 
 
 
@@ -707,6 +932,9 @@ FNiagaraMeshMaterialOverride = {}
 ---@field PivotOffsetSpace ENiagaraMeshPivotOffsetSpace
 FNiagaraMeshRendererMeshProperties = {}
 
+---@return FNiagaraMeshRendererMeshProperties
+function FNiagaraMeshRendererMeshProperties:get() end
+
 
 
 ---@class FNiagaraModuleDependency
@@ -718,10 +946,16 @@ FNiagaraMeshRendererMeshProperties = {}
 ---@field Description FText
 FNiagaraModuleDependency = {}
 
+---@return FNiagaraModuleDependency
+function FNiagaraModuleDependency:get() end
+
 
 
 ---@class FNiagaraNumeric
 FNiagaraNumeric = {}
+
+---@return FNiagaraNumeric
+function FNiagaraNumeric:get() end
 
 
 ---@class FNiagaraOutlinerCaptureSettings
@@ -731,11 +965,17 @@ FNiagaraNumeric = {}
 ---@field SimCacheCaptureFrames uint32
 FNiagaraOutlinerCaptureSettings = {}
 
+---@return FNiagaraOutlinerCaptureSettings
+function FNiagaraOutlinerCaptureSettings:get() end
+
 
 
 ---@class FNiagaraOutlinerData
 ---@field WorldData TMap<FString, FNiagaraOutlinerWorldData>
 FNiagaraOutlinerData = {}
+
+---@return FNiagaraOutlinerData
+function FNiagaraOutlinerData:get() end
 
 
 
@@ -747,6 +987,9 @@ FNiagaraOutlinerData = {}
 ---@field bRequiresPersistentIDs boolean
 FNiagaraOutlinerEmitterInstanceData = {}
 
+---@return FNiagaraOutlinerEmitterInstanceData
+function FNiagaraOutlinerEmitterInstanceData:get() end
+
 
 
 ---@class FNiagaraOutlinerSystemData
@@ -756,6 +999,9 @@ FNiagaraOutlinerEmitterInstanceData = {}
 ---@field AveragePerInstanceTime FNiagaraOutlinerTimingData
 ---@field MaxPerInstanceTime FNiagaraOutlinerTimingData
 FNiagaraOutlinerSystemData = {}
+
+---@return FNiagaraOutlinerSystemData
+function FNiagaraOutlinerSystemData:get() end
 
 
 
@@ -781,12 +1027,18 @@ FNiagaraOutlinerSystemData = {}
 ---@field bRequiresRayTracingScene boolean
 FNiagaraOutlinerSystemInstanceData = {}
 
+---@return FNiagaraOutlinerSystemInstanceData
+function FNiagaraOutlinerSystemInstanceData:get() end
+
 
 
 ---@class FNiagaraOutlinerTimingData
 ---@field GameThread float
 ---@field RenderThread float
 FNiagaraOutlinerTimingData = {}
+
+---@return FNiagaraOutlinerTimingData
+function FNiagaraOutlinerTimingData:get() end
 
 
 
@@ -799,12 +1051,18 @@ FNiagaraOutlinerTimingData = {}
 ---@field MaxPerFrameTime FNiagaraOutlinerTimingData
 FNiagaraOutlinerWorldData = {}
 
+---@return FNiagaraOutlinerWorldData
+function FNiagaraOutlinerWorldData:get() end
+
 
 
 ---@class FNiagaraParameterDataSetBinding
 ---@field ParameterOffset int32
 ---@field DataSetComponentOffset int32
 FNiagaraParameterDataSetBinding = {}
+
+---@return FNiagaraParameterDataSetBinding
+function FNiagaraParameterDataSetBinding:get() end
 
 
 
@@ -813,10 +1071,16 @@ FNiagaraParameterDataSetBinding = {}
 ---@field Int32Offsets TArray<FNiagaraParameterDataSetBinding>
 FNiagaraParameterDataSetBindingCollection = {}
 
+---@return FNiagaraParameterDataSetBindingCollection
+function FNiagaraParameterDataSetBindingCollection:get() end
+
 
 
 ---@class FNiagaraParameterMap
 FNiagaraParameterMap = {}
+
+---@return FNiagaraParameterMap
+function FNiagaraParameterMap:get() end
 
 
 ---@class FNiagaraParameterStore
@@ -828,11 +1092,17 @@ FNiagaraParameterMap = {}
 ---@field OriginalPositionData TArray<FNiagaraPositionSource>
 FNiagaraParameterStore = {}
 
+---@return FNiagaraParameterStore
+function FNiagaraParameterStore:get() end
+
 
 
 ---@class FNiagaraParameters
 ---@field Parameters TArray<FNiagaraVariable>
 FNiagaraParameters = {}
+
+---@return FNiagaraParameters
+function FNiagaraParameters:get() end
 
 
 
@@ -843,6 +1113,9 @@ FNiagaraParameters = {}
 ---@field PerInstanceMax_RT float
 FNiagaraPerfBaselineStats = {}
 
+---@return FNiagaraPerfBaselineStats
+function FNiagaraPerfBaselineStats:get() end
+
 
 
 ---@class FNiagaraPlatformSet
@@ -850,6 +1123,9 @@ FNiagaraPerfBaselineStats = {}
 ---@field DeviceProfileStates TArray<FNiagaraDeviceProfileStateEntry>
 ---@field CVarConditions TArray<FNiagaraPlatformSetCVarCondition>
 FNiagaraPlatformSet = {}
+
+---@return FNiagaraPlatformSet
+function FNiagaraPlatformSet:get() end
 
 
 
@@ -868,12 +1144,18 @@ FNiagaraPlatformSet = {}
 ---@field bUseMaxFloat boolean
 FNiagaraPlatformSetCVarCondition = {}
 
+---@return FNiagaraPlatformSetCVarCondition
+function FNiagaraPlatformSetCVarCondition:get() end
+
 
 
 ---@class FNiagaraPlatformSetConflictEntry
 ---@field ProfileName FName
 ---@field QualityLevelMask int32
 FNiagaraPlatformSetConflictEntry = {}
+
+---@return FNiagaraPlatformSetConflictEntry
+function FNiagaraPlatformSetConflictEntry:get() end
 
 
 
@@ -882,6 +1164,9 @@ FNiagaraPlatformSetConflictEntry = {}
 ---@field SetBIndex int32
 ---@field Conflicts TArray<FNiagaraPlatformSetConflictEntry>
 FNiagaraPlatformSetConflictInfo = {}
+
+---@return FNiagaraPlatformSetConflictInfo
+function FNiagaraPlatformSetConflictInfo:get() end
 
 
 
@@ -893,16 +1178,25 @@ FNiagaraPlatformSetConflictInfo = {}
 ---@field CVarConditionDisabled FNiagaraPlatformSetCVarCondition
 FNiagaraPlatformSetRedirect = {}
 
+---@return FNiagaraPlatformSetRedirect
+function FNiagaraPlatformSetRedirect:get() end
+
 
 
 ---@class FNiagaraPosition : FVector3f
 FNiagaraPosition = {}
+
+---@return FNiagaraPosition
+function FNiagaraPosition:get() end
 
 
 ---@class FNiagaraPositionSource
 ---@field Name FName
 ---@field Value FVector
 FNiagaraPositionSource = {}
+
+---@return FNiagaraPositionSource
+function FNiagaraPositionSource:get() end
 
 
 
@@ -911,6 +1205,9 @@ FNiagaraPositionSource = {}
 ---@field Seed2 int32
 ---@field Seed3 int32
 FNiagaraRandInfo = {}
+
+---@return FNiagaraRandInfo
+function FNiagaraRandInfo:get() end
 
 
 
@@ -921,12 +1218,18 @@ FNiagaraRandInfo = {}
 ---@field TextureParameters TArray<FNiagaraRendererMaterialTextureParameter>
 FNiagaraRendererMaterialParameters = {}
 
+---@return FNiagaraRendererMaterialParameters
+function FNiagaraRendererMaterialParameters:get() end
+
 
 
 ---@class FNiagaraRendererMaterialScalarParameter
 ---@field MaterialParameterName FName
 ---@field Value float
 FNiagaraRendererMaterialScalarParameter = {}
+
+---@return FNiagaraRendererMaterialScalarParameter
+function FNiagaraRendererMaterialScalarParameter:get() end
 
 
 
@@ -935,6 +1238,9 @@ FNiagaraRendererMaterialScalarParameter = {}
 ---@field Texture UTexture
 FNiagaraRendererMaterialTextureParameter = {}
 
+---@return FNiagaraRendererMaterialTextureParameter
+function FNiagaraRendererMaterialTextureParameter:get() end
+
 
 
 ---@class FNiagaraRendererMaterialVectorParameter
@@ -942,10 +1248,16 @@ FNiagaraRendererMaterialTextureParameter = {}
 ---@field Value FLinearColor
 FNiagaraRendererMaterialVectorParameter = {}
 
+---@return FNiagaraRendererMaterialVectorParameter
+function FNiagaraRendererMaterialVectorParameter:get() end
+
 
 
 ---@class FNiagaraRequestSimpleClientInfoMessage
 FNiagaraRequestSimpleClientInfoMessage = {}
+
+---@return FNiagaraRequestSimpleClientInfoMessage
+function FNiagaraRequestSimpleClientInfoMessage:get() end
 
 
 ---@class FNiagaraRibbonShapeCustomVertex
@@ -953,6 +1265,9 @@ FNiagaraRequestSimpleClientInfoMessage = {}
 ---@field Normal FVector2f
 ---@field TextureV float
 FNiagaraRibbonShapeCustomVertex = {}
+
+---@return FNiagaraRibbonShapeCustomVertex
+function FNiagaraRibbonShapeCustomVertex:get() end
 
 
 
@@ -967,12 +1282,18 @@ FNiagaraRibbonShapeCustomVertex = {}
 ---@field bEnablePerParticleVRangeOverride boolean
 FNiagaraRibbonUVSettings = {}
 
+---@return FNiagaraRibbonUVSettings
+function FNiagaraRibbonUVSettings:get() end
+
 
 
 ---@class FNiagaraScalabilityManager
 ---@field EffectType UNiagaraEffectType
 ---@field ManagedComponents TArray<UNiagaraComponent>
 FNiagaraScalabilityManager = {}
+
+---@return FNiagaraScalabilityManager
+function FNiagaraScalabilityManager:get() end
 
 
 
@@ -987,6 +1308,9 @@ FNiagaraScalabilityManager = {}
 ---@field bCulledByGlobalBudget boolean
 FNiagaraScalabilityState = {}
 
+---@return FNiagaraScalabilityState
+function FNiagaraScalabilityState:get() end
+
 
 
 ---@class FNiagaraScriptDataInterfaceCompileInfo
@@ -997,6 +1321,9 @@ FNiagaraScalabilityState = {}
 ---@field RegisteredParameterMapWrite FName
 ---@field bIsPlaceholder boolean
 FNiagaraScriptDataInterfaceCompileInfo = {}
+
+---@return FNiagaraScriptDataInterfaceCompileInfo
+function FNiagaraScriptDataInterfaceCompileInfo:get() end
 
 
 
@@ -1009,11 +1336,17 @@ FNiagaraScriptDataInterfaceCompileInfo = {}
 ---@field RegisteredParameterMapWrite FName
 FNiagaraScriptDataInterfaceInfo = {}
 
+---@return FNiagaraScriptDataInterfaceInfo
+function FNiagaraScriptDataInterfaceInfo:get() end
+
 
 
 ---@class FNiagaraScriptDataUsageInfo
 ---@field bReadsAttributeData boolean
 FNiagaraScriptDataUsageInfo = {}
+
+---@return FNiagaraScriptDataUsageInfo
+function FNiagaraScriptDataUsageInfo:get() end
 
 
 
@@ -1024,6 +1357,9 @@ FNiagaraScriptDataUsageInfo = {}
 ---@field DestSize uint16
 FNiagaraScriptExecutionPaddingInfo = {}
 
+---@return FNiagaraScriptExecutionPaddingInfo
+function FNiagaraScriptExecutionPaddingInfo:get() end
+
 
 
 ---@class FNiagaraScriptExecutionParameterStore : FNiagaraParameterStore
@@ -1033,6 +1369,9 @@ FNiagaraScriptExecutionPaddingInfo = {}
 ---@field bInitialized boolean
 FNiagaraScriptExecutionParameterStore = {}
 
+---@return FNiagaraScriptExecutionParameterStore
+function FNiagaraScriptExecutionParameterStore:get() end
+
 
 
 ---@class FNiagaraScriptHighlight
@@ -1040,15 +1379,24 @@ FNiagaraScriptExecutionParameterStore = {}
 ---@field DisplayName FText
 FNiagaraScriptHighlight = {}
 
+---@return FNiagaraScriptHighlight
+function FNiagaraScriptHighlight:get() end
+
 
 
 ---@class FNiagaraScriptInstanceParameterStore : FNiagaraParameterStore
 FNiagaraScriptInstanceParameterStore = {}
 
+---@return FNiagaraScriptInstanceParameterStore
+function FNiagaraScriptInstanceParameterStore:get() end
+
 
 ---@class FNiagaraScriptVariableBinding
 ---@field Name FName
 FNiagaraScriptVariableBinding = {}
+
+---@return FNiagaraScriptVariableBinding
+function FNiagaraScriptVariableBinding:get() end
 
 
 
@@ -1061,6 +1409,9 @@ FNiagaraScriptVariableBinding = {}
 ---@field ExplicitCaptureAttributes TArray<FName>
 FNiagaraSimCacheCreateParameters = {}
 
+---@return FNiagaraSimCacheCreateParameters
+function FNiagaraSimCacheCreateParameters:get() end
+
 
 
 ---@class FNiagaraSimCacheDataBuffers
@@ -1071,6 +1422,9 @@ FNiagaraSimCacheCreateParameters = {}
 ---@field IDToIndexTable TArray<int32>
 ---@field IDAcquireTag uint32
 FNiagaraSimCacheDataBuffers = {}
+
+---@return FNiagaraSimCacheDataBuffers
+function FNiagaraSimCacheDataBuffers:get() end
 
 
 
@@ -1085,6 +1439,9 @@ FNiagaraSimCacheDataBuffers = {}
 ---@field RebaseVariableNames TArray<FName>
 FNiagaraSimCacheDataBuffersLayout = {}
 
+---@return FNiagaraSimCacheDataBuffersLayout
+function FNiagaraSimCacheDataBuffersLayout:get() end
+
 
 
 ---@class FNiagaraSimCacheEmitterFrame
@@ -1092,6 +1449,9 @@ FNiagaraSimCacheDataBuffersLayout = {}
 ---@field TotalSpawnedParticles int32
 ---@field ParticleDataBuffers FNiagaraSimCacheDataBuffers
 FNiagaraSimCacheEmitterFrame = {}
+
+---@return FNiagaraSimCacheEmitterFrame
+function FNiagaraSimCacheEmitterFrame:get() end
 
 
 
@@ -1102,6 +1462,9 @@ FNiagaraSimCacheEmitterFrame = {}
 ---@field EmitterData TArray<FNiagaraSimCacheEmitterFrame>
 FNiagaraSimCacheFrame = {}
 
+---@return FNiagaraSimCacheFrame
+function FNiagaraSimCacheFrame:get() end
+
 
 
 ---@class FNiagaraSimCacheLayout
@@ -1109,12 +1472,18 @@ FNiagaraSimCacheFrame = {}
 ---@field EmitterLayouts TArray<FNiagaraSimCacheDataBuffersLayout>
 FNiagaraSimCacheLayout = {}
 
+---@return FNiagaraSimCacheLayout
+function FNiagaraSimCacheLayout:get() end
+
 
 
 ---@class FNiagaraSimCacheSystemFrame
 ---@field LocalBounds FBox
 ---@field SystemDataBuffers FNiagaraSimCacheDataBuffers
 FNiagaraSimCacheSystemFrame = {}
+
+---@return FNiagaraSimCacheSystemFrame
+function FNiagaraSimCacheSystemFrame:get() end
 
 
 
@@ -1128,6 +1497,9 @@ FNiagaraSimCacheSystemFrame = {}
 ---@field Int32Count uint16
 FNiagaraSimCacheVariable = {}
 
+---@return FNiagaraSimCacheVariable
+function FNiagaraSimCacheVariable:get() end
+
 
 
 ---@class FNiagaraSimpleClientInfo
@@ -1136,6 +1508,9 @@ FNiagaraSimCacheVariable = {}
 ---@field Components TArray<FString>
 ---@field Emitters TArray<FString>
 FNiagaraSimpleClientInfo = {}
+
+---@return FNiagaraSimpleClientInfo
+function FNiagaraSimpleClientInfo:get() end
 
 
 
@@ -1146,6 +1521,9 @@ FNiagaraSimpleClientInfo = {}
 ---@field SpawnGroup int32
 FNiagaraSpawnInfo = {}
 
+---@return FNiagaraSpawnInfo
+function FNiagaraSpawnInfo:get() end
+
 
 
 ---@class FNiagaraStackSection
@@ -1155,12 +1533,18 @@ FNiagaraSpawnInfo = {}
 ---@field bEnabled boolean
 FNiagaraStackSection = {}
 
+---@return FNiagaraStackSection
+function FNiagaraStackSection:get() end
+
 
 
 ---@class FNiagaraStatScope
 ---@field FullName FName
 ---@field FriendlyName FName
 FNiagaraStatScope = {}
+
+---@return FNiagaraStatScope
+function FNiagaraStatScope:get() end
 
 
 
@@ -1172,11 +1556,17 @@ FNiagaraStatScope = {}
 ---@field ConversionType ENiagaraStructConversionType
 FNiagaraStructConversionStep = {}
 
+---@return FNiagaraStructConversionStep
+function FNiagaraStructConversionStep:get() end
+
 
 
 ---@class FNiagaraSystemCompileRequest
 ---@field RootObjects TArray<UObject>
 FNiagaraSystemCompileRequest = {}
+
+---@return FNiagaraSystemCompileRequest
+function FNiagaraSystemCompileRequest:get() end
 
 
 
@@ -1195,6 +1585,9 @@ FNiagaraSystemCompileRequest = {}
 ---@field UpdateInstanceEmitterBindings TArray<FNiagaraParameterDataSetBindingCollection>
 FNiagaraSystemCompiledData = {}
 
+---@return FNiagaraSystemCompiledData
+function FNiagaraSystemCompiledData:get() end
+
 
 
 ---@class FNiagaraSystemScalabilityOverride : FNiagaraSystemScalabilitySettings
@@ -1206,11 +1599,17 @@ FNiagaraSystemCompiledData = {}
 ---@field bOverrideCullProxySettings boolean
 FNiagaraSystemScalabilityOverride = {}
 
+---@return FNiagaraSystemScalabilityOverride
+function FNiagaraSystemScalabilityOverride:get() end
+
 
 
 ---@class FNiagaraSystemScalabilityOverrides
 ---@field Overrides TArray<FNiagaraSystemScalabilityOverride>
 FNiagaraSystemScalabilityOverrides = {}
+
+---@return FNiagaraSystemScalabilityOverrides
+function FNiagaraSystemScalabilityOverrides:get() end
 
 
 
@@ -1230,11 +1629,17 @@ FNiagaraSystemScalabilityOverrides = {}
 ---@field BudgetScaling FNiagaraGlobalBudgetScaling
 FNiagaraSystemScalabilitySettings = {}
 
+---@return FNiagaraSystemScalabilitySettings
+function FNiagaraSystemScalabilitySettings:get() end
+
 
 
 ---@class FNiagaraSystemScalabilitySettingsArray
 ---@field Settings TArray<FNiagaraSystemScalabilitySettings>
 FNiagaraSystemScalabilitySettingsArray = {}
+
+---@return FNiagaraSystemScalabilitySettingsArray
+function FNiagaraSystemScalabilitySettingsArray:get() end
 
 
 
@@ -1243,6 +1648,9 @@ FNiagaraSystemScalabilitySettingsArray = {}
 ---@field SimCacheData TArray<uint8>
 FNiagaraSystemSimCacheCaptureReply = {}
 
+---@return FNiagaraSystemSimCacheCaptureReply
+function FNiagaraSystemSimCacheCaptureReply:get() end
+
 
 
 ---@class FNiagaraSystemSimCacheCaptureRequest
@@ -1250,6 +1658,9 @@ FNiagaraSystemSimCacheCaptureReply = {}
 ---@field CaptureDelayFrames uint32
 ---@field CaptureFrames uint32
 FNiagaraSystemSimCacheCaptureRequest = {}
+
+---@return FNiagaraSystemSimCacheCaptureRequest
+function FNiagaraSystemSimCacheCaptureRequest:get() end
 
 
 
@@ -1261,6 +1672,9 @@ FNiagaraSystemSimCacheCaptureRequest = {}
 ---@field SystemSimsToRecache TArray<UNiagaraSystem>
 FNiagaraSystemUpdateContext = {}
 
+---@return FNiagaraSystemUpdateContext
+function FNiagaraSystemUpdateContext:get() end
+
 
 
 ---@class FNiagaraSystemVisibilityCullingSettings
@@ -1271,6 +1685,9 @@ FNiagaraSystemUpdateContext = {}
 ---@field MaxTimeWithoutRender float
 FNiagaraSystemVisibilityCullingSettings = {}
 
+---@return FNiagaraSystemVisibilityCullingSettings
+function FNiagaraSystemVisibilityCullingSettings:get() end
+
 
 
 ---@class FNiagaraTypeDefinition
@@ -1279,11 +1696,17 @@ FNiagaraSystemVisibilityCullingSettings = {}
 ---@field Flags uint8
 FNiagaraTypeDefinition = {}
 
+---@return FNiagaraTypeDefinition
+function FNiagaraTypeDefinition:get() end
+
 
 
 ---@class FNiagaraTypeDefinitionHandle
 ---@field RegisteredTypeIndex int32
 FNiagaraTypeDefinitionHandle = {}
+
+---@return FNiagaraTypeDefinitionHandle
+function FNiagaraTypeDefinitionHandle:get() end
 
 
 
@@ -1296,6 +1719,9 @@ FNiagaraTypeDefinitionHandle = {}
 ---@field HalfComponentRegisterOffsets TArray<uint32>
 FNiagaraTypeLayoutInfo = {}
 
+---@return FNiagaraTypeLayoutInfo
+function FNiagaraTypeLayoutInfo:get() end
+
 
 
 ---@class FNiagaraUObjectPropertyReaderRemap
@@ -1303,11 +1729,17 @@ FNiagaraTypeLayoutInfo = {}
 ---@field RemapName FName
 FNiagaraUObjectPropertyReaderRemap = {}
 
+---@return FNiagaraUObjectPropertyReaderRemap
+function FNiagaraUObjectPropertyReaderRemap:get() end
+
 
 
 ---@class FNiagaraUserParameterBinding
 ---@field Parameter FNiagaraVariable
 FNiagaraUserParameterBinding = {}
+
+---@return FNiagaraUserParameterBinding
+function FNiagaraUserParameterBinding:get() end
 
 
 
@@ -1315,12 +1747,18 @@ FNiagaraUserParameterBinding = {}
 ---@field UserParameterRedirects TMap<FNiagaraVariable, FNiagaraVariable>
 FNiagaraUserRedirectionParameterStore = {}
 
+---@return FNiagaraUserRedirectionParameterStore
+function FNiagaraUserRedirectionParameterStore:get() end
+
 
 
 ---@class FNiagaraVMExecutableByteCode
 ---@field Data TArray<uint8>
 ---@field UncompressedSize int32
 FNiagaraVMExecutableByteCode = {}
+
+---@return FNiagaraVMExecutableByteCode
+function FNiagaraVMExecutableByteCode:get() end
 
 
 
@@ -1346,6 +1784,9 @@ FNiagaraVMExecutableByteCode = {}
 ---@field bNeedsGPUContextInit boolean
 FNiagaraVMExecutableData = {}
 
+---@return FNiagaraVMExecutableData
+function FNiagaraVMExecutableData:get() end
+
 
 
 ---@class FNiagaraVMExecutableDataId
@@ -1361,11 +1802,17 @@ FNiagaraVMExecutableData = {}
 ---@field ScriptVersionID FGuid
 FNiagaraVMExecutableDataId = {}
 
+---@return FNiagaraVMExecutableDataId
+function FNiagaraVMExecutableDataId:get() end
+
 
 
 ---@class FNiagaraVariable : FNiagaraVariableBase
 ---@field VarData TArray<uint8>
 FNiagaraVariable = {}
+
+---@return FNiagaraVariable
+function FNiagaraVariable:get() end
 
 
 
@@ -1378,6 +1825,9 @@ FNiagaraVariable = {}
 ---@field bIsCachedParticleValue boolean
 FNiagaraVariableAttributeBinding = {}
 
+---@return FNiagaraVariableAttributeBinding
+function FNiagaraVariableAttributeBinding:get() end
+
 
 
 ---@class FNiagaraVariableBase
@@ -1385,11 +1835,17 @@ FNiagaraVariableAttributeBinding = {}
 ---@field TypeDefHandle FNiagaraTypeDefinitionHandle
 FNiagaraVariableBase = {}
 
+---@return FNiagaraVariableBase
+function FNiagaraVariableBase:get() end
+
 
 
 ---@class FNiagaraVariableDataInterfaceBinding
 ---@field BoundVariable FNiagaraVariable
 FNiagaraVariableDataInterfaceBinding = {}
+
+---@return FNiagaraVariableDataInterfaceBinding
+function FNiagaraVariableDataInterfaceBinding:get() end
 
 
 
@@ -1399,6 +1855,9 @@ FNiagaraVariableDataInterfaceBinding = {}
 ---@field DataInterface UNiagaraDataInterface
 FNiagaraVariableInfo = {}
 
+---@return FNiagaraVariableInfo
+function FNiagaraVariableInfo:get() end
+
 
 
 ---@class FNiagaraVariableLayoutInfo
@@ -1407,6 +1866,9 @@ FNiagaraVariableInfo = {}
 ---@field HalfComponentStart uint32
 ---@field LayoutInfo FNiagaraTypeLayoutInfo
 FNiagaraVariableLayoutInfo = {}
+
+---@return FNiagaraVariableLayoutInfo
+function FNiagaraVariableLayoutInfo:get() end
 
 
 
@@ -1433,12 +1895,18 @@ FNiagaraVariableLayoutInfo = {}
 ---@field StaticSwitchDefaultValue int32
 FNiagaraVariableMetaData = {}
 
+---@return FNiagaraVariableMetaData
+function FNiagaraVariableMetaData:get() end
+
 
 
 ---@class FNiagaraVariableWithOffset : FNiagaraVariableBase
 ---@field Offset int32
 ---@field StructConverter FNiagaraLwcStructConverter
 FNiagaraVariableWithOffset = {}
+
+---@return FNiagaraVariableWithOffset
+function FNiagaraVariableWithOffset:get() end
 
 
 
@@ -1449,18 +1917,30 @@ FNiagaraVariableWithOffset = {}
 ---@field CurrentMode ENiagaraVariantMode
 FNiagaraVariant = {}
 
+---@return FNiagaraVariant
+function FNiagaraVariant:get() end
+
 
 
 ---@class FNiagaraWildcard
 FNiagaraWildcard = {}
 
+---@return FNiagaraWildcard
+function FNiagaraWildcard:get() end
+
 
 ---@class FNiagaraWorldManagerTickFunction : FTickFunction
 FNiagaraWorldManagerTickFunction = {}
 
+---@return FNiagaraWorldManagerTickFunction
+function FNiagaraWorldManagerTickFunction:get() end
+
 
 ---@class FParameterDefinitionsSubscription
 FParameterDefinitionsSubscription = {}
+
+---@return FParameterDefinitionsSubscription
+function FParameterDefinitionsSubscription:get() end
 
 
 ---@class FVMExternalFunctionBindingInfo
@@ -1471,6 +1951,9 @@ FParameterDefinitionsSubscription = {}
 ---@field FunctionSpecifiers TArray<FVMFunctionSpecifier>
 FVMExternalFunctionBindingInfo = {}
 
+---@return FVMExternalFunctionBindingInfo
+function FVMExternalFunctionBindingInfo:get() end
+
 
 
 ---@class FVMFunctionSpecifier
@@ -1478,12 +1961,18 @@ FVMExternalFunctionBindingInfo = {}
 ---@field Value FName
 FVMFunctionSpecifier = {}
 
+---@return FVMFunctionSpecifier
+function FVMFunctionSpecifier:get() end
+
 
 
 ---@class FVersionedNiagaraEmitter
 ---@field Emitter UNiagaraEmitter
 ---@field Version FGuid
 FVersionedNiagaraEmitter = {}
+
+---@return FVersionedNiagaraEmitter
+function FVersionedNiagaraEmitter:get() end
 
 
 
@@ -1522,14 +2011,23 @@ FVersionedNiagaraEmitter = {}
 ---@field CurrentScalabilitySettings FNiagaraEmitterScalabilitySettings
 FVersionedNiagaraEmitterData = {}
 
+---@return FVersionedNiagaraEmitterData
+function FVersionedNiagaraEmitterData:get() end
+
 
 
 ---@class FVersionedNiagaraScriptData
 FVersionedNiagaraScriptData = {}
 
+---@return FVersionedNiagaraScriptData
+function FVersionedNiagaraScriptData:get() end
+
 
 ---@class INiagaraParticleCallbackHandler : IInterface
 INiagaraParticleCallbackHandler = {}
+
+---@return INiagaraParticleCallbackHandler
+function INiagaraParticleCallbackHandler:get() end
 
 ---@param Data TArray<FBasicParticleData>
 ---@param NiagaraSystem UNiagaraSystem
@@ -1539,6 +2037,9 @@ function INiagaraParticleCallbackHandler:ReceiveParticleData(Data, NiagaraSystem
 
 ---@class INiagaraPhysicsAssetDICollectorInterface : IInterface
 INiagaraPhysicsAssetDICollectorInterface = {}
+
+---@return INiagaraPhysicsAssetDICollectorInterface
+function INiagaraPhysicsAssetDICollectorInterface:get() end
 
 
 ---@class UAsyncNiagaraCaptureSimCache : UBlueprintAsyncActionBase
@@ -1552,6 +2053,9 @@ INiagaraPhysicsAssetDICollectorInterface = {}
 ---@field bAdvanceSimulation boolean
 ---@field AdvanceDeltaTime float
 UAsyncNiagaraCaptureSimCache = {}
+
+---@return UAsyncNiagaraCaptureSimCache
+function UAsyncNiagaraCaptureSimCache:get() end
 
 ---@param bSuccess boolean
 function UAsyncNiagaraCaptureSimCache:OnCaptureComplete__DelegateSignature(bSuccess) end
@@ -1579,22 +2083,37 @@ function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCacheMultiFrame(SimCache,
 ---@class UMovieSceneNiagaraBoolParameterTrack : UMovieSceneNiagaraParameterTrack
 UMovieSceneNiagaraBoolParameterTrack = {}
 
+---@return UMovieSceneNiagaraBoolParameterTrack
+function UMovieSceneNiagaraBoolParameterTrack:get() end
+
 
 ---@class UMovieSceneNiagaraColorParameterTrack : UMovieSceneNiagaraParameterTrack
 UMovieSceneNiagaraColorParameterTrack = {}
+
+---@return UMovieSceneNiagaraColorParameterTrack
+function UMovieSceneNiagaraColorParameterTrack:get() end
 
 
 ---@class UMovieSceneNiagaraFloatParameterTrack : UMovieSceneNiagaraParameterTrack
 UMovieSceneNiagaraFloatParameterTrack = {}
 
+---@return UMovieSceneNiagaraFloatParameterTrack
+function UMovieSceneNiagaraFloatParameterTrack:get() end
+
 
 ---@class UMovieSceneNiagaraIntegerParameterTrack : UMovieSceneNiagaraParameterTrack
 UMovieSceneNiagaraIntegerParameterTrack = {}
+
+---@return UMovieSceneNiagaraIntegerParameterTrack
+function UMovieSceneNiagaraIntegerParameterTrack:get() end
 
 
 ---@class UMovieSceneNiagaraParameterTrack : UMovieSceneNiagaraTrack
 ---@field Parameter FNiagaraVariable
 UMovieSceneNiagaraParameterTrack = {}
+
+---@return UMovieSceneNiagaraParameterTrack
+function UMovieSceneNiagaraParameterTrack:get() end
 
 
 
@@ -1606,15 +2125,24 @@ UMovieSceneNiagaraParameterTrack = {}
 ---@field bAllowScalability boolean
 UMovieSceneNiagaraSystemSpawnSection = {}
 
+---@return UMovieSceneNiagaraSystemSpawnSection
+function UMovieSceneNiagaraSystemSpawnSection:get() end
+
 
 
 ---@class UMovieSceneNiagaraSystemTrack : UMovieSceneNiagaraTrack
 UMovieSceneNiagaraSystemTrack = {}
 
+---@return UMovieSceneNiagaraSystemTrack
+function UMovieSceneNiagaraSystemTrack:get() end
+
 
 ---@class UMovieSceneNiagaraTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
 UMovieSceneNiagaraTrack = {}
+
+---@return UMovieSceneNiagaraTrack
+function UMovieSceneNiagaraTrack:get() end
 
 
 
@@ -1622,11 +2150,17 @@ UMovieSceneNiagaraTrack = {}
 ---@field ChannelsUsed int32
 UMovieSceneNiagaraVectorParameterTrack = {}
 
+---@return UMovieSceneNiagaraVectorParameterTrack
+function UMovieSceneNiagaraVectorParameterTrack:get() end
+
 
 
 ---@class UNiagaraBakerOutput : UObject
 ---@field OutputName FString
 UNiagaraBakerOutput = {}
+
+---@return UNiagaraBakerOutput
+function UNiagaraBakerOutput:get() end
 
 
 
@@ -1634,6 +2168,9 @@ UNiagaraBakerOutput = {}
 ---@field SimCacheAssetPathFormat FString
 ---@field CreateParameters FNiagaraSimCacheCreateParameters
 UNiagaraBakerOutputSimCache = {}
+
+---@return UNiagaraBakerOutputSimCache
+function UNiagaraBakerOutputSimCache:get() end
 
 
 
@@ -1653,6 +2190,9 @@ UNiagaraBakerOutputSimCache = {}
 ---@field FramesExportPathFormat FString
 UNiagaraBakerOutputTexture2D = {}
 
+---@return UNiagaraBakerOutputTexture2D
+function UNiagaraBakerOutputTexture2D:get() end
+
 
 
 ---@class UNiagaraBakerOutputVolumeTexture : UNiagaraBakerOutput
@@ -1664,6 +2204,9 @@ UNiagaraBakerOutputTexture2D = {}
 ---@field FramesAssetPathFormat FString
 ---@field FramesExportPathFormat FString
 UNiagaraBakerOutputVolumeTexture = {}
+
+---@return UNiagaraBakerOutputVolumeTexture
+function UNiagaraBakerOutputVolumeTexture:get() end
 
 
 
@@ -1689,6 +2232,9 @@ UNiagaraBakerOutputVolumeTexture = {}
 ---@field CameraAspectRatio float
 UNiagaraBakerSettings = {}
 
+---@return UNiagaraBakerSettings
+function UNiagaraBakerSettings:get() end
+
 
 
 ---@class UNiagaraBaselineController : UObject
@@ -1697,6 +2243,9 @@ UNiagaraBakerSettings = {}
 ---@field Owner ANiagaraPerfBaselineActor
 ---@field System TSoftObjectPtr<UNiagaraSystem>
 UNiagaraBaselineController = {}
+
+---@return UNiagaraBaselineController
+function UNiagaraBaselineController:get() end
 
 ---@return boolean
 function UNiagaraBaselineController:OnTickTest() end
@@ -1713,6 +2262,9 @@ function UNiagaraBaselineController:GetSystem() end
 ---@field NumInstances int32
 ---@field SpawnedComponents TArray<UNiagaraComponent>
 UNiagaraBaselineController_Basic = {}
+
+---@return UNiagaraBaselineController_Basic
+function UNiagaraBaselineController_Basic:get() end
 
 
 
@@ -1738,6 +2290,9 @@ UNiagaraBaselineController_Basic = {}
 ---@field SimCache UNiagaraSimCache
 ---@field CullProxy UNiagaraCullProxyComponent
 UNiagaraComponent = {}
+
+---@return UNiagaraComponent
+function UNiagaraComponent:get() end
 
 ---@param InVariableName FName
 ---@param InValue FVector4
@@ -1943,6 +2498,9 @@ function UNiagaraComponent:AdvanceSimulation(TickCount, TickDeltaSeconds) end
 ---@field WorldParticleSystemPools TMap<UNiagaraSystem, FNCPool>
 UNiagaraComponentPool = {}
 
+---@return UNiagaraComponentPool
+function UNiagaraComponentPool:get() end
+
 
 
 ---@class UNiagaraComponentRendererProperties : UNiagaraRendererProperties
@@ -1958,6 +2516,9 @@ UNiagaraComponentPool = {}
 ---@field PropertyBindings TArray<FNiagaraComponentPropertyBinding>
 UNiagaraComponentRendererProperties = {}
 
+---@return UNiagaraComponentRendererProperties
+function UNiagaraComponentRendererProperties:get() end
+
 
 
 ---@class UNiagaraComponentSettings : UObject
@@ -1968,20 +2529,32 @@ UNiagaraComponentRendererProperties = {}
 ---@field GpuDataInterfaceDenyList TSet<FName>
 UNiagaraComponentSettings = {}
 
+---@return UNiagaraComponentSettings
+function UNiagaraComponentSettings:get() end
+
 
 
 ---@class UNiagaraConvertInPlaceUtilityBase : UObject
 UNiagaraConvertInPlaceUtilityBase = {}
+
+---@return UNiagaraConvertInPlaceUtilityBase
+function UNiagaraConvertInPlaceUtilityBase:get() end
 
 
 ---@class UNiagaraCullProxyComponent : UNiagaraComponent
 ---@field Instances TArray<FNiagaraCulledComponentInfo>
 UNiagaraCullProxyComponent = {}
 
+---@return UNiagaraCullProxyComponent
+function UNiagaraCullProxyComponent:get() end
+
 
 
 ---@class UNiagaraDIRigidMeshCollisionFunctionLibrary : UBlueprintFunctionLibrary
 UNiagaraDIRigidMeshCollisionFunctionLibrary = {}
+
+---@return UNiagaraDIRigidMeshCollisionFunctionLibrary
+function UNiagaraDIRigidMeshCollisionFunctionLibrary:get() end
 
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
@@ -1992,11 +2565,17 @@ function UNiagaraDIRigidMeshCollisionFunctionLibrary:SetSourceActors(NiagaraSyst
 ---@class UNiagaraDataInterface : UNiagaraDataInterfaceBase
 UNiagaraDataInterface = {}
 
+---@return UNiagaraDataInterface
+function UNiagaraDataInterface:get() end
+
 
 ---@class UNiagaraDataInterface2DArrayTexture : UNiagaraDataInterface
 ---@field Texture UTexture
 ---@field TextureUserParameter FNiagaraUserParameterBinding
 UNiagaraDataInterface2DArrayTexture = {}
+
+---@return UNiagaraDataInterface2DArrayTexture
+function UNiagaraDataInterface2DArrayTexture:get() end
 
 
 
@@ -2008,6 +2587,9 @@ UNiagaraDataInterface2DArrayTexture = {}
 ---@field ActorOrComponentParameter FNiagaraUserParameterBinding
 UNiagaraDataInterfaceActorComponent = {}
 
+---@return UNiagaraDataInterfaceActorComponent
+function UNiagaraDataInterfaceActorComponent:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArray : UNiagaraDataInterfaceRWBase
@@ -2015,11 +2597,17 @@ UNiagaraDataInterfaceActorComponent = {}
 ---@field MaxElements int32
 UNiagaraDataInterfaceArray = {}
 
+---@return UNiagaraDataInterfaceArray
+function UNiagaraDataInterfaceArray:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArrayBool : UNiagaraDataInterfaceArray
 ---@field BoolData TArray<boolean>
 UNiagaraDataInterfaceArrayBool = {}
+
+---@return UNiagaraDataInterfaceArrayBool
+function UNiagaraDataInterfaceArrayBool:get() end
 
 
 
@@ -2027,11 +2615,17 @@ UNiagaraDataInterfaceArrayBool = {}
 ---@field ColorData TArray<FLinearColor>
 UNiagaraDataInterfaceArrayColor = {}
 
+---@return UNiagaraDataInterfaceArrayColor
+function UNiagaraDataInterfaceArrayColor:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArrayFloat : UNiagaraDataInterfaceArray
 ---@field FloatData TArray<float>
 UNiagaraDataInterfaceArrayFloat = {}
+
+---@return UNiagaraDataInterfaceArrayFloat
+function UNiagaraDataInterfaceArrayFloat:get() end
 
 
 
@@ -2039,11 +2633,17 @@ UNiagaraDataInterfaceArrayFloat = {}
 ---@field InternalFloatData TArray<FVector2f>
 UNiagaraDataInterfaceArrayFloat2 = {}
 
+---@return UNiagaraDataInterfaceArrayFloat2
+function UNiagaraDataInterfaceArrayFloat2:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArrayFloat3 : UNiagaraDataInterfaceArray
 ---@field InternalFloatData TArray<FVector3f>
 UNiagaraDataInterfaceArrayFloat3 = {}
+
+---@return UNiagaraDataInterfaceArrayFloat3
+function UNiagaraDataInterfaceArrayFloat3:get() end
 
 
 
@@ -2051,10 +2651,16 @@ UNiagaraDataInterfaceArrayFloat3 = {}
 ---@field InternalFloatData TArray<FVector4f>
 UNiagaraDataInterfaceArrayFloat4 = {}
 
+---@return UNiagaraDataInterfaceArrayFloat4
+function UNiagaraDataInterfaceArrayFloat4:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArrayFunctionLibrary : UBlueprintFunctionLibrary
 UNiagaraDataInterfaceArrayFunctionLibrary = {}
+
+---@return UNiagaraDataInterfaceArrayFunctionLibrary
+function UNiagaraDataInterfaceArrayFunctionLibrary:get() end
 
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
@@ -2252,11 +2858,17 @@ function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayBool(NiagaraSy
 ---@field IntData TArray<int32>
 UNiagaraDataInterfaceArrayInt32 = {}
 
+---@return UNiagaraDataInterfaceArrayInt32
+function UNiagaraDataInterfaceArrayInt32:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArrayNiagaraID : UNiagaraDataInterfaceArray
 ---@field IntData TArray<FNiagaraID>
 UNiagaraDataInterfaceArrayNiagaraID = {}
+
+---@return UNiagaraDataInterfaceArrayNiagaraID
+function UNiagaraDataInterfaceArrayNiagaraID:get() end
 
 
 
@@ -2264,17 +2876,26 @@ UNiagaraDataInterfaceArrayNiagaraID = {}
 ---@field PositionData TArray<FNiagaraPosition>
 UNiagaraDataInterfaceArrayPosition = {}
 
+---@return UNiagaraDataInterfaceArrayPosition
+function UNiagaraDataInterfaceArrayPosition:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArrayQuat : UNiagaraDataInterfaceArray
 ---@field InternalQuatData TArray<FQuat4f>
 UNiagaraDataInterfaceArrayQuat = {}
 
+---@return UNiagaraDataInterfaceArrayQuat
+function UNiagaraDataInterfaceArrayQuat:get() end
+
 
 
 ---@class UNiagaraDataInterfaceArrayUInt8 : UNiagaraDataInterfaceArray
 ---@field InternalIntData TArray<uint8>
 UNiagaraDataInterfaceArrayUInt8 = {}
+
+---@return UNiagaraDataInterfaceArrayUInt8
+function UNiagaraDataInterfaceArrayUInt8:get() end
 
 
 
@@ -2284,6 +2905,9 @@ UNiagaraDataInterfaceArrayUInt8 = {}
 ---@field TraceProvider ENDICollisionQuery_AsyncGpuTraceProvider::Type
 UNiagaraDataInterfaceAsyncGpuTrace = {}
 
+---@return UNiagaraDataInterfaceAsyncGpuTrace
+function UNiagaraDataInterfaceAsyncGpuTrace:get() end
+
 
 
 ---@class UNiagaraDataInterfaceAudioOscilloscope : UNiagaraDataInterface
@@ -2291,6 +2915,9 @@ UNiagaraDataInterfaceAsyncGpuTrace = {}
 ---@field Resolution int32
 ---@field ScopeInMilliseconds float
 UNiagaraDataInterfaceAudioOscilloscope = {}
+
+---@return UNiagaraDataInterfaceAudioOscilloscope
+function UNiagaraDataInterfaceAudioOscilloscope:get() end
 
 
 
@@ -2305,6 +2932,9 @@ UNiagaraDataInterfaceAudioOscilloscope = {}
 ---@field bAllowLoopingOneShotSounds boolean
 UNiagaraDataInterfaceAudioPlayer = {}
 
+---@return UNiagaraDataInterfaceAudioPlayer
+function UNiagaraDataInterfaceAudioPlayer:get() end
+
 
 
 ---@class UNiagaraDataInterfaceAudioSpectrum : UNiagaraDataInterfaceAudioSubmix
@@ -2314,11 +2944,17 @@ UNiagaraDataInterfaceAudioPlayer = {}
 ---@field NoiseFloorDb float
 UNiagaraDataInterfaceAudioSpectrum = {}
 
+---@return UNiagaraDataInterfaceAudioSpectrum
+function UNiagaraDataInterfaceAudioSpectrum:get() end
+
 
 
 ---@class UNiagaraDataInterfaceAudioSubmix : UNiagaraDataInterface
 ---@field Submix USoundSubmix
 UNiagaraDataInterfaceAudioSubmix = {}
+
+---@return UNiagaraDataInterfaceAudioSubmix
+function UNiagaraDataInterfaceAudioSubmix:get() end
 
 
 
@@ -2327,10 +2963,16 @@ UNiagaraDataInterfaceAudioSubmix = {}
 ---@field bRequireCurrentFrameData boolean
 UNiagaraDataInterfaceCamera = {}
 
+---@return UNiagaraDataInterfaceCamera
+function UNiagaraDataInterfaceCamera:get() end
+
 
 
 ---@class UNiagaraDataInterfaceCollisionQuery : UNiagaraDataInterface
 UNiagaraDataInterfaceCollisionQuery = {}
+
+---@return UNiagaraDataInterfaceCollisionQuery
+function UNiagaraDataInterfaceCollisionQuery:get() end
 
 
 ---@class UNiagaraDataInterfaceColorCurve : UNiagaraDataInterfaceCurveBase
@@ -2340,6 +2982,9 @@ UNiagaraDataInterfaceCollisionQuery = {}
 ---@field AlphaCurve FRichCurve
 UNiagaraDataInterfaceColorCurve = {}
 
+---@return UNiagaraDataInterfaceColorCurve
+function UNiagaraDataInterfaceColorCurve:get() end
+
 
 
 ---@class UNiagaraDataInterfaceCubeTexture : UNiagaraDataInterface
@@ -2347,17 +2992,26 @@ UNiagaraDataInterfaceColorCurve = {}
 ---@field TextureUserParameter FNiagaraUserParameterBinding
 UNiagaraDataInterfaceCubeTexture = {}
 
+---@return UNiagaraDataInterfaceCubeTexture
+function UNiagaraDataInterfaceCubeTexture:get() end
+
 
 
 ---@class UNiagaraDataInterfaceCurlNoise : UNiagaraDataInterface
 ---@field Seed uint32
 UNiagaraDataInterfaceCurlNoise = {}
 
+---@return UNiagaraDataInterfaceCurlNoise
+function UNiagaraDataInterfaceCurlNoise:get() end
+
 
 
 ---@class UNiagaraDataInterfaceCurve : UNiagaraDataInterfaceCurveBase
 ---@field Curve FRichCurve
 UNiagaraDataInterfaceCurve = {}
+
+---@return UNiagaraDataInterfaceCurve
+function UNiagaraDataInterfaceCurve:get() end
 
 
 
@@ -2373,17 +3027,26 @@ UNiagaraDataInterfaceCurve = {}
 ---@field ExposedTexture UTexture2D
 UNiagaraDataInterfaceCurveBase = {}
 
+---@return UNiagaraDataInterfaceCurveBase
+function UNiagaraDataInterfaceCurveBase:get() end
+
 
 
 ---@class UNiagaraDataInterfaceDebugDraw : UNiagaraDataInterface
 ---@field OverrideMaxLineInstances uint32
 UNiagaraDataInterfaceDebugDraw = {}
 
+---@return UNiagaraDataInterfaceDebugDraw
+function UNiagaraDataInterfaceDebugDraw:get() end
+
 
 
 ---@class UNiagaraDataInterfaceEmitterProperties : UNiagaraDataInterface
 ---@field EmitterBinding FNiagaraDataInterfaceEmitterBinding
 UNiagaraDataInterfaceEmitterProperties = {}
+
+---@return UNiagaraDataInterfaceEmitterProperties
+function UNiagaraDataInterfaceEmitterProperties:get() end
 
 
 
@@ -2394,10 +3057,16 @@ UNiagaraDataInterfaceEmitterProperties = {}
 ---@field GPUAllocationPerParticleSize float
 UNiagaraDataInterfaceExport = {}
 
+---@return UNiagaraDataInterfaceExport
+function UNiagaraDataInterfaceExport:get() end
+
 
 
 ---@class UNiagaraDataInterfaceGBuffer : UNiagaraDataInterface
 UNiagaraDataInterfaceGBuffer = {}
+
+---@return UNiagaraDataInterfaceGBuffer
+function UNiagaraDataInterfaceGBuffer:get() end
 
 
 ---@class UNiagaraDataInterfaceGrid2D : UNiagaraDataInterfaceRWBase
@@ -2409,6 +3078,9 @@ UNiagaraDataInterfaceGBuffer = {}
 ---@field WorldBBoxSize FVector2D
 UNiagaraDataInterfaceGrid2D = {}
 
+---@return UNiagaraDataInterfaceGrid2D
+function UNiagaraDataInterfaceGrid2D:get() end
+
 
 
 ---@class UNiagaraDataInterfaceGrid2DCollection : UNiagaraDataInterfaceGrid2D
@@ -2417,6 +3089,9 @@ UNiagaraDataInterfaceGrid2D = {}
 ---@field bOverrideFormat boolean
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2DArray>
 UNiagaraDataInterfaceGrid2DCollection = {}
+
+---@return UNiagaraDataInterfaceGrid2DCollection
+function UNiagaraDataInterfaceGrid2DCollection:get() end
 
 ---@param Component UNiagaraComponent
 ---@param SizeX int32
@@ -2444,6 +3119,9 @@ function UNiagaraDataInterfaceGrid2DCollection:FillRawTexture2D(Component, Dest,
 ---@field DIName FString
 UNiagaraDataInterfaceGrid2DCollectionReader = {}
 
+---@return UNiagaraDataInterfaceGrid2DCollectionReader
+function UNiagaraDataInterfaceGrid2DCollectionReader:get() end
+
 
 
 ---@class UNiagaraDataInterfaceGrid3D : UNiagaraDataInterfaceRWBase
@@ -2454,6 +3132,9 @@ UNiagaraDataInterfaceGrid2DCollectionReader = {}
 ---@field WorldBBoxSize FVector
 UNiagaraDataInterfaceGrid3D = {}
 
+---@return UNiagaraDataInterfaceGrid3D
+function UNiagaraDataInterfaceGrid3D:get() end
+
 
 
 ---@class UNiagaraDataInterfaceGrid3DCollection : UNiagaraDataInterfaceGrid3D
@@ -2462,6 +3143,9 @@ UNiagaraDataInterfaceGrid3D = {}
 ---@field OverrideBufferFormat ENiagaraGpuBufferFormat
 ---@field bOverrideFormat boolean
 UNiagaraDataInterfaceGrid3DCollection = {}
+
+---@return UNiagaraDataInterfaceGrid3DCollection
+function UNiagaraDataInterfaceGrid3DCollection:get() end
 
 ---@param Component UNiagaraComponent
 ---@param SizeX int32
@@ -2492,6 +3176,9 @@ function UNiagaraDataInterfaceGrid3DCollection:FillRawVolumeTexture(Component, D
 ---@field DIName FString
 UNiagaraDataInterfaceGrid3DCollectionReader = {}
 
+---@return UNiagaraDataInterfaceGrid3DCollectionReader
+function UNiagaraDataInterfaceGrid3DCollectionReader:get() end
+
 
 
 ---@class UNiagaraDataInterfaceIntRenderTarget2D : UNiagaraDataInterfaceRWBase
@@ -2499,6 +3186,9 @@ UNiagaraDataInterfaceGrid3DCollectionReader = {}
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2D>
 UNiagaraDataInterfaceIntRenderTarget2D = {}
+
+---@return UNiagaraDataInterfaceIntRenderTarget2D
+function UNiagaraDataInterfaceIntRenderTarget2D:get() end
 
 
 
@@ -2508,11 +3198,17 @@ UNiagaraDataInterfaceIntRenderTarget2D = {}
 ---@field PhysicalMaterials TArray<UPhysicalMaterial>
 UNiagaraDataInterfaceLandscape = {}
 
+---@return UNiagaraDataInterfaceLandscape
+function UNiagaraDataInterfaceLandscape:get() end
+
 
 
 ---@class UNiagaraDataInterfaceMeshRendererInfo : UNiagaraDataInterface
 ---@field MeshRenderer UNiagaraMeshRendererProperties
 UNiagaraDataInterfaceMeshRendererInfo = {}
+
+---@return UNiagaraDataInterfaceMeshRendererInfo
+function UNiagaraDataInterfaceMeshRendererInfo:get() end
 
 
 
@@ -2520,15 +3216,24 @@ UNiagaraDataInterfaceMeshRendererInfo = {}
 ---@field MaxNeighborsPerCell uint32
 UNiagaraDataInterfaceNeighborGrid3D = {}
 
+---@return UNiagaraDataInterfaceNeighborGrid3D
+function UNiagaraDataInterfaceNeighborGrid3D:get() end
+
 
 
 ---@class UNiagaraDataInterfaceOcclusion : UNiagaraDataInterface
 UNiagaraDataInterfaceOcclusion = {}
 
+---@return UNiagaraDataInterfaceOcclusion
+function UNiagaraDataInterfaceOcclusion:get() end
+
 
 ---@class UNiagaraDataInterfaceParticleRead : UNiagaraDataInterfaceRWBase
 ---@field EmitterName FString
 UNiagaraDataInterfaceParticleRead = {}
+
+---@return UNiagaraDataInterfaceParticleRead
+function UNiagaraDataInterfaceParticleRead:get() end
 
 
 
@@ -2538,16 +3243,25 @@ UNiagaraDataInterfaceParticleRead = {}
 ---@field MeshUserParameter FNiagaraUserParameterBinding
 UNiagaraDataInterfacePhysicsAsset = {}
 
+---@return UNiagaraDataInterfacePhysicsAsset
+function UNiagaraDataInterfacePhysicsAsset:get() end
+
 
 
 ---@class UNiagaraDataInterfacePlatformSet : UNiagaraDataInterface
 ---@field Platforms FNiagaraPlatformSet
 UNiagaraDataInterfacePlatformSet = {}
 
+---@return UNiagaraDataInterfacePlatformSet
+function UNiagaraDataInterfacePlatformSet:get() end
+
 
 
 ---@class UNiagaraDataInterfaceRWBase : UNiagaraDataInterface
 UNiagaraDataInterfaceRWBase = {}
+
+---@return UNiagaraDataInterfaceRWBase
+function UNiagaraDataInterfaceRWBase:get() end
 
 
 ---@class UNiagaraDataInterfaceRasterizationGrid3D : UNiagaraDataInterfaceGrid3D
@@ -2555,6 +3269,9 @@ UNiagaraDataInterfaceRWBase = {}
 ---@field Precision float
 ---@field ResetValue int32
 UNiagaraDataInterfaceRasterizationGrid3D = {}
+
+---@return UNiagaraDataInterfaceRasterizationGrid3D
+function UNiagaraDataInterfaceRasterizationGrid3D:get() end
 
 
 
@@ -2569,6 +3286,9 @@ UNiagaraDataInterfaceRasterizationGrid3D = {}
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2D>
 UNiagaraDataInterfaceRenderTarget2D = {}
 
+---@return UNiagaraDataInterfaceRenderTarget2D
+function UNiagaraDataInterfaceRenderTarget2D:get() end
+
 
 
 ---@class UNiagaraDataInterfaceRenderTarget2DArray : UNiagaraDataInterfaceRWBase
@@ -2579,6 +3299,9 @@ UNiagaraDataInterfaceRenderTarget2D = {}
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTarget2DArray>
 UNiagaraDataInterfaceRenderTarget2DArray = {}
+
+---@return UNiagaraDataInterfaceRenderTarget2DArray
+function UNiagaraDataInterfaceRenderTarget2DArray:get() end
 
 
 
@@ -2591,6 +3314,9 @@ UNiagaraDataInterfaceRenderTarget2DArray = {}
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTargetCube>
 UNiagaraDataInterfaceRenderTargetCube = {}
 
+---@return UNiagaraDataInterfaceRenderTargetCube
+function UNiagaraDataInterfaceRenderTargetCube:get() end
+
 
 
 ---@class UNiagaraDataInterfaceRenderTargetVolume : UNiagaraDataInterfaceRWBase
@@ -2601,6 +3327,9 @@ UNiagaraDataInterfaceRenderTargetCube = {}
 ---@field RenderTargetUserParameter FNiagaraUserParameterBinding
 ---@field ManagedRenderTargets TMap<uint64, UTextureRenderTargetVolume>
 UNiagaraDataInterfaceRenderTargetVolume = {}
+
+---@return UNiagaraDataInterfaceRenderTargetVolume
+function UNiagaraDataInterfaceRenderTargetVolume:get() end
 
 
 
@@ -2615,6 +3344,9 @@ UNiagaraDataInterfaceRenderTargetVolume = {}
 ---@field MaxNumPrimitives int32
 UNiagaraDataInterfaceRigidMeshCollisionQuery = {}
 
+---@return UNiagaraDataInterfaceRigidMeshCollisionQuery
+function UNiagaraDataInterfaceRigidMeshCollisionQuery:get() end
+
 
 
 ---@class UNiagaraDataInterfaceSimCacheReader : UNiagaraDataInterface
@@ -2623,12 +3355,18 @@ UNiagaraDataInterfaceRigidMeshCollisionQuery = {}
 ---@field EmitterBinding FName
 UNiagaraDataInterfaceSimCacheReader = {}
 
+---@return UNiagaraDataInterfaceSimCacheReader
+function UNiagaraDataInterfaceSimCacheReader:get() end
+
 
 
 ---@class UNiagaraDataInterfaceSimpleCounter : UNiagaraDataInterface
 ---@field GpuSyncMode ENiagaraGpuSyncMode
 ---@field InitialValue int32
 UNiagaraDataInterfaceSimpleCounter = {}
+
+---@return UNiagaraDataInterfaceSimpleCounter
+function UNiagaraDataInterfaceSimpleCounter:get() end
 
 
 
@@ -2649,6 +3387,9 @@ UNiagaraDataInterfaceSimpleCounter = {}
 ---@field bRequireCurrentFrameData boolean
 UNiagaraDataInterfaceSkeletalMesh = {}
 
+---@return UNiagaraDataInterfaceSkeletalMesh
+function UNiagaraDataInterfaceSkeletalMesh:get() end
+
 ---@param InSource AActor
 ---@param Reason EEndPlayReason::Type
 function UNiagaraDataInterfaceSkeletalMesh:OnSourceEndPlay(InSource, Reason) end
@@ -2661,11 +3402,17 @@ function UNiagaraDataInterfaceSkeletalMesh:OnSourceEndPlay(InSource, Reason) end
 ---@field NumLUTSteps int32
 UNiagaraDataInterfaceSpline = {}
 
+---@return UNiagaraDataInterfaceSpline
+function UNiagaraDataInterfaceSpline:get() end
+
 
 
 ---@class UNiagaraDataInterfaceSpriteRendererInfo : UNiagaraDataInterface
 ---@field SpriteRenderer UNiagaraSpriteRendererProperties
 UNiagaraDataInterfaceSpriteRendererInfo = {}
+
+---@return UNiagaraDataInterfaceSpriteRendererInfo
+function UNiagaraDataInterfaceSpriteRendererInfo:get() end
 
 
 
@@ -2679,6 +3426,9 @@ UNiagaraDataInterfaceSpriteRendererInfo = {}
 ---@field FilteredSockets TArray<FName>
 UNiagaraDataInterfaceStaticMesh = {}
 
+---@return UNiagaraDataInterfaceStaticMesh
+function UNiagaraDataInterfaceStaticMesh:get() end
+
 ---@param InSource AActor
 ---@param Reason EEndPlayReason::Type
 function UNiagaraDataInterfaceStaticMesh:OnSourceEndPlay(InSource, Reason) end
@@ -2689,6 +3439,9 @@ function UNiagaraDataInterfaceStaticMesh:OnSourceEndPlay(InSource, Reason) end
 ---@field TextureUserParameter FNiagaraUserParameterBinding
 UNiagaraDataInterfaceTexture = {}
 
+---@return UNiagaraDataInterfaceTexture
+function UNiagaraDataInterfaceTexture:get() end
+
 
 
 ---@class UNiagaraDataInterfaceUObjectPropertyReader : UNiagaraDataInterface
@@ -2697,6 +3450,9 @@ UNiagaraDataInterfaceTexture = {}
 ---@field SourceActor TSoftObjectPtr<AActor>
 ---@field SourceActorComponentClass TObjectPtr<UClass>
 UNiagaraDataInterfaceUObjectPropertyReader = {}
+
+---@return UNiagaraDataInterfaceUObjectPropertyReader
+function UNiagaraDataInterfaceUObjectPropertyReader:get() end
 
 ---@param NiagaraComponent UNiagaraComponent
 ---@param UserParameterName FName
@@ -2710,6 +3466,9 @@ function UNiagaraDataInterfaceUObjectPropertyReader:SetUObjectReaderPropertyRema
 ---@field YCurve FRichCurve
 UNiagaraDataInterfaceVector2DCurve = {}
 
+---@return UNiagaraDataInterfaceVector2DCurve
+function UNiagaraDataInterfaceVector2DCurve:get() end
+
 
 
 ---@class UNiagaraDataInterfaceVector4Curve : UNiagaraDataInterfaceCurveBase
@@ -2719,6 +3478,9 @@ UNiagaraDataInterfaceVector2DCurve = {}
 ---@field WCurve FRichCurve
 UNiagaraDataInterfaceVector4Curve = {}
 
+---@return UNiagaraDataInterfaceVector4Curve
+function UNiagaraDataInterfaceVector4Curve:get() end
+
 
 
 ---@class UNiagaraDataInterfaceVectorCurve : UNiagaraDataInterfaceCurveBase
@@ -2726,6 +3488,9 @@ UNiagaraDataInterfaceVector4Curve = {}
 ---@field YCurve FRichCurve
 ---@field ZCurve FRichCurve
 UNiagaraDataInterfaceVectorCurve = {}
+
+---@return UNiagaraDataInterfaceVectorCurve
+function UNiagaraDataInterfaceVectorCurve:get() end
 
 
 
@@ -2736,6 +3501,9 @@ UNiagaraDataInterfaceVectorCurve = {}
 ---@field bTileZ boolean
 UNiagaraDataInterfaceVectorField = {}
 
+---@return UNiagaraDataInterfaceVectorField
+function UNiagaraDataInterfaceVectorField:get() end
+
 
 
 ---@class UNiagaraDataInterfaceVirtualTexture : UNiagaraDataInterface
@@ -2743,11 +3511,17 @@ UNiagaraDataInterfaceVectorField = {}
 ---@field TextureUserParameter FNiagaraUserParameterBinding
 UNiagaraDataInterfaceVirtualTexture = {}
 
+---@return UNiagaraDataInterfaceVirtualTexture
+function UNiagaraDataInterfaceVirtualTexture:get() end
+
 
 
 ---@class UNiagaraDataInterfaceVolumeCache : UNiagaraDataInterface
 ---@field VolumeCache UVolumeCache
 UNiagaraDataInterfaceVolumeCache = {}
+
+---@return UNiagaraDataInterfaceVolumeCache
+function UNiagaraDataInterfaceVolumeCache:get() end
 
 
 
@@ -2756,20 +3530,32 @@ UNiagaraDataInterfaceVolumeCache = {}
 ---@field TextureUserParameter FNiagaraUserParameterBinding
 UNiagaraDataInterfaceVolumeTexture = {}
 
+---@return UNiagaraDataInterfaceVolumeTexture
+function UNiagaraDataInterfaceVolumeTexture:get() end
+
 
 
 ---@class UNiagaraDebugHUDSettings : UObject
 ---@field Data FNiagaraDebugHUDSettingsData
 UNiagaraDebugHUDSettings = {}
 
+---@return UNiagaraDebugHUDSettings
+function UNiagaraDebugHUDSettings:get() end
+
 
 
 ---@class UNiagaraEditorDataBase : UObject
 UNiagaraEditorDataBase = {}
 
+---@return UNiagaraEditorDataBase
+function UNiagaraEditorDataBase:get() end
+
 
 ---@class UNiagaraEditorParametersAdapterBase : UObject
 UNiagaraEditorParametersAdapterBase = {}
+
+---@return UNiagaraEditorParametersAdapterBase
+function UNiagaraEditorParametersAdapterBase:get() end
 
 
 ---@class UNiagaraEffectType : UObject
@@ -2786,6 +3572,9 @@ UNiagaraEditorParametersAdapterBase = {}
 ---@field PerfBaselineVersion FGuid
 UNiagaraEffectType = {}
 
+---@return UNiagaraEffectType
+function UNiagaraEffectType:get() end
+
 
 
 ---@class UNiagaraEmitter : UObject
@@ -2800,20 +3589,32 @@ UNiagaraEffectType = {}
 ---@field SharedEventGeneratorIds TArray<FName>
 UNiagaraEmitter = {}
 
+---@return UNiagaraEmitter
+function UNiagaraEmitter:get() end
+
 
 
 ---@class UNiagaraEventReceiverEmitterAction : UObject
 UNiagaraEventReceiverEmitterAction = {}
+
+---@return UNiagaraEventReceiverEmitterAction
+function UNiagaraEventReceiverEmitterAction:get() end
 
 
 ---@class UNiagaraEventReceiverEmitterAction_SpawnParticles : UNiagaraEventReceiverEmitterAction
 ---@field NumParticles uint32
 UNiagaraEventReceiverEmitterAction_SpawnParticles = {}
 
+---@return UNiagaraEventReceiverEmitterAction_SpawnParticles
+function UNiagaraEventReceiverEmitterAction_SpawnParticles:get() end
+
 
 
 ---@class UNiagaraFunctionLibrary : UBlueprintFunctionLibrary
 UNiagaraFunctionLibrary = {}
+
+---@return UNiagaraFunctionLibrary
+function UNiagaraFunctionLibrary:get() end
 
 ---@param SpawnParams FFXSystemSpawnParameters
 ---@return UNiagaraComponent
@@ -2919,6 +3720,9 @@ function UNiagaraFunctionLibrary:AcquireNiagaraGPURayTracedCollisionGroup(WorldC
 ---@field RendererVisibilityTagBinding FNiagaraVariableAttributeBinding
 UNiagaraLightRendererProperties = {}
 
+---@return UNiagaraLightRendererProperties
+function UNiagaraLightRendererProperties:get() end
+
 
 
 ---@class UNiagaraMeshRendererProperties : UNiagaraRendererProperties
@@ -2969,10 +3773,16 @@ UNiagaraLightRendererProperties = {}
 ---@field PivotOffsetSpace ENiagaraMeshPivotOffsetSpace
 UNiagaraMeshRendererProperties = {}
 
+---@return UNiagaraMeshRendererProperties
+function UNiagaraMeshRendererProperties:get() end
+
 
 
 ---@class UNiagaraMessageDataBase : UObject
 UNiagaraMessageDataBase = {}
+
+---@return UNiagaraMessageDataBase
+function UNiagaraMessageDataBase:get() end
 
 
 ---@class UNiagaraParameterCollection : UObject
@@ -2983,6 +3793,9 @@ UNiagaraMessageDataBase = {}
 ---@field CompileId FGuid
 UNiagaraParameterCollection = {}
 
+---@return UNiagaraParameterCollection
+function UNiagaraParameterCollection:get() end
+
 
 
 ---@class UNiagaraParameterCollectionInstance : UObject
@@ -2990,6 +3803,9 @@ UNiagaraParameterCollection = {}
 ---@field OverridenParameters TArray<FNiagaraVariable>
 ---@field ParameterStorage FNiagaraParameterStore
 UNiagaraParameterCollectionInstance = {}
+
+---@return UNiagaraParameterCollectionInstance
+function UNiagaraParameterCollectionInstance:get() end
 
 ---@param InVariableName FString
 ---@param InValue FVector
@@ -3044,16 +3860,25 @@ function UNiagaraParameterCollectionInstance:GetBoolParameter(InVariableName) en
 ---@class UNiagaraParameterDefinitionsBase : UObject
 UNiagaraParameterDefinitionsBase = {}
 
+---@return UNiagaraParameterDefinitionsBase
+function UNiagaraParameterDefinitionsBase:get() end
+
 
 ---@class UNiagaraPrecompileContainer : UObject
 ---@field Scripts TArray<UNiagaraScript>
 ---@field System UNiagaraSystem
 UNiagaraPrecompileContainer = {}
 
+---@return UNiagaraPrecompileContainer
+function UNiagaraPrecompileContainer:get() end
+
 
 
 ---@class UNiagaraPreviewAxis : UObject
 UNiagaraPreviewAxis = {}
+
+---@return UNiagaraPreviewAxis
+function UNiagaraPreviewAxis:get() end
 
 ---@return int32
 function UNiagaraPreviewAxis:Num() end
@@ -3069,12 +3894,18 @@ function UNiagaraPreviewAxis:ApplyToPreview(PreviewComponent, PreviewIndex, bIsX
 ---@field Count int32
 UNiagaraPreviewAxis_InterpParamBase = {}
 
+---@return UNiagaraPreviewAxis_InterpParamBase
+function UNiagaraPreviewAxis_InterpParamBase:get() end
+
 
 
 ---@class UNiagaraPreviewAxis_InterpParamFloat : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min float
 ---@field Max float
 UNiagaraPreviewAxis_InterpParamFloat = {}
+
+---@return UNiagaraPreviewAxis_InterpParamFloat
+function UNiagaraPreviewAxis_InterpParamFloat:get() end
 
 
 
@@ -3083,12 +3914,18 @@ UNiagaraPreviewAxis_InterpParamFloat = {}
 ---@field Max int32
 UNiagaraPreviewAxis_InterpParamInt32 = {}
 
+---@return UNiagaraPreviewAxis_InterpParamInt32
+function UNiagaraPreviewAxis_InterpParamInt32:get() end
+
 
 
 ---@class UNiagaraPreviewAxis_InterpParamLinearColor : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min FLinearColor
 ---@field Max FLinearColor
 UNiagaraPreviewAxis_InterpParamLinearColor = {}
+
+---@return UNiagaraPreviewAxis_InterpParamLinearColor
+function UNiagaraPreviewAxis_InterpParamLinearColor:get() end
 
 
 
@@ -3097,6 +3934,9 @@ UNiagaraPreviewAxis_InterpParamLinearColor = {}
 ---@field Max FVector
 UNiagaraPreviewAxis_InterpParamVector = {}
 
+---@return UNiagaraPreviewAxis_InterpParamVector
+function UNiagaraPreviewAxis_InterpParamVector:get() end
+
 
 
 ---@class UNiagaraPreviewAxis_InterpParamVector2D : UNiagaraPreviewAxis_InterpParamBase
@@ -3104,12 +3944,18 @@ UNiagaraPreviewAxis_InterpParamVector = {}
 ---@field Max FVector2D
 UNiagaraPreviewAxis_InterpParamVector2D = {}
 
+---@return UNiagaraPreviewAxis_InterpParamVector2D
+function UNiagaraPreviewAxis_InterpParamVector2D:get() end
+
 
 
 ---@class UNiagaraPreviewAxis_InterpParamVector4 : UNiagaraPreviewAxis_InterpParamBase
 ---@field Min FVector4
 ---@field Max FVector4
 UNiagaraPreviewAxis_InterpParamVector4 = {}
+
+---@return UNiagaraPreviewAxis_InterpParamVector4
+function UNiagaraPreviewAxis_InterpParamVector4:get() end
 
 
 
@@ -3123,6 +3969,9 @@ UNiagaraPreviewAxis_InterpParamVector4 = {}
 ---@field OuterEmitterVersion FGuid
 ---@field bMotionBlurEnabled boolean
 UNiagaraRendererProperties = {}
+
+---@return UNiagaraRendererProperties
+function UNiagaraRendererProperties:get() end
 
 
 
@@ -3173,10 +4022,16 @@ UNiagaraRendererProperties = {}
 ---@field PrevRibbonTwistBinding FNiagaraVariableAttributeBinding
 UNiagaraRibbonRendererProperties = {}
 
+---@return UNiagaraRibbonRendererProperties
+function UNiagaraRibbonRendererProperties:get() end
+
 
 
 ---@class UNiagaraScratchPadContainer : UObject
 UNiagaraScratchPadContainer = {}
+
+---@return UNiagaraScratchPadContainer
+function UNiagaraScratchPadContainer:get() end
 
 
 ---@class UNiagaraScript : UNiagaraScriptBase
@@ -3191,11 +4046,17 @@ UNiagaraScratchPadContainer = {}
 ---@field CachedDefaultDataInterfaces TArray<FNiagaraScriptDataInterfaceInfo>
 UNiagaraScript = {}
 
+---@return UNiagaraScript
+function UNiagaraScript:get() end
+
 function UNiagaraScript:RaiseOnGPUCompilationComplete() end
 
 
 ---@class UNiagaraScriptSourceBase : UObject
 UNiagaraScriptSourceBase = {}
+
+---@return UNiagaraScriptSourceBase
+function UNiagaraScriptSourceBase:get() end
 
 
 ---@class UNiagaraSettings : UDeveloperSettings
@@ -3221,18 +4082,30 @@ UNiagaraScriptSourceBase = {}
 ---@field PlatformSetRedirects TArray<FNiagaraPlatformSetRedirect>
 UNiagaraSettings = {}
 
+---@return UNiagaraSettings
+function UNiagaraSettings:get() end
+
 
 
 ---@class UNiagaraSignificanceHandler : UObject
 UNiagaraSignificanceHandler = {}
 
+---@return UNiagaraSignificanceHandler
+function UNiagaraSignificanceHandler:get() end
+
 
 ---@class UNiagaraSignificanceHandlerAge : UNiagaraSignificanceHandler
 UNiagaraSignificanceHandlerAge = {}
 
+---@return UNiagaraSignificanceHandlerAge
+function UNiagaraSignificanceHandlerAge:get() end
+
 
 ---@class UNiagaraSignificanceHandlerDistance : UNiagaraSignificanceHandler
 UNiagaraSignificanceHandlerDistance = {}
+
+---@return UNiagaraSignificanceHandlerDistance
+function UNiagaraSignificanceHandlerDistance:get() end
 
 
 ---@class UNiagaraSimCache : UObject
@@ -3245,6 +4118,9 @@ UNiagaraSignificanceHandlerDistance = {}
 ---@field CacheFrames TArray<FNiagaraSimCacheFrame>
 ---@field DataInterfaceStorage TMap<FNiagaraVariableBase, UObject>
 UNiagaraSimCache = {}
+
+---@return UNiagaraSimCache
+function UNiagaraSimCache:get() end
 
 ---@param OutValues TArray<FVector>
 ---@param AttributeName FName
@@ -3322,6 +4198,9 @@ function UNiagaraSimCache:GetAttributeCaptureMode() end
 ---@class UNiagaraSimCacheFunctionLibrary : UBlueprintFunctionLibrary
 UNiagaraSimCacheFunctionLibrary = {}
 
+---@return UNiagaraSimCacheFunctionLibrary
+function UNiagaraSimCacheFunctionLibrary:get() end
+
 ---@param WorldContextObject UObject
 ---@return UNiagaraSimCache
 function UNiagaraSimCacheFunctionLibrary:CreateNiagaraSimCache(WorldContextObject) end
@@ -3340,6 +4219,9 @@ function UNiagaraSimCacheFunctionLibrary:CaptureNiagaraSimCacheImmediate(SimCach
 ---@field SimulationStageName FName
 ---@field bEnabled boolean
 UNiagaraSimulationStageBase = {}
+
+---@return UNiagaraSimulationStageBase
+function UNiagaraSimulationStageBase:get() end
 
 
 
@@ -3365,6 +4247,9 @@ UNiagaraSimulationStageBase = {}
 ---@field bOverrideGpuDispatchNumThreads boolean
 ---@field OverrideGpuDispatchNumThreads FIntVector
 UNiagaraSimulationStageGeneric = {}
+
+---@return UNiagaraSimulationStageGeneric
+function UNiagaraSimulationStageGeneric:get() end
 
 
 
@@ -3421,6 +4306,9 @@ UNiagaraSimulationStageGeneric = {}
 ---@field PrevPivotOffsetBinding FNiagaraVariableAttributeBinding
 UNiagaraSpriteRendererProperties = {}
 
+---@return UNiagaraSpriteRendererProperties
+function UNiagaraSpriteRendererProperties:get() end
+
 
 
 ---@class UNiagaraSystem : UFXSystemAsset
@@ -3470,10 +4358,16 @@ UNiagaraSpriteRendererProperties = {}
 ---@field UserDINamesReadInSystemScripts TArray<FName>
 UNiagaraSystem = {}
 
+---@return UNiagaraSystem
+function UNiagaraSystem:get() end
+
 
 
 ---@class UNiagaraValidationRule : UObject
 UNiagaraValidationRule = {}
+
+---@return UNiagaraValidationRule
+function UNiagaraValidationRule:get() end
 
 
 ---@class UVolumeCache : UObject
@@ -3483,6 +4377,9 @@ UNiagaraValidationRule = {}
 ---@field FrameRangeStart int32
 ---@field FrameRangeEnd int32
 UVolumeCache = {}
+
+---@return UVolumeCache
+function UVolumeCache:get() end
 
 
 

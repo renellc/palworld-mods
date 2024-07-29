@@ -7,6 +7,9 @@
 ---@field PalFacial UPalFacialComponent
 ABP_FunnelCharacter_C = {}
 
+---@return ABP_FunnelCharacter_C
+function ABP_FunnelCharacter_C:get() end
+
 function ABP_FunnelCharacter_C:SetLocationNearTrainer() end
 function ABP_FunnelCharacter_C:ReceiveBeginPlay() end
 ---@param DeltaSeconds float

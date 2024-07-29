@@ -29,6 +29,9 @@
 ---@field MultiKeyMap TMap<FName, FName>
 UWBP_Key_Settings_C = {}
 
+---@return UWBP_Key_Settings_C
+function UWBP_Key_Settings_C:get() end
+
 function UWBP_Key_Settings_C:SetDefault() end
 ---@param FilterType EPalKeyConfigCategory
 UWBP_Key_Settings_C['UI Key Conflict Check'] = function(FilterType) end

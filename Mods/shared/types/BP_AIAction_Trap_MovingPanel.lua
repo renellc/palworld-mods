@@ -5,6 +5,9 @@
 ---@field ActionInst UPalActionBase
 UBP_AIAction_Trap_MovingPanel_C = {}
 
+---@return UBP_AIAction_Trap_MovingPanel_C
+function UBP_AIAction_Trap_MovingPanel_C:get() end
+
 ---@param Exist boolean
 function UBP_AIAction_Trap_MovingPanel_C:OnChangeTrapExist(Exist) end
 ---@param CPC UPalCharacterParameterComponent

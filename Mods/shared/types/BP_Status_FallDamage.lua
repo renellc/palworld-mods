@@ -7,6 +7,9 @@
 ---@field IsGlider boolean
 UBP_Status_FallDamage_C = {}
 
+---@return UBP_Status_FallDamage_C
+function UBP_Status_FallDamage_C:get() end
+
 ---@param Ignore boolean
 function UBP_Status_FallDamage_C:IsIgnoreCharacter(Ignore) end
 ---@param Z double

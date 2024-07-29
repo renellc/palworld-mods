@@ -3,6 +3,9 @@
 ---@class UBP_WorldSecurityLaw_AttackToNonCriminal_C : UPalWorldSecurityLawTrigger_CharacterDamaged
 UBP_WorldSecurityLaw_AttackToNonCriminal_C = {}
 
+---@return UBP_WorldSecurityLaw_AttackToNonCriminal_C
+function UBP_WorldSecurityLaw_AttackToNonCriminal_C:get() end
+
 ---@param Actor AActor
 ---@param bValid boolean
 ---@param CharacterParameter UPalCharacterParameterComponent

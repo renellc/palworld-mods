@@ -6,5 +6,8 @@
 ---@field bAttemptingRejoin boolean
 URejoinCheck = {}
 
+---@return URejoinCheck
+function URejoinCheck:get() end
+
 
 

@@ -74,6 +74,9 @@
 ---@field OnClickedServerList_PreviousButton FWBP_Title_WorldSelect_COnClickedServerList_PreviousButton
 UWBP_Title_WorldSelect_C = {}
 
+---@return UWBP_Title_WorldSelect_C
+function UWBP_Title_WorldSelect_C:get() end
+
 ---@param Navigation EUINavigation
 ---@return UWidget
 function UWBP_Title_WorldSelect_C:CustomNavi_ToInputPasswordCheckBoxOrServerTop(Navigation) end

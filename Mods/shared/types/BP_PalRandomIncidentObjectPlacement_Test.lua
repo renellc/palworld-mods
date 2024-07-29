@@ -14,5 +14,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PalRandomIncidentObjectPlacement_Test_C = {}
 
+---@return ABP_PalRandomIncidentObjectPlacement_Test_C
+function ABP_PalRandomIncidentObjectPlacement_Test_C:get() end
+
 
 

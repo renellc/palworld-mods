@@ -13,6 +13,9 @@
 ---@field IsShooting boolean
 UBP_CombatHeliRpidWeaponComponent_C = {}
 
+---@return UBP_CombatHeliRpidWeaponComponent_C
+function UBP_CombatHeliRpidWeaponComponent_C:get() end
+
 ---@param DeltaTime double
 ---@param Target AActor
 function UBP_CombatHeliRpidWeaponComponent_C:GunAim(DeltaTime, Target) end

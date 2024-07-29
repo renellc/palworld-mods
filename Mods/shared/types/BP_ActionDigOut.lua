@@ -6,6 +6,9 @@
 ---@field AkEventPlayerCrafting UAkAudioEvent
 UBP_ActionDigOut_C = {}
 
+---@return UBP_ActionDigOut_C
+function UBP_ActionDigOut_C:get() end
+
 function UBP_ActionDigOut_C:OnEndAction() end
 function UBP_ActionDigOut_C:OnBeginAction() end
 ---@param EntryPoint int32

@@ -4,5 +4,8 @@
 ---@field SkeletalMesh USkeletalMeshComponent
 ABP_Glider_Item_Base_C = {}
 
+---@return ABP_Glider_Item_Base_C
+function ABP_Glider_Item_Base_C:get() end
+
 
 

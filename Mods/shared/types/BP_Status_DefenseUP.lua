@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Status_DefenseUP_C = {}
 
+---@return UBP_Status_DefenseUP_C
+function UBP_Status_DefenseUP_C:get() end
+
 ---@param Loaded UObject
 function UBP_Status_DefenseUP_C:OnLoaded_A2F777004366F513ABBD72ACA012C04D(Loaded) end
 function UBP_Status_DefenseUP_C:OnBeginStatus() end

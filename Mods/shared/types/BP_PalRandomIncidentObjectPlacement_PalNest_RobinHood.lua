@@ -13,5 +13,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PalRandomIncidentObjectPlacement_PalNest_RobinHood_C = {}
 
+---@return ABP_PalRandomIncidentObjectPlacement_PalNest_RobinHood_C
+function ABP_PalRandomIncidentObjectPlacement_PalNest_RobinHood_C:get() end
+
 
 

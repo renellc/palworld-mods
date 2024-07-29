@@ -6,6 +6,9 @@
 ---@field KeyName FName
 UBP_VisualEffect_CameraMosaic_C = {}
 
+---@return UBP_VisualEffect_CameraMosaic_C
+function UBP_VisualEffect_CameraMosaic_C:get() end
+
 ---@param Weight_Value double
 UBP_VisualEffect_CameraMosaic_C['Update Mosaic'] = function(Weight_Value) end
 ---@param Origin FVector

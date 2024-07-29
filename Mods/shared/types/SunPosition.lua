@@ -9,10 +9,16 @@
 ---@field SolarNoon FTimespan
 FSunPositionData = {}
 
+---@return FSunPositionData
+function FSunPositionData:get() end
+
 
 
 ---@class USunPositionFunctionLibrary : UBlueprintFunctionLibrary
 USunPositionFunctionLibrary = {}
+
+---@return USunPositionFunctionLibrary
+function USunPositionFunctionLibrary:get() end
 
 ---@param Latitude float
 ---@param Longitude float

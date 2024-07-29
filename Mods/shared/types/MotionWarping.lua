@@ -8,11 +8,17 @@
 ---@field TotalRotation FRotator
 FMotionDeltaTrack = {}
 
+---@return FMotionDeltaTrack
+function FMotionDeltaTrack:get() end
+
 
 
 ---@class FMotionDeltaTrackContainer
 ---@field Tracks TArray<FMotionDeltaTrack>
 FMotionDeltaTrackContainer = {}
+
+---@return FMotionDeltaTrackContainer
+function FMotionDeltaTrackContainer:get() end
 
 
 
@@ -25,6 +31,9 @@ FMotionDeltaTrackContainer = {}
 ---@field bFollowComponent boolean
 FMotionWarpingTarget = {}
 
+---@return FMotionWarpingTarget
+function FMotionWarpingTarget:get() end
+
 
 
 ---@class FMotionWarpingUpdateContext
@@ -36,6 +45,9 @@ FMotionWarpingTarget = {}
 ---@field DeltaSeconds float
 FMotionWarpingUpdateContext = {}
 
+---@return FMotionWarpingUpdateContext
+function FMotionWarpingUpdateContext:get() end
+
 
 
 ---@class FMotionWarpingWindowData
@@ -44,11 +56,17 @@ FMotionWarpingUpdateContext = {}
 ---@field EndTime float
 FMotionWarpingWindowData = {}
 
+---@return FMotionWarpingWindowData
+function FMotionWarpingWindowData:get() end
+
 
 
 ---@class UAnimNotifyState_MotionWarping : UAnimNotifyState
 ---@field RootMotionModifier URootMotionModifier
 UAnimNotifyState_MotionWarping = {}
+
+---@return UAnimNotifyState_MotionWarping
+function UAnimNotifyState_MotionWarping:get() end
 
 ---@param MotionWarpingComp UMotionWarpingComponent
 ---@param Modifier URootMotionModifier
@@ -79,6 +97,9 @@ function UAnimNotifyState_MotionWarping:AddRootMotionModifier(MotionWarpingComp,
 ---@class UDEPRECATED_RootMotionModifier_SimpleWarp : URootMotionModifier_Warp
 UDEPRECATED_RootMotionModifier_SimpleWarp = {}
 
+---@return UDEPRECATED_RootMotionModifier_SimpleWarp
+function UDEPRECATED_RootMotionModifier_SimpleWarp:get() end
+
 
 ---@class UMotionWarpingComponent : UActorComponent
 ---@field bSearchForWindowsInAnimsWithinMontages boolean
@@ -87,6 +108,9 @@ UDEPRECATED_RootMotionModifier_SimpleWarp = {}
 ---@field Modifiers TArray<URootMotionModifier>
 ---@field WarpTargets TArray<FMotionWarpingTarget>
 UMotionWarpingComponent = {}
+
+---@return UMotionWarpingComponent
+function UMotionWarpingComponent:get() end
 
 ---@param WarpTargetName FName
 ---@return int32
@@ -113,6 +137,9 @@ function UMotionWarpingComponent:AddOrUpdateWarpTarget(WarpTarget) end
 
 ---@class UMotionWarpingUtilities : UBlueprintFunctionLibrary
 UMotionWarpingUtilities = {}
+
+---@return UMotionWarpingUtilities
+function UMotionWarpingUtilities:get() end
 
 ---@param Animation UAnimSequenceBase
 ---@param OutWindows TArray<FMotionWarpingWindowData>
@@ -143,6 +170,9 @@ function UMotionWarpingUtilities:ExtractRootMotionFromAnimation(Animation, Start
 ---@field State ERootMotionModifierState
 URootMotionModifier = {}
 
+---@return URootMotionModifier
+function URootMotionModifier:get() end
+
 
 
 ---@class URootMotionModifier_AdjustmentBlendWarp : URootMotionModifier_Warp
@@ -154,11 +184,17 @@ URootMotionModifier = {}
 ---@field Result FAnimSequenceTrackContainer
 URootMotionModifier_AdjustmentBlendWarp = {}
 
+---@return URootMotionModifier_AdjustmentBlendWarp
+function URootMotionModifier_AdjustmentBlendWarp:get() end
+
 
 
 ---@class URootMotionModifier_Scale : URootMotionModifier
 ---@field Scale FVector
 URootMotionModifier_Scale = {}
+
+---@return URootMotionModifier_Scale
+function URootMotionModifier_Scale:get() end
 
 ---@param InMotionWarpingComp UMotionWarpingComponent
 ---@param InAnimation UAnimSequenceBase
@@ -171,6 +207,9 @@ function URootMotionModifier_Scale:AddRootMotionModifierScale(InMotionWarpingCom
 
 ---@class URootMotionModifier_SkewWarp : URootMotionModifier_Warp
 URootMotionModifier_SkewWarp = {}
+
+---@return URootMotionModifier_SkewWarp
+function URootMotionModifier_SkewWarp:get() end
 
 ---@param InMotionWarpingComp UMotionWarpingComponent
 ---@param InAnimation UAnimSequenceBase
@@ -203,6 +242,9 @@ function URootMotionModifier_SkewWarp:AddRootMotionModifierSkewWarp(InMotionWarp
 ---@field WarpRotationTimeMultiplier float
 ---@field CachedTargetTransform FTransform
 URootMotionModifier_Warp = {}
+
+---@return URootMotionModifier_Warp
+function URootMotionModifier_Warp:get() end
 
 
 

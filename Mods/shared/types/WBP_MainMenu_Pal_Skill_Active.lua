@@ -24,6 +24,9 @@
 ---@field EmptySlotMsgID FDataTableRowHandle
 UWBP_MainMenu_Pal_Skill_Active_C = {}
 
+---@return UWBP_MainMenu_Pal_Skill_Active_C
+function UWBP_MainMenu_Pal_Skill_Active_C:get() end
+
 function UWBP_MainMenu_Pal_Skill_Active_C:SetEmptyInfo() end
 ---@param WazaID EPalWazaID
 function UWBP_MainMenu_Pal_Skill_Active_C:GetBindedWazaID(WazaID) end

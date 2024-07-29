@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AIAction_BaseCampRecoverHungry_C = {}
 
+---@return UBP_AIAction_BaseCampRecoverHungry_C
+function UBP_AIAction_BaseCampRecoverHungry_C:get() end
+
 ---@param ChildActionClass TSubclassOf<UPalAIActionBaseCampRecoverHungryChildBase>
 UBP_AIAction_BaseCampRecoverHungry_C['Change Recover Hungry Action'] = function(ChildActionClass) end
 ---@param ControlledPawn APawn

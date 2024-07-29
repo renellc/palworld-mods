@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_PalBossBattleManager_C = {}
 
+---@return UBP_PalBossBattleManager_C
+function UBP_PalBossBattleManager_C:get() end
+
 ---@param Activce boolean
 ---@param Sky APPSkyCreator
 function UBP_PalBossBattleManager_C:DisableSky(Activce, Sky) end

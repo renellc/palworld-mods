@@ -12,6 +12,9 @@
 ---@field IsBaseCampLocationCashed boolean
 UBP_PalIncidentInvaderBase_C = {}
 
+---@return UBP_PalIncidentInvaderBase_C
+function UBP_PalIncidentInvaderBase_C:get() end
+
 ---@param Result boolean
 function UBP_PalIncidentInvaderBase_C:IsSquad(Result) end
 ---@param StartLocation FVector

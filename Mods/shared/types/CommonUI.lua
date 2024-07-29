@@ -12,12 +12,18 @@
 ---@field ScrollMultiplier float
 FCommonAnalogCursorSettings = {}
 
+---@return FCommonAnalogCursorSettings
+function FCommonAnalogCursorSettings:get() end
+
 
 
 ---@class FCommonButtonStyleOptionalSlateSound
 ---@field bHasSound boolean
 ---@field Sound FSlateSound
 FCommonButtonStyleOptionalSlateSound = {}
+
+---@return FCommonButtonStyleOptionalSlateSound
+function FCommonButtonStyleOptionalSlateSound:get() end
 
 
 
@@ -31,12 +37,18 @@ FCommonButtonStyleOptionalSlateSound = {}
 ---@field TouchInputTypeInfo FCommonInputTypeInfo
 FCommonInputActionDataBase = {}
 
+---@return FCommonInputActionDataBase
+function FCommonInputActionDataBase:get() end
+
 
 
 ---@class FCommonInputActionHandlerData
 ---@field InputActionRow FDataTableRowHandle
 ---@field State EInputActionState
 FCommonInputActionHandlerData = {}
+
+---@return FCommonInputActionHandlerData
+function FCommonInputActionHandlerData:get() end
 
 
 
@@ -47,6 +59,9 @@ FCommonInputActionHandlerData = {}
 ---@field HoldTime float
 ---@field OverrideBrush FSlateBrush
 FCommonInputTypeInfo = {}
+
+---@return FCommonInputTypeInfo
+function FCommonInputTypeInfo:get() end
 
 
 
@@ -59,6 +74,9 @@ FCommonInputTypeInfo = {}
 ---@field MaximumFractionalDigits int32
 FCommonNumberFormattingOptions = {}
 
+---@return FCommonNumberFormattingOptions
+function FCommonNumberFormattingOptions:get() end
+
 
 
 ---@class FCommonRegisteredTabInfo
@@ -66,6 +84,9 @@ FCommonNumberFormattingOptions = {}
 ---@field TabButton UCommonButtonBase
 ---@field ContentInstance UWidget
 FCommonRegisteredTabInfo = {}
+
+---@return FCommonRegisteredTabInfo
+function FCommonRegisteredTabInfo:get() end
 
 
 
@@ -75,6 +96,9 @@ FCommonRegisteredTabInfo = {}
 ---@field ImageSize FVector2D
 FRichTextIconData = {}
 
+---@return FRichTextIconData
+function FRichTextIconData:get() end
+
 
 
 ---@class FUIActionKeyMapping
@@ -82,10 +106,16 @@ FRichTextIconData = {}
 ---@field HoldTime float
 FUIActionKeyMapping = {}
 
+---@return FUIActionKeyMapping
+function FUIActionKeyMapping:get() end
+
 
 
 ---@class FUIActionTag : FUITag
 FUIActionTag = {}
+
+---@return FUIActionTag
+function FUIActionTag:get() end
 
 
 ---@class FUIInputAction
@@ -94,22 +124,37 @@ FUIActionTag = {}
 ---@field KeyMappings TArray<FUIActionKeyMapping>
 FUIInputAction = {}
 
+---@return FUIInputAction
+function FUIInputAction:get() end
+
 
 
 ---@class FUITag : FGameplayTag
 FUITag = {}
 
+---@return FUITag
+function FUITag:get() end
+
 
 ---@class ICommonActionHandlerInterface : IInterface
 ICommonActionHandlerInterface = {}
+
+---@return ICommonActionHandlerInterface
+function ICommonActionHandlerInterface:get() end
 
 
 ---@class ICommonBoundActionButtonInterface : IInterface
 ICommonBoundActionButtonInterface = {}
 
+---@return ICommonBoundActionButtonInterface
+function ICommonBoundActionButtonInterface:get() end
+
 
 ---@class ICommonPoolableWidgetInterface : IInterface
 ICommonPoolableWidgetInterface = {}
+
+---@return ICommonPoolableWidgetInterface
+function ICommonPoolableWidgetInterface:get() end
 
 function ICommonPoolableWidgetInterface:OnReleaseToPool() end
 function ICommonPoolableWidgetInterface:OnAcquireFromPool() end
@@ -118,6 +163,9 @@ function ICommonPoolableWidgetInterface:OnAcquireFromPool() end
 ---@class UAnalogSlider : USlider
 ---@field OnAnalogCapture FAnalogSliderOnAnalogCapture
 UAnalogSlider = {}
+
+---@return UAnalogSlider
+function UAnalogSlider:get() end
 
 
 
@@ -129,6 +177,9 @@ UAnalogSlider = {}
 ---@field InputActions TArray<FDataTableRowHandle>
 ---@field ProgressDynamicMaterial UMaterialInstanceDynamic
 UCommonActionWidget = {}
+
+---@return UCommonActionWidget
+function UCommonActionWidget:get() end
 
 ---@param NewInputActions TArray<FDataTableRowHandle>
 function UCommonActionWidget:SetInputActions(NewInputActions) end
@@ -165,6 +216,9 @@ function UCommonActionWidget:GetDisplayText() end
 ---@field DeactivatedVisibility ESlateVisibility
 UCommonActivatableWidget = {}
 
+---@return UCommonActivatableWidget
+function UCommonActivatableWidget:get() end
+
 ---@param OnActivatedVisibility ESlateVisibility
 ---@param OnDeactivatedVisibility ESlateVisibility
 ---@param bInAllActive boolean
@@ -194,6 +248,9 @@ function UCommonActivatableWidget:ActivateWidget() end
 ---@field GeneratedWidgetsPool FUserWidgetPool
 UCommonActivatableWidgetContainerBase = {}
 
+---@return UCommonActivatableWidgetContainerBase
+function UCommonActivatableWidgetContainerBase:get() end
+
 ---@param Duration float
 function UCommonActivatableWidgetContainerBase:SetTransitionDuration(Duration) end
 ---@param WidgetToRemove UCommonActivatableWidget
@@ -211,16 +268,25 @@ function UCommonActivatableWidgetContainerBase:BP_AddWidget(ActivatableWidgetCla
 ---@class UCommonActivatableWidgetQueue : UCommonActivatableWidgetContainerBase
 UCommonActivatableWidgetQueue = {}
 
+---@return UCommonActivatableWidgetQueue
+function UCommonActivatableWidgetQueue:get() end
+
 
 ---@class UCommonActivatableWidgetStack : UCommonActivatableWidgetContainerBase
 ---@field RootContentWidgetClass TSubclassOf<UCommonActivatableWidget>
 ---@field RootContentWidget UCommonActivatableWidget
 UCommonActivatableWidgetStack = {}
 
+---@return UCommonActivatableWidgetStack
+function UCommonActivatableWidgetStack:get() end
+
 
 
 ---@class UCommonActivatableWidgetSwitcher : UCommonAnimatedSwitcher
 UCommonActivatableWidgetSwitcher = {}
+
+---@return UCommonActivatableWidgetSwitcher
+function UCommonActivatableWidgetSwitcher:get() end
 
 
 ---@class UCommonAnimatedSwitcher : UWidgetSwitcher
@@ -228,6 +294,9 @@ UCommonActivatableWidgetSwitcher = {}
 ---@field TransitionCurveType ETransitionCurve
 ---@field TransitionDuration float
 UCommonAnimatedSwitcher = {}
+
+---@return UCommonAnimatedSwitcher
+function UCommonAnimatedSwitcher:get() end
 
 ---@param bDisableAnimation boolean
 function UCommonAnimatedSwitcher:SetDisableTransitionAnimation(bDisableAnimation) end
@@ -249,6 +318,9 @@ function UCommonAnimatedSwitcher:ActivateNextWidget(bCanWrap) end
 ---@field MinimumPadding FMargin
 UCommonBorder = {}
 
+---@return UCommonBorder
+function UCommonBorder:get() end
+
 ---@param InStyle TSubclassOf<UCommonBorderStyle>
 function UCommonBorder:SetStyle(InStyle) end
 
@@ -256,6 +328,9 @@ function UCommonBorder:SetStyle(InStyle) end
 ---@class UCommonBorderStyle : UObject
 ---@field Background FSlateBrush
 UCommonBorderStyle = {}
+
+---@return UCommonBorderStyle
+function UCommonBorderStyle:get() end
 
 ---@param Brush FSlateBrush
 function UCommonBorderStyle:GetBackgroundBrush(Brush) end
@@ -267,6 +342,9 @@ function UCommonBorderStyle:GetBackgroundBrush(Brush) end
 ---@field bIgnoreDuplicateActions boolean
 UCommonBoundActionBar = {}
 
+---@return UCommonBoundActionBar
+function UCommonBoundActionBar:get() end
+
 ---@param bShouldOnlyDisplayOwningPlayerActions boolean
 function UCommonBoundActionBar:SetDisplayOwningPlayerActionsOnly(bShouldOnlyDisplayOwningPlayerActions) end
 
@@ -274,6 +352,9 @@ function UCommonBoundActionBar:SetDisplayOwningPlayerActionsOnly(bShouldOnlyDisp
 ---@class UCommonBoundActionButton : UCommonButtonBase
 ---@field Text_ActionName UCommonTextBlock
 UCommonBoundActionButton = {}
+
+---@return UCommonBoundActionButton
+function UCommonBoundActionButton:get() end
 
 function UCommonBoundActionButton:OnUpdateInputAction() end
 
@@ -319,6 +400,9 @@ function UCommonBoundActionButton:OnUpdateInputAction() end
 ---@field bStopDoubleClickPropagation boolean
 ---@field InputActionWidget UCommonActionWidget
 UCommonButtonBase = {}
+
+---@return UCommonButtonBase
+function UCommonButtonBase:get() end
 
 function UCommonButtonBase:StopDoubleClickPropagation() end
 ---@param InputActionRow FDataTableRowHandle
@@ -455,6 +539,9 @@ function UCommonButtonBase:BP_OnClicked() end
 ---@field bSelectionRequired boolean
 UCommonButtonGroupBase = {}
 
+---@return UCommonButtonGroupBase
+function UCommonButtonGroupBase:get() end
+
 ---@param bRequireSelection boolean
 function UCommonButtonGroupBase:SetSelectionRequired(bRequireSelection) end
 ---@param bAllowWrap boolean
@@ -502,6 +589,9 @@ function UCommonButtonGroupBase:DeselectAll() end
 ---@field bInteractionEnabled boolean
 UCommonButtonInternalBase = {}
 
+---@return UCommonButtonInternalBase
+function UCommonButtonInternalBase:get() end
+
 
 
 ---@class UCommonButtonStyle : UObject
@@ -530,6 +620,9 @@ UCommonButtonInternalBase = {}
 ---@field SelectedHoveredSlateSound FCommonButtonStyleOptionalSlateSound
 ---@field LockedHoveredSlateSound FCommonButtonStyleOptionalSlateSound
 UCommonButtonStyle = {}
+
+---@return UCommonButtonStyle
+function UCommonButtonStyle:get() end
 
 ---@return UCommonTextStyle
 function UCommonButtonStyle:GetSelectedTextStyle() end
@@ -567,10 +660,16 @@ function UCommonButtonStyle:GetButtonPadding(OutButtonPadding) end
 ---@field OnNavigationEvent FCommonCustomNavigationOnNavigationEvent
 UCommonCustomNavigation = {}
 
+---@return UCommonCustomNavigation
+function UCommonCustomNavigation:get() end
+
 
 
 ---@class UCommonDateTimeTextBlock : UCommonTextBlock
 UCommonDateTimeTextBlock = {}
+
+---@return UCommonDateTimeTextBlock
+function UCommonDateTimeTextBlock:get() end
 
 ---@param InTimespan FTimespan
 function UCommonDateTimeTextBlock:SetTimespanValue(InTimespan) end
@@ -587,9 +686,15 @@ function UCommonDateTimeTextBlock:GetDateTime() end
 ---@class UCommonGameViewportClient : UGameViewportClient
 UCommonGameViewportClient = {}
 
+---@return UCommonGameViewportClient
+function UCommonGameViewportClient:get() end
+
 
 ---@class UCommonGenericInputActionDataTable : UDataTable
 UCommonGenericInputActionDataTable = {}
+
+---@return UCommonGenericInputActionDataTable
+function UCommonGenericInputActionDataTable:get() end
 
 
 ---@class UCommonHardwareVisibilityBorder : UCommonBorder
@@ -598,14 +703,23 @@ UCommonGenericInputActionDataTable = {}
 ---@field HiddenType ESlateVisibility
 UCommonHardwareVisibilityBorder = {}
 
+---@return UCommonHardwareVisibilityBorder
+function UCommonHardwareVisibilityBorder:get() end
+
 
 
 ---@class UCommonHierarchicalScrollBox : UScrollBox
 UCommonHierarchicalScrollBox = {}
 
+---@return UCommonHierarchicalScrollBox
+function UCommonHierarchicalScrollBox:get() end
+
 
 ---@class UCommonInputActionDataProcessor : UObject
 UCommonInputActionDataProcessor = {}
+
+---@return UCommonInputActionDataProcessor
+function UCommonInputActionDataProcessor:get() end
 
 
 ---@class UCommonLazyImage : UImage
@@ -613,6 +727,9 @@ UCommonInputActionDataProcessor = {}
 ---@field MaterialTextureParamName FName
 ---@field BP_OnLoadingStateChanged FCommonLazyImageBP_OnLoadingStateChanged
 UCommonLazyImage = {}
+
+---@return UCommonLazyImage
+function UCommonLazyImage:get() end
 
 ---@param TextureParamName FName
 function UCommonLazyImage:SetMaterialTextureParamName(TextureParamName) end
@@ -634,6 +751,9 @@ function UCommonLazyImage:IsLoading() end
 ---@field BP_OnLoadingStateChanged FCommonLazyWidgetBP_OnLoadingStateChanged
 UCommonLazyWidget = {}
 
+---@return UCommonLazyWidget
+function UCommonLazyWidget:get() end
+
 ---@param SoftWidget TSoftClassPtr<UUserWidget>
 function UCommonLazyWidget:SetLazyContent(SoftWidget) end
 ---@return boolean
@@ -644,6 +764,9 @@ function UCommonLazyWidget:GetContent() end
 
 ---@class UCommonListView : UListView
 UCommonListView = {}
+
+---@return UCommonListView
+function UCommonListView:get() end
 
 ---@param InEntrySpacing float
 function UCommonListView:SetEntrySpacing(InEntrySpacing) end
@@ -658,6 +781,9 @@ function UCommonListView:SetEntrySpacing(InEntrySpacing) end
 ---@field BP_OnLoadingStateChanged FCommonLoadGuardBP_OnLoadingStateChanged
 ---@field SpinnerMaterialPath FSoftObjectPath
 UCommonLoadGuard = {}
+
+---@return UCommonLoadGuard
+function UCommonLoadGuard:get() end
 
 ---@param InLoadingText FText
 function UCommonLoadGuard:SetLoadingText(InLoadingText) end
@@ -686,6 +812,9 @@ function UCommonLoadGuard:BP_GuardAndLoadAsset(InLazyAsset, OnAssetLoaded) end
 ---@field PerformSizeInterpolation boolean
 ---@field IsPercentage boolean
 UCommonNumericTextBlock = {}
+
+---@return UCommonNumericTextBlock
+function UCommonNumericTextBlock:get() end
 
 ---@param InNumericType ECommonNumericType
 function UCommonNumericTextBlock:SetNumericType(InNumericType) end
@@ -724,6 +853,9 @@ function UCommonNumericTextBlock:GetTargetValue() end
 ---@field bAutoCollapseWithEmptyText boolean
 UCommonRichTextBlock = {}
 
+---@return UCommonRichTextBlock
+function UCommonRichTextBlock:get() end
+
 ---@param bInIsScrollingEnabled boolean
 function UCommonRichTextBlock:SetScrollingEnabled(bInIsScrollingEnabled) end
 
@@ -732,6 +864,9 @@ function UCommonRichTextBlock:SetScrollingEnabled(bInIsScrollingEnabled) end
 ---@field OnRotated FCommonRotatorOnRotated
 ---@field MyText UCommonTextBlock
 UCommonRotator = {}
+
+---@return UCommonRotator
+function UCommonRotator:get() end
 
 function UCommonRotator:ShiftTextRight() end
 function UCommonRotator:ShiftTextLeft() end
@@ -754,11 +889,17 @@ function UCommonRotator:BP_OnOptionSelected(Index) end
 ---@field ImportedStyleSheets TArray<UCommonStyleSheet>
 UCommonStyleSheet = {}
 
+---@return UCommonStyleSheet
+function UCommonStyleSheet:get() end
+
 
 
 ---@class UCommonStyleSheetTypeBase : UObject
 ---@field bIsEnabled boolean
 UCommonStyleSheetTypeBase = {}
+
+---@return UCommonStyleSheetTypeBase
+function UCommonStyleSheetTypeBase:get() end
 
 
 
@@ -766,11 +907,17 @@ UCommonStyleSheetTypeBase = {}
 ---@field Color FLinearColor
 UCommonStyleSheetTypeColor = {}
 
+---@return UCommonStyleSheetTypeColor
+function UCommonStyleSheetTypeColor:get() end
+
 
 
 ---@class UCommonStyleSheetTypeFontLetterSpacing : UCommonStyleSheetTypeBase
 ---@field LetterSpacing int32
 UCommonStyleSheetTypeFontLetterSpacing = {}
+
+---@return UCommonStyleSheetTypeFontLetterSpacing
+function UCommonStyleSheetTypeFontLetterSpacing:get() end
 
 
 
@@ -778,11 +925,17 @@ UCommonStyleSheetTypeFontLetterSpacing = {}
 ---@field Size int32
 UCommonStyleSheetTypeFontSize = {}
 
+---@return UCommonStyleSheetTypeFontSize
+function UCommonStyleSheetTypeFontSize:get() end
+
 
 
 ---@class UCommonStyleSheetTypeFontTypeface : UCommonStyleSheetTypeBase
 ---@field Typeface FSlateFontInfo
 UCommonStyleSheetTypeFontTypeface = {}
+
+---@return UCommonStyleSheetTypeFontTypeface
+function UCommonStyleSheetTypeFontTypeface:get() end
 
 
 
@@ -790,11 +943,17 @@ UCommonStyleSheetTypeFontTypeface = {}
 ---@field LineHeightPercentage float
 UCommonStyleSheetTypeLineHeightPercentage = {}
 
+---@return UCommonStyleSheetTypeLineHeightPercentage
+function UCommonStyleSheetTypeLineHeightPercentage:get() end
+
 
 
 ---@class UCommonStyleSheetTypeMarginBottom : UCommonStyleSheetTypeBase
 ---@field Bottom float
 UCommonStyleSheetTypeMarginBottom = {}
+
+---@return UCommonStyleSheetTypeMarginBottom
+function UCommonStyleSheetTypeMarginBottom:get() end
 
 
 
@@ -802,11 +961,17 @@ UCommonStyleSheetTypeMarginBottom = {}
 ---@field Left float
 UCommonStyleSheetTypeMarginLeft = {}
 
+---@return UCommonStyleSheetTypeMarginLeft
+function UCommonStyleSheetTypeMarginLeft:get() end
+
 
 
 ---@class UCommonStyleSheetTypeMarginRight : UCommonStyleSheetTypeBase
 ---@field Right float
 UCommonStyleSheetTypeMarginRight = {}
+
+---@return UCommonStyleSheetTypeMarginRight
+function UCommonStyleSheetTypeMarginRight:get() end
 
 
 
@@ -814,11 +979,17 @@ UCommonStyleSheetTypeMarginRight = {}
 ---@field Top float
 UCommonStyleSheetTypeMarginTop = {}
 
+---@return UCommonStyleSheetTypeMarginTop
+function UCommonStyleSheetTypeMarginTop:get() end
+
 
 
 ---@class UCommonStyleSheetTypeOpacity : UCommonStyleSheetTypeBase
 ---@field Opacity float
 UCommonStyleSheetTypeOpacity = {}
+
+---@return UCommonStyleSheetTypeOpacity
+function UCommonStyleSheetTypeOpacity:get() end
 
 
 
@@ -835,6 +1006,9 @@ UCommonStyleSheetTypeOpacity = {}
 ---@field TabButtonGroup UCommonButtonGroupBase
 ---@field RegisteredTabsByID TMap<FName, FCommonRegisteredTabInfo>
 UCommonTabListWidgetBase = {}
+
+---@return UCommonTabListWidgetBase
+function UCommonTabListWidgetBase:get() end
 
 ---@param TabNameID FName
 ---@param NewVisibility ESlateVisibility
@@ -916,6 +1090,9 @@ function UCommonTabListWidgetBase:DisableTabWithReason(TabNameID, Reason) end
 ---@field MobileFontSizeMultiplier float
 UCommonTextBlock = {}
 
+---@return UCommonTextBlock
+function UCommonTextBlock:get() end
+
 ---@param InWrapTextAt int32
 function UCommonTextBlock:SetWrapTextWidth(InWrapTextAt) end
 ---@param bUseAllCaps boolean
@@ -941,6 +1118,9 @@ function UCommonTextBlock:GetMargin() end
 ---@field FadeOutDelay float
 UCommonTextScrollStyle = {}
 
+---@return UCommonTextScrollStyle
+function UCommonTextScrollStyle:get() end
+
 
 
 ---@class UCommonTextStyle : UObject
@@ -953,6 +1133,9 @@ UCommonTextScrollStyle = {}
 ---@field StrikeBrush FSlateBrush
 ---@field LineHeightPercentage float
 UCommonTextStyle = {}
+
+---@return UCommonTextStyle
+function UCommonTextStyle:get() end
 
 ---@param OutStrikeBrush FSlateBrush
 function UCommonTextStyle:GetStrikeBrush(OutStrikeBrush) end
@@ -973,13 +1156,22 @@ function UCommonTextStyle:GetColor(OutColor) end
 ---@class UCommonTileView : UTileView
 UCommonTileView = {}
 
+---@return UCommonTileView
+function UCommonTileView:get() end
+
 
 ---@class UCommonTreeView : UTreeView
 UCommonTreeView = {}
 
+---@return UCommonTreeView
+function UCommonTreeView:get() end
+
 
 ---@class UCommonUIActionRouterBase : ULocalPlayerSubsystem
 UCommonUIActionRouterBase = {}
+
+---@return UCommonUIActionRouterBase
+function UCommonUIActionRouterBase:get() end
 
 
 ---@class UCommonUIEditorSettings : UObject
@@ -987,6 +1179,9 @@ UCommonUIActionRouterBase = {}
 ---@field TemplateButtonStyle TSoftClassPtr<UCommonButtonStyle>
 ---@field TemplateBorderStyle TSoftClassPtr<UCommonBorderStyle>
 UCommonUIEditorSettings = {}
+
+---@return UCommonUIEditorSettings
+function UCommonUIEditorSettings:get() end
 
 
 
@@ -998,10 +1193,16 @@ UCommonUIEditorSettings = {}
 ---@field AnalogCursorSettings FCommonAnalogCursorSettings
 UCommonUIInputSettings = {}
 
+---@return UCommonUIInputSettings
+function UCommonUIInputSettings:get() end
+
 
 
 ---@class UCommonUILibrary : UBlueprintFunctionLibrary
 UCommonUILibrary = {}
+
+---@return UCommonUILibrary
+function UCommonUILibrary:get() end
 
 ---@param StartingWidget UWidget
 ---@param Type TSubclassOf<UWidget>
@@ -1012,6 +1213,9 @@ function UCommonUILibrary:FindParentWidgetOfType(StartingWidget, Type) end
 ---@class UCommonUIRichTextData : UObject
 ---@field InlineIconSet UDataTable
 UCommonUIRichTextData = {}
+
+---@return UCommonUIRichTextData
+function UCommonUIRichTextData:get() end
 
 
 
@@ -1027,10 +1231,16 @@ UCommonUIRichTextData = {}
 ---@field RichTextDataInstance UCommonUIRichTextData
 UCommonUISettings = {}
 
+---@return UCommonUISettings
+function UCommonUISettings:get() end
+
 
 
 ---@class UCommonUISubsystemBase : UGameInstanceSubsystem
 UCommonUISubsystemBase = {}
+
+---@return UCommonUISubsystemBase
+function UCommonUISubsystemBase:get() end
 
 ---@param InputActionRowHandle FDataTableRowHandle
 ---@param InputType ECommonInputType
@@ -1042,11 +1252,17 @@ function UCommonUISubsystemBase:GetInputActionButtonIcon(InputActionRowHandle, I
 ---@class UCommonUIVisibilitySubsystem : ULocalPlayerSubsystem
 UCommonUIVisibilitySubsystem = {}
 
+---@return UCommonUIVisibilitySubsystem
+function UCommonUIVisibilitySubsystem:get() end
+
 
 ---@class UCommonUserWidget : UUserWidget
 ---@field bDisplayInActionBar boolean
 ---@field bConsumePointerInput boolean
 UCommonUserWidget = {}
+
+---@return UCommonUserWidget
+function UCommonUserWidget:get() end
 
 ---@param bInConsumePointerInput boolean
 function UCommonUserWidget:SetConsumePointerInput(bInConsumePointerInput) end
@@ -1061,6 +1277,9 @@ function UCommonUserWidget:SetConsumePointerInput(bInConsumePointerInput) end
 ---@field VideoBrush FSlateBrush
 UCommonVideoPlayer = {}
 
+---@return UCommonVideoPlayer
+function UCommonVideoPlayer:get() end
+
 
 
 ---@class UCommonVisibilitySwitcher : UOverlay
@@ -1069,6 +1288,9 @@ UCommonVideoPlayer = {}
 ---@field bAutoActivateSlot boolean
 ---@field bActivateFirstSlotOnAdding boolean
 UCommonVisibilitySwitcher = {}
+
+---@return UCommonVisibilitySwitcher
+function UCommonVisibilitySwitcher:get() end
 
 ---@param Index int32
 function UCommonVisibilitySwitcher:SetActiveWidgetIndex(Index) end
@@ -1089,10 +1311,16 @@ function UCommonVisibilitySwitcher:ActivateVisibleSlot() end
 ---@class UCommonVisibilitySwitcherSlot : UOverlaySlot
 UCommonVisibilitySwitcherSlot = {}
 
+---@return UCommonVisibilitySwitcherSlot
+function UCommonVisibilitySwitcherSlot:get() end
+
 
 ---@class UCommonVisualAttachment : USizeBox
 ---@field ContentAnchor FVector2D
 UCommonVisualAttachment = {}
+
+---@return UCommonVisualAttachment
+function UCommonVisualAttachment:get() end
 
 
 
@@ -1100,6 +1328,9 @@ UCommonVisualAttachment = {}
 ---@field ActiveWidgetIndex int32
 ---@field OnCurrentPageIndexChanged FCommonWidgetCarouselOnCurrentPageIndexChanged
 UCommonWidgetCarousel = {}
+
+---@return UCommonWidgetCarousel
+function UCommonWidgetCarousel:get() end
 
 ---@param Index int32
 function UCommonWidgetCarousel:SetActiveWidgetIndex(Index) end
@@ -1125,6 +1356,9 @@ function UCommonWidgetCarousel:BeginAutoScrolling(ScrollInterval) end
 ---@field Buttons TArray<UCommonButtonBase>
 UCommonWidgetCarouselNavBar = {}
 
+---@return UCommonWidgetCarouselNavBar
+function UCommonWidgetCarouselNavBar:get() end
+
 ---@param CommonCarousel UCommonWidgetCarousel
 function UCommonWidgetCarouselNavBar:SetLinkedCarousel(CommonCarousel) end
 ---@param CommonCarousel UCommonWidgetCarousel
@@ -1137,6 +1371,9 @@ function UCommonWidgetCarouselNavBar:HandleButtonClicked(AssociatedButton, Butto
 
 ---@class UCommonWidgetGroupBase : UObject
 UCommonWidgetGroupBase = {}
+
+---@return UCommonWidgetGroupBase
+function UCommonWidgetGroupBase:get() end
 
 ---@param InWidget UWidget
 function UCommonWidgetGroupBase:RemoveWidget(InWidget) end
@@ -1154,6 +1391,9 @@ function UCommonWidgetGroupBase:AddWidget(InWidget) end
 ---@field HiddenType ESlateVisibility
 UDEPRECATED_UCommonVisibilityWidgetBase = {}
 
+---@return UDEPRECATED_UCommonVisibilityWidgetBase
+function UDEPRECATED_UCommonVisibilityWidgetBase:get() end
+
 ---@return TArray<FName>
 function UDEPRECATED_UCommonVisibilityWidgetBase:GetRegisteredPlatforms() end
 
@@ -1163,6 +1403,9 @@ function UDEPRECATED_UCommonVisibilityWidgetBase:GetRegisteredPlatforms() end
 ---@field HorizontalAlignment EHorizontalAlignment
 ---@field VerticalAlignment EVerticalAlignment
 ULoadGuardSlot = {}
+
+---@return ULoadGuardSlot
+function ULoadGuardSlot:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function ULoadGuardSlot:SetVerticalAlignment(InVerticalAlignment) end

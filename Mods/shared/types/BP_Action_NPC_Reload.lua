@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Action_NPC_Reload_C = {}
 
+---@return UBP_Action_NPC_Reload_C
+function UBP_Action_NPC_Reload_C:get() end
+
 ---@param NotifyName FName
 function UBP_Action_NPC_Reload_C:OnNotifyEnd_570932B749CF5A9A1DB665947E5643C9(NotifyName) end
 ---@param NotifyName FName

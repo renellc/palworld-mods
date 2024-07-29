@@ -22,6 +22,9 @@
 ---@field Disable_Escape_Invader boolean
 UBP_PalAIBlackboard_Common_C = {}
 
+---@return UBP_PalAIBlackboard_Common_C
+function UBP_PalAIBlackboard_Common_C:get() end
+
 ---@param SelfActor AActor
 function UBP_PalAIBlackboard_Common_C:Initialize_PalBB(SelfActor) end
 ---@param EntryPoint int32

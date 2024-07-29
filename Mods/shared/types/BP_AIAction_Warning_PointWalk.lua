@@ -16,6 +16,9 @@
 ---@field TurnAction UPalActionBase
 UBP_AIAction_Warning_PointWalk_C = {}
 
+---@return UBP_AIAction_Warning_PointWalk_C
+function UBP_AIAction_Warning_PointWalk_C:get() end
+
 function UBP_AIAction_Warning_PointWalk_C:CancelTurnAction() end
 ---@param Direction FVector
 function UBP_AIAction_Warning_PointWalk_C:PlayActionTurnIfNoneAction(Direction) end

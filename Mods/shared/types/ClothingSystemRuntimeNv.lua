@@ -7,6 +7,9 @@
 ---@field CompressionLimit float
 FClothConstraintSetupNv = {}
 
+---@return FClothConstraintSetupNv
+function FClothConstraintSetupNv:get() end
+
 
 
 ---@class UClothConfigNv : UClothConfigCommon
@@ -44,6 +47,9 @@ FClothConstraintSetupNv = {}
 ---@field ShearConstraintConfig FClothConstraintSetup_Legacy
 UClothConfigNv = {}
 
+---@return UClothConfigNv
+function UClothConfigNv:get() end
+
 
 
 ---@class UClothPhysicalMeshDataNv_Legacy : UClothPhysicalMeshDataBase_Legacy
@@ -53,14 +59,23 @@ UClothConfigNv = {}
 ---@field AnimDriveMultipliers TArray<float>
 UClothPhysicalMeshDataNv_Legacy = {}
 
+---@return UClothPhysicalMeshDataNv_Legacy
+function UClothPhysicalMeshDataNv_Legacy:get() end
+
 
 
 ---@class UClothingSimulationFactoryNv : UClothingSimulationFactory
 UClothingSimulationFactoryNv = {}
 
+---@return UClothingSimulationFactoryNv
+function UClothingSimulationFactoryNv:get() end
+
 
 ---@class UClothingSimulationInteractorNv : UClothingSimulationInteractor
 UClothingSimulationInteractorNv = {}
+
+---@return UClothingSimulationInteractorNv
+function UClothingSimulationInteractorNv:get() end
 
 ---@param InStiffness float
 function UClothingSimulationInteractorNv:SetAnimDriveDamperStiffness(InStiffness) end

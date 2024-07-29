@@ -7,6 +7,9 @@
 ---@field RightButtonStyle FButtonStyle
 FWidgetCarouselNavigationBarStyle = {}
 
+---@return FWidgetCarouselNavigationBarStyle
+function FWidgetCarouselNavigationBarStyle:get() end
+
 
 
 ---@class FWidgetCarouselNavigationButtonStyle : FSlateWidgetStyle
@@ -14,6 +17,9 @@ FWidgetCarouselNavigationBarStyle = {}
 ---@field NavigationButtonLeftImage FSlateBrush
 ---@field NavigationButtonRightImage FSlateBrush
 FWidgetCarouselNavigationButtonStyle = {}
+
+---@return FWidgetCarouselNavigationButtonStyle
+function FWidgetCarouselNavigationButtonStyle:get() end
 
 
 

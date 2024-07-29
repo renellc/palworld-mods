@@ -5,6 +5,9 @@
 ---@field ActionComp UPalActionComponent
 UBP_AIAction_Stun_C = {}
 
+---@return UBP_AIAction_Stun_C
+function UBP_AIAction_Stun_C:get() end
+
 ---@param Direction int32
 function UBP_AIAction_Stun_C:WakeupDirection(Direction) end
 ---@param ControlledPawn APawn

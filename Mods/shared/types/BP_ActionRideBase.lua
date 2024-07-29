@@ -33,6 +33,9 @@
 ---@field flagName FName
 UBP_ActionRideBase_C = {}
 
+---@return UBP_ActionRideBase_C
+function UBP_ActionRideBase_C:get() end
+
 function UBP_ActionRideBase_C:CheckRidingCompleted() end
 function UBP_ActionRideBase_C:PlayRideCompleteSound() end
 function UBP_ActionRideBase_C:PlayRideStartSound() end

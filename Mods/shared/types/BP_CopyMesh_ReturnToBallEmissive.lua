@@ -15,6 +15,9 @@
 ---@field IsEndVisualEffect boolean
 ABP_CopyMesh_ReturnToBallEmissive_C = {}
 
+---@return ABP_CopyMesh_ReturnToBallEmissive_C
+function ABP_CopyMesh_ReturnToBallEmissive_C:get() end
+
 function ABP_CopyMesh_ReturnToBallEmissive_C:PlayPalReturnSound() end
 ---@param Value double
 function ABP_CopyMesh_ReturnToBallEmissive_C:SetFade(Value) end

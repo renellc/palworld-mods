@@ -6,6 +6,9 @@
 ---@field flagName FName
 UBP_ActionArchitecture_C = {}
 
+---@return UBP_ActionArchitecture_C
+function UBP_ActionArchitecture_C:get() end
+
 function UBP_ActionArchitecture_C:OnEndAction() end
 function UBP_ActionArchitecture_C:OnBeginAction() end
 ---@param EntryPoint int32

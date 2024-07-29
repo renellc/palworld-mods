@@ -6,6 +6,9 @@
 ---@field Ride_Fire_Left UAnimMontage
 UBP_ShooterAnime_ThrowBase_C = {}
 
+---@return UBP_ShooterAnime_ThrowBase_C
+function UBP_ShooterAnime_ThrowBase_C:get() end
+
 ---@param Direction EPalStepAxisType
 function UBP_ShooterAnime_ThrowBase_C:ChangeRidePullTriggerAnime(Direction) end
 

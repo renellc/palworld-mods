@@ -21,6 +21,9 @@
 ---@field ['Other Hit Component'] UPrimitiveComponent
 ABP_SkillEffectBase_C = {}
 
+---@return ABP_SkillEffectBase_C
+function ABP_SkillEffectBase_C:get() end
+
 ---@param TargetActor AActor
 ---@param AttackLocation FVector
 function ABP_SkillEffectBase_C:GetAttackLocationByTargetActor(TargetActor, AttackLocation) end

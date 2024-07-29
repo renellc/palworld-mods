@@ -11,6 +11,9 @@
 ---@field BackwardMiniTime double
 UBP_AIAction_NPC_Combat_Katana_C = {}
 
+---@return UBP_AIAction_NPC_Combat_Katana_C
+function UBP_AIAction_NPC_Combat_Katana_C:get() end
+
 ---@param CurrentTime double
 function UBP_AIAction_NPC_Combat_Katana_C:AddTimer(CurrentTime) end
 ---@param MeleeState EPal_NPC_CombatMeleeState::Type

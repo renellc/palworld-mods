@@ -3,6 +3,9 @@
 ---@class UNISLibrary : UBlueprintFunctionLibrary
 UNISLibrary = {}
 
+---@return UNISLibrary
+function UNISLibrary:get() end
+
 ---@param Sharpness float
 function UNISLibrary:SetNISSharpness(Sharpness) end
 ---@param NISMode UNISMode

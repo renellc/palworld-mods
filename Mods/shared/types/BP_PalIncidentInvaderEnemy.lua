@@ -6,6 +6,9 @@
 ---@field ChosenInvaderData FPalInvaderDatabaseRow
 UBP_PalIncidentInvaderEnemy_C = {}
 
+---@return UBP_PalIncidentInvaderEnemy_C
+function UBP_PalIncidentInvaderEnemy_C:get() end
+
 function UBP_PalIncidentInvaderEnemy_C:ReturnToSpawnedPoint() end
 ---@param MemberController TArray<APalAIController>
 function UBP_PalIncidentInvaderEnemy_C:OnAllCharacterSpawned(MemberController) end

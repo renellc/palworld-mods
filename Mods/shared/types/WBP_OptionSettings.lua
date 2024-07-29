@@ -36,6 +36,9 @@
 ---@field ConflictMsgId FDataTableRowHandle
 UWBP_OptionSettings_C = {}
 
+---@return UWBP_OptionSettings_C
+function UWBP_OptionSettings_C:get() end
+
 ---@param Bind boolean
 UWBP_OptionSettings_C['Set Tab Action'] = function(Bind) end
 ---@return UWidget

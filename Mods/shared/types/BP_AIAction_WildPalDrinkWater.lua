@@ -6,6 +6,9 @@
 ---@field EatAction UPalActionBase
 UBP_AIAction_WildPalDrinkWater_C = {}
 
+---@return UBP_AIAction_WildPalDrinkWater_C
+function UBP_AIAction_WildPalDrinkWater_C:get() end
+
 ---@param MovementResult EPathFollowingResult::Type
 function UBP_AIAction_WildPalDrinkWater_C:OnFail_3323B09A4DA8EB0F652C87B9DFF6FF56(MovementResult) end
 ---@param MovementResult EPathFollowingResult::Type

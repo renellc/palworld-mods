@@ -6,6 +6,9 @@
 ---@field SpawnedEffect UNiagaraComponent
 UBP_ActionGenerateEnergy_Electric_C = {}
 
+---@return UBP_ActionGenerateEnergy_Electric_C
+function UBP_ActionGenerateEnergy_Electric_C:get() end
+
 ---@param NotifyName FName
 function UBP_ActionGenerateEnergy_Electric_C:OnNotifyEnd_A4DA4EDD4B8DD41C2D78A1B27DF1132F(NotifyName) end
 ---@param NotifyName FName

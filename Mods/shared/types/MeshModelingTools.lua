@@ -3,21 +3,36 @@
 ---@class UAddArrowPrimitiveTool : UAddPrimitiveTool
 UAddArrowPrimitiveTool = {}
 
+---@return UAddArrowPrimitiveTool
+function UAddArrowPrimitiveTool:get() end
+
 
 ---@class UAddBoxPrimitiveTool : UAddPrimitiveTool
 UAddBoxPrimitiveTool = {}
+
+---@return UAddBoxPrimitiveTool
+function UAddBoxPrimitiveTool:get() end
 
 
 ---@class UAddConePrimitiveTool : UAddPrimitiveTool
 UAddConePrimitiveTool = {}
 
+---@return UAddConePrimitiveTool
+function UAddConePrimitiveTool:get() end
+
 
 ---@class UAddCylinderPrimitiveTool : UAddPrimitiveTool
 UAddCylinderPrimitiveTool = {}
 
+---@return UAddCylinderPrimitiveTool
+function UAddCylinderPrimitiveTool:get() end
+
 
 ---@class UAddDiscPrimitiveTool : UAddPrimitiveTool
 UAddDiscPrimitiveTool = {}
+
+---@return UAddDiscPrimitiveTool
+function UAddDiscPrimitiveTool:get() end
 
 
 ---@class UAddPrimitiveTool : USingleClickTool
@@ -30,26 +45,44 @@ UAddDiscPrimitiveTool = {}
 ---@field AssetName FString
 UAddPrimitiveTool = {}
 
+---@return UAddPrimitiveTool
+function UAddPrimitiveTool:get() end
+
 
 
 ---@class UAddPrimitiveToolBuilder : UInteractiveToolBuilder
 UAddPrimitiveToolBuilder = {}
 
+---@return UAddPrimitiveToolBuilder
+function UAddPrimitiveToolBuilder:get() end
+
 
 ---@class UAddRectanglePrimitiveTool : UAddPrimitiveTool
 UAddRectanglePrimitiveTool = {}
+
+---@return UAddRectanglePrimitiveTool
+function UAddRectanglePrimitiveTool:get() end
 
 
 ---@class UAddSpherePrimitiveTool : UAddPrimitiveTool
 UAddSpherePrimitiveTool = {}
 
+---@return UAddSpherePrimitiveTool
+function UAddSpherePrimitiveTool:get() end
+
 
 ---@class UAddStairsPrimitiveTool : UAddPrimitiveTool
 UAddStairsPrimitiveTool = {}
 
+---@return UAddStairsPrimitiveTool
+function UAddStairsPrimitiveTool:get() end
+
 
 ---@class UAddTorusPrimitiveTool : UAddPrimitiveTool
 UAddTorusPrimitiveTool = {}
+
+---@return UAddTorusPrimitiveTool
+function UAddTorusPrimitiveTool:get() end
 
 
 ---@class UCSGMeshesTool : UBaseCreateFromSelectedTool
@@ -60,10 +93,16 @@ UAddTorusPrimitiveTool = {}
 ---@field DrawnLineSet ULineSetComponent
 UCSGMeshesTool = {}
 
+---@return UCSGMeshesTool
+function UCSGMeshesTool:get() end
+
 
 
 ---@class UCSGMeshesToolBuilder : UBaseCreateFromSelectedToolBuilder
 UCSGMeshesToolBuilder = {}
+
+---@return UCSGMeshesToolBuilder
+function UCSGMeshesToolBuilder:get() end
 
 
 ---@class UCSGMeshesToolProperties : UInteractiveToolPropertySet
@@ -78,6 +117,9 @@ UCSGMeshesToolBuilder = {}
 ---@field bUseFirstMeshMaterials boolean
 UCSGMeshesToolProperties = {}
 
+---@return UCSGMeshesToolProperties
+function UCSGMeshesToolProperties:get() end
+
 
 
 ---@class UCombineMeshesTool : UMultiSelectionMeshEditingTool
@@ -86,10 +128,16 @@ UCSGMeshesToolProperties = {}
 ---@field HandleSourceProperties UOnAcceptHandleSourcesPropertiesBase
 UCombineMeshesTool = {}
 
+---@return UCombineMeshesTool
+function UCombineMeshesTool:get() end
+
 
 
 ---@class UCombineMeshesToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UCombineMeshesToolBuilder = {}
+
+---@return UCombineMeshesToolBuilder
+function UCombineMeshesToolBuilder:get() end
 
 
 ---@class UCombineMeshesToolProperties : UInteractiveToolPropertySet
@@ -99,6 +147,9 @@ UCombineMeshesToolBuilder = {}
 ---@field OutputExistingName FString
 UCombineMeshesToolProperties = {}
 
+---@return UCombineMeshesToolProperties
+function UCombineMeshesToolProperties:get() end
+
 
 
 ---@class UCutMeshWithMeshTool : UBaseCreateFromSelectedTool
@@ -107,10 +158,16 @@ UCombineMeshesToolProperties = {}
 ---@field DrawnLineSet ULineSetComponent
 UCutMeshWithMeshTool = {}
 
+---@return UCutMeshWithMeshTool
+function UCutMeshWithMeshTool:get() end
+
 
 
 ---@class UCutMeshWithMeshToolBuilder : UBaseCreateFromSelectedToolBuilder
 UCutMeshWithMeshToolBuilder = {}
+
+---@return UCutMeshWithMeshToolBuilder
+function UCutMeshWithMeshToolBuilder:get() end
 
 
 ---@class UCutMeshWithMeshToolProperties : UInteractiveToolPropertySet
@@ -121,10 +178,16 @@ UCutMeshWithMeshToolBuilder = {}
 ---@field bUseFirstMeshMaterials boolean
 UCutMeshWithMeshToolProperties = {}
 
+---@return UCutMeshWithMeshToolProperties
+function UCutMeshWithMeshToolProperties:get() end
+
 
 
 ---@class UDeleteGeometrySelectionCommand : UGeometrySelectionEditCommand
 UDeleteGeometrySelectionCommand = {}
+
+---@return UDeleteGeometrySelectionCommand
+function UDeleteGeometrySelectionCommand:get() end
 
 
 ---@class UDrawAndRevolveTool : UInteractiveTool
@@ -136,10 +199,16 @@ UDeleteGeometrySelectionCommand = {}
 ---@field Preview UMeshOpPreviewWithBackgroundCompute
 UDrawAndRevolveTool = {}
 
+---@return UDrawAndRevolveTool
+function UDrawAndRevolveTool:get() end
+
 
 
 ---@class UDrawAndRevolveToolBuilder : UInteractiveToolBuilder
 UDrawAndRevolveToolBuilder = {}
+
+---@return UDrawAndRevolveToolBuilder
+function UDrawAndRevolveToolBuilder:get() end
 
 
 ---@class UDrawPolygonTool : UInteractiveTool
@@ -154,10 +223,16 @@ UDrawAndRevolveToolBuilder = {}
 ---@field DragAlignmentMechanic UDragAlignmentMechanic
 UDrawPolygonTool = {}
 
+---@return UDrawPolygonTool
+function UDrawPolygonTool:get() end
+
 
 
 ---@class UDrawPolygonToolBuilder : UInteractiveToolBuilder
 UDrawPolygonToolBuilder = {}
+
+---@return UDrawPolygonToolBuilder
+function UDrawPolygonToolBuilder:get() end
 
 
 ---@class UDrawPolygonToolSnapProperties : UInteractiveToolPropertySet
@@ -171,6 +246,9 @@ UDrawPolygonToolBuilder = {}
 ---@field SnapToSurfacesOffset float
 UDrawPolygonToolSnapProperties = {}
 
+---@return UDrawPolygonToolSnapProperties
+function UDrawPolygonToolSnapProperties:get() end
+
 
 
 ---@class UDrawPolygonToolStandardProperties : UInteractiveToolPropertySet
@@ -183,6 +261,9 @@ UDrawPolygonToolSnapProperties = {}
 ---@field ExtrudeMode EDrawPolygonExtrudeMode
 ---@field ExtrudeHeight float
 UDrawPolygonToolStandardProperties = {}
+
+---@return UDrawPolygonToolStandardProperties
+function UDrawPolygonToolStandardProperties:get() end
 
 
 
@@ -198,14 +279,23 @@ UDrawPolygonToolStandardProperties = {}
 ---@field VertexTolerance double
 UEdgeLoopInsertionProperties = {}
 
+---@return UEdgeLoopInsertionProperties
+function UEdgeLoopInsertionProperties:get() end
+
 
 
 ---@class UEditMeshPolygonsActionModeToolBuilder : UEditMeshPolygonsToolBuilder
 UEditMeshPolygonsActionModeToolBuilder = {}
 
+---@return UEditMeshPolygonsActionModeToolBuilder
+function UEditMeshPolygonsActionModeToolBuilder:get() end
+
 
 ---@class UEditMeshPolygonsSelectionModeToolBuilder : UEditMeshPolygonsToolBuilder
 UEditMeshPolygonsSelectionModeToolBuilder = {}
+
+---@return UEditMeshPolygonsSelectionModeToolBuilder
+function UEditMeshPolygonsSelectionModeToolBuilder:get() end
 
 
 ---@class UEditMeshPolygonsTool : USingleSelectionMeshEditingTool
@@ -233,10 +323,16 @@ UEditMeshPolygonsSelectionModeToolBuilder = {}
 ---@field TransformProxy UTransformProxy
 UEditMeshPolygonsTool = {}
 
+---@return UEditMeshPolygonsTool
+function UEditMeshPolygonsTool:get() end
+
 
 
 ---@class UEditMeshPolygonsToolAcceptCancelAction : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolAcceptCancelAction = {}
+
+---@return UEditMeshPolygonsToolAcceptCancelAction
+function UEditMeshPolygonsToolAcceptCancelAction:get() end
 
 function UEditMeshPolygonsToolAcceptCancelAction:Cancel() end
 function UEditMeshPolygonsToolAcceptCancelAction:Apply() end
@@ -245,9 +341,15 @@ function UEditMeshPolygonsToolAcceptCancelAction:Apply() end
 ---@class UEditMeshPolygonsToolActionPropertySet : UInteractiveToolPropertySet
 UEditMeshPolygonsToolActionPropertySet = {}
 
+---@return UEditMeshPolygonsToolActionPropertySet
+function UEditMeshPolygonsToolActionPropertySet:get() end
+
 
 ---@class UEditMeshPolygonsToolActions : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolActions = {}
+
+---@return UEditMeshPolygonsToolActions
+function UEditMeshPolygonsToolActions:get() end
 
 function UEditMeshPolygonsToolActions:SimplifyByGroups() end
 function UEditMeshPolygonsToolActions:Retriangulate() end
@@ -272,6 +374,9 @@ function UEditMeshPolygonsToolActions:Bevel() end
 ---@class UEditMeshPolygonsToolActions_Triangles : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolActions_Triangles = {}
 
+---@return UEditMeshPolygonsToolActions_Triangles
+function UEditMeshPolygonsToolActions_Triangles:get() end
+
 function UEditMeshPolygonsToolActions_Triangles:RecalcNormals() end
 function UEditMeshPolygonsToolActions_Triangles:PushPull() end
 function UEditMeshPolygonsToolActions_Triangles:Poke() end
@@ -289,15 +394,24 @@ function UEditMeshPolygonsToolActions_Triangles:CutFaces() end
 ---@class UEditMeshPolygonsToolBuilder : USingleSelectionMeshEditingToolBuilder
 UEditMeshPolygonsToolBuilder = {}
 
+---@return UEditMeshPolygonsToolBuilder
+function UEditMeshPolygonsToolBuilder:get() end
+
 
 ---@class UEditMeshPolygonsToolCancelAction : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolCancelAction = {}
+
+---@return UEditMeshPolygonsToolCancelAction
+function UEditMeshPolygonsToolCancelAction:get() end
 
 function UEditMeshPolygonsToolCancelAction:Done() end
 
 
 ---@class UEditMeshPolygonsToolEdgeActions : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolEdgeActions = {}
+
+---@return UEditMeshPolygonsToolEdgeActions
+function UEditMeshPolygonsToolEdgeActions:get() end
 
 function UEditMeshPolygonsToolEdgeActions:Weld() end
 function UEditMeshPolygonsToolEdgeActions:Straighten() end
@@ -309,6 +423,9 @@ function UEditMeshPolygonsToolEdgeActions:Bevel() end
 ---@class UEditMeshPolygonsToolEdgeActions_Triangles : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolEdgeActions_Triangles = {}
 
+---@return UEditMeshPolygonsToolEdgeActions_Triangles
+function UEditMeshPolygonsToolEdgeActions_Triangles:get() end
+
 function UEditMeshPolygonsToolEdgeActions_Triangles:Weld() end
 function UEditMeshPolygonsToolEdgeActions_Triangles:Split() end
 function UEditMeshPolygonsToolEdgeActions_Triangles:Flip() end
@@ -318,6 +435,9 @@ function UEditMeshPolygonsToolEdgeActions_Triangles:Collapse() end
 
 ---@class UEditMeshPolygonsToolUVActions : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolUVActions = {}
+
+---@return UEditMeshPolygonsToolUVActions
+function UEditMeshPolygonsToolUVActions:get() end
 
 function UEditMeshPolygonsToolUVActions:PlanarProjection() end
 
@@ -331,6 +451,9 @@ function UEditMeshPolygonsToolUVActions:PlanarProjection() end
 ---@field CheckerMaterial UMaterialInstanceDynamic
 UExistingMeshMaterialProperties = {}
 
+---@return UExistingMeshMaterialProperties
+function UExistingMeshMaterialProperties:get() end
+
 ---@return TArray<FString>
 function UExistingMeshMaterialProperties:GetUVChannelNamesFunc() end
 
@@ -339,6 +462,9 @@ function UExistingMeshMaterialProperties:GetUVChannelNamesFunc() end
 ---@field InsertionMode EGroupEdgeInsertionMode
 ---@field VertexTolerance double
 UGroupEdgeInsertionProperties = {}
+
+---@return UGroupEdgeInsertionProperties
+function UGroupEdgeInsertionProperties:get() end
 
 
 
@@ -354,12 +480,18 @@ UGroupEdgeInsertionProperties = {}
 ---@field CustomMaterial TWeakObjectPtr<UMaterialInterface>
 UMeshEditingViewProperties = {}
 
+---@return UMeshEditingViewProperties
+function UMeshEditingViewProperties:get() end
+
 
 
 ---@class UMeshUVChannelProperties : UInteractiveToolPropertySet
 ---@field UVChannel FString
 ---@field UVChannelNamesList TArray<FString>
 UMeshUVChannelProperties = {}
+
+---@return UMeshUVChannelProperties
+function UMeshUVChannelProperties:get() end
 
 ---@return TArray<FString>
 function UMeshUVChannelProperties:GetUVChannelNamesFunc() end
@@ -373,6 +505,9 @@ function UMeshUVChannelProperties:GetUVChannelNamesFunc() end
 ---@field bShowExtendedOptions boolean
 UNewMeshMaterialProperties = {}
 
+---@return UNewMeshMaterialProperties
+function UNewMeshMaterialProperties:get() end
+
 
 
 ---@class UPolyEditActivityContext : UObject
@@ -381,6 +516,9 @@ UNewMeshMaterialProperties = {}
 ---@field SelectionMechanic UPolygonSelectionMechanic
 UPolyEditActivityContext = {}
 
+---@return UPolyEditActivityContext
+function UPolyEditActivityContext:get() end
+
 
 
 ---@class UPolyEditBevelEdgeActivity : UInteractiveToolActivity
@@ -388,11 +526,17 @@ UPolyEditActivityContext = {}
 ---@field ActivityContext UPolyEditActivityContext
 UPolyEditBevelEdgeActivity = {}
 
+---@return UPolyEditBevelEdgeActivity
+function UPolyEditBevelEdgeActivity:get() end
+
 
 
 ---@class UPolyEditBevelEdgeProperties : UInteractiveToolPropertySet
 ---@field BevelDistance double
 UPolyEditBevelEdgeProperties = {}
+
+---@return UPolyEditBevelEdgeProperties
+function UPolyEditBevelEdgeProperties:get() end
 
 
 
@@ -405,6 +549,9 @@ UPolyEditBevelEdgeProperties = {}
 ---@field bLocalCoordSystem boolean
 UPolyEditCommonProperties = {}
 
+---@return UPolyEditCommonProperties
+function UPolyEditCommonProperties:get() end
+
 
 
 ---@class UPolyEditCutFacesActivity : UInteractiveToolActivity
@@ -414,12 +561,18 @@ UPolyEditCommonProperties = {}
 ---@field ActivityContext UPolyEditActivityContext
 UPolyEditCutFacesActivity = {}
 
+---@return UPolyEditCutFacesActivity
+function UPolyEditCutFacesActivity:get() end
+
 
 
 ---@class UPolyEditCutProperties : UInteractiveToolPropertySet
 ---@field Orientation EPolyEditCutPlaneOrientation
 ---@field bSnapToVertices boolean
 UPolyEditCutProperties = {}
+
+---@return UPolyEditCutProperties
+function UPolyEditCutProperties:get() end
 
 
 
@@ -430,6 +583,9 @@ UPolyEditCutProperties = {}
 ---@field ExtrudeHeightMechanic UPlaneDistanceFromHitMechanic
 ---@field ActivityContext UPolyEditActivityContext
 UPolyEditExtrudeActivity = {}
+
+---@return UPolyEditExtrudeActivity
+function UPolyEditExtrudeActivity:get() end
 
 
 
@@ -444,6 +600,9 @@ UPolyEditExtrudeActivity = {}
 ---@field bUseColinearityForSettingBorderGroups boolean
 UPolyEditExtrudeProperties = {}
 
+---@return UPolyEditExtrudeProperties
+function UPolyEditExtrudeProperties:get() end
+
 
 
 ---@class UPolyEditInsertEdgeActivity : UInteractiveToolActivity
@@ -451,12 +610,18 @@ UPolyEditExtrudeProperties = {}
 ---@field ActivityContext UPolyEditActivityContext
 UPolyEditInsertEdgeActivity = {}
 
+---@return UPolyEditInsertEdgeActivity
+function UPolyEditInsertEdgeActivity:get() end
+
 
 
 ---@class UPolyEditInsertEdgeLoopActivity : UInteractiveToolActivity
 ---@field Settings UEdgeLoopInsertionProperties
 ---@field ActivityContext UPolyEditActivityContext
 UPolyEditInsertEdgeLoopActivity = {}
+
+---@return UPolyEditInsertEdgeLoopActivity
+function UPolyEditInsertEdgeLoopActivity:get() end
 
 
 
@@ -467,6 +632,9 @@ UPolyEditInsertEdgeLoopActivity = {}
 ---@field ActivityContext UPolyEditActivityContext
 UPolyEditInsetOutsetActivity = {}
 
+---@return UPolyEditInsetOutsetActivity
+function UPolyEditInsetOutsetActivity:get() end
+
 
 
 ---@class UPolyEditInsetOutsetProperties : UInteractiveToolPropertySet
@@ -476,6 +644,9 @@ UPolyEditInsetOutsetActivity = {}
 ---@field bReproject boolean
 ---@field bOutset boolean
 UPolyEditInsetOutsetProperties = {}
+
+---@return UPolyEditInsetOutsetProperties
+function UPolyEditInsetOutsetProperties:get() end
 
 
 
@@ -489,6 +660,9 @@ UPolyEditInsetOutsetProperties = {}
 ---@field bUseColinearityForSettingBorderGroups boolean
 UPolyEditOffsetProperties = {}
 
+---@return UPolyEditOffsetProperties
+function UPolyEditOffsetProperties:get() end
+
 
 
 ---@class UPolyEditPlanarProjectionUVActivity : UInteractiveToolActivity
@@ -497,6 +671,9 @@ UPolyEditOffsetProperties = {}
 ---@field SurfacePathMechanic UCollectSurfacePathMechanic
 ---@field ActivityContext UPolyEditActivityContext
 UPolyEditPlanarProjectionUVActivity = {}
+
+---@return UPolyEditPlanarProjectionUVActivity
+function UPolyEditPlanarProjectionUVActivity:get() end
 
 
 
@@ -510,11 +687,17 @@ UPolyEditPlanarProjectionUVActivity = {}
 ---@field bUseColinearityForSettingBorderGroups boolean
 UPolyEditPushPullProperties = {}
 
+---@return UPolyEditPushPullProperties
+function UPolyEditPushPullProperties:get() end
+
 
 
 ---@class UPolyEditSetUVProperties : UInteractiveToolPropertySet
 ---@field bShowMaterial boolean
 UPolyEditSetUVProperties = {}
+
+---@return UPolyEditSetUVProperties
+function UPolyEditSetUVProperties:get() end
 
 
 
@@ -522,6 +705,9 @@ UPolyEditSetUVProperties = {}
 ---@field bAddExtraCorners boolean
 ---@field ExtraCornerAngleThresholdDegrees double
 UPolyEditTopologyProperties = {}
+
+---@return UPolyEditTopologyProperties
+function UPolyEditTopologyProperties:get() end
 
 function UPolyEditTopologyProperties:RegenerateExtraCorners() end
 
@@ -535,6 +721,9 @@ function UPolyEditTopologyProperties:RegenerateExtraCorners() end
 ---@field HeightSubdivisions int32
 UProceduralArrowToolProperties = {}
 
+---@return UProceduralArrowToolProperties
+function UProceduralArrowToolProperties:get() end
+
 
 
 ---@class UProceduralBoxToolProperties : UProceduralShapeToolProperties
@@ -546,6 +735,9 @@ UProceduralArrowToolProperties = {}
 ---@field HeightSubdivisions int32
 UProceduralBoxToolProperties = {}
 
+---@return UProceduralBoxToolProperties
+function UProceduralBoxToolProperties:get() end
+
 
 
 ---@class UProceduralConeToolProperties : UProceduralShapeToolProperties
@@ -554,6 +746,9 @@ UProceduralBoxToolProperties = {}
 ---@field RadialSlices int32
 ---@field HeightSubdivisions int32
 UProceduralConeToolProperties = {}
+
+---@return UProceduralConeToolProperties
+function UProceduralConeToolProperties:get() end
 
 
 
@@ -564,6 +759,9 @@ UProceduralConeToolProperties = {}
 ---@field HeightSubdivisions int32
 UProceduralCylinderToolProperties = {}
 
+---@return UProceduralCylinderToolProperties
+function UProceduralCylinderToolProperties:get() end
+
 
 
 ---@class UProceduralDiscToolProperties : UProceduralShapeToolProperties
@@ -573,6 +771,9 @@ UProceduralCylinderToolProperties = {}
 ---@field RadialSubdivisions int32
 ---@field HoleRadius float
 UProceduralDiscToolProperties = {}
+
+---@return UProceduralDiscToolProperties
+function UProceduralDiscToolProperties:get() end
 
 
 
@@ -586,6 +787,9 @@ UProceduralDiscToolProperties = {}
 ---@field CornerSlices int32
 UProceduralRectangleToolProperties = {}
 
+---@return UProceduralRectangleToolProperties
+function UProceduralRectangleToolProperties:get() end
+
 
 
 ---@class UProceduralShapeToolProperties : UInteractiveToolPropertySet
@@ -598,6 +802,9 @@ UProceduralRectangleToolProperties = {}
 ---@field bShowGizmoOptions boolean
 UProceduralShapeToolProperties = {}
 
+---@return UProceduralShapeToolProperties
+function UProceduralShapeToolProperties:get() end
+
 
 
 ---@class UProceduralSphereToolProperties : UProceduralShapeToolProperties
@@ -607,6 +814,9 @@ UProceduralShapeToolProperties = {}
 ---@field HorizontalSlices int32
 ---@field VerticalSlices int32
 UProceduralSphereToolProperties = {}
+
+---@return UProceduralSphereToolProperties
+function UProceduralSphereToolProperties:get() end
 
 
 
@@ -621,6 +831,9 @@ UProceduralSphereToolProperties = {}
 ---@field InnerRadius float
 UProceduralStairsToolProperties = {}
 
+---@return UProceduralStairsToolProperties
+function UProceduralStairsToolProperties:get() end
+
 
 
 ---@class UProceduralTorusToolProperties : UProceduralShapeToolProperties
@@ -629,6 +842,9 @@ UProceduralStairsToolProperties = {}
 ---@field MajorSlices int32
 ---@field MinorSlices int32
 UProceduralTorusToolProperties = {}
+
+---@return UProceduralTorusToolProperties
+function UProceduralTorusToolProperties:get() end
 
 
 
@@ -643,15 +859,24 @@ UProceduralTorusToolProperties = {}
 ---@field Preview UMeshOpPreviewWithBackgroundCompute
 URecomputeUVsTool = {}
 
+---@return URecomputeUVsTool
+function URecomputeUVsTool:get() end
+
 
 
 ---@class URecomputeUVsToolBuilder : USingleSelectionMeshEditingToolBuilder
 URecomputeUVsToolBuilder = {}
 
+---@return URecomputeUVsToolBuilder
+function URecomputeUVsToolBuilder:get() end
+
 
 ---@class URevolveOperatorFactory : UObject
 ---@field RevolveTool UDrawAndRevolveTool
 URevolveOperatorFactory = {}
+
+---@return URevolveOperatorFactory
+function URevolveOperatorFactory:get() end
 
 
 
@@ -672,6 +897,9 @@ URevolveOperatorFactory = {}
 ---@field QuadSplitMode ERevolvePropertiesQuadSplit
 URevolveProperties = {}
 
+---@return URevolveProperties
+function URevolveProperties:get() end
+
 
 
 ---@class URevolveToolProperties : URevolveProperties
@@ -682,6 +910,9 @@ URevolveProperties = {}
 ---@field bEnableSnapping boolean
 ---@field bAllowedToEditDrawPlane boolean
 URevolveToolProperties = {}
+
+---@return URevolveToolProperties
+function URevolveToolProperties:get() end
 
 
 
@@ -694,6 +925,9 @@ URevolveToolProperties = {}
 ---@field ColorOfTrimmingMesh FLinearColor
 UTrimMeshesToolProperties = {}
 
+---@return UTrimMeshesToolProperties
+function UTrimMeshesToolProperties:get() end
+
 
 
 ---@class UUVLayoutTool : UMultiSelectionMeshEditingTool
@@ -705,15 +939,24 @@ UTrimMeshesToolProperties = {}
 ---@field UVLayoutView UUVLayoutPreview
 UUVLayoutTool = {}
 
+---@return UUVLayoutTool
+function UUVLayoutTool:get() end
+
 
 
 ---@class UUVLayoutToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UUVLayoutToolBuilder = {}
 
+---@return UUVLayoutToolBuilder
+function UUVLayoutToolBuilder:get() end
+
 
 ---@class UUVProjectionOperatorFactory : UObject
 ---@field Tool UUVProjectionTool
 UUVProjectionOperatorFactory = {}
+
+---@return UUVProjectionOperatorFactory
+function UUVProjectionOperatorFactory:get() end
 
 
 
@@ -731,14 +974,23 @@ UUVProjectionOperatorFactory = {}
 ---@field ClickToSetPlaneBehavior USingleClickInputBehavior
 UUVProjectionTool = {}
 
+---@return UUVProjectionTool
+function UUVProjectionTool:get() end
+
 
 
 ---@class UUVProjectionToolBuilder : USingleSelectionMeshEditingToolBuilder
 UUVProjectionToolBuilder = {}
 
+---@return UUVProjectionToolBuilder
+function UUVProjectionToolBuilder:get() end
+
 
 ---@class UUVProjectionToolEditActions : UInteractiveToolPropertySet
 UUVProjectionToolEditActions = {}
+
+---@return UUVProjectionToolEditActions
+function UUVProjectionToolEditActions:get() end
 
 function UUVProjectionToolEditActions:Reset() end
 function UUVProjectionToolEditActions:AutoFitAlign() end
@@ -761,6 +1013,9 @@ function UUVProjectionToolEditActions:AutoFit() end
 ---@field bSavedUniformDimensions boolean
 ---@field SavedTransform FTransform
 UUVProjectionToolProperties = {}
+
+---@return UUVProjectionToolProperties
+function UUVProjectionToolProperties:get() end
 
 
 

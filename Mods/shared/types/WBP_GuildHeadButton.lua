@@ -16,6 +16,9 @@
 ---@field OnAddFocus FWBP_GuildHeadButton_COnAddFocus
 UWBP_GuildHeadButton_C = {}
 
+---@return UWBP_GuildHeadButton_C
+function UWBP_GuildHeadButton_C:get() end
+
 ---@param Value FString
 function UWBP_GuildHeadButton_C:SetValue(Value) end
 ---@param Text FText

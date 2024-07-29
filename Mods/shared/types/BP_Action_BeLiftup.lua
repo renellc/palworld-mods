@@ -10,6 +10,9 @@
 ---@field TargetLocation FVector
 UBP_Action_BeLiftup_C = {}
 
+---@return UBP_Action_BeLiftup_C
+function UBP_Action_BeLiftup_C:get() end
+
 ---@param MontageType EPalGeneralMontageType
 ---@param Montage UAnimMontage
 function UBP_Action_BeLiftup_C:GetCarryingMontage(MontageType, Montage) end

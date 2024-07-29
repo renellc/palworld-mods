@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionDamage_C = {}
 
+---@return UBP_ActionDamage_C
+function UBP_ActionDamage_C:get() end
+
 ---@param Location FVector
 function UBP_ActionDamage_C:GetEffectPosition(Location) end
 function UBP_ActionDamage_C:ShowEffect() end

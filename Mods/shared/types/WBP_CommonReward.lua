@@ -14,6 +14,9 @@
 ---@field TitleMap TMap<EPalUIRewardDisplayType, FDataTableRowHandle>
 UWBP_CommonReward_C = {}
 
+---@return UWBP_CommonReward_C
+function UWBP_CommonReward_C:get() end
+
 function UWBP_CommonReward_C:Finished_8B86E03B4C9B039B2D1E43872343E0D8() end
 function UWBP_CommonReward_C:Finished_99C931904947D8826978CE8B6DE53642() end
 function UWBP_CommonReward_C:OnSetup() end

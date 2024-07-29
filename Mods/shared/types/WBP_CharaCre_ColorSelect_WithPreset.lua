@@ -18,6 +18,9 @@
 ---@field LastClickedButton UWBP_CharaCre_ColorSelect_sq_C
 UWBP_CharaCre_ColorSelect_WithPreset_C = {}
 
+---@return UWBP_CharaCre_ColorSelect_WithPreset_C
+function UWBP_CharaCre_ColorSelect_WithPreset_C:get() end
+
 ---@param Widget UWidget
 function UWBP_CharaCre_ColorSelect_WithPreset_C:GetTopFocusTarget(Widget) end
 ---@param NewColor FLinearColor

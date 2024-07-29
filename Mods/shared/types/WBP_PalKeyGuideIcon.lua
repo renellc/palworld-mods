@@ -9,6 +9,9 @@
 ---@field EnableOverrideImage boolean
 UWBP_PalKeyGuideIcon_C = {}
 
+---@return UWBP_PalKeyGuideIcon_C
+function UWBP_PalKeyGuideIcon_C:get() end
+
 ---@param InputType ECommonInputType
 function UWBP_PalKeyGuideIcon_C:OverrideInputType(InputType) end
 ---@param Size FVector2D

@@ -26,6 +26,9 @@
 ---@field HasLiftting boolean
 UWBP_PalInGameMenuItemSlotButton_C = {}
 
+---@return UWBP_PalInGameMenuItemSlotButton_C
+function UWBP_PalInGameMenuItemSlotButton_C:get() end
+
 ---@param Enable boolean
 function UWBP_PalInGameMenuItemSlotButton_C:SetEnableDefaultClickSound(Enable) end
 ---@param ItemId FName

@@ -9,6 +9,9 @@
 ---@field MsgId FDataTableRowHandle
 UWBP_Title_WorldSelectButton_C = {}
 
+---@return UWBP_Title_WorldSelectButton_C
+function UWBP_Title_WorldSelectButton_C:get() end
+
 function UWBP_Title_WorldSelectButton_C:OnInitialized() end
 ---@param Button UCommonButtonBase
 function UWBP_Title_WorldSelectButton_C:BndEvt__WBP_Title_WorldSelectButton_WBP_PalInvisibleButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end

@@ -6,6 +6,9 @@
 ---@field bRequiresStateMigration boolean
 AAkAcousticPortal = {}
 
+---@return AAkAcousticPortal
+function AAkAcousticPortal:get() end
+
 ---@return AkAcousticPortalState
 function AAkAcousticPortal:GetCurrentState() end
 function AAkAcousticPortal:EnablePortal() end
@@ -18,6 +21,9 @@ function AAkAcousticPortal:DisablePortal() end
 ---@field StopWhenOwnerIsDestroyed boolean
 ---@field AutoPost boolean
 AAkAmbientSound = {}
+
+---@return AAkAmbientSound
+function AAkAmbientSound:get() end
 
 function AAkAmbientSound:StopAmbientSound() end
 function AAkAmbientSound:StartAmbientSound() end
@@ -33,10 +39,16 @@ function AAkAmbientSound:StartAmbientSound() end
 ---@field LateReverbComponent UAkLateReverbComponent
 AAkReverbVolume = {}
 
+---@return AAkReverbVolume
+function AAkReverbVolume:get() end
+
 
 
 ---@class AAkReverbZone : AAkSpatialAudioVolume
 AAkReverbZone = {}
+
+---@return AAkReverbZone
+function AAkReverbZone:get() end
 
 
 ---@class AAkSpatialAudioVolume : AVolume
@@ -44,6 +56,9 @@ AAkReverbZone = {}
 ---@field LateReverb UAkLateReverbComponent
 ---@field Room UAkRoomComponent
 AAkSpatialAudioVolume = {}
+
+---@return AAkSpatialAudioVolume
+function AAkSpatialAudioVolume:get() end
 
 
 
@@ -58,10 +73,16 @@ AAkSpatialAudioVolume = {}
 ---@field RoomOverride AActor
 AAkSpotReflector = {}
 
+---@return AAkSpotReflector
+function AAkSpotReflector:get() end
+
 
 
 ---@class FAKWaapiJsonObject
 FAKWaapiJsonObject = {}
+
+---@return FAKWaapiJsonObject
+function FAKWaapiJsonObject:get() end
 
 
 ---@class FAkAcousticSurface
@@ -70,11 +91,17 @@ FAKWaapiJsonObject = {}
 ---@field Name FString
 FAkAcousticSurface = {}
 
+---@return FAkAcousticSurface
+function FAkAcousticSurface:get() end
+
 
 
 ---@class FAkAcousticTextureParams
 ---@field AbsorptionValues FVector4
 FAkAcousticTextureParams = {}
+
+---@return FAkAcousticTextureParams
+function FAkAcousticTextureParams:get() end
 
 
 
@@ -92,6 +119,9 @@ FAkAcousticTextureParams = {}
 ---@field DebugOutOfRangeLimit float
 FAkAdvancedInitializationSettings = {}
 
+---@return FAkAdvancedInitializationSettings
+function FAkAdvancedInitializationSettings:get() end
+
 
 
 ---@class FAkAdvancedInitializationSettingsWithMultiCoreRendering : FAkAdvancedInitializationSettings
@@ -99,6 +129,9 @@ FAkAdvancedInitializationSettings = {}
 ---@field MaxNumJobWorkers uint32
 ---@field JobWorkerMaxExecutionTimeUSec uint32
 FAkAdvancedInitializationSettingsWithMultiCoreRendering = {}
+
+---@return FAkAdvancedInitializationSettingsWithMultiCoreRendering
+function FAkAdvancedInitializationSettingsWithMultiCoreRendering:get() end
 
 
 
@@ -108,6 +141,9 @@ FAkAdvancedInitializationSettingsWithMultiCoreRendering = {}
 ---@field UseLowLatencyMode boolean
 FAkAndroidAdvancedInitializationSettings = {}
 
+---@return FAkAndroidAdvancedInitializationSettings
+function FAkAndroidAdvancedInitializationSettings:get() end
+
 
 
 ---@class FAkAudioSession
@@ -116,17 +152,26 @@ FAkAndroidAdvancedInitializationSettings = {}
 ---@field AudioSessionMode EAkAudioSessionMode
 FAkAudioSession = {}
 
+---@return FAkAudioSession
+function FAkAudioSession:get() end
+
 
 
 ---@class FAkBoolPropertyToControl
 ---@field ItemProperty FString
 FAkBoolPropertyToControl = {}
 
+---@return FAkBoolPropertyToControl
+function FAkBoolPropertyToControl:get() end
+
 
 
 ---@class FAkChannelMask
 ---@field ChannelMask int32
 FAkChannelMask = {}
+
+---@return FAkChannelMask
+function FAkChannelMask:get() end
 
 
 
@@ -141,11 +186,17 @@ FAkChannelMask = {}
 ---@field SpatialAudioSettings FAkSpatialAudioSettings
 FAkCommonInitializationSettings = {}
 
+---@return FAkCommonInitializationSettings
+function FAkCommonInitializationSettings:get() end
+
 
 
 ---@class FAkCommonInitializationSettingsWithSampleRate : FAkCommonInitializationSettings
 ---@field SampleRate uint32
 FAkCommonInitializationSettingsWithSampleRate = {}
+
+---@return FAkCommonInitializationSettingsWithSampleRate
+function FAkCommonInitializationSettingsWithSampleRate:get() end
 
 
 
@@ -156,17 +207,26 @@ FAkCommonInitializationSettingsWithSampleRate = {}
 ---@field NetworkName FString
 FAkCommunicationSettings = {}
 
+---@return FAkCommunicationSettings
+function FAkCommunicationSettings:get() end
+
 
 
 ---@class FAkCommunicationSettingsWithCommSelection : FAkCommunicationSettings
 ---@field CommunicationSystem EAkCommSystem
 FAkCommunicationSettingsWithCommSelection = {}
 
+---@return FAkCommunicationSettingsWithCommSelection
+function FAkCommunicationSettingsWithCommSelection:get() end
+
 
 
 ---@class FAkCommunicationSettingsWithSystemInitialization : FAkCommunicationSettings
 ---@field InitializeSystemComms boolean
 FAkCommunicationSettingsWithSystemInitialization = {}
+
+---@return FAkCommunicationSettingsWithSystemInitialization
+function FAkCommunicationSettingsWithSystemInitialization:get() end
 
 
 
@@ -178,6 +238,9 @@ FAkCommunicationSettingsWithSystemInitialization = {}
 ---@field IsStreamed boolean
 FAkExternalSourceInfo = {}
 
+---@return FAkExternalSourceInfo
+function FAkExternalSourceInfo:get() end
+
 
 
 ---@class FAkGeometryData
@@ -188,6 +251,9 @@ FAkExternalSourceInfo = {}
 ---@field ToOverrideOcclusion TArray<UPhysicalMaterial>
 FAkGeometryData = {}
 
+---@return FAkGeometryData
+function FAkGeometryData:get() end
+
 
 
 ---@class FAkGeometrySurfaceOverride
@@ -197,12 +263,18 @@ FAkGeometryData = {}
 ---@field SurfaceArea float
 FAkGeometrySurfaceOverride = {}
 
+---@return FAkGeometrySurfaceOverride
+function FAkGeometrySurfaceOverride:get() end
+
 
 
 ---@class FAkGeometrySurfacePropertiesToMap
 ---@field AcousticTexture TSoftObjectPtr<UAkAcousticTexture>
 ---@field OcclusionValue float
 FAkGeometrySurfacePropertiesToMap = {}
+
+---@return FAkGeometrySurfacePropertiesToMap
+function FAkGeometrySurfacePropertiesToMap:get() end
 
 
 
@@ -211,12 +283,18 @@ FAkGeometrySurfacePropertiesToMap = {}
 ---@field bVerboseSystemOutput boolean
 FAkIOSAdvancedInitializationSettings = {}
 
+---@return FAkIOSAdvancedInitializationSettings
+function FAkIOSAdvancedInitializationSettings:get() end
+
 
 
 ---@class FAkMacAdvancedInitializationSettings : FAkAdvancedInitializationSettingsWithMultiCoreRendering
 ---@field uNumSpatialAudioPointSources uint32
 ---@field bVerboseSystemOutput boolean
 FAkMacAdvancedInitializationSettings = {}
+
+---@return FAkMacAdvancedInitializationSettings
+function FAkMacAdvancedInitializationSettings:get() end
 
 
 
@@ -229,6 +307,9 @@ FAkMacAdvancedInitializationSettings = {}
 ---@field NumberOfChannels uint32
 FAkMainOutputSettings = {}
 
+---@return FAkMainOutputSettings
+function FAkMainOutputSettings:get() end
+
 
 
 ---@class FAkMidiCc : FAkMidiEventBase
@@ -236,11 +317,17 @@ FAkMainOutputSettings = {}
 ---@field Value uint8
 FAkMidiCc = {}
 
+---@return FAkMidiCc
+function FAkMidiCc:get() end
+
 
 
 ---@class FAkMidiChannelAftertouch : FAkMidiEventBase
 ---@field Value uint8
 FAkMidiChannelAftertouch = {}
+
+---@return FAkMidiChannelAftertouch
+function FAkMidiChannelAftertouch:get() end
 
 
 
@@ -249,12 +336,18 @@ FAkMidiChannelAftertouch = {}
 ---@field Chan uint8
 FAkMidiEventBase = {}
 
+---@return FAkMidiEventBase
+function FAkMidiEventBase:get() end
+
 
 
 ---@class FAkMidiGeneric : FAkMidiEventBase
 ---@field Param1 uint8
 ---@field Param2 uint8
 FAkMidiGeneric = {}
+
+---@return FAkMidiGeneric
+function FAkMidiGeneric:get() end
 
 
 
@@ -263,12 +356,18 @@ FAkMidiGeneric = {}
 ---@field Value uint8
 FAkMidiNoteAftertouch = {}
 
+---@return FAkMidiNoteAftertouch
+function FAkMidiNoteAftertouch:get() end
+
 
 
 ---@class FAkMidiNoteOnOff : FAkMidiEventBase
 ---@field Note uint8
 ---@field Velocity uint8
 FAkMidiNoteOnOff = {}
+
+---@return FAkMidiNoteOnOff
+function FAkMidiNoteOnOff:get() end
 
 
 
@@ -278,11 +377,17 @@ FAkMidiNoteOnOff = {}
 ---@field FullValue int32
 FAkMidiPitchBend = {}
 
+---@return FAkMidiPitchBend
+function FAkMidiPitchBend:get() end
+
 
 
 ---@class FAkMidiProgramChange : FAkMidiEventBase
 ---@field ProgramNum uint8
 FAkMidiProgramChange = {}
+
+---@return FAkMidiProgramChange
+function FAkMidiProgramChange:get() end
 
 
 
@@ -292,6 +397,9 @@ FAkMidiProgramChange = {}
 ---@field PanRule PanningRule
 ---@field ChannelConfig AkChannelConfiguration
 FAkOutputSettings = {}
+
+---@return FAkOutputSettings
+function FAkOutputSettings:get() end
 
 
 
@@ -305,17 +413,26 @@ FAkOutputSettings = {}
 ---@field NumAudioOut2ObjectPorts uint32
 FAkPS5AdvancedInitializationSettings = {}
 
+---@return FAkPS5AdvancedInitializationSettings
+function FAkPS5AdvancedInitializationSettings:get() end
+
 
 
 ---@class FAkPropertyToControl
 ---@field ItemProperty FString
 FAkPropertyToControl = {}
 
+---@return FAkPropertyToControl
+function FAkPropertyToControl:get() end
+
 
 
 ---@class FAkReverbDescriptor
 ---@field Primitive UPrimitiveComponent
 FAkReverbDescriptor = {}
+
+---@return FAkReverbDescriptor
+function FAkReverbDescriptor:get() end
 
 
 
@@ -330,6 +447,9 @@ FAkReverbDescriptor = {}
 ---@field GridDuration float
 ---@field GridOffset float
 FAkSegmentInfo = {}
+
+---@return FAkSegmentInfo
+function FAkSegmentInfo:get() end
 
 
 
@@ -348,14 +468,23 @@ FAkSegmentInfo = {}
 ---@field CalcEmitterVirtualPosition boolean
 FAkSpatialAudioSettings = {}
 
+---@return FAkSpatialAudioSettings
+function FAkSpatialAudioSettings:get() end
+
 
 
 ---@class FAkSurfaceEdgeInfo
 FAkSurfaceEdgeInfo = {}
 
+---@return FAkSurfaceEdgeInfo
+function FAkSurfaceEdgeInfo:get() end
+
 
 ---@class FAkSurfaceEdgeVerts
 FAkSurfaceEdgeVerts = {}
+
+---@return FAkSurfaceEdgeVerts
+function FAkSurfaceEdgeVerts:get() end
 
 
 ---@class FAkSurfacePoly
@@ -365,12 +494,18 @@ FAkSurfaceEdgeVerts = {}
 ---@field SurfaceArea float
 FAkSurfacePoly = {}
 
+---@return FAkSurfacePoly
+function FAkSurfacePoly:get() end
+
 
 
 ---@class FAkTVOSAdvancedInitializationSettings : FAkAdvancedInitializationSettingsWithMultiCoreRendering
 ---@field uNumSpatialAudioPointSources uint32
 ---@field bVerboseSystemOutput boolean
 FAkTVOSAdvancedInitializationSettings = {}
+
+---@return FAkTVOSAdvancedInitializationSettings
+function FAkTVOSAdvancedInitializationSettings:get() end
 
 
 
@@ -381,21 +516,33 @@ FAkTVOSAdvancedInitializationSettings = {}
 ---@field Surface uint16
 FAkTriangle = {}
 
+---@return FAkTriangle
+function FAkTriangle:get() end
+
 
 
 ---@class FAkWaapiFieldNames
 ---@field FieldName FString
 FAkWaapiFieldNames = {}
 
+---@return FAkWaapiFieldNames
+function FAkWaapiFieldNames:get() end
+
 
 
 ---@class FAkWaapiSubscriptionId
 FAkWaapiSubscriptionId = {}
 
+---@return FAkWaapiSubscriptionId
+function FAkWaapiSubscriptionId:get() end
+
 
 ---@class FAkWaapiUri
 ---@field Uri FString
 FAkWaapiUri = {}
+
+---@return FAkWaapiUri
+function FAkWaapiUri:get() end
 
 
 
@@ -404,12 +551,18 @@ FAkWaapiUri = {}
 ---@field uMaxSystemAudioObjects uint32
 FAkWinGDKAdvancedInitializationSettings = {}
 
+---@return FAkWinGDKAdvancedInitializationSettings
+function FAkWinGDKAdvancedInitializationSettings:get() end
+
 
 
 ---@class FAkWindowsAdvancedInitializationSettings : FAkAdvancedInitializationSettingsWithMultiCoreRendering
 ---@field UseHeadMountedDisplayAudioDevice boolean
 ---@field MaxSystemAudioObjects uint32
 FAkWindowsAdvancedInitializationSettings = {}
+
+---@return FAkWindowsAdvancedInitializationSettings
+function FAkWindowsAdvancedInitializationSettings:get() end
 
 
 
@@ -418,6 +571,9 @@ FAkWindowsAdvancedInitializationSettings = {}
 ---@field ItemPath FString
 FAkWwiseItemToControl = {}
 
+---@return FAkWwiseItemToControl
+function FAkWwiseItemToControl:get() end
+
 
 
 ---@class FAkWwiseObjectDetails
@@ -425,6 +581,9 @@ FAkWwiseItemToControl = {}
 ---@field ItemPath FString
 ---@field ItemId FString
 FAkWwiseObjectDetails = {}
+
+---@return FAkWwiseObjectDetails
+function FAkWwiseObjectDetails:get() end
 
 
 
@@ -438,12 +597,18 @@ FAkWwiseObjectDetails = {}
 ---@field EnableXdspOnLockhart boolean
 FAkXSXAdvancedInitializationSettings = {}
 
+---@return FAkXSXAdvancedInitializationSettings
+function FAkXSXAdvancedInitializationSettings:get() end
+
 
 
 ---@class FAkXSXApuHeapInitializationSettings
 ---@field CachedSize uint32
 ---@field NonCachedSize uint32
 FAkXSXApuHeapInitializationSettings = {}
+
+---@return FAkXSXApuHeapInitializationSettings
+function FAkXSXApuHeapInitializationSettings:get() end
 
 
 
@@ -452,6 +617,9 @@ FAkXSXApuHeapInitializationSettings = {}
 ---@field UseHardwareCodecLowLatencyMode boolean
 FAkXboxOneGDKAdvancedInitializationSettings = {}
 
+---@return FAkXboxOneGDKAdvancedInitializationSettings
+function FAkXboxOneGDKAdvancedInitializationSettings:get() end
+
 
 
 ---@class FAkXboxOneGDKApuHeapInitializationSettings
@@ -459,17 +627,26 @@ FAkXboxOneGDKAdvancedInitializationSettings = {}
 ---@field NonCachedSize uint32
 FAkXboxOneGDKApuHeapInitializationSettings = {}
 
+---@return FAkXboxOneGDKApuHeapInitializationSettings
+function FAkXboxOneGDKApuHeapInitializationSettings:get() end
+
 
 
 ---@class FMovieSceneAkAudioEventTemplate : FMovieSceneEvalTemplate
 ---@field Section UMovieSceneAkAudioEventSection
 FMovieSceneAkAudioEventTemplate = {}
 
+---@return FMovieSceneAkAudioEventTemplate
+function FMovieSceneAkAudioEventTemplate:get() end
+
 
 
 ---@class FMovieSceneAkAudioRTPCTemplate : FMovieSceneEvalTemplate
 ---@field Section UMovieSceneAkAudioRTPCSection
 FMovieSceneAkAudioRTPCTemplate = {}
+
+---@return FMovieSceneAkAudioRTPCTemplate
+function FMovieSceneAkAudioRTPCTemplate:get() end
 
 
 
@@ -482,6 +659,9 @@ FMovieSceneAkAudioRTPCTemplate = {}
 ---@field bHasDefaultValue boolean
 FMovieSceneFloatChannelSerializationHelper = {}
 
+---@return FMovieSceneFloatChannelSerializationHelper
+function FMovieSceneFloatChannelSerializationHelper:get() end
+
 
 
 ---@class FMovieSceneFloatValueSerializationHelper
@@ -490,6 +670,9 @@ FMovieSceneFloatChannelSerializationHelper = {}
 ---@field TangentMode ERichCurveTangentMode
 ---@field Tangent FMovieSceneTangentDataSerializationHelper
 FMovieSceneFloatValueSerializationHelper = {}
+
+---@return FMovieSceneFloatValueSerializationHelper
+function FMovieSceneFloatValueSerializationHelper:get() end
 
 
 
@@ -501,12 +684,18 @@ FMovieSceneFloatValueSerializationHelper = {}
 ---@field LeaveTangentWeight float
 FMovieSceneTangentDataSerializationHelper = {}
 
+---@return FMovieSceneTangentDataSerializationHelper
+function FMovieSceneTangentDataSerializationHelper:get() end
+
 
 
 ---@class FWwiseDecayAuxBusRow : FTableRowBase
 ---@field Decay float
 ---@field AuxBus TSoftObjectPtr<UAkAuxBus>
 FWwiseDecayAuxBusRow = {}
+
+---@return FWwiseDecayAuxBusRow
+function FWwiseDecayAuxBusRow:get() end
 
 
 
@@ -515,20 +704,32 @@ FWwiseDecayAuxBusRow = {}
 ---@field TransmissionLoss float
 FWwiseGeometrySurfacePropertiesRow = {}
 
+---@return FWwiseGeometrySurfacePropertiesRow
+function FWwiseGeometrySurfacePropertiesRow:get() end
+
 
 
 ---@class IAkPlatformInitialisationSettingsBase : IInterface
 IAkPlatformInitialisationSettingsBase = {}
+
+---@return IAkPlatformInitialisationSettingsBase
+function IAkPlatformInitialisationSettingsBase:get() end
 
 
 ---@class UAkAcousticTexture : UAkAudioType
 ---@field AcousticTextureCookedData FWwiseAcousticTextureCookedData
 UAkAcousticTexture = {}
 
+---@return UAkAcousticTexture
+function UAkAcousticTexture:get() end
+
 
 
 ---@class UAkAcousticTextureSetComponent : USceneComponent
 UAkAcousticTextureSetComponent = {}
+
+---@return UAkAcousticTextureSetComponent
+function UAkAcousticTextureSetComponent:get() end
 
 
 ---@class UAkAndroidInitializationSettings : UObject
@@ -537,6 +738,9 @@ UAkAcousticTextureSetComponent = {}
 ---@field AdvancedSettings FAkAndroidAdvancedInitializationSettings
 UAkAndroidInitializationSettings = {}
 
+---@return UAkAndroidInitializationSettings
+function UAkAndroidInitializationSettings:get() end
+
 ---@param NewValue boolean
 function UAkAndroidInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 
@@ -544,20 +748,32 @@ function UAkAndroidInitializationSettings:MigrateMultiCoreRendering(NewValue) en
 ---@class UAkAndroidPlatformInfo : UAkPlatformInfo
 UAkAndroidPlatformInfo = {}
 
+---@return UAkAndroidPlatformInfo
+function UAkAndroidPlatformInfo:get() end
+
 
 ---@class UAkAssetData : UObject
 UAkAssetData = {}
+
+---@return UAkAssetData
+function UAkAssetData:get() end
 
 
 ---@class UAkAssetPlatformData : UObject
 ---@field CurrentAssetData UAkAssetData
 UAkAssetPlatformData = {}
 
+---@return UAkAssetPlatformData
+function UAkAssetPlatformData:get() end
+
 
 
 ---@class UAkAudioBank : UAkAudioType
 ---@field AutoLoad boolean
 UAkAudioBank = {}
+
+---@return UAkAudioBank
+function UAkAudioBank:get() end
 
 
 
@@ -569,6 +785,9 @@ UAkAudioBank = {}
 ---@field EventCookedData FWwiseLocalizedEventCookedData
 ---@field RequiredBank UAkAudioBank
 UAkAudioEvent = {}
+
+---@return UAkAudioEvent
+function UAkAudioEvent:get() end
 
 ---@param GameObject UAkGameObject
 ---@param LatentActionInfo FLatentActionInfo
@@ -620,6 +839,9 @@ function UAkAudioEvent:ExecuteAction(ActionType, Actor, PlayingID, TransitionDur
 ---@class UAkAudioInputComponent : UAkComponent
 UAkAudioInputComponent = {}
 
+---@return UAkAudioInputComponent
+function UAkAudioInputComponent:get() end
+
 ---@return int32
 function UAkAudioInputComponent:PostAssociatedAudioInputEvent() end
 
@@ -628,6 +850,9 @@ function UAkAudioInputComponent:PostAssociatedAudioInputEvent() end
 ---@field bAutoLoad boolean
 ---@field UserData TArray<UObject>
 UAkAudioType = {}
+
+---@return UAkAudioType
+function UAkAudioType:get() end
 
 ---@param bAsync boolean
 function UAkAudioType:UnloadData(bAsync) end
@@ -642,11 +867,17 @@ function UAkAudioType:GetWwiseShortID() end
 ---@field RequiredBank UAkAudioBank
 UAkAuxBus = {}
 
+---@return UAkAuxBus
+function UAkAuxBus:get() end
+
 
 
 ---@class UAkCallbackInfo : UObject
 ---@field AkComponent UAkComponent
 UAkCallbackInfo = {}
+
+---@return UAkCallbackInfo
+function UAkCallbackInfo:get() end
 
 
 
@@ -662,6 +893,9 @@ UAkCallbackInfo = {}
 ---@field OnItemDropped FAkCheckBoxOnItemDropped
 ---@field OnPropertyDropped FAkCheckBoxOnPropertyDropped
 UAkCheckBox = {}
+
+---@return UAkCheckBox
+function UAkCheckBox:get() end
 
 ---@param InIsChecked boolean
 function UAkCheckBox:SetIsChecked(InIsChecked) end
@@ -701,6 +935,9 @@ function UAkCheckBox:GetAkItemId() end
 ---@field AttenuationScalingFactor float
 ---@field bUseReverbVolumes boolean
 UAkComponent = {}
+
+---@return UAkComponent
+function UAkComponent:get() end
 
 ---@param SwitchValue UAkSwitchValue
 ---@param SwitchGroup FString
@@ -742,6 +979,9 @@ function UAkComponent:GetAttenuationRadius() end
 ---@class UAkDPXInitializationSettings : UAkPS5InitializationSettings
 UAkDPXInitializationSettings = {}
 
+---@return UAkDPXInitializationSettings
+function UAkDPXInitializationSettings:get() end
+
 
 ---@class UAkDurationCallbackInfo : UAkEventCallbackInfo
 ---@field Duration float
@@ -751,11 +991,17 @@ UAkDPXInitializationSettings = {}
 ---@field bStreaming boolean
 UAkDurationCallbackInfo = {}
 
+---@return UAkDurationCallbackInfo
+function UAkDurationCallbackInfo:get() end
+
 
 
 ---@class UAkEffectShareSet : UAkAudioType
 ---@field ShareSetCookedData FWwiseLocalizedShareSetCookedData
 UAkEffectShareSet = {}
+
+---@return UAkEffectShareSet
+function UAkEffectShareSet:get() end
 
 
 
@@ -764,19 +1010,31 @@ UAkEffectShareSet = {}
 ---@field EventId int32
 UAkEventCallbackInfo = {}
 
+---@return UAkEventCallbackInfo
+function UAkEventCallbackInfo:get() end
+
 
 
 ---@class UAkExternalMediaAsset : UAkMediaAsset
 UAkExternalMediaAsset = {}
 
+---@return UAkExternalMediaAsset
+function UAkExternalMediaAsset:get() end
+
 
 ---@class UAkFolder : UAkAudioType
 UAkFolder = {}
+
+---@return UAkFolder
+function UAkFolder:get() end
 
 
 ---@class UAkGameObject : USceneComponent
 ---@field AkAudioEvent UAkAudioEvent
 UAkGameObject = {}
+
+---@return UAkGameObject
+function UAkGameObject:get() end
 
 function UAkGameObject:Stop() end
 ---@param RTPCValue UAkRtpc
@@ -817,6 +1075,9 @@ function UAkGameObject:GetRTPCValue(RTPCValue, InputValueType, Value, OutputValu
 
 ---@class UAkGameplayStatics : UBlueprintFunctionLibrary
 UAkGameplayStatics = {}
+
+---@return UAkGameplayStatics
+function UAkGameplayStatics:get() end
 
 ---@param inUseReverbVolumes boolean
 ---@param Actor AActor
@@ -1036,6 +1297,9 @@ function UAkGameplayStatics:AddOutput(in_Settings, out_DeviceID, in_ListenerIDs)
 ---@field SurfaceAreas TMap<int32, double>
 UAkGeometryComponent = {}
 
+---@return UAkGeometryComponent
+function UAkGeometryComponent:get() end
+
 function UAkGeometryComponent:UpdateGeometry() end
 function UAkGeometryComponent:SendGeometry() end
 function UAkGeometryComponent:RemoveGeometry() end
@@ -1047,6 +1311,9 @@ function UAkGeometryComponent:ConvertMesh() end
 ---@field GroupShortId uint32
 UAkGroupValue = {}
 
+---@return UAkGroupValue
+function UAkGroupValue:get() end
+
 
 
 ---@class UAkIOSInitializationSettings : UObject
@@ -1056,15 +1323,24 @@ UAkGroupValue = {}
 ---@field AdvancedSettings FAkIOSAdvancedInitializationSettings
 UAkIOSInitializationSettings = {}
 
+---@return UAkIOSInitializationSettings
+function UAkIOSInitializationSettings:get() end
+
 
 
 ---@class UAkIOSPlatformInfo : UAkPlatformInfo
 UAkIOSPlatformInfo = {}
 
+---@return UAkIOSPlatformInfo
+function UAkIOSPlatformInfo:get() end
+
 
 ---@class UAkInitBank : UAkAudioType
 ---@field InitBankCookedData FWwiseInitBankCookedData
 UAkInitBank = {}
+
+---@return UAkInitBank
+function UAkInitBank:get() end
 
 
 
@@ -1072,6 +1348,9 @@ UAkInitBank = {}
 ---@field OnSelectionChanged FAkItemBoolPropertiesOnSelectionChanged
 ---@field OnPropertyDragged FAkItemBoolPropertiesOnPropertyDragged
 UAkItemBoolProperties = {}
+
+---@return UAkItemBoolProperties
+function UAkItemBoolProperties:get() end
 
 ---@param newText FString
 function UAkItemBoolProperties:SetSearchText(newText) end
@@ -1083,6 +1362,9 @@ function UAkItemBoolProperties:GetSearchText() end
 
 ---@class UAkItemBoolPropertiesConv : UBlueprintFunctionLibrary
 UAkItemBoolPropertiesConv = {}
+
+---@return UAkItemBoolPropertiesConv
+function UAkItemBoolPropertiesConv:get() end
 
 ---@param INAkBoolPropertyToControl FAkBoolPropertyToControl
 ---@return FText
@@ -1097,6 +1379,9 @@ function UAkItemBoolPropertiesConv:Conv_FAkBoolPropertyToControlToString(INAkBoo
 ---@field OnPropertyDragged FAkItemPropertiesOnPropertyDragged
 UAkItemProperties = {}
 
+---@return UAkItemProperties
+function UAkItemProperties:get() end
+
 ---@param newText FString
 function UAkItemProperties:SetSearchText(newText) end
 ---@return FString
@@ -1107,6 +1392,9 @@ function UAkItemProperties:GetSearchText() end
 
 ---@class UAkItemPropertiesConv : UBlueprintFunctionLibrary
 UAkItemPropertiesConv = {}
+
+---@return UAkItemPropertiesConv
+function UAkItemPropertiesConv:get() end
 
 ---@param INAkPropertyToControl FAkPropertyToControl
 ---@return FText
@@ -1127,6 +1415,9 @@ function UAkItemPropertiesConv:Conv_FAkPropertyToControlToString(INAkPropertyToC
 ---@field AuxBusManual UAkAuxBus
 UAkLateReverbComponent = {}
 
+---@return UAkLateReverbComponent
+function UAkLateReverbComponent:get() end
+
 ---@param bInEnable boolean
 function UAkLateReverbComponent:SetAutoAssignAuxBus(bInEnable) end
 ---@param textureSetComponent UAkAcousticTextureSetComponent
@@ -1139,12 +1430,18 @@ function UAkLateReverbComponent:AssociateAkTextureSetComponent(textureSetCompone
 ---@field AdvancedSettings FAkAdvancedInitializationSettingsWithMultiCoreRendering
 UAkLinuxArm64InitializationSettings = {}
 
+---@return UAkLinuxArm64InitializationSettings
+function UAkLinuxArm64InitializationSettings:get() end
+
 ---@param NewValue boolean
 function UAkLinuxArm64InitializationSettings:MigrateMultiCoreRendering(NewValue) end
 
 
 ---@class UAkLinuxArm64PlatformInfo : UAkPlatformInfo
 UAkLinuxArm64PlatformInfo = {}
+
+---@return UAkLinuxArm64PlatformInfo
+function UAkLinuxArm64PlatformInfo:get() end
 
 
 ---@class UAkLinuxInitializationSettings : UObject
@@ -1153,6 +1450,9 @@ UAkLinuxArm64PlatformInfo = {}
 ---@field AdvancedSettings FAkAdvancedInitializationSettingsWithMultiCoreRendering
 UAkLinuxInitializationSettings = {}
 
+---@return UAkLinuxInitializationSettings
+function UAkLinuxInitializationSettings:get() end
+
 ---@param NewValue boolean
 function UAkLinuxInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 
@@ -1160,13 +1460,22 @@ function UAkLinuxInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 ---@class UAkLinuxPlatformInfo : UAkPlatformInfo
 UAkLinuxPlatformInfo = {}
 
+---@return UAkLinuxPlatformInfo
+function UAkLinuxPlatformInfo:get() end
+
 
 ---@class UAkLocalizedMediaAsset : UAkMediaAsset
 UAkLocalizedMediaAsset = {}
 
+---@return UAkLocalizedMediaAsset
+function UAkLocalizedMediaAsset:get() end
+
 
 ---@class UAkMIDIEventCallbackInfo : UAkEventCallbackInfo
 UAkMIDIEventCallbackInfo = {}
+
+---@return UAkMIDIEventCallbackInfo
+function UAkMIDIEventCallbackInfo:get() end
 
 ---@return EAkMidiEventType
 function UAkMIDIEventCallbackInfo:GetType() end
@@ -1201,12 +1510,18 @@ function UAkMIDIEventCallbackInfo:GetCc(AsCc) end
 ---@class UAkMPXInitializationSettings : UAkXSXInitializationSettings
 UAkMPXInitializationSettings = {}
 
+---@return UAkMPXInitializationSettings
+function UAkMPXInitializationSettings:get() end
+
 
 ---@class UAkMacInitializationSettings : UObject
 ---@field CommonSettings FAkCommonInitializationSettingsWithSampleRate
 ---@field CommunicationSettings FAkCommunicationSettingsWithSystemInitialization
 ---@field AdvancedSettings FAkMacAdvancedInitializationSettings
 UAkMacInitializationSettings = {}
+
+---@return UAkMacInitializationSettings
+function UAkMacInitializationSettings:get() end
 
 ---@param NewValue boolean
 function UAkMacInitializationSettings:MigrateMultiCoreRendering(NewValue) end
@@ -1215,6 +1530,9 @@ function UAkMacInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 ---@class UAkMacPlatformInfo : UAkPlatformInfo
 UAkMacPlatformInfo = {}
 
+---@return UAkMacPlatformInfo
+function UAkMacPlatformInfo:get() end
+
 
 ---@class UAkMarkerCallbackInfo : UAkEventCallbackInfo
 ---@field Identifier int32
@@ -1222,16 +1540,25 @@ UAkMacPlatformInfo = {}
 ---@field Label FString
 UAkMarkerCallbackInfo = {}
 
+---@return UAkMarkerCallbackInfo
+function UAkMarkerCallbackInfo:get() end
+
 
 
 ---@class UAkMediaAsset : UObject
 ---@field MediaAssetDataPerPlatform TMap<FString, UAkMediaAssetData>
 UAkMediaAsset = {}
 
+---@return UAkMediaAsset
+function UAkMediaAsset:get() end
+
 
 
 ---@class UAkMediaAssetData : UObject
 UAkMediaAssetData = {}
+
+---@return UAkMediaAssetData
+function UAkMediaAssetData:get() end
 
 
 ---@class UAkMusicSyncCallbackInfo : UAkCallbackInfo
@@ -1241,6 +1568,9 @@ UAkMediaAssetData = {}
 ---@field UserCueName FString
 UAkMusicSyncCallbackInfo = {}
 
+---@return UAkMusicSyncCallbackInfo
+function UAkMusicSyncCallbackInfo:get() end
+
 
 
 ---@class UAkPS5InitializationSettings : UObject
@@ -1249,14 +1579,23 @@ UAkMusicSyncCallbackInfo = {}
 ---@field AdvancedSettings FAkPS5AdvancedInitializationSettings
 UAkPS5InitializationSettings = {}
 
+---@return UAkPS5InitializationSettings
+function UAkPS5InitializationSettings:get() end
+
 
 
 ---@class UAkPS5PlatformInfo : UAkPlatformInfo
 UAkPS5PlatformInfo = {}
 
+---@return UAkPS5PlatformInfo
+function UAkPS5PlatformInfo:get() end
+
 
 ---@class UAkPlatformInfo : UObject
 UAkPlatformInfo = {}
+
+---@return UAkPlatformInfo
+function UAkPlatformInfo:get() end
 
 
 ---@class UAkPortalComponent : USceneComponent
@@ -1266,6 +1605,9 @@ UAkPlatformInfo = {}
 ---@field ObstructionRefreshInterval float
 ---@field ObstructionCollisionChannel ECollisionChannel
 UAkPortalComponent = {}
+
+---@return UAkPortalComponent
+function UAkPortalComponent:get() end
 
 ---@param InPortalOcclusion float
 function UAkPortalComponent:SetPortalOcclusion(InPortalOcclusion) end
@@ -1298,6 +1640,9 @@ function UAkPortalComponent:DisablePortal() end
 ---@field ParentRoom TWeakObjectPtr<UAkRoomComponent>
 UAkRoomComponent = {}
 
+---@return UAkRoomComponent
+function UAkRoomComponent:get() end
+
 ---@param InTransitionRegionWidth float
 function UAkRoomComponent:UpdateTransitionRegionWidth(InTransitionRegionWidth) end
 ---@param InParentRoomActor AActor
@@ -1325,6 +1670,9 @@ function UAkRoomComponent:GetPrimitiveParent() end
 ---@class UAkRtpc : UAkAudioType
 ---@field GameParameterCookedData FWwiseGameParameterCookedData
 UAkRtpc = {}
+
+---@return UAkRtpc
+function UAkRtpc:get() end
 
 
 
@@ -1377,6 +1725,9 @@ UAkRtpc = {}
 ---@field DefaultAkComponentClass TSubclassOf<UAkComponent>
 UAkSettings = {}
 
+---@return UAkSettings
+function UAkSettings:get() end
+
 
 
 ---@class UAkSettingsPerUser : UObject
@@ -1393,6 +1744,9 @@ UAkSettings = {}
 ---@field SoundDataGenerationSkipLanguage boolean
 ---@field AskForWwiseAssetReload boolean
 UAkSettingsPerUser = {}
+
+---@return UAkSettingsPerUser
+function UAkSettingsPerUser:get() end
 
 
 
@@ -1413,6 +1767,9 @@ UAkSettingsPerUser = {}
 ---@field OnItemDropped FAkSliderOnItemDropped
 ---@field OnPropertyDropped FAkSliderOnPropertyDropped
 UAkSlider = {}
+
+---@return UAkSlider
+function UAkSlider:get() end
 
 ---@param InValue float
 function UAkSlider:SetValue(InValue) end
@@ -1441,10 +1798,16 @@ function UAkSlider:GetAkSliderItemId() end
 ---@class UAkStateValue : UAkGroupValue
 UAkStateValue = {}
 
+---@return UAkStateValue
+function UAkStateValue:get() end
+
 
 ---@class UAkSubmixInputComponent : UAkAudioInputComponent
 ---@field SubmixToRecord USoundSubmix
 UAkSubmixInputComponent = {}
+
+---@return UAkSubmixInputComponent
+function UAkSubmixInputComponent:get() end
 
 
 
@@ -1456,6 +1819,9 @@ UAkSubmixInputComponent = {}
 ---@field AssociatedRoom AActor
 UAkSurfaceReflectorSetComponent = {}
 
+---@return UAkSurfaceReflectorSetComponent
+function UAkSurfaceReflectorSetComponent:get() end
+
 function UAkSurfaceReflectorSetComponent:UpdateSurfaceReflectorSet() end
 ---@param in_AcousticPolys TArray<FAkSurfacePoly>
 function UAkSurfaceReflectorSetComponent:UpdateAcousticProperties(in_AcousticPolys) end
@@ -1466,6 +1832,9 @@ function UAkSurfaceReflectorSetComponent:RemoveSurfaceReflectorSet() end
 ---@class UAkSwitchValue : UAkGroupValue
 UAkSwitchValue = {}
 
+---@return UAkSwitchValue
+function UAkSwitchValue:get() end
+
 
 ---@class UAkTVOSInitializationSettings : UObject
 ---@field CommonSettings FAkCommonInitializationSettingsWithSampleRate
@@ -1474,20 +1843,32 @@ UAkSwitchValue = {}
 ---@field AdvancedSettings FAkTVOSAdvancedInitializationSettings
 UAkTVOSInitializationSettings = {}
 
+---@return UAkTVOSInitializationSettings
+function UAkTVOSInitializationSettings:get() end
+
 
 
 ---@class UAkTVOSPlatformInfo : UAkPlatformInfo
 UAkTVOSPlatformInfo = {}
+
+---@return UAkTVOSPlatformInfo
+function UAkTVOSPlatformInfo:get() end
 
 
 ---@class UAkTrigger : UAkAudioType
 ---@field TriggerCookedData FWwiseTriggerCookedData
 UAkTrigger = {}
 
+---@return UAkTrigger
+function UAkTrigger:get() end
+
 
 
 ---@class UAkWaapiCalls : UBlueprintFunctionLibrary
 UAkWaapiCalls = {}
+
+---@return UAkWaapiCalls
+function UAkWaapiCalls:get() end
 
 ---@param SubscriptionId FAkWaapiSubscriptionId
 ---@param UnsubscriptionDone boolean
@@ -1527,6 +1908,9 @@ function UAkWaapiCalls:CallWaapi(WaapiUri, WaapiArgs, WaapiOptions) end
 
 ---@class UAkWaapiJsonManager : UBlueprintFunctionLibrary
 UAkWaapiJsonManager = {}
+
+---@return UAkWaapiJsonManager
+function UAkWaapiJsonManager:get() end
 
 ---@param FieldName FAkWaapiFieldNames
 ---@param FieldValue FString
@@ -1593,6 +1977,9 @@ function UAkWaapiJsonManager:Conv_FAKWaapiJsonObjectToString(INAKWaapiJsonObject
 ---@class UAkWaapiUriConv : UBlueprintFunctionLibrary
 UAkWaapiUriConv = {}
 
+---@return UAkWaapiUriConv
+function UAkWaapiUriConv:get() end
+
 ---@param INAkWaapiUri FAkWaapiUri
 ---@return FText
 function UAkWaapiUriConv:Conv_FAkWaapiUriToText(INAkWaapiUri) end
@@ -1604,17 +1991,29 @@ function UAkWaapiUriConv:Conv_FAkWaapiUriToString(INAkWaapiUri) end
 ---@class UAkWin32PlatformInfo : UAkPlatformInfo
 UAkWin32PlatformInfo = {}
 
+---@return UAkWin32PlatformInfo
+function UAkWin32PlatformInfo:get() end
+
 
 ---@class UAkWin64PlatformInfo : UAkPlatformInfo
 UAkWin64PlatformInfo = {}
+
+---@return UAkWin64PlatformInfo
+function UAkWin64PlatformInfo:get() end
 
 
 ---@class UAkWinAnvilInitializationSettings : UAkWinGDKInitializationSettings
 UAkWinAnvilInitializationSettings = {}
 
+---@return UAkWinAnvilInitializationSettings
+function UAkWinAnvilInitializationSettings:get() end
+
 
 ---@class UAkWinAnvilPlatformInfo : UAkWinGDKPlatformInfo
 UAkWinAnvilPlatformInfo = {}
+
+---@return UAkWinAnvilPlatformInfo
+function UAkWinAnvilPlatformInfo:get() end
 
 
 ---@class UAkWinGDKInitializationSettings : UObject
@@ -1623,12 +2022,18 @@ UAkWinAnvilPlatformInfo = {}
 ---@field AdvancedSettings FAkWinGDKAdvancedInitializationSettings
 UAkWinGDKInitializationSettings = {}
 
+---@return UAkWinGDKInitializationSettings
+function UAkWinGDKInitializationSettings:get() end
+
 ---@param NewValue boolean
 function UAkWinGDKInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 
 
 ---@class UAkWinGDKPlatformInfo : UAkPlatformInfo
 UAkWinGDKPlatformInfo = {}
+
+---@return UAkWinGDKPlatformInfo
+function UAkWinGDKPlatformInfo:get() end
 
 
 ---@class UAkWindowsInitializationSettings : UObject
@@ -1637,6 +2042,9 @@ UAkWinGDKPlatformInfo = {}
 ---@field AdvancedSettings FAkWindowsAdvancedInitializationSettings
 UAkWindowsInitializationSettings = {}
 
+---@return UAkWindowsInitializationSettings
+function UAkWindowsInitializationSettings:get() end
+
 ---@param NewValue boolean
 function UAkWindowsInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 
@@ -1644,11 +2052,17 @@ function UAkWindowsInitializationSettings:MigrateMultiCoreRendering(NewValue) en
 ---@class UAkWindowsPlatformInfo : UAkWin64PlatformInfo
 UAkWindowsPlatformInfo = {}
 
+---@return UAkWindowsPlatformInfo
+function UAkWindowsPlatformInfo:get() end
+
 
 ---@class UAkWwiseTree : UWidget
 ---@field OnSelectionChanged FAkWwiseTreeOnSelectionChanged
 ---@field OnItemDragged FAkWwiseTreeOnItemDragged
 UAkWwiseTree = {}
+
+---@return UAkWwiseTree
+function UAkWwiseTree:get() end
 
 ---@param newText FString
 function UAkWwiseTree:SetSearchText(newText) end
@@ -1663,14 +2077,23 @@ function UAkWwiseTree:GetSearchText() end
 ---@field OnItemDragged FAkWwiseTreeSelectorOnItemDragged
 UAkWwiseTreeSelector = {}
 
+---@return UAkWwiseTreeSelector
+function UAkWwiseTreeSelector:get() end
+
 
 
 ---@class UAkXB1InitializationSettings : UAkXboxOneGDKInitializationSettings
 UAkXB1InitializationSettings = {}
 
+---@return UAkXB1InitializationSettings
+function UAkXB1InitializationSettings:get() end
+
 
 ---@class UAkXB1PlatformInfo : UAkXboxOneGDKPlatformInfo
 UAkXB1PlatformInfo = {}
+
+---@return UAkXB1PlatformInfo
+function UAkXB1PlatformInfo:get() end
 
 
 ---@class UAkXSXInitializationSettings : UObject
@@ -1680,6 +2103,9 @@ UAkXB1PlatformInfo = {}
 ---@field AdvancedSettings FAkXSXAdvancedInitializationSettings
 UAkXSXInitializationSettings = {}
 
+---@return UAkXSXInitializationSettings
+function UAkXSXInitializationSettings:get() end
+
 ---@param NewValue boolean
 function UAkXSXInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 
@@ -1687,13 +2113,22 @@ function UAkXSXInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 ---@class UAkXSXPlatformInfo : UAkPlatformInfo
 UAkXSXPlatformInfo = {}
 
+---@return UAkXSXPlatformInfo
+function UAkXSXPlatformInfo:get() end
+
 
 ---@class UAkXboxOneAnvilInitializationSettings : UAkXboxOneGDKInitializationSettings
 UAkXboxOneAnvilInitializationSettings = {}
 
+---@return UAkXboxOneAnvilInitializationSettings
+function UAkXboxOneAnvilInitializationSettings:get() end
+
 
 ---@class UAkXboxOneAnvilPlatformInfo : UAkXboxOneGDKPlatformInfo
 UAkXboxOneAnvilPlatformInfo = {}
+
+---@return UAkXboxOneAnvilPlatformInfo
+function UAkXboxOneAnvilPlatformInfo:get() end
 
 
 ---@class UAkXboxOneGDKInitializationSettings : UObject
@@ -1703,6 +2138,9 @@ UAkXboxOneAnvilPlatformInfo = {}
 ---@field AdvancedSettings FAkXboxOneGDKAdvancedInitializationSettings
 UAkXboxOneGDKInitializationSettings = {}
 
+---@return UAkXboxOneGDKInitializationSettings
+function UAkXboxOneGDKInitializationSettings:get() end
+
 ---@param NewValue boolean
 function UAkXboxOneGDKInitializationSettings:MigrateMultiCoreRendering(NewValue) end
 
@@ -1710,13 +2148,22 @@ function UAkXboxOneGDKInitializationSettings:MigrateMultiCoreRendering(NewValue)
 ---@class UAkXboxOneGDKPlatformInfo : UAkPlatformInfo
 UAkXboxOneGDKPlatformInfo = {}
 
+---@return UAkXboxOneGDKPlatformInfo
+function UAkXboxOneGDKPlatformInfo:get() end
+
 
 ---@class UDrawPortalComponent : UPrimitiveComponent
 UDrawPortalComponent = {}
 
+---@return UDrawPortalComponent
+function UDrawPortalComponent:get() end
+
 
 ---@class UDrawRoomComponent : UPrimitiveComponent
 UDrawRoomComponent = {}
+
+---@return UDrawRoomComponent
+function UDrawRoomComponent:get() end
 
 
 ---@class UMovieSceneAkAudioEventSection : UMovieSceneSection
@@ -1729,10 +2176,16 @@ UDrawRoomComponent = {}
 ---@field MaxDurationSourceID FString
 UMovieSceneAkAudioEventSection = {}
 
+---@return UMovieSceneAkAudioEventSection
+function UMovieSceneAkAudioEventSection:get() end
+
 
 
 ---@class UMovieSceneAkAudioEventTrack : UMovieSceneAkTrack
 UMovieSceneAkAudioEventTrack = {}
+
+---@return UMovieSceneAkAudioEventTrack
+function UMovieSceneAkAudioEventTrack:get() end
 
 
 ---@class UMovieSceneAkAudioRTPCSection : UMovieSceneSection
@@ -1743,10 +2196,16 @@ UMovieSceneAkAudioEventTrack = {}
 ---@field RTPCChannel FMovieSceneFloatChannel
 UMovieSceneAkAudioRTPCSection = {}
 
+---@return UMovieSceneAkAudioRTPCSection
+function UMovieSceneAkAudioRTPCSection:get() end
+
 
 
 ---@class UMovieSceneAkAudioRTPCTrack : UMovieSceneAkTrack
 UMovieSceneAkAudioRTPCTrack = {}
+
+---@return UMovieSceneAkAudioRTPCTrack
+function UMovieSceneAkAudioRTPCTrack:get() end
 
 
 ---@class UMovieSceneAkTrack : UMovieSceneTrack
@@ -1754,11 +2213,17 @@ UMovieSceneAkAudioRTPCTrack = {}
 ---@field bIsAMasterTrack boolean
 UMovieSceneAkTrack = {}
 
+---@return UMovieSceneAkTrack
+function UMovieSceneAkTrack:get() end
+
 
 
 ---@class UPostEventAsync : UBlueprintAsyncActionBase
 ---@field Completed FPostEventAsyncCompleted
 UPostEventAsync = {}
+
+---@return UPostEventAsync
+function UPostEventAsync:get() end
 
 ---@param WorldContextObject UObject
 ---@param AkEvent UAkAudioEvent
@@ -1775,6 +2240,9 @@ function UPostEventAsync:PollPostEventFuture() end
 ---@field Completed FPostEventAtLocationAsyncCompleted
 UPostEventAtLocationAsync = {}
 
+---@return UPostEventAtLocationAsync
+function UPostEventAtLocationAsync:get() end
+
 ---@param WorldContextObject UObject
 ---@param AkEvent UAkAudioEvent
 ---@param Location FVector
@@ -1786,6 +2254,9 @@ function UPostEventAtLocationAsync:PollPostEventFuture() end
 
 ---@class USAkWaapiFieldNamesConv : UBlueprintFunctionLibrary
 USAkWaapiFieldNamesConv = {}
+
+---@return USAkWaapiFieldNamesConv
+function USAkWaapiFieldNamesConv:get() end
 
 ---@param INAkWaapiFieldNames FAkWaapiFieldNames
 ---@return FText

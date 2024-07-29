@@ -9,6 +9,9 @@
 ---@field ['Boss Info'] FPalRaidBossSpawnInfo
 UBP_Status_RaidBossModeChange_C = {}
 
+---@return UBP_Status_RaidBossModeChange_C
+function UBP_Status_RaidBossModeChange_C:get() end
+
 ---@param Element EPalElementType
 ---@param VisualEffect EPalVisualEffectID
 function UBP_Status_RaidBossModeChange_C:FindModeChangeVisualEffectType(Element, VisualEffect) end

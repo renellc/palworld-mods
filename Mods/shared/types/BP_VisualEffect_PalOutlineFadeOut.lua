@@ -7,6 +7,9 @@
 ---@field Material UMaterialInstanceDynamic
 UBP_VisualEffect_PalOutlineFadeOut_C = {}
 
+---@return UBP_VisualEffect_PalOutlineFadeOut_C
+function UBP_VisualEffect_PalOutlineFadeOut_C:get() end
+
 function UBP_VisualEffect_PalOutlineFadeOut_C:OnBeginVisualEffect() end
 ---@param DeltaTime float
 function UBP_VisualEffect_PalOutlineFadeOut_C:TickVisualEffect(DeltaTime) end

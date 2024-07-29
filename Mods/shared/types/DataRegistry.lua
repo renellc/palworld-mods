@@ -9,6 +9,9 @@
 ---@field ForceReleaseSeconds float
 FDataRegistryCachePolicy = {}
 
+---@return FDataRegistryCachePolicy
+function FDataRegistryCachePolicy:get() end
+
 
 
 ---@class FDataRegistryId
@@ -16,20 +19,32 @@ FDataRegistryCachePolicy = {}
 ---@field ItemName FName
 FDataRegistryId = {}
 
+---@return FDataRegistryId
+function FDataRegistryId:get() end
+
 
 
 ---@class FDataRegistryIdFormat
 ---@field BaseGameplayTag FGameplayTag
 FDataRegistryIdFormat = {}
 
+---@return FDataRegistryIdFormat
+function FDataRegistryIdFormat:get() end
+
 
 
 ---@class FDataRegistryLookup
 FDataRegistryLookup = {}
 
+---@return FDataRegistryLookup
+function FDataRegistryLookup:get() end
+
 
 ---@class FDataRegistrySourceItemId
 FDataRegistrySourceItemId = {}
+
+---@return FDataRegistrySourceItemId
+function FDataRegistrySourceItemId:get() end
 
 
 ---@class FDataRegistrySource_DataTableRules
@@ -37,11 +52,17 @@ FDataRegistrySourceItemId = {}
 ---@field CachedTableKeepSeconds float
 FDataRegistrySource_DataTableRules = {}
 
+---@return FDataRegistrySource_DataTableRules
+function FDataRegistrySource_DataTableRules:get() end
+
 
 
 ---@class FDataRegistryType
 ---@field Name FName
 FDataRegistryType = {}
+
+---@return FDataRegistryType
+function FDataRegistryType:get() end
 
 
 
@@ -55,6 +76,9 @@ FDataRegistryType = {}
 ---@field DefaultCachePolicy FDataRegistryCachePolicy
 UDataRegistry = {}
 
+---@return UDataRegistry
+function UDataRegistry:get() end
+
 
 
 ---@class UDataRegistrySettings : UDeveloperSettings
@@ -63,11 +87,17 @@ UDataRegistry = {}
 ---@field bIgnoreMissingCookedAssetRegistryData boolean
 UDataRegistrySettings = {}
 
+---@return UDataRegistrySettings
+function UDataRegistrySettings:get() end
+
 
 
 ---@class UDataRegistrySource : UObject
 ---@field ParentSource UDataRegistrySource
 UDataRegistrySource = {}
+
+---@return UDataRegistrySource
+function UDataRegistrySource:get() end
 
 
 
@@ -78,6 +108,9 @@ UDataRegistrySource = {}
 ---@field PreloadTable UCurveTable
 UDataRegistrySource_CurveTable = {}
 
+---@return UDataRegistrySource_CurveTable
+function UDataRegistrySource_CurveTable:get() end
+
 
 
 ---@class UDataRegistrySource_DataTable : UDataRegistrySource
@@ -87,10 +120,16 @@ UDataRegistrySource_CurveTable = {}
 ---@field PreloadTable UDataTable
 UDataRegistrySource_DataTable = {}
 
+---@return UDataRegistrySource_DataTable
+function UDataRegistrySource_DataTable:get() end
+
 
 
 ---@class UDataRegistrySubsystem : UEngineSubsystem
 UDataRegistrySubsystem = {}
+
+---@return UDataRegistrySubsystem
+function UDataRegistrySubsystem:get() end
 
 ---@param A FDataRegistryType
 ---@param B FDataRegistryType
@@ -151,6 +190,9 @@ function UDataRegistrySubsystem:AcquireItemBP(ItemId, AcquireCallback) end
 ---@field RuntimeChildren TMap<FName, UDataRegistrySource>
 UMetaDataRegistrySource = {}
 
+---@return UMetaDataRegistrySource
+function UMetaDataRegistrySource:get() end
+
 
 
 ---@class UMetaDataRegistrySource_CurveTable : UMetaDataRegistrySource
@@ -158,12 +200,18 @@ UMetaDataRegistrySource = {}
 ---@field TableRules FDataRegistrySource_DataTableRules
 UMetaDataRegistrySource_CurveTable = {}
 
+---@return UMetaDataRegistrySource_CurveTable
+function UMetaDataRegistrySource_CurveTable:get() end
+
 
 
 ---@class UMetaDataRegistrySource_DataTable : UMetaDataRegistrySource
 ---@field CreatedSource TSubclassOf<UDataRegistrySource_DataTable>
 ---@field TableRules FDataRegistrySource_DataTableRules
 UMetaDataRegistrySource_DataTable = {}
+
+---@return UMetaDataRegistrySource_DataTable
+function UMetaDataRegistrySource_DataTable:get() end
 
 
 

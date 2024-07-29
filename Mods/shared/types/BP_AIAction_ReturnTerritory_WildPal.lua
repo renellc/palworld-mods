@@ -6,6 +6,9 @@
 ---@field StackTimer double
 UBP_AIAction_ReturnTerritory_WildPal_C = {}
 
+---@return UBP_AIAction_ReturnTerritory_WildPal_C
+function UBP_AIAction_ReturnTerritory_WildPal_C:get() end
+
 ---@param AsBP_Pal_AIBlackboard_Common UBP_PalAIBlackboard_Common_C
 function UBP_AIAction_ReturnTerritory_WildPal_C:GetBlackboard(AsBP_Pal_AIBlackboard_Common) end
 ---@param PalAIController APalAIController

@@ -5,6 +5,9 @@
 ---@field CaptureSphereType EPalCaptureSphereLevelType
 ABP_CapturePrism_C = {}
 
+---@return ABP_CapturePrism_C
+function ABP_CapturePrism_C:get() end
+
 ---@param Bullet AActor
 function ABP_CapturePrism_C:OnThrowInternal(Bullet) end
 ---@param Level int32

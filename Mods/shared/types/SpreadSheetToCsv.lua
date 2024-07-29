@@ -13,6 +13,9 @@
 ---@field bNoticeMessageAtNewRecordImported boolean
 USpreadSheetImpoter = {}
 
+---@return USpreadSheetImpoter
+function USpreadSheetImpoter:get() end
+
 ---@param pickCultureName FString
 ---@return FString
 function USpreadSheetImpoter:ToCsvStringForLocalizedText(pickCultureName) end
@@ -40,5 +43,8 @@ function USpreadSheetImpoter:Create() end
 
 ---@class USpreadSheetUtility : UObject
 USpreadSheetUtility = {}
+
+---@return USpreadSheetUtility
+function USpreadSheetUtility:get() end
 
 

@@ -16,10 +16,16 @@
 ---@field TypeName FName
 FAudioParameter = {}
 
+---@return FAudioParameter
+function FAudioParameter:get() end
+
 
 
 ---@class IAudioParameterControllerInterface : IInterface
 IAudioParameterControllerInterface = {}
+
+---@return IAudioParameterControllerInterface
+function IAudioParameterControllerInterface:get() end
 
 ---@param InName FName
 function IAudioParameterControllerInterface:SetTriggerParameter(InName) end
@@ -62,67 +68,112 @@ function IAudioParameterControllerInterface:ResetParameters() end
 ---@field Version int32
 UAudioCodecEncoderSettings = {}
 
+---@return UAudioCodecEncoderSettings
+function UAudioCodecEncoderSettings:get() end
+
 
 
 ---@class UAudioEndpointSettingsBase : UObject
 UAudioEndpointSettingsBase = {}
+
+---@return UAudioEndpointSettingsBase
+function UAudioEndpointSettingsBase:get() end
 
 
 ---@class UAudioPcmEncoderSettings : UAudioCodecEncoderSettings
 ---@field BitDepthConversion EPcmBitDepthConversion
 UAudioPcmEncoderSettings = {}
 
+---@return UAudioPcmEncoderSettings
+function UAudioPcmEncoderSettings:get() end
+
 
 
 ---@class UDummyEndpointSettings : UAudioEndpointSettingsBase
 UDummyEndpointSettings = {}
 
+---@return UDummyEndpointSettings
+function UDummyEndpointSettings:get() end
+
 
 ---@class UOcclusionPluginSourceSettingsBase : UObject
 UOcclusionPluginSourceSettingsBase = {}
+
+---@return UOcclusionPluginSourceSettingsBase
+function UOcclusionPluginSourceSettingsBase:get() end
 
 
 ---@class UReverbPluginSourceSettingsBase : UObject
 UReverbPluginSourceSettingsBase = {}
 
+---@return UReverbPluginSourceSettingsBase
+function UReverbPluginSourceSettingsBase:get() end
+
 
 ---@class USoundModulatorBase : UObject
 USoundModulatorBase = {}
+
+---@return USoundModulatorBase
+function USoundModulatorBase:get() end
 
 
 ---@class USoundfieldEffectBase : UObject
 ---@field Settings USoundfieldEffectSettingsBase
 USoundfieldEffectBase = {}
 
+---@return USoundfieldEffectBase
+function USoundfieldEffectBase:get() end
+
 
 
 ---@class USoundfieldEffectSettingsBase : UObject
 USoundfieldEffectSettingsBase = {}
 
+---@return USoundfieldEffectSettingsBase
+function USoundfieldEffectSettingsBase:get() end
+
 
 ---@class USoundfieldEncodingSettingsBase : UObject
 USoundfieldEncodingSettingsBase = {}
+
+---@return USoundfieldEncodingSettingsBase
+function USoundfieldEncodingSettingsBase:get() end
 
 
 ---@class USoundfieldEndpointSettingsBase : UObject
 USoundfieldEndpointSettingsBase = {}
 
+---@return USoundfieldEndpointSettingsBase
+function USoundfieldEndpointSettingsBase:get() end
+
 
 ---@class USourceDataOverridePluginSourceSettingsBase : UObject
 USourceDataOverridePluginSourceSettingsBase = {}
+
+---@return USourceDataOverridePluginSourceSettingsBase
+function USourceDataOverridePluginSourceSettingsBase:get() end
 
 
 ---@class USpatializationPluginSourceSettingsBase : UObject
 USpatializationPluginSourceSettingsBase = {}
 
+---@return USpatializationPluginSourceSettingsBase
+function USpatializationPluginSourceSettingsBase:get() end
+
 
 ---@class UWaveformTransformationBase : UObject
 UWaveformTransformationBase = {}
+
+---@return UWaveformTransformationBase
+function UWaveformTransformationBase:get() end
 
 
 ---@class UWaveformTransformationChain : UObject
 ---@field Transformations TArray<UWaveformTransformationBase>
 UWaveformTransformationChain = {}
+
+---@return UWaveformTransformationChain
+function UWaveformTransformationChain:get() end
 
 
 

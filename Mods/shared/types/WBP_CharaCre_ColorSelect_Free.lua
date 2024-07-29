@@ -21,6 +21,9 @@
 ---@field OnNotifyCustomColorClicked FWBP_CharaCre_ColorSelect_Free_COnNotifyCustomColorClicked
 UWBP_CharaCre_ColorSelect_Free_C = {}
 
+---@return UWBP_CharaCre_ColorSelect_Free_C
+function UWBP_CharaCre_ColorSelect_Free_C:get() end
+
 ---@param IsEnable boolean
 UWBP_CharaCre_ColorSelect_Free_C['Set Enable Slider'] = function(IsEnable) end
 ---@param NewColor FLinearColor

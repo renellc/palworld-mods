@@ -4,6 +4,9 @@
 ---@field ConstraintsManager UConstraintsManager
 AConstraintsActor = {}
 
+---@return AConstraintsActor
+function AConstraintsActor:get() end
+
 
 
 ---@class FConstraintAndActiveChannel
@@ -12,14 +15,23 @@ AConstraintsActor = {}
 ---@field ConstraintCopyToSpawn UTickableConstraint
 FConstraintAndActiveChannel = {}
 
+---@return FConstraintAndActiveChannel
+function FConstraintAndActiveChannel:get() end
+
 
 
 ---@class FConstraintTickFunction : FTickFunction
 FConstraintTickFunction = {}
 
+---@return FConstraintTickFunction
+function FConstraintTickFunction:get() end
+
 
 ---@class FMovieSceneConstraintChannel : FMovieSceneBoolChannel
 FMovieSceneConstraintChannel = {}
+
+---@return FMovieSceneConstraintChannel
+function FMovieSceneConstraintChannel:get() end
 
 
 ---@class UConstraintsManager : UObject
@@ -28,10 +40,16 @@ FMovieSceneConstraintChannel = {}
 ---@field Constraints TArray<UTickableConstraint>
 UConstraintsManager = {}
 
+---@return UConstraintsManager
+function UConstraintsManager:get() end
+
 
 
 ---@class UConstraintsScriptingLibrary : UBlueprintFunctionLibrary
 UConstraintsScriptingLibrary = {}
+
+---@return UConstraintsScriptingLibrary
+function UConstraintsScriptingLibrary:get() end
 
 ---@param InWorld UWorld
 ---@param InIndex int32
@@ -63,11 +81,17 @@ function UConstraintsScriptingLibrary:AddConstraint(InWorld, InParentHandle, InC
 ---@field Active boolean
 UTickableConstraint = {}
 
+---@return UTickableConstraint
+function UTickableConstraint:get() end
+
 
 
 ---@class UTickableLookAtConstraint : UTickableTransformConstraint
 ---@field Axis FVector
 UTickableLookAtConstraint = {}
+
+---@return UTickableLookAtConstraint
+function UTickableLookAtConstraint:get() end
 
 
 
@@ -76,17 +100,26 @@ UTickableLookAtConstraint = {}
 ---@field bScaling boolean
 UTickableParentConstraint = {}
 
+---@return UTickableParentConstraint
+function UTickableParentConstraint:get() end
+
 
 
 ---@class UTickableRotationConstraint : UTickableTransformConstraint
 ---@field OffsetRotation FQuat
 UTickableRotationConstraint = {}
 
+---@return UTickableRotationConstraint
+function UTickableRotationConstraint:get() end
+
 
 
 ---@class UTickableScaleConstraint : UTickableTransformConstraint
 ---@field OffsetScale FVector
 UTickableScaleConstraint = {}
+
+---@return UTickableScaleConstraint
+function UTickableScaleConstraint:get() end
 
 
 
@@ -99,11 +132,17 @@ UTickableScaleConstraint = {}
 ---@field Type ETransformConstraintType
 UTickableTransformConstraint = {}
 
+---@return UTickableTransformConstraint
+function UTickableTransformConstraint:get() end
+
 
 
 ---@class UTickableTranslationConstraint : UTickableTransformConstraint
 ---@field OffsetTranslation FVector
 UTickableTranslationConstraint = {}
+
+---@return UTickableTranslationConstraint
+function UTickableTranslationConstraint:get() end
 
 
 
@@ -112,11 +151,17 @@ UTickableTranslationConstraint = {}
 ---@field SocketName FName
 UTransformableComponentHandle = {}
 
+---@return UTransformableComponentHandle
+function UTransformableComponentHandle:get() end
+
 
 
 ---@class UTransformableHandle : UObject
 ---@field ConstraintBindingID FMovieSceneObjectBindingID
 UTransformableHandle = {}
+
+---@return UTransformableHandle
+function UTransformableHandle:get() end
 
 
 

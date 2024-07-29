@@ -11,6 +11,9 @@
 ---@field GamePadFocusChangeScrollType EScrollWhenFocusChanges
 UWBP_PalCommonScrollList_C = {}
 
+---@return UWBP_PalCommonScrollList_C
+function UWBP_PalCommonScrollList_C:get() end
+
 ---@param ScrollBox UScrollBox
 function UWBP_PalCommonScrollList_C:GetScrollBox(ScrollBox) end
 ---@param Widget UUserWidget

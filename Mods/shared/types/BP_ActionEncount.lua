@@ -5,6 +5,9 @@
 ---@field PalFacial UPalFacialComponent
 UBP_ActionEncount_C = {}
 
+---@return UBP_ActionEncount_C
+function UBP_ActionEncount_C:get() end
+
 function UBP_ActionEncount_C:OnBeginAction() end
 function UBP_ActionEncount_C:OnEndAction() end
 ---@param EntryPoint int32

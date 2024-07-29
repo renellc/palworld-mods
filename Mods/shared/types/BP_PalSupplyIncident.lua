@@ -13,6 +13,9 @@
 ---@field OutbreakMonsterNames TArray<FName>
 UBP_PalSupplyIncident_C = {}
 
+---@return UBP_PalSupplyIncident_C
+function UBP_PalSupplyIncident_C:get() end
+
 ---@param IsLivePal boolean
 function UBP_PalSupplyIncident_C:CheckLive(IsLivePal) end
 ---@param InName FName

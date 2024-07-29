@@ -3,6 +3,9 @@
 ---@class AQosBeaconClient : AOnlineBeaconClient
 AQosBeaconClient = {}
 
+---@return AQosBeaconClient
+function AQosBeaconClient:get() end
+
 ---@param InSessionId FString
 function AQosBeaconClient:ServerQosRequest(InSessionId) end
 ---@param Response EQosResponseType
@@ -11,6 +14,9 @@ function AQosBeaconClient:ClientQosResponse(Response) end
 
 ---@class AQosBeaconHost : AOnlineBeaconHostObject
 AQosBeaconHost = {}
+
+---@return AQosBeaconHost
+function AQosBeaconHost:get() end
 
 
 ---@class FDatacenterQosInstance
@@ -22,6 +28,9 @@ AQosBeaconHost = {}
 ---@field bUsable boolean
 FDatacenterQosInstance = {}
 
+---@return FDatacenterQosInstance
+function FDatacenterQosInstance:get() end
+
 
 
 ---@class FQosDatacenterInfo
@@ -31,12 +40,18 @@ FDatacenterQosInstance = {}
 ---@field Servers TArray<FQosPingServerInfo>
 FQosDatacenterInfo = {}
 
+---@return FQosDatacenterInfo
+function FQosDatacenterInfo:get() end
+
 
 
 ---@class FQosPingServerInfo
 ---@field Address FString
 ---@field Port int32
 FQosPingServerInfo = {}
+
+---@return FQosPingServerInfo
+function FQosPingServerInfo:get() end
 
 
 
@@ -50,6 +65,9 @@ FQosPingServerInfo = {}
 ---@field SubspaceBiasParams FQosSubspaceComparisonParams
 FQosRegionInfo = {}
 
+---@return FQosRegionInfo
+function FQosRegionInfo:get() end
+
 
 
 ---@class FQosSubspaceComparisonParams
@@ -59,12 +77,18 @@ FQosRegionInfo = {}
 ---@field ScaledMaxTolerancePct float
 FQosSubspaceComparisonParams = {}
 
+---@return FQosSubspaceComparisonParams
+function FQosSubspaceComparisonParams:get() end
+
 
 
 ---@class FRegionQosInstance
 ---@field Definition FQosRegionInfo
 ---@field DatacenterOptions TArray<FDatacenterQosInstance>
 FRegionQosInstance = {}
+
+---@return FRegionQosInstance
+function FRegionQosInstance:get() end
 
 
 
@@ -73,6 +97,9 @@ FRegionQosInstance = {}
 ---@field bCancelOperation boolean
 ---@field Datacenters TArray<FDatacenterQosInstance>
 UQosEvaluator = {}
+
+---@return UQosEvaluator
+function UQosEvaluator:get() end
 
 
 
@@ -91,6 +118,9 @@ UQosEvaluator = {}
 ---@field bRegionForcedViaCommandline boolean
 ---@field SelectedRegionId FString
 UQosRegionManager = {}
+
+---@return UQosRegionManager
+function UQosRegionManager:get() end
 
 
 

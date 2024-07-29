@@ -22,6 +22,9 @@
 ---@field NearCoolTimeRate double
 ABP_GrapplingGun_C = {}
 
+---@return ABP_GrapplingGun_C
+function ABP_GrapplingGun_C:get() end
+
 ---@param IsShow boolean
 function ABP_GrapplingGun_C:IsShowReticle(IsShow) end
 ---@param HitLocation FVector

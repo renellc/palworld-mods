@@ -6,6 +6,9 @@
 ---@field IsNotFreeAIMode boolean
 ABP_MonsterAIController_Boss_C = {}
 
+---@return ABP_MonsterAIController_Boss_C
+function ABP_MonsterAIController_Boss_C:get() end
+
 ---@param PalBrackboard UBP_PalAIBlackboard_Common_C
 function ABP_MonsterAIController_Boss_C:GetMyBB(PalBrackboard) end
 ---@param LeaderPalBrackboard UBP_PalAIBlackboard_Common_C

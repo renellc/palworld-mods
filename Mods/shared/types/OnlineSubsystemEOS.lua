@@ -10,10 +10,16 @@
 ---@field EncryptionKey FString
 FArtifactSettings = {}
 
+---@return FArtifactSettings
+function FArtifactSettings:get() end
+
 
 
 ---@class UDEPRECATED_EOSArtifactSettings : UDataAsset
 UDEPRECATED_EOSArtifactSettings = {}
+
+---@return UDEPRECATED_EOSArtifactSettings
+function UDEPRECATED_EOSArtifactSettings:get() end
 
 
 ---@class UEOSSettings : URuntimeOptionsBase
@@ -37,9 +43,15 @@ UDEPRECATED_EOSArtifactSettings = {}
 ---@field bOverrideDedicatedServer boolean
 UEOSSettings = {}
 
+---@return UEOSSettings
+function UEOSSettings:get() end
+
 
 
 ---@class UNetDriverEOS : UNetDriverEOSBase
 UNetDriverEOS = {}
+
+---@return UNetDriverEOS
+function UNetDriverEOS:get() end
 
 

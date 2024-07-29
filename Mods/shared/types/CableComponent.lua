@@ -4,6 +4,9 @@
 ---@field CableComponent UCableComponent
 ACableActor = {}
 
+---@return ACableActor
+function ACableActor:get() end
+
 
 
 ---@class UCableComponent : UMeshComponent
@@ -28,6 +31,9 @@ ACableActor = {}
 ---@field NumSides int32
 ---@field TileMaterial float
 UCableComponent = {}
+
+---@return UCableComponent
+function UCableComponent:get() end
 
 ---@param Component USceneComponent
 ---@param SocketName FName

@@ -17,6 +17,9 @@
 ---@field NonTargetTimer double
 ABP_PalCaptureBodyBase_C = {}
 
+---@return ABP_PalCaptureBodyBase_C
+function ABP_PalCaptureBodyBase_C:get() end
+
 ---@param Character AActor
 function ABP_PalCaptureBodyBase_C:GetOwnerCharacterOrRiderCharacter(Character) end
 ---@param isSneak boolean

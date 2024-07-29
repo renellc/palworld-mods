@@ -19,6 +19,9 @@
 ---@field CurrentResponse EPalAIResponseType
 UBP_AIAction_NPC_RelaxBase_C = {}
 
+---@return UBP_AIAction_NPC_RelaxBase_C
+function UBP_AIAction_NPC_RelaxBase_C:get() end
+
 function UBP_AIAction_NPC_RelaxBase_C:PlayDefaultAction() end
 function UBP_AIAction_NPC_RelaxBase_C:CancelDefaultAction() end
 ---@param IsLeader boolean

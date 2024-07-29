@@ -3,6 +3,9 @@
 ---@class UTraceUtils : UBlueprintFunctionLibrary
 UTraceUtils = {}
 
+---@return UTraceUtils
+function UTraceUtils:get() end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector

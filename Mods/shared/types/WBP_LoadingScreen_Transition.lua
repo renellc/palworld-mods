@@ -9,6 +9,9 @@
 ---@field WBP_LoadingScreen UWBP_LoadingScreen_C
 UWBP_LoadingScreen_Transition_C = {}
 
+---@return UWBP_LoadingScreen_Transition_C
+function UWBP_LoadingScreen_Transition_C:get() end
+
 ---@param Color FLinearColor
 function UWBP_LoadingScreen_Transition_C:SetBgColor(Color) end
 function UWBP_LoadingScreen_Transition_C:Finished_65AD92BC4646C00F05936392250F90EA() end

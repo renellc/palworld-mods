@@ -5,6 +5,9 @@
 ---@field BaseCampPos FVector
 UBP_AIAction_Invader_StandbyBaseCamp_C = {}
 
+---@return UBP_AIAction_Invader_StandbyBaseCamp_C
+function UBP_AIAction_Invader_StandbyBaseCamp_C:get() end
+
 ---@param Current EPalAIResponseType
 ---@param OverrideIsDamage boolean
 ---@param ChangeNextAction boolean

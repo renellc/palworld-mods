@@ -7,6 +7,9 @@
 ---@field OnInvaderArrivedDelegate FBP_MonsterAIController_Invader_COnInvaderArrivedDelegate
 ABP_MonsterAIController_Invader_C = {}
 
+---@return ABP_MonsterAIController_Invader_C
+function ABP_MonsterAIController_Invader_C:get() end
+
 ---@param PalBrackboard UBP_PalAIBlackboard_Common_C
 function ABP_MonsterAIController_Invader_C:GetMyBB(PalBrackboard) end
 ---@param LeaderPalBrackboard UBP_PalAIBlackboard_Common_C

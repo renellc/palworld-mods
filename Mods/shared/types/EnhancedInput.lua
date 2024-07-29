@@ -6,6 +6,9 @@
 ---@field FunctionNameToBind FName
 FBlueprintEnhancedInputActionBinding = {}
 
+---@return FBlueprintEnhancedInputActionBinding
+function FBlueprintEnhancedInputActionBinding:get() end
+
 
 
 ---@class FBlueprintInputDebugKeyDelegateBinding
@@ -14,6 +17,9 @@ FBlueprintEnhancedInputActionBinding = {}
 ---@field FunctionNameToBind FName
 ---@field bExecuteWhenPaused boolean
 FBlueprintInputDebugKeyDelegateBinding = {}
+
+---@return FBlueprintInputDebugKeyDelegateBinding
+function FBlueprintInputDebugKeyDelegateBinding:get() end
 
 
 
@@ -27,10 +33,16 @@ FBlueprintInputDebugKeyDelegateBinding = {}
 ---@field bShouldBeIgnored boolean
 FEnhancedActionKeyMapping = {}
 
+---@return FEnhancedActionKeyMapping
+function FEnhancedActionKeyMapping:get() end
+
 
 
 ---@class FInjectedInputArray
 FInjectedInputArray = {}
+
+---@return FInjectedInputArray
+function FInjectedInputArray:get() end
 
 
 ---@class FInputActionInstance
@@ -43,16 +55,25 @@ FInjectedInputArray = {}
 ---@field ElapsedTriggeredTime float
 FInputActionInstance = {}
 
+---@return FInputActionInstance
+function FInputActionInstance:get() end
+
 
 
 ---@class FInputActionValue
 FInputActionValue = {}
+
+---@return FInputActionValue
+function FInputActionValue:get() end
 
 
 ---@class FInputComboStepData
 ---@field ComboStepAction UInputAction
 ---@field TimeToPressKey float
 FInputComboStepData = {}
+
+---@return FInputComboStepData
+function FInputComboStepData:get() end
 
 
 
@@ -62,12 +83,18 @@ FInputComboStepData = {}
 ---@field BlockingAction UInputAction
 FMappingQueryIssue = {}
 
+---@return FMappingQueryIssue
+function FMappingQueryIssue:get() end
+
 
 
 ---@class FModifyContextOptions
 ---@field bIgnoreAllPressedKeysUntilRelease boolean
 ---@field bForceImmediately boolean
 FModifyContextOptions = {}
+
+---@return FModifyContextOptions
+function FModifyContextOptions:get() end
 
 
 
@@ -78,10 +105,16 @@ FModifyContextOptions = {}
 ---@field DisplayCategory FText
 FPlayerMappableKeyOptions = {}
 
+---@return FPlayerMappableKeyOptions
+function FPlayerMappableKeyOptions:get() end
+
 
 
 ---@class IEnhancedInputSubsystemInterface : IInterface
 IEnhancedInputSubsystemInterface = {}
+
+---@return IEnhancedInputSubsystemInterface
+function IEnhancedInputSubsystemInterface:get() end
 
 ---@param Options FModifyContextOptions
 ---@param RebuildType EInputMappingRebuildType
@@ -154,16 +187,25 @@ function IEnhancedInputSubsystemInterface:AddMappingContext(MappingContext, Prio
 ---@field InputActionDelegateBindings TArray<FBlueprintEnhancedInputActionBinding>
 UEnhancedInputActionDelegateBinding = {}
 
+---@return UEnhancedInputActionDelegateBinding
+function UEnhancedInputActionDelegateBinding:get() end
+
 
 
 ---@class UEnhancedInputActionValueBinding : UInputDelegateBinding
 ---@field InputActionValueBindings TArray<FBlueprintEnhancedInputActionBinding>
 UEnhancedInputActionValueBinding = {}
 
+---@return UEnhancedInputActionValueBinding
+function UEnhancedInputActionValueBinding:get() end
+
 
 
 ---@class UEnhancedInputComponent : UInputComponent
 UEnhancedInputComponent = {}
+
+---@return UEnhancedInputComponent
+function UEnhancedInputComponent:get() end
 
 ---@param action UInputAction
 ---@return FInputActionValue
@@ -175,10 +217,16 @@ function UEnhancedInputComponent:GetBoundActionValue(action) end
 ---@field bShouldOnlyTriggerLastActionInChord boolean
 UEnhancedInputDeveloperSettings = {}
 
+---@return UEnhancedInputDeveloperSettings
+function UEnhancedInputDeveloperSettings:get() end
+
 
 
 ---@class UEnhancedInputLibrary : UBlueprintFunctionLibrary
 UEnhancedInputLibrary = {}
+
+---@return UEnhancedInputLibrary
+function UEnhancedInputLibrary:get() end
 
 ---@param Context UInputMappingContext
 ---@param bForceImmediately boolean
@@ -226,11 +274,17 @@ function UEnhancedInputLibrary:BreakInputActionValue(InActionValue, X, Y, Z, Typ
 ---@field ControlMappingsRebuiltDelegate FEnhancedInputLocalPlayerSubsystemControlMappingsRebuiltDelegate
 UEnhancedInputLocalPlayerSubsystem = {}
 
+---@return UEnhancedInputLocalPlayerSubsystem
+function UEnhancedInputLocalPlayerSubsystem:get() end
+
 
 
 ---@class UEnhancedInputPlatformData : UObject
 ---@field MappingContextRedirects TMap<UInputMappingContext, UInputMappingContext>
 UEnhancedInputPlatformData = {}
+
+---@return UEnhancedInputPlatformData
+function UEnhancedInputPlatformData:get() end
 
 ---@param InContext UInputMappingContext
 ---@return UInputMappingContext
@@ -243,6 +297,9 @@ function UEnhancedInputPlatformData:GetContextRedirect(InContext) end
 ---@field bShouldLogMappingContextRedirects boolean
 UEnhancedInputPlatformSettings = {}
 
+---@return UEnhancedInputPlatformSettings
+function UEnhancedInputPlatformSettings:get() end
+
 
 
 ---@class UEnhancedPlayerInput : UPlayerInput
@@ -253,6 +310,9 @@ UEnhancedInputPlatformSettings = {}
 ---@field InputsInjectedThisTick TMap<UInputAction, FInjectedInputArray>
 ---@field LastInjectedActions TSet<UInputAction>
 UEnhancedPlayerInput = {}
+
+---@return UEnhancedPlayerInput
+function UEnhancedPlayerInput:get() end
 
 
 
@@ -266,11 +326,17 @@ UEnhancedPlayerInput = {}
 ---@field Modifiers TArray<UInputModifier>
 UInputAction = {}
 
+---@return UInputAction
+function UInputAction:get() end
+
 
 
 ---@class UInputDebugKeyDelegateBinding : UInputDelegateBinding
 ---@field InputDebugKeyDelegateBindings TArray<FBlueprintInputDebugKeyDelegateBinding>
 UInputDebugKeyDelegateBinding = {}
+
+---@return UInputDebugKeyDelegateBinding
+function UInputDebugKeyDelegateBinding:get() end
 
 
 
@@ -278,6 +344,9 @@ UInputDebugKeyDelegateBinding = {}
 ---@field Mappings TArray<FEnhancedActionKeyMapping>
 ---@field ContextDescription FText
 UInputMappingContext = {}
+
+---@return UInputMappingContext
+function UInputMappingContext:get() end
 
 ---@param action UInputAction
 ---@param Key FKey
@@ -296,6 +365,9 @@ function UInputMappingContext:MapKey(action, ToKey) end
 ---@class UInputModifier : UObject
 UInputModifier = {}
 
+---@return UInputModifier
+function UInputModifier:get() end
+
 ---@param PlayerInput UEnhancedPlayerInput
 ---@param CurrentValue FInputActionValue
 ---@param DeltaTime float
@@ -313,12 +385,18 @@ function UInputModifier:GetVisualizationColor(SampleValue, FinalValue) end
 ---@field Type EDeadZoneType
 UInputModifierDeadZone = {}
 
+---@return UInputModifierDeadZone
+function UInputModifierDeadZone:get() end
+
 
 
 ---@class UInputModifierFOVScaling : UInputModifier
 ---@field FOVScale float
 ---@field FOVScalingType EFOVScalingType
 UInputModifierFOVScaling = {}
+
+---@return UInputModifierFOVScaling
+function UInputModifierFOVScaling:get() end
 
 
 
@@ -328,11 +406,17 @@ UInputModifierFOVScaling = {}
 ---@field bZ boolean
 UInputModifierNegate = {}
 
+---@return UInputModifierNegate
+function UInputModifierNegate:get() end
+
 
 
 ---@class UInputModifierResponseCurveExponential : UInputModifier
 ---@field CurveExponent FVector
 UInputModifierResponseCurveExponential = {}
+
+---@return UInputModifierResponseCurveExponential
+function UInputModifierResponseCurveExponential:get() end
 
 
 
@@ -342,30 +426,48 @@ UInputModifierResponseCurveExponential = {}
 ---@field ResponseZ UCurveFloat
 UInputModifierResponseCurveUser = {}
 
+---@return UInputModifierResponseCurveUser
+function UInputModifierResponseCurveUser:get() end
+
 
 
 ---@class UInputModifierScalar : UInputModifier
 ---@field Scalar FVector
 UInputModifierScalar = {}
 
+---@return UInputModifierScalar
+function UInputModifierScalar:get() end
+
 
 
 ---@class UInputModifierScaleByDeltaTime : UInputModifier
 UInputModifierScaleByDeltaTime = {}
 
+---@return UInputModifierScaleByDeltaTime
+function UInputModifierScaleByDeltaTime:get() end
+
 
 ---@class UInputModifierSmooth : UInputModifier
 UInputModifierSmooth = {}
+
+---@return UInputModifierSmooth
+function UInputModifierSmooth:get() end
 
 
 ---@class UInputModifierSwizzleAxis : UInputModifier
 ---@field Order EInputAxisSwizzle
 UInputModifierSwizzleAxis = {}
 
+---@return UInputModifierSwizzleAxis
+function UInputModifierSwizzleAxis:get() end
+
 
 
 ---@class UInputModifierToWorldSpace : UInputModifier
 UInputModifierToWorldSpace = {}
+
+---@return UInputModifierToWorldSpace
+function UInputModifierToWorldSpace:get() end
 
 
 ---@class UInputTrigger : UObject
@@ -373,6 +475,9 @@ UInputModifierToWorldSpace = {}
 ---@field bShouldAlwaysTick boolean
 ---@field LastValue FInputActionValue
 UInputTrigger = {}
+
+---@return UInputTrigger
+function UInputTrigger:get() end
 
 ---@param PlayerInput UEnhancedPlayerInput
 ---@param ModifiedValue FInputActionValue
@@ -390,10 +495,16 @@ function UInputTrigger:GetTriggerType() end
 ---@field ChordAction UInputAction
 UInputTriggerChordAction = {}
 
+---@return UInputTriggerChordAction
+function UInputTriggerChordAction:get() end
+
 
 
 ---@class UInputTriggerChordBlocker : UInputTriggerChordAction
 UInputTriggerChordBlocker = {}
+
+---@return UInputTriggerChordBlocker
+function UInputTriggerChordBlocker:get() end
 
 
 ---@class UInputTriggerCombo : UInputTrigger
@@ -403,10 +514,16 @@ UInputTriggerChordBlocker = {}
 ---@field CancelActions TArray<UInputAction>
 UInputTriggerCombo = {}
 
+---@return UInputTriggerCombo
+function UInputTriggerCombo:get() end
+
 
 
 ---@class UInputTriggerDown : UInputTrigger
 UInputTriggerDown = {}
+
+---@return UInputTriggerDown
+function UInputTriggerDown:get() end
 
 
 ---@class UInputTriggerHold : UInputTriggerTimedBase
@@ -414,16 +531,25 @@ UInputTriggerDown = {}
 ---@field bIsOneShot boolean
 UInputTriggerHold = {}
 
+---@return UInputTriggerHold
+function UInputTriggerHold:get() end
+
 
 
 ---@class UInputTriggerHoldAndRelease : UInputTriggerTimedBase
 ---@field HoldTimeThreshold float
 UInputTriggerHoldAndRelease = {}
 
+---@return UInputTriggerHoldAndRelease
+function UInputTriggerHoldAndRelease:get() end
+
 
 
 ---@class UInputTriggerPressed : UInputTrigger
 UInputTriggerPressed = {}
+
+---@return UInputTriggerPressed
+function UInputTriggerPressed:get() end
 
 
 ---@class UInputTriggerPulse : UInputTriggerTimedBase
@@ -432,15 +558,24 @@ UInputTriggerPressed = {}
 ---@field TriggerLimit int32
 UInputTriggerPulse = {}
 
+---@return UInputTriggerPulse
+function UInputTriggerPulse:get() end
+
 
 
 ---@class UInputTriggerReleased : UInputTrigger
 UInputTriggerReleased = {}
 
+---@return UInputTriggerReleased
+function UInputTriggerReleased:get() end
+
 
 ---@class UInputTriggerTap : UInputTriggerTimedBase
 ---@field TapReleaseTimeThreshold float
 UInputTriggerTap = {}
+
+---@return UInputTriggerTap
+function UInputTriggerTap:get() end
 
 
 
@@ -448,6 +583,9 @@ UInputTriggerTap = {}
 ---@field HeldDuration float
 ---@field bAffectedByTimeDilation boolean
 UInputTriggerTimedBase = {}
+
+---@return UInputTriggerTimedBase
+function UInputTriggerTimedBase:get() end
 
 
 
@@ -458,6 +596,9 @@ UInputTriggerTimedBase = {}
 ---@field MetaData UObject
 ---@field Contexts TMap<UInputMappingContext, int32>
 UPlayerMappableInputConfig = {}
+
+---@return UPlayerMappableInputConfig
+function UPlayerMappableInputConfig:get() end
 
 function UPlayerMappableInputConfig:ResetToDefault() end
 ---@return boolean

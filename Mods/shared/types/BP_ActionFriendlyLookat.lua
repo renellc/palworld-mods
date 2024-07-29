@@ -6,6 +6,9 @@
 ---@field Offset double
 UBP_ActionFriendlyLookat_C = {}
 
+---@return UBP_ActionFriendlyLookat_C
+function UBP_ActionFriendlyLookat_C:get() end
+
 ---@param Smile boolean
 function UBP_ActionFriendlyLookat_C:ChangeFace(Smile) end
 function UBP_ActionFriendlyLookat_C:OnBeginAction() end

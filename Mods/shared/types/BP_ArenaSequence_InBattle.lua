@@ -8,6 +8,9 @@
 ---@field OnTimerTick FBP_ArenaSequence_InBattle_COnTimerTick
 UBP_ArenaSequence_InBattle_C = {}
 
+---@return UBP_ArenaSequence_InBattle_C
+function UBP_ArenaSequence_InBattle_C:get() end
+
 ---@param Disable boolean
 function UBP_ArenaSequence_InBattle_C:SetDisableOtomoDeadReturn(Disable) end
 ---@param InBattle boolean

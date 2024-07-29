@@ -6,6 +6,9 @@
 ---@field AkEventPlayerCrafting UAkAudioEvent
 UBP_ActionCommonWork_C = {}
 
+---@return UBP_ActionCommonWork_C
+function UBP_ActionCommonWork_C:get() end
+
 function UBP_ActionCommonWork_C:OnEndAction() end
 function UBP_ActionCommonWork_C:OnBeginAction() end
 ---@param EntryPoint int32

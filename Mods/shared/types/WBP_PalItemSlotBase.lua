@@ -15,6 +15,9 @@
 ---@field OnCorruptionUpdate FWBP_PalItemSlotBase_COnCorruptionUpdate
 UWBP_PalItemSlotBase_C = {}
 
+---@return UWBP_PalItemSlotBase_C
+function UWBP_PalItemSlotBase_C:get() end
+
 ---@param OldDurability float
 ---@param NewDurability float
 function UWBP_PalItemSlotBase_C:OnUpdateDurability_Internal(OldDurability, NewDurability) end

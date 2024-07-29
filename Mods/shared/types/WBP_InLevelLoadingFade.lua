@@ -9,6 +9,9 @@
 ---@field ProgressDisplay boolean
 UWBP_InLevelLoadingFade_C = {}
 
+---@return UWBP_InLevelLoadingFade_C
+function UWBP_InLevelLoadingFade_C:get() end
+
 function UWBP_InLevelLoadingFade_C:FadeOut() end
 function UWBP_InLevelLoadingFade_C:FadeIn() end
 function UWBP_InLevelLoadingFade_C:Setup_ForOverride() end

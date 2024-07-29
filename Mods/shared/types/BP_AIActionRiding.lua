@@ -8,6 +8,9 @@
 ---@field bIsRiding boolean
 UBP_AIActionRiding_C = {}
 
+---@return UBP_AIActionRiding_C
+function UBP_AIActionRiding_C:get() end
+
 ---@param RidingCharacter APalCharacter
 function UBP_AIActionRiding_C:SetRidingCharacter(RidingCharacter) end
 ---@param ControlledPawn APawn

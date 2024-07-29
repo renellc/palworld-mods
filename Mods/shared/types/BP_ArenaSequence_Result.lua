@@ -9,6 +9,9 @@
 ---@field OnCutsceneFinish FBP_ArenaSequence_Result_COnCutsceneFinish
 UBP_ArenaSequence_Result_C = {}
 
+---@return UBP_ArenaSequence_Result_C
+function UBP_ArenaSequence_Result_C:get() end
+
 function UBP_ArenaSequence_Result_C:PlayResultSound() end
 ---@param isDisable boolean
 function UBP_ArenaSequence_Result_C:SetDisableLookAtAllPal(isDisable) end

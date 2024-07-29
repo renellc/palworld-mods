@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Status_Muddy_C = {}
 
+---@return UBP_Status_Muddy_C
+function UBP_Status_Muddy_C:get() end
+
 function UBP_Status_Muddy_C:OnBeginStatus() end
 function UBP_Status_Muddy_C:OnEndStatus() end
 UBP_Status_Muddy_C['カスタムイベント_2'] = function() end

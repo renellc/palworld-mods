@@ -26,6 +26,9 @@
 ---@field bShouldCheckStuckByTick boolean
 APalAIController = {}
 
+---@return APalAIController
+function APalAIController:get() end
+
 ---@param Time float
 function APalAIController:WaitForSeconds(Time) end
 ---@param GoalActor AActor
@@ -119,6 +122,9 @@ function APalAIController:AddTargetNPC(NPC) end
 ---@class APalActionDummyTargetActor : AActor
 APalActionDummyTargetActor = {}
 
+---@return APalActionDummyTargetActor
+function APalActionDummyTargetActor:get() end
+
 
 ---@class APalAmbientSoundAreaBase : AActor
 ---@field AmbientPriority int32
@@ -126,6 +132,9 @@ APalActionDummyTargetActor = {}
 ---@field NightAmbientEvents TArray<UAkAudioEvent>
 ---@field bIsOverlappedLocalPlayer boolean
 APalAmbientSoundAreaBase = {}
+
+---@return APalAmbientSoundAreaBase
+function APalAmbientSoundAreaBase:get() end
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param PlayerCharacter APalPlayerCharacter
@@ -145,11 +154,17 @@ function APalAmbientSoundAreaBase:GetAmbientSoundAreaData() end
 ---@field AmbinetSoundLineObject UPalAmbientSoundLineObject
 APalAmbientSoundLineBase = {}
 
+---@return APalAmbientSoundLineBase
+function APalAmbientSoundLineBase:get() end
+
 
 
 ---@class APalArenaEntrance : AActor
 ---@field EntranceInfo FPalArenaEntranceInfo
 APalArenaEntrance = {}
+
+---@return APalArenaEntrance
+function APalArenaEntrance:get() end
 
 function APalArenaEntrance:OpenArenaRule() end
 ---@param Other AActor
@@ -169,6 +184,9 @@ function APalArenaEntrance:GetDeadItemDropPoint() end
 ---@class APalArenaLevelInstance : ALevelInstance
 ---@field BattleAreaRadius float
 APalArenaLevelInstance = {}
+
+---@return APalArenaLevelInstance
+function APalArenaLevelInstance:get() end
 
 ---@return FVector
 function APalArenaLevelInstance:GetReturnLocation() end
@@ -196,6 +214,9 @@ function APalArenaLevelInstance:CheckLevelLoad_ServerInternal() end
 ---@field OnCameraTargetDelegate FPalArenaPreBattleCutsceneEventOnCameraTargetDelegate
 APalArenaPreBattleCutsceneEvent = {}
 
+---@return APalArenaPreBattleCutsceneEvent
+function APalArenaPreBattleCutsceneEvent:get() end
+
 ---@param PlayerIndex EPalArenaPlayerIndex
 function APalArenaPreBattleCutsceneEvent:OnCameraTarget__DelegateSignature(PlayerIndex) end
 ---@param PlayerIndex EPalArenaPlayerIndex
@@ -208,6 +229,9 @@ function APalArenaPreBattleCutsceneEvent:OnCameraTarget(PlayerIndex) end
 ---@field Player1 APalPlayerState
 ---@field Player2 APalPlayerState
 APalArenaTestManager = {}
+
+---@return APalArenaTestManager
+function APalArenaTestManager:get() end
 
 function APalArenaTestManager:ToggleRandomPartyMode() end
 function APalArenaTestManager:Start() end
@@ -247,6 +271,9 @@ function APalArenaTestManager:ActivatePlayerOtomoPal() end
 ---@field OriginalMaterials TArray<UMaterialInterface>
 APalBackWeaponBase = {}
 
+---@return APalBackWeaponBase
+function APalBackWeaponBase:get() end
+
 ---@return USceneComponent
 function APalBackWeaponBase:GetMainMesh() end
 
@@ -254,6 +281,9 @@ function APalBackWeaponBase:GetMainMesh() end
 ---@class APalBiomeAreaTriggerBase : AActor
 ---@field BindBiomeType EPalBiomeType
 APalBiomeAreaTriggerBase = {}
+
+---@return APalBiomeAreaTriggerBase
+function APalBiomeAreaTriggerBase:get() end
 
 ---@param OtherActor AActor
 ---@param BiomeType EPalBiomeType
@@ -270,6 +300,9 @@ function APalBiomeAreaTriggerBase:GetBiomeType() end
 ---@field bIsLoaded boolean
 ---@field Difficulty EPalBossBattleDifficulty
 APalBossBattleLevelInstance = {}
+
+---@return APalBossBattleLevelInstance
+function APalBossBattleLevelInstance:get() end
 
 ---@param BossType EPalBossType
 ---@param JoinPlayerNum int32
@@ -297,6 +330,9 @@ function APalBossBattleLevelInstance:BossSpawned(SpawnedCharacter) end
 ---@field InDoorPlayerList TArray<APalPlayerCharacter>
 ---@field TimerHandle FTimerHandle
 APalBossTower = {}
+
+---@return APalBossTower
+function APalBossTower:get() end
 
 ---@param TargetPlayer APalPlayerCharacter
 ---@return boolean
@@ -354,12 +390,18 @@ function APalBossTower:AddInDoorPlayer(Player) end
 ---@field bIsBuilded boolean
 APalBotBuilderLocationBase = {}
 
+---@return APalBotBuilderLocationBase
+function APalBotBuilderLocationBase:get() end
+
 
 
 ---@class APalBoxSpawnerPlacementTool : AActor
 ---@field BoxExtent FVector
 ---@field BoxComp UBoxComponent
 APalBoxSpawnerPlacementTool = {}
+
+---@return APalBoxSpawnerPlacementTool
+function APalBoxSpawnerPlacementTool:get() end
 
 
 
@@ -395,6 +437,9 @@ APalBoxSpawnerPlacementTool = {}
 ---@field bDismantleTargetInLocal boolean
 ---@field DefaultMeshSettingMap TMap<UPrimitiveComponent, FPalBuildObjectMeshDefaultSetting>
 APalBuildObject = {}
+
+---@return APalBuildObject
+function APalBuildObject:get() end
 
 function APalBuildObject:PlayBuildCompleteFX_ToALL() end
 ---@param DamagedModel UPalMapObjectModel
@@ -435,6 +480,9 @@ function APalBuildObject:GetBuildWorkableBoundsShape() end
 ---@class APalBuildObjectBaseCampPoint : APalBuildObject
 APalBuildObjectBaseCampPoint = {}
 
+---@return APalBuildObjectBaseCampPoint
+function APalBuildObjectBaseCampPoint:get() end
+
 ---@return FTransform
 function APalBuildObjectBaseCampPoint:GetWorkerSpawnLocalTransform() end
 ---@return FTransform
@@ -444,11 +492,17 @@ function APalBuildObjectBaseCampPoint:GetFastTravelLocalTransform() end
 ---@class APalBuildObjectBasicBase : APalBuildObject
 APalBuildObjectBasicBase = {}
 
+---@return APalBuildObjectBasicBase
+function APalBuildObjectBasicBase:get() end
+
 
 ---@class APalBuildObjectBreedFarm : APalBuildObject
 ---@field ChestInteractRef FComponentReference
 ---@field WalkAroundVolumeRef FComponentReference
 APalBuildObjectBreedFarm = {}
+
+---@return APalBuildObjectBreedFarm
+function APalBuildObjectBreedFarm:get() end
 
 
 
@@ -456,6 +510,9 @@ APalBuildObjectBreedFarm = {}
 ---@field ConvertCharacterToItemParameter UPalMapObjectConvertCharacterToItemParameterComponent
 ---@field VisualProcessInfos TArray<FPalBuildObjectConvertCharacterToItemVisualProcessInfo>
 APalBuildObjectConvertCharacterToItem = {}
+
+---@return APalBuildObjectConvertCharacterToItem
+function APalBuildObjectConvertCharacterToItem:get() end
 
 ---@param OldVisualProcessInfos TArray<FPalBuildObjectConvertCharacterToItemVisualProcessInfo>
 function APalBuildObjectConvertCharacterToItem:OnRep_VisualProcessInfos(OldVisualProcessInfos) end
@@ -468,6 +525,9 @@ function APalBuildObjectConvertCharacterToItem:BP_UpdateConvertProcessVisual() e
 ---@field DefenseAIActionClass TSubclassOf<UPalAIActionBaseCampDefenseBase>
 APalBuildObjectDefenseBase = {}
 
+---@return APalBuildObjectDefenseBase
+function APalBuildObjectDefenseBase:get() end
+
 ---@return FRotator
 function APalBuildObjectDefenseBase:GetCharacterRotation() end
 ---@return FVector
@@ -477,6 +537,9 @@ function APalBuildObjectDefenseBase:GetCharacterLocation() end
 ---@class APalBuildObjectDefenseBulletLauncherBase : APalBuildObjectDefenseBase
 ---@field BulletLauncherParameterComponent UPalMapObjectBulletLauncherParameterComponent
 APalBuildObjectDefenseBulletLauncherBase = {}
+
+---@return APalBuildObjectDefenseBulletLauncherBase
+function APalBuildObjectDefenseBulletLauncherBase:get() end
 
 ---@param TargetActor AActor
 ---@param DeltaTime float
@@ -513,6 +576,9 @@ function APalBuildObjectDefenseBulletLauncherBase:BP_SetEnableTrigger(EnableTrig
 ---@field CropActor APalMapObjectFarmCrop
 APalBuildObjectFarmBlockV2 = {}
 
+---@return APalBuildObjectFarmBlockV2
+function APalBuildObjectFarmBlockV2:get() end
+
 ---@param LastCropState EPalFarmCropState
 ---@param NextCropState EPalFarmCropState
 function APalBuildObjectFarmBlockV2:OnUpdateState_ServerInternal(LastCropState, NextCropState) end
@@ -523,6 +589,9 @@ function APalBuildObjectFarmBlockV2:OnUpdateState_ServerInternal(LastCropState, 
 ---@field GenerateEnergyRateByWorker float
 ---@field MaxEnergyStorage float
 APalBuildObjectGenerateEnergy = {}
+
+---@return APalBuildObjectGenerateEnergy
+function APalBuildObjectGenerateEnergy:get() end
 
 ---@param Work UPalWorkBase
 function APalBuildObjectGenerateEnergy:OnUpdateWorkAssigned_ServerInternal(Work) end
@@ -539,11 +608,17 @@ function APalBuildObjectGenerateEnergy:BroadcastEndGenerate() end
 ---@field InstallStrategy UPalBuildObjectInstallStrategyBase
 APalBuildObjectInstallChecker = {}
 
+---@return APalBuildObjectInstallChecker
+function APalBuildObjectInstallChecker:get() end
+
 
 
 ---@class APalBuildObjectMonsterFarm : APalBuildObject
 ---@field WalkAroundVolumeRef FComponentReference
 APalBuildObjectMonsterFarm = {}
+
+---@return APalBuildObjectMonsterFarm
+function APalBuildObjectMonsterFarm:get() end
 
 
 
@@ -562,6 +637,9 @@ APalBuildObjectMonsterFarm = {}
 ---@field ChestWorkableBoundsName FName
 ---@field ChestSlotNum int32
 APalBuildObjectPalStorage = {}
+
+---@return APalBuildObjectPalStorage
+function APalBuildObjectPalStorage:get() end
 
 ---@param TargetActor APalCharacter
 function APalBuildObjectPalStorage:PlaySpawnCharacterFX(TargetActor) end
@@ -593,6 +671,9 @@ function APalBuildObjectPalStorage:GetAccessPointMovableRange() end
 ---@class APalBuildObjectRaidBossSummon : APalBuildObject
 APalBuildObjectRaidBossSummon = {}
 
+---@return APalBuildObjectRaidBossSummon
+function APalBuildObjectRaidBossSummon:get() end
+
 function APalBuildObjectRaidBossSummon:StartPerform() end
 function APalBuildObjectRaidBossSummon:OnPerformComplete() end
 function APalBuildObjectRaidBossSummon:BP_PlayPerform() end
@@ -617,6 +698,9 @@ function APalBuildObjectRaidBossSummon:BP_PlayPerform() end
 ---@field BulletHoleDecalsMap TMap<EPhysicalSurface, FBulletHoleDecalInfo>
 ---@field DefaultBulletHoleDecals FBulletHoleDecalInfo
 APalBullet = {}
+
+---@return APalBullet
+function APalBullet:get() end
 
 ---@param Damage int32
 function APalBullet:SetWeaponDamage(Damage) end
@@ -699,6 +783,9 @@ function APalBullet:DestroyBulletDelegate__DelegateSignature(HitComp, OtherChara
 ---@class APalCaptureJudgeObject : AActor
 APalCaptureJudgeObject = {}
 
+---@return APalCaptureJudgeObject
+function APalCaptureJudgeObject:get() end
+
 function APalCaptureJudgeObject:OnSuccessFinish() end
 function APalCaptureJudgeObject:OnFailedFinish() end
 ---@param Character APalCharacter
@@ -733,6 +820,9 @@ function APalCaptureJudgeObject:CaptureResult_ToALL(Character, Result) end
 ---@field IsInSpawnedRange boolean
 ---@field SpawnedPalHandle UPalIndividualCharacterHandle
 APalCapturedCage = {}
+
+---@return APalCapturedCage
+function APalCapturedCage:get() end
 
 ---@param InPalID FName
 ---@param InPalLevel int32
@@ -791,6 +881,9 @@ function APalCapturedCage:GetCampSpawnerName() end
 ---@field RootCollisionProfileName FName
 ---@field OnCompleteInitializeParameterDelegateMap TMap<EPalCharacterCompleteDelegatePriority, UPalCharacterOnCompleteInitializeParameterWrapper>
 APalCharacter = {}
+
+---@return APalCharacter
+function APalCharacter:get() end
 
 function APalCharacter:UpdateGroundRayCast() end
 ---@param Active boolean
@@ -898,6 +991,9 @@ function APalCharacter:BindFonctionToOnCompleteInitializeParameter(Priority, Cal
 ---@field PoseableSkeletalMeshComponent UPalPoseableMeshComponent
 APalCopyMeshVisualEffect = {}
 
+---@return APalCopyMeshVisualEffect
+function APalCopyMeshVisualEffect:get() end
+
 ---@param MeshComponent USkeletalMeshComponent
 function APalCopyMeshVisualEffect:Setup(MeshComponent) end
 ---@return TArray<UMaterialInstanceDynamic>
@@ -914,6 +1010,9 @@ function APalCopyMeshVisualEffect:GetAllMesh(OutComponent) end
 ---@field bCanSkip boolean
 APalCutsceneActor = {}
 
+---@return APalCutsceneActor
+function APalCutsceneActor:get() end
+
 ---@param TransformOrigin FTransform
 function APalCutsceneActor:SetTransformOrigin(TransformOrigin) end
 ---@param BindParameter UPalCutsceneBindParameter
@@ -926,6 +1025,9 @@ function APalCutsceneActor:OnFinishedCutscene() end
 ---@field CacheSpawner TArray<APalNPCSpawnerBase>
 APalDebug_SpawnInfoReporter = {}
 
+---@return APalDebug_SpawnInfoReporter
+function APalDebug_SpawnInfoReporter:get() end
+
 ---@param spawner APalNPCSpawnerBase
 ---@return FString
 function APalDebug_SpawnInfoReporter:GetDebugInfoString(spawner) end
@@ -935,12 +1037,18 @@ function APalDebug_SpawnInfoReporter:GetDebugInfoString(spawner) end
 ---@field TargetBuildObject APalBuildObject
 APalDismantleObjectChecker = {}
 
+---@return APalDismantleObjectChecker
+function APalDismantleObjectChecker:get() end
+
 ---@return APalBuildObject
 function APalDismantleObjectChecker:GetTargetObject() end
 
 
 ---@class APalDungeonAreaVolume : APalStageAreaVolume
 APalDungeonAreaVolume = {}
+
+---@return APalDungeonAreaVolume
+function APalDungeonAreaVolume:get() end
 
 ---@param Other AActor
 function APalDungeonAreaVolume:OnOverlapActor(Other) end
@@ -949,6 +1057,9 @@ function APalDungeonAreaVolume:OnOverlapActor(Other) end
 ---@class APalDungeonEnemySpawnerPoint : AActor
 ---@field RankType EPalDungeonEnemySpawnerRankType
 APalDungeonEnemySpawnerPoint = {}
+
+---@return APalDungeonEnemySpawnerPoint
+function APalDungeonEnemySpawnerPoint:get() end
 
 ---@param IndividualHandle UPalIndividualCharacterHandle
 function APalDungeonEnemySpawnerPoint:ReturnIndividualHandleDelegate__DelegateSignature(IndividualHandle) end
@@ -963,6 +1074,9 @@ function APalDungeonEnemySpawnerPoint:CheckLevelStreamingCompleted() end
 ---@class APalDungeonEntrance : AActor
 ---@field StageModel UPalStageModelDungeon
 APalDungeonEntrance = {}
+
+---@return APalDungeonEntrance
+function APalDungeonEntrance:get() end
 
 ---@param OutModel UPalDungeonInstanceModel
 ---@return boolean
@@ -988,6 +1102,9 @@ function APalDungeonEntrance:GetDeadItemDropPoint() end
 ---@field bStartPoint boolean
 APalDungeonExit = {}
 
+---@return APalDungeonExit
+function APalDungeonExit:get() end
+
 ---@param Other AActor
 ---@param IndicatorType EPalInteractiveObjectIndicatorType
 function APalDungeonExit:OnTriggerInteract(Other, IndicatorType) end
@@ -1008,6 +1125,9 @@ function APalDungeonExit:GetWarpPoint() end
 ---@field EnemySpawnerClass TSubclassOf<APalNPCSpawnerBase>
 APalDungeonFixedEntrance = {}
 
+---@return APalDungeonFixedEntrance
+function APalDungeonFixedEntrance:get() end
+
 ---@return FGuid
 function APalDungeonFixedEntrance:GetLevelObjectInstanceId() end
 ---@return TSoftClassPtr<APalNPCSpawnerBase>
@@ -1021,10 +1141,16 @@ function APalDungeonFixedEntrance:GetDataLayerAsset() end
 ---@class APalDungeonGimmickUnlockableDoor : AActor
 APalDungeonGimmickUnlockableDoor = {}
 
+---@return APalDungeonGimmickUnlockableDoor
+function APalDungeonGimmickUnlockableDoor:get() end
+
 
 ---@class APalDungeonGimmickUnlockableDoor_DefeatBoss : APalDungeonGimmickUnlockableDoor
 ---@field BossState EPalDungeonInstanceBossState
 APalDungeonGimmickUnlockableDoor_DefeatBoss = {}
+
+---@return APalDungeonGimmickUnlockableDoor_DefeatBoss
+function APalDungeonGimmickUnlockableDoor_DefeatBoss:get() end
 
 function APalDungeonGimmickUnlockableDoor_DefeatBoss:OnRep_BossState() end
 ---@param ToState EPalDungeonInstanceBossState
@@ -1038,6 +1164,9 @@ function APalDungeonGimmickUnlockableDoor_DefeatBoss:OnChangeBossState_ServerInt
 ---@field TreasureBoxSpawnerSoftClass TSoftClassPtr<APalMapObjectSpawnerTreasureBox>
 APalDungeonItemSpawnerPoint = {}
 
+---@return APalDungeonItemSpawnerPoint
+function APalDungeonItemSpawnerPoint:get() end
+
 
 
 ---@class APalDungeonPointMarker : APalLevelObjectActor
@@ -1047,14 +1176,23 @@ APalDungeonItemSpawnerPoint = {}
 ---@field DungeonEntranceClass TSubclassOf<APalDungeonEntrance>
 APalDungeonPointMarker = {}
 
+---@return APalDungeonPointMarker
+function APalDungeonPointMarker:get() end
+
 
 
 ---@class APalDungeonStartPointMarker : AActor
 APalDungeonStartPointMarker = {}
 
+---@return APalDungeonStartPointMarker
+function APalDungeonStartPointMarker:get() end
+
 
 ---@class APalDynamicObjectBase : AActor
 APalDynamicObjectBase = {}
+
+---@return APalDynamicObjectBase
+function APalDynamicObjectBase:get() end
 
 
 ---@class APalEditorMapObjectCheckPlacer : AActor
@@ -1065,6 +1203,9 @@ APalDynamicObjectBase = {}
 ---@field IgnoreRowNames TArray<FPalDataTableRowName_MapObjectData>
 APalEditorMapObjectCheckPlacer = {}
 
+---@return APalEditorMapObjectCheckPlacer
+function APalEditorMapObjectCheckPlacer:get() end
+
 function APalEditorMapObjectCheckPlacer:PlaceMapObjects() end
 
 
@@ -1073,10 +1214,16 @@ function APalEditorMapObjectCheckPlacer:PlaceMapObjects() end
 ---@field DefaultAction EPalEnemySpawnDefaultAction
 APalEnemySpawner = {}
 
+---@return APalEnemySpawner
+function APalEnemySpawner:get() end
+
 
 
 ---@class APalEnemyVirtualCommander : AActor
 APalEnemyVirtualCommander = {}
+
+---@return APalEnemyVirtualCommander
+function APalEnemyVirtualCommander:get() end
 
 
 ---@class APalExponentialHeightFogVolume : AActor
@@ -1086,6 +1233,9 @@ APalEnemyVirtualCommander = {}
 ---@field bDisableEnabledFlag boolean
 APalExponentialHeightFogVolume = {}
 
+---@return APalExponentialHeightFogVolume
+function APalExponentialHeightFogVolume:get() end
+
 function APalExponentialHeightFogVolume:OnRep_bEnabled() end
 
 
@@ -1094,6 +1244,9 @@ function APalExponentialHeightFogVolume:OnRep_bEnabled() end
 ---@field ChunkGridSize int32
 ---@field InstanceNum int32
 APalFoliageModelChunk = {}
+
+---@return APalFoliageModelChunk
+function APalFoliageModelChunk:get() end
 
 function APalFoliageModelChunk:OnRep_ChunkGridSize() end
 ---@param NewChunkGridSize int32
@@ -1105,6 +1258,9 @@ function APalFoliageModelChunk:OnReceivedChunkGridSize(NewChunkGridSize) end
 ---@field FunnelSkillModuleClass TSubclassOf<UPalFunnelSkillModule>
 ---@field OwnerCharacterId FPalInstanceID
 APalFunnelCharacter = {}
+
+---@return APalFunnelCharacter
+function APalFunnelCharacter:get() end
 
 ---@param OwnerCharacterId FPalInstanceID
 function APalFunnelCharacter:SetOwnerCharacterId(OwnerCharacterId) end
@@ -1136,11 +1292,17 @@ function APalFunnelCharacter:ActivateSelf() end
 ---@field Target TWeakObjectPtr<UObject>
 APalGameInstanceViewActor = {}
 
+---@return APalGameInstanceViewActor
+function APalGameInstanceViewActor:get() end
+
 
 
 ---@class APalGameMode : APalGameModeBase
 ---@field CachePlayerStart APlayerStart
 APalGameMode = {}
+
+---@return APalGameMode
+function APalGameMode:get() end
 
 function APalGameMode:RestartGame() end
 ---@param PlayerIndex int32
@@ -1170,10 +1332,16 @@ function APalGameMode:CreateSession(Address) end
 ---@field GameModeType EPalGameModeType
 APalGameModeBase = {}
 
+---@return APalGameModeBase
+function APalGameModeBase:get() end
+
 
 
 ---@class APalGameModeLogin : APalGameModeBase
 APalGameModeLogin = {}
+
+---@return APalGameModeLogin
+function APalGameModeLogin:get() end
 
 ---@param UserInfo UPocketpairUserInfo
 ---@param bSuccess boolean
@@ -1199,15 +1367,24 @@ function APalGameModeLogin:GoToTitle() end
 ---@class APalGameModeServerEntry : APalGameModeBase
 APalGameModeServerEntry = {}
 
+---@return APalGameModeServerEntry
+function APalGameModeServerEntry:get() end
+
 function APalGameModeServerEntry:LoadLevel() end
 
 
 ---@class APalGameModeTitle : APalGameModeBase
 APalGameModeTitle = {}
 
+---@return APalGameModeTitle
+function APalGameModeTitle:get() end
+
 
 ---@class APalGameState : AGameStateBase
 APalGameState = {}
+
+---@return APalGameState
+function APalGameState:get() end
 
 
 ---@class APalGameStateInGame : APalGameState
@@ -1249,6 +1426,9 @@ APalGameState = {}
 ---@field OnRecievedServerNoticeDelegate FPalGameStateInGameOnRecievedServerNoticeDelegate
 ---@field SaveConfigCategoryName FString
 APalGameStateInGame = {}
+
+---@return APalGameStateInGame
+function APalGameStateInGame:get() end
 
 ---@param InZ float
 function APalGameStateInGame:SetWorldOceanPlaneZ(InZ) end
@@ -1294,6 +1474,9 @@ function APalGameStateInGame:BroadcastChatMessage(ChatMessage) end
 ---@field OriginalMaterials TArray<UMaterialInterface>
 APalGliderObject = {}
 
+---@return APalGliderObject
+function APalGliderObject:get() end
+
 ---@param PalCharacterID FName
 function APalGliderObject:RefreshSkin(PalCharacterID) end
 ---@return UPalSkeletalMeshComponent
@@ -1307,12 +1490,18 @@ function APalGliderObject:GetAkOwnerComponent() end
 ---@field Guild UPalGroupGuildBase
 APalGuildInfo = {}
 
+---@return APalGuildInfo
+function APalGuildInfo:get() end
+
 ---@param OldValue UPalGroupGuildBase
 function APalGuildInfo:OnRep_Guild(OldValue) end
 
 
 ---@class APalHUD : AHUD
 APalHUD = {}
+
+---@return APalHUD
+function APalHUD:get() end
 
 
 ---@class APalHUDInGame : AHUD
@@ -1334,6 +1523,9 @@ APalHUD = {}
 ---@field GameMenuLayerTagOrder TArray<FGameplayTag>
 ---@field LayerHideFlagMap TMap<FGameplayTag, FFlagContainer>
 APalHUDInGame = {}
+
+---@return APalHUDInGame
+function APalHUDInGame:get() end
 
 function APalHUDInGame:TickWorldHUDs() end
 function APalHUDInGame:ShowLiftIcon() end
@@ -1383,11 +1575,17 @@ function APalHUDInGame:AddHUD(WidgetClass, Priority, Parameter) end
 ---@field ProceduralComponent UPalProceduralFoliageComponent
 APalHiddenAreaBase = {}
 
+---@return APalHiddenAreaBase
+function APalHiddenAreaBase:get() end
+
 
 
 ---@class APalHiddenAreaBox : APalHiddenAreaBase
 ---@field HiddenBoxComponent UPalHiddenBoxComponent
 APalHiddenAreaBox = {}
+
+---@return APalHiddenAreaBox
+function APalHiddenAreaBox:get() end
 
 
 
@@ -1395,17 +1593,26 @@ APalHiddenAreaBox = {}
 ---@field HiddenCapsuleComponent UPalHiddenCapsuleComponent
 APalHiddenAreaCapsule = {}
 
+---@return APalHiddenAreaCapsule
+function APalHiddenAreaCapsule:get() end
+
 
 
 ---@class APalHitCollision : AActor
 ---@field HitFilter UPalHitFilter
 APalHitCollision = {}
 
+---@return APalHitCollision
+function APalHitCollision:get() end
+
 
 
 ---@class APalHitCollisionBox : APalHitCollision
 ---@field BoxComponent UBoxComponent
 APalHitCollisionBox = {}
+
+---@return APalHitCollisionBox
+function APalHitCollisionBox:get() end
 
 function APalHitCollisionBox:DrawHitCollision() end
 
@@ -1414,21 +1621,33 @@ function APalHitCollisionBox:DrawHitCollision() end
 ---@field WeakCharacterForParameterDisplay TWeakObjectPtr<APalCharacter>
 APalImGui = {}
 
+---@return APalImGui
+function APalImGui:get() end
+
 
 
 ---@class APalInvaderStartPoint : AActor
 ---@field BiomeType EPalBiomeType
 APalInvaderStartPoint = {}
 
+---@return APalInvaderStartPoint
+function APalInvaderStartPoint:get() end
+
 
 
 ---@class APalLevelInstance : ALevelInstance
 APalLevelInstance = {}
 
+---@return APalLevelInstance
+function APalLevelInstance:get() end
+
 
 ---@class APalLevelObjectActor : AActor
 ---@field LevelObjectInstanceId FGuid
 APalLevelObjectActor = {}
+
+---@return APalLevelObjectActor
+function APalLevelObjectActor:get() end
 
 ---@return FGuid
 function APalLevelObjectActor:GetLevelObjectInstanceId() end
@@ -1437,6 +1656,9 @@ function APalLevelObjectActor:GetLevelObjectInstanceId() end
 ---@class APalLevelObjectCharacterStatusOperator : APalLevelObjectActor
 ---@field InteractComp TScriptInterface<IPalInteractiveObjectComponentInterface>
 APalLevelObjectCharacterStatusOperator = {}
+
+---@return APalLevelObjectCharacterStatusOperator
+function APalLevelObjectCharacterStatusOperator:get() end
 
 ---@param Other AActor
 ---@param IndicatorType EPalInteractiveObjectIndicatorType
@@ -1447,11 +1669,17 @@ function APalLevelObjectCharacterStatusOperator:OnTriggerInteract(Other, Indicat
 ---@field ProvidableStaticItemId FPalDataTableRowName_ItemData
 APalLevelObjectItemProvider = {}
 
+---@return APalLevelObjectItemProvider
+function APalLevelObjectItemProvider:get() end
+
 
 
 ---@class APalLevelObjectNote : APalLevelObjectObtainable
 ---@field NoteRowName FPalDataTableRowName_NoteData
 APalLevelObjectNote = {}
+
+---@return APalLevelObjectNote
+function APalLevelObjectNote:get() end
 
 
 
@@ -1461,6 +1689,9 @@ APalLevelObjectNote = {}
 ---@field InteractComp TScriptInterface<IPalInteractiveObjectComponentInterface>
 ---@field bPickedInClient boolean
 APalLevelObjectObtainable = {}
+
+---@return APalLevelObjectObtainable
+function APalLevelObjectObtainable:get() end
 
 ---@param Self APalLevelObjectObtainable
 function APalLevelObjectObtainable:ReturnSelfDelegate__DelegateSignature(Self) end
@@ -1479,10 +1710,16 @@ function APalLevelObjectObtainable:GetObtainFXLocation() end
 ---@class APalLevelObjectRelic : APalLevelObjectObtainable
 APalLevelObjectRelic = {}
 
+---@return APalLevelObjectRelic
+function APalLevelObjectRelic:get() end
+
 
 ---@class APalLevelObjectRespawnPoint : APalLevelObjectActor
 ---@field RespawnPointID FName
 APalLevelObjectRespawnPoint = {}
+
+---@return APalLevelObjectRespawnPoint
+function APalLevelObjectRespawnPoint:get() end
 
 
 
@@ -1493,6 +1730,9 @@ APalLevelObjectRespawnPoint = {}
 ---@field EnableRequestUnlock boolean
 ---@field FastTravelPointID FName
 APalLevelObjectUnlockableFastTravelPoint = {}
+
+---@return APalLevelObjectUnlockableFastTravelPoint
+function APalLevelObjectUnlockableFastTravelPoint:get() end
 
 ---@param Self APalLevelObjectUnlockableFastTravelPoint
 function APalLevelObjectUnlockableFastTravelPoint:ReturnSelfDelegate__DelegateSignature(Self) end
@@ -1516,11 +1756,17 @@ function APalLevelObjectUnlockableFastTravelPoint:GetUnlockAkAudioEvent() end
 ---@field Volumes TArray<APalSkyCreatorLightingVolume>
 APalLightingVolumeController = {}
 
+---@return APalLightingVolumeController
+function APalLightingVolumeController:get() end
+
 
 
 ---@class APalMapLevelObject : APalMapObject
 ---@field LevelObjectInstanceId FGuid
 APalMapLevelObject = {}
+
+---@return APalMapLevelObject
+function APalMapLevelObject:get() end
 
 ---@return FGuid
 function APalMapLevelObject:GetLevelObjectInstanceId() end
@@ -1562,6 +1808,9 @@ function APalMapLevelObject:GetLevelObjectInstanceId() end
 ---@field bShouldPlayDestroyFX boolean
 ---@field TickableComponentInfos TArray<FPalMapObjectComponentInfo>
 APalMapObject = {}
+
+---@return APalMapObject
+function APalMapObject:get() end
 
 ---@param OutputPin EPalMapObjectGetModelOutPinType
 ---@param ConcreteModel UPalMapObjectConcreteModelBase
@@ -1608,6 +1857,9 @@ function APalMapObject:BP_OnSetConcreteModel(ConcreteModel) end
 ---@field bMovementActive boolean
 APalMapObjectDropItem = {}
 
+---@return APalMapObjectDropItem
+function APalMapObjectDropItem:get() end
+
 ---@param Location FVector
 ---@param Rotation FRotator
 function APalMapObjectDropItem:StopMovement_Multicast(Location, Rotation) end
@@ -1617,11 +1869,17 @@ function APalMapObjectDropItem:StopMovement_Multicast(Location, Rotation) end
 ---@field GrowupProcessSets TArray<FPalFarmCropGrowupProcessSet>
 APalMapObjectFarmCrop = {}
 
+---@return APalMapObjectFarmCrop
+function APalMapObjectFarmCrop:get() end
+
 
 
 ---@class APalMapObjectPalEgg : APalMapObject
 ---@field ParameterComponent UPalMapObjectPickupItemPalEggParameterComponent
 APalMapObjectPalEgg = {}
+
+---@return APalMapObjectPalEgg
+function APalMapObjectPalEgg:get() end
 
 ---@return FName
 function APalMapObjectPalEgg:GetCharacterID() end
@@ -1635,6 +1893,9 @@ function APalMapObjectPalEgg:GetCharacterID() end
 ---@field State EPalMapObjectSpawnerState
 APalMapObjectSpawnerBase = {}
 
+---@return APalMapObjectSpawnerBase
+function APalMapObjectSpawnerBase:get() end
+
 function APalMapObjectSpawnerBase:OnWorldMapObjectSpawnableInServer() end
 
 
@@ -1643,6 +1904,9 @@ function APalMapObjectSpawnerBase:OnWorldMapObjectSpawnableInServer() end
 ---@field RespawnTimeMinutesObtained float
 APalMapObjectSpawnerMultiItem = {}
 
+---@return APalMapObjectSpawnerMultiItem
+function APalMapObjectSpawnerMultiItem:get() end
+
 
 
 ---@class APalMapObjectSpawnerPalEgg : APalMapObjectSpawnerSingleBase
@@ -1650,6 +1914,9 @@ APalMapObjectSpawnerMultiItem = {}
 ---@field RespawnTimeMinutesObtained float
 ---@field bRespawnableMulti boolean
 APalMapObjectSpawnerPalEgg = {}
+
+---@return APalMapObjectSpawnerPalEgg
+function APalMapObjectSpawnerPalEgg:get() end
 
 ---@param InstanceId FGuid
 ---@param Result EPalMapObjectOperationResult
@@ -1660,6 +1927,9 @@ function APalMapObjectSpawnerPalEgg:OnFinishedSpawningMapObjectModel(InstanceId,
 ---@field MapObjectId FPalDataTableRowName_MapObjectData
 APalMapObjectSpawnerSimple = {}
 
+---@return APalMapObjectSpawnerSimple
+function APalMapObjectSpawnerSimple:get() end
+
 ---@param InstanceId FGuid
 ---@param Result EPalMapObjectOperationResult
 function APalMapObjectSpawnerSimple:OnFinishedSpawningMapObjectModel(InstanceId, Result) end
@@ -1667,6 +1937,9 @@ function APalMapObjectSpawnerSimple:OnFinishedSpawningMapObjectModel(InstanceId,
 
 ---@class APalMapObjectSpawnerSingleBase : APalMapObjectSpawnerBase
 APalMapObjectSpawnerSingleBase = {}
+
+---@return APalMapObjectSpawnerSingleBase
+function APalMapObjectSpawnerSingleBase:get() end
 
 
 ---@class APalMapObjectSpawnerTreasureBox : APalMapObjectSpawnerSingleBase
@@ -1677,6 +1950,9 @@ APalMapObjectSpawnerSingleBase = {}
 ---@field RespawnTimeMinutesObtained float
 ---@field bRespawnableMulti boolean
 APalMapObjectSpawnerTreasureBox = {}
+
+---@return APalMapObjectSpawnerTreasureBox
+function APalMapObjectSpawnerTreasureBox:get() end
 
 ---@param InstanceId FGuid
 ---@param Result EPalMapObjectOperationResult
@@ -1691,6 +1967,9 @@ function APalMapObjectSpawnerTreasureBox:OnFinishedSpawningMapObjectModel(Instan
 ---@field OnOpenDelegate FPalMapObjectTreasureBoxOnOpenDelegate
 APalMapObjectTreasureBox = {}
 
+---@return APalMapObjectTreasureBox
+function APalMapObjectTreasureBox:get() end
+
 function APalMapObjectTreasureBox:TriggerOpen() end
 ---@param ConcreteModel UPalMapObjectConcreteModelBase
 function APalMapObjectTreasureBox:OnReceiveOpenInServer(ConcreteModel) end
@@ -1704,6 +1983,9 @@ function APalMapObjectTreasureBox:BroadcastTriggerOpen() end
 ---@field LiftupObjectComponent UPalCharacterLiftupObjectComponent
 ---@field OriginalMaterials TArray<UMaterialInterface>
 APalMonsterCharacter = {}
+
+---@return APalMonsterCharacter
+function APalMonsterCharacter:get() end
 
 ---@param itemSlotId FPalItemSlotId
 ---@param Num int32
@@ -1722,6 +2004,9 @@ function APalMonsterCharacter:IsLiftupObject() end
 ---@class APalMonsterEquipWeaponBase : APalWeaponBase
 ---@field BattleAimTargetLocation FVector
 APalMonsterEquipWeaponBase = {}
+
+---@return APalMonsterEquipWeaponBase
+function APalMonsterEquipWeaponBase:get() end
 
 ---@return APalBullet
 function APalMonsterEquipWeaponBase:ShootOneBulletDefault() end
@@ -1752,6 +2037,9 @@ function APalMonsterEquipWeaponBase:GetBulletClass() end
 ---@field DefaultVoiceID int32
 APalNPC = {}
 
+---@return APalNPC
+function APalNPC:get() end
+
 ---@param DeadInfo FPalDeadInfo
 function APalNPC:RemoveEnemyFromBattleManager(DeadInfo) end
 ---@param InCharacter APalCharacter
@@ -1766,6 +2054,9 @@ function APalNPC:MasterWazaSetup(InCharacter) end
 ---@class APalNPCCampSpawnerBase : AActor
 ---@field CampSpawnerName FName
 APalNPCCampSpawnerBase = {}
+
+---@return APalNPCCampSpawnerBase
+function APalNPCCampSpawnerBase:get() end
 
 ---@param CampStatus FPalEnemyCampStatus
 ---@return float
@@ -1796,6 +2087,9 @@ function APalNPCCampSpawnerBase:CalcRemainDespawnTime(CampStatus) end
 ---@field DisableSpawn FFlagContainer
 ---@field ImportanceType EPalSpwnerImportanceType
 APalNPCSpawnerBase = {}
+
+---@return APalNPCSpawnerBase
+function APalNPCSpawnerBase:get() end
 
 ---@param DeltaTime float
 function APalNPCSpawnerBase:Tick_Spawning(DeltaTime) end
@@ -1945,6 +2239,9 @@ function APalNPCSpawnerBase:AddGroupCharacter(AddIndividualHandle) end
 ---@field DelayDelegateCallQueue TArray<FPalNetworkTransmitterDelaySpawnInfo>
 APalNetworkTransmitter = {}
 
+---@return APalNetworkTransmitter
+function APalNetworkTransmitter:get() end
+
 ---@param actorClass UClass
 ---@param SpawnParameter FNetworkActorSpawnParameters
 ---@param SpawnDelegate FSpawnReliableActorBroadcastSpawnDelegate
@@ -2038,6 +2335,9 @@ function APalNetworkTransmitter:Debug_LogServerThreadNum_ToRequestPlayer(Message
 ---@field SelfOilrigType EPalOilrigType
 APalOilRigCannonBase = {}
 
+---@return APalOilRigCannonBase
+function APalOilRigCannonBase:get() end
+
 function APalOilRigCannonBase:SyncDestroyObject_ToAll() end
 function APalOilRigCannonBase:RequestDestroyWeapon() end
 ---@param Actor AActor
@@ -2081,6 +2381,9 @@ function APalOilRigCannonBase:AddOverlapCharacter(Actor) end
 ---@field DestroyedObjectIDs TArray<FGuid>
 APalOilrigController = {}
 
+---@return APalOilrigController
+function APalOilrigController:get() end
+
 function APalOilrigController:ResetAllSaveData_ToAll() end
 ---@param Tower AActor
 function APalOilrigController:RemoveShootingTower(Tower) end
@@ -2108,6 +2411,9 @@ function APalOilrigController:AddShootingTower(Tower) end
 ---@field IsExplodedFlag boolean
 APalOilrigExplosiveObject = {}
 
+---@return APalOilrigExplosiveObject
+function APalOilrigExplosiveObject:get() end
+
 function APalOilrigExplosiveObject:SyncDestroyObject_ToAll() end
 function APalOilrigExplosiveObject:OnRep_IsExplodedFlag() end
 ---@param DamageInfo FPalDamageInfo
@@ -2121,16 +2427,25 @@ function APalOilrigExplosiveObject:ChangeDefaultVisual_BP() end
 ---@field OilrigName EPalOilrigType
 APalOilrigLevelInstance = {}
 
+---@return APalOilrigLevelInstance
+function APalOilrigLevelInstance:get() end
+
 
 
 ---@class APalOilrigMachineStartPoint : APalLevelObjectActor
 APalOilrigMachineStartPoint = {}
+
+---@return APalOilrigMachineStartPoint
+function APalOilrigMachineStartPoint:get() end
 
 
 ---@class APalOilrigNPCSpawnerBase : APalLevelObjectActor
 ---@field SelfOilrigType EPalOilrigType
 ---@field Squad UPalSquad
 APalOilrigNPCSpawnerBase = {}
+
+---@return APalOilrigNPCSpawnerBase
+function APalOilrigNPCSpawnerBase:get() end
 
 function APalOilrigNPCSpawnerBase:OnResetOilrig_BP() end
 ---@param Character APalCharacter
@@ -2153,6 +2468,9 @@ function APalOilrigNPCSpawnerBase:AddCharacterToGroup(Handle) end
 ---@field MapObjectActor AActor
 ---@field OnlyOneEmptyBox AActor
 APalOilrigTreasureBoxSpawner = {}
+
+---@return APalOilrigTreasureBoxSpawner
+function APalOilrigTreasureBoxSpawner:get() end
 
 function APalOilrigTreasureBoxSpawner:OnOpenTreasureBox() end
 ---@param InstanceId FGuid
@@ -2201,6 +2519,9 @@ function APalOilrigTreasureBoxSpawner:IsSpawnedGoalBox() end
 ---@field bSpectatorMode boolean
 ---@field CharacterMakeInfo FPalPlayerDataCharacterMakeInfo
 APalPlayerCharacter = {}
+
+---@return APalPlayerCharacter
+function APalPlayerCharacter:get() end
 
 function APalPlayerCharacter:StopIdleAnimation() end
 ---@param bSpectator boolean
@@ -2370,6 +2691,9 @@ function APalPlayerCharacter:AdjustLocationByLoad(InCharacter) end
 ---@field GuildFlowUniqueIdClientCache FGuid
 ---@field IsBuldingActiveFlag_ForServer boolean
 APalPlayerController = {}
+
+---@return APalPlayerController
+function APalPlayerController:get() end
 
 ---@param InstanceId FPalInstanceID
 ---@param NewNickName FString
@@ -2755,6 +3079,9 @@ function APalPlayerController:ActivateCurrentOtomoNearThePlayer() end
 ---@field DisableGuildJoin boolean
 APalPlayerState = {}
 
+---@return APalPlayerState
+function APalPlayerState:get() end
+
 ---@param OutTimerHandle FTimerHandle
 ---@param Delegate FWaitWorldPartitionDelegateDelegate
 function APalPlayerState:WaitWorldPartitionDelegate(OutTimerHandle, Delegate) end
@@ -2961,6 +3288,9 @@ function APalPlayerState:AddFullInventoryLog_ToClient() end
 ---@class APalRandomIncidentMapObjectSpawner : AActor
 APalRandomIncidentMapObjectSpawner = {}
 
+---@return APalRandomIncidentMapObjectSpawner
+function APalRandomIncidentMapObjectSpawner:get() end
+
 ---@param MonsterId FName
 ---@param SpawnOffset FVector
 function APalRandomIncidentMapObjectSpawner:SpawnEgg(MonsterId, SpawnOffset) end
@@ -2981,6 +3311,9 @@ function APalRandomIncidentMapObjectSpawner:OnFinishedSpawningDropItem(InstanceI
 ---@field OnNPCDespawnedDelegate FPalRandomIncidentNPCSpawnerOnNPCDespawnedDelegate
 ---@field GroupMap TMap<int32, FGuid>
 APalRandomIncidentNPCSpawner = {}
+
+---@return APalRandomIncidentNPCSpawner
+function APalRandomIncidentNPCSpawner:get() end
 
 ---@param RowName FName
 ---@param SpawnData FPalRandomIncidentSpawnNPCData
@@ -3019,6 +3352,9 @@ function APalRandomIncidentNPCSpawner:AddGroupCharacterByGroupNo(AddIndividualHa
 ---@class APalRandomIncidentObjectPlacement : AActor
 APalRandomIncidentObjectPlacement = {}
 
+---@return APalRandomIncidentObjectPlacement
+function APalRandomIncidentObjectPlacement:get() end
+
 ---@return TArray<UPalRandomIncidentPlacementEggDataComponent>
 function APalRandomIncidentObjectPlacement:GetEggDataComponents() end
 ---@return TArray<UPalRandomIncidentPlacementDropItemDataComponent>
@@ -3037,6 +3373,9 @@ function APalRandomIncidentObjectPlacement:GetDropItemDataComponents() end
 ---@field Parameter UPalIncidentDynamicParameterRandom
 ---@field Lottery UPalRandomIncidentLotteryBase
 APalRandomIncidentSpawnerBase = {}
+
+---@return APalRandomIncidentSpawnerBase
+function APalRandomIncidentSpawnerBase:get() end
 
 ---@param DeltaTime float
 function APalRandomIncidentSpawnerBase:UpdateStatusWaitPlayerOutside(DeltaTime) end
@@ -3083,10 +3422,16 @@ function APalRandomIncidentSpawnerBase:AddWalkPath(PathName, PointList) end
 ---@class APalRecastNavMesh : ARecastNavMesh
 APalRecastNavMesh = {}
 
+---@return APalRecastNavMesh
+function APalRecastNavMesh:get() end
+
 
 ---@class APalRegionAreaTriggerBase : AActor
 ---@field BindRegionNameMsgID FName
 APalRegionAreaTriggerBase = {}
+
+---@return APalRegionAreaTriggerBase
+function APalRegionAreaTriggerBase:get() end
 
 ---@param OtherActor AActor
 function APalRegionAreaTriggerBase:OnOverlap(OtherActor) end
@@ -3096,6 +3441,9 @@ function APalRegionAreaTriggerBase:OnEndOverlap(OtherActor) end
 
 ---@class APalSimpleInteractableObject : AActor
 APalSimpleInteractableObject = {}
+
+---@return APalSimpleInteractableObject
+function APalSimpleInteractableObject:get() end
 
 ---@return EPalInteractiveObjectIndicatorType
 function APalSimpleInteractableObject:GetIndicatorType() end
@@ -3114,6 +3462,9 @@ function APalSimpleInteractableObject:GetIndicatorType() end
 ---@field SoundPlayer UPalSoundPlayer
 ---@field RandomStream FRandomStream
 APalSkillEffectBase = {}
+
+---@return APalSkillEffectBase
+function APalSkillEffectBase:get() end
 
 function APalSkillEffectBase:StopAllNiagaraSound() end
 function APalSkillEffectBase:StopAkSound() end
@@ -3169,6 +3520,9 @@ function APalSkillEffectBase:CreateChildSkillEffect(EffectClass, SpawnTransform,
 ---@field VolumeController APalLightingVolumeController
 APalSkyCreatorLightingVolume = {}
 
+---@return APalSkyCreatorLightingVolume
+function APalSkyCreatorLightingVolume:get() end
+
 ---@param OtherActor AActor
 function APalSkyCreatorLightingVolume:OnOverlap(OtherActor) end
 ---@param OtherActor AActor
@@ -3181,11 +3535,17 @@ function APalSkyCreatorLightingVolume:OnEndOverlap(OtherActor) end
 ---@field bDisableEnabledFlag boolean
 APalSkyLightVolume = {}
 
+---@return APalSkyLightVolume
+function APalSkyLightVolume:get() end
+
 function APalSkyLightVolume:OnRep_bEnabled() end
 
 
 ---@class APalSnapModeFX : AActor
 APalSnapModeFX = {}
+
+---@return APalSnapModeFX
+function APalSnapModeFX:get() end
 
 ---@param Location FVector
 ---@param Rotation FRotator
@@ -3204,6 +3564,9 @@ function APalSnapModeFX:Hide() end
 ---@class APalSoundDebugModel : AActor
 APalSoundDebugModel = {}
 
+---@return APalSoundDebugModel
+function APalSoundDebugModel:get() end
+
 ---@param AudioEvent UAkAudioEvent
 function APalSoundDebugModel:Initialize(AudioEvent) end
 
@@ -3211,9 +3574,15 @@ function APalSoundDebugModel:Initialize(AudioEvent) end
 ---@class APalSpectator : APalCharacter
 APalSpectator = {}
 
+---@return APalSpectator
+function APalSpectator:get() end
+
 
 ---@class APalSphereBodyBase : AActor
 APalSphereBodyBase = {}
+
+---@return APalSphereBodyBase
+function APalSphereBodyBase:get() end
 
 ---@param TargetCharacter APalCharacter
 function APalSphereBodyBase:SetupInternal(TargetCharacter) end
@@ -3228,6 +3597,9 @@ function APalSphereBodyBase:RPCDummy() end
 ---@field AudioState EPalAudioState
 ---@field bIsOverlappedLocalPlayer boolean
 APalSpotAreaBase = {}
+
+---@return APalSpotAreaBase
+function APalSpotAreaBase:get() end
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param PlayerCharacter APalPlayerCharacter
@@ -3244,10 +3616,16 @@ function APalSpotAreaBase:GetAreaCollision() end
 ---@class APalStageAreaBounds : AActor
 APalStageAreaBounds = {}
 
+---@return APalStageAreaBounds
+function APalStageAreaBounds:get() end
+
 
 ---@class APalStageAreaVolume : AActor
 ---@field RelatedDataLayerAsset UDataLayerAsset
 APalStageAreaVolume = {}
+
+---@return APalStageAreaVolume
+function APalStageAreaVolume:get() end
 
 ---@param DataLayerAsset UDataLayerAsset
 function APalStageAreaVolume:SetRelatedDataLayerAsset(DataLayerAsset) end
@@ -3260,6 +3638,9 @@ function APalStageAreaVolume:GetBoundingBox() end
 ---@class APalStationaryWeaponBase : APalWeaponBase
 APalStationaryWeaponBase = {}
 
+---@return APalStationaryWeaponBase
+function APalStationaryWeaponBase:get() end
+
 ---@return float
 function APalStationaryWeaponBase:GetAttackableDistance() end
 
@@ -3271,6 +3652,9 @@ function APalStationaryWeaponBase:GetAttackableDistance() end
 ---@field RotateSpeed float
 ---@field LauncherRotator FRotator
 APalStationaryWeaponBulletLauncherBase = {}
+
+---@return APalStationaryWeaponBulletLauncherBase
+function APalStationaryWeaponBulletLauncherBase:get() end
 
 ---@param InRotator FRotator
 ---@return FRotator
@@ -3301,6 +3685,9 @@ function APalStationaryWeaponBulletLauncherBase:ApplyRotateLauncher_BPImpl(Rotat
 ---@field MapObjectId FGuid
 APalSupplyDropActor = {}
 
+---@return APalSupplyDropActor
+function APalSupplyDropActor:get() end
+
 ---@param MapObjectModel UPalMapObjectModel
 function APalSupplyDropActor:OnReplicateMapObjectModel(MapObjectModel) end
 function APalSupplyDropActor:OnRep_MapObjectID() end
@@ -3325,17 +3712,26 @@ function APalSupplyDropActor:OnCreateMapObject(MapObject) end
 ---@field bDebugDrawSupplyLimitArea boolean
 APalSupplySpawner = {}
 
+---@return APalSupplySpawner
+function APalSupplySpawner:get() end
+
 
 
 ---@class APalTestMapObjectRegistrationToManager : AActor
 ---@field bReadyVirtualBaseCamp boolean
 APalTestMapObjectRegistrationToManager = {}
 
+---@return APalTestMapObjectRegistrationToManager
+function APalTestMapObjectRegistrationToManager:get() end
+
 function APalTestMapObjectRegistrationToManager:ForceBuildComplete() end
 
 
 ---@class APalTestNetArchiveTransmition : AActor
 APalTestNetArchiveTransmition = {}
+
+---@return APalTestNetArchiveTransmition
+function APalTestNetArchiveTransmition:get() end
 
 function APalTestNetArchiveTransmition:SendTest() end
 ---@param Ar FPalNetArchive
@@ -3345,6 +3741,9 @@ function APalTestNetArchiveTransmition:OnRecieveTest(Ar) end
 ---@class APalTreasureBoxVisualBase : AActor
 ---@field SkeletalMeshComponent UPalSkeletalMeshComponent
 APalTreasureBoxVisualBase = {}
+
+---@return APalTreasureBoxVisualBase
+function APalTreasureBoxVisualBase:get() end
 
 ---@param bEnabled boolean
 function APalTreasureBoxVisualBase:SetTickEnabled(bEnabled) end
@@ -3361,6 +3760,9 @@ function APalTreasureBoxVisualBase:OnPlayMontageNotifyBegin(NotifyName, Branchin
 ---@field InstanceId FGuid
 APalTriggerAreaBase = {}
 
+---@return APalTriggerAreaBase
+function APalTriggerAreaBase:get() end
+
 ---@return FGuid
 function APalTriggerAreaBase:GetInstanceId() end
 
@@ -3369,6 +3771,9 @@ function APalTriggerAreaBase:GetInstanceId() end
 ---@field DefaultSceneRoot USceneComponent
 ---@field PalSkeletalMeshComponent UPalSkeletalMeshComponent
 APalUIDisplayCharacter = {}
+
+---@return APalUIDisplayCharacter
+function APalUIDisplayCharacter:get() end
 
 ---@param TargetSkeletalMesh UPalSkeletalMeshComponent
 ---@param OutColor FLinearColor
@@ -3390,6 +3795,9 @@ function APalUIDisplayCharacter:ApplyCharacterMakeInfo(MakeInfo) end
 ---@class APalUIInframeRenderer : AActor
 APalUIInframeRenderer = {}
 
+---@return APalUIInframeRenderer
+function APalUIInframeRenderer:get() end
+
 ---@param TargetActorClass TSubclassOf<AActor>
 ---@return UPalStaticCharacterParameterComponent
 function APalUIInframeRenderer:GetStaticParameteComponentFromActorClassr(TargetActorClass) end
@@ -3403,6 +3811,9 @@ function APalUIInframeRenderer:ClearOverrideMaterials(TargetSkeletalMesh) end
 ---@class APalUniqueRideWeaponBase : APalWeaponBase
 ---@field OnShootHijackBullet FPalUniqueRideWeaponBaseOnShootHijackBullet
 APalUniqueRideWeaponBase = {}
+
+---@return APalUniqueRideWeaponBase
+function APalUniqueRideWeaponBase:get() end
 
 function APalUniqueRideWeaponBase:ShootOneBulletByDefault() end
 ---@param BulletClass TSubclassOf<APalBullet>
@@ -3498,6 +3909,9 @@ function APalUniqueRideWeaponBase:CanUse() end
 ---@field LoadoutSelectorIndex int32
 ---@field OriginalMaterials TArray<UMaterialInterface>
 APalWeaponBase = {}
+
+---@return APalWeaponBase
+function APalWeaponBase:get() end
 
 ---@param NotifyType EWeaponNotifyType
 function APalWeaponBase:WeaponNotifyDelegate__DelegateSignature(NotifyType) end
@@ -3661,6 +4075,9 @@ function APalWeaponBase:CalcAccuracy() end
 ---@field LastChangedSpeedTime float
 APalWindController = {}
 
+---@return APalWindController
+function APalWindController:get() end
+
 ---@param WindInfo FPalWindInfo
 function APalWindController:UpdateNiagaraParameterCollection(WindInfo) end
 ---@param InActor AActor
@@ -3673,6 +4090,9 @@ function APalWindController:OnActorSpawned(InActor) end
 ---@field worldMapDetailRenderTexture UTextureRenderTarget2D
 ---@field worldMapHeightTexture UTexture2D
 APalWorldMapCapture = {}
+
+---@return APalWorldMapCapture
+function APalWorldMapCapture:get() end
 
 ---@return UTexture2D
 function APalWorldMapCapture:GetWorldMapHeightMap() end
@@ -3687,6 +4107,9 @@ function APalWorldMapCapture:CaptureWorldMapTexture_Ortho() end
 ---@class APalWorldPartitionLoadingRangeVolume : AActor
 ---@field LoadingRangeMap TMap<int32, float>
 APalWorldPartitionLoadingRangeVolume = {}
+
+---@return APalWorldPartitionLoadingRangeVolume
+function APalWorldPartitionLoadingRangeVolume:get() end
 
 ---@param Enable boolean
 function APalWorldPartitionLoadingRangeVolume:SetOverrideLoadingRange(Enable) end
@@ -3707,6 +4130,9 @@ function APalWorldPartitionLoadingRangeVolume:SetOverrideLoadingRange(Enable) en
 ---@field bRequestCharacterMake boolean
 APalWorldSettings = {}
 
+---@return APalWorldSettings
+function APalWorldSettings:get() end
+
 
 
 ---@class FActionDynamicParameter
@@ -3721,11 +4147,17 @@ APalWorldSettings = {}
 ---@field NetRandSeed int32
 FActionDynamicParameter = {}
 
+---@return FActionDynamicParameter
+function FActionDynamicParameter:get() end
+
 
 
 ---@class FActorArray
 ---@field Actors TArray<AActor>
 FActorArray = {}
+
+---@return FActorArray
+function FActorArray:get() end
 
 
 
@@ -3739,6 +4171,9 @@ FActorArray = {}
 ---@field BuildCompleteAnimationCurve UCurveFloat
 FBuildingSurfaceMaterialSet = {}
 
+---@return FBuildingSurfaceMaterialSet
+function FBuildingSurfaceMaterialSet:get() end
+
 
 
 ---@class FBulletHoleDecalInfo
@@ -3748,6 +4183,9 @@ FBuildingSurfaceMaterialSet = {}
 ---@field Decal_Size_RandomMax float
 FBulletHoleDecalInfo = {}
 
+---@return FBulletHoleDecalInfo
+function FBulletHoleDecalInfo:get() end
+
 
 
 ---@class FCaptureResult
@@ -3756,11 +4194,17 @@ FBulletHoleDecalInfo = {}
 ---@field FailedCaptureType EFailedCaptureType
 FCaptureResult = {}
 
+---@return FCaptureResult
+function FCaptureResult:get() end
+
 
 
 ---@class FCharacterListForImportanceManager
 ---@field CharacterList TArray<APalCharacter>
 FCharacterListForImportanceManager = {}
+
+---@return FCharacterListForImportanceManager
+function FCharacterListForImportanceManager:get() end
 
 
 
@@ -3770,10 +4214,16 @@ FCharacterListForImportanceManager = {}
 ---@field Parameter UPalIndividualCharacterParameter
 FCharacterParameterRepInfo = {}
 
+---@return FCharacterParameterRepInfo
+function FCharacterParameterRepInfo:get() end
+
 
 
 ---@class FDelegateTickFunction : FTickFunction
 FDelegateTickFunction = {}
+
+---@return FDelegateTickFunction
+function FDelegateTickFunction:get() end
 
 
 ---@class FElementOfLayeredFlagContainer
@@ -3781,11 +4231,17 @@ FDelegateTickFunction = {}
 ---@field Container FFlagContainer
 FElementOfLayeredFlagContainer = {}
 
+---@return FElementOfLayeredFlagContainer
+function FElementOfLayeredFlagContainer:get() end
+
 
 
 ---@class FFastCharacterParameterRepInfoArray : FFastArraySerializer
 ---@field Items TArray<FCharacterParameterRepInfo>
 FFastCharacterParameterRepInfoArray = {}
+
+---@return FFastCharacterParameterRepInfoArray
+function FFastCharacterParameterRepInfoArray:get() end
 
 
 
@@ -3793,11 +4249,17 @@ FFastCharacterParameterRepInfoArray = {}
 ---@field Items TArray<FPalBaseCampRepInfo>
 FFastPalBaseCampRepInfoArray = {}
 
+---@return FFastPalBaseCampRepInfoArray
+function FFastPalBaseCampRepInfoArray:get() end
+
 
 
 ---@class FFastPalIndividualCharacterHandleIdArray : FFastArraySerializer
 ---@field Items TArray<FPalIndividualCharacterHandleId>
 FFastPalIndividualCharacterHandleIdArray = {}
+
+---@return FFastPalIndividualCharacterHandleIdArray
+function FFastPalIndividualCharacterHandleIdArray:get() end
 
 
 
@@ -3805,11 +4267,17 @@ FFastPalIndividualCharacterHandleIdArray = {}
 ---@field Items TArray<FPalLocationRepInfo>
 FFastPalLocationRepInfoArray = {}
 
+---@return FFastPalLocationRepInfoArray
+function FFastPalLocationRepInfoArray:get() end
+
 
 
 ---@class FFixedPoint
 ---@field Value int32
 FFixedPoint = {}
+
+---@return FFixedPoint
+function FFixedPoint:get() end
 
 
 
@@ -3817,17 +4285,26 @@ FFixedPoint = {}
 ---@field Value int64
 FFixedPoint64 = {}
 
+---@return FFixedPoint64
+function FFixedPoint64:get() end
+
 
 
 ---@class FFlagContainer
 ---@field Flags TMap<FName, boolean>
 FFlagContainer = {}
 
+---@return FFlagContainer
+function FFlagContainer:get() end
+
 
 
 ---@class FFloatContainer
 ---@field Values TArray<FFloatContainer_FloatPair>
 FFloatContainer = {}
+
+---@return FFloatContainer
+function FFloatContainer:get() end
 
 
 
@@ -3836,12 +4313,18 @@ FFloatContainer = {}
 ---@field Value float
 FFloatContainer_FloatPair = {}
 
+---@return FFloatContainer_FloatPair
+function FFloatContainer_FloatPair:get() end
+
 
 
 ---@class FFloatCounter
 ---@field TriggerValue float
 ---@field CurrentStackValue float
 FFloatCounter = {}
+
+---@return FFloatCounter
+function FFloatCounter:get() end
 
 
 
@@ -3852,6 +4335,9 @@ FFloatCounter = {}
 ---@field RayEndOffset float
 FFootIKSetting = {}
 
+---@return FFootIKSetting
+function FFootIKSetting:get() end
+
 
 
 ---@class FFootStampInfo
@@ -3860,17 +4346,26 @@ FFootIKSetting = {}
 ---@field FootstepDecal_InitialRotation FRotator
 FFootStampInfo = {}
 
+---@return FFootStampInfo
+function FFootStampInfo:get() end
+
 
 
 ---@class FFootStepEffectInfo
 ---@field PhysicalSurfaceToEffect TMap<EPhysicalSurface, TSoftObjectPtr<UNiagaraSystem>>
 FFootStepEffectInfo = {}
 
+---@return FFootStepEffectInfo
+function FFootStepEffectInfo:get() end
+
 
 
 ---@class FGameDateTime
 ---@field Ticks int64
 FGameDateTime = {}
+
+---@return FGameDateTime
+function FGameDateTime:get() end
 
 
 
@@ -3896,6 +4391,9 @@ FGameDateTime = {}
 ---@field bTransportingObject boolean
 FGeneralAnimationParameter = {}
 
+---@return FGeneralAnimationParameter
+function FGeneralAnimationParameter:get() end
+
 
 
 ---@class FHistoryServerWorld
@@ -3909,11 +4407,17 @@ FGeneralAnimationParameter = {}
 ---@field Guid FString
 FHistoryServerWorld = {}
 
+---@return FHistoryServerWorld
+function FHistoryServerWorld:get() end
+
 
 
 ---@class FLayeredFlagContainer
 ---@field ContainerList TArray<FElementOfLayeredFlagContainer>
 FLayeredFlagContainer = {}
+
+---@return FLayeredFlagContainer
+function FLayeredFlagContainer:get() end
 
 
 
@@ -3929,6 +4433,9 @@ FLayeredFlagContainer = {}
 ---@field bAlwaysRelevant boolean
 FNetworkActorSpawnParameters = {}
 
+---@return FNetworkActorSpawnParameters
+function FNetworkActorSpawnParameters:get() end
+
 
 
 ---@class FPalACEWordFilterRequestData
@@ -3937,11 +4444,17 @@ FNetworkActorSpawnParameters = {}
 ---@field Callback FPalACEWordFilterRequestDataCallback
 FPalACEWordFilterRequestData = {}
 
+---@return FPalACEWordFilterRequestData
+function FPalACEWordFilterRequestData:get() end
+
 
 
 ---@class FPalAIActionBaseCampSleepActivelyParameter
 ---@field WalkAroundTime float
 FPalAIActionBaseCampSleepActivelyParameter = {}
+
+---@return FPalAIActionBaseCampSleepActivelyParameter
+function FPalAIActionBaseCampSleepActivelyParameter:get() end
 
 
 
@@ -3956,14 +4469,23 @@ FPalAIActionBaseCampSleepActivelyParameter = {}
 ---@field SelfDestructWaza EPalWazaID
 FPalAIActionDynamicParameter = {}
 
+---@return FPalAIActionDynamicParameter
+function FPalAIActionDynamicParameter:get() end
+
 
 
 ---@class FPalAIMoveRequest : FAIMoveRequest
 FPalAIMoveRequest = {}
 
+---@return FPalAIMoveRequest
+function FPalAIMoveRequest:get() end
+
 
 ---@class FPalAISensorSearchQuery
 FPalAISensorSearchQuery = {}
+
+---@return FPalAISensorSearchQuery
+function FPalAISensorSearchQuery:get() end
 
 
 ---@class FPalAmbientSoundAreaData
@@ -3972,12 +4494,18 @@ FPalAISensorSearchQuery = {}
 ---@field NightAmbientEvents TArray<UAkAudioEvent>
 FPalAmbientSoundAreaData = {}
 
+---@return FPalAmbientSoundAreaData
+function FPalAmbientSoundAreaData:get() end
+
 
 
 ---@class FPalArenaBattleFormation
 ---@field PlayerTransform FTransform
 ---@field PalTransforms TArray<FTransform>
 FPalArenaBattleFormation = {}
+
+---@return FPalArenaBattleFormation
+function FPalArenaBattleFormation:get() end
 
 
 
@@ -3989,12 +4517,18 @@ FPalArenaBattleFormation = {}
 ---@field WorkerSick EPalBaseCampWorkerSickType
 FPalArenaCharacterRestoreParameter = {}
 
+---@return FPalArenaCharacterRestoreParameter
+function FPalArenaCharacterRestoreParameter:get() end
+
 
 
 ---@class FPalArenaEntranceInfo
 ---@field EntryPlayers TArray<FPalArenaEntryPair>
 ---@field bCanEntry boolean
 FPalArenaEntranceInfo = {}
+
+---@return FPalArenaEntranceInfo
+function FPalArenaEntranceInfo:get() end
 
 
 
@@ -4003,16 +4537,25 @@ FPalArenaEntranceInfo = {}
 ---@field PlayerUId2 FGuid
 FPalArenaEntryPair = {}
 
+---@return FPalArenaEntryPair
+function FPalArenaEntryPair:get() end
+
 
 
 ---@class FPalArenaInstanceModelCreateParameter
 ---@field ReservedDataLayerAsset UDataLayerAsset
 FPalArenaInstanceModelCreateParameter = {}
 
+---@return FPalArenaInstanceModelCreateParameter
+function FPalArenaInstanceModelCreateParameter:get() end
+
 
 
 ---@class FPalArenaLevelInstanceLoadOperator
 FPalArenaLevelInstanceLoadOperator = {}
+
+---@return FPalArenaLevelInstanceLoadOperator
+function FPalArenaLevelInstanceLoadOperator:get() end
 
 
 ---@class FPalArenaPlayerInfo
@@ -4020,6 +4563,9 @@ FPalArenaLevelInstanceLoadOperator = {}
 ---@field OtomoList TArray<UPalIndividualCharacterParameter>
 ---@field Party FPalArenaPlayerParty
 FPalArenaPlayerInfo = {}
+
+---@return FPalArenaPlayerInfo
+function FPalArenaPlayerInfo:get() end
 
 
 
@@ -4029,6 +4575,9 @@ FPalArenaPlayerInfo = {}
 ---@field OtomoList TArray<UPalIndividualCharacterParameter>
 FPalArenaPlayerInitializeParameter = {}
 
+---@return FPalArenaPlayerInitializeParameter
+function FPalArenaPlayerInitializeParameter:get() end
+
 
 
 ---@class FPalArenaPlayerParty
@@ -4037,12 +4586,18 @@ FPalArenaPlayerInitializeParameter = {}
 ---@field PartySelected boolean
 FPalArenaPlayerParty = {}
 
+---@return FPalArenaPlayerParty
+function FPalArenaPlayerParty:get() end
+
 
 
 ---@class FPalArenaResultFormation
 ---@field PlayerTransform FTransform
 ---@field PalTransforms TArray<FTransform>
 FPalArenaResultFormation = {}
+
+---@return FPalArenaResultFormation
+function FPalArenaResultFormation:get() end
 
 
 
@@ -4051,6 +4606,9 @@ FPalArenaResultFormation = {}
 ---@field Rot FQuat
 ---@field BattleBGMStateGroup EPalAudioStateGroup
 FPalArenaStartParameter = {}
+
+---@return FPalArenaStartParameter
+function FPalArenaStartParameter:get() end
 
 
 
@@ -4067,12 +4625,18 @@ FPalArenaStartParameter = {}
 ---@field RandomPartyPalLevel int32
 FPalArenaTestParameter = {}
 
+---@return FPalArenaTestParameter
+function FPalArenaTestParameter:get() end
+
 
 
 ---@class FPalArenaWeaponRestoreParameter
 ---@field ItemId FPalItemId
 ---@field BulletNum int32
 FPalArenaWeaponRestoreParameter = {}
+
+---@return FPalArenaWeaponRestoreParameter
+function FPalArenaWeaponRestoreParameter:get() end
 
 
 
@@ -4082,17 +4646,26 @@ FPalArenaWeaponRestoreParameter = {}
 ---@field Thickness float
 FPalArrowSettings = {}
 
+---@return FPalArrowSettings
+function FPalArrowSettings:get() end
+
 
 
 ---@class FPalAsyncSaveProcess
 ---@field State EPalAsyncSaveProcessState
 FPalAsyncSaveProcess = {}
 
+---@return FPalAsyncSaveProcess
+function FPalAsyncSaveProcess:get() end
+
 
 
 ---@class FPalAsyncSaveProcessParallel
 ---@field ProcessMap TMap<FString, FPalAsyncSaveProcess>
 FPalAsyncSaveProcessParallel = {}
+
+---@return FPalAsyncSaveProcessParallel
+function FPalAsyncSaveProcessParallel:get() end
 
 
 
@@ -4101,6 +4674,9 @@ FPalAsyncSaveProcessParallel = {}
 ---@field CurrentVolume float
 FPalAudioFadeParameter = {}
 
+---@return FPalAudioFadeParameter
+function FPalAudioFadeParameter:get() end
+
 
 
 ---@class FPalAxisKeyConfigKeys : FPalKeyConfigKeys
@@ -4108,22 +4684,34 @@ FPalAudioFadeParameter = {}
 ---@field FilterType EPalKeyConfigAxisFilterType
 FPalAxisKeyConfigKeys = {}
 
+---@return FPalAxisKeyConfigKeys
+function FPalAxisKeyConfigKeys:get() end
+
 
 
 ---@class FPalBPClassDataRow : FTableRowBase
 ---@field BPClass TSoftClassPtr<APalCharacter>
 FPalBPClassDataRow = {}
 
+---@return FPalBPClassDataRow
+function FPalBPClassDataRow:get() end
+
 
 
 ---@class FPalBaseCampCreateParameter
 FPalBaseCampCreateParameter = {}
+
+---@return FPalBaseCampCreateParameter
+function FPalBaseCampCreateParameter:get() end
 
 
 ---@class FPalBaseCampFacilityCountPair
 ---@field FacilityType EPalMapObjectWorkerAvailableFacilityType
 ---@field FacilityCount int32
 FPalBaseCampFacilityCountPair = {}
+
+---@return FPalBaseCampFacilityCountPair
+function FPalBaseCampFacilityCountPair:get() end
 
 
 
@@ -4132,16 +4720,25 @@ FPalBaseCampFacilityCountPair = {}
 ---@field ReservedIndividualId FPalInstanceID
 FPalBaseCampFacilityUsageInfo = {}
 
+---@return FPalBaseCampFacilityUsageInfo
+function FPalBaseCampFacilityUsageInfo:get() end
+
 
 
 ---@class FPalBaseCampFacilityUsageInfoSet
 ---@field InfoMap TMap<FGuid, FPalBaseCampFacilityUsageInfo>
 FPalBaseCampFacilityUsageInfoSet = {}
 
+---@return FPalBaseCampFacilityUsageInfoSet
+function FPalBaseCampFacilityUsageInfoSet:get() end
+
 
 
 ---@class FPalBaseCampGetContainerIdsOption
 FPalBaseCampGetContainerIdsOption = {}
+
+---@return FPalBaseCampGetContainerIdsOption
+function FPalBaseCampGetContainerIdsOption:get() end
 
 
 ---@class FPalBaseCampItemContainerInfo
@@ -4150,12 +4747,18 @@ FPalBaseCampGetContainerIdsOption = {}
 ---@field Type EPalBaseCampItemContainerType
 FPalBaseCampItemContainerInfo = {}
 
+---@return FPalBaseCampItemContainerInfo
+function FPalBaseCampItemContainerInfo:get() end
+
 
 
 ---@class FPalBaseCampItemExistsInfo
 ---@field MapObjectModelInstanceId FGuid
 ---@field itemNum int32
 FPalBaseCampItemExistsInfo = {}
+
+---@return FPalBaseCampItemExistsInfo
+function FPalBaseCampItemExistsInfo:get() end
 
 
 
@@ -4165,11 +4768,17 @@ FPalBaseCampItemExistsInfo = {}
 ---@field BaseCampMaxNumInGuild int32
 FPalBaseCampLevelMasterData = {}
 
+---@return FPalBaseCampLevelMasterData
+function FPalBaseCampLevelMasterData:get() end
+
 
 
 ---@class FPalBaseCampModuleResourceCollectWorkInfo
 ---@field WorkId FGuid
 FPalBaseCampModuleResourceCollectWorkInfo = {}
+
+---@return FPalBaseCampModuleResourceCollectWorkInfo
+function FPalBaseCampModuleResourceCollectWorkInfo:get() end
 
 
 
@@ -4178,6 +4787,9 @@ FPalBaseCampModuleResourceCollectWorkInfo = {}
 ---@field CharacterLocation FVector
 FPalBaseCampModuleTransportItemCharacterInfo = {}
 
+---@return FPalBaseCampModuleTransportItemCharacterInfo
+function FPalBaseCampModuleTransportItemCharacterInfo:get() end
+
 
 
 ---@class FPalBaseCampModuleTransportItemDepotParameter
@@ -4185,6 +4797,9 @@ FPalBaseCampModuleTransportItemCharacterInfo = {}
 ---@field DepotLocalBoundsTransform FPalBoundsTransform
 ---@field Requirement FPalBaseCampModuleTransportItemRequirement
 FPalBaseCampModuleTransportItemDepotParameter = {}
+
+---@return FPalBaseCampModuleTransportItemDepotParameter
+function FPalBaseCampModuleTransportItemDepotParameter:get() end
 
 
 
@@ -4195,6 +4810,9 @@ FPalBaseCampModuleTransportItemDepotParameter = {}
 ---@field bRetunring boolean
 FPalBaseCampModuleTransportItemDirection = {}
 
+---@return FPalBaseCampModuleTransportItemDirection
+function FPalBaseCampModuleTransportItemDirection:get() end
+
 
 
 ---@class FPalBaseCampModuleTransportItemRequirement
@@ -4204,6 +4822,9 @@ FPalBaseCampModuleTransportItemDirection = {}
 ---@field ItemTypeB TArray<EPalItemTypeB>
 ---@field ItemExtraTypes TArray<EPalBaseCampModuleTransportItemTransportableItemExtraType>
 FPalBaseCampModuleTransportItemRequirement = {}
+
+---@return FPalBaseCampModuleTransportItemRequirement
+function FPalBaseCampModuleTransportItemRequirement:get() end
 
 
 
@@ -4216,6 +4837,9 @@ FPalBaseCampModuleTransportItemRequirement = {}
 ---@field NotSatisfiedRequirementItemInfoMap TMap<FName, int32>
 FPalBaseCampModuleTransportItemStatus = {}
 
+---@return FPalBaseCampModuleTransportItemStatus
+function FPalBaseCampModuleTransportItemStatus:get() end
+
 
 
 ---@class FPalBaseCampModuleTransportItemTarget
@@ -4227,6 +4851,9 @@ FPalBaseCampModuleTransportItemStatus = {}
 ---@field WorkId FGuid
 FPalBaseCampModuleTransportItemTarget = {}
 
+---@return FPalBaseCampModuleTransportItemTarget
+function FPalBaseCampModuleTransportItemTarget:get() end
+
 
 
 ---@class FPalBaseCampModuleTransportItemTargetReservedInfo
@@ -4234,17 +4861,26 @@ FPalBaseCampModuleTransportItemTarget = {}
 ---@field RequiredConcreteModelId FGuid
 FPalBaseCampModuleTransportItemTargetReservedInfo = {}
 
+---@return FPalBaseCampModuleTransportItemTargetReservedInfo
+function FPalBaseCampModuleTransportItemTargetReservedInfo:get() end
+
 
 
 ---@class FPalBaseCampPassiveEffectMapObjectInfo
 ---@field ConcreteModelInstanceIds TArray<FGuid>
 FPalBaseCampPassiveEffectMapObjectInfo = {}
 
+---@return FPalBaseCampPassiveEffectMapObjectInfo
+function FPalBaseCampPassiveEffectMapObjectInfo:get() end
+
 
 
 ---@class FPalBaseCampPassiveEffectRepInfo : FFastArraySerializerItem
 ---@field Effect UPalBaseCampPassiveEffectBase
 FPalBaseCampPassiveEffectRepInfo = {}
+
+---@return FPalBaseCampPassiveEffectRepInfo
+function FPalBaseCampPassiveEffectRepInfo:get() end
 
 
 
@@ -4255,12 +4891,18 @@ FPalBaseCampPassiveEffectRepInfo = {}
 ---@field DecreaseFullStomachRate float
 FPalBaseCampPassiveEffectWorkHardInfo = {}
 
+---@return FPalBaseCampPassiveEffectWorkHardInfo
+function FPalBaseCampPassiveEffectWorkHardInfo:get() end
+
 
 
 ---@class FPalBaseCampRepInfo : FFastArraySerializerItem
 ---@field ID FGuid
 ---@field BaseCamp UPalBaseCampModel
 FPalBaseCampRepInfo = {}
+
+---@return FPalBaseCampRepInfo
+function FPalBaseCampRepInfo:get() end
 
 
 
@@ -4270,22 +4912,37 @@ FPalBaseCampRepInfo = {}
 ---@field ModuleMap TMap<EPalBaseCampModuleType, FPalBaseCampSaveData_Module>
 FPalBaseCampSaveData = {}
 
+---@return FPalBaseCampSaveData
+function FPalBaseCampSaveData:get() end
+
 
 
 ---@class FPalBaseCampSaveData_Module : FPalBinaryMemory
 FPalBaseCampSaveData_Module = {}
 
+---@return FPalBaseCampSaveData_Module
+function FPalBaseCampSaveData_Module:get() end
+
 
 ---@class FPalBaseCampSaveData_Module_PassiveEffect : FPalBinaryMemory
 FPalBaseCampSaveData_Module_PassiveEffect = {}
+
+---@return FPalBaseCampSaveData_Module_PassiveEffect
+function FPalBaseCampSaveData_Module_PassiveEffect:get() end
 
 
 ---@class FPalBaseCampSaveData_WorkCollection : FPalBinaryMemory
 FPalBaseCampSaveData_WorkCollection = {}
 
+---@return FPalBaseCampSaveData_WorkCollection
+function FPalBaseCampSaveData_WorkCollection:get() end
+
 
 ---@class FPalBaseCampSaveData_WorkerDirector : FPalBinaryMemory
 FPalBaseCampSaveData_WorkerDirector = {}
+
+---@return FPalBaseCampSaveData_WorkerDirector
+function FPalBaseCampSaveData_WorkerDirector:get() end
 
 
 ---@class FPalBaseCampSignificanceInfo
@@ -4293,6 +4950,9 @@ FPalBaseCampSaveData_WorkerDirector = {}
 ---@field TickInterval float
 ---@field bMergeDropItems boolean
 FPalBaseCampSignificanceInfo = {}
+
+---@return FPalBaseCampSignificanceInfo
+function FPalBaseCampSignificanceInfo:get() end
 
 
 
@@ -4302,12 +4962,18 @@ FPalBaseCampSignificanceInfo = {}
 ---@field workerNum int32
 FPalBaseCampTaskCheckedData = {}
 
+---@return FPalBaseCampTaskCheckedData
+function FPalBaseCampTaskCheckedData:get() end
+
 
 
 ---@class FPalBaseCampTaskDataSet
 ---@field requireBuildObjects TArray<FPalBaseCampTaskData_BuildObject>
 ---@field requirePalNum FPalBaseCampTaskData_WorkerNum
 FPalBaseCampTaskDataSet = {}
+
+---@return FPalBaseCampTaskDataSet
+function FPalBaseCampTaskDataSet:get() end
 
 
 
@@ -4330,6 +4996,9 @@ FPalBaseCampTaskDataSet = {}
 ---@field BuildObject3_CompleteMsgID FName
 FPalBaseCampTaskDataSet_TableRow = {}
 
+---@return FPalBaseCampTaskDataSet_TableRow
+function FPalBaseCampTaskDataSet_TableRow:get() end
+
 
 
 ---@class FPalBaseCampTaskData_BuildObject
@@ -4339,6 +5008,9 @@ FPalBaseCampTaskDataSet_TableRow = {}
 ---@field requireNum int32
 FPalBaseCampTaskData_BuildObject = {}
 
+---@return FPalBaseCampTaskData_BuildObject
+function FPalBaseCampTaskData_BuildObject:get() end
+
 
 
 ---@class FPalBaseCampTaskData_WorkerNum
@@ -4347,10 +5019,16 @@ FPalBaseCampTaskData_BuildObject = {}
 ---@field requireNum int32
 FPalBaseCampTaskData_WorkerNum = {}
 
+---@return FPalBaseCampTaskData_WorkerNum
+function FPalBaseCampTaskData_WorkerNum:get() end
+
 
 
 ---@class FPalBaseCampWorkAssignRequest
 FPalBaseCampWorkAssignRequest = {}
+
+---@return FPalBaseCampWorkAssignRequest
+function FPalBaseCampWorkAssignRequest:get() end
 
 
 ---@class FPalBaseCampWorkCollectionRepInfo : FFastArraySerializerItem
@@ -4358,17 +5036,26 @@ FPalBaseCampWorkAssignRequest = {}
 ---@field Work UPalWorkBase
 FPalBaseCampWorkCollectionRepInfo = {}
 
+---@return FPalBaseCampWorkCollectionRepInfo
+function FPalBaseCampWorkCollectionRepInfo:get() end
+
 
 
 ---@class FPalBaseCampWorkCollectionStashInfo
 ---@field StashAtTime FGameDateTime
 FPalBaseCampWorkCollectionStashInfo = {}
 
+---@return FPalBaseCampWorkCollectionStashInfo
+function FPalBaseCampWorkCollectionStashInfo:get() end
+
 
 
 ---@class FPalBaseCampWorkDirectorBattleDefenseModelStashInfo
 ---@field StashAtTime FDateTime
 FPalBaseCampWorkDirectorBattleDefenseModelStashInfo = {}
+
+---@return FPalBaseCampWorkDirectorBattleDefenseModelStashInfo
+function FPalBaseCampWorkDirectorBattleDefenseModelStashInfo:get() end
 
 
 
@@ -4386,16 +5073,25 @@ FPalBaseCampWorkDirectorBattleDefenseModelStashInfo = {}
 ---@field Invalid boolean
 FPalBaseCampWorkerEventMasterData = {}
 
+---@return FPalBaseCampWorkerEventMasterData
+function FPalBaseCampWorkerEventMasterData:get() end
+
 
 
 ---@class FPalBaseCampWorkerFindPreferredWorkInfoCache
 ---@field SortedByPriorityDescWorks TArray<UPalWorkBase>
 FPalBaseCampWorkerFindPreferredWorkInfoCache = {}
 
+---@return FPalBaseCampWorkerFindPreferredWorkInfoCache
+function FPalBaseCampWorkerFindPreferredWorkInfoCache:get() end
+
 
 
 ---@class FPalBaseCampWorkerMoveExtraParameter
 FPalBaseCampWorkerMoveExtraParameter = {}
+
+---@return FPalBaseCampWorkerMoveExtraParameter
+function FPalBaseCampWorkerMoveExtraParameter:get() end
 
 
 ---@class FPalBaseCampWorkerSickMasterData : FTableRowBase
@@ -4408,10 +5104,16 @@ FPalBaseCampWorkerMoveExtraParameter = {}
 ---@field RecoveryProbabilityPercentageInPalBox int32
 FPalBaseCampWorkerSickMasterData = {}
 
+---@return FPalBaseCampWorkerSickMasterData
+function FPalBaseCampWorkerSickMasterData:get() end
+
 
 
 ---@class FPalBaseCampWorkerTaskCheckResponse
 FPalBaseCampWorkerTaskCheckResponse = {}
+
+---@return FPalBaseCampWorkerTaskCheckResponse
+function FPalBaseCampWorkerTaskCheckResponse:get() end
 
 
 ---@class FPalBaseCampWorkerWalkAroundDynamicInfo
@@ -4419,6 +5121,9 @@ FPalBaseCampWorkerTaskCheckResponse = {}
 ---@field WalkAroundDestination FVector
 ---@field WalkAroundTimeCounter FFloatCounter
 FPalBaseCampWorkerWalkAroundDynamicInfo = {}
+
+---@return FPalBaseCampWorkerWalkAroundDynamicInfo
+function FPalBaseCampWorkerWalkAroundDynamicInfo:get() end
 
 
 
@@ -4428,6 +5133,9 @@ FPalBaseCampWorkerWalkAroundDynamicInfo = {}
 ---@field RandomTimeRange FFloatInterval
 FPalBaseCampWorkerWalkAroundSettingItem = {}
 
+---@return FPalBaseCampWorkerWalkAroundSettingItem
+function FPalBaseCampWorkerWalkAroundSettingItem:get() end
+
 
 
 ---@class FPalBaseCampWorkerWalkAroundSettings
@@ -4436,16 +5144,25 @@ FPalBaseCampWorkerWalkAroundSettingItem = {}
 ---@field WalkAroundNextDistance float
 FPalBaseCampWorkerWalkAroundSettings = {}
 
+---@return FPalBaseCampWorkerWalkAroundSettings
+function FPalBaseCampWorkerWalkAroundSettings:get() end
+
 
 
 ---@class FPalBelongInfo
 FPalBelongInfo = {}
+
+---@return FPalBelongInfo
+function FPalBelongInfo:get() end
 
 
 ---@class FPalBinaryMemory
 ---@field RawData TArray<uint8>
 ---@field CustomVersionData TArray<uint8>
 FPalBinaryMemory = {}
+
+---@return FPalBinaryMemory
+function FPalBinaryMemory:get() end
 
 
 
@@ -4456,6 +5173,9 @@ FPalBinaryMemory = {}
 ---@field AngularDamping float
 FPalBodyInstanceParameter = {}
 
+---@return FPalBodyInstanceParameter
+function FPalBodyInstanceParameter:get() end
+
 
 
 ---@class FPalBossBattleDifficultyParameter
@@ -4464,6 +5184,9 @@ FPalBodyInstanceParameter = {}
 ---@field SuccessItemList TArray<FPalBossBattleSuccessItemInfo>
 ---@field BossBattleEvent TSoftClassPtr<UPalBossBattleEventBase>
 FPalBossBattleDifficultyParameter = {}
+
+---@return FPalBossBattleDifficultyParameter
+function FPalBossBattleDifficultyParameter:get() end
 
 
 
@@ -4474,10 +5197,16 @@ FPalBossBattleDifficultyParameter = {}
 ---@field BossTower APalBossTower
 FPalBossBattleInstanceModelCreateParameter = {}
 
+---@return FPalBossBattleInstanceModelCreateParameter
+function FPalBossBattleInstanceModelCreateParameter:get() end
+
 
 
 ---@class FPalBossBattleLevelInstanceLoadOperator
 FPalBossBattleLevelInstanceLoadOperator = {}
+
+---@return FPalBossBattleLevelInstanceLoadOperator
+function FPalBossBattleLevelInstanceLoadOperator:get() end
 
 
 ---@class FPalBossBattleStaticInfo
@@ -4488,6 +5217,9 @@ FPalBossBattleLevelInstanceLoadOperator = {}
 ---@field AchievementId FString
 FPalBossBattleStaticInfo = {}
 
+---@return FPalBossBattleStaticInfo
+function FPalBossBattleStaticInfo:get() end
+
 
 
 ---@class FPalBossBattleSuccessItemInfo
@@ -4497,11 +5229,17 @@ FPalBossBattleStaticInfo = {}
 ---@field Max int32
 FPalBossBattleSuccessItemInfo = {}
 
+---@return FPalBossBattleSuccessItemInfo
+function FPalBossBattleSuccessItemInfo:get() end
+
 
 
 ---@class FPalBossSpawnerSaveData
 ---@field RespawnDisableFlag TMap<FName, boolean>
 FPalBossSpawnerSaveData = {}
+
+---@return FPalBossSpawnerSaveData
+function FPalBossSpawnerSaveData:get() end
 
 
 
@@ -4511,10 +5249,16 @@ FPalBossSpawnerSaveData = {}
 ---@field Bounds FBoxSphereBounds
 FPalBoundsTransform = {}
 
+---@return FPalBoundsTransform
+function FPalBoundsTransform:get() end
+
 
 
 ---@class FPalBuildInstallOtherOptions
 FPalBuildInstallOtherOptions = {}
+
+---@return FPalBuildInstallOtherOptions
+function FPalBuildInstallOtherOptions:get() end
 
 
 ---@class FPalBuildObjectConvertCharacterToItemVisualProcessInfo
@@ -4522,6 +5266,9 @@ FPalBuildInstallOtherOptions = {}
 ---@field CharacterID FName
 ---@field ConvertProgressRate float
 FPalBuildObjectConvertCharacterToItemVisualProcessInfo = {}
+
+---@return FPalBuildObjectConvertCharacterToItemVisualProcessInfo
+function FPalBuildObjectConvertCharacterToItemVisualProcessInfo:get() end
 
 
 
@@ -4554,6 +5301,9 @@ FPalBuildObjectConvertCharacterToItemVisualProcessInfo = {}
 ---@field bInstallableNoObstacleFromCamera boolean
 FPalBuildObjectData = {}
 
+---@return FPalBuildObjectData
+function FPalBuildObjectData:get() end
+
 
 
 ---@class FPalBuildObjectDataSetTypeB
@@ -4561,11 +5311,17 @@ FPalBuildObjectData = {}
 ---@field DataArray TArray<FPalBuildObjectData>
 FPalBuildObjectDataSetTypeB = {}
 
+---@return FPalBuildObjectDataSetTypeB
+function FPalBuildObjectDataSetTypeB:get() end
+
 
 
 ---@class FPalBuildObjectIconData : FTableRowBase
 ---@field SoftIcon TSoftObjectPtr<UTexture2D>
 FPalBuildObjectIconData = {}
+
+---@return FPalBuildObjectIconData
+function FPalBuildObjectIconData:get() end
 
 
 
@@ -4573,21 +5329,33 @@ FPalBuildObjectIconData = {}
 ---@field Materials TArray<UMaterialInterface>
 FPalBuildObjectMaterialArray = {}
 
+---@return FPalBuildObjectMaterialArray
+function FPalBuildObjectMaterialArray:get() end
+
 
 
 ---@class FPalBuildObjectMeshDefaultSetting
 ---@field ProfileName FName
 FPalBuildObjectMeshDefaultSetting = {}
 
+---@return FPalBuildObjectMeshDefaultSetting
+function FPalBuildObjectMeshDefaultSetting:get() end
+
 
 
 ---@class FPalBuildObjectPassiveInfo
 FPalBuildObjectPassiveInfo = {}
 
+---@return FPalBuildObjectPassiveInfo
+function FPalBuildObjectPassiveInfo:get() end
+
 
 ---@class FPalBuildRequestDebugParameter
 ---@field bNotConsumeMaterials boolean
 FPalBuildRequestDebugParameter = {}
+
+---@return FPalBuildRequestDebugParameter
+function FPalBuildRequestDebugParameter:get() end
 
 
 
@@ -4600,6 +5368,9 @@ FPalBuildRequestDebugParameter = {}
 ---@field ElementStatusMultiplay float
 FPalCalcCharacterDamageInfo = {}
 
+---@return FPalCalcCharacterDamageInfo
+function FPalCalcCharacterDamageInfo:get() end
+
 
 
 ---@class FPalCameraDOFSetting
@@ -4610,6 +5381,9 @@ FPalCalcCharacterDamageInfo = {}
 ---@field FOV float
 FPalCameraDOFSetting = {}
 
+---@return FPalCameraDOFSetting
+function FPalCameraDOFSetting:get() end
+
 
 
 ---@class FPalCaptureBallEffectSettingData
@@ -4617,11 +5391,17 @@ FPalCameraDOFSetting = {}
 ---@field CaptureAbsorbToBall_Scale float
 FPalCaptureBallEffectSettingData = {}
 
+---@return FPalCaptureBallEffectSettingData
+function FPalCaptureBallEffectSettingData:get() end
+
 
 
 ---@class FPalCaptureBonusExpRaw : FTableRowBase
 ---@field BonusExp int32
 FPalCaptureBonusExpRaw = {}
+
+---@return FPalCaptureBonusExpRaw
+function FPalCaptureBonusExpRaw:get() end
 
 
 
@@ -4629,6 +5409,9 @@ FPalCaptureBonusExpRaw = {}
 ---@field TableReferenceNum int32
 ---@field TableIndexCount int32
 FPalCaptureBonusExpTableSetting = {}
+
+---@return FPalCaptureBonusExpTableSetting
+function FPalCaptureBonusExpTableSetting:get() end
 
 
 
@@ -4640,6 +5423,9 @@ FPalCaptureBonusExpTableSetting = {}
 ---@field MaxLevel int32
 FPalCapturedCageInfoDatabaseRow = {}
 
+---@return FPalCapturedCageInfoDatabaseRow
+function FPalCapturedCageInfoDatabaseRow:get() end
+
 
 
 ---@class FPalCellCoord
@@ -4648,16 +5434,25 @@ FPalCapturedCageInfoDatabaseRow = {}
 ---@field Z int64
 FPalCellCoord = {}
 
+---@return FPalCellCoord
+function FPalCellCoord:get() end
+
 
 
 ---@class FPalCharacterAsyncTickFunction : FTickFunction
 FPalCharacterAsyncTickFunction = {}
+
+---@return FPalCharacterAsyncTickFunction
+function FPalCharacterAsyncTickFunction:get() end
 
 
 ---@class FPalCharacterCompleteDelegateParameter
 ---@field Priority EPalCharacterCompleteDelegatePriority
 ---@field CompleteDelegate FPalCharacterCompleteDelegateParameterCompleteDelegate
 FPalCharacterCompleteDelegateParameter = {}
+
+---@return FPalCharacterCompleteDelegateParameter
+function FPalCharacterCompleteDelegateParameter:get() end
 
 
 
@@ -4667,12 +5462,18 @@ FPalCharacterCompleteDelegateParameter = {}
 ---@field SlotNum int32
 FPalCharacterContainerSaveData = {}
 
+---@return FPalCharacterContainerSaveData
+function FPalCharacterContainerSaveData:get() end
+
 
 
 ---@class FPalCharacterContainerSlotInfo
 ---@field IndividualId FPalInstanceID
 ---@field SlotID FPalCharacterSlotId
 FPalCharacterContainerSlotInfo = {}
+
+---@return FPalCharacterContainerSlotInfo
+function FPalCharacterContainerSlotInfo:get() end
 
 
 
@@ -4683,11 +5484,17 @@ FPalCharacterContainerSlotInfo = {}
 ---@field FilteringSuitability TArray<EPalWorkSuitability>
 FPalCharacterContainerSortInfo = {}
 
+---@return FPalCharacterContainerSortInfo
+function FPalCharacterContainerSortInfo:get() end
+
 
 
 ---@class FPalCharacterCreationColorPresetDataRow : FTableRowBase
 ---@field Colors TArray<FLinearColor>
 FPalCharacterCreationColorPresetDataRow = {}
+
+---@return FPalCharacterCreationColorPresetDataRow
+function FPalCharacterCreationColorPresetDataRow:get() end
 
 
 
@@ -4697,11 +5504,17 @@ FPalCharacterCreationColorPresetDataRow = {}
 ---@field ShiftUIDisplayEyeColor FLinearColor
 FPalCharacterCreationEyeMaterialDataRow = {}
 
+---@return FPalCharacterCreationEyeMaterialDataRow
+function FPalCharacterCreationEyeMaterialDataRow:get() end
+
 
 
 ---@class FPalCharacterCreationMakeInfoPresetDataRow : FTableRowBase
 ---@field PresetMakeInfo FPalPlayerDataCharacterMakeInfo
 FPalCharacterCreationMakeInfoPresetDataRow = {}
+
+---@return FPalCharacterCreationMakeInfoPresetDataRow
+function FPalCharacterCreationMakeInfoPresetDataRow:get() end
 
 
 
@@ -4716,6 +5529,9 @@ FPalCharacterCreationMakeInfoPresetDataRow = {}
 ---@field ShiftUIDisplayHairColor FLinearColor
 FPalCharacterCreationMeshPresetDataRow = {}
 
+---@return FPalCharacterCreationMeshPresetDataRow
+function FPalCharacterCreationMeshPresetDataRow:get() end
+
 
 
 ---@class FPalCharacterCreationPresetDataRow : FTableRowBase
@@ -4723,17 +5539,26 @@ FPalCharacterCreationMeshPresetDataRow = {}
 ---@field IconTexture TSoftObjectPtr<UTexture2D>
 FPalCharacterCreationPresetDataRow = {}
 
+---@return FPalCharacterCreationPresetDataRow
+function FPalCharacterCreationPresetDataRow:get() end
+
 
 
 ---@class FPalCharacterIconDataRow : FTableRowBase
 ---@field Icon TSoftObjectPtr<UTexture2D>
 FPalCharacterIconDataRow = {}
 
+---@return FPalCharacterIconDataRow
+function FPalCharacterIconDataRow:get() end
+
 
 
 ---@class FPalCharacterList
 ---@field CharacterList TArray<APalCharacter>
 FPalCharacterList = {}
+
+---@return FPalCharacterList
+function FPalCharacterList:get() end
 
 
 
@@ -4814,11 +5639,17 @@ FPalCharacterList = {}
 ---@field PassiveSkill4 FName
 FPalCharacterParameterDatabaseRow = {}
 
+---@return FPalCharacterParameterDatabaseRow
+function FPalCharacterParameterDatabaseRow:get() end
+
 
 
 ---@class FPalCharacterParameterStorageSaveData
 ---@field StoredParameterInfoSaveData TArray<FPalCharacterStoredParameterInfoSaveData>
 FPalCharacterParameterStorageSaveData = {}
+
+---@return FPalCharacterParameterStorageSaveData
+function FPalCharacterParameterStorageSaveData:get() end
 
 
 
@@ -4829,11 +5660,17 @@ FPalCharacterParameterStorageSaveData = {}
 ---@field NotWorkableFlag FFlagContainer
 FPalCharacterParameter_Work = {}
 
+---@return FPalCharacterParameter_Work
+function FPalCharacterParameter_Work:get() end
+
 
 
 ---@class FPalCharacterPassiveSkillGrantInfo
 ---@field IgnoreIdList TArray<FName>
 FPalCharacterPassiveSkillGrantInfo = {}
+
+---@return FPalCharacterPassiveSkillGrantInfo
+function FPalCharacterPassiveSkillGrantInfo:get() end
 
 
 
@@ -4842,11 +5679,17 @@ FPalCharacterPassiveSkillGrantInfo = {}
 ---@field SlotIndex int32
 FPalCharacterSlotId = {}
 
+---@return FPalCharacterSlotId
+function FPalCharacterSlotId:get() end
+
 
 
 ---@class FPalCharacterSlotSaveData : FPalBinaryMemory
 ---@field SlotIndex int32
 FPalCharacterSlotSaveData = {}
+
+---@return FPalCharacterSlotSaveData
+function FPalCharacterSlotSaveData:get() end
 
 
 
@@ -4856,11 +5699,17 @@ FPalCharacterSlotSaveData = {}
 ---@field InstanceId FPalInstanceID
 FPalCharacterSlotUpdateInfo = {}
 
+---@return FPalCharacterSlotUpdateInfo
+function FPalCharacterSlotUpdateInfo:get() end
+
 
 
 ---@class FPalCharacterStoredParameterId
 ---@field ID FGuid
 FPalCharacterStoredParameterId = {}
+
+---@return FPalCharacterStoredParameterId
+function FPalCharacterStoredParameterId:get() end
 
 
 
@@ -4869,6 +5718,9 @@ FPalCharacterStoredParameterId = {}
 ---@field StoredAt FGameDateTime
 ---@field LostPlayerUId FGuid
 FPalCharacterStoredParameterInfo = {}
+
+---@return FPalCharacterStoredParameterInfo
+function FPalCharacterStoredParameterInfo:get() end
 
 
 
@@ -4879,6 +5731,9 @@ FPalCharacterStoredParameterInfo = {}
 ---@field LostPlayerUId FGuid
 FPalCharacterStoredParameterInfoSaveData = {}
 
+---@return FPalCharacterStoredParameterInfoSaveData
+function FPalCharacterStoredParameterInfoSaveData:get() end
+
 
 
 ---@class FPalCharacterUpgradeMasterData : FTableRowBase
@@ -4887,6 +5742,9 @@ FPalCharacterStoredParameterInfoSaveData = {}
 ---@field RequiredItemNum int32
 ---@field ResetRequiredMoney int32
 FPalCharacterUpgradeMasterData = {}
+
+---@return FPalCharacterUpgradeMasterData
+function FPalCharacterUpgradeMasterData:get() end
 
 
 
@@ -4898,15 +5756,24 @@ FPalCharacterUpgradeMasterData = {}
 ---@field ReceiverPlayerUId FGuid
 FPalChatMessage = {}
 
+---@return FPalChatMessage
+function FPalChatMessage:get() end
+
 
 
 ---@class FPalCheckStuckInfo
 FPalCheckStuckInfo = {}
 
+---@return FPalCheckStuckInfo
+function FPalCheckStuckInfo:get() end
+
 
 ---@class FPalCollectionRankDefineData
 ---@field DropNumRate float
 FPalCollectionRankDefineData = {}
+
+---@return FPalCollectionRankDefineData
+function FPalCollectionRankDefineData:get() end
 
 
 
@@ -4918,6 +5785,9 @@ FPalCollectionRankDefineData = {}
 ---@field ChildCharacterID FName
 FPalCombiUniqueDatabaseRow = {}
 
+---@return FPalCombiUniqueDatabaseRow
+function FPalCombiUniqueDatabaseRow:get() end
+
 
 
 ---@class FPalCommonQuestRewardData
@@ -4926,16 +5796,25 @@ FPalCombiUniqueDatabaseRow = {}
 ---@field Items TMap<FPalDataTableRowName_ItemData, int32>
 FPalCommonQuestRewardData = {}
 
+---@return FPalCommonQuestRewardData
+function FPalCommonQuestRewardData:get() end
+
 
 
 ---@class FPalCompletedQuestSaveData
 ---@field QuestName FName
 FPalCompletedQuestSaveData = {}
 
+---@return FPalCompletedQuestSaveData
+function FPalCompletedQuestSaveData:get() end
+
 
 
 ---@class FPalContainerBelongInfo : FPalBelongInfo
 FPalContainerBelongInfo = {}
+
+---@return FPalContainerBelongInfo
+function FPalContainerBelongInfo:get() end
 
 
 ---@class FPalContainerCreateExtraParameter
@@ -4945,11 +5824,17 @@ FPalContainerBelongInfo = {}
 ---@field OperationRestrictType EPalContainerOperationRestrictType
 FPalContainerCreateExtraParameter = {}
 
+---@return FPalContainerCreateExtraParameter
+function FPalContainerCreateExtraParameter:get() end
+
 
 
 ---@class FPalContainerId
 ---@field ID FGuid
 FPalContainerId = {}
+
+---@return FPalContainerId
+function FPalContainerId:get() end
 
 
 
@@ -4957,6 +5842,9 @@ FPalContainerId = {}
 ---@field ContainerId FPalContainerId
 ---@field SlotNum int32
 FPalContainerInfo = {}
+
+---@return FPalContainerInfo
+function FPalContainerInfo:get() end
 
 
 
@@ -4968,6 +5856,9 @@ FPalContainerInfo = {}
 ---@field OperationRestrictType EPalContainerOperationRestrictType
 FPalContainerInitializeParameter = {}
 
+---@return FPalContainerInitializeParameter
+function FPalContainerInitializeParameter:get() end
+
 
 
 ---@class FPalCoopSkillAssaultrifleModeCandidateLocation
@@ -4975,11 +5866,17 @@ FPalContainerInitializeParameter = {}
 ---@field Distance float
 FPalCoopSkillAssaultrifleModeCandidateLocation = {}
 
+---@return FPalCoopSkillAssaultrifleModeCandidateLocation
+function FPalCoopSkillAssaultrifleModeCandidateLocation:get() end
+
 
 
 ---@class FPalCoopSkillModuleAssignPassiveSkillNames
 ---@field AssignSkillNames TArray<FPalDataTableRowName_PassiveSkillData>
 FPalCoopSkillModuleAssignPassiveSkillNames = {}
+
+---@return FPalCoopSkillModuleAssignPassiveSkillNames
+function FPalCoopSkillModuleAssignPassiveSkillNames:get() end
 
 
 
@@ -4989,6 +5886,9 @@ FPalCoopSkillModuleAssignPassiveSkillNames = {}
 ---@field RadiusTo float
 ---@field ExtRadiusPerSec float
 FPalCoopSkillSearchEffectParameter = {}
+
+---@return FPalCoopSkillSearchEffectParameter
+function FPalCoopSkillSearchEffectParameter:get() end
 
 
 
@@ -5000,12 +5900,18 @@ FPalCoopSkillSearchEffectParameter = {}
 ---@field RequestPlayerUId FGuid
 FPalCoopSkillSearchResultParameter = {}
 
+---@return FPalCoopSkillSearchResultParameter
+function FPalCoopSkillSearchResultParameter:get() end
+
 
 
 ---@class FPalCrimeInstanceCreateParameter
 ---@field CrimeId FName
 ---@field TargetId FGuid
 FPalCrimeInstanceCreateParameter = {}
+
+---@return FPalCrimeInstanceCreateParameter
+function FPalCrimeInstanceCreateParameter:get() end
 
 
 
@@ -5014,6 +5920,9 @@ FPalCrimeInstanceCreateParameter = {}
 ---@field BaseReward int32
 FPalCrimeMasterData = {}
 
+---@return FPalCrimeMasterData
+function FPalCrimeMasterData:get() end
+
 
 
 ---@class FPalCrimeStateInfo
@@ -5021,12 +5930,18 @@ FPalCrimeMasterData = {}
 ---@field CrimeStateArray TArray<FGuid>
 FPalCrimeStateInfo = {}
 
+---@return FPalCrimeStateInfo
+function FPalCrimeStateInfo:get() end
+
 
 
 ---@class FPalCustomMarkerSaveData
 ---@field IconLocation FVector
 ---@field IconType int32
 FPalCustomMarkerSaveData = {}
+
+---@return FPalCustomMarkerSaveData
+function FPalCustomMarkerSaveData:get() end
 
 
 
@@ -5067,6 +5982,9 @@ FPalCustomMarkerSaveData = {}
 ---@field IgnorePlayerEquipItemDamage boolean
 FPalDamageInfo = {}
 
+---@return FPalDamageInfo
+function FPalDamageInfo:get() end
+
 
 
 ---@class FPalDamageRactionInfo
@@ -5077,6 +5995,9 @@ FPalDamageInfo = {}
 ---@field IsLargeDown boolean
 ---@field HitLocation FVector
 FPalDamageRactionInfo = {}
+
+---@return FPalDamageRactionInfo
+function FPalDamageRactionInfo:get() end
 
 
 
@@ -5094,11 +6015,17 @@ FPalDamageRactionInfo = {}
 ---@field AttackElementType EPalElementType
 FPalDamageResult = {}
 
+---@return FPalDamageResult
+function FPalDamageResult:get() end
+
 
 
 ---@class FPalDataTableRowName_BaseCampWorkerEventData
 ---@field Key FName
 FPalDataTableRowName_BaseCampWorkerEventData = {}
+
+---@return FPalDataTableRowName_BaseCampWorkerEventData
+function FPalDataTableRowName_BaseCampWorkerEventData:get() end
 
 
 
@@ -5106,11 +6033,17 @@ FPalDataTableRowName_BaseCampWorkerEventData = {}
 ---@field Key FName
 FPalDataTableRowName_CrimeMasterData = {}
 
+---@return FPalDataTableRowName_CrimeMasterData
+function FPalDataTableRowName_CrimeMasterData:get() end
+
 
 
 ---@class FPalDataTableRowName_DungeonSpawnAreaData
 ---@field Key FName
 FPalDataTableRowName_DungeonSpawnAreaData = {}
+
+---@return FPalDataTableRowName_DungeonSpawnAreaData
+function FPalDataTableRowName_DungeonSpawnAreaData:get() end
 
 
 
@@ -5118,11 +6051,17 @@ FPalDataTableRowName_DungeonSpawnAreaData = {}
 ---@field Key FName
 FPalDataTableRowName_FarmCropData = {}
 
+---@return FPalDataTableRowName_FarmCropData
+function FPalDataTableRowName_FarmCropData:get() end
+
 
 
 ---@class FPalDataTableRowName_FieldLotteryNameData
 ---@field Key FName
 FPalDataTableRowName_FieldLotteryNameData = {}
+
+---@return FPalDataTableRowName_FieldLotteryNameData
+function FPalDataTableRowName_FieldLotteryNameData:get() end
 
 
 
@@ -5130,11 +6069,17 @@ FPalDataTableRowName_FieldLotteryNameData = {}
 ---@field Key FName
 FPalDataTableRowName_GameProgressPreset = {}
 
+---@return FPalDataTableRowName_GameProgressPreset
+function FPalDataTableRowName_GameProgressPreset:get() end
+
 
 
 ---@class FPalDataTableRowName_ItemData
 ---@field Key FName
 FPalDataTableRowName_ItemData = {}
+
+---@return FPalDataTableRowName_ItemData
+function FPalDataTableRowName_ItemData:get() end
 
 
 
@@ -5142,11 +6087,17 @@ FPalDataTableRowName_ItemData = {}
 ---@field Key FName
 FPalDataTableRowName_ItemProductData = {}
 
+---@return FPalDataTableRowName_ItemProductData
+function FPalDataTableRowName_ItemProductData:get() end
+
 
 
 ---@class FPalDataTableRowName_ItemShopCreateData
 ---@field Key FName
 FPalDataTableRowName_ItemShopCreateData = {}
+
+---@return FPalDataTableRowName_ItemShopCreateData
+function FPalDataTableRowName_ItemShopCreateData:get() end
 
 
 
@@ -5154,11 +6105,17 @@ FPalDataTableRowName_ItemShopCreateData = {}
 ---@field Key FName
 FPalDataTableRowName_ItemShopLotteryData = {}
 
+---@return FPalDataTableRowName_ItemShopLotteryData
+function FPalDataTableRowName_ItemShopLotteryData:get() end
+
 
 
 ---@class FPalDataTableRowName_MapObjectData
 ---@field Key FName
 FPalDataTableRowName_MapObjectData = {}
+
+---@return FPalDataTableRowName_MapObjectData
+function FPalDataTableRowName_MapObjectData:get() end
 
 
 
@@ -5166,11 +6123,17 @@ FPalDataTableRowName_MapObjectData = {}
 ---@field Key FName
 FPalDataTableRowName_NPCUniqueData = {}
 
+---@return FPalDataTableRowName_NPCUniqueData
+function FPalDataTableRowName_NPCUniqueData:get() end
+
 
 
 ---@class FPalDataTableRowName_NoteData
 ---@field Key FName
 FPalDataTableRowName_NoteData = {}
+
+---@return FPalDataTableRowName_NoteData
+function FPalDataTableRowName_NoteData:get() end
 
 
 
@@ -5178,11 +6141,17 @@ FPalDataTableRowName_NoteData = {}
 ---@field Key FName
 FPalDataTableRowName_PalHumanData = {}
 
+---@return FPalDataTableRowName_PalHumanData
+function FPalDataTableRowName_PalHumanData:get() end
+
 
 
 ---@class FPalDataTableRowName_PalMonsterData
 ---@field Key FName
 FPalDataTableRowName_PalMonsterData = {}
+
+---@return FPalDataTableRowName_PalMonsterData
+function FPalDataTableRowName_PalMonsterData:get() end
 
 
 
@@ -5190,11 +6159,17 @@ FPalDataTableRowName_PalMonsterData = {}
 ---@field Key FName
 FPalDataTableRowName_PalShopCreateData = {}
 
+---@return FPalDataTableRowName_PalShopCreateData
+function FPalDataTableRowName_PalShopCreateData:get() end
+
 
 
 ---@class FPalDataTableRowName_PassiveSkillData
 ---@field Key FName
 FPalDataTableRowName_PassiveSkillData = {}
+
+---@return FPalDataTableRowName_PassiveSkillData
+function FPalDataTableRowName_PassiveSkillData:get() end
 
 
 
@@ -5202,17 +6177,26 @@ FPalDataTableRowName_PassiveSkillData = {}
 ---@field Key FName
 FPalDataTableRowName_RecipeTechnologyData = {}
 
+---@return FPalDataTableRowName_RecipeTechnologyData
+function FPalDataTableRowName_RecipeTechnologyData:get() end
+
 
 
 ---@class FPalDataTableRowName_SoundID
 ---@field Key FName
 FPalDataTableRowName_SoundID = {}
 
+---@return FPalDataTableRowName_SoundID
+function FPalDataTableRowName_SoundID:get() end
+
 
 
 ---@class FPalDataTableRowName_UIInputAction
 ---@field Key FName
 FPalDataTableRowName_UIInputAction = {}
+
+---@return FPalDataTableRowName_UIInputAction
+function FPalDataTableRowName_UIInputAction:get() end
 
 
 
@@ -5226,6 +6210,9 @@ FPalDataTableRowName_UIInputAction = {}
 ---@field DeadType EPalDeadType
 FPalDeadInfo = {}
 
+---@return FPalDeadInfo
+function FPalDeadInfo:get() end
+
 
 
 ---@class FPalDeathPenaltyInfo
@@ -5236,17 +6223,26 @@ FPalDeadInfo = {}
 ---@field DropItemList TArray<FPalItemAndNum>
 FPalDeathPenaltyInfo = {}
 
+---@return FPalDeathPenaltyInfo
+function FPalDeathPenaltyInfo:get() end
+
 
 
 ---@class FPalDeathPenaltyList
 ---@field DeathPenaArray TArray<FPalDeathPenaltyInfo>
 FPalDeathPenaltyList = {}
 
+---@return FPalDeathPenaltyList
+function FPalDeathPenaltyList:get() end
+
 
 
 ---@class FPalDebugAttachPassiveSkillInfo
 ---@field skill TArray<FPalDataTableRowName_PassiveSkillData>
 FPalDebugAttachPassiveSkillInfo = {}
+
+---@return FPalDebugAttachPassiveSkillInfo
+function FPalDebugAttachPassiveSkillInfo:get() end
 
 
 
@@ -5255,16 +6251,25 @@ FPalDebugAttachPassiveSkillInfo = {}
 ---@field Rank int32
 FPalDebugCharacterStatusRank = {}
 
+---@return FPalDebugCharacterStatusRank
+function FPalDebugCharacterStatusRank:get() end
+
 
 
 ---@class FPalDebugInfoSet
 FPalDebugInfoSet = {}
+
+---@return FPalDebugInfoSet
+function FPalDebugInfoSet:get() end
 
 
 ---@class FPalDebugItemCreateInfo
 ---@field itemRowName FPalDataTableRowName_ItemData
 ---@field itemNum int32
 FPalDebugItemCreateInfo = {}
+
+---@return FPalDebugItemCreateInfo
+function FPalDebugItemCreateInfo:get() end
 
 
 
@@ -5277,12 +6282,18 @@ FPalDebugItemCreateInfo = {}
 ---@field StatusRank TArray<FPalDebugCharacterStatusRank>
 FPalDebugOtomoPalInfo = {}
 
+---@return FPalDebugOtomoPalInfo
+function FPalDebugOtomoPalInfo:get() end
+
 
 
 ---@class FPalDebugPalCaptureInfo
 ---@field PalName FPalDataTableRowName_PalMonsterData
 ---@field Num int32
 FPalDebugPalCaptureInfo = {}
+
+---@return FPalDebugPalCaptureInfo
+function FPalDebugPalCaptureInfo:get() end
 
 
 
@@ -5291,11 +6302,17 @@ FPalDebugPalCaptureInfo = {}
 ---@field MaterialSubType EPalMapObjectMaterialSubType
 FPalDeforestRankDefineData = {}
 
+---@return FPalDeforestRankDefineData
+function FPalDeforestRankDefineData:get() end
+
 
 
 ---@class FPalDropCharacterExtraParameter
 ---@field DropPlayerUId FGuid
 FPalDropCharacterExtraParameter = {}
+
+---@return FPalDropCharacterExtraParameter
+function FPalDropCharacterExtraParameter:get() end
 
 
 
@@ -5344,10 +6361,16 @@ FPalDropCharacterExtraParameter = {}
 ---@field Max10 int32
 FPalDropItemDatabaseRow = {}
 
+---@return FPalDropItemDatabaseRow
+function FPalDropItemDatabaseRow:get() end
+
 
 
 ---@class FPalDropItemInfo
 FPalDropItemInfo = {}
+
+---@return FPalDropItemInfo
+function FPalDropItemInfo:get() end
 
 
 ---@class FPalDroppedPalProductDataForShop
@@ -5355,11 +6378,17 @@ FPalDropItemInfo = {}
 ---@field SaveParameter FPalIndividualCharacterSaveParameter
 FPalDroppedPalProductDataForShop = {}
 
+---@return FPalDroppedPalProductDataForShop
+function FPalDroppedPalProductDataForShop:get() end
+
 
 
 ---@class FPalDungeonDataLayerAssetSet
 ---@field DataLayers TArray<UDataLayerAsset>
 FPalDungeonDataLayerAssetSet = {}
+
+---@return FPalDungeonDataLayerAssetSet
+function FPalDungeonDataLayerAssetSet:get() end
 
 
 
@@ -5371,6 +6400,9 @@ FPalDungeonDataLayerAssetSet = {}
 ---@field SpawnerName FName
 FPalDungeonEnemySpawnerData = {}
 
+---@return FPalDungeonEnemySpawnerData
+function FPalDungeonEnemySpawnerData:get() end
+
 
 
 ---@class FPalDungeonInfoParameter
@@ -5379,11 +6411,17 @@ FPalDungeonEnemySpawnerData = {}
 ---@field DisappearRemainSeconds float
 FPalDungeonInfoParameter = {}
 
+---@return FPalDungeonInfoParameter
+function FPalDungeonInfoParameter:get() end
+
 
 
 ---@class FPalDungeonInstanceModelCreateParameter
 ---@field ReservedDataLayerAsset UDataLayerAsset
 FPalDungeonInstanceModelCreateParameter = {}
+
+---@return FPalDungeonInstanceModelCreateParameter
+function FPalDungeonInstanceModelCreateParameter:get() end
 
 
 
@@ -5393,6 +6431,9 @@ FPalDungeonInstanceModelCreateParameter = {}
 ---@field ItemFieldLotteryName FName
 FPalDungeonItemSpawnerData = {}
 
+---@return FPalDungeonItemSpawnerData
+function FPalDungeonItemSpawnerData:get() end
+
 
 
 ---@class FPalDungeonLevelData : FTableRowBase
@@ -5401,10 +6442,16 @@ FPalDungeonItemSpawnerData = {}
 ---@field LevelName FName
 FPalDungeonLevelData = {}
 
+---@return FPalDungeonLevelData
+function FPalDungeonLevelData:get() end
+
 
 
 ---@class FPalDungeonLevelInstanceLoadOperator
 FPalDungeonLevelInstanceLoadOperator = {}
+
+---@return FPalDungeonLevelInstanceLoadOperator
+function FPalDungeonLevelInstanceLoadOperator:get() end
 
 
 ---@class FPalDungeonMarkerPointData
@@ -5416,11 +6463,17 @@ FPalDungeonLevelInstanceLoadOperator = {}
 ---@field ConnectedDungeonInstanceId FGuid
 FPalDungeonMarkerPointData = {}
 
+---@return FPalDungeonMarkerPointData
+function FPalDungeonMarkerPointData:get() end
+
 
 
 ---@class FPalDungeonMarkerPointDataSet
 ---@field MarkerPoints TArray<FPalDungeonMarkerPointData>
 FPalDungeonMarkerPointDataSet = {}
+
+---@return FPalDungeonMarkerPointDataSet
+function FPalDungeonMarkerPointDataSet:get() end
 
 
 
@@ -5431,6 +6484,9 @@ FPalDungeonMarkerPointDataSet = {}
 ---@field DisappearIntervalAfterDefeatBoss float
 FPalDungeonMarkerPointSpawnParameter = {}
 
+---@return FPalDungeonMarkerPointSpawnParameter
+function FPalDungeonMarkerPointSpawnParameter:get() end
+
 
 
 ---@class FPalDungeonPointMarkerSaveData
@@ -5438,6 +6494,9 @@ FPalDungeonMarkerPointSpawnParameter = {}
 ---@field NextRespawnGameTime FGameDateTime
 ---@field ConnectedDungeonInstanceId FGuid
 FPalDungeonPointMarkerSaveData = {}
+
+---@return FPalDungeonPointMarkerSaveData
+function FPalDungeonPointMarkerSaveData:get() end
 
 
 
@@ -5456,6 +6515,9 @@ FPalDungeonPointMarkerSaveData = {}
 ---@field RespawnBossTimeAt FGameDateTime
 FPalDungeonSaveData = {}
 
+---@return FPalDungeonSaveData
+function FPalDungeonSaveData:get() end
+
 
 
 ---@class FPalDungeonSpawnAreaData : FTableRowBase
@@ -5463,11 +6525,17 @@ FPalDungeonSaveData = {}
 ---@field PostfixTextId FName
 FPalDungeonSpawnAreaData = {}
 
+---@return FPalDungeonSpawnAreaData
+function FPalDungeonSpawnAreaData:get() end
+
 
 
 ---@class FPalDyingEndInfo
 ---@field LastAttackerInstanceID FPalInstanceID
 FPalDyingEndInfo = {}
+
+---@return FPalDyingEndInfo
+function FPalDyingEndInfo:get() end
 
 
 
@@ -5475,16 +6543,25 @@ FPalDyingEndInfo = {}
 ---@field ItemData UPalDynamicItemDataBase
 FPalDynamicItemDataInfo = {}
 
+---@return FPalDynamicItemDataInfo
+function FPalDynamicItemDataInfo:get() end
+
 
 
 ---@class FPalDynamicItemDisposeReserveInfo
 FPalDynamicItemDisposeReserveInfo = {}
+
+---@return FPalDynamicItemDisposeReserveInfo
+function FPalDynamicItemDisposeReserveInfo:get() end
 
 
 ---@class FPalDynamicItemDisposeWaitNotifyInfo
 ---@field DynamicItemIds TArray<FPalDynamicItemId>
 ---@field WaitPlayerIds TArray<int32>
 FPalDynamicItemDisposeWaitNotifyInfo = {}
+
+---@return FPalDynamicItemDisposeWaitNotifyInfo
+function FPalDynamicItemDisposeWaitNotifyInfo:get() end
 
 
 
@@ -5493,10 +6570,16 @@ FPalDynamicItemDisposeWaitNotifyInfo = {}
 ---@field LocalIdInCreatedWorld FGuid
 FPalDynamicItemId = {}
 
+---@return FPalDynamicItemId
+function FPalDynamicItemId:get() end
+
 
 
 ---@class FPalDynamicItemIdArray
 FPalDynamicItemIdArray = {}
+
+---@return FPalDynamicItemIdArray
+function FPalDynamicItemIdArray:get() end
 
 
 ---@class FPalDynamicItemInfo
@@ -5504,12 +6587,18 @@ FPalDynamicItemIdArray = {}
 ---@field DynamicItemData UPalDynamicItemDataBase
 FPalDynamicItemInfo = {}
 
+---@return FPalDynamicItemInfo
+function FPalDynamicItemInfo:get() end
+
 
 
 ---@class FPalDynamicItemSaveData : FPalBinaryMemory
 ---@field ID FPalDynamicItemId
 ---@field StaticItemId FName
 FPalDynamicItemSaveData = {}
+
+---@return FPalDynamicItemSaveData
+function FPalDynamicItemSaveData:get() end
 
 
 
@@ -5521,12 +6610,18 @@ FPalDynamicItemSaveData = {}
 ---@field WazaCategory EPalWazaCategory
 FPalEachDamageRactionInfo = {}
 
+---@return FPalEachDamageRactionInfo
+function FPalEachDamageRactionInfo:get() end
+
 
 
 ---@class FPalEditorItemActorClassTableRow : FTableRowBase
 ---@field ClassName FName
 ---@field actorClass TSoftClassPtr<AActor>
 FPalEditorItemActorClassTableRow = {}
+
+---@return FPalEditorItemActorClassTableRow
+function FPalEditorItemActorClassTableRow:get() end
 
 
 
@@ -5535,11 +6630,17 @@ FPalEditorItemActorClassTableRow = {}
 ---@field DynamicClass TSubclassOf<UPalDynamicItemDataBase>
 FPalEditorItemDynamicClassTableRow = {}
 
+---@return FPalEditorItemDynamicClassTableRow
+function FPalEditorItemDynamicClassTableRow:get() end
+
 
 
 ---@class FPalEditorItemIconTableRow : FTableRowBase
 ---@field Icon TSoftObjectPtr<UTexture2D>
 FPalEditorItemIconTableRow = {}
+
+---@return FPalEditorItemIconTableRow
+function FPalEditorItemIconTableRow:get() end
 
 
 
@@ -5548,6 +6649,9 @@ FPalEditorItemIconTableRow = {}
 ---@field StaticClass TSubclassOf<UPalStaticItemDataBase>
 FPalEditorItemStaticClassTableRow = {}
 
+---@return FPalEditorItemStaticClassTableRow
+function FPalEditorItemStaticClassTableRow:get() end
+
 
 
 ---@class FPalEditorItemStaticMeshTableRow : FTableRowBase
@@ -5555,12 +6659,18 @@ FPalEditorItemStaticClassTableRow = {}
 ---@field StaticMeshPath TSoftObjectPtr<UStaticMesh>
 FPalEditorItemStaticMeshTableRow = {}
 
+---@return FPalEditorItemStaticMeshTableRow
+function FPalEditorItemStaticMeshTableRow:get() end
+
 
 
 ---@class FPalEditorSkinStaticClassTableRow : FTableRowBase
 ---@field ClassName FName
 ---@field StaticClass TSubclassOf<UPalSkinDataBase>
 FPalEditorSkinStaticClassTableRow = {}
+
+---@return FPalEditorSkinStaticClassTableRow
+function FPalEditorSkinStaticClassTableRow:get() end
 
 
 
@@ -5570,11 +6680,17 @@ FPalEditorSkinStaticClassTableRow = {}
 ---@field HatchingSpeedDivisionRate float
 FPalEggRankInfo = {}
 
+---@return FPalEggRankInfo
+function FPalEggRankInfo:get() end
+
 
 
 ---@class FPalEnemyCampSaveData
 ---@field EnemyCampStatusMap TMap<FName, FPalEnemyCampStatus>
 FPalEnemyCampSaveData = {}
+
+---@return FPalEnemyCampSaveData
+function FPalEnemyCampSaveData:get() end
 
 
 
@@ -5590,12 +6706,18 @@ FPalEnemyCampSaveData = {}
 ---@field LastCalcDate FDateTime
 FPalEnemyCampStatus = {}
 
+---@return FPalEnemyCampStatus
+function FPalEnemyCampStatus:get() end
+
 
 
 ---@class FPalEquipWeaponInfo
 ---@field ContainerId FPalContainerId
 ---@field SpawnedWeapon APalMonsterEquipWeaponBase
 FPalEquipWeaponInfo = {}
+
+---@return FPalEquipWeaponInfo
+function FPalEquipWeaponInfo:get() end
 
 
 
@@ -5607,6 +6729,9 @@ FPalEquipWeaponInfo = {}
 ---@field PalTotalEXP int32
 FPalExpDatabaseRaw = {}
 
+---@return FPalExpDatabaseRaw
+function FPalExpDatabaseRaw:get() end
+
 
 
 ---@class FPalFarmCropGrowupProcessSet
@@ -5615,11 +6740,17 @@ FPalExpDatabaseRaw = {}
 ---@field ProcessRate float
 FPalFarmCropGrowupProcessSet = {}
 
+---@return FPalFarmCropGrowupProcessSet
+function FPalFarmCropGrowupProcessSet:get() end
+
 
 
 ---@class FPalFastBaseCampPassiveEffectRepInfoArray : FFastArraySerializer
 ---@field Items TArray<FPalBaseCampPassiveEffectRepInfo>
 FPalFastBaseCampPassiveEffectRepInfoArray = {}
+
+---@return FPalFastBaseCampPassiveEffectRepInfoArray
+function FPalFastBaseCampPassiveEffectRepInfoArray:get() end
 
 
 
@@ -5627,11 +6758,17 @@ FPalFastBaseCampPassiveEffectRepInfoArray = {}
 ---@field Items TArray<FPalBaseCampWorkCollectionRepInfo>
 FPalFastBaseCampWorkCollectionRepInfoArray = {}
 
+---@return FPalFastBaseCampWorkCollectionRepInfoArray
+function FPalFastBaseCampWorkCollectionRepInfoArray:get() end
+
 
 
 ---@class FPalFastGuildPlayerInfoRepInfoArray : FFastArraySerializer
 ---@field Items TArray<FPalGuildPlayerInfoRepInfo>
 FPalFastGuildPlayerInfoRepInfoArray = {}
+
+---@return FPalFastGuildPlayerInfoRepInfoArray
+function FPalFastGuildPlayerInfoRepInfoArray:get() end
 
 
 
@@ -5639,11 +6776,17 @@ FPalFastGuildPlayerInfoRepInfoArray = {}
 ---@field Items TArray<FPalMapObjectModelEffectRepInfo>
 FPalFastMapObjectModelEffectRepInfoArray = {}
 
+---@return FPalFastMapObjectModelEffectRepInfoArray
+function FPalFastMapObjectModelEffectRepInfoArray:get() end
+
 
 
 ---@class FPalFastMapObjectModuleRepInfoArray : FFastArraySerializer
 ---@field Items TArray<FPalMapObjectModuleRepInfo>
 FPalFastMapObjectModuleRepInfoArray = {}
+
+---@return FPalFastMapObjectModuleRepInfoArray
+function FPalFastMapObjectModuleRepInfoArray:get() end
 
 
 
@@ -5651,11 +6794,17 @@ FPalFastMapObjectModuleRepInfoArray = {}
 ---@field Items TArray<FPalStageModelRepInfo>
 FPalFastStageModelRepInfoArray = {}
 
+---@return FPalFastStageModelRepInfoArray
+function FPalFastStageModelRepInfoArray:get() end
+
 
 
 ---@class FPalFastWorkAssignRepInfoArray : FFastArraySerializer
 ---@field Items TArray<FPalWorkAssignRepInfo>
 FPalFastWorkAssignRepInfoArray = {}
+
+---@return FPalFastWorkAssignRepInfoArray
+function FPalFastWorkAssignRepInfoArray:get() end
 
 
 
@@ -5667,6 +6816,9 @@ FPalFastWorkAssignRepInfoArray = {}
 ---@field ItemSlot5_ProbabilityPercent float
 FPalFieldLotteryName = {}
 
+---@return FPalFieldLotteryName
+function FPalFieldLotteryName:get() end
+
 
 
 ---@class FPalFixupParameterForSaveData
@@ -5675,17 +6827,26 @@ FPalFieldLotteryName = {}
 ---@field UsedDynamicItemIDs TSet<FPalDynamicItemId>
 FPalFixupParameterForSaveData = {}
 
+---@return FPalFixupParameterForSaveData
+function FPalFixupParameterForSaveData:get() end
+
 
 
 ---@class FPalFoliageGridInstanceMap
 ---@field InstanceMap TMap<FPalFoliageInstanceId, UPalFoliageInstance>
 FPalFoliageGridInstanceMap = {}
 
+---@return FPalFoliageGridInstanceMap
+function FPalFoliageGridInstanceMap:get() end
+
 
 
 ---@class FPalFoliageGridSaveData
 ---@field ModelMap TMap<FName, FPalFoliageSaveData>
 FPalFoliageGridSaveData = {}
+
+---@return FPalFoliageGridSaveData
+function FPalFoliageGridSaveData:get() end
 
 
 
@@ -5695,6 +6856,9 @@ FPalFoliageGridSaveData = {}
 ---@field InstanceId FPalFoliageInstanceId
 FPalFoliageIdentifiableInfo = {}
 
+---@return FPalFoliageIdentifiableInfo
+function FPalFoliageIdentifiableInfo:get() end
+
 
 
 ---@class FPalFoliageInstallData
@@ -5703,26 +6867,41 @@ FPalFoliageIdentifiableInfo = {}
 ---@field Scale3D FVector
 FPalFoliageInstallData = {}
 
+---@return FPalFoliageInstallData
+function FPalFoliageInstallData:get() end
+
 
 
 ---@class FPalFoliageInstallDataArray
 ---@field InstallDataArray TArray<FPalFoliageInstallData>
 FPalFoliageInstallDataArray = {}
 
+---@return FPalFoliageInstallDataArray
+function FPalFoliageInstallDataArray:get() end
+
 
 
 ---@class FPalFoliageInstallDataSet
 FPalFoliageInstallDataSet = {}
+
+---@return FPalFoliageInstallDataSet
+function FPalFoliageInstallDataSet:get() end
 
 
 ---@class FPalFoliageInstanceId
 ---@field Guid FGuid
 FPalFoliageInstanceId = {}
 
+---@return FPalFoliageInstanceId
+function FPalFoliageInstanceId:get() end
+
 
 
 ---@class FPalFoliageInstanceInfo
 FPalFoliageInstanceInfo = {}
+
+---@return FPalFoliageInstanceInfo
+function FPalFoliageInstanceInfo:get() end
 
 
 ---@class FPalFoliageInstanceRepInfo : FFastArraySerializerItem
@@ -5731,16 +6910,25 @@ FPalFoliageInstanceInfo = {}
 ---@field Instance UPalFoliageInstance
 FPalFoliageInstanceRepInfo = {}
 
+---@return FPalFoliageInstanceRepInfo
+function FPalFoliageInstanceRepInfo:get() end
+
 
 
 ---@class FPalFoliageInstanceRepInfoArray : FFastArraySerializer
 ---@field Items TArray<FPalFoliageInstanceRepInfo>
 FPalFoliageInstanceRepInfoArray = {}
 
+---@return FPalFoliageInstanceRepInfoArray
+function FPalFoliageInstanceRepInfoArray:get() end
+
 
 
 ---@class FPalFoliageInstanceSaveData : FPalBinaryMemory
 FPalFoliageInstanceSaveData = {}
+
+---@return FPalFoliageInstanceSaveData
+function FPalFoliageInstanceSaveData:get() end
 
 
 ---@class FPalFoliageInstanceTransform
@@ -5749,11 +6937,17 @@ FPalFoliageInstanceSaveData = {}
 ---@field ScaleX float
 FPalFoliageInstanceTransform = {}
 
+---@return FPalFoliageInstanceTransform
+function FPalFoliageInstanceTransform:get() end
+
 
 
 ---@class FPalFoliageMasterData : FTableRowBase
 ---@field ClassRefId FName
 FPalFoliageMasterData = {}
+
+---@return FPalFoliageMasterData
+function FPalFoliageMasterData:get() end
 
 
 
@@ -5770,11 +6964,17 @@ FPalFoliageMasterData = {}
 ---@field RetryRespawnIntervalRealMinutes int32
 FPalFoliagePresetData = {}
 
+---@return FPalFoliagePresetData
+function FPalFoliagePresetData:get() end
+
 
 
 ---@class FPalFoliageSaveData : FPalBinaryMemory
 ---@field InstanceDataMap TMap<FPalFoliageInstanceId, FPalFoliageInstanceSaveData>
 FPalFoliageSaveData = {}
+
+---@return FPalFoliageSaveData
+function FPalFoliageSaveData:get() end
 
 
 
@@ -5787,6 +6987,9 @@ FPalFoliageSaveData = {}
 ---@field DestroyFXType EPalMapObjectDestroyFXType
 FPalFoliageTypeReference = {}
 
+---@return FPalFoliageTypeReference
+function FPalFoliageTypeReference:get() end
+
 
 
 ---@class FPalFoodRegeneEffectParameter
@@ -5794,6 +6997,9 @@ FPalFoliageTypeReference = {}
 ---@field Value int32
 ---@field Interval int32
 FPalFoodRegeneEffectParameter = {}
+
+---@return FPalFoodRegeneEffectParameter
+function FPalFoodRegeneEffectParameter:get() end
 
 
 
@@ -5804,12 +7010,18 @@ FPalFoodRegeneEffectParameter = {}
 ---@field RegeneEfectParameters TArray<FPalFoodRegeneEffectParameter>
 FPalFoodRegeneInfo = {}
 
+---@return FPalFoodRegeneInfo
+function FPalFoodRegeneInfo:get() end
+
 
 
 ---@class FPalFunnelCharacterManagementInfo
 ---@field OwnerCharacterId FPalInstanceID
 ---@field FunnelCharacter APalFunnelCharacter
 FPalFunnelCharacterManagementInfo = {}
+
+---@return FPalFunnelCharacterManagementInfo
+function FPalFunnelCharacterManagementInfo:get() end
 
 
 
@@ -5818,6 +7030,9 @@ FPalFunnelCharacterManagementInfo = {}
 ---@field Distance float
 ---@field ElapsedTime float
 FPalFunnelSkillModuleCollectItemSearchInfo = {}
+
+---@return FPalFunnelSkillModuleCollectItemSearchInfo
+function FPalFunnelSkillModuleCollectItemSearchInfo:get() end
 
 
 
@@ -5828,6 +7043,9 @@ FPalFunnelSkillModuleCollectItemSearchInfo = {}
 ---@field WorkSpeed int32
 ---@field MaxInventoryWeight int32
 FPalGainStatusPointsItemDataRow = {}
+
+---@return FPalGainStatusPointsItemDataRow
+function FPalGainStatusPointsItemDataRow:get() end
 
 
 
@@ -5845,11 +7063,17 @@ FPalGainStatusPointsItemDataRow = {}
 ---@field Items TArray<FPalDebugItemCreateInfo>
 FPalGameProgressPresetDataTableRow = {}
 
+---@return FPalGameProgressPresetDataTableRow
+function FPalGameProgressPresetDataTableRow:get() end
+
 
 
 ---@class FPalGameSystemInitSequenceSet
 ---@field InitSequences TArray<UPalGameSystemInitSequenceBase>
 FPalGameSystemInitSequenceSet = {}
+
+---@return FPalGameSystemInitSequenceSet
+function FPalGameSystemInitSequenceSet:get() end
 
 
 
@@ -5857,6 +7081,9 @@ FPalGameSystemInitSequenceSet = {}
 ---@field GameDateTimeTicks int64
 ---@field RealDateTimeTicks int64
 FPalGameTimeSaveData = {}
+
+---@return FPalGameTimeSaveData
+function FPalGameTimeSaveData:get() end
 
 
 
@@ -5866,6 +7093,9 @@ FPalGameTimeSaveData = {}
 ---@field bDirectionPositive boolean
 FPalGaugeInterpolationCalculator = {}
 
+---@return FPalGaugeInterpolationCalculator
+function FPalGaugeInterpolationCalculator:get() end
+
 
 
 ---@class FPalGliderPalInfo
@@ -5873,12 +7103,18 @@ FPalGaugeInterpolationCalculator = {}
 ---@field GliderPalArray TArray<TSoftClassPtr<APalGliderObject>>
 FPalGliderPalInfo = {}
 
+---@return FPalGliderPalInfo
+function FPalGliderPalInfo:get() end
+
 
 
 ---@class FPalGotStatusPoint
 ---@field StatusName FName
 ---@field StatusPoint int32
 FPalGotStatusPoint = {}
+
+---@return FPalGotStatusPoint
+function FPalGotStatusPoint:get() end
 
 
 
@@ -5890,6 +7126,9 @@ FPalGotStatusPoint = {}
 ---@field ElapsedTime float
 FPalGrapplingParameter = {}
 
+---@return FPalGrapplingParameter
+function FPalGrapplingParameter:get() end
+
 
 
 ---@class FPalGroupCreateParameter
@@ -5899,11 +7138,17 @@ FPalGrapplingParameter = {}
 ---@field AdminPlayerUId FGuid
 FPalGroupCreateParameter = {}
 
+---@return FPalGroupCreateParameter
+function FPalGroupCreateParameter:get() end
+
 
 
 ---@class FPalGroupSaveData : FPalBinaryMemory
 ---@field GroupType EPalGroupType
 FPalGroupSaveData = {}
+
+---@return FPalGroupSaveData
+function FPalGroupSaveData:get() end
 
 
 
@@ -5916,16 +7161,25 @@ FPalGroupSaveData = {}
 ---@field BaseCampIds TArray<FGuid>
 FPalGroupUpdateInfo = {}
 
+---@return FPalGroupUpdateInfo
+function FPalGroupUpdateInfo:get() end
+
 
 
 ---@class FPalGuildEnterRequestLogInfo
 ---@field RequestAtArray TArray<FDateTime>
 FPalGuildEnterRequestLogInfo = {}
 
+---@return FPalGuildEnterRequestLogInfo
+function FPalGuildEnterRequestLogInfo:get() end
+
 
 
 ---@class FPalGuildPalStorageInfo
 FPalGuildPalStorageInfo = {}
+
+---@return FPalGuildPalStorageInfo
+function FPalGuildPalStorageInfo:get() end
 
 
 ---@class FPalGuildPlayerInfo
@@ -5934,12 +7188,18 @@ FPalGuildPalStorageInfo = {}
 ---@field PlayerName FString
 FPalGuildPlayerInfo = {}
 
+---@return FPalGuildPlayerInfo
+function FPalGuildPlayerInfo:get() end
+
 
 
 ---@class FPalGuildPlayerInfoRepInfo : FFastArraySerializerItem
 ---@field PlayerUId FGuid
 ---@field PlayerInfo FPalGuildPlayerInfo
 FPalGuildPlayerInfoRepInfo = {}
+
+---@return FPalGuildPlayerInfoRepInfo
+function FPalGuildPlayerInfoRepInfo:get() end
 
 
 
@@ -5948,10 +7208,16 @@ FPalGuildPlayerInfoRepInfo = {}
 ---@field HeatLevel_NightTime int32
 FPalHeatSourceInfo = {}
 
+---@return FPalHeatSourceInfo
+function FPalHeatSourceInfo:get() end
+
 
 
 ---@class FPalHitCollisionSetupParameter
 FPalHitCollisionSetupParameter = {}
+
+---@return FPalHitCollisionSetupParameter
+function FPalHitCollisionSetupParameter:get() end
 
 
 ---@class FPalIncidentBroadcastParameter
@@ -5961,11 +7227,17 @@ FPalHitCollisionSetupParameter = {}
 ---@field GroupGuid FGuid
 FPalIncidentBroadcastParameter = {}
 
+---@return FPalIncidentBroadcastParameter
+function FPalIncidentBroadcastParameter:get() end
+
 
 
 ---@class FPalIncidentExecutionSettings
 ---@field bCanExecuteMultiple boolean
 FPalIncidentExecutionSettings = {}
+
+---@return FPalIncidentExecutionSettings
+function FPalIncidentExecutionSettings:get() end
 
 
 
@@ -5977,10 +7249,16 @@ FPalIncidentExecutionSettings = {}
 ---@field Options TArray<FName>
 FPalIncidentIdParameter = {}
 
+---@return FPalIncidentIdParameter
+function FPalIncidentIdParameter:get() end
+
 
 
 ---@class FPalIncidentInitializeParameter
 FPalIncidentInitializeParameter = {}
+
+---@return FPalIncidentInitializeParameter
+function FPalIncidentInitializeParameter:get() end
 
 
 ---@class FPalIncidentNotifyParameter
@@ -5991,16 +7269,25 @@ FPalIncidentInitializeParameter = {}
 ---@field IncidentObject UPalIncidentBase
 FPalIncidentNotifyParameter = {}
 
+---@return FPalIncidentNotifyParameter
+function FPalIncidentNotifyParameter:get() end
+
 
 
 ---@class FPalIncidentParameterDataTableRow : FTableRowBase
 ---@field Option FName
 FPalIncidentParameterDataTableRow = {}
 
+---@return FPalIncidentParameterDataTableRow
+function FPalIncidentParameterDataTableRow:get() end
+
 
 
 ---@class FPalIncidentSystemFunctionAccessor
 FPalIncidentSystemFunctionAccessor = {}
+
+---@return FPalIncidentSystemFunctionAccessor
+function FPalIncidentSystemFunctionAccessor:get() end
 
 
 ---@class FPalIndividualCharacterCacheParameter
@@ -6012,15 +7299,24 @@ FPalIncidentSystemFunctionAccessor = {}
 ---@field bIsInArena boolean
 FPalIndividualCharacterCacheParameter = {}
 
+---@return FPalIndividualCharacterCacheParameter
+function FPalIndividualCharacterCacheParameter:get() end
+
 
 
 ---@class FPalIndividualCharacterEquipItemContainerHandler
 FPalIndividualCharacterEquipItemContainerHandler = {}
 
+---@return FPalIndividualCharacterEquipItemContainerHandler
+function FPalIndividualCharacterEquipItemContainerHandler:get() end
+
 
 ---@class FPalIndividualCharacterHandleId : FFastArraySerializerItem
 ---@field HandleId FPalInstanceID
 FPalIndividualCharacterHandleId = {}
+
+---@return FPalIndividualCharacterHandleId
+function FPalIndividualCharacterHandleId:get() end
 
 
 
@@ -6096,23 +7392,38 @@ FPalIndividualCharacterHandleId = {}
 ---@field Dynamic FPalIndividualCharacterCacheParameter
 FPalIndividualCharacterSaveParameter = {}
 
+---@return FPalIndividualCharacterSaveParameter
+function FPalIndividualCharacterSaveParameter:get() end
+
 
 
 ---@class FPalIndividualCharacterSaveParameterSaveData : FPalBinaryMemory
 FPalIndividualCharacterSaveParameterSaveData = {}
 
+---@return FPalIndividualCharacterSaveParameterSaveData
+function FPalIndividualCharacterSaveParameterSaveData:get() end
+
 
 ---@class FPalIndividualCharacterSlotResultInfo
 FPalIndividualCharacterSlotResultInfo = {}
+
+---@return FPalIndividualCharacterSlotResultInfo
+function FPalIndividualCharacterSlotResultInfo:get() end
 
 
 ---@class FPalIndividualCharacterSlotUpdateInfo
 FPalIndividualCharacterSlotUpdateInfo = {}
 
+---@return FPalIndividualCharacterSlotUpdateInfo
+function FPalIndividualCharacterSlotUpdateInfo:get() end
+
 
 ---@class FPalInsideBaseCampUI_DisplayItemInfo
 ---@field isShowWhenNothingItem boolean
 FPalInsideBaseCampUI_DisplayItemInfo = {}
+
+---@return FPalInsideBaseCampUI_DisplayItemInfo
+function FPalInsideBaseCampUI_DisplayItemInfo:get() end
 
 
 
@@ -6122,11 +7433,17 @@ FPalInsideBaseCampUI_DisplayItemInfo = {}
 ---@field DebugName FString
 FPalInstanceID = {}
 
+---@return FPalInstanceID
+function FPalInstanceID:get() end
+
 
 
 ---@class FPalInteractComponentOverlapComponentSet
 ---@field Components TSet<UPrimitiveComponent>
 FPalInteractComponentOverlapComponentSet = {}
+
+---@return FPalInteractComponentOverlapComponentSet
+function FPalInteractComponentOverlapComponentSet:get() end
 
 
 
@@ -6134,6 +7451,9 @@ FPalInteractComponentOverlapComponentSet = {}
 ---@field InteractingActor AActor
 ---@field InteractId int32
 FPalInteractiveObjectActionBy = {}
+
+---@return FPalInteractiveObjectActionBy
+function FPalInteractiveObjectActionBy:get() end
 
 
 
@@ -6148,6 +7468,9 @@ FPalInteractiveObjectActionBy = {}
 ---@field bCanToggle boolean
 FPalInteractiveObjectActionInfoData = {}
 
+---@return FPalInteractiveObjectActionInfoData
+function FPalInteractiveObjectActionInfoData:get() end
+
 
 
 ---@class FPalInteractiveObjectActionInfoSet
@@ -6156,6 +7479,9 @@ FPalInteractiveObjectActionInfoData = {}
 ---@field Interact3_Indicator FPalInteractiveObjectActionInfoData
 ---@field Interact4_Indicator FPalInteractiveObjectActionInfoData
 FPalInteractiveObjectActionInfoSet = {}
+
+---@return FPalInteractiveObjectActionInfoSet
+function FPalInteractiveObjectActionInfoSet:get() end
 
 
 
@@ -6183,6 +7509,9 @@ FPalInteractiveObjectActionInfoSet = {}
 ---@field Number_D int32
 FPalInvaderDatabaseRow = {}
 
+---@return FPalInvaderDatabaseRow
+function FPalInvaderDatabaseRow:get() end
+
 
 
 ---@class FPalInvaderSaveData
@@ -6191,12 +7520,18 @@ FPalInvaderDatabaseRow = {}
 ---@field CoolTimeFinish float
 FPalInvaderSaveData = {}
 
+---@return FPalInvaderSaveData
+function FPalInvaderSaveData:get() end
+
 
 
 ---@class FPalInvaderSpawnCharacterParameter
 ---@field CharacterID FName
 ---@field Level int32
 FPalInvaderSpawnCharacterParameter = {}
+
+---@return FPalInvaderSpawnCharacterParameter
+function FPalInvaderSpawnCharacterParameter:get() end
 
 
 
@@ -6205,12 +7540,18 @@ FPalInvaderSpawnCharacterParameter = {}
 ---@field BiomeType EPalBiomeType
 FPalInvaderStartPointInfo = {}
 
+---@return FPalInvaderStartPointInfo
+function FPalInvaderStartPointInfo:get() end
+
 
 
 ---@class FPalItemAndNum
 ---@field ItemId FPalItemId
 ---@field Num int32
 FPalItemAndNum = {}
+
+---@return FPalItemAndNum
+function FPalItemAndNum:get() end
 
 
 
@@ -6220,6 +7561,9 @@ FPalItemAndNum = {}
 ---@field SlotID FPalItemSlotId
 FPalItemAndSlot = {}
 
+---@return FPalItemAndSlot
+function FPalItemAndSlot:get() end
+
 
 
 ---@class FPalItemAndSlotUpdateContentSet
@@ -6227,12 +7571,18 @@ FPalItemAndSlot = {}
 ---@field UpdateDynamicItems TArray<FPalStaticItemIdAndDynamicItemDataSet>
 FPalItemAndSlotUpdateContentSet = {}
 
+---@return FPalItemAndSlotUpdateContentSet
+function FPalItemAndSlotUpdateContentSet:get() end
+
 
 
 ---@class FPalItemContainerBelongInfo : FPalContainerBelongInfo
 ---@field GroupId FGuid
 ---@field bControllableOthers boolean
 FPalItemContainerBelongInfo = {}
+
+---@return FPalItemContainerBelongInfo
+function FPalItemContainerBelongInfo:get() end
 
 
 
@@ -6243,11 +7593,17 @@ FPalItemContainerBelongInfo = {}
 ---@field InitialItems TArray<FPalItemAndNum>
 FPalItemContainerCreateParameter = {}
 
+---@return FPalItemContainerCreateParameter
+function FPalItemContainerCreateParameter:get() end
+
 
 
 ---@class FPalItemContainerFilter
 ---@field FilterOffList TArray<FName>
 FPalItemContainerFilter = {}
+
+---@return FPalItemContainerFilter
+function FPalItemContainerFilter:get() end
 
 
 
@@ -6256,12 +7612,18 @@ FPalItemContainerFilter = {}
 ---@field Permission FPalItemPermission
 FPalItemContainerInfo = {}
 
+---@return FPalItemContainerInfo
+function FPalItemContainerInfo:get() end
+
 
 
 ---@class FPalItemContainerSaveData : FPalBinaryMemory
 ---@field BelongInfo FPalItemContainerBelongInfo
 ---@field Slots TArray<FPalItemSlotSaveData>
 FPalItemContainerSaveData = {}
+
+---@return FPalItemContainerSaveData
+function FPalItemContainerSaveData:get() end
 
 
 
@@ -6270,6 +7632,9 @@ FPalItemContainerSaveData = {}
 ---@field CharacterID FName
 FPalItemCreateParameter = {}
 
+---@return FPalItemCreateParameter
+function FPalItemCreateParameter:get() end
+
 
 
 ---@class FPalItemData
@@ -6277,17 +7642,26 @@ FPalItemCreateParameter = {}
 ---@field DynamicData UPalDynamicItemDataBase
 FPalItemData = {}
 
+---@return FPalItemData
+function FPalItemData:get() end
+
 
 
 ---@class FPalItemDropOutInfo
 ---@field OutSpawnRequestHandlers TArray<UPalMapObjectSpawnRequestHandler>
 FPalItemDropOutInfo = {}
 
+---@return FPalItemDropOutInfo
+function FPalItemDropOutInfo:get() end
+
 
 
 ---@class FPalItemFilterPreference
 ---@field PreferenceMap TMap<FName, FPalItemFilterPreferenceItem>
 FPalItemFilterPreference = {}
+
+---@return FPalItemFilterPreference
+function FPalItemFilterPreference:get() end
 
 
 
@@ -6298,6 +7672,9 @@ FPalItemFilterPreference = {}
 ---@field TypeB_Except TArray<EPalItemTypeB>
 FPalItemFilterPreferenceItem = {}
 
+---@return FPalItemFilterPreferenceItem
+function FPalItemFilterPreferenceItem:get() end
+
 
 
 ---@class FPalItemFlowInSplineInfo
@@ -6305,12 +7682,18 @@ FPalItemFilterPreferenceItem = {}
 ---@field ProgressTime float
 FPalItemFlowInSplineInfo = {}
 
+---@return FPalItemFlowInSplineInfo
+function FPalItemFlowInSplineInfo:get() end
+
 
 
 ---@class FPalItemId
 ---@field StaticId FName
 ---@field DynamicId FPalDynamicItemId
 FPalItemId = {}
+
+---@return FPalItemId
+function FPalItemId:get() end
 
 
 
@@ -6325,6 +7708,9 @@ FPalItemId = {}
 ---@field TreasureBoxGrade EPalMapObjectTreasureGradeType
 FPalItemLotteryData = {}
 
+---@return FPalItemLotteryData
+function FPalItemLotteryData:get() end
+
 
 
 ---@class FPalItemOperationInfo_Move
@@ -6335,15 +7721,24 @@ FPalItemLotteryData = {}
 ---@field ToSlotIds TArray<FPalItemSlotId>
 FPalItemOperationInfo_Move = {}
 
+---@return FPalItemOperationInfo_Move
+function FPalItemOperationInfo_Move:get() end
+
 
 
 ---@class FPalItemOperationOptions
 FPalItemOperationOptions = {}
 
+---@return FPalItemOperationOptions
+function FPalItemOperationOptions:get() end
+
 
 ---@class FPalItemPalEggDataHandle
 ---@field ItemRowNameArray TArray<FPalDataTableRowName_ItemData>
 FPalItemPalEggDataHandle = {}
+
+---@return FPalItemPalEggDataHandle
+function FPalItemPalEggDataHandle:get() end
 
 
 
@@ -6352,6 +7747,9 @@ FPalItemPalEggDataHandle = {}
 ---@field PermissionTypeB TArray<EPalItemTypeB>
 ---@field PermissionItemStaticIds TArray<FName>
 FPalItemPermission = {}
+
+---@return FPalItemPermission
+function FPalItemPermission:get() end
 
 
 
@@ -6376,6 +7774,9 @@ FPalItemPermission = {}
 ---@field Editor_RowNameHash int32
 FPalItemRecipe = {}
 
+---@return FPalItemRecipe
+function FPalItemRecipe:get() end
+
 
 
 ---@class FPalItemRecipeMaterialInfo
@@ -6383,11 +7784,17 @@ FPalItemRecipe = {}
 ---@field MaterialCount int32
 FPalItemRecipeMaterialInfo = {}
 
+---@return FPalItemRecipeMaterialInfo
+function FPalItemRecipeMaterialInfo:get() end
+
 
 
 ---@class FPalItemShopCreateDataRow : FTableRowBase
 ---@field productDataArray TArray<FPalItemShopCreateDataStruct>
 FPalItemShopCreateDataRow = {}
+
+---@return FPalItemShopCreateDataRow
+function FPalItemShopCreateDataRow:get() end
 
 
 
@@ -6399,6 +7806,9 @@ FPalItemShopCreateDataRow = {}
 ---@field SellRate float
 ---@field Stock int32
 FPalItemShopCreateDataStruct = {}
+
+---@return FPalItemShopCreateDataStruct
+function FPalItemShopCreateDataStruct:get() end
 
 
 
@@ -6412,11 +7822,17 @@ FPalItemShopCreateDataStruct = {}
 ---@field Stock int32
 FPalItemShopCreateIntermediateDataRow = {}
 
+---@return FPalItemShopCreateIntermediateDataRow
+function FPalItemShopCreateIntermediateDataRow:get() end
+
 
 
 ---@class FPalItemShopLotteryDataRow : FTableRowBase
 ---@field lotteryDataArray TArray<FPalItemShopLotteryDataStruct>
 FPalItemShopLotteryDataRow = {}
+
+---@return FPalItemShopLotteryDataRow
+function FPalItemShopLotteryDataRow:get() end
 
 
 
@@ -6424,6 +7840,9 @@ FPalItemShopLotteryDataRow = {}
 ---@field ShopGroupName FName
 ---@field Weight int32
 FPalItemShopLotteryDataStruct = {}
+
+---@return FPalItemShopLotteryDataStruct
+function FPalItemShopLotteryDataStruct:get() end
 
 
 
@@ -6433,11 +7852,17 @@ FPalItemShopLotteryDataStruct = {}
 ---@field Weight int32
 FPalItemShopLotteryIntermediateDataRow = {}
 
+---@return FPalItemShopLotteryIntermediateDataRow
+function FPalItemShopLotteryIntermediateDataRow:get() end
+
 
 
 ---@class FPalItemShopSettingDataRow : FTableRowBase
 ---@field CurrencyItemID FName
 FPalItemShopSettingDataRow = {}
+
+---@return FPalItemShopSettingDataRow
+function FPalItemShopSettingDataRow:get() end
 
 
 
@@ -6446,12 +7871,18 @@ FPalItemShopSettingDataRow = {}
 ---@field SlotIndex int32
 FPalItemSlotId = {}
 
+---@return FPalItemSlotId
+function FPalItemSlotId:get() end
+
 
 
 ---@class FPalItemSlotIdAndNum
 ---@field SlotID FPalItemSlotId
 ---@field Num int32
 FPalItemSlotIdAndNum = {}
+
+---@return FPalItemSlotIdAndNum
+function FPalItemSlotIdAndNum:get() end
 
 
 
@@ -6461,12 +7892,18 @@ FPalItemSlotIdAndNum = {}
 ---@field StackCount int32
 FPalItemSlotSaveData = {}
 
+---@return FPalItemSlotSaveData
+function FPalItemSlotSaveData:get() end
+
 
 
 ---@class FPalItemVisualModelFXInfo
 ---@field NiagaraSystem UNiagaraSystem
 ---@field LocalTransform FTransform
 FPalItemVisualModelFXInfo = {}
+
+---@return FPalItemVisualModelFXInfo
+function FPalItemVisualModelFXInfo:get() end
 
 
 
@@ -6475,12 +7912,18 @@ FPalItemVisualModelFXInfo = {}
 ---@field FilterType EPalKeyConfigAxisFilterType
 FPalKeyAction = {}
 
+---@return FPalKeyAction
+function FPalKeyAction:get() end
+
 
 
 ---@class FPalKeyConfigKeys
 ---@field MainKey FKey
 ---@field SecondaryKey FKey
 FPalKeyConfigKeys = {}
+
+---@return FPalKeyConfigKeys
+function FPalKeyConfigKeys:get() end
 
 
 
@@ -6493,6 +7936,9 @@ FPalKeyConfigKeys = {}
 ---@field GamePadUIInputMappings TMap<FName, FKey>
 FPalKeyConfigSettings = {}
 
+---@return FPalKeyConfigSettings
+function FPalKeyConfigSettings:get() end
+
 
 
 ---@class FPalKillLogDisplayData
@@ -6503,12 +7949,18 @@ FPalKeyConfigSettings = {}
 ---@field KilledCharacterID FName
 FPalKillLogDisplayData = {}
 
+---@return FPalKillLogDisplayData
+function FPalKillLogDisplayData:get() end
+
 
 
 ---@class FPalLoadoutSynchronalizedData
 ---@field actorClass TSoftClassPtr<AActor>
 ---@field ItemId FPalItemId
 FPalLoadoutSynchronalizedData = {}
+
+---@return FPalLoadoutSynchronalizedData
+function FPalLoadoutSynchronalizedData:get() end
 
 
 
@@ -6530,11 +7982,17 @@ FPalLoadoutSynchronalizedData = {}
 ---@field Local_OrderedTutorialQuestSaveData TArray<FPalOrderedQuestSaveData>
 FPalLocalSaveData = {}
 
+---@return FPalLocalSaveData
+function FPalLocalSaveData:get() end
+
 
 
 ---@class FPalLocalizedTextData : FTableRowBase
 ---@field TextData FText
 FPalLocalizedTextData = {}
+
+---@return FPalLocalizedTextData
+function FPalLocalizedTextData:get() end
 
 
 
@@ -6542,6 +8000,9 @@ FPalLocalizedTextData = {}
 ---@field ID FGuid
 ---@field Location UPalLocationBase
 FPalLocationRepInfo = {}
+
+---@return FPalLocationRepInfo
+function FPalLocationRepInfo:get() end
 
 
 
@@ -6551,12 +8012,18 @@ FPalLocationRepInfo = {}
 ---@field displayLength float
 FPalLocationUIData = {}
 
+---@return FPalLocationUIData
+function FPalLocationUIData:get() end
+
 
 
 ---@class FPalLocationUIData_TableRow : FTableRowBase
 ---@field locationUIDataMap TMap<EPalLocationType, FPalLocationUIData>
 ---@field mapObjectIconMap TMap<FName, TSoftObjectPtr<UTexture2D>>
 FPalLocationUIData_TableRow = {}
+
+---@return FPalLocationUIData_TableRow
+function FPalLocationUIData_TableRow:get() end
 
 
 
@@ -6568,12 +8035,18 @@ FPalLocationUIData_TableRow = {}
 ---@field ItemIDAndNum FPalStaticItemIdAndNum
 FPalLogAdditionalData = {}
 
+---@return FPalLogAdditionalData
+function FPalLogAdditionalData:get() end
+
 
 
 ---@class FPalLogDataSet
 ---@field Text FText
 ---@field AdditionalData FPalLogAdditionalData
 FPalLogDataSet = {}
+
+---@return FPalLogDataSet
+function FPalLogDataSet:get() end
 
 
 
@@ -6582,6 +8055,9 @@ FPalLogDataSet = {}
 ---@field CharacterID FName
 FPalLogInfo_DropPal = {}
 
+---@return FPalLogInfo_DropPal
+function FPalLogInfo_DropPal:get() end
+
 
 
 ---@class FPalLogInfo_Skill
@@ -6589,6 +8065,9 @@ FPalLogInfo_DropPal = {}
 ---@field CharacterName FText
 ---@field Value FText
 FPalLogInfo_Skill = {}
+
+---@return FPalLogInfo_Skill
+function FPalLogInfo_Skill:get() end
 
 
 
@@ -6618,6 +8097,9 @@ FPalLogInfo_Skill = {}
 ---@field OilrigClearCount int32
 ---@field PalRankupCount TMap<FName, int32>
 FPalLoggedinPlayerSaveDataRecordData = {}
+
+---@return FPalLoggedinPlayerSaveDataRecordData
+function FPalLoggedinPlayerSaveDataRecordData:get() end
 
 
 
@@ -6655,11 +8137,17 @@ FPalLoggedinPlayerSaveDataRecordData = {}
 ---@field OverrideNetworkOwner AActor
 FPalMakeDamageInfo = {}
 
+---@return FPalMakeDamageInfo
+function FPalMakeDamageInfo:get() end
+
 
 
 ---@class FPalMapObjectAppearanceData
 ---@field DateTime FGameDateTime
 FPalMapObjectAppearanceData = {}
+
+---@return FPalMapObjectAppearanceData
+function FPalMapObjectAppearanceData:get() end
 
 
 
@@ -6667,6 +8155,9 @@ FPalMapObjectAppearanceData = {}
 ---@field InstanceId FGuid
 ---@field AppearanceData FPalMapObjectAppearanceData
 FPalMapObjectAppearanceDataWithId = {}
+
+---@return FPalMapObjectAppearanceDataWithId
+function FPalMapObjectAppearanceDataWithId:get() end
 
 
 
@@ -6682,38 +8173,62 @@ FPalMapObjectAppearanceDataWithId = {}
 ---@field AffectSanityValue float
 FPalMapObjectAssignData = {}
 
+---@return FPalMapObjectAssignData
+function FPalMapObjectAssignData:get() end
+
 
 
 ---@class FPalMapObjectBelongInfo : FPalBelongInfo
 ---@field GroupId FGuid
 FPalMapObjectBelongInfo = {}
 
+---@return FPalMapObjectBelongInfo
+function FPalMapObjectBelongInfo:get() end
+
 
 
 ---@class FPalMapObjectBuildProcessSaveData : FPalBinaryMemory
 FPalMapObjectBuildProcessSaveData = {}
 
+---@return FPalMapObjectBuildProcessSaveData
+function FPalMapObjectBuildProcessSaveData:get() end
+
 
 ---@class FPalMapObjectComponentInfo
 FPalMapObjectComponentInfo = {}
+
+---@return FPalMapObjectComponentInfo
+function FPalMapObjectComponentInfo:get() end
 
 
 ---@class FPalMapObjectConcreteModelCreateParameter
 FPalMapObjectConcreteModelCreateParameter = {}
 
+---@return FPalMapObjectConcreteModelCreateParameter
+function FPalMapObjectConcreteModelCreateParameter:get() end
+
 
 ---@class FPalMapObjectConcreteModelModuleSaveData : FPalBinaryMemory
 FPalMapObjectConcreteModelModuleSaveData = {}
+
+---@return FPalMapObjectConcreteModelModuleSaveData
+function FPalMapObjectConcreteModelModuleSaveData:get() end
 
 
 ---@class FPalMapObjectConcreteModelSaveData : FPalBinaryMemory
 ---@field ModuleMap TMap<EPalMapObjectConcreteModelModuleType, FPalMapObjectConcreteModelModuleSaveData>
 FPalMapObjectConcreteModelSaveData = {}
 
+---@return FPalMapObjectConcreteModelSaveData
+function FPalMapObjectConcreteModelSaveData:get() end
+
 
 
 ---@class FPalMapObjectConnectorSaveData : FPalBinaryMemory
 FPalMapObjectConnectorSaveData = {}
+
+---@return FPalMapObjectConnectorSaveData
+function FPalMapObjectConnectorSaveData:get() end
 
 
 ---@class FPalMapObjectConvertCharacterToItemProcessItem
@@ -6721,22 +8236,37 @@ FPalMapObjectConnectorSaveData = {}
 ---@field ConvertProgressRate float
 FPalMapObjectConvertCharacterToItemProcessItem = {}
 
+---@return FPalMapObjectConvertCharacterToItemProcessItem
+function FPalMapObjectConvertCharacterToItemProcessItem:get() end
+
 
 
 ---@class FPalMapObjectCreateParameter
 FPalMapObjectCreateParameter = {}
 
+---@return FPalMapObjectCreateParameter
+function FPalMapObjectCreateParameter:get() end
+
 
 ---@class FPalMapObjectDamageInfo
 FPalMapObjectDamageInfo = {}
+
+---@return FPalMapObjectDamageInfo
+function FPalMapObjectDamageInfo:get() end
 
 
 ---@class FPalMapObjectDisposeOptions
 FPalMapObjectDisposeOptions = {}
 
+---@return FPalMapObjectDisposeOptions
+function FPalMapObjectDisposeOptions:get() end
+
 
 ---@class FPalMapObjectDisposeReserveInfo
 FPalMapObjectDisposeReserveInfo = {}
+
+---@return FPalMapObjectDisposeReserveInfo
+function FPalMapObjectDisposeReserveInfo:get() end
 
 
 ---@class FPalMapObjectDropItemData
@@ -6744,10 +8274,16 @@ FPalMapObjectDisposeReserveInfo = {}
 ---@field Num int32
 FPalMapObjectDropItemData = {}
 
+---@return FPalMapObjectDropItemData
+function FPalMapObjectDropItemData:get() end
+
 
 
 ---@class FPalMapObjectEffectSaveData : FPalBinaryMemory
 FPalMapObjectEffectSaveData = {}
+
+---@return FPalMapObjectEffectSaveData
+function FPalMapObjectEffectSaveData:get() end
 
 
 ---@class FPalMapObjectFarmCropData : FTableRowBase
@@ -6766,12 +8302,18 @@ FPalMapObjectEffectSaveData = {}
 ---@field Editor_RowNameHash int32
 FPalMapObjectFarmCropData = {}
 
+---@return FPalMapObjectFarmCropData
+function FPalMapObjectFarmCropData:get() end
+
 
 
 ---@class FPalMapObjectFoliageDropItemData
 ---@field StaticItemId FPalDataTableRowName_ItemData
 ---@field Num int32
 FPalMapObjectFoliageDropItemData = {}
+
+---@return FPalMapObjectFoliageDropItemData
+function FPalMapObjectFoliageDropItemData:get() end
 
 
 
@@ -6782,6 +8324,9 @@ FPalMapObjectFoliageDropItemData = {}
 ---@field Scale3D FVector
 FPalMapObjectFoliageInstallData = {}
 
+---@return FPalMapObjectFoliageInstallData
+function FPalMapObjectFoliageInstallData:get() end
+
 
 
 ---@class FPalMapObjectFoliageInstanceAccessID
@@ -6789,19 +8334,31 @@ FPalMapObjectFoliageInstallData = {}
 ---@field InstanceId FPalFoliageInstanceId
 FPalMapObjectFoliageInstanceAccessID = {}
 
+---@return FPalMapObjectFoliageInstanceAccessID
+function FPalMapObjectFoliageInstanceAccessID:get() end
+
 
 
 ---@class FPalMapObjectInfoTickInBackground
 FPalMapObjectInfoTickInBackground = {}
 
+---@return FPalMapObjectInfoTickInBackground
+function FPalMapObjectInfoTickInBackground:get() end
+
 
 ---@class FPalMapObjectItemContainerCreateContainerParameter
 FPalMapObjectItemContainerCreateContainerParameter = {}
+
+---@return FPalMapObjectItemContainerCreateContainerParameter
+function FPalMapObjectItemContainerCreateContainerParameter:get() end
 
 
 ---@class FPalMapObjectItemContainerModuleFilter
 ---@field FilterOffList TArray<FName>
 FPalMapObjectItemContainerModuleFilter = {}
+
+---@return FPalMapObjectItemContainerModuleFilter
+function FPalMapObjectItemContainerModuleFilter:get() end
 
 
 
@@ -6809,6 +8366,9 @@ FPalMapObjectItemContainerModuleFilter = {}
 ---@field Attribute EPalMapObjectItemContainerSlotAttribute
 ---@field Indexes TArray<int32>
 FPalMapObjectItemContainerModuleSlotIndexes = {}
+
+---@return FPalMapObjectItemContainerModuleSlotIndexes
+function FPalMapObjectItemContainerModuleSlotIndexes:get() end
 
 
 
@@ -6818,18 +8378,30 @@ FPalMapObjectItemContainerModuleSlotIndexes = {}
 ---@field AutoWorkAmountBySec float
 FPalMapObjectItemProductData = {}
 
+---@return FPalMapObjectItemProductData
+function FPalMapObjectItemProductData:get() end
+
 
 
 ---@class FPalMapObjectManageAsyncTickFunction : FTickFunction
 FPalMapObjectManageAsyncTickFunction = {}
 
+---@return FPalMapObjectManageAsyncTickFunction
+function FPalMapObjectManageAsyncTickFunction:get() end
+
 
 ---@class FPalMapObjectManageTickInBackgroundFunction : FTickFunction
 FPalMapObjectManageTickInBackgroundFunction = {}
 
+---@return FPalMapObjectManageTickInBackgroundFunction
+function FPalMapObjectManageTickInBackgroundFunction:get() end
+
 
 ---@class FPalMapObjectManageTickPostProcessFunction : FTickFunction
 FPalMapObjectManageTickPostProcessFunction = {}
+
+---@return FPalMapObjectManageTickPostProcessFunction
+function FPalMapObjectManageTickPostProcessFunction:get() end
 
 
 ---@class FPalMapObjectMasterData : FTableRowBase
@@ -6849,12 +8421,18 @@ FPalMapObjectManageTickPostProcessFunction = {}
 ---@field Editor_RowNameHash int32
 FPalMapObjectMasterData = {}
 
+---@return FPalMapObjectMasterData
+function FPalMapObjectMasterData:get() end
+
 
 
 ---@class FPalMapObjectMeshVisibleData
 ---@field MeshComponentRef FComponentReference
 ---@field VisibleHpPercentageThreshold float
 FPalMapObjectMeshVisibleData = {}
+
+---@return FPalMapObjectMeshVisibleData
+function FPalMapObjectMeshVisibleData:get() end
 
 
 
@@ -6863,6 +8441,9 @@ FPalMapObjectMeshVisibleData = {}
 ---@field ConnectToInfos TArray<FPalMapObjectModelConnectInfoItem>
 FPalMapObjectModelConnectInfo = {}
 
+---@return FPalMapObjectModelConnectInfo
+function FPalMapObjectModelConnectInfo:get() end
+
 
 
 ---@class FPalMapObjectModelConnectInfoItem
@@ -6870,12 +8451,18 @@ FPalMapObjectModelConnectInfo = {}
 ---@field ConnectIndex EPalMapObjectModelConnectIndex
 FPalMapObjectModelConnectInfoItem = {}
 
+---@return FPalMapObjectModelConnectInfoItem
+function FPalMapObjectModelConnectInfoItem:get() end
+
 
 
 ---@class FPalMapObjectModelEffectRepInfo : FFastArraySerializerItem
 ---@field StatusId EPalStatusID
 ---@field Effect UPalMapObjectModelEffectBase
 FPalMapObjectModelEffectRepInfo = {}
+
+---@return FPalMapObjectModelEffectRepInfo
+function FPalMapObjectModelEffectRepInfo:get() end
 
 
 
@@ -6885,6 +8472,9 @@ FPalMapObjectModelEffectRepInfo = {}
 ---@field LevelObjectInstanceId FGuid
 FPalMapObjectModelInitializeExtraParameters = {}
 
+---@return FPalMapObjectModelInitializeExtraParameters
+function FPalMapObjectModelInitializeExtraParameters:get() end
+
 
 
 ---@class FPalMapObjectModelSaveData : FPalBinaryMemory
@@ -6892,6 +8482,9 @@ FPalMapObjectModelInitializeExtraParameters = {}
 ---@field Connector FPalMapObjectConnectorSaveData
 ---@field EffectMap TMap<EPalStatusID, FPalMapObjectEffectSaveData>
 FPalMapObjectModelSaveData = {}
+
+---@return FPalMapObjectModelSaveData
+function FPalMapObjectModelSaveData:get() end
 
 
 
@@ -6903,11 +8496,17 @@ FPalMapObjectModelSaveData = {}
 ---@field BlueprintClass TSubclassOf<APalMapObject>
 FPalMapObjectModelStaticData = {}
 
+---@return FPalMapObjectModelStaticData
+function FPalMapObjectModelStaticData:get() end
+
 
 
 ---@class FPalMapObjectModuleRepInfo : FFastArraySerializerItem
 ---@field Module UPalMapObjectConcreteModelModuleBase
 FPalMapObjectModuleRepInfo = {}
+
+---@return FPalMapObjectModuleRepInfo
+function FPalMapObjectModuleRepInfo:get() end
 
 
 
@@ -6917,6 +8516,9 @@ FPalMapObjectModuleRepInfo = {}
 ---@field TrySuccessCache boolean
 FPalMapObjectPasswordLockPlayerInfo = {}
 
+---@return FPalMapObjectPasswordLockPlayerInfo
+function FPalMapObjectPasswordLockPlayerInfo:get() end
+
 
 
 ---@class FPalMapObjectPickupItemData
@@ -6924,11 +8526,17 @@ FPalMapObjectPasswordLockPlayerInfo = {}
 ---@field Num int32
 FPalMapObjectPickupItemData = {}
 
+---@return FPalMapObjectPickupItemData
+function FPalMapObjectPickupItemData:get() end
+
 
 
 ---@class FPalMapObjectPickupItemPalEggData
 ---@field PalMonsterId FPalDataTableRowName_PalMonsterData
 FPalMapObjectPickupItemPalEggData = {}
+
+---@return FPalMapObjectPickupItemPalEggData
+function FPalMapObjectPickupItemPalEggData:get() end
 
 
 
@@ -6937,6 +8545,9 @@ FPalMapObjectPickupItemPalEggData = {}
 ---@field Weight float
 FPalMapObjectPickupItemPalEggLotteryData = {}
 
+---@return FPalMapObjectPickupItemPalEggLotteryData
+function FPalMapObjectPickupItemPalEggLotteryData:get() end
+
 
 
 ---@class FPalMapObjectRepairInfo
@@ -6944,6 +8555,9 @@ FPalMapObjectPickupItemPalEggLotteryData = {}
 ---@field RepairKitRequiredNum int32
 ---@field RepairRequiredWorkAmount float
 FPalMapObjectRepairInfo = {}
+
+---@return FPalMapObjectRepairInfo
+function FPalMapObjectRepairInfo:get() end
 
 
 
@@ -6958,6 +8572,9 @@ FPalMapObjectRepairInfo = {}
 ---@field ConcreteModel FPalMapObjectConcreteModelSaveData
 FPalMapObjectSaveData = {}
 
+---@return FPalMapObjectSaveData
+function FPalMapObjectSaveData:get() end
+
 
 
 ---@class FPalMapObjectSignificanceInfo
@@ -6966,17 +8583,26 @@ FPalMapObjectSaveData = {}
 ---@field bInvalidTickForSkeletalMeshComponent boolean
 FPalMapObjectSignificanceInfo = {}
 
+---@return FPalMapObjectSignificanceInfo
+function FPalMapObjectSignificanceInfo:get() end
+
 
 
 ---@class FPalMapObjectSpawnableCheckParameter
 ---@field IgnoredOverlapCheckActors TArray<AActor>
 FPalMapObjectSpawnableCheckParameter = {}
 
+---@return FPalMapObjectSpawnableCheckParameter
+function FPalMapObjectSpawnableCheckParameter:get() end
+
 
 
 ---@class FPalMapObjectSpawnerInStageSaveData
 ---@field SpawnerDataMapByLevelObjectInstanceId TMap<FGuid, FPalMapObjectSpawnerSaveData>
 FPalMapObjectSpawnerInStageSaveData = {}
+
+---@return FPalMapObjectSpawnerInStageSaveData
+function FPalMapObjectSpawnerInStageSaveData:get() end
 
 
 
@@ -6985,11 +8611,17 @@ FPalMapObjectSpawnerInStageSaveData = {}
 ---@field MapObjectInstanceId FGuid
 FPalMapObjectSpawnerItemSaveData = {}
 
+---@return FPalMapObjectSpawnerItemSaveData
+function FPalMapObjectSpawnerItemSaveData:get() end
+
 
 
 ---@class FPalMapObjectSpawnerSaveData
 ---@field ItemMap TMap<int32, FPalMapObjectSpawnerItemSaveData>
 FPalMapObjectSpawnerSaveData = {}
+
+---@return FPalMapObjectSpawnerSaveData
+function FPalMapObjectSpawnerSaveData:get() end
 
 
 
@@ -6998,6 +8630,9 @@ FPalMapObjectSpawnerSaveData = {}
 ---@field FieldLotteryName FPalDataTableRowName_FieldLotteryNameData
 ---@field Weight int32
 FPalMapObjectSpawnerTreasureBoxLotteryParameter = {}
+
+---@return FPalMapObjectSpawnerTreasureBoxLotteryParameter
+function FPalMapObjectSpawnerTreasureBoxLotteryParameter:get() end
 
 
 
@@ -7013,6 +8648,9 @@ FPalMapObjectSpawnerTreasureBoxLotteryParameter = {}
 ---@field MapObjectId_SkillFruit_VisibleContent FName
 FPalMapObjectStaticData = {}
 
+---@return FPalMapObjectStaticData
+function FPalMapObjectStaticData:get() end
+
 
 
 ---@class FPalMapObjectStatusValue
@@ -7020,11 +8658,17 @@ FPalMapObjectStaticData = {}
 ---@field MaxValue int32
 FPalMapObjectStatusValue = {}
 
+---@return FPalMapObjectStatusValue
+function FPalMapObjectStatusValue:get() end
+
 
 
 ---@class FPalMapObjectVisualEffectAssets
 ---@field AssetMap TMap<EPalMapObjectVisualEffectType, TSoftObjectPtr<UNiagaraSystem>>
 FPalMapObjectVisualEffectAssets = {}
+
+---@return FPalMapObjectVisualEffectAssets
+function FPalMapObjectVisualEffectAssets:get() end
 
 
 
@@ -7032,12 +8676,18 @@ FPalMapObjectVisualEffectAssets = {}
 ---@field Instances TArray<UNiagaraComponent>
 FPalMapObjectVisualEffectInstanceSet = {}
 
+---@return FPalMapObjectVisualEffectInstanceSet
+function FPalMapObjectVisualEffectInstanceSet:get() end
+
 
 
 ---@class FPalMapObjectWorldDropItemInfo
 ---@field StaticItemId FName
 ---@field CreatedAt FGameDateTime
 FPalMapObjectWorldDropItemInfo = {}
+
+---@return FPalMapObjectWorldDropItemInfo
+function FPalMapObjectWorldDropItemInfo:get() end
 
 
 
@@ -7047,12 +8697,18 @@ FPalMapObjectWorldDropItemInfo = {}
 ---@field MaxCount int32
 FPalMapObjectWorldDropItemInfoSet = {}
 
+---@return FPalMapObjectWorldDropItemInfoSet
+function FPalMapObjectWorldDropItemInfoSet:get() end
+
 
 
 ---@class FPalMealLogDisplayData
 ---@field InstanceId FPalInstanceID
 ---@field MealItemID FName
 FPalMealLogDisplayData = {}
+
+---@return FPalMealLogDisplayData
+function FPalMealLogDisplayData:get() end
 
 
 
@@ -7061,6 +8717,9 @@ FPalMealLogDisplayData = {}
 ---@field MaterialSubType EPalMapObjectMaterialSubType
 FPalMiningRankDefineData = {}
 
+---@return FPalMiningRankDefineData
+function FPalMiningRankDefineData:get() end
+
 
 
 ---@class FPalMonsterControllerBaseCampHungryParameter
@@ -7068,6 +8727,9 @@ FPalMiningRankDefineData = {}
 ---@field RecoverSanityTo float
 ---@field EatMaxNum int32
 FPalMonsterControllerBaseCampHungryParameter = {}
+
+---@return FPalMonsterControllerBaseCampHungryParameter
+function FPalMonsterControllerBaseCampHungryParameter:get() end
 
 
 
@@ -7078,17 +8740,26 @@ FPalMonsterControllerBaseCampHungryParameter = {}
 ---@field InstanceId FPalInstanceID
 FPalMonsterControllerBaseCampLogContent = {}
 
+---@return FPalMonsterControllerBaseCampLogContent
+function FPalMonsterControllerBaseCampLogContent:get() end
+
 
 
 ---@class FPalMorphSetting
 ---@field WeightList TMap<FName, float>
 FPalMorphSetting = {}
 
+---@return FPalMorphSetting
+function FPalMorphSetting:get() end
+
 
 
 ---@class FPalNPCInteractConditionConstValueDataTableRow : FTableRowBase
 ---@field ValText FName
 FPalNPCInteractConditionConstValueDataTableRow = {}
+
+---@return FPalNPCInteractConditionConstValueDataTableRow
+function FPalNPCInteractConditionConstValueDataTableRow:get() end
 
 
 
@@ -7102,17 +8773,26 @@ FPalNPCInteractConditionConstValueDataTableRow = {}
 ---@field IncidentArgs2 FName
 FPalNPCInteractionDataTableRow = {}
 
+---@return FPalNPCInteractionDataTableRow
+function FPalNPCInteractionDataTableRow:get() end
+
 
 
 ---@class FPalNPCMultiTalkRow : FTableRowBase
 ---@field MultiTalkHandleClass TSubclassOf<UPalNPCMultiTalkHandle>
 FPalNPCMultiTalkRow = {}
 
+---@return FPalNPCMultiTalkRow
+function FPalNPCMultiTalkRow:get() end
+
 
 
 ---@class FPalNPCOneTalkRow : FTableRowBase
 ---@field OneTalkData UDataTable
 FPalNPCOneTalkRow = {}
+
+---@return FPalNPCOneTalkRow
+function FPalNPCOneTalkRow:get() end
 
 
 
@@ -7122,6 +8802,9 @@ FPalNPCOneTalkRow = {}
 ---@field Waza2 EPalWazaID
 ---@field Waza3 EPalWazaID
 FPalNPCOtomoWazaDataRow = {}
+
+---@return FPalNPCOtomoWazaDataRow
+function FPalNPCOtomoWazaDataRow:get() end
 
 
 
@@ -7133,6 +8816,9 @@ FPalNPCOtomoWazaDataRow = {}
 ---@field Yaw float
 ---@field Squad UPalSquad
 FPalNPCSpawnInfo = {}
+
+---@return FPalNPCSpawnInfo
+function FPalNPCSpawnInfo:get() end
 
 
 
@@ -7147,11 +8833,17 @@ FPalNPCSpawnInfo = {}
 ---@field SelectedChoiceCommandDataList TArray<FPalNPCTalkSelectedChoiceCommandData>
 FPalNPCTalkData = {}
 
+---@return FPalNPCTalkData
+function FPalNPCTalkData:get() end
+
 
 
 ---@class FPalNPCTalkDataTableRow : FTableRowBase
 ---@field TalkData TArray<FPalNPCTalkData>
 FPalNPCTalkDataTableRow = {}
+
+---@return FPalNPCTalkDataTableRow
+function FPalNPCTalkDataTableRow:get() end
 
 
 
@@ -7160,6 +8852,9 @@ FPalNPCTalkDataTableRow = {}
 ---@field TalkDataIndex int32
 ---@field TalkDataSeqenceName FName
 FPalNPCTalkNotifyInfo = {}
+
+---@return FPalNPCTalkNotifyInfo
+function FPalNPCTalkNotifyInfo:get() end
 
 
 
@@ -7171,6 +8866,9 @@ FPalNPCTalkNotifyInfo = {}
 ---@field CustomFuncParam UDataTable
 FPalNPCTalkSelectedChoiceCommandData = {}
 
+---@return FPalNPCTalkSelectedChoiceCommandData
+function FPalNPCTalkSelectedChoiceCommandData:get() end
+
 
 
 ---@class FPalNPCTalkSystemCustomFunctionParameters
@@ -7179,6 +8877,9 @@ FPalNPCTalkSelectedChoiceCommandData = {}
 ---@field TalkDataIndex int32
 ---@field TalkDataSeqenceName FName
 FPalNPCTalkSystemCustomFunctionParameters = {}
+
+---@return FPalNPCTalkSystemCustomFunctionParameters
+function FPalNPCTalkSystemCustomFunctionParameters:get() end
 
 
 
@@ -7200,10 +8901,16 @@ FPalNPCTalkSystemCustomFunctionParameters = {}
 ---@field SphereCastRadius float
 FPalNPCWeaponCombatInfo = {}
 
+---@return FPalNPCWeaponCombatInfo
+function FPalNPCWeaponCombatInfo:get() end
+
 
 
 ---@class FPalNavigationDividedAreaInfo
 FPalNavigationDividedAreaInfo = {}
+
+---@return FPalNavigationDividedAreaInfo
+function FPalNavigationDividedAreaInfo:get() end
 
 
 ---@class FPalNavigationUpdateFrequencySetting
@@ -7211,36 +8918,60 @@ FPalNavigationDividedAreaInfo = {}
 ---@field UpdatableRangeMinMaxFromPlayer FVector2D
 FPalNavigationUpdateFrequencySetting = {}
 
+---@return FPalNavigationUpdateFrequencySetting
+function FPalNavigationUpdateFrequencySetting:get() end
+
 
 
 ---@class FPalNetArchive
 ---@field Bytes TArray<uint8>
 FPalNetArchive = {}
 
+---@return FPalNetArchive
+function FPalNetArchive:get() end
+
 
 
 ---@class FPalNetworkChangeIndividualID
 FPalNetworkChangeIndividualID = {}
 
+---@return FPalNetworkChangeIndividualID
+function FPalNetworkChangeIndividualID:get() end
+
 
 ---@class FPalNetworkCharacterContainerParameter
 FPalNetworkCharacterContainerParameter = {}
+
+---@return FPalNetworkCharacterContainerParameter
+function FPalNetworkCharacterContainerParameter:get() end
 
 
 ---@class FPalNetworkContainerParameter
 FPalNetworkContainerParameter = {}
 
+---@return FPalNetworkContainerParameter
+function FPalNetworkContainerParameter:get() end
+
 
 ---@class FPalNetworkDynamicItemParameter
 FPalNetworkDynamicItemParameter = {}
+
+---@return FPalNetworkDynamicItemParameter
+function FPalNetworkDynamicItemParameter:get() end
 
 
 ---@class FPalNetworkItemOperationParameter
 FPalNetworkItemOperationParameter = {}
 
+---@return FPalNetworkItemOperationParameter
+function FPalNetworkItemOperationParameter:get() end
+
 
 ---@class FPalNetworkMapObjectSpawnRequestParameter
 FPalNetworkMapObjectSpawnRequestParameter = {}
+
+---@return FPalNetworkMapObjectSpawnRequestParameter
+function FPalNetworkMapObjectSpawnRequestParameter:get() end
 
 
 ---@class FPalNetworkMapObjectTickIntervalInBackgroundInfo
@@ -7248,14 +8979,23 @@ FPalNetworkMapObjectSpawnRequestParameter = {}
 ---@field Count int32
 FPalNetworkMapObjectTickIntervalInBackgroundInfo = {}
 
+---@return FPalNetworkMapObjectTickIntervalInBackgroundInfo
+function FPalNetworkMapObjectTickIntervalInBackgroundInfo:get() end
+
 
 
 ---@class FPalNetworkParameter
 FPalNetworkParameter = {}
 
+---@return FPalNetworkParameter
+function FPalNetworkParameter:get() end
+
 
 ---@class FPalNetworkPlayerObtainClientParameter
 FPalNetworkPlayerObtainClientParameter = {}
+
+---@return FPalNetworkPlayerObtainClientParameter
+function FPalNetworkPlayerObtainClientParameter:get() end
 
 
 ---@class FPalNetworkTransmitterDelaySpawnInfo
@@ -7263,11 +9003,17 @@ FPalNetworkPlayerObtainClientParameter = {}
 ---@field SpawnActor AActor
 FPalNetworkTransmitterDelaySpawnInfo = {}
 
+---@return FPalNetworkTransmitterDelaySpawnInfo
+function FPalNetworkTransmitterDelaySpawnInfo:get() end
+
 
 
 ---@class FPalNoteMasterData : FTableRowBase
 ---@field TextId_Description FName
 FPalNoteMasterData = {}
+
+---@return FPalNoteMasterData
+function FPalNoteMasterData:get() end
 
 
 
@@ -7275,19 +9021,31 @@ FPalNoteMasterData = {}
 ---@field Texture TSoftObjectPtr<UTexture2D>
 FPalNoteMasterDataTextureTableRow = {}
 
+---@return FPalNoteMasterDataTextureTableRow
+function FPalNoteMasterDataTextureTableRow:get() end
+
 
 
 ---@class FPalObjectCollectorCalcNearestCharacterTickFunction : FTickFunction
 FPalObjectCollectorCalcNearestCharacterTickFunction = {}
 
+---@return FPalObjectCollectorCalcNearestCharacterTickFunction
+function FPalObjectCollectorCalcNearestCharacterTickFunction:get() end
+
 
 ---@class FPalObjectCollectorTickFunction : FTickFunction
 FPalObjectCollectorTickFunction = {}
+
+---@return FPalObjectCollectorTickFunction
+function FPalObjectCollectorTickFunction:get() end
 
 
 ---@class FPalOilrigSaveData
 ---@field OilrigMap TMap<EPalOilrigType, FPalOilrigSaveStatus>
 FPalOilrigSaveData = {}
+
+---@return FPalOilrigSaveData
+function FPalOilrigSaveData:get() end
 
 
 
@@ -7304,6 +9062,9 @@ FPalOilrigSaveData = {}
 ---@field IsMachineDestroyed boolean
 ---@field MachineStartTimer float
 FPalOilrigSaveStatus = {}
+
+---@return FPalOilrigSaveStatus
+function FPalOilrigSaveStatus:get() end
 
 
 
@@ -7337,6 +9098,9 @@ FPalOilrigSaveStatus = {}
 ---@field SpawnerImportance_TickInterval_NPCSpawner TMap<EPalSpwnerImportanceType, float>
 FPalOptimizeParameter = {}
 
+---@return FPalOptimizeParameter
+function FPalOptimizeParameter:get() end
+
 
 
 ---@class FPalOptionAudioSettings
@@ -7348,6 +9112,9 @@ FPalOptimizeParameter = {}
 ---@field Ambient float
 ---@field UI float
 FPalOptionAudioSettings = {}
+
+---@return FPalOptionAudioSettings
+function FPalOptionAudioSettings:get() end
 
 
 
@@ -7363,6 +9130,9 @@ FPalOptionAudioSettings = {}
 ---@field ScreenPercentage int32
 FPalOptionCommonSettings = {}
 
+---@return FPalOptionCommonSettings
+function FPalOptionCommonSettings:get() end
+
 
 
 ---@class FPalOptionGraphicsPresetRow : FTableRowBase
@@ -7376,6 +9146,9 @@ FPalOptionCommonSettings = {}
 ---@field bEnableMotionBlur boolean
 ---@field ScreenPercentage int32
 FPalOptionGraphicsPresetRow = {}
+
+---@return FPalOptionGraphicsPresetRow
+function FPalOptionGraphicsPresetRow:get() end
 
 
 
@@ -7407,6 +9180,9 @@ FPalOptionGraphicsPresetRow = {}
 ---@field ScreenPercentage int32
 FPalOptionGraphicsSettings = {}
 
+---@return FPalOptionGraphicsSettings
+function FPalOptionGraphicsSettings:get() end
+
 
 
 ---@class FPalOptionKeyboardSettings
@@ -7419,6 +9195,9 @@ FPalOptionGraphicsSettings = {}
 ---@field bShowChat boolean
 ---@field bIsToggleInteract boolean
 FPalOptionKeyboardSettings = {}
+
+---@return FPalOptionKeyboardSettings
+function FPalOptionKeyboardSettings:get() end
 
 
 
@@ -7436,6 +9215,9 @@ FPalOptionKeyboardSettings = {}
 ---@field ChatUICloseDelayTime FPalOptionValueFloat
 FPalOptionLocalStaticSettings = {}
 
+---@return FPalOptionLocalStaticSettings
+function FPalOptionLocalStaticSettings:get() end
+
 
 
 ---@class FPalOptionPadSettings
@@ -7451,6 +9233,9 @@ FPalOptionLocalStaticSettings = {}
 ---@field bIsToggleInteract boolean
 FPalOptionPadSettings = {}
 
+---@return FPalOptionPadSettings
+function FPalOptionPadSettings:get() end
+
 
 
 ---@class FPalOptionSaveData
@@ -7464,6 +9249,9 @@ FPalOptionPadSettings = {}
 ---@field bHasAppliedUserSetting boolean
 FPalOptionSaveData = {}
 
+---@return FPalOptionSaveData
+function FPalOptionSaveData:get() end
+
 
 
 ---@class FPalOptionUISettings
@@ -7475,6 +9263,9 @@ FPalOptionSaveData = {}
 ---@field ChatUICloseDelayTime float
 FPalOptionUISettings = {}
 
+---@return FPalOptionUISettings
+function FPalOptionUISettings:get() end
+
 
 
 ---@class FPalOptionValueFloat
@@ -7482,12 +9273,18 @@ FPalOptionUISettings = {}
 ---@field Max float
 FPalOptionValueFloat = {}
 
+---@return FPalOptionValueFloat
+function FPalOptionValueFloat:get() end
+
 
 
 ---@class FPalOptionValueInt
 ---@field Min int32
 ---@field Max int32
 FPalOptionValueInt = {}
+
+---@return FPalOptionValueInt
+function FPalOptionValueInt:get() end
 
 
 
@@ -7501,6 +9298,9 @@ FPalOptionValueInt = {}
 ---@field bExistPlayerAfterLogout boolean
 ---@field bEnableDefenseOtherGuildPlayer boolean
 FPalOptionWorldModePresetRow = {}
+
+---@return FPalOptionWorldModePresetRow
+function FPalOptionWorldModePresetRow:get() end
 
 
 
@@ -7542,11 +9342,17 @@ FPalOptionWorldModePresetRow = {}
 ---@field BaseCampWorkerMaxNum int32
 FPalOptionWorldPresetRow = {}
 
+---@return FPalOptionWorldPresetRow
+function FPalOptionWorldPresetRow:get() end
+
 
 
 ---@class FPalOptionWorldSaveData
 ---@field Settings FPalOptionWorldSettings
 FPalOptionWorldSaveData = {}
+
+---@return FPalOptionWorldSaveData
+function FPalOptionWorldSaveData:get() end
 
 
 
@@ -7626,6 +9432,9 @@ FPalOptionWorldSaveData = {}
 ---@field LogFormatType EPalLogFormatType
 FPalOptionWorldSettings = {}
 
+---@return FPalOptionWorldSettings
+function FPalOptionWorldSettings:get() end
+
 
 
 ---@class FPalOptionWorldStaticSettings
@@ -7663,12 +9472,18 @@ FPalOptionWorldSettings = {}
 ---@field autoSaveSpan FPalOptionValueInt
 FPalOptionWorldStaticSettings = {}
 
+---@return FPalOptionWorldStaticSettings
+function FPalOptionWorldStaticSettings:get() end
+
 
 
 ---@class FPalOrderedQuestSaveData
 ---@field QuestName FName
 ---@field BlockIndex int32
 FPalOrderedQuestSaveData = {}
+
+---@return FPalOrderedQuestSaveData
+function FPalOrderedQuestSaveData:get() end
 
 
 
@@ -7679,6 +9494,9 @@ FPalOrderedQuestSaveData = {}
 ---@field MinCharacterLevel int32
 ---@field MaxCharacterLevel int32
 FPalPalShopCreateDataRow = {}
+
+---@return FPalPalShopCreateDataRow
+function FPalPalShopCreateDataRow:get() end
 
 
 
@@ -7694,16 +9512,25 @@ FPalPalShopCreateDataRow = {}
 ---@field TriggerType EPalPartnerSkillTriggerType
 FPalPartnerSkillDatabaseRow = {}
 
+---@return FPalPartnerSkillDatabaseRow
+function FPalPartnerSkillDatabaseRow:get() end
+
 
 
 ---@class FPalPartnerSkillParameterQueryFunction
 FPalPartnerSkillParameterQueryFunction = {}
+
+---@return FPalPartnerSkillParameterQueryFunction
+function FPalPartnerSkillParameterQueryFunction:get() end
 
 
 ---@class FPalPartnerSkillParameterRide
 ---@field JumpZVelocityScale float
 ---@field GravityScale float
 FPalPartnerSkillParameterRide = {}
+
+---@return FPalPartnerSkillParameterRide
+function FPalPartnerSkillParameterRide:get() end
 
 
 
@@ -7716,6 +9543,9 @@ FPalPartnerSkillParameterRide = {}
 ---@field TargetElementType EPalElementType
 FPalPassiveAbilitySkillParameters = {}
 
+---@return FPalPassiveAbilitySkillParameters
+function FPalPassiveAbilitySkillParameters:get() end
+
 
 
 ---@class FPalPassiveAbilitySkillStatus
@@ -7725,11 +9555,17 @@ FPalPassiveAbilitySkillParameters = {}
 ---@field TriggerType EPalPassiveTriggerType
 FPalPassiveAbilitySkillStatus = {}
 
+---@return FPalPassiveAbilitySkillStatus
+function FPalPassiveAbilitySkillStatus:get() end
+
 
 
 ---@class FPalPassiveAbilitySkills
 ---@field AllAbilityPassiveSkills TArray<FPalPassiveAbilitySkillParameters>
 FPalPassiveAbilitySkills = {}
+
+---@return FPalPassiveAbilitySkills
+function FPalPassiveAbilitySkills:get() end
 
 
 
@@ -7738,11 +9574,17 @@ FPalPassiveAbilitySkills = {}
 ---@field TargetPalIds TArray<FPalDataTableRowName_PalMonsterData>
 FPalPassivePartnerSkillFindOtomoParameter = {}
 
+---@return FPalPassivePartnerSkillFindOtomoParameter
+function FPalPassivePartnerSkillFindOtomoParameter:get() end
+
 
 
 ---@class FPalPassivePartnerSkillIdAndParameters
 ---@field SkillAndParameters TMap<FPalDataTableRowName_PassiveSkillData, FPalPassivePartnerSkillParameters>
 FPalPassivePartnerSkillIdAndParameters = {}
+
+---@return FPalPassivePartnerSkillIdAndParameters
+function FPalPassivePartnerSkillIdAndParameters:get() end
 
 
 
@@ -7751,6 +9593,9 @@ FPalPassivePartnerSkillIdAndParameters = {}
 ---@field ItemTypeB EPalItemTypeB
 ---@field ItemIds TArray<FPalDataTableRowName_ItemData>
 FPalPassivePartnerSkillItemParameter = {}
+
+---@return FPalPassivePartnerSkillItemParameter
+function FPalPassivePartnerSkillItemParameter:get() end
 
 
 
@@ -7767,6 +9612,9 @@ FPalPassivePartnerSkillItemParameter = {}
 ---@field ItemParam FPalPassivePartnerSkillItemParameter
 FPalPassivePartnerSkillParameters = {}
 
+---@return FPalPassivePartnerSkillParameters
+function FPalPassivePartnerSkillParameters:get() end
+
 
 
 ---@class FPalPassivePartnerSkillStatus
@@ -7776,12 +9624,18 @@ FPalPassivePartnerSkillParameters = {}
 ---@field ItemParam FPalPassivePartnerSkillItemParameter
 FPalPassivePartnerSkillStatus = {}
 
+---@return FPalPassivePartnerSkillStatus
+function FPalPassivePartnerSkillStatus:get() end
+
 
 
 ---@class FPalPassiveSkillAssignInfo
 ---@field isDoNotSetSkills boolean
 ---@field ForceSetSkillList TArray<FName>
 FPalPassiveSkillAssignInfo = {}
+
+---@return FPalPassiveSkillAssignInfo
+function FPalPassiveSkillAssignInfo:get() end
 
 
 
@@ -7816,6 +9670,9 @@ FPalPassiveSkillAssignInfo = {}
 ---@field OverrideSummaryTextId FName
 FPalPassiveSkillDatabaseRow = {}
 
+---@return FPalPassiveSkillDatabaseRow
+function FPalPassiveSkillDatabaseRow:get() end
+
 
 
 ---@class FPalPassiveSkillEffect
@@ -7825,11 +9682,17 @@ FPalPassiveSkillDatabaseRow = {}
 ---@field ItemParam FPalPassivePartnerSkillItemParameter
 FPalPassiveSkillEffect = {}
 
+---@return FPalPassiveSkillEffect
+function FPalPassiveSkillEffect:get() end
+
 
 
 ---@class FPalPassiveSkillEffectInfos
 ---@field SkillEffectArray TArray<FPalPassiveSkillEffect>
 FPalPassiveSkillEffectInfos = {}
+
+---@return FPalPassiveSkillEffectInfos
+function FPalPassiveSkillEffectInfos:get() end
 
 
 
@@ -7839,6 +9702,9 @@ FPalPassiveSkillEffectInfos = {}
 ---@field ItemParam FPalPassivePartnerSkillItemParameter
 FPalPassiveSkillSetupInfo = {}
 
+---@return FPalPassiveSkillSetupInfo
+function FPalPassiveSkillSetupInfo:get() end
+
 
 
 ---@class FPalPathFollowingBlockDetectionParams
@@ -7846,6 +9712,9 @@ FPalPassiveSkillSetupInfo = {}
 ---@field BlockDetectionInterval float
 ---@field BlockDetectionSampleCount int32
 FPalPathFollowingBlockDetectionParams = {}
+
+---@return FPalPathFollowingBlockDetectionParams
+function FPalPathFollowingBlockDetectionParams:get() end
 
 
 
@@ -7855,12 +9724,18 @@ FPalPathFollowingBlockDetectionParams = {}
 ---@field CameraArmLength float
 FPalPettingParameter = {}
 
+---@return FPalPettingParameter
+function FPalPettingParameter:get() end
+
 
 
 ---@class FPalPhantomReplicateInfo
 ---@field ID int32
 ---@field Character APalCharacter
 FPalPhantomReplicateInfo = {}
+
+---@return FPalPhantomReplicateInfo
+function FPalPhantomReplicateInfo:get() end
 
 
 
@@ -7871,16 +9746,25 @@ FPalPhantomReplicateInfo = {}
 ---@field KeyTurningCurveOutsideUnlockableRange UCurveFloat
 FPalPickingGameSettingData = {}
 
+---@return FPalPickingGameSettingData
+function FPalPickingGameSettingData:get() end
+
 
 
 ---@class FPalPickingItemSetting : FTableRowBase
 ---@field PickableGradeTypeArray TArray<EPalMapObjectTreasureGradeType>
 FPalPickingItemSetting = {}
 
+---@return FPalPickingItemSetting
+function FPalPickingItemSetting:get() end
+
 
 
 ---@class FPalPickingToolBase
 FPalPickingToolBase = {}
+
+---@return FPalPickingToolBase
+function FPalPickingToolBase:get() end
 
 
 ---@class FPalPlayerAccountInitData
@@ -7888,12 +9772,18 @@ FPalPickingToolBase = {}
 ---@field CharacterMakeData FPalPlayerDataCharacterMakeInfo
 FPalPlayerAccountInitData = {}
 
+---@return FPalPlayerAccountInitData
+function FPalPlayerAccountInitData:get() end
+
 
 
 ---@class FPalPlayerBattleEnemyInfo
 ---@field Rank EPalBattleBGMType
 ---@field WeakActor TWeakObjectPtr<AActor>
 FPalPlayerBattleEnemyInfo = {}
+
+---@return FPalPlayerBattleEnemyInfo
+function FPalPlayerBattleEnemyInfo:get() end
 
 
 
@@ -7906,6 +9796,9 @@ FPalPlayerBattleEnemyInfo = {}
 ---@field PlayerSkinDataClass TSubclassOf<UPalPlayerSkinData>
 FPalPlayerClassStructSet = {}
 
+---@return FPalPlayerClassStructSet
+function FPalPlayerClassStructSet:get() end
+
 
 
 ---@class FPalPlayerDamageCameraShakeData : FTableRowBase
@@ -7917,6 +9810,9 @@ FPalPlayerClassStructSet = {}
 ---@field HPRate_Default int32
 ---@field HPRate_Max int32
 FPalPlayerDamageCameraShakeData = {}
+
+---@return FPalPlayerDamageCameraShakeData
+function FPalPlayerDamageCameraShakeData:get() end
 
 
 
@@ -7940,6 +9836,9 @@ FPalPlayerDamageCameraShakeData = {}
 ---@field SkinInfo FPalPlayerSkinInfo
 FPalPlayerDataCharacterMakeInfo = {}
 
+---@return FPalPlayerDataCharacterMakeInfo
+function FPalPlayerDataCharacterMakeInfo:get() end
+
 
 
 ---@class FPalPlayerDataInventoryInfo
@@ -7951,6 +9850,9 @@ FPalPlayerDataCharacterMakeInfo = {}
 ---@field FoodEquipContainerId FPalContainerId
 FPalPlayerDataInventoryInfo = {}
 
+---@return FPalPlayerDataInventoryInfo
+function FPalPlayerDataInventoryInfo:get() end
+
 
 
 ---@class FPalPlayerDataPalStorageSlotSaveData
@@ -7958,6 +9860,9 @@ FPalPlayerDataInventoryInfo = {}
 ---@field CharacterSaveParameter FPalIndividualCharacterSaveParameter
 ---@field SlotID FPalCharacterSlotId
 FPalPlayerDataPalStorageSlotSaveData = {}
+
+---@return FPalPlayerDataPalStorageSlotSaveData
+function FPalPlayerDataPalStorageSlotSaveData:get() end
 
 
 
@@ -7968,6 +9873,9 @@ FPalPlayerDataPalStorageSlotSaveData = {}
 ---@field HairAttachSocketNameMap TMap<FName, FName>
 FPalPlayerEquipmentMeshDataRow = {}
 
+---@return FPalPlayerEquipmentMeshDataRow
+function FPalPlayerEquipmentMeshDataRow:get() end
+
 
 
 ---@class FPalPlayerInfoForMap
@@ -7975,11 +9883,17 @@ FPalPlayerEquipmentMeshDataRow = {}
 ---@field Transform FTransform
 FPalPlayerInfoForMap = {}
 
+---@return FPalPlayerInfoForMap
+function FPalPlayerInfoForMap:get() end
+
 
 
 ---@class FPalPlayerInitializeParameter
 ---@field InitParam FPalIndividualCharacterSaveParameter
 FPalPlayerInitializeParameter = {}
+
+---@return FPalPlayerInitializeParameter
+function FPalPlayerInitializeParameter:get() end
 
 
 
@@ -7987,6 +9901,9 @@ FPalPlayerInitializeParameter = {}
 ---@field nowSelectedContainerIndex int32
 ---@field targetItemContainer UPalItemContainer
 FPalPlayerInventorySelectData = {}
+
+---@return FPalPlayerInventorySelectData
+function FPalPlayerInventorySelectData:get() end
 
 
 
@@ -8001,11 +9918,17 @@ FPalPlayerInventorySelectData = {}
 ---@field Satiety int32
 FPalPlayerParameterDatabaseRow = {}
 
+---@return FPalPlayerParameterDatabaseRow
+function FPalPlayerParameterDatabaseRow:get() end
+
 
 
 ---@class FPalPlayerRecordCountMapStruct
 ---@field countMap TMap<FName, int64>
 FPalPlayerRecordCountMapStruct = {}
+
+---@return FPalPlayerRecordCountMapStruct
+function FPalPlayerRecordCountMapStruct:get() end
 
 
 
@@ -8013,11 +9936,17 @@ FPalPlayerRecordCountMapStruct = {}
 ---@field Items TArray<FPalPlayerRecordDataRepInfo_BoolVal>
 FPalPlayerRecordDataRepInfoArray_BoolVal = {}
 
+---@return FPalPlayerRecordDataRepInfoArray_BoolVal
+function FPalPlayerRecordDataRepInfoArray_BoolVal:get() end
+
 
 
 ---@class FPalPlayerRecordDataRepInfoArray_IntVal : FFastArraySerializer
 ---@field Items TArray<FPalPlayerRecordDataRepInfo_IntVal>
 FPalPlayerRecordDataRepInfoArray_IntVal = {}
+
+---@return FPalPlayerRecordDataRepInfoArray_IntVal
+function FPalPlayerRecordDataRepInfoArray_IntVal:get() end
 
 
 
@@ -8026,12 +9955,18 @@ FPalPlayerRecordDataRepInfoArray_IntVal = {}
 ---@field Value boolean
 FPalPlayerRecordDataRepInfo_BoolVal = {}
 
+---@return FPalPlayerRecordDataRepInfo_BoolVal
+function FPalPlayerRecordDataRepInfo_BoolVal:get() end
+
 
 
 ---@class FPalPlayerRecordDataRepInfo_IntVal : FFastArraySerializerItem
 ---@field Key FName
 ---@field Value int32
 FPalPlayerRecordDataRepInfo_IntVal = {}
+
+---@return FPalPlayerRecordDataRepInfo_IntVal
+function FPalPlayerRecordDataRepInfo_IntVal:get() end
 
 
 
@@ -8042,11 +9977,17 @@ FPalPlayerRecordDataRepInfo_IntVal = {}
 ---@field flagMapRecordMap TMap<FName, FPalPlayerRecordFlagMapStruct>
 FPalPlayerRecordDataStruct = {}
 
+---@return FPalPlayerRecordDataStruct
+function FPalPlayerRecordDataStruct:get() end
+
 
 
 ---@class FPalPlayerRecordFlagMapStruct
 ---@field flagMap TMap<FName, boolean>
 FPalPlayerRecordFlagMapStruct = {}
+
+---@return FPalPlayerRecordFlagMapStruct
+function FPalPlayerRecordFlagMapStruct:get() end
 
 
 
@@ -8054,6 +9995,9 @@ FPalPlayerRecordFlagMapStruct = {}
 ---@field bDisableAutoPickupItemInOverflowWeight boolean
 ---@field bDisableGuildJoinRequest boolean
 FPalPlayerSettingsForServer = {}
+
+---@return FPalPlayerSettingsForServer
+function FPalPlayerSettingsForServer:get() end
 
 
 
@@ -8065,6 +10009,9 @@ FPalPlayerSettingsForServer = {}
 ---@field Pal TMap<FName, FName>
 FPalPlayerSkinInfo = {}
 
+---@return FPalPlayerSkinInfo
+function FPalPlayerSkinInfo:get() end
+
 
 
 ---@class FPalPlayerStatusRankMasterData : FTableRowBase
@@ -8073,11 +10020,17 @@ FPalPlayerSkinInfo = {}
 ---@field ResetRequiredMoney int32
 FPalPlayerStatusRankMasterData = {}
 
+---@return FPalPlayerStatusRankMasterData
+function FPalPlayerStatusRankMasterData:get() end
+
 
 
 ---@class FPalQuestDataSetRow : FTableRowBase
 ---@field QuestData TSoftClassPtr<UPalQuestData>
 FPalQuestDataSetRow = {}
+
+---@return FPalQuestDataSetRow
+function FPalQuestDataSetRow:get() end
 
 
 
@@ -8093,11 +10046,17 @@ FPalQuestDataSetRow = {}
 ---@field Level int32
 FPalRESTAPIPlayerInfo = {}
 
+---@return FPalRESTAPIPlayerInfo
+function FPalRESTAPIPlayerInfo:get() end
+
 
 
 ---@class FPalRadialCatalog
 ---@field Catalog TMap<int32, int32>
 FPalRadialCatalog = {}
+
+---@return FPalRadialCatalog
+function FPalRadialCatalog:get() end
 
 
 
@@ -8108,6 +10067,9 @@ FPalRadialCatalog = {}
 ---@field SuccessAnyOneItemList TArray<FPalRaidBossSuccessAnyOneItemInfo>
 ---@field AchievementId FString
 FPalRaidBossDataRow = {}
+
+---@return FPalRaidBossDataRow
+function FPalRaidBossDataRow:get() end
 
 
 
@@ -8125,22 +10087,34 @@ FPalRaidBossDataRow = {}
 ---@field ModeChange_RemoveWaza TArray<EPalWazaID>
 FPalRaidBossSpawnInfo = {}
 
+---@return FPalRaidBossSpawnInfo
+function FPalRaidBossSpawnInfo:get() end
+
 
 
 ---@class FPalRaidBossSpawnInfoList
 ---@field SpawnInfos TArray<FPalRaidBossSpawnInfo>
 FPalRaidBossSpawnInfoList = {}
 
+---@return FPalRaidBossSpawnInfoList
+function FPalRaidBossSpawnInfoList:get() end
+
 
 
 ---@class FPalRaidBossSpawnerInfo
 FPalRaidBossSpawnerInfo = {}
+
+---@return FPalRaidBossSpawnerInfo
+function FPalRaidBossSpawnerInfo:get() end
 
 
 ---@class FPalRaidBossSuccessAnyOneItemInfo
 ---@field ItemName FPalDataTableRowName_ItemData
 ---@field Num int32
 FPalRaidBossSuccessAnyOneItemInfo = {}
+
+---@return FPalRaidBossSuccessAnyOneItemInfo
+function FPalRaidBossSuccessAnyOneItemInfo:get() end
 
 
 
@@ -8150,6 +10124,9 @@ FPalRaidBossSuccessAnyOneItemInfo = {}
 ---@field Min int32
 ---@field Max int32
 FPalRaidBossSuccessItemInfo = {}
+
+---@return FPalRaidBossSuccessItemInfo
+function FPalRaidBossSuccessItemInfo:get() end
 
 
 
@@ -8161,6 +10138,9 @@ FPalRaidBossSuccessItemInfo = {}
 ---@field ObjectPlacement TSubclassOf<APalRandomIncidentObjectPlacement>
 FPalRandomIncidentSettings = {}
 
+---@return FPalRandomIncidentSettings
+function FPalRandomIncidentSettings:get() end
+
 
 
 ---@class FPalRandomIncidentSpawnIncidentParameter
@@ -8169,11 +10149,17 @@ FPalRandomIncidentSettings = {}
 ---@field LotteryRate int32
 FPalRandomIncidentSpawnIncidentParameter = {}
 
+---@return FPalRandomIncidentSpawnIncidentParameter
+function FPalRandomIncidentSpawnIncidentParameter:get() end
+
 
 
 ---@class FPalRandomIncidentSpawnLocationData : FTableRowBase
 ---@field Location FVector2D
 FPalRandomIncidentSpawnLocationData = {}
+
+---@return FPalRandomIncidentSpawnLocationData
+function FPalRandomIncidentSpawnLocationData:get() end
 
 
 
@@ -8189,6 +10175,9 @@ FPalRandomIncidentSpawnLocationData = {}
 ---@field DefaultActionClass TSubclassOf<UPalActionBase>
 FPalRandomIncidentSpawnMonsterData = {}
 
+---@return FPalRandomIncidentSpawnMonsterData
+function FPalRandomIncidentSpawnMonsterData:get() end
+
 
 
 ---@class FPalRandomIncidentSpawnMonsterOutbreakData : FTableRowBase
@@ -8202,6 +10191,9 @@ FPalRandomIncidentSpawnMonsterData = {}
 ---@field ControllerClass TSubclassOf<APalAIController>
 ---@field DefaultActionClass TSubclassOf<UPalActionBase>
 FPalRandomIncidentSpawnMonsterOutbreakData = {}
+
+---@return FPalRandomIncidentSpawnMonsterOutbreakData
+function FPalRandomIncidentSpawnMonsterOutbreakData:get() end
 
 
 
@@ -8221,11 +10213,17 @@ FPalRandomIncidentSpawnMonsterOutbreakData = {}
 ---@field DefaultAIActionClass TSubclassOf<UPalAIActionBase>
 FPalRandomIncidentSpawnNPCData = {}
 
+---@return FPalRandomIncidentSpawnNPCData
+function FPalRandomIncidentSpawnNPCData:get() end
+
 
 
 ---@class FPalRandomIncidentWalkPathReferenceData
 ---@field WalkPoints TArray<AActor>
 FPalRandomIncidentWalkPathReferenceData = {}
+
+---@return FPalRandomIncidentWalkPathReferenceData
+function FPalRandomIncidentWalkPathReferenceData:get() end
 
 
 
@@ -8237,6 +10235,9 @@ FPalRandomIncidentWalkPathReferenceData = {}
 ---@field AfterIdleTime float
 FPalRandomRestInfo = {}
 
+---@return FPalRandomRestInfo
+function FPalRandomRestInfo:get() end
+
 
 
 ---@class FPalRandomizerDatabaseRow : FTableRowBase
@@ -8246,6 +10247,9 @@ FPalRandomRestInfo = {}
 ---@field NumMax int32
 FPalRandomizerDatabaseRow = {}
 
+---@return FPalRandomizerDatabaseRow
+function FPalRandomizerDatabaseRow:get() end
+
 
 
 ---@class FPalRandomizerSaveData
@@ -8253,12 +10257,18 @@ FPalRandomizerDatabaseRow = {}
 ---@field AllRandomizeSpawnerHashList TArray<FPalRandomizerSpawnInfoSaveData>
 FPalRandomizerSaveData = {}
 
+---@return FPalRandomizerSaveData
+function FPalRandomizerSaveData:get() end
+
 
 
 ---@class FPalRandomizerSpawnInfoSaveData
 ---@field KeyHash uint32
 ---@field RemapRowNameHashList TMap<uint32, uint32>
 FPalRandomizerSpawnInfoSaveData = {}
+
+---@return FPalRandomizerSpawnInfoSaveData
+function FPalRandomizerSpawnInfoSaveData:get() end
 
 
 
@@ -8269,12 +10279,18 @@ FPalRandomizerSpawnInfoSaveData = {}
 ---@field ForPvP boolean
 FPalRespawnPointData = {}
 
+---@return FPalRespawnPointData
+function FPalRespawnPointData:get() end
+
 
 
 ---@class FPalShopProductRequireItemData
 ---@field StaticItemId FName
 ---@field requireNum int32
 FPalShopProductRequireItemData = {}
+
+---@return FPalShopProductRequireItemData
+function FPalShopProductRequireItemData:get() end
 
 
 
@@ -8283,6 +10299,9 @@ FPalShopProductRequireItemData = {}
 ---@field EffectScale float
 ---@field JumpEffectOffsetZ float
 FPalSizeParameterDataRow = {}
+
+---@return FPalSizeParameterDataRow
+function FPalSizeParameterDataRow:get() end
 
 
 
@@ -8296,12 +10315,18 @@ FPalSizeParameterDataRow = {}
 ---@field HairAttachSocketNameMap TMap<FName, FName>
 FPalSkinAssetMap = {}
 
+---@return FPalSkinAssetMap
+function FPalSkinAssetMap:get() end
+
 
 
 ---@class FPalSkinInGameItemData
 ---@field SkinName FName
 ---@field Num int32
 FPalSkinInGameItemData = {}
+
+---@return FPalSkinInGameItemData
+function FPalSkinInGameItemData:get() end
 
 
 
@@ -8316,6 +10341,9 @@ FPalSkinInGameItemData = {}
 ---@field PlatformItemID_Steam int32
 FPalSkinInfo = {}
 
+---@return FPalSkinInfo
+function FPalSkinInfo:get() end
+
 
 
 ---@class FPalSkinInventoryInfo
@@ -8324,11 +10352,17 @@ FPalSkinInfo = {}
 ---@field bInitialize boolean
 FPalSkinInventoryInfo = {}
 
+---@return FPalSkinInventoryInfo
+function FPalSkinInventoryInfo:get() end
+
 
 
 ---@class FPalSkinPlatformItemData
 ---@field SkinName FName
 FPalSkinPlatformItemData = {}
+
+---@return FPalSkinPlatformItemData
+function FPalSkinPlatformItemData:get() end
 
 
 
@@ -8340,6 +10374,9 @@ FPalSkinPlatformItemData = {}
 ---@field IsEnableUpKeyNavigation boolean
 FPalSlateNavigationSetting = {}
 
+---@return FPalSlateNavigationSetting
+function FPalSlateNavigationSetting:get() end
+
 
 
 ---@class FPalSlotItemAndNum
@@ -8347,12 +10384,18 @@ FPalSlateNavigationSetting = {}
 ---@field Num int32
 FPalSlotItemAndNum = {}
 
+---@return FPalSlotItemAndNum
+function FPalSlotItemAndNum:get() end
+
 
 
 ---@class FPalSlotOpItemInfo
 ---@field Item FPalItemAndNum
 ---@field CorruptionProgressValue float
 FPalSlotOpItemInfo = {}
+
+---@return FPalSlotOpItemInfo
+function FPalSlotOpItemInfo:get() end
 
 
 
@@ -8362,17 +10405,26 @@ FPalSlotOpItemInfo = {}
 ---@field FromSlotId FPalItemSlotId
 FPalSlotOpItemSlotInfo = {}
 
+---@return FPalSlotOpItemSlotInfo
+function FPalSlotOpItemSlotInfo:get() end
+
 
 
 ---@class FPalSoundIDDataTableRow : FTableRowBase
 ---@field Description FName
 FPalSoundIDDataTableRow = {}
 
+---@return FPalSoundIDDataTableRow
+function FPalSoundIDDataTableRow:get() end
+
 
 
 ---@class FPalSoundOptions
 ---@field FadeInTime int32
 FPalSoundOptions = {}
+
+---@return FPalSoundOptions
+function FPalSoundOptions:get() end
 
 
 
@@ -8382,12 +10434,18 @@ FPalSoundOptions = {}
 ---@field bStopAbsolutely boolean
 FPalSoundPlayingParameter = {}
 
+---@return FPalSoundPlayingParameter
+function FPalSoundPlayingParameter:get() end
+
 
 
 ---@class FPalSoundSource : FTableRowBase
 ---@field Radius_Meter int32
 ---@field bIsMuteable boolean
 FPalSoundSource = {}
+
+---@return FPalSoundSource
+function FPalSoundSource:get() end
 
 
 
@@ -8397,6 +10455,9 @@ FPalSoundSource = {}
 ---@field OnlyWeather EPalWeatherConditionType
 ---@field PalList TArray<FPalSpawnerOneTribeInfo>
 FPalSpawnerGroupInfo = {}
+
+---@return FPalSpawnerGroupInfo
+function FPalSpawnerGroupInfo:get() end
 
 
 
@@ -8408,6 +10469,9 @@ FPalSpawnerGroupInfo = {}
 ---@field Num int32
 ---@field Num_Max int32
 FPalSpawnerOneTribeInfo = {}
+
+---@return FPalSpawnerOneTribeInfo
+function FPalSpawnerOneTribeInfo:get() end
 
 
 
@@ -8425,12 +10489,18 @@ FPalSpawnerOneTribeInfo = {}
 ---@field RespawnCoolTime float
 FPalSpawnerPlacementDatabaseRow = {}
 
+---@return FPalSpawnerPlacementDatabaseRow
+function FPalSpawnerPlacementDatabaseRow:get() end
+
 
 
 ---@class FPalSpecialAttackRateInfo
 ---@field Type EPalSpecialAttackRateType
 ---@field Rate float
 FPalSpecialAttackRateInfo = {}
+
+---@return FPalSpecialAttackRateInfo
+function FPalSpecialAttackRateInfo:get() end
 
 
 
@@ -8440,11 +10510,17 @@ FPalSpecialAttackRateInfo = {}
 ---@field bXY boolean
 FPalSphere = {}
 
+---@return FPalSphere
+function FPalSphere:get() end
+
 
 
 ---@class FPalStageAreaInfo
 ---@field BoundingBox FBox
 FPalStageAreaInfo = {}
+
+---@return FPalStageAreaInfo
+function FPalStageAreaInfo:get() end
 
 
 
@@ -8453,12 +10529,18 @@ FPalStageAreaInfo = {}
 ---@field bValid boolean
 FPalStageInstanceId = {}
 
+---@return FPalStageInstanceId
+function FPalStageInstanceId:get() end
+
 
 
 ---@class FPalStageModelRepInfo : FFastArraySerializerItem
 ---@field InstanceId FPalStageInstanceId
 ---@field Model UPalStageModelBase
 FPalStageModelRepInfo = {}
+
+---@return FPalStageModelRepInfo
+function FPalStageModelRepInfo:get() end
 
 
 
@@ -8467,11 +10549,17 @@ FPalStageModelRepInfo = {}
 ---@field PlayerState EPalStagePlayerState
 FPalStagePlayerInfo = {}
 
+---@return FPalStagePlayerInfo
+function FPalStagePlayerInfo:get() end
+
 
 
 ---@class FPalStaticCharacterInfo_SpawnItem
 ---@field FieldLotteryNameByRank TMap<int32, FPalDataTableRowName_FieldLotteryNameData>
 FPalStaticCharacterInfo_SpawnItem = {}
+
+---@return FPalStaticCharacterInfo_SpawnItem
+function FPalStaticCharacterInfo_SpawnItem:get() end
 
 
 
@@ -8479,6 +10567,9 @@ FPalStaticCharacterInfo_SpawnItem = {}
 ---@field ItemInfo FPalStaticItemIdAndNum
 ---@field SlotID FPalItemSlotId
 FPalStaticItemAndSlot = {}
+
+---@return FPalStaticItemAndSlot
+function FPalStaticItemAndSlot:get() end
 
 
 
@@ -8536,12 +10627,18 @@ FPalStaticItemAndSlot = {}
 ---@field FloatValue1 float
 FPalStaticItemDataStruct = {}
 
+---@return FPalStaticItemDataStruct
+function FPalStaticItemDataStruct:get() end
+
 
 
 ---@class FPalStaticItemIdAndDynamicItemDataSet
 ---@field StaticItemId FName
 ---@field DynamicItemData UPalDynamicItemDataBase
 FPalStaticItemIdAndDynamicItemDataSet = {}
+
+---@return FPalStaticItemIdAndDynamicItemDataSet
+function FPalStaticItemIdAndDynamicItemDataSet:get() end
 
 
 
@@ -8550,16 +10647,25 @@ FPalStaticItemIdAndDynamicItemDataSet = {}
 ---@field Num int32
 FPalStaticItemIdAndNum = {}
 
+---@return FPalStaticItemIdAndNum
+function FPalStaticItemIdAndNum:get() end
+
 
 
 ---@class FPalStatusAccumulate
 FPalStatusAccumulate = {}
+
+---@return FPalStatusAccumulate
+function FPalStatusAccumulate:get() end
 
 
 ---@class FPalStatusAndRank
 ---@field StatusName EPalCharacterStatusOperationName
 ---@field Rank int32
 FPalStatusAndRank = {}
+
+---@return FPalStatusAndRank
+function FPalStatusAndRank:get() end
 
 
 
@@ -8572,6 +10678,9 @@ FPalStatusAndRank = {}
 ---@field EffectValue2 int32
 ---@field Interaval2 int32
 FPalStatusEffectFoodDataRow = {}
+
+---@return FPalStatusEffectFoodDataRow
+function FPalStatusEffectFoodDataRow:get() end
 
 
 
@@ -8587,6 +10696,9 @@ FPalStatusEffectFoodDataRow = {}
 ---@field MapLocationId FGuid
 FPalSupplyInfo = {}
 
+---@return FPalSupplyInfo
+function FPalSupplyInfo:get() end
+
 
 
 ---@class FPalSupplySaveData
@@ -8595,6 +10707,9 @@ FPalSupplyInfo = {}
 ---@field LastLotteryTime FDateTime
 ---@field SupplyInfos TMap<FGuid, FPalSupplyInfo>
 FPalSupplySaveData = {}
+
+---@return FPalSupplySaveData
+function FPalSupplySaveData:get() end
 
 
 
@@ -8605,12 +10720,18 @@ FPalSupplySaveData = {}
 ---@field bIsFadeOutSkip boolean
 FPalSyncTeleportRequestParameter = {}
 
+---@return FPalSyncTeleportRequestParameter
+function FPalSyncTeleportRequestParameter:get() end
+
 
 
 ---@class FPalTalentUpItemDataRow : FTableRowBase
 ---@field TalentType EPalTalentType
 ---@field addValue int32
 FPalTalentUpItemDataRow = {}
+
+---@return FPalTalentUpItemDataRow
+function FPalTalentUpItemDataRow:get() end
 
 
 
@@ -8620,6 +10741,9 @@ FPalTalentUpItemDataRow = {}
 ---@field textID FName
 FPalTalkTreeDataTableRow = {}
 
+---@return FPalTalkTreeDataTableRow
+function FPalTalkTreeDataTableRow:get() end
+
 
 
 ---@class FPalTechnologyDataSet
@@ -8627,6 +10751,9 @@ FPalTalkTreeDataTableRow = {}
 ---@field technologyNameTable UDataTable
 ---@field technologyDescTable UDataTable
 FPalTechnologyDataSet = {}
+
+---@return FPalTechnologyDataSet
+function FPalTechnologyDataSet:get() end
 
 
 
@@ -8642,12 +10769,18 @@ FPalTechnologyDataSet = {}
 ---@field Cost int32
 FPalTechnologyDataTableRowBase = {}
 
+---@return FPalTechnologyDataTableRowBase
+function FPalTechnologyDataTableRowBase:get() end
+
 
 
 ---@class FPalTechnologyRecipeUnlockDataTableRow : FPalTechnologyDataTableRowBase
 ---@field UnlockBuildObjects TArray<FName>
 ---@field UnlockItemRecipes TArray<FName>
 FPalTechnologyRecipeUnlockDataTableRow = {}
+
+---@return FPalTechnologyRecipeUnlockDataTableRow
+function FPalTechnologyRecipeUnlockDataTableRow:get() end
 
 
 
@@ -8657,6 +10790,9 @@ FPalTechnologyRecipeUnlockDataTableRow = {}
 ---@field CurrentTemperature int32
 ---@field CurrentBodyState EPalBodyTemperatureState
 FPalTemperatureInfo = {}
+
+---@return FPalTemperatureInfo
+function FPalTemperatureInfo:get() end
 
 
 
@@ -8674,10 +10810,16 @@ FPalTemperatureInfo = {}
 ---@field IsHide boolean
 FPalTimerGaugeWidgetCreateInfo = {}
 
+---@return FPalTimerGaugeWidgetCreateInfo
+function FPalTimerGaugeWidgetCreateInfo:get() end
+
 
 
 ---@class FPalTimerHandle
 FPalTimerHandle = {}
+
+---@return FPalTimerHandle
+function FPalTimerHandle:get() end
 
 
 ---@class FPalTutorialTriggerSaveData
@@ -8685,16 +10827,25 @@ FPalTimerHandle = {}
 ---@field Checked boolean
 FPalTutorialTriggerSaveData = {}
 
+---@return FPalTutorialTriggerSaveData
+function FPalTutorialTriggerSaveData:get() end
+
 
 
 ---@class FPalUIActionBindData
 FPalUIActionBindData = {}
+
+---@return FPalUIActionBindData
+function FPalUIActionBindData:get() end
 
 
 ---@class FPalUIAimReticleMapObjectAssignableData
 ---@field isAssignable boolean
 ---@field targetMapObjectID FName
 FPalUIAimReticleMapObjectAssignableData = {}
+
+---@return FPalUIAimReticleMapObjectAssignableData
+function FPalUIAimReticleMapObjectAssignableData:get() end
 
 
 
@@ -8704,11 +10855,17 @@ FPalUIAimReticleMapObjectAssignableData = {}
 ---@field throwableType EPalMapObjectConcreteModelThrowableType
 FPalUIAimReticleMapObjectThrowableData = {}
 
+---@return FPalUIAimReticleMapObjectThrowableData
+function FPalUIAimReticleMapObjectThrowableData:get() end
+
 
 
 ---@class FPalUIBackupSaveDisplayData
 ---@field BackupName FString
 FPalUIBackupSaveDisplayData = {}
+
+---@return FPalUIBackupSaveDisplayData
+function FPalUIBackupSaveDisplayData:get() end
 
 
 
@@ -8716,6 +10873,9 @@ FPalUIBackupSaveDisplayData = {}
 ---@field TargetWork UPalWorkBase
 ---@field TargetGroupedWork UPalBaseCampGroupedWorkBase
 FPalUIBaseCampWorkFixedAssignInfo = {}
+
+---@return FPalUIBaseCampWorkFixedAssignInfo
+function FPalUIBaseCampWorkFixedAssignInfo:get() end
 
 
 
@@ -8734,11 +10894,17 @@ FPalUIBaseCampWorkFixedAssignInfo = {}
 ---@field RectLightSize float
 FPalUICaptureCameraOffsetData = {}
 
+---@return FPalUICaptureCameraOffsetData
+function FPalUICaptureCameraOffsetData:get() end
+
 
 
 ---@class FPalUICharacterSkinDisplayInfo
 ---@field SkinDataArray TArray<UPalSkinDataBase>
 FPalUICharacterSkinDisplayInfo = {}
+
+---@return FPalUICharacterSkinDisplayInfo
+function FPalUICharacterSkinDisplayInfo:get() end
 
 
 
@@ -8754,6 +10920,9 @@ FPalUICharacterSkinDisplayInfo = {}
 ---@field IsShowPrice boolean
 FPalUICommonItemInfoDisplayData = {}
 
+---@return FPalUICommonItemInfoDisplayData
+function FPalUICommonItemInfoDisplayData:get() end
+
 
 
 ---@class FPalUICommonRewardDisplayData
@@ -8763,6 +10932,9 @@ FPalUICommonItemInfoDisplayData = {}
 ---@field DisplayType EPalUIRewardDisplayType
 FPalUICommonRewardDisplayData = {}
 
+---@return FPalUICommonRewardDisplayData
+function FPalUICommonRewardDisplayData:get() end
+
 
 
 ---@class FPalUIGuildMemberDisplayInfo
@@ -8770,6 +10942,9 @@ FPalUICommonRewardDisplayData = {}
 ---@field IsAdmin boolean
 ---@field PlayerStatus EPalGuildPlayerStatus
 FPalUIGuildMemberDisplayInfo = {}
+
+---@return FPalUIGuildMemberDisplayInfo
+function FPalUIGuildMemberDisplayInfo:get() end
 
 
 
@@ -8785,6 +10960,9 @@ FPalUIGuildMemberDisplayInfo = {}
 ---@field BaseInfoSaveDataType EPalWorldBaseInfoSaveDataType
 FPalUILocalWorldDisplayData = {}
 
+---@return FPalUILocalWorldDisplayData
+function FPalUILocalWorldDisplayData:get() end
+
 
 
 ---@class FPalUIPalCaptureInfo
@@ -8798,6 +10976,9 @@ FPalUILocalWorldDisplayData = {}
 ---@field Exp int32
 FPalUIPalCaptureInfo = {}
 
+---@return FPalUIPalCaptureInfo
+function FPalUIPalCaptureInfo:get() end
+
 
 
 ---@class FPalUIPaldexDistributionData : FTableRowBase
@@ -8805,12 +10986,18 @@ FPalUIPalCaptureInfo = {}
 ---@field nightTimeLocations FPalUIPaldexDistributionLocationStruct
 FPalUIPaldexDistributionData = {}
 
+---@return FPalUIPaldexDistributionData
+function FPalUIPaldexDistributionData:get() end
+
 
 
 ---@class FPalUIPaldexDistributionLocationStruct
 ---@field locations TArray<FVector>
 ---@field Radius float
 FPalUIPaldexDistributionLocationStruct = {}
+
+---@return FPalUIPaldexDistributionLocationStruct
+function FPalUIPaldexDistributionLocationStruct:get() end
 
 
 
@@ -8822,11 +11009,17 @@ FPalUIPaldexDistributionLocationStruct = {}
 ---@field baseCharacterName FName
 FPalUIPaldex_DisplayInfo = {}
 
+---@return FPalUIPaldex_DisplayInfo
+function FPalUIPaldex_DisplayInfo:get() end
+
 
 
 ---@class FPalUIServerDataCollectInfo
 ---@field SortType EPalUIServerListSortType
 FPalUIServerDataCollectInfo = {}
+
+---@return FPalUIServerDataCollectInfo
+function FPalUIServerDataCollectInfo:get() end
 
 
 
@@ -8847,6 +11040,9 @@ FPalUIServerDataCollectInfo = {}
 ---@field CreateTime int32
 FPalUIServerDisplayData = {}
 
+---@return FPalUIServerDisplayData
+function FPalUIServerDisplayData:get() end
+
 
 
 ---@class FPalUMGCustomVertexData
@@ -8857,6 +11053,9 @@ FPalUIServerDisplayData = {}
 ---@field pixelWidth int32
 ---@field pixelHeight int32
 FPalUMGCustomVertexData = {}
+
+---@return FPalUMGCustomVertexData
+function FPalUMGCustomVertexData:get() end
 
 
 
@@ -8876,6 +11075,9 @@ FPalUMGCustomVertexData = {}
 ---@field Level int32
 FPalUniqueNPCDatabaseRow = {}
 
+---@return FPalUniqueNPCDatabaseRow
+function FPalUniqueNPCDatabaseRow:get() end
+
 
 
 ---@class FPalVisitorNPCDatabaseRow : FPalInvaderDatabaseRow
@@ -8883,11 +11085,17 @@ FPalUniqueNPCDatabaseRow = {}
 ---@field IsSquad boolean
 FPalVisitorNPCDatabaseRow = {}
 
+---@return FPalVisitorNPCDatabaseRow
+function FPalVisitorNPCDatabaseRow:get() end
+
 
 
 ---@class FPalVisualEffectDynamicParameter
 ---@field FloatValues TArray<FPalVisualEffectDynamicParameterFloat>
 FPalVisualEffectDynamicParameter = {}
+
+---@return FPalVisualEffectDynamicParameter
+function FPalVisualEffectDynamicParameter:get() end
 
 
 
@@ -8895,6 +11103,9 @@ FPalVisualEffectDynamicParameter = {}
 ---@field Name FName
 ---@field Value float
 FPalVisualEffectDynamicParameterFloat = {}
+
+---@return FPalVisualEffectDynamicParameterFloat
+function FPalVisualEffectDynamicParameterFloat:get() end
 
 
 
@@ -8904,6 +11115,9 @@ FPalVisualEffectDynamicParameterFloat = {}
 ---@field IntervalTime float
 ---@field InFirstDelayTime float
 FPalWaitLoadingWorldPartitionParameter = {}
+
+---@return FPalWaitLoadingWorldPartitionParameter
+function FPalWaitLoadingWorldPartitionParameter:get() end
 
 
 
@@ -8931,6 +11145,9 @@ FPalWaitLoadingWorldPartitionParameter = {}
 ---@field DisabledData boolean
 FPalWazaDatabaseRaw = {}
 
+---@return FPalWazaDatabaseRaw
+function FPalWazaDatabaseRaw:get() end
+
 
 
 ---@class FPalWazaMasterLevelDataRow : FTableRowBase
@@ -8939,12 +11156,18 @@ FPalWazaDatabaseRaw = {}
 ---@field Level int32
 FPalWazaMasterLevelDataRow = {}
 
+---@return FPalWazaMasterLevelDataRow
+function FPalWazaMasterLevelDataRow:get() end
+
 
 
 ---@class FPalWazaMasterTamagoDataRow : FTableRowBase
 ---@field PalID FName
 ---@field WazaID EPalWazaID
 FPalWazaMasterTamagoDataRow = {}
+
+---@return FPalWazaMasterTamagoDataRow
+function FPalWazaMasterTamagoDataRow:get() end
 
 
 
@@ -8957,6 +11180,9 @@ FPalWazaMasterTamagoDataRow = {}
 ---@field AmmoEjectTransform FTransform
 FPalWeaponBulletHijackInfo = {}
 
+---@return FPalWeaponBulletHijackInfo
+function FPalWeaponBulletHijackInfo:get() end
+
 
 
 ---@class FPalWeaponSubParameterData : FTableRowBase
@@ -8965,6 +11191,9 @@ FPalWeaponBulletHijackInfo = {}
 ---@field stability float
 ---@field accuracy float
 FPalWeaponSubParameterData = {}
+
+---@return FPalWeaponSubParameterData
+function FPalWeaponSubParameterData:get() end
 
 
 
@@ -8995,12 +11224,18 @@ FPalWeaponSubParameterData = {}
 ---@field bIsAllowRandomizer boolean
 FPalWildSpawnerDatabaseRow = {}
 
+---@return FPalWildSpawnerDatabaseRow
+function FPalWildSpawnerDatabaseRow:get() end
+
 
 
 ---@class FPalWindInfo
 ---@field Direction FVector
 ---@field Speed float
 FPalWindInfo = {}
+
+---@return FPalWindInfo
+function FPalWindInfo:get() end
 
 
 
@@ -9016,12 +11251,18 @@ FPalWindInfo = {}
 ---@field AffectSanityValue float
 FPalWorkAssignDefineData = {}
 
+---@return FPalWorkAssignDefineData
+function FPalWorkAssignDefineData:get() end
+
 
 
 ---@class FPalWorkAssignDefineDataStaticSetting
 ---@field RowName FName
 ---@field AssignDefineData FPalWorkAssignDefineData
 FPalWorkAssignDefineDataStaticSetting = {}
+
+---@return FPalWorkAssignDefineDataStaticSetting
+function FPalWorkAssignDefineDataStaticSetting:get() end
 
 
 
@@ -9031,12 +11272,18 @@ FPalWorkAssignDefineDataStaticSetting = {}
 ---@field AssignType EPalWorkAssignType
 FPalWorkAssignHandleId = {}
 
+---@return FPalWorkAssignHandleId
+function FPalWorkAssignHandleId:get() end
+
 
 
 ---@class FPalWorkAssignInfo
 ---@field LocationIndex int32
 ---@field WorkAssign UPalWorkAssign
 FPalWorkAssignInfo = {}
+
+---@return FPalWorkAssignInfo
+function FPalWorkAssignInfo:get() end
 
 
 
@@ -9045,10 +11292,16 @@ FPalWorkAssignInfo = {}
 ---@field FacingDirection FVector
 FPalWorkAssignLocalLocation = {}
 
+---@return FPalWorkAssignLocalLocation
+function FPalWorkAssignLocalLocation:get() end
+
 
 
 ---@class FPalWorkAssignParameter
 FPalWorkAssignParameter = {}
+
+---@return FPalWorkAssignParameter
+function FPalWorkAssignParameter:get() end
 
 
 ---@class FPalWorkAssignRepInfo : FFastArraySerializerItem
@@ -9056,19 +11309,31 @@ FPalWorkAssignParameter = {}
 ---@field WorkAssign UPalWorkAssign
 FPalWorkAssignRepInfo = {}
 
+---@return FPalWorkAssignRepInfo
+function FPalWorkAssignRepInfo:get() end
+
 
 
 ---@class FPalWorkAssignRequirementParameter
 FPalWorkAssignRequirementParameter = {}
 
+---@return FPalWorkAssignRequirementParameter
+function FPalWorkAssignRequirementParameter:get() end
+
 
 ---@class FPalWorkAssignSaveData : FPalBinaryMemory
 FPalWorkAssignSaveData = {}
+
+---@return FPalWorkAssignSaveData
+function FPalWorkAssignSaveData:get() end
 
 
 ---@class FPalWorkProgressManagerWorkProcessTickFunction : FTickFunction
 ---@field Target UPalWorkProgressManager
 FPalWorkProgressManagerWorkProcessTickFunction = {}
+
+---@return FPalWorkProgressManagerWorkProcessTickFunction
+function FPalWorkProgressManagerWorkProcessTickFunction:get() end
 
 
 
@@ -9076,6 +11341,9 @@ FPalWorkProgressManagerWorkProcessTickFunction = {}
 ---@field WorkableType EPalWorkableType
 ---@field WorkAssignMap TMap<int32, FPalWorkAssignSaveData>
 FPalWorkSaveData = {}
+
+---@return FPalWorkSaveData
+function FPalWorkSaveData:get() end
 
 
 
@@ -9086,12 +11354,18 @@ FPalWorkSaveData = {}
 ---@field AssignLocalLocations TArray<FPalWorkAssignLocalLocation>
 FPalWorkStaticParameter = {}
 
+---@return FPalWorkStaticParameter
+function FPalWorkStaticParameter:get() end
+
 
 
 ---@class FPalWorkSuitabilityCollectionDefineData
 ---@field CommonDefineData FPalWorkSuitabilityDefineData
 ---@field CollectionDefineData TArray<FPalCollectionRankDefineData>
 FPalWorkSuitabilityCollectionDefineData = {}
+
+---@return FPalWorkSuitabilityCollectionDefineData
+function FPalWorkSuitabilityCollectionDefineData:get() end
 
 
 
@@ -9100,12 +11374,18 @@ FPalWorkSuitabilityCollectionDefineData = {}
 ---@field CraftSpeeds TArray<int32>
 FPalWorkSuitabilityDefineData = {}
 
+---@return FPalWorkSuitabilityDefineData
+function FPalWorkSuitabilityDefineData:get() end
+
 
 
 ---@class FPalWorkSuitabilityDeforestDefineData
 ---@field CommonDefineData FPalWorkSuitabilityDefineData
 ---@field DeforestDefineData TArray<FPalDeforestRankDefineData>
 FPalWorkSuitabilityDeforestDefineData = {}
+
+---@return FPalWorkSuitabilityDeforestDefineData
+function FPalWorkSuitabilityDeforestDefineData:get() end
 
 
 
@@ -9114,12 +11394,18 @@ FPalWorkSuitabilityDeforestDefineData = {}
 ---@field Rank int32
 FPalWorkSuitabilityInfo = {}
 
+---@return FPalWorkSuitabilityInfo
+function FPalWorkSuitabilityInfo:get() end
+
 
 
 ---@class FPalWorkSuitabilityMiningDefineData
 ---@field CommonDefineData FPalWorkSuitabilityDefineData
 ---@field MiningDefineData TArray<FPalMiningRankDefineData>
 FPalWorkSuitabilityMiningDefineData = {}
+
+---@return FPalWorkSuitabilityMiningDefineData
+function FPalWorkSuitabilityMiningDefineData:get() end
 
 
 
@@ -9128,16 +11414,25 @@ FPalWorkSuitabilityMiningDefineData = {}
 ---@field bAllowBaseCampBattle boolean
 FPalWorkSuitabilityPreferenceInfo = {}
 
+---@return FPalWorkSuitabilityPreferenceInfo
+function FPalWorkSuitabilityPreferenceInfo:get() end
+
 
 
 ---@class FPalWorkTypeSet
 ---@field WorkTypes TArray<EPalWorkType>
 FPalWorkTypeSet = {}
 
+---@return FPalWorkTypeSet
+function FPalWorkTypeSet:get() end
+
 
 
 ---@class FPalWorkWaitParameter
 FPalWorkWaitParameter = {}
+
+---@return FPalWorkWaitParameter
+function FPalWorkWaitParameter:get() end
 
 
 ---@class FPalWorldBaseInfoData
@@ -9148,6 +11443,9 @@ FPalWorkWaitParameter = {}
 ---@field BaseInfoSaveDataType EPalWorldBaseInfoSaveDataType
 FPalWorldBaseInfoData = {}
 
+---@return FPalWorldBaseInfoData
+function FPalWorldBaseInfoData:get() end
+
 
 
 ---@class FPalWorldBaseInfoSaveData
@@ -9156,6 +11454,9 @@ FPalWorldBaseInfoData = {}
 ---@field HostPlayerLevel int32
 ---@field InGameDay int32
 FPalWorldBaseInfoSaveData = {}
+
+---@return FPalWorldBaseInfoSaveData
+function FPalWorldBaseInfoSaveData:get() end
 
 
 
@@ -9171,11 +11472,17 @@ FPalWorldBaseInfoSaveData = {}
 ---@field bEnableShow boolean
 FPalWorldHUDParameter = {}
 
+---@return FPalWorldHUDParameter
+function FPalWorldHUDParameter:get() end
+
 
 
 ---@class FPalWorldMapUIDataSave
 ---@field unlockedRegionMap TMap<FName, boolean>
 FPalWorldMapUIDataSave = {}
+
+---@return FPalWorldMapUIDataSave
+function FPalWorldMapUIDataSave:get() end
 
 
 
@@ -9188,6 +11495,9 @@ FPalWorldMapUIDataSave = {}
 ---@field DefaultMaskTexture TSoftObjectPtr<UTexture2D>
 FPalWorldMapUIDataTableRow = {}
 
+---@return FPalWorldMapUIDataTableRow
+function FPalWorldMapUIDataTableRow:get() end
+
 
 
 ---@class FPalWorldMapUIRegionData
@@ -9197,11 +11507,17 @@ FPalWorldMapUIDataTableRow = {}
 ---@field regionNameMsgId FName
 FPalWorldMapUIRegionData = {}
 
+---@return FPalWorldMapUIRegionData
+function FPalWorldMapUIRegionData:get() end
+
 
 
 ---@class FPalWorldObjectRecordData_MapObjectSpawner
 ---@field ItemMap TMap<int32, FPalWorldObjectRecordData_MapObjectSpawnerItem>
 FPalWorldObjectRecordData_MapObjectSpawner = {}
+
+---@return FPalWorldObjectRecordData_MapObjectSpawner
+function FPalWorldObjectRecordData_MapObjectSpawner:get() end
 
 
 
@@ -9209,12 +11525,18 @@ FPalWorldObjectRecordData_MapObjectSpawner = {}
 ---@field RecordDataMapByLevelObjectInstanceId TMap<FGuid, FPalWorldObjectRecordData_MapObjectSpawner>
 FPalWorldObjectRecordData_MapObjectSpawnerInStage = {}
 
+---@return FPalWorldObjectRecordData_MapObjectSpawnerInStage
+function FPalWorldObjectRecordData_MapObjectSpawnerInStage:get() end
+
 
 
 ---@class FPalWorldObjectRecordData_MapObjectSpawnerItem
 ---@field NextSpawnLotteryGameTime FGameDateTime
 ---@field MapObjectInstanceId FGuid
 FPalWorldObjectRecordData_MapObjectSpawnerItem = {}
+
+---@return FPalWorldObjectRecordData_MapObjectSpawnerItem
+function FPalWorldObjectRecordData_MapObjectSpawnerItem:get() end
 
 
 
@@ -9236,6 +11558,9 @@ FPalWorldObjectRecordData_MapObjectSpawnerItem = {}
 ---@field SkinInventoryInfo FPalSkinInventoryInfo
 ---@field bIsSelectedInitMapPoint boolean
 FPalWorldPlayerSaveData = {}
+
+---@return FPalWorldPlayerSaveData
+function FPalWorldPlayerSaveData:get() end
 
 
 
@@ -9264,6 +11589,9 @@ FPalWorldPlayerSaveData = {}
 ---@field WorldMetaSaveVersionBitMask uint32
 FPalWorldSaveData = {}
 
+---@return FPalWorldSaveData
+function FPalWorldSaveData:get() end
+
 
 
 ---@class FPalWorldSecurityWantedPoliceSettingData
@@ -9272,12 +11600,18 @@ FPalWorldSaveData = {}
 ---@field PoliceLevel int32
 FPalWorldSecurityWantedPoliceSettingData = {}
 
+---@return FPalWorldSecurityWantedPoliceSettingData
+function FPalWorldSecurityWantedPoliceSettingData:get() end
+
 
 
 ---@class FPalWorldSecurityWantedStateInfo
 ---@field ExpiredDate FDateTime
 ---@field CrimeInstanceIdArray TArray<FGuid>
 FPalWorldSecurityWantedStateInfo = {}
+
+---@return FPalWorldSecurityWantedStateInfo
+function FPalWorldSecurityWantedStateInfo:get() end
 
 
 
@@ -9287,6 +11621,9 @@ FPalWorldSecurityWantedStateInfo = {}
 ---@field ClavicleAdjustDegree float
 FPlayerGenderParams = {}
 
+---@return FPlayerGenderParams
+function FPlayerGenderParams:get() end
+
 
 
 ---@class FPlayerListItem
@@ -9295,10 +11632,16 @@ FPlayerGenderParams = {}
 ---@field UserId FString
 FPlayerListItem = {}
 
+---@return FPlayerListItem
+function FPlayerListItem:get() end
+
 
 
 ---@class FReactivePropertyFloat
 FReactivePropertyFloat = {}
+
+---@return FReactivePropertyFloat
+function FReactivePropertyFloat:get() end
 
 
 ---@class FReserveMontage
@@ -9307,6 +11650,9 @@ FReactivePropertyFloat = {}
 ---@field StartTime float
 FReserveMontage = {}
 
+---@return FReserveMontage
+function FReserveMontage:get() end
+
 
 
 ---@class FRiderActionInfo
@@ -9314,12 +11660,18 @@ FReserveMontage = {}
 ---@field GetOffAction TSubclassOf<UPalActionBase>
 FRiderActionInfo = {}
 
+---@return FRiderActionInfo
+function FRiderActionInfo:get() end
+
 
 
 ---@class FRidingAimingAnimationInfo
 ---@field ShootingAnimation UAnimSequence
 ---@field ShootingAO UAimOffsetBlendSpace
 FRidingAimingAnimationInfo = {}
+
+---@return FRidingAimingAnimationInfo
+function FRidingAimingAnimationInfo:get() end
 
 
 
@@ -9330,11 +11682,17 @@ FRidingAimingAnimationInfo = {}
 ---@field RideShootingAO UAimOffsetBlendSpace
 FRidingAnimationInfo = {}
 
+---@return FRidingAnimationInfo
+function FRidingAnimationInfo:get() end
+
 
 
 ---@class FSequentialProcessSequenceSet
 ---@field Sequences TArray<USequentialProcessSequenceBase>
 FSequentialProcessSequenceSet = {}
+
+---@return FSequentialProcessSequenceSet
+function FSequentialProcessSequenceSet:get() end
 
 
 
@@ -9344,12 +11702,18 @@ FSequentialProcessSequenceSet = {}
 ---@field CameraOffset FShooterSpringCameraParameter
 FShooterSpringCameraAdditionalOffset = {}
 
+---@return FShooterSpringCameraAdditionalOffset
+function FShooterSpringCameraAdditionalOffset:get() end
+
 
 
 ---@class FShooterSpringCameraParameter
 ---@field ArmLength float
 ---@field CameraOffset FVector
 FShooterSpringCameraParameter = {}
+
+---@return FShooterSpringCameraParameter
+function FShooterSpringCameraParameter:get() end
 
 
 
@@ -9362,6 +11726,9 @@ FShooterSpringCameraParameter = {}
 ---@field AttachLocationType EPalBodyLocationType
 FSkillEffectSpawnParameter = {}
 
+---@return FSkillEffectSpawnParameter
+function FSkillEffectSpawnParameter:get() end
+
 
 
 ---@class FSpawnedEnemyInfo
@@ -9370,12 +11737,18 @@ FSkillEffectSpawnParameter = {}
 ---@field TargetActor AActor
 FSpawnedEnemyInfo = {}
 
+---@return FSpawnedEnemyInfo
+function FSpawnedEnemyInfo:get() end
+
 
 
 ---@class FStatusDynamicParameter
 ---@field GeneralIndex int32
 ---@field GeneralName FName
 FStatusDynamicParameter = {}
+
+---@return FStatusDynamicParameter
+function FStatusDynamicParameter:get() end
 
 
 
@@ -9384,6 +11757,9 @@ FStatusDynamicParameter = {}
 ---@field DuplicateNum int32
 ---@field ThreatLevel_OnlyCharacterParam float
 FTargetAbleInfoForEnemy = {}
+
+---@return FTargetAbleInfoForEnemy
+function FTargetAbleInfoForEnemy:get() end
 
 
 
@@ -9396,6 +11772,9 @@ FTargetAbleInfoForEnemy = {}
 ---@field ConditionCategoryName FName
 ---@field ConditionValue float
 FTutorialDataStruct = {}
+
+---@return FTutorialDataStruct
+function FTutorialDataStruct:get() end
 
 
 
@@ -9411,6 +11790,9 @@ FTutorialDataStruct = {}
 ---@field TransientNPCTalkCountMap TMap<FName, int32>
 ---@field LoadingScreenLiving boolean
 FUITransientData = {}
+
+---@return FUITransientData
+function FUITransientData:get() end
 
 
 
@@ -9438,6 +11820,9 @@ FUITransientData = {}
 ---@field RidingAnimationMap TMap<EPalRidePositionType, FRidingAnimationInfo>
 FWeaponAnimationInfo = {}
 
+---@return FWeaponAnimationInfo
+function FWeaponAnimationInfo:get() end
+
 
 
 ---@class FWeaponNotifyAnimationInfo
@@ -9445,18 +11830,30 @@ FWeaponAnimationInfo = {}
 ---@field isAutoStop boolean
 FWeaponNotifyAnimationInfo = {}
 
+---@return FWeaponNotifyAnimationInfo
+function FWeaponNotifyAnimationInfo:get() end
+
 
 
 ---@class IBossBattleLevelSequenceRootInterface : IInterface
 IBossBattleLevelSequenceRootInterface = {}
 
+---@return IBossBattleLevelSequenceRootInterface
+function IBossBattleLevelSequenceRootInterface:get() end
+
 
 ---@class IPalAIActionCompositeOrderCommandInterface : IInterface
 IPalAIActionCompositeOrderCommandInterface = {}
 
+---@return IPalAIActionCompositeOrderCommandInterface
+function IPalAIActionCompositeOrderCommandInterface:get() end
+
 
 ---@class IPalAIActionWorkerInterruptInterface : IInterface
 IPalAIActionWorkerInterruptInterface = {}
+
+---@return IPalAIActionWorkerInterruptInterface
+function IPalAIActionWorkerInterruptInterface:get() end
 
 ---@return boolean
 function IPalAIActionWorkerInterruptInterface:IsInterruptibleBySleep() end
@@ -9467,6 +11864,9 @@ function IPalAIActionWorkerInterruptInterface:IsInterruptibleByRecoverHungry() e
 ---@class IPalAIControllerWorkerInterface : IInterface
 IPalAIControllerWorkerInterface = {}
 
+---@return IPalAIControllerWorkerInterface
+function IPalAIControllerWorkerInterface:get() end
+
 ---@return TSubclassOf<UPalAIControllerWorkerModule>
 function IPalAIControllerWorkerInterface:GetWorkerModuleClass() end
 
@@ -9474,12 +11874,18 @@ function IPalAIControllerWorkerInterface:GetWorkerModuleClass() end
 ---@class IPalAISightResponseTransitionableInterface : IInterface
 IPalAISightResponseTransitionableInterface = {}
 
+---@return IPalAISightResponseTransitionableInterface
+function IPalAISightResponseTransitionableInterface:get() end
+
 ---@param JudgeTypeList TArray<EPalAISightJudgementType>
 function IPalAISightResponseTransitionableInterface:GetTransitionableJudgementType(JudgeTypeList) end
 
 
 ---@class IPalBaseCampAssignableObjectInterface : IInterface
 IPalBaseCampAssignableObjectInterface = {}
+
+---@return IPalBaseCampAssignableObjectInterface
+function IPalBaseCampAssignableObjectInterface:get() end
 
 ---@return TScriptInterface<IPalMapObjectModelInterface>
 function IPalBaseCampAssignableObjectInterface:ToMapObjectModel() end
@@ -9490,45 +11896,78 @@ function IPalBaseCampAssignableObjectInterface:GetAssignType() end
 ---@class IPalBaseCampEnergyGeneratorInterface : IInterface
 IPalBaseCampEnergyGeneratorInterface = {}
 
+---@return IPalBaseCampEnergyGeneratorInterface
+function IPalBaseCampEnergyGeneratorInterface:get() end
+
 
 ---@class IPalBaseCampModulePassiveEffectWorkSpeedApplierInterface : IInterface
 IPalBaseCampModulePassiveEffectWorkSpeedApplierInterface = {}
+
+---@return IPalBaseCampModulePassiveEffectWorkSpeedApplierInterface
+function IPalBaseCampModulePassiveEffectWorkSpeedApplierInterface:get() end
 
 
 ---@class IPalBaseCampModuleResourceCollectorTargetInterface : IInterface
 IPalBaseCampModuleResourceCollectorTargetInterface = {}
 
+---@return IPalBaseCampModuleResourceCollectorTargetInterface
+function IPalBaseCampModuleResourceCollectorTargetInterface:get() end
+
 
 ---@class IPalBaseCampModuleTransportItemDepotInterface : IInterface
 IPalBaseCampModuleTransportItemDepotInterface = {}
+
+---@return IPalBaseCampModuleTransportItemDepotInterface
+function IPalBaseCampModuleTransportItemDepotInterface:get() end
 
 
 ---@class IPalBaseCampModuleTransportItemRequirerInterface : IInterface
 IPalBaseCampModuleTransportItemRequirerInterface = {}
 
+---@return IPalBaseCampModuleTransportItemRequirerInterface
+function IPalBaseCampModuleTransportItemRequirerInterface:get() end
+
 
 ---@class IPalBuildObjectSpawnValidationCheckInterface : IInterface
 IPalBuildObjectSpawnValidationCheckInterface = {}
+
+---@return IPalBuildObjectSpawnValidationCheckInterface
+function IPalBuildObjectSpawnValidationCheckInterface:get() end
 
 
 ---@class IPalGamePlayerDataSaveInterface : IInterface
 IPalGamePlayerDataSaveInterface = {}
 
+---@return IPalGamePlayerDataSaveInterface
+function IPalGamePlayerDataSaveInterface:get() end
+
 
 ---@class IPalGameSystemNeedSync : IInterface
 IPalGameSystemNeedSync = {}
+
+---@return IPalGameSystemNeedSync
+function IPalGameSystemNeedSync:get() end
 
 
 ---@class IPalGameSystemNeedWorldSync : IInterface
 IPalGameSystemNeedWorldSync = {}
 
+---@return IPalGameSystemNeedWorldSync
+function IPalGameSystemNeedWorldSync:get() end
+
 
 ---@class IPalGameWorldDataSaveInterface : IInterface
 IPalGameWorldDataSaveInterface = {}
 
+---@return IPalGameWorldDataSaveInterface
+function IPalGameWorldDataSaveInterface:get() end
+
 
 ---@class IPalHUDServiceProviderInterface : IInterface
 IPalHUDServiceProviderInterface = {}
+
+---@return IPalHUDServiceProviderInterface
+function IPalHUDServiceProviderInterface:get() end
 
 ---@param AkEvent UAkAudioEvent
 function IPalHUDServiceProviderInterface:PlayAkSound(AkEvent) end
@@ -9539,6 +11978,9 @@ function IPalHUDServiceProviderInterface:GetSoundPlayer() end
 ---@class IPalInflictDamageNotifyInterface : IInterface
 IPalInflictDamageNotifyInterface = {}
 
+---@return IPalInflictDamageNotifyInterface
+function IPalInflictDamageNotifyInterface:get() end
+
 ---@param DamageResult FPalDamageResult
 function IPalInflictDamageNotifyInterface:OnInflictDamage(DamageResult) end
 ---@param DeadInfo FPalDeadInfo
@@ -9548,12 +11990,18 @@ function IPalInflictDamageNotifyInterface:OnDefeatCharacter(DeadInfo) end
 ---@class IPalInteractiveInterface : IInterface
 IPalInteractiveInterface = {}
 
+---@return IPalInteractiveInterface
+function IPalInteractiveInterface:get() end
+
 ---@return boolean
 function IPalInteractiveInterface:IsEnableTriggerInteract() end
 
 
 ---@class IPalInteractiveObjectComponentInterface : IPalInteractiveInterface
 IPalInteractiveObjectComponentInterface = {}
+
+---@return IPalInteractiveObjectComponentInterface
+function IPalInteractiveObjectComponentInterface:get() end
 
 ---@param InIndicatorInterface TScriptInterface<IPalInteractiveObjectIndicatorInterface>
 function IPalInteractiveObjectComponentInterface:SetIndicatorInterface(InIndicatorInterface) end
@@ -9577,21 +12025,36 @@ function IPalInteractiveObjectComponentInterface:Delegates() end
 ---@class IPalInteractiveObjectIndicatorInterface : IInterface
 IPalInteractiveObjectIndicatorInterface = {}
 
+---@return IPalInteractiveObjectIndicatorInterface
+function IPalInteractiveObjectIndicatorInterface:get() end
+
 
 ---@class IPalLevelObjectInterface : IInterface
 IPalLevelObjectInterface = {}
+
+---@return IPalLevelObjectInterface
+function IPalLevelObjectInterface:get() end
 
 
 ---@class IPalLimitVolumeInterface : IInterface
 IPalLimitVolumeInterface = {}
 
+---@return IPalLimitVolumeInterface
+function IPalLimitVolumeInterface:get() end
+
 
 ---@class IPalMapObjectConcreteModelModuleItemHolderInterface : IInterface
 IPalMapObjectConcreteModelModuleItemHolderInterface = {}
 
+---@return IPalMapObjectConcreteModelModuleItemHolderInterface
+function IPalMapObjectConcreteModelModuleItemHolderInterface:get() end
+
 
 ---@class IPalMapObjectItemCollectableInterface : IInterface
 IPalMapObjectItemCollectableInterface = {}
+
+---@return IPalMapObjectItemCollectableInterface
+function IPalMapObjectItemCollectableInterface:get() end
 
 ---@return EPalMapObjectItemCollectableType
 function IPalMapObjectItemCollectableInterface:GetItemCollectableType() end
@@ -9602,6 +12065,9 @@ function IPalMapObjectItemCollectableInterface:GetCollectableStaticItemIds(OutSt
 ---@class IPalMapObjectModelInterface : IInterface
 IPalMapObjectModelInterface = {}
 
+---@return IPalMapObjectModelInterface
+function IPalMapObjectModelInterface:get() end
+
 ---@return FGuid
 function IPalMapObjectModelInterface:GetModelId() end
 
@@ -9609,12 +12075,18 @@ function IPalMapObjectModelInterface:GetModelId() end
 ---@class IPalMapObjectRequireElementalActionInterface : IInterface
 IPalMapObjectRequireElementalActionInterface = {}
 
+---@return IPalMapObjectRequireElementalActionInterface
+function IPalMapObjectRequireElementalActionInterface:get() end
+
 ---@return FName
 function IPalMapObjectRequireElementalActionInterface:GetAssignDefineId() end
 
 
 ---@class IPalMapObjectWaterRecievableInterface : IInterface
 IPalMapObjectWaterRecievableInterface = {}
+
+---@return IPalMapObjectWaterRecievableInterface
+function IPalMapObjectWaterRecievableInterface:get() end
 
 ---@param Waterer AActor
 function IPalMapObjectWaterRecievableInterface:OnWaterOneshot(Waterer) end
@@ -9627,9 +12099,15 @@ function IPalMapObjectWaterRecievableInterface:OnWateringBegin(Waterer) end
 ---@class IPalMapObjectWorkerAvailableFacilityInterface : IInterface
 IPalMapObjectWorkerAvailableFacilityInterface = {}
 
+---@return IPalMapObjectWorkerAvailableFacilityInterface
+function IPalMapObjectWorkerAvailableFacilityInterface:get() end
+
 
 ---@class IPalMonsterControllerBaseCampInterface : IInterface
 IPalMonsterControllerBaseCampInterface = {}
+
+---@return IPalMonsterControllerBaseCampInterface
+function IPalMonsterControllerBaseCampInterface:get() end
 
 ---@param actionClass TSubclassOf<UPalAIActionBase>
 function IPalMonsterControllerBaseCampInterface:TerminateBaseCampActionByClass(actionClass) end
@@ -9663,12 +12141,18 @@ function IPalMonsterControllerBaseCampInterface:InterruptPlayWorkerEventAction(a
 ---@class IPalMonsterControllerLogInterface : IInterface
 IPalMonsterControllerLogInterface = {}
 
+---@return IPalMonsterControllerLogInterface
+function IPalMonsterControllerLogInterface:get() end
+
 ---@param Content FPalMonsterControllerBaseCampLogContent
 function IPalMonsterControllerLogInterface:ShowBaseCampLog(Content) end
 
 
 ---@class IPalNPCTalkSystemCustomFunctionInterface : IInterface
 IPalNPCTalkSystemCustomFunctionInterface = {}
+
+---@return IPalNPCTalkSystemCustomFunctionInterface
+function IPalNPCTalkSystemCustomFunctionInterface:get() end
 
 ---@param CustomFunctionResult EPalNPCTalkCustomFunctionResult
 function IPalNPCTalkSystemCustomFunctionInterface:SetCustomFunctionResult(CustomFunctionResult) end
@@ -9682,9 +12166,15 @@ function IPalNPCTalkSystemCustomFunctionInterface:AddArgument(Key, Text) end
 ---@class IPalNiagaraSoundStopInterface : IInterface
 IPalNiagaraSoundStopInterface = {}
 
+---@return IPalNiagaraSoundStopInterface
+function IPalNiagaraSoundStopInterface:get() end
+
 
 ---@class IPalObjectDurabilityInterface : IInterface
 IPalObjectDurabilityInterface = {}
+
+---@return IPalObjectDurabilityInterface
+function IPalObjectDurabilityInterface:get() end
 
 ---@param NewDurability float
 function IPalObjectDurabilityInterface:SetDurability(NewDurability) end
@@ -9697,9 +12187,15 @@ function IPalObjectDurabilityInterface:GetDurability() end
 ---@class IPalOilrigHandledActorInterface : IInterface
 IPalOilrigHandledActorInterface = {}
 
+---@return IPalOilrigHandledActorInterface
+function IPalOilrigHandledActorInterface:get() end
+
 
 ---@class IPalOwnerCharacterAcquirableInterface : IInterface
 IPalOwnerCharacterAcquirableInterface = {}
+
+---@return IPalOwnerCharacterAcquirableInterface
+function IPalOwnerCharacterAcquirableInterface:get() end
 
 ---@return APalCharacter
 function IPalOwnerCharacterAcquirableInterface:GetOwnerCharacter() end
@@ -9708,6 +12204,9 @@ function IPalOwnerCharacterAcquirableInterface:GetOwnerCharacter() end
 ---@class IPalReticleTargetableInterface : IInterface
 IPalReticleTargetableInterface = {}
 
+---@return IPalReticleTargetableInterface
+function IPalReticleTargetableInterface:get() end
+
 ---@return boolean
 function IPalReticleTargetableInterface:IsShowOutlineInReticleTargetting() end
 
@@ -9715,9 +12214,15 @@ function IPalReticleTargetableInterface:IsShowOutlineInReticleTargetting() end
 ---@class IPalSystemInitializeInterface : IInterface
 IPalSystemInitializeInterface = {}
 
+---@return IPalSystemInitializeInterface
+function IPalSystemInitializeInterface:get() end
+
 
 ---@class IPalUICharacterDisplayOptionInterface : IInterface
 IPalUICharacterDisplayOptionInterface = {}
+
+---@return IPalUICharacterDisplayOptionInterface
+function IPalUICharacterDisplayOptionInterface:get() end
 
 ---@param Slot UPalIndividualCharacterSlot
 ---@return boolean
@@ -9727,9 +12232,15 @@ function IPalUICharacterDisplayOptionInterface:IsSelectableSlot(Slot) end
 ---@class IPalWorkProgressWorkableCheckInterface : IInterface
 IPalWorkProgressWorkableCheckInterface = {}
 
+---@return IPalWorkProgressWorkableCheckInterface
+function IPalWorkProgressWorkableCheckInterface:get() end
+
 
 ---@class UActionDynamicParameterUtility : UBlueprintFunctionLibrary
 UActionDynamicParameterUtility = {}
+
+---@return UActionDynamicParameterUtility
+function UActionDynamicParameterUtility:get() end
 
 ---@param DynamicParameterRef FActionDynamicParameter
 ---@param Blackboard FPalNetArchive
@@ -9738,6 +12249,9 @@ function UActionDynamicParameterUtility:SetBlackboard(DynamicParameterRef, Black
 
 ---@class UFixedPoint64MathLibrary : UBlueprintFunctionLibrary
 UFixedPoint64MathLibrary = {}
+
+---@return UFixedPoint64MathLibrary
+function UFixedPoint64MathLibrary:get() end
 
 ---@param A FFixedPoint64
 ---@param B int64
@@ -9882,6 +12396,9 @@ function UFixedPoint64MathLibrary:Add_FixedPoint64FixedPoint64(A, B) end
 ---@class UFixedPointMathLibrary : UBlueprintFunctionLibrary
 UFixedPointMathLibrary = {}
 
+---@return UFixedPointMathLibrary
+function UFixedPointMathLibrary:get() end
+
 ---@param A FFixedPoint
 ---@param B int32
 ---@return FFixedPoint
@@ -10019,12 +12536,18 @@ function UFixedPointMathLibrary:Add_FixedPointFixedPoint(A, B) end
 ---@class ULambdaWrapper : UObject
 ULambdaWrapper = {}
 
+---@return ULambdaWrapper
+function ULambdaWrapper:get() end
+
 ---@param IsSuccess boolean
 function ULambdaWrapper:Dispatch(IsSuccess) end
 
 
 ---@class UPaRichTextDecorator_KeyGuideIcon : URichTextBlockDecorator
 UPaRichTextDecorator_KeyGuideIcon = {}
+
+---@return UPaRichTextDecorator_KeyGuideIcon
+function UPaRichTextDecorator_KeyGuideIcon:get() end
 
 ---@param WorldContextObject UObject
 ---@param ID FName
@@ -10047,6 +12570,9 @@ function UPaRichTextDecorator_KeyGuideIcon:CreateWidget(KeyGuideActionName, Icon
 ---@field OnResumeActionDelegate FPalAIActionBaseOnResumeActionDelegate
 ---@field OnFinishActionDelegate FPalAIActionBaseOnFinishActionDelegate
 UPalAIActionBase = {}
+
+---@return UPalAIActionBase
+function UPalAIActionBase:get() end
 
 ---@param MoveSpeedType EPalMovementSpeedType
 function UPalAIActionBase:SetWalkSpeed_ForAIAction(MoveSpeedType) end
@@ -10100,6 +12626,9 @@ function UPalAIActionBase:ActionAbort(ControlledPawn) end
 ---@field WalkSpeedDefault float
 UPalAIActionBaseCampBase = {}
 
+---@return UPalAIActionBaseCampBase
+function UPalAIActionBaseCampBase:get() end
+
 ---@param CombatActionClass TSubclassOf<UPalAIActionCombatBase>
 function UPalAIActionBaseCampBase:StartCombatAction(CombatActionClass) end
 ---@param Current float
@@ -10127,10 +12656,16 @@ function UPalAIActionBaseCampBase:ChangeActionToWorker() end
 ---@class UPalAIActionBaseCampCage : UPalAIActionBase
 UPalAIActionBaseCampCage = {}
 
+---@return UPalAIActionBaseCampCage
+function UPalAIActionBaseCampCage:get() end
+
 
 ---@class UPalAIActionBaseCampChildBase : UPalAIActionBase
 ---@field BaseCampParentAction TWeakObjectPtr<UPalAIActionBaseCampBase>
 UPalAIActionBaseCampChildBase = {}
+
+---@return UPalAIActionBaseCampChildBase
+function UPalAIActionBaseCampChildBase:get() end
 
 
 
@@ -10145,12 +12680,18 @@ UPalAIActionBaseCampChildBase = {}
 ---@field DefenseWaitActionClass TSubclassOf<UPalActionBase>
 UPalAIActionBaseCampDefenseBase = {}
 
+---@return UPalAIActionBaseCampDefenseBase
+function UPalAIActionBaseCampDefenseBase:get() end
+
 ---@return APalAIController
 function UPalAIActionBaseCampDefenseBase:GetControllerRef() end
 
 
 ---@class UPalAIActionBaseCampDefenseGunner : UPalAIActionBaseCampDefenseBase
 UPalAIActionBaseCampDefenseGunner = {}
+
+---@return UPalAIActionBaseCampDefenseGunner
+function UPalAIActionBaseCampDefenseGunner:get() end
 
 function UPalAIActionBaseCampDefenseGunner:StopTrigger() end
 function UPalAIActionBaseCampDefenseGunner:OnShootBullet() end
@@ -10159,16 +12700,25 @@ function UPalAIActionBaseCampDefenseGunner:OnShootBullet() end
 ---@class UPalAIActionBaseCampDefenseWait : UPalAIActionBaseCampDefenseBase
 UPalAIActionBaseCampDefenseWait = {}
 
+---@return UPalAIActionBaseCampDefenseWait
+function UPalAIActionBaseCampDefenseWait:get() end
+
 
 ---@class UPalAIActionBaseCampDodgeWork : UPalAIActionBase
 ---@field WalkAroundSettings FPalBaseCampWorkerWalkAroundSettings
 ---@field WalkAroundDynamicInfo FPalBaseCampWorkerWalkAroundDynamicInfo
 UPalAIActionBaseCampDodgeWork = {}
 
+---@return UPalAIActionBaseCampDodgeWork
+function UPalAIActionBaseCampDodgeWork:get() end
+
 
 
 ---@class UPalAIActionBaseCampInUsingAmusement : UPalAIActionBaseCampBase
 UPalAIActionBaseCampInUsingAmusement = {}
+
+---@return UPalAIActionBaseCampInUsingAmusement
+function UPalAIActionBaseCampInUsingAmusement:get() end
 
 ---@return float
 function UPalAIActionBaseCampInUsingAmusement:GetUsingTime() end
@@ -10181,6 +12731,9 @@ function UPalAIActionBaseCampInUsingAmusement:GetUsingTime() end
 ---@field HungeryParameter FPalMonsterControllerBaseCampHungryParameter
 UPalAIActionBaseCampRecoverHungry = {}
 
+---@return UPalAIActionBaseCampRecoverHungry
+function UPalAIActionBaseCampRecoverHungry:get() end
+
 function UPalAIActionBaseCampRecoverHungry:ChangeActionEat() end
 function UPalAIActionBaseCampRecoverHungry:ChangeActionApproach() end
 
@@ -10188,9 +12741,15 @@ function UPalAIActionBaseCampRecoverHungry:ChangeActionApproach() end
 ---@class UPalAIActionBaseCampRecoverHungryApproachToFoodBox : UPalAIActionBaseCampRecoverHungryChildBase
 UPalAIActionBaseCampRecoverHungryApproachToFoodBox = {}
 
+---@return UPalAIActionBaseCampRecoverHungryApproachToFoodBox
+function UPalAIActionBaseCampRecoverHungryApproachToFoodBox:get() end
+
 
 ---@class UPalAIActionBaseCampRecoverHungryChildBase : UPalAIActionBaseCampChildBase
 UPalAIActionBaseCampRecoverHungryChildBase = {}
+
+---@return UPalAIActionBaseCampRecoverHungryChildBase
+function UPalAIActionBaseCampRecoverHungryChildBase:get() end
 
 ---@param OutTargetModel UPalMapObjectConcreteModelBase
 ---@return boolean
@@ -10214,25 +12773,40 @@ function UPalAIActionBaseCampRecoverHungryChildBase:GetHungryParameter(HungeryPa
 ---@field TurnSpeed float
 UPalAIActionBaseCampRecoverHungryEat = {}
 
+---@return UPalAIActionBaseCampRecoverHungryEat
+function UPalAIActionBaseCampRecoverHungryEat:get() end
+
 function UPalAIActionBaseCampRecoverHungryEat:OnFinishEatingTime() end
 
 
 ---@class UPalAIActionBaseCampRecoverHungryProductFood : UPalAIActionBaseCampRecoverHungryChildBase
 UPalAIActionBaseCampRecoverHungryProductFood = {}
 
+---@return UPalAIActionBaseCampRecoverHungryProductFood
+function UPalAIActionBaseCampRecoverHungryProductFood:get() end
+
 
 ---@class UPalAIActionBaseCampReturnBack : UPalAIActionBase
 UPalAIActionBaseCampReturnBack = {}
 
+---@return UPalAIActionBaseCampReturnBack
+function UPalAIActionBaseCampReturnBack:get() end
+
 
 ---@class UPalAIActionBaseCampSleep : UPalAIActionBaseCampBase
 UPalAIActionBaseCampSleep = {}
+
+---@return UPalAIActionBaseCampSleep
+function UPalAIActionBaseCampSleep:get() end
 
 
 ---@class UPalAIActionBaseCampSleepActively : UPalAIActionBaseCampBase
 ---@field ReservedBedModelInstanceId FGuid
 ---@field Mode EPalAIActionBaseCampSleepActivelyMode
 UPalAIActionBaseCampSleepActively = {}
+
+---@return UPalAIActionBaseCampSleepActively
+function UPalAIActionBaseCampSleepActively:get() end
 
 ---@param Parameter FPalAIActionBaseCampSleepActivelyParameter
 function UPalAIActionBaseCampSleepActively:SetParameter(Parameter) end
@@ -10241,6 +12815,9 @@ function UPalAIActionBaseCampSleepActively:SetParameter(Parameter) end
 ---@class UPalAIActionBaseCampSpawningForWorker : UPalAIActionBase
 ---@field OnLandedWorldStaticDelegate FPalAIActionBaseCampSpawningForWorkerOnLandedWorldStaticDelegate
 UPalAIActionBaseCampSpawningForWorker = {}
+
+---@return UPalAIActionBaseCampSpawningForWorker
+function UPalAIActionBaseCampSpawningForWorker:get() end
 
 function UPalAIActionBaseCampSpawningForWorker:SimpleMulticastDelegate__DelegateSignature() end
 ---@param Hit FHitResult
@@ -10255,10 +12832,16 @@ function UPalAIActionBaseCampSpawningForWorker:OnLanded(Hit) end
 ---@field AttackTargetMapObjectInstanceId FGuid
 UPalAIActionBaseCampTrantrum = {}
 
+---@return UPalAIActionBaseCampTrantrum
+function UPalAIActionBaseCampTrantrum:get() end
+
 
 
 ---@class UPalAIActionBaseCampUtility : UBlueprintFunctionLibrary
 UPalAIActionBaseCampUtility = {}
+
+---@return UPalAIActionBaseCampUtility
+function UPalAIActionBaseCampUtility:get() end
 
 ---@param AddPriority EPalRequestSoftScriptPriorityAdd
 ---@return EAIRequestPriority::Type
@@ -10267,6 +12850,9 @@ function UPalAIActionBaseCampUtility:GetRequestSoftScriptPriority(AddPriority) e
 
 ---@class UPalAIActionCollectItemToStorage : UPalAIActionBase
 UPalAIActionCollectItemToStorage = {}
+
+---@return UPalAIActionCollectItemToStorage
+function UPalAIActionCollectItemToStorage:get() end
 
 
 ---@class UPalAIActionCombatBase : UPalAIActionBase
@@ -10281,6 +12867,9 @@ UPalAIActionCollectItemToStorage = {}
 ---@field bInterruptSkill boolean
 ---@field bInterruptSkillWaiting boolean
 UPalAIActionCombatBase = {}
+
+---@return UPalAIActionCombatBase
+function UPalAIActionCombatBase:get() end
 
 ---@param ActionComponent UPalActionComponent
 function UPalAIActionCombatBase:StartNextAction_Event(ActionComponent) end
@@ -10314,14 +12903,23 @@ function UPalAIActionCombatBase:ChangeNextAction() end
 ---@class UPalAIActionCombat_BaseCamp : UPalAIActionCombatBase
 UPalAIActionCombat_BaseCamp = {}
 
+---@return UPalAIActionCombat_BaseCamp
+function UPalAIActionCombat_BaseCamp:get() end
+
 
 ---@class UPalAIActionCombat_Standard : UPalAIActionCombatBase
 UPalAIActionCombat_Standard = {}
+
+---@return UPalAIActionCombat_Standard
+function UPalAIActionCombat_Standard:get() end
 
 
 ---@class UPalAIActionComponent : UPawnActionsComponent
 ---@field ActionCompositeRoots TArray<UPalAIActionCompositeBase>
 UPalAIActionComponent = {}
+
+---@return UPalAIActionComponent
+function UPalAIActionComponent:get() end
 
 ---@param actionClass TSubclassOf<UPalAIActionBase>
 function UPalAIActionComponent:TerminateCurrentActionByClass(actionClass) end
@@ -10365,6 +12963,9 @@ function UPalAIActionComponent:AllCancelAction_Logic_HardScript_Reaction(Instiga
 ---@class UPalAIActionCompositeActionDummy : UPalAIActionCompositeBase
 UPalAIActionCompositeActionDummy = {}
 
+---@return UPalAIActionCompositeActionDummy
+function UPalAIActionCompositeActionDummy:get() end
+
 ---@param action UPalAIActionBase
 function UPalAIActionCompositeActionDummy:OnResumeAction(action) end
 ---@param action UPalAIActionBase
@@ -10378,6 +12979,9 @@ function UPalAIActionCompositeActionDummy:OnFinishAction(action) end
 ---@field Child UPalAIActionCompositeBase
 ---@field OwnerComponent UPalAIActionComponent
 UPalAIActionCompositeBase = {}
+
+---@return UPalAIActionCompositeBase
+function UPalAIActionCompositeBase:get() end
 
 ---@param Composite UPalAIActionCompositeBase
 function UPalAIActionCompositeBase:SetChildActionComposite(Composite) end
@@ -10404,6 +13008,9 @@ function UPalAIActionCompositeBase:GetActionComponent() end
 ---@field WalkSpeedDefault float
 UPalAIActionCompositeBaseCamp = {}
 
+---@return UPalAIActionCompositeBaseCamp
+function UPalAIActionCompositeBaseCamp:get() end
+
 ---@param OrderType EPalMapBaseCampWorkerOrderType
 function UPalAIActionCompositeBaseCamp:NotifyOrderCommand(OrderType) end
 function UPalAIActionCompositeBaseCamp:InterruptActionToSleep() end
@@ -10421,6 +13028,9 @@ function UPalAIActionCompositeBaseCamp:ChangeActionToWorker() end
 ---@field SpeedFlagName FName
 ---@field DefaultWalkSpeed float
 UPalAIActionCompositeWorker = {}
+
+---@return UPalAIActionCompositeWorker
+function UPalAIActionCompositeWorker:get() end
 
 function UPalAIActionCompositeWorker:UnregisterFixAssignWork() end
 ---@return boolean
@@ -10449,16 +13059,25 @@ function UPalAIActionCompositeWorker:ChangeActionApproachToWorkArea() end
 ---@field DefenseActionClass TSubclassOf<UPalAIActionBaseCampDefenseBase>
 UPalAIActionCompositeWorkerBaseCamp = {}
 
+---@return UPalAIActionCompositeWorkerBaseCamp
+function UPalAIActionCompositeWorkerBaseCamp:get() end
+
 
 
 ---@class UPalAIActionCompositeWorkerModuleBase : UObject
 ---@field Owner UPalAIActionCompositeWorker
 UPalAIActionCompositeWorkerModuleBase = {}
 
+---@return UPalAIActionCompositeWorkerModuleBase
+function UPalAIActionCompositeWorkerModuleBase:get() end
+
 
 
 ---@class UPalAIActionCompositeWorkerModuleBaseCamp : UPalAIActionCompositeWorkerModuleBase
 UPalAIActionCompositeWorkerModuleBaseCamp = {}
+
+---@return UPalAIActionCompositeWorkerModuleBaseCamp
+function UPalAIActionCompositeWorkerModuleBaseCamp:get() end
 
 ---@return FGuid
 function UPalAIActionCompositeWorkerModuleBaseCamp:GetBaseCampIdBelongTo() end
@@ -10468,6 +13087,9 @@ function UPalAIActionCompositeWorkerModuleBaseCamp:GetBaseCampBelongTo() end
 
 ---@class UPalAIActionCompositeWorkerModuleNormal : UPalAIActionCompositeWorkerModuleBase
 UPalAIActionCompositeWorkerModuleNormal = {}
+
+---@return UPalAIActionCompositeWorkerModuleNormal
+function UPalAIActionCompositeWorkerModuleNormal:get() end
 
 
 ---@class UPalAIActionCoopAssaultrifleMode : UPalAIActionBase
@@ -10480,6 +13102,9 @@ UPalAIActionCompositeWorkerModuleNormal = {}
 ---@field ReticleTarget APalCharacter
 ---@field AimStartPoint FVector
 UPalAIActionCoopAssaultrifleMode = {}
+
+---@return UPalAIActionCoopAssaultrifleMode
+function UPalAIActionCoopAssaultrifleMode:get() end
 
 ---@param DeltaTime float
 function UPalAIActionCoopAssaultrifleMode:Update(DeltaTime) end
@@ -10522,10 +13147,16 @@ function UPalAIActionCoopAssaultrifleMode:ClearTargetCharacter() end
 ---@field ApproachTarget APalCharacter
 UPalAIActionFed = {}
 
+---@return UPalAIActionFed
+function UPalAIActionFed:get() end
+
 
 
 ---@class UPalAIActionFunnelCharacterDefault : UPalAIActionCompositeBase
 UPalAIActionFunnelCharacterDefault = {}
+
+---@return UPalAIActionFunnelCharacterDefault
+function UPalAIActionFunnelCharacterDefault:get() end
 
 ---@return boolean
 function UPalAIActionFunnelCharacterDefault:ShouldSetSkillAction() end
@@ -10541,12 +13172,18 @@ function UPalAIActionFunnelCharacterDefault:CreateSkillActionModule(FunnelSkillM
 ---@field Module UPalFunnelSkillModule
 UPalAIActionFunnelSkillBase = {}
 
+---@return UPalAIActionFunnelSkillBase
+function UPalAIActionFunnelSkillBase:get() end
+
 ---@param InModule UPalFunnelSkillModule
 function UPalAIActionFunnelSkillBase:SetModule(InModule) end
 
 
 ---@class UPalAIActionLiftup : UPalAIActionBase
 UPalAIActionLiftup = {}
+
+---@return UPalAIActionLiftup
+function UPalAIActionLiftup:get() end
 
 function UPalAIActionLiftup:OnLanded() end
 ---@param Hit FHitResult
@@ -10555,6 +13192,9 @@ function UPalAIActionLiftup:CallOnLanded(Hit) end
 
 ---@class UPalAIActionNPCRelaxWanderUtility : UBlueprintFunctionLibrary
 UPalAIActionNPCRelaxWanderUtility = {}
+
+---@return UPalAIActionNPCRelaxWanderUtility
+function UPalAIActionNPCRelaxWanderUtility:get() end
 
 ---@param Center FVector
 ---@param Radius float
@@ -10565,6 +13205,9 @@ function UPalAIActionNPCRelaxWanderUtility:CreateWalkPointNodes(Center, Radius, 
 
 ---@class UPalAIActionOtomoDefault : UPalAIActionCompositeBase
 UPalAIActionOtomoDefault = {}
+
+---@return UPalAIActionOtomoDefault
+function UPalAIActionOtomoDefault:get() end
 
 ---@return boolean
 function UPalAIActionOtomoDefault:ShouldSetCombatAction() end
@@ -10581,9 +13224,15 @@ function UPalAIActionOtomoDefault:SetOtomoBaseCampAction() end
 ---@class UPalAIActionWorkerApproachToWorkArea : UPalAIActionWorkerChildBase
 UPalAIActionWorkerApproachToWorkArea = {}
 
+---@return UPalAIActionWorkerApproachToWorkArea
+function UPalAIActionWorkerApproachToWorkArea:get() end
+
 
 ---@class UPalAIActionWorkerChildBase : UPalAIActionBase
 UPalAIActionWorkerChildBase = {}
+
+---@return UPalAIActionWorkerChildBase
+function UPalAIActionWorkerChildBase:get() end
 
 ---@param TurnSpeed float
 ---@param DeltaTime float
@@ -10604,12 +13253,18 @@ function UPalAIActionWorkerChildBase:GetParent() end
 ---@field LookTargetCharacter APalCharacter
 UPalAIActionWorkerReaction = {}
 
+---@return UPalAIActionWorkerReaction
+function UPalAIActionWorkerReaction:get() end
+
 
 
 ---@class UPalAIActionWorkerWait : UPalAIActionWorkerChildBase
 ---@field WalkAroundSettings FPalBaseCampWorkerWalkAroundSettings
 ---@field WalkAroundDynamicInfo FPalBaseCampWorkerWalkAroundDynamicInfo
 UPalAIActionWorkerWait = {}
+
+---@return UPalAIActionWorkerWait
+function UPalAIActionWorkerWait:get() end
 
 ---@param DeltaTime float
 function UPalAIActionWorkerWait:TickForWalkAround(DeltaTime) end
@@ -10632,11 +13287,17 @@ function UPalAIActionWorkerWait:CalcWalkAroundDestination(Radius, OutDestination
 ---@class UPalAIActionWorkerWaitForWorkable : UPalAIActionWorkerChildBase
 UPalAIActionWorkerWaitForWorkable = {}
 
+---@return UPalAIActionWorkerWaitForWorkable
+function UPalAIActionWorkerWaitForWorkable:get() end
+
 
 ---@class UPalAIActionWorkerWorking : UPalAIActionWorkerChildBase
 ---@field CurrentWorkType EPalWorkType
 ---@field TurnSpeedToTarget float
 UPalAIActionWorkerWorking = {}
+
+---@return UPalAIActionWorkerWorking
+function UPalAIActionWorkerWorking:get() end
 
 
 
@@ -10646,6 +13307,9 @@ UPalAIActionWorkerWorking = {}
 ---@field Movement UPalCharacterMovementComponent
 UPalAIAction_LeaveBase = {}
 
+---@return UPalAIAction_LeaveBase
+function UPalAIAction_LeaveBase:get() end
+
 ---@param CombatTarget AActor
 ---@param SelfCharactor APalCharacter
 function UPalAIAction_LeaveBase:InitializeObject(CombatTarget, SelfCharactor) end
@@ -10654,9 +13318,15 @@ function UPalAIAction_LeaveBase:InitializeObject(CombatTarget, SelfCharactor) en
 ---@class UPalAIBlackboardBase : UObject
 UPalAIBlackboardBase = {}
 
+---@return UPalAIBlackboardBase
+function UPalAIBlackboardBase:get() end
+
 
 ---@class UPalAICombatModule : UObject
 UPalAICombatModule = {}
+
+---@return UPalAICombatModule
+function UPalAICombatModule:get() end
 
 function UPalAICombatModule:UpdateBattleState() end
 function UPalAICombatModule:Setup() end
@@ -10679,13 +13349,22 @@ function UPalAICombatModule:AIMoveToTargetActor(Target) end
 ---@class UPalAICombatModule_BaseCamp : UPalAICombatModule
 UPalAICombatModule_BaseCamp = {}
 
+---@return UPalAICombatModule_BaseCamp
+function UPalAICombatModule_BaseCamp:get() end
+
 
 ---@class UPalAICombatModule_EnemyNormal : UPalAICombatModule
 UPalAICombatModule_EnemyNormal = {}
 
+---@return UPalAICombatModule_EnemyNormal
+function UPalAICombatModule_EnemyNormal:get() end
+
 
 ---@class UPalAICombatModule_Invader : UPalAICombatModule
 UPalAICombatModule_Invader = {}
+
+---@return UPalAICombatModule_Invader
+function UPalAICombatModule_Invader:get() end
 
 ---@param Actor AActor
 function UPalAICombatModule_Invader:OnBattleFinish_forDelegate(Actor) end
@@ -10694,12 +13373,18 @@ function UPalAICombatModule_Invader:OnBattleFinish_forDelegate(Actor) end
 ---@class UPalAICombatModule_Otomo : UPalAICombatModule
 UPalAICombatModule_Otomo = {}
 
+---@return UPalAICombatModule_Otomo
+function UPalAICombatModule_Otomo:get() end
+
 
 ---@class UPalAICombatModule_RaidBoss : UPalAICombatModule
 ---@field TargetBaseCampActor APalMapObject
 ---@field TargetBaseCampID FGuid
 ---@field TargetCamp TWeakObjectPtr<UPalBaseCampModel>
 UPalAICombatModule_RaidBoss = {}
+
+---@return UPalAICombatModule_RaidBoss
+function UPalAICombatModule_RaidBoss:get() end
 
 ---@param CampID FGuid
 function UPalAICombatModule_RaidBoss:Setup_ForBP(CampID) end
@@ -10716,6 +13401,9 @@ function UPalAICombatModule_RaidBoss:FindPlayerTarget() end
 ---@class UPalAICombatModule_Wild : UPalAICombatModule
 UPalAICombatModule_Wild = {}
 
+---@return UPalAICombatModule_Wild
+function UPalAICombatModule_Wild:get() end
+
 ---@param Actor AActor
 function UPalAICombatModule_Wild:OnBattleFinish_forDelegate(Actor) end
 ---@return boolean
@@ -10724,6 +13412,9 @@ function UPalAICombatModule_Wild:JudgeReturnCombatStartPosition() end
 
 ---@class UPalAIControllerBaseCampStatus : UObject
 UPalAIControllerBaseCampStatus = {}
+
+---@return UPalAIControllerBaseCampStatus
+function UPalAIControllerBaseCampStatus:get() end
 
 ---@return FGuid
 function UPalAIControllerBaseCampStatus:GetBaseCampId() end
@@ -10734,18 +13425,30 @@ function UPalAIControllerBaseCampStatus:GetBaseCamp() end
 ---@class UPalAIControllerWorkerModule : UObject
 UPalAIControllerWorkerModule = {}
 
+---@return UPalAIControllerWorkerModule
+function UPalAIControllerWorkerModule:get() end
+
 
 ---@class UPalAIControllerWorkerModuleBaseCamp : UPalAIControllerWorkerModule
 UPalAIControllerWorkerModuleBaseCamp = {}
+
+---@return UPalAIControllerWorkerModuleBaseCamp
+function UPalAIControllerWorkerModuleBaseCamp:get() end
 
 
 ---@class UPalAIControllerWorkerModuleNormal : UPalAIControllerWorkerModule
 UPalAIControllerWorkerModuleNormal = {}
 
+---@return UPalAIControllerWorkerModuleNormal
+function UPalAIControllerWorkerModuleNormal:get() end
+
 
 ---@class UPalAIDamageReactionComponent : UActorComponent
 ---@field IsIgnoreDamageRolling boolean
 UPalAIDamageReactionComponent = {}
+
+---@return UPalAIDamageReactionComponent
+function UPalAIDamageReactionComponent:get() end
 
 function UPalAIDamageReactionComponent:FunctionTest() end
 
@@ -10760,6 +13463,9 @@ function UPalAIDamageReactionComponent:FunctionTest() end
 ---@field Damaged_Equal EPalAIResponseType
 ---@field Damaged_Smaller EPalAIResponseType
 UPalAIResponsePreset = {}
+
+---@return UPalAIResponsePreset
+function UPalAIResponsePreset:get() end
 
 
 
@@ -10777,6 +13483,9 @@ UPalAIResponsePreset = {}
 ---@field DisableSightFlag FFlagContainer
 ---@field OnFReceiveSoundDelegate FPalAISensorComponentOnFReceiveSoundDelegate
 UPalAISensorComponent = {}
+
+---@return UPalAISensorComponent
+function UPalAISensorComponent:get() end
 
 ---@param InSightPlayers TArray<APalCharacter>
 ---@param RangeRate float
@@ -10821,6 +13530,9 @@ function UPalAISensorComponent:DeadAutoRemoveDelegate(DeadInfo) end
 ---@field SightResponsePreset UPalAISightResponsePreset
 UPalAISightResponse = {}
 
+---@return UPalAISightResponse
+function UPalAISightResponse:get() end
+
 
 
 ---@class UPalAISightResponsePreset : UObject
@@ -10828,6 +13540,9 @@ UPalAISightResponse = {}
 ---@field AimedByPlayerDelegate FPalAISightResponsePresetAimedByPlayerDelegate
 ---@field DelegateMap TMap<EPalAISightJudgementType, FPalAISightResponsePresetDelegateMap>
 UPalAISightResponsePreset = {}
+
+---@return UPalAISightResponsePreset
+function UPalAISightResponsePreset:get() end
 
 ---@param SelfCharacter APalCharacter
 ---@param FoundCharacter APalCharacter
@@ -10845,6 +13560,9 @@ function UPalAISightResponsePreset:BlueprintDelegateSetup() end
 ---@field SkillStatus TMap<FPalDataTableRowName_PassiveSkillData, FPalPassiveAbilitySkillStatus>
 ---@field CurrentRank int32
 UPalAbilityPassiveSkill = {}
+
+---@return UPalAbilityPassiveSkill
+function UPalAbilityPassiveSkill:get() end
 
 ---@param Parameter UPalCharacterParameterComponent
 function UPalAbilityPassiveSkill:OnWorkerAssignChanged(Parameter) end
@@ -10898,6 +13616,9 @@ function UPalAbilityPassiveSkill:GetOtomoRank() end
 ---@field PassiveSkill UPalAbilityPassiveSkill
 UPalAbilitySkillParameterComponent = {}
 
+---@return UPalAbilitySkillParameterComponent
+function UPalAbilitySkillParameterComponent:get() end
+
 function UPalAbilitySkillParameterComponent:OnRideInactivated() end
 function UPalAbilitySkillParameterComponent:OnRideActivated() end
 ---@param ID FPalInstanceID
@@ -10925,6 +13646,9 @@ function UPalAbilitySkillParameterComponent:InitializedCharacterByFunnel() end
 ---@field bIsReflectForClient boolean
 ---@field DynamicParameter FActionDynamicParameter
 UPalActionBase = {}
+
+---@return UPalActionBase
+function UPalActionBase:get() end
 
 ---@param DeltaTime float
 function UPalActionBase:TickAction(DeltaTime) end
@@ -10989,6 +13713,9 @@ function UPalActionBase:ActionEndDelegate__DelegateSignature() end
 ---@field ActionQueue TArray<UPalActionBase>
 ---@field TerminateWaitActionList TArray<UPalActionBase>
 UPalActionComponent = {}
+
+---@return UPalActionComponent
+function UPalActionComponent:get() end
 
 ---@param Param FActionDynamicParameter
 ---@param actionClass TSubclassOf<UPalActionBase>
@@ -11073,10 +13800,16 @@ function UPalActionComponent:ActionIsEmpty() end
 ---@field ActionDummyTargetCache TArray<APalActionDummyTargetActor>
 UPalActionDummyTargetManager = {}
 
+---@return UPalActionDummyTargetManager
+function UPalActionDummyTargetManager:get() end
+
 
 
 ---@class UPalActionOneShotAnimation : UPalActionBase
 UPalActionOneShotAnimation = {}
+
+---@return UPalActionOneShotAnimation
+function UPalActionOneShotAnimation:get() end
 
 ---@param Montage UAnimMontage
 ---@param bInterrupted boolean
@@ -11088,6 +13821,9 @@ function UPalActionOneShotAnimation:OnEndMontage(Montage, bInterrupted) end
 ---@field SpawnLocationOffset FVector
 ---@field SpawnItemRotator FRotator
 UPalActionSpawnItem = {}
+
+---@return UPalActionSpawnItem
+function UPalActionSpawnItem:get() end
 
 ---@param BlackboardRef FPalNetArchive
 ---@param ItemInfo FPalStaticItemIdAndNum
@@ -11101,6 +13837,9 @@ function UPalActionSpawnItem:ReadBlackboard(ItemInfo) end
 ---@field ItemAttachSocketName FName
 ---@field ItemActor AActor
 UPalActionTransportItem = {}
+
+---@return UPalActionTransportItem
+function UPalActionTransportItem:get() end
 
 ---@param BlackboardRef FPalNetArchive
 ---@param StaticItemId FName
@@ -11117,6 +13856,9 @@ function UPalActionTransportItem:ReadBlackboard(StaticItemId) end
 ---@field bApplyFullStomachCost boolean
 UPalActionWazaBase = {}
 
+---@return UPalActionWazaBase
+function UPalActionWazaBase:get() end
+
 function UPalActionWazaBase:StopAkSound() end
 ---@param AudioEvent UAkAudioEvent
 function UPalActionWazaBase:PlayAkSound(AudioEvent) end
@@ -11128,6 +13870,9 @@ function UPalActionWazaBase:GetRiderPlayer() end
 
 ---@class UPalAction_BeLiftup : UPalActionBase
 UPalAction_BeLiftup = {}
+
+---@return UPalAction_BeLiftup
+function UPalAction_BeLiftup:get() end
 
 function UPalAction_BeLiftup:OnStartLifting() end
 function UPalAction_BeLiftup:OnStartInterpTransform() end
@@ -11142,6 +13887,9 @@ function UPalAction_BeLiftup:OnAttachedForBP() end
 ---@field NiagaraComponent UNiagaraComponent
 UPalAction_BeThrown = {}
 
+---@return UPalAction_BeThrown
+function UPalAction_BeThrown:get() end
+
 function UPalAction_BeThrown:PlayThrownMontage() end
 function UPalAction_BeThrown:PlayThrownFX() end
 
@@ -11149,11 +13897,17 @@ function UPalAction_BeThrown:PlayThrownFX() end
 ---@class UPalAction_DrownCheckBase : UPalStatusBase
 UPalAction_DrownCheckBase = {}
 
+---@return UPalAction_DrownCheckBase
+function UPalAction_DrownCheckBase:get() end
+
 
 ---@class UPalAction_FeedItemToCharacter : UPalActionBase
 ---@field TurnSpeed float
 ---@field TargetCharacterAction UPalAIActionFed
 UPalAction_FeedItemToCharacter = {}
+
+---@return UPalAction_FeedItemToCharacter
+function UPalAction_FeedItemToCharacter:get() end
 
 function UPalAction_FeedItemToCharacter:TimeoutStartTargetCharacterApproachAction() end
 function UPalAction_FeedItemToCharacter:SimpleDelegate__DelegateSignature() end
@@ -11167,6 +13921,9 @@ function UPalAction_FeedItemToCharacter:OnCancelByInputGuard() end
 ---@field AttachRelativeLocationOffsetZ float
 ---@field bIsAttachToLeftHand boolean
 UPalAction_Liftup = {}
+
+---@return UPalAction_Liftup
+function UPalAction_Liftup:get() end
 
 function UPalAction_Liftup:StartRagdollForTargetCharacter() end
 function UPalAction_Liftup:StartInterpTransformForAttachCharacter() end
@@ -11184,6 +13941,9 @@ function UPalAction_Liftup:AttachLiftedCharacter() end
 ---@field bIsAttachToLeftHand boolean
 UPalAction_LiftupThrow = {}
 
+---@return UPalAction_LiftupThrow
+function UPalAction_LiftupThrow:get() end
+
 function UPalAction_LiftupThrow:PlayWeaponChangeAnime() end
 function UPalAction_LiftupThrow:PlayPlayerThrowMontage() end
 function UPalAction_LiftupThrow:LaunchLiftObject() end
@@ -11192,6 +13952,9 @@ function UPalAction_LiftupThrow:LaunchLiftObject() end
 ---@class UPalAction_SleepPlayerBed : UPalActionBase
 ---@field OnGetupTriggerDelegate FPalAction_SleepPlayerBedOnGetupTriggerDelegate
 UPalAction_SleepPlayerBed = {}
+
+---@return UPalAction_SleepPlayerBed
+function UPalAction_SleepPlayerBed:get() end
 
 function UPalAction_SleepPlayerBed:OnGetupTriggerDelegate__DelegateSignature() end
 function UPalAction_SleepPlayerBed:OnGetupPlayerBedFromModel() end
@@ -11205,10 +13968,16 @@ function UPalAction_SleepPlayerBed:GetupBroadcast() end
 ---@field GameMouseCaptureMode EMouseCaptureMode
 UPalActivatableWidget = {}
 
+---@return UPalActivatableWidget
+function UPalActivatableWidget:get() end
+
 
 
 ---@class UPalActivatableWidgetContainer : UCommonActivatableWidgetStack
 UPalActivatableWidgetContainer = {}
+
+---@return UPalActivatableWidgetContainer
+function UPalActivatableWidgetContainer:get() end
 
 
 ---@class UPalActiveSkill : UObject
@@ -11225,6 +13994,9 @@ UPalActivatableWidgetContainer = {}
 ---@field bIsTransient boolean
 UPalActiveSkill = {}
 
+---@return UPalActiveSkill
+function UPalActiveSkill:get() end
+
 function UPalActiveSkill:OnRep_UpdateCoolTime() end
 function UPalActiveSkill:OnRep_ChangeCTState() end
 ---@param CoolRate float
@@ -11240,6 +14012,9 @@ function UPalActiveSkill:IsCoolTimeFinish() end
 ---@field IsEndInit boolean
 ---@field CoolDownSpeedRateMap FFloatContainer
 UPalActiveSkillSlot = {}
+
+---@return UPalActiveSkillSlot
+function UPalActiveSkillSlot:get() end
 
 ---@param DeltaTime float
 function UPalActiveSkillSlot:UpdateCoolTime(DeltaTime) end
@@ -11316,10 +14091,16 @@ function UPalActiveSkillSlot:CanUse(SlotID, TargetActor) end
 ---@class UPalActorChannel : UActorChannel
 UPalActorChannel = {}
 
+---@return UPalActorChannel
+function UPalActorChannel:get() end
+
 
 ---@class UPalAkComponent : UAkComponent
 ---@field PersistAcrossLevelTransition boolean
 UPalAkComponent = {}
+
+---@return UPalAkComponent
+function UPalAkComponent:get() end
 
 
 
@@ -11330,6 +14111,9 @@ UPalAkComponent = {}
 ---@field AkComponent UAkComponent
 UPalAmbientSoundLineComponent = {}
 
+---@return UPalAmbientSoundLineComponent
+function UPalAmbientSoundLineComponent:get() end
+
 
 
 ---@class UPalAmbientSoundLineObject : UObject
@@ -11337,6 +14121,9 @@ UPalAmbientSoundLineComponent = {}
 ---@field ActivateTrigger UBoxComponent
 ---@field AkComponent UAkComponent
 UPalAmbientSoundLineObject = {}
+
+---@return UPalAmbientSoundLineObject
+function UPalAmbientSoundLineObject:get() end
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param OtherActor AActor
@@ -11365,6 +14152,9 @@ function UPalAmbientSoundLineObject:OnActivateTriggerLineOverlapEnd(OverlappedCo
 ---@field AdditiveAnimationRate FFloatContainer
 ---@field DisableUpperOverrideFlag FFlagContainer
 UPalAnimInstance = {}
+
+---@return UPalAnimInstance
+function UPalAnimInstance:get() end
 
 ---@param flagName FName
 ---@param isDisable boolean
@@ -11433,21 +14223,33 @@ function UPalAnimInstance:AddList(BoneName) end
 ---@field MyActor AActor
 UPalAnimNotifyDynamicParameterAttackCollision = {}
 
+---@return UPalAnimNotifyDynamicParameterAttackCollision
+function UPalAnimNotifyDynamicParameterAttackCollision:get() end
+
 
 
 ---@class UPalAnimNotifyDynamicParameterAvoidTime : UPalAnimNotifyDynamicParameterBase
 ---@field AttackResponseMap TMap<UPrimitiveComponent, ECollisionResponse>
 UPalAnimNotifyDynamicParameterAvoidTime = {}
 
+---@return UPalAnimNotifyDynamicParameterAvoidTime
+function UPalAnimNotifyDynamicParameterAvoidTime:get() end
+
 
 
 ---@class UPalAnimNotifyDynamicParameterBase : UObject
 UPalAnimNotifyDynamicParameterBase = {}
 
+---@return UPalAnimNotifyDynamicParameterBase
+function UPalAnimNotifyDynamicParameterBase:get() end
+
 
 ---@class UPalAnimNotifyParameterComponent : UActorComponent
 ---@field DynamicParameterMap TMap<FString, UPalAnimNotifyDynamicParameterBase>
 UPalAnimNotifyParameterComponent = {}
+
+---@return UPalAnimNotifyParameterComponent
+function UPalAnimNotifyParameterComponent:get() end
 
 
 
@@ -11460,6 +14262,9 @@ UPalAnimNotifyParameterComponent = {}
 ---@field ShapeComponent UShapeComponent
 ---@field ShapeComponents TArray<UShapeComponent>
 UPalAnimNotifyState_AttackCollision = {}
+
+---@return UPalAnimNotifyState_AttackCollision
+function UPalAnimNotifyState_AttackCollision:get() end
 
 ---@param MyHitComponent UPrimitiveComponent
 ---@param HitActor AActor
@@ -11475,12 +14280,18 @@ function UPalAnimNotifyState_AttackCollision:OnHit(MyHitComponent, HitActor, Hit
 ---@field BulletResponseMap TMap<UPrimitiveComponent, ECollisionResponse>
 UPalAnimNotifyState_AvoidTime = {}
 
+---@return UPalAnimNotifyState_AvoidTime
+function UPalAnimNotifyState_AvoidTime:get() end
+
 
 
 ---@class UPalAnimNotifyState_Effect : UAnimNotifyState_TimedNiagaraEffect
 ---@field UserParameterMap TMap<FName, float>
 ---@field ScaleWithMesh boolean
 UPalAnimNotifyState_Effect = {}
+
+---@return UPalAnimNotifyState_Effect
+function UPalAnimNotifyState_Effect:get() end
 
 
 
@@ -11489,6 +14300,9 @@ UPalAnimNotifyState_Effect = {}
 ---@field AutoDefaultWhenEnd boolean
 UPalAnimNotifyState_FacialEye = {}
 
+---@return UPalAnimNotifyState_FacialEye
+function UPalAnimNotifyState_FacialEye:get() end
+
 
 
 ---@class UPalAnimNotifyState_FacialMouth : UAnimNotifyState
@@ -11496,20 +14310,32 @@ UPalAnimNotifyState_FacialEye = {}
 ---@field AutoDefaultWhenEnd boolean
 UPalAnimNotifyState_FacialMouth = {}
 
+---@return UPalAnimNotifyState_FacialMouth
+function UPalAnimNotifyState_FacialMouth:get() end
+
 
 
 ---@class UPalAnimNotifyState_FlyMeshHeight : UAnimNotifyState
 ---@field IsToLand boolean
 UPalAnimNotifyState_FlyMeshHeight = {}
 
+---@return UPalAnimNotifyState_FlyMeshHeight
+function UPalAnimNotifyState_FlyMeshHeight:get() end
+
 
 
 ---@class UPalAnimNotifyState_HidePalWeapon : UAnimNotifyState
 UPalAnimNotifyState_HidePalWeapon = {}
 
+---@return UPalAnimNotifyState_HidePalWeapon
+function UPalAnimNotifyState_HidePalWeapon:get() end
+
 
 ---@class UPalAnimNotifyState_LookAtDisable : UAnimNotifyState
 UPalAnimNotifyState_LookAtDisable = {}
+
+---@return UPalAnimNotifyState_LookAtDisable
+function UPalAnimNotifyState_LookAtDisable:get() end
 
 
 ---@class UPalAnimNotifyState_MovementControl : UAnimNotifyState
@@ -11523,6 +14349,9 @@ UPalAnimNotifyState_LookAtDisable = {}
 ---@field bIsDisableJump boolean
 UPalAnimNotifyState_MovementControl = {}
 
+---@return UPalAnimNotifyState_MovementControl
+function UPalAnimNotifyState_MovementControl:get() end
+
 
 
 ---@class UPalAnimNotifyState_WeaponControl : UAnimNotifyState
@@ -11534,11 +14363,17 @@ UPalAnimNotifyState_MovementControl = {}
 ---@field Priority EPalShooterFlagContainerPriority
 UPalAnimNotifyState_WeaponControl = {}
 
+---@return UPalAnimNotifyState_WeaponControl
+function UPalAnimNotifyState_WeaponControl:get() end
+
 
 
 ---@class UPalAnimNotify_FacialEye : UAnimNotify
 ---@field EyeType EPalFacialEyeType
 UPalAnimNotify_FacialEye = {}
+
+---@return UPalAnimNotify_FacialEye
+function UPalAnimNotify_FacialEye:get() end
 
 
 
@@ -11546,12 +14381,18 @@ UPalAnimNotify_FacialEye = {}
 ---@field MouthType EPalFacialMouthType
 UPalAnimNotify_FacialMouth = {}
 
+---@return UPalAnimNotify_FacialMouth
+function UPalAnimNotify_FacialMouth:get() end
+
 
 
 ---@class UPalAnimNotify_FootStep : UAnimNotify
 ---@field DefaultEffectAssetClass TSoftClassPtr<UPalFootStepEffectAssetBase>
 ---@field EffectAssetCache UPalFootStepEffectAssetBase
 UPalAnimNotify_FootStep = {}
+
+---@return UPalAnimNotify_FootStep
+function UPalAnimNotify_FootStep:get() end
 
 ---@param WorldObject UObject
 ---@param LandingType EPalLandingType
@@ -11579,10 +14420,16 @@ function UPalAnimNotify_FootStep:GetFloorPosition(Owner, FootTransform, HitResul
 ---@field UserParameterMap TMap<FName, float>
 UPalAnimNotify_PlayNiagaraEffect = {}
 
+---@return UPalAnimNotify_PlayNiagaraEffect
+function UPalAnimNotify_PlayNiagaraEffect:get() end
+
 
 
 ---@class UPalAnimNotify_RequestJump : UAnimNotify
 UPalAnimNotify_RequestJump = {}
+
+---@return UPalAnimNotify_RequestJump
+function UPalAnimNotify_RequestJump:get() end
 
 
 ---@class UPalAnimNotify_RequestRideShakeAnimation : UAnimNotify
@@ -11592,6 +14439,9 @@ UPalAnimNotify_RequestJump = {}
 ---@field cacheCharacter TWeakObjectPtr<APalCharacter>
 ---@field RateList TArray<float>
 UPalAnimNotify_RequestRideShakeAnimation = {}
+
+---@return UPalAnimNotify_RequestRideShakeAnimation
+function UPalAnimNotify_RequestRideShakeAnimation:get() end
 
 function UPalAnimNotify_RequestRideShakeAnimation:OnStartAim() end
 ---@param Montage UAnimMontage
@@ -11603,6 +14453,9 @@ function UPalAnimNotify_RequestRideShakeAnimation:OnEndMotion(Montage, bInterrup
 ---@field NotifyType EPalCurrentActionNotifyType
 UPalAnimNotify_SendActionEvent = {}
 
+---@return UPalAnimNotify_SendActionEvent
+function UPalAnimNotify_SendActionEvent:get() end
+
 
 
 ---@class UPalAnimNotify_SpawnActor : UAnimNotify
@@ -11611,24 +14464,39 @@ UPalAnimNotify_SendActionEvent = {}
 ---@field SpawnRotationOffset FRotator
 UPalAnimNotify_SpawnActor = {}
 
+---@return UPalAnimNotify_SpawnActor
+function UPalAnimNotify_SpawnActor:get() end
+
 
 
 ---@class UPalAnimNotify_StaminaMeleeAttack : UAnimNotify
 UPalAnimNotify_StaminaMeleeAttack = {}
+
+---@return UPalAnimNotify_StaminaMeleeAttack
+function UPalAnimNotify_StaminaMeleeAttack:get() end
 
 
 ---@class UPalAnimNotify_WeaponNotify : UAnimNotify
 ---@field WeaponNotifyType EWeaponNotifyType
 UPalAnimNotify_WeaponNotify = {}
 
+---@return UPalAnimNotify_WeaponNotify
+function UPalAnimNotify_WeaponNotify:get() end
+
 
 
 ---@class UPalArenaCharacterRefresher : UObject
 UPalArenaCharacterRefresher = {}
 
+---@return UPalArenaCharacterRefresher
+function UPalArenaCharacterRefresher:get() end
+
 
 ---@class UPalArenaDefine : UBlueprintFunctionLibrary
 UPalArenaDefine = {}
+
+---@return UPalArenaDefine
+function UPalArenaDefine:get() end
 
 ---@return FGuid
 function UPalArenaDefine:OutsiderPlayerUid() end
@@ -11656,6 +14524,9 @@ function UPalArenaDefine:ArenaOutBattleFlag() end
 ---@field InBattleTime int32
 UPalArenaInstanceModel = {}
 
+---@return UPalArenaInstanceModel
+function UPalArenaInstanceModel:get() end
+
 function UPalArenaInstanceModel:StartInBattleTimer_ServerInternal() end
 ---@param BattleEndTime FDateTime
 function UPalArenaInstanceModel:OnChangeBattleEndTimeDelegate__DelegateSignature(BattleEndTime) end
@@ -11674,6 +14545,9 @@ function UPalArenaInstanceModel:GetArenaInstanceState() end
 ---@field OutAreaCheckTimerHandle FTimerHandle
 UPalArenaOutAreaChecker = {}
 
+---@return UPalArenaOutAreaChecker
+function UPalArenaOutAreaChecker:get() end
+
 ---@param Character APalCharacter
 function UPalArenaOutAreaChecker:ReturnCharacter(Character) end
 function UPalArenaOutAreaChecker:CheckOutAreaCharacter() end
@@ -11691,12 +14565,18 @@ function UPalArenaOutAreaChecker:BeginOverlapEvent(OverlappedComponent, OtherAct
 ---@field RidePalIndex int32
 UPalArenaPartyAsset = {}
 
+---@return UPalArenaPartyAsset
+function UPalArenaPartyAsset:get() end
+
 
 
 ---@class UPalArenaSequenceBase : UObject
 ---@field bNotWaitClient boolean
 ---@field bBreakEndSequence boolean
 UPalArenaSequenceBase = {}
+
+---@return UPalArenaSequenceBase
+function UPalArenaSequenceBase:get() end
 
 ---@param DeltaTime float
 function UPalArenaSequenceBase:TickSequence(DeltaTime) end
@@ -11718,6 +14598,9 @@ function UPalArenaSequenceBase:EndSequence() end
 ---@field OutAreaChecker UPalArenaOutAreaChecker
 UPalArenaSequenceInBattle = {}
 
+---@return UPalArenaSequenceInBattle
+function UPalArenaSequenceInBattle:get() end
+
 function UPalArenaSequenceInBattle:SetupPalHate() end
 function UPalArenaSequenceInBattle:ResetPalHate() end
 function UPalArenaSequenceInBattle:OnEndSequence_Implementation() end
@@ -11735,6 +14618,9 @@ function UPalArenaSequenceInBattle:CheckBattleResult(bIsTimeup) end
 
 ---@class UPalArenaSequencePartySelect : UPalArenaSequenceBase
 UPalArenaSequencePartySelect = {}
+
+---@return UPalArenaSequencePartySelect
+function UPalArenaSequencePartySelect:get() end
 
 ---@param PlayerIndex EPalArenaPlayerIndex
 ---@param ArenaPlayerParty FPalArenaPlayerParty
@@ -11757,6 +14643,9 @@ function UPalArenaSequencePartySelect:FillPartyPalAuto(PlayerIndex, ArenaPlayerP
 ---@field SequenceEndPlayers TArray<FGuid>
 ---@field bIsClientOnly boolean
 UPalArenaSequencer = {}
+
+---@return UPalArenaSequencer
+function UPalArenaSequencer:get() end
 
 ---@param IndividualParameter UPalIndividualCharacterParameter
 function UPalArenaSequencer:SetupStatusCharacter(IndividualParameter) end
@@ -11809,6 +14698,9 @@ function UPalArenaSequencer:GetArenaInstanceModel() end
 ---@field ArenaEntrance APalArenaEntrance
 UPalArenaWorldSubsystem = {}
 
+---@return UPalArenaWorldSubsystem
+function UPalArenaWorldSubsystem:get() end
+
 ---@param CancelPlayer APalPlayerCharacter
 function UPalArenaWorldSubsystem:RequestCancelEntryArena(CancelPlayer) end
 ---@param BattleEndTime FDateTime
@@ -11823,6 +14715,9 @@ function UPalArenaWorldSubsystem:ExitArena(Player) end
 ---@class UPalAssetStreamableManager : UObject
 UPalAssetStreamableManager = {}
 
+---@return UPalAssetStreamableManager
+function UPalAssetStreamableManager:get() end
+
 
 ---@class UPalAttackFilter : UPalHitFilter
 ---@field OnAttackDelegate FPalAttackFilterOnAttackDelegate
@@ -11833,12 +14728,18 @@ UPalAssetStreamableManager = {}
 ---@field Attacker AActor
 UPalAttackFilter = {}
 
+---@return UPalAttackFilter
+function UPalAttackFilter:get() end
+
 
 
 ---@class UPalAudioSettingSystem : UObject
 ---@field BusVolumeMap TMap<EPalAudioBus, FFloatContainer>
 ---@field BussFadeMap TMap<EPalAudioBus, FPalAudioFadeParameter>
 UPalAudioSettingSystem = {}
+
+---@return UPalAudioSettingSystem
+function UPalAudioSettingSystem:get() end
 
 ---@param DeltaTime float
 function UPalAudioSettingSystem:Tick_BP(DeltaTime) end
@@ -11867,6 +14768,9 @@ function UPalAudioSettingSystem:GetAudioBusVolume(AudioBus) end
 
 ---@class UPalAudioUtility : UBlueprintFunctionLibrary
 UPalAudioUtility = {}
+
+---@return UPalAudioUtility
+function UPalAudioUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param Player APalPlayerCharacter
@@ -11898,6 +14802,9 @@ function UPalAudioUtility:OnPlayerEnterAmbientArea(WorldContextObject, Player, S
 ---@field FadeDuration int32
 ---@field SoundPlayer UPalSoundPlayer
 UPalAudioWorldSubsystem = {}
+
+---@return UPalAudioWorldSubsystem
+function UPalAudioWorldSubsystem:get() end
 
 ---@param DeltaTime float
 function UPalAudioWorldSubsystem:Tick_BP(DeltaTime) end
@@ -11977,6 +14884,9 @@ function UPalAudioWorldSubsystem:BeginPlay() end
 ---@field HoldActors TArray<TWeakObjectPtr<AActor>>
 UPalAutoDestroyActorHolder = {}
 
+---@return UPalAutoDestroyActorHolder
+function UPalAutoDestroyActorHolder:get() end
+
 ---@param TargetActor AActor
 function UPalAutoDestroyActorHolder:AddActor(TargetActor) end
 
@@ -11991,6 +14901,9 @@ function UPalAutoDestroyActorHolder:AddActor(TargetActor) end
 ---@field CampLocation FVector
 UPalBaseCampEnemyObserver = {}
 
+---@return UPalBaseCampEnemyObserver
+function UPalBaseCampEnemyObserver:get() end
+
 ---@param Actor AActor
 ---@param EndPlayReason EEndPlayReason::Type
 function UPalBaseCampEnemyObserver:OnEndPlayEnemy(Actor, EndPlayReason) end
@@ -12004,15 +14917,24 @@ function UPalBaseCampEnemyObserver:BaseCampEnemyDelegate__DelegateSignature() en
 ---@class UPalBaseCampFunctionModuleBase : UObject
 UPalBaseCampFunctionModuleBase = {}
 
+---@return UPalBaseCampFunctionModuleBase
+function UPalBaseCampFunctionModuleBase:get() end
+
 
 ---@class UPalBaseCampGroupedWorkBase : UObject
 ---@field WorkIds TArray<FGuid>
 UPalBaseCampGroupedWorkBase = {}
 
+---@return UPalBaseCampGroupedWorkBase
+function UPalBaseCampGroupedWorkBase:get() end
+
 
 
 ---@class UPalBaseCampGroupedWorkFarm : UPalBaseCampGroupedWorkBase
 UPalBaseCampGroupedWorkFarm = {}
+
+---@return UPalBaseCampGroupedWorkFarm
+function UPalBaseCampGroupedWorkFarm:get() end
 
 
 ---@class UPalBaseCampManager : UPalWorldSubsystem
@@ -12034,6 +14956,9 @@ UPalBaseCampGroupedWorkFarm = {}
 ---@field SpawnPointInBaseCampPointSubLocalTransform FTransform
 ---@field BaseCampTickInvokeMaxNumInOneTick int32
 UPalBaseCampManager = {}
+
+---@return UPalBaseCampManager
+function UPalBaseCampManager:get() end
 
 ---@param BaseCampId FGuid
 ---@param OutModel UPalBaseCampModel
@@ -12070,6 +14995,9 @@ function UPalBaseCampManager:GetBaseCampIds(OutIds) end
 ---@field DropItemConcreteModelInstanceIds TArray<FGuid>
 ---@field DefenseAttackModelInstanceIds TArray<FGuid>
 UPalBaseCampMapObjectCollection = {}
+
+---@return UPalBaseCampMapObjectCollection
+function UPalBaseCampMapObjectCollection:get() end
 
 ---@param Self UPalMapObjectModelEffect_AccumulateTrigger
 ---@param OwnerModel UPalMapObjectModel
@@ -12116,6 +15044,9 @@ function UPalBaseCampMapObjectCollection:MapObjectConcreteModelDelegate__Delegat
 ---@field SignificanceInfo FPalBaseCampSignificanceInfo
 ---@field ProgressTimeSinceLastTick float
 UPalBaseCampModel = {}
+
+---@return UPalBaseCampModel
+function UPalBaseCampModel:get() end
 
 ---@param PlayerId int32
 ---@param NewLevel int32
@@ -12181,10 +15112,16 @@ function UPalBaseCampModel:BaseCampGuildPalStorageUpdateDelegate__DelegateSignat
 ---@field FunctionArray TArray<UPalBaseCampModuleEnergy_FunctionBase>
 UPalBaseCampModuleEnergy = {}
 
+---@return UPalBaseCampModuleEnergy
+function UPalBaseCampModuleEnergy:get() end
+
 
 
 ---@class UPalBaseCampModuleEnergy_Electric : UPalBaseCampModuleEnergy_FunctionBase
 UPalBaseCampModuleEnergy_Electric = {}
+
+---@return UPalBaseCampModuleEnergy_Electric
+function UPalBaseCampModuleEnergy_Electric:get() end
 
 
 ---@class UPalBaseCampModuleEnergy_FunctionBase : UObject
@@ -12194,6 +15131,9 @@ UPalBaseCampModuleEnergy_Electric = {}
 ---@field CurrentState EPalBaseCampModuleEnergyState
 ---@field ProvideWaitRemainTime float
 UPalBaseCampModuleEnergy_FunctionBase = {}
+
+---@return UPalBaseCampModuleEnergy_FunctionBase
+function UPalBaseCampModuleEnergy_FunctionBase:get() end
 
 ---@param Function UPalBaseCampModuleEnergy_FunctionBase
 function UPalBaseCampModuleEnergy_FunctionBase:UpdateEnergyAmountDelegate__DelegateSignature(Function) end
@@ -12205,6 +15145,9 @@ function UPalBaseCampModuleEnergy_FunctionBase:InvokeOnUpdateEnergyAmount(Model)
 ---@field FacilityUsageInfoSetMap TMap<EPalMapObjectWorkerAvailableFacilityType, FPalBaseCampFacilityUsageInfoSet>
 ---@field FacilityCounts TArray<FPalBaseCampFacilityCountPair>
 UPalBaseCampModuleFacilityReservation = {}
+
+---@return UPalBaseCampModuleFacilityReservation
+function UPalBaseCampModuleFacilityReservation:get() end
 
 ---@param Model UPalMapObjectConcreteModelBase
 ---@param IndividualHandle UPalIndividualCharacterHandle
@@ -12223,6 +15166,9 @@ function UPalBaseCampModuleFacilityReservation:OnAvailableMapObjectInServer(Conc
 ---@field RepairKitItemExistsInfos TMap<FGuid, FPalBaseCampItemExistsInfo>
 UPalBaseCampModuleItemStorage = {}
 
+---@return UPalBaseCampModuleItemStorage
+function UPalBaseCampModuleItemStorage:get() end
+
 ---@param ItemContainerModule UPalMapObjectItemContainerModule
 function UPalBaseCampModuleItemStorage:OnUpdateItemContainer(ItemContainerModule) end
 ---@param ConcreteModel UPalMapObjectConcreteModelBase
@@ -12240,6 +15186,9 @@ function UPalBaseCampModuleItemStorage:GetContainerIds(OutContainerIds) end
 ---@field ReviveWorkIds TArray<FGuid>
 UPalBaseCampModuleMedical = {}
 
+---@return UPalBaseCampModuleMedical
+function UPalBaseCampModuleMedical:get() end
+
 ---@param IndividualParameter UPalIndividualCharacterParameter
 function UPalBaseCampModuleMedical:OnReviveCharacter_ServerInternal(IndividualParameter) end
 ---@param IndividualHandle UPalIndividualCharacterHandle
@@ -12249,6 +15198,9 @@ function UPalBaseCampModuleMedical:OnRemovedWorkerInServer(IndividualHandle) end
 ---@class UPalBaseCampModuleObjectMaintenance : UPalBaseCampFunctionModuleBase
 ---@field MaintenanceWayDOs TArray<UPalBaseCampModuleObjectMaintenance_WayBase>
 UPalBaseCampModuleObjectMaintenance = {}
+
+---@return UPalBaseCampModuleObjectMaintenance
+function UPalBaseCampModuleObjectMaintenance:get() end
 
 ---@param Model UPalMapObjectModel
 function UPalBaseCampModuleObjectMaintenance:OnRegisteredMapObject_ServerInternal(Model) end
@@ -12263,6 +15215,9 @@ function UPalBaseCampModuleObjectMaintenance:OnDisposeMapObject_ServerInternal(M
 ---@class UPalBaseCampModuleObjectMaintenance_ExtinguishFire : UPalBaseCampModuleObjectMaintenance_WayBase
 UPalBaseCampModuleObjectMaintenance_ExtinguishFire = {}
 
+---@return UPalBaseCampModuleObjectMaintenance_ExtinguishFire
+function UPalBaseCampModuleObjectMaintenance_ExtinguishFire:get() end
+
 ---@param Effect_AccumulateTrigger UPalMapObjectModelEffect_AccumulateTrigger
 ---@param OwnerModel UPalMapObjectModel
 function UPalBaseCampModuleObjectMaintenance_ExtinguishFire:OnTriggerByReachAccumulateTriggerValue(Effect_AccumulateTrigger, OwnerModel) end
@@ -12271,10 +15226,16 @@ function UPalBaseCampModuleObjectMaintenance_ExtinguishFire:OnTriggerByReachAccu
 ---@class UPalBaseCampModuleObjectMaintenance_WayBase : UObject
 UPalBaseCampModuleObjectMaintenance_WayBase = {}
 
+---@return UPalBaseCampModuleObjectMaintenance_WayBase
+function UPalBaseCampModuleObjectMaintenance_WayBase:get() end
+
 
 ---@class UPalBaseCampModulePassiveEffect : UPalBaseCampFunctionModuleBase
 ---@field RepInfoArray FPalFastBaseCampPassiveEffectRepInfoArray
 UPalBaseCampModulePassiveEffect = {}
+
+---@return UPalBaseCampModulePassiveEffect
+function UPalBaseCampModulePassiveEffect:get() end
 
 ---@param Model UPalMapObjectConcreteModelBase
 function UPalBaseCampModulePassiveEffect:OnNotAvailableMapObjectInServer(Model) end
@@ -12285,6 +15246,9 @@ function UPalBaseCampModulePassiveEffect:OnAvailableMapObjectInServer(Model) end
 ---@class UPalBaseCampModuleResourceCollector : UPalBaseCampFunctionModuleBase
 ---@field MapObjectWorkInfoMap TMap<FGuid, FPalBaseCampModuleResourceCollectWorkInfo>
 UPalBaseCampModuleResourceCollector = {}
+
+---@return UPalBaseCampModuleResourceCollector
+function UPalBaseCampModuleResourceCollector:get() end
 
 ---@param Instance UPalFoliageInstance
 function UPalBaseCampModuleResourceCollector:OnRespawnFoliageInstance(Instance) end
@@ -12303,6 +15267,9 @@ function UPalBaseCampModuleResourceCollector:OnDestroyedFoliageInstance(Instance
 ---@field TransportItemStatusMap TMap<FGuid, FPalBaseCampModuleTransportItemStatus>
 ---@field TransportTargetMap TMap<FGuid, FPalBaseCampModuleTransportItemTarget>
 UPalBaseCampModuleTransportItemDirector = {}
+
+---@return UPalBaseCampModuleTransportItemDirector
+function UPalBaseCampModuleTransportItemDirector:get() end
 
 ---@param ContainerModule UPalMapObjectItemContainerModule
 function UPalBaseCampModuleTransportItemDirector:OnUpdateMapObjectContainer(ContainerModule) end
@@ -12328,12 +15295,18 @@ function UPalBaseCampModuleTransportItemDirector:OnAssignWorkRequirement(Work, W
 ---@field MapObjectInfoMapByMapObjectId TMap<FName, FPalBaseCampPassiveEffectMapObjectInfo>
 UPalBaseCampPassiveEffectBase = {}
 
+---@return UPalBaseCampPassiveEffectBase
+function UPalBaseCampPassiveEffectBase:get() end
+
 
 
 ---@class UPalBaseCampPassiveEffect_WorkHard : UPalBaseCampPassiveEffectBase
 ---@field OnUpdateWorkHardTypeDelegate FPalBaseCampPassiveEffect_WorkHardOnUpdateWorkHardTypeDelegate
 ---@field WorkHardType EPalBaseCampPassiveEffectWorkHardType
 UPalBaseCampPassiveEffect_WorkHard = {}
+
+---@return UPalBaseCampPassiveEffect_WorkHard
+function UPalBaseCampPassiveEffect_WorkHard:get() end
 
 ---@param Self UPalBaseCampPassiveEffect_WorkHard
 function UPalBaseCampPassiveEffect_WorkHard:ReturnSelfDelegate__DelegateSignature(Self) end
@@ -12346,11 +15319,17 @@ function UPalBaseCampPassiveEffect_WorkHard:GetWorkHardType() end
 ---@field WorkSpeedAdditionalRateMap TMap<EPalWorkSuitability, float>
 UPalBaseCampPassiveEffect_WorkSuitability = {}
 
+---@return UPalBaseCampPassiveEffect_WorkSuitability
+function UPalBaseCampPassiveEffect_WorkSuitability:get() end
+
 
 
 ---@class UPalBaseCampReplicator : UPalGameStateReplicatorBase
 ---@field RepInfoArray FFastPalBaseCampRepInfoArray
 UPalBaseCampReplicator = {}
+
+---@return UPalBaseCampReplicator
+function UPalBaseCampReplicator:get() end
 
 
 
@@ -12358,10 +15337,16 @@ UPalBaseCampReplicator = {}
 ---@field taskDataTable UDataTable
 UPalBaseCampTaskChecker = {}
 
+---@return UPalBaseCampTaskChecker
+function UPalBaseCampTaskChecker:get() end
+
 
 
 ---@class UPalBaseCampUtility : UObject
 UPalBaseCampUtility = {}
+
+---@return UPalBaseCampUtility
+function UPalBaseCampUtility:get() end
 
 
 ---@class UPalBaseCampWorkCollection : UObject
@@ -12372,6 +15357,9 @@ UPalBaseCampUtility = {}
 ---@field ReplicationList UPalBaseCampWorkCollectionReplicationList
 ---@field CannotMoveToWorkInfoMap TMap<FGuid, FPalBaseCampWorkCollectionStashInfo>
 UPalBaseCampWorkCollection = {}
+
+---@return UPalBaseCampWorkCollection
+function UPalBaseCampWorkCollection:get() end
 
 ---@param Work UPalWorkBase
 ---@param IndividualId FPalInstanceID
@@ -12392,6 +15380,9 @@ function UPalBaseCampWorkCollection:OnRequiredAssign_ServerInternal(Work, Requir
 ---@field RepInfoArray FPalFastBaseCampWorkCollectionRepInfoArray
 UPalBaseCampWorkCollectionReplicationList = {}
 
+---@return UPalBaseCampWorkCollectionReplicationList
+function UPalBaseCampWorkCollectionReplicationList:get() end
+
 ---@param Self UPalBaseCampWorkCollectionReplicationList
 function UPalBaseCampWorkCollectionReplicationList:ReturnSelfDelegate__DelegateSignature(Self) end
 function UPalBaseCampWorkCollectionReplicationList:OnRep_RepInfoArray() end
@@ -12399,6 +15390,9 @@ function UPalBaseCampWorkCollectionReplicationList:OnRep_RepInfoArray() end
 
 ---@class UPalBaseCampWorkerDirectionBattleTypeUtility : UBlueprintFunctionLibrary
 UPalBaseCampWorkerDirectionBattleTypeUtility = {}
+
+---@return UPalBaseCampWorkerDirectionBattleTypeUtility
+function UPalBaseCampWorkerDirectionBattleTypeUtility:get() end
 
 
 ---@class UPalBaseCampWorkerDirector : UObject
@@ -12417,6 +15411,9 @@ UPalBaseCampWorkerDirectionBattleTypeUtility = {}
 ---@field WorkerTasks TArray<UPalBaseCampWorkerTaskBase>
 ---@field State EPalBaseCampWorkerDirectorState
 UPalBaseCampWorkerDirector = {}
+
+---@return UPalBaseCampWorkerDirector
+function UPalBaseCampWorkerDirector:get() end
 
 ---@param IndividualHandle UPalIndividualCharacterHandle
 function UPalBaseCampWorkerDirector:RemovedWorkerDelegate__DelegateSignature(IndividualHandle) end
@@ -12461,6 +15458,9 @@ function UPalBaseCampWorkerDirector:AddNewWorkerDelegate__DelegateSignature(NewC
 ---@field CannotMoveToDefenseModelInfoMap TMap<FGuid, FPalBaseCampWorkDirectorBattleDefenseModelStashInfo>
 UPalBaseCampWorkerDirectorBattle = {}
 
+---@return UPalBaseCampWorkerDirectorBattle
+function UPalBaseCampWorkerDirectorBattle:get() end
+
 
 
 ---@class UPalBaseCampWorkerEventBase : UObject
@@ -12469,6 +15469,9 @@ UPalBaseCampWorkerDirectorBattle = {}
 ---@field MasterData FPalBaseCampWorkerEventMasterData
 ---@field OverrideSleepFX TSoftObjectPtr<UNiagaraSystem>
 UPalBaseCampWorkerEventBase = {}
+
+---@return UPalBaseCampWorkerEventBase
+function UPalBaseCampWorkerEventBase:get() end
 
 ---@param SanityValue float
 ---@return boolean
@@ -12487,9 +15490,15 @@ function UPalBaseCampWorkerEventBase:CreateNotifyMessageText(LocalizedFormatText
 ---@class UPalBaseCampWorkerEventUtility : UObject
 UPalBaseCampWorkerEventUtility = {}
 
+---@return UPalBaseCampWorkerEventUtility
+function UPalBaseCampWorkerEventUtility:get() end
+
 
 ---@class UPalBaseCampWorkerEvent_DestroyBuilding : UPalBaseCampWorkerEventBase
 UPalBaseCampWorkerEvent_DestroyBuilding = {}
+
+---@return UPalBaseCampWorkerEvent_DestroyBuilding
+function UPalBaseCampWorkerEvent_DestroyBuilding:get() end
 
 
 ---@class UPalBaseCampWorkerEvent_DodgeWork : UPalBaseCampWorkerEventBase
@@ -12498,10 +15507,16 @@ UPalBaseCampWorkerEvent_DestroyBuilding = {}
 ---@field TerminateSanityValueOver float
 UPalBaseCampWorkerEvent_DodgeWork = {}
 
+---@return UPalBaseCampWorkerEvent_DodgeWork
+function UPalBaseCampWorkerEvent_DodgeWork:get() end
+
 
 
 ---@class UPalBaseCampWorkerEvent_DodgeWork_Short : UPalBaseCampWorkerEvent_DodgeWork
 UPalBaseCampWorkerEvent_DodgeWork_Short = {}
+
+---@return UPalBaseCampWorkerEvent_DodgeWork_Short
+function UPalBaseCampWorkerEvent_DodgeWork_Short:get() end
 
 
 ---@class UPalBaseCampWorkerEvent_DodgeWork_Sleep : UPalBaseCampWorkerEvent_DodgeWork
@@ -12510,6 +15525,9 @@ UPalBaseCampWorkerEvent_DodgeWork_Short = {}
 ---@field WalkTime_BeforeSleep FFloatInterval
 UPalBaseCampWorkerEvent_DodgeWork_Sleep = {}
 
+---@return UPalBaseCampWorkerEvent_DodgeWork_Sleep
+function UPalBaseCampWorkerEvent_DodgeWork_Sleep:get() end
+
 
 
 ---@class UPalBaseCampWorkerEvent_EatTooMuch : UPalBaseCampWorkerEventBase
@@ -12517,43 +15535,70 @@ UPalBaseCampWorkerEvent_DodgeWork_Sleep = {}
 ---@field EatMaxNum int32
 UPalBaseCampWorkerEvent_EatTooMuch = {}
 
+---@return UPalBaseCampWorkerEvent_EatTooMuch
+function UPalBaseCampWorkerEvent_EatTooMuch:get() end
+
 
 
 ---@class UPalBaseCampWorkerEvent_Escape : UPalBaseCampWorkerEventBase
 UPalBaseCampWorkerEvent_Escape = {}
 
+---@return UPalBaseCampWorkerEvent_Escape
+function UPalBaseCampWorkerEvent_Escape:get() end
+
 
 ---@class UPalBaseCampWorkerEvent_FightWithFriend : UPalBaseCampWorkerEventBase
 UPalBaseCampWorkerEvent_FightWithFriend = {}
+
+---@return UPalBaseCampWorkerEvent_FightWithFriend
+function UPalBaseCampWorkerEvent_FightWithFriend:get() end
 
 
 ---@class UPalBaseCampWorkerEvent_OverworkDeath : UPalBaseCampWorkerEventBase
 UPalBaseCampWorkerEvent_OverworkDeath = {}
 
+---@return UPalBaseCampWorkerEvent_OverworkDeath
+function UPalBaseCampWorkerEvent_OverworkDeath:get() end
+
 
 ---@class UPalBaseCampWorkerEvent_Sick : UPalBaseCampWorkerEventBase
 UPalBaseCampWorkerEvent_Sick = {}
+
+---@return UPalBaseCampWorkerEvent_Sick
+function UPalBaseCampWorkerEvent_Sick:get() end
 
 
 ---@class UPalBaseCampWorkerEvent_Tantrum : UPalBaseCampWorkerEventBase
 ---@field actionClass TSubclassOf<UPalAIActionBaseCampTrantrum>
 UPalBaseCampWorkerEvent_Tantrum = {}
 
+---@return UPalBaseCampWorkerEvent_Tantrum
+function UPalBaseCampWorkerEvent_Tantrum:get() end
+
 
 
 ---@class UPalBaseCampWorkerEvent_TurnFoodBox : UPalBaseCampWorkerEventBase
 UPalBaseCampWorkerEvent_TurnFoodBox = {}
+
+---@return UPalBaseCampWorkerEvent_TurnFoodBox
+function UPalBaseCampWorkerEvent_TurnFoodBox:get() end
 
 
 ---@class UPalBaseCampWorkerTaskBase : UObject
 ---@field OwnerBaseCampId FGuid
 UPalBaseCampWorkerTaskBase = {}
 
+---@return UPalBaseCampWorkerTaskBase
+function UPalBaseCampWorkerTaskBase:get() end
+
 
 
 ---@class UPalBaseCampWorkerTask_IgnitionTorchAtNight : UPalBaseCampWorkerTaskBase
 ---@field TorchInstanceIds TArray<FGuid>
 UPalBaseCampWorkerTask_IgnitionTorchAtNight = {}
+
+---@return UPalBaseCampWorkerTask_IgnitionTorchAtNight
+function UPalBaseCampWorkerTask_IgnitionTorchAtNight:get() end
 
 ---@param ConcreteModel UPalMapObjectConcreteModelBase
 function UPalBaseCampWorkerTask_IgnitionTorchAtNight:OnNotAvailableMapObjectInServer(ConcreteModel) end
@@ -12569,6 +15614,9 @@ function UPalBaseCampWorkerTask_IgnitionTorchAtNight:OnAvailableMapObjectInServe
 ---@field OnFEmitSoundDelegate FPalBattleManagerOnFEmitSoundDelegate
 ---@field OnFEmitSoundOnlyPalmiDelegate FPalBattleManagerOnFEmitSoundOnlyPalmiDelegate
 UPalBattleManager = {}
+
+---@return UPalBattleManager
+function UPalBattleManager:get() end
 
 ---@param TargetCharacter AActor
 ---@return boolean
@@ -12632,6 +15680,9 @@ function UPalBattleManager:ActionMenaceStart(SelfCharacter) end
 ---@field OnChangedBiome FPalBiomeDetectComponentOnChangedBiome
 UPalBiomeDetectComponent = {}
 
+---@return UPalBiomeDetectComponent
+function UPalBiomeDetectComponent:get() end
+
 ---@param OverlapActor AActor
 ---@param BiomeTriggerActor APalBiomeAreaTriggerBase
 function UPalBiomeDetectComponent:OnChangedBiomeDelegate__DelegateSignature(OverlapActor, BiomeTriggerActor) end
@@ -12641,6 +15692,9 @@ function UPalBiomeDetectComponent:ChangeBiome(BiomeTriggerActor) end
 
 ---@class UPalBlueprintLibrary : UBlueprintFunctionLibrary
 UPalBlueprintLibrary = {}
+
+---@return UPalBlueprintLibrary
+function UPalBlueprintLibrary:get() end
 
 ---@param A FPalInstanceID
 ---@param B FPalInstanceID
@@ -12658,6 +15712,9 @@ function UPalBlueprintLibrary:EqualEqual_PalInstanceIDPalInstanceID(A, B) end
 ---@field BroadcastCollisionProfileName FName
 UPalBodyPartsBoxComponent = {}
 
+---@return UPalBodyPartsBoxComponent
+function UPalBodyPartsBoxComponent:get() end
+
 function UPalBodyPartsBoxComponent:OnRep_BroadcastCollisionProfileName() end
 
 
@@ -12667,6 +15724,9 @@ function UPalBodyPartsBoxComponent:OnRep_BroadcastCollisionProfileName() end
 ---@field BroadcastCollisionProfileName FName
 UPalBodyPartsCapsuleComponent = {}
 
+---@return UPalBodyPartsCapsuleComponent
+function UPalBodyPartsCapsuleComponent:get() end
+
 function UPalBodyPartsCapsuleComponent:OnRep_BroadcastCollisionProfileName() end
 
 
@@ -12675,6 +15735,9 @@ function UPalBodyPartsCapsuleComponent:OnRep_BroadcastCollisionProfileName() end
 ---@field DefaultCollisionProfileName FName
 ---@field BroadcastCollisionProfileName FName
 UPalBodyPartsSphereComponent = {}
+
+---@return UPalBodyPartsSphereComponent
+function UPalBodyPartsSphereComponent:get() end
 
 function UPalBodyPartsSphereComponent:OnRep_BroadcastCollisionProfileName() end
 
@@ -12689,6 +15752,9 @@ function UPalBodyPartsSphereComponent:OnRep_BroadcastCollisionProfileName() end
 ---@field TemperatureInfo FPalTemperatureInfo
 ---@field TemperatureInfo_Pre_ForClient FPalTemperatureInfo
 UPalBodyTemperatureComponent = {}
+
+---@return UPalBodyTemperatureComponent
+function UPalBodyTemperatureComponent:get() end
 
 ---@param UniqueName FName
 function UPalBodyTemperatureComponent:RemoveHeatSource(UniqueName) end
@@ -12732,12 +15798,18 @@ function UPalBodyTemperatureComponent:AddHeatSource(UniqueName, HeatLevel) end
 ---@field Radius float
 UPalBoneInfo = {}
 
+---@return UPalBoneInfo
+function UPalBoneInfo:get() end
+
 
 
 ---@class UPalBossBattleEventBase : UObject
 ---@field SpawnCharacterHandles TArray<UPalIndividualCharacterHandle>
 ---@field bIsCombatStarted boolean
 UPalBossBattleEventBase = {}
+
+---@return UPalBossBattleEventBase
+function UPalBossBattleEventBase:get() end
 
 function UPalBossBattleEventBase:Terminate() end
 ---@param DeltaTime float
@@ -12789,6 +15861,9 @@ function UPalBossBattleEventBase:ActivateCharacter(IndividualHandle, Offset) end
 ---@field ReservedDataLayerAsset UDataLayerAsset
 UPalBossBattleInstanceModel = {}
 
+---@return UPalBossBattleInstanceModel
+function UPalBossBattleInstanceModel:get() end
+
 function UPalBossBattleInstanceModel:OnUpdateCombatTimeLimit() end
 function UPalBossBattleInstanceModel:OnUpdateBossBattleState() end
 function UPalBossBattleInstanceModel:OnRep_EntryPlayers() end
@@ -12829,6 +15904,9 @@ function UPalBossBattleInstanceModel:GetBossBattleState() end
 ---@field GroupGuid FGuid
 ---@field DisableSkyBossType_LocalPlayer EPalBossType
 UPalBossBattleManager = {}
+
+---@return UPalBossBattleManager
+function UPalBossBattleManager:get() end
 
 ---@param BossType EPalBossType
 function UPalBossBattleManager:UnlockAchievement(BossType) end
@@ -12897,6 +15975,9 @@ function UPalBossBattleManager:AddGroupCharacter(AddIndividualHandle) end
 ---@field NextSequenceType EPalBossBattleSequenceType
 UPalBossBattleSequenceBase = {}
 
+---@return UPalBossBattleSequenceBase
+function UPalBossBattleSequenceBase:get() end
+
 ---@param DeltaTime float
 function UPalBossBattleSequenceBase:TickSequence(DeltaTime) end
 ---@param LevelSequenceActor ALevelSequenceActor
@@ -12941,6 +16022,9 @@ function UPalBossBattleSequenceBase:FinishSequence(IsSuccess) end
 ---@field bIsClientOnly boolean
 ---@field BossBattleEvent UPalBossBattleEventBase
 UPalBossBattleSequencer = {}
+
+---@return UPalBossBattleSequencer
+function UPalBossBattleSequencer:get() end
 
 ---@param DeltaTime float
 function UPalBossBattleSequencer:Tick_ForBP(DeltaTime) end
@@ -13023,6 +16107,9 @@ function UPalBossBattleSequencer:BossBattleCombatStart__DelegateSignature(BossTy
 ---@field TimeLimitDate FDateTime
 UPalBossEntryWaitInfoHUD = {}
 
+---@return UPalBossEntryWaitInfoHUD
+function UPalBossEntryWaitInfoHUD:get() end
+
 ---@param bIsCountDown boolean
 ---@param TimeLimit FDateTime
 function UPalBossEntryWaitInfoHUD:UpdateWaitInfo(bIsCountDown, TimeLimit) end
@@ -13033,6 +16120,9 @@ function UPalBossEntryWaitInfoHUD:OnCloseHUD() end
 ---@class UPalBuildObjectDataMap : UObject
 ---@field BuildObjectDataIdMap TMap<FName, FPalBuildObjectData>
 UPalBuildObjectDataMap = {}
+
+---@return UPalBuildObjectDataMap
+function UPalBuildObjectDataMap:get() end
 
 ---@param MapObjectId FName
 ---@return FPalBuildObjectData
@@ -13050,6 +16140,9 @@ function UPalBuildObjectDataMap:GetBuildObjectDataArrayForTypeAByTypeB(TypeA, Ou
 
 ---@class UPalBuildObjectDataUtility : UBlueprintFunctionLibrary
 UPalBuildObjectDataUtility = {}
+
+---@return UPalBuildObjectDataUtility
+function UPalBuildObjectDataUtility:get() end
 
 ---@param TypeB EPalBuildObjectTypeB
 ---@return int32
@@ -13071,13 +16164,22 @@ function UPalBuildObjectDataUtility:MaterialInfos(BuildObjectData, MaterialInfos
 ---@class UPalBuildObjectInstallStrategyAttachToCeil : UPalBuildObjectInstallStrategyAttachToObjectBase
 UPalBuildObjectInstallStrategyAttachToCeil = {}
 
+---@return UPalBuildObjectInstallStrategyAttachToCeil
+function UPalBuildObjectInstallStrategyAttachToCeil:get() end
+
 
 ---@class UPalBuildObjectInstallStrategyAttachToObjectBase : UPalBuildObjectInstallStrategyBase
 UPalBuildObjectInstallStrategyAttachToObjectBase = {}
 
+---@return UPalBuildObjectInstallStrategyAttachToObjectBase
+function UPalBuildObjectInstallStrategyAttachToObjectBase:get() end
+
 
 ---@class UPalBuildObjectInstallStrategyAttachToWall : UPalBuildObjectInstallStrategyAttachToObjectBase
 UPalBuildObjectInstallStrategyAttachToWall = {}
+
+---@return UPalBuildObjectInstallStrategyAttachToWall
+function UPalBuildObjectInstallStrategyAttachToWall:get() end
 
 
 ---@class UPalBuildObjectInstallStrategyBase : UObject
@@ -13086,12 +16188,18 @@ UPalBuildObjectInstallStrategyAttachToWall = {}
 ---@field SnapHitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyBase = {}
 
+---@return UPalBuildObjectInstallStrategyBase
+function UPalBuildObjectInstallStrategyBase:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategyBaseCampPoint : UPalBuildObjectInstallStrategySinkableNormal
 ---@field TargetBuildObjectCache APalBuildObjectBaseCampPoint
 ---@field CannotOverlapAreaBox FBox
 UPalBuildObjectInstallStrategyBaseCampPoint = {}
+
+---@return UPalBuildObjectInstallStrategyBaseCampPoint
+function UPalBuildObjectInstallStrategyBaseCampPoint:get() end
 
 
 
@@ -13100,12 +16208,18 @@ UPalBuildObjectInstallStrategyBaseCampPoint = {}
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyFloor = {}
 
+---@return UPalBuildObjectInstallStrategyFloor
+function UPalBuildObjectInstallStrategyFloor:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategyFoundation : UPalBuildObjectInstallStrategyBase
 ---@field HitActorCache AActor
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyFoundation = {}
+
+---@return UPalBuildObjectInstallStrategyFoundation
+function UPalBuildObjectInstallStrategyFoundation:get() end
 
 
 
@@ -13114,6 +16228,9 @@ UPalBuildObjectInstallStrategyFoundation = {}
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyGroundWall = {}
 
+---@return UPalBuildObjectInstallStrategyGroundWall
+function UPalBuildObjectInstallStrategyGroundWall:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategyGroundWallV2 : UPalBuildObjectInstallStrategyBase
@@ -13121,10 +16238,16 @@ UPalBuildObjectInstallStrategyGroundWall = {}
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyGroundWallV2 = {}
 
+---@return UPalBuildObjectInstallStrategyGroundWallV2
+function UPalBuildObjectInstallStrategyGroundWallV2:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategyNormal : UPalBuildObjectInstallStrategyBase
 UPalBuildObjectInstallStrategyNormal = {}
+
+---@return UPalBuildObjectInstallStrategyNormal
+function UPalBuildObjectInstallStrategyNormal:get() end
 
 ---@return boolean
 function UPalBuildObjectInstallStrategyNormal:IsStandAlongSurface() end
@@ -13134,12 +16257,18 @@ function UPalBuildObjectInstallStrategyNormal:IsStandAlongSurface() end
 ---@field TargetPalStorageCache APalBuildObjectPalStorage
 UPalBuildObjectInstallStrategyPalStorage = {}
 
+---@return UPalBuildObjectInstallStrategyPalStorage
+function UPalBuildObjectInstallStrategyPalStorage:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategyPillar : UPalBuildObjectInstallStrategyBase
 ---@field HitActorCache AActor
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyPillar = {}
+
+---@return UPalBuildObjectInstallStrategyPillar
+function UPalBuildObjectInstallStrategyPillar:get() end
 
 
 
@@ -13148,6 +16277,9 @@ UPalBuildObjectInstallStrategyPillar = {}
 ---@field bStandUpRight boolean
 UPalBuildObjectInstallStrategyPlaceOnItemProvider = {}
 
+---@return UPalBuildObjectInstallStrategyPlaceOnItemProvider
+function UPalBuildObjectInstallStrategyPlaceOnItemProvider:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategyRoof : UPalBuildObjectInstallStrategyBase
@@ -13155,16 +16287,25 @@ UPalBuildObjectInstallStrategyPlaceOnItemProvider = {}
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyRoof = {}
 
+---@return UPalBuildObjectInstallStrategyRoof
+function UPalBuildObjectInstallStrategyRoof:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategySinkableNormal : UPalBuildObjectInstallStrategyBase
 UPalBuildObjectInstallStrategySinkableNormal = {}
+
+---@return UPalBuildObjectInstallStrategySinkableNormal
+function UPalBuildObjectInstallStrategySinkableNormal:get() end
 
 
 ---@class UPalBuildObjectInstallStrategyStairs : UPalBuildObjectInstallStrategyBase
 ---@field HitActorCache AActor
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyStairs = {}
+
+---@return UPalBuildObjectInstallStrategyStairs
+function UPalBuildObjectInstallStrategyStairs:get() end
 
 
 
@@ -13173,12 +16314,18 @@ UPalBuildObjectInstallStrategyStairs = {}
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyWall = {}
 
+---@return UPalBuildObjectInstallStrategyWall
+function UPalBuildObjectInstallStrategyWall:get() end
+
 
 
 ---@class UPalBuildObjectInstallStrategyWallV2 : UPalBuildObjectInstallStrategyBase
 ---@field HitActorCache AActor
 ---@field HitBuildObjectCache APalBuildObject
 UPalBuildObjectInstallStrategyWallV2 = {}
+
+---@return UPalBuildObjectInstallStrategyWallV2
+function UPalBuildObjectInstallStrategyWallV2:get() end
 
 
 
@@ -13190,6 +16337,9 @@ UPalBuildObjectInstallStrategyWallV2 = {}
 ---@field OverlappedActor AActor
 ---@field AllowOverlapCollisionPresetNames TArray<FName>
 UPalBuildObjectOverlapChecker = {}
+
+---@return UPalBuildObjectOverlapChecker
+function UPalBuildObjectOverlapChecker:get() end
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param OtherActor AActor
@@ -13211,6 +16361,9 @@ function UPalBuildObjectOverlapChecker:OnOverlapBegin(OverlappedComp, OtherActor
 ---@field DamageNiagaraComp UNiagaraComponent
 UPalBuildObjectVisualControlComponent = {}
 
+---@return UPalBuildObjectVisualControlComponent
+function UPalBuildObjectVisualControlComponent:get() end
+
 ---@param ChildActorComponent UChildActorComponent
 function UPalBuildObjectVisualControlComponent:OnReplicatedChildActor(ChildActorComponent) end
 
@@ -13221,6 +16374,9 @@ function UPalBuildObjectVisualControlComponent:OnReplicatedChildActor(ChildActor
 ---@field DataMap UPalBuildObjectDataMap
 UPalBuildOperator = {}
 
+---@return UPalBuildOperator
+function UPalBuildOperator:get() end
+
 
 
 ---@class UPalBuildProcess : UObject
@@ -13229,6 +16385,9 @@ UPalBuildOperator = {}
 ---@field State EPalBuildProcessState
 ---@field BuildWork UPalWorkProgress
 UPalBuildProcess = {}
+
+---@return UPalBuildProcess
+function UPalBuildProcess:get() end
 
 ---@param BuildProcess UPalBuildProcess
 function UPalBuildProcess:UpdateStateDelegate__DelegateSignature(BuildProcess) end
@@ -13249,6 +16408,9 @@ function UPalBuildProcess:GetWorkProgress() end
 ---@field BuildObject APalBuildObject
 UPalBuildProgressWorldHUDParameter = {}
 
+---@return UPalBuildProgressWorldHUDParameter
+function UPalBuildProgressWorldHUDParameter:get() end
+
 
 
 ---@class UPalBuilderComponent : UActorComponent
@@ -13261,6 +16423,9 @@ UPalBuildProgressWorldHUDParameter = {}
 ---@field InstallChecker APalBuildObjectInstallChecker
 ---@field DismantleChecker APalDismantleObjectChecker
 UPalBuilderComponent = {}
+
+---@return UPalBuilderComponent
+function UPalBuilderComponent:get() end
 
 ---@param BuildObjectId FName
 ---@param Location FVector
@@ -13303,6 +16468,9 @@ function UPalBuilderComponent:CanRequestDismantle() end
 ---@class UPalBulletCreator : UObject
 UPalBulletCreator = {}
 
+---@return UPalBulletCreator
+function UPalBulletCreator:get() end
+
 ---@param WorldContextObject UObject
 ---@param BulletClass TSubclassOf<APalBullet>
 ---@param SpawnTransform FTransform
@@ -13325,12 +16493,18 @@ function UPalBulletCreator:CreateBullet(WorldContextObject, Weapon, BulletClass,
 ---@class UPalBulletModifierComponent : UActorComponent
 UPalBulletModifierComponent = {}
 
+---@return UPalBulletModifierComponent
+function UPalBulletModifierComponent:get() end
+
 ---@param Bullet APalBullet
 function UPalBulletModifierComponent:Initialize(Bullet) end
 
 
 ---@class UPalBurnBoxComponent : UBoxComponent
 UPalBurnBoxComponent = {}
+
+---@return UPalBurnBoxComponent
+function UPalBurnBoxComponent:get() end
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
@@ -13357,15 +16531,24 @@ function UPalBurnBoxComponent:BeginOverlapEvent(OverlappedComponent, OtherActor,
 ---@field OscillatorTimeRemaining float
 UPalCameraShakeBase = {}
 
+---@return UPalCameraShakeBase
+function UPalCameraShakeBase:get() end
+
 
 
 ---@class UPalCameraShakePattern : UCameraShakePattern
 UPalCameraShakePattern = {}
 
+---@return UPalCameraShakePattern
+function UPalCameraShakePattern:get() end
+
 
 ---@class UPalCaptureBallEffectSettingDataAsset : UDataAsset
 ---@field EffectSettingDataArray TMap<EPalSizeType, FPalCaptureBallEffectSettingData>
 UPalCaptureBallEffectSettingDataAsset = {}
+
+---@return UPalCaptureBallEffectSettingDataAsset
+function UPalCaptureBallEffectSettingDataAsset:get() end
 
 ---@param PalSizeType EPalSizeType
 ---@return FPalCaptureBallEffectSettingData
@@ -13375,12 +16558,18 @@ function UPalCaptureBallEffectSettingDataAsset:GetEffectSettingData(PalSizeType)
 ---@class UPalCaptureReactionComponent : UActorComponent
 UPalCaptureReactionComponent = {}
 
+---@return UPalCaptureReactionComponent
+function UPalCaptureReactionComponent:get() end
+
 
 ---@class UPalCharacterAroundInfoCollectorComponent : USphereComponent
 ---@field OnOverlapBeginDelegate FPalCharacterAroundInfoCollectorComponentOnOverlapBeginDelegate
 ---@field OnOverlapEndDelegate FPalCharacterAroundInfoCollectorComponentOnOverlapEndDelegate
 ---@field MapObjectModelIds TArray<FGuid>
 UPalCharacterAroundInfoCollectorComponent = {}
+
+---@return UPalCharacterAroundInfoCollectorComponent
+function UPalCharacterAroundInfoCollectorComponent:get() end
 
 ---@param OtherActor AActor
 function UPalCharacterAroundInfoCollectorComponent:OverlapDelegate__DelegateSignature(OtherActor) end
@@ -13435,6 +16624,9 @@ function UPalCharacterAroundInfoCollectorComponent:OnOverlapBegin(OverlappedComp
 ---@field DynamicAimBlurMaterialDynamic UMaterialInstanceDynamic
 UPalCharacterCameraComponent = {}
 
+---@return UPalCharacterCameraComponent
+function UPalCharacterCameraComponent:get() end
+
 function UPalCharacterCameraComponent:OnStartAim() end
 function UPalCharacterCameraComponent:OnEndAim() end
 
@@ -13442,12 +16634,18 @@ function UPalCharacterCameraComponent:OnEndAim() end
 ---@class UPalCharacterContainerDefine : UBlueprintFunctionLibrary
 UPalCharacterContainerDefine = {}
 
+---@return UPalCharacterContainerDefine
+function UPalCharacterContainerDefine:get() end
+
 
 ---@class UPalCharacterContainerManager : UPalWorldSubsystem
 ---@field ContainerMap_InServer TMap<FPalContainerId, UPalIndividualCharacterContainer>
 ---@field LocalContainerMap TMap<FPalContainerId, UPalIndividualCharacterContainer>
 ---@field LoadedContainerIDs TSet<FPalContainerId>
 UPalCharacterContainerManager = {}
+
+---@return UPalCharacterContainerManager
+function UPalCharacterContainerManager:get() end
 
 ---@param ContainerId FPalContainerId
 ---@param Container UPalIndividualCharacterContainer
@@ -13472,6 +16670,9 @@ function UPalCharacterContainerManager:GetContainer(ContainerId) end
 ---@field SpawnerList TArray<APalNPCSpawnerBase>
 UPalCharacterImportanceManager = {}
 
+---@return UPalCharacterImportanceManager
+function UPalCharacterImportanceManager:get() end
+
 ---@param OutArray TArray<APalCharacter>
 function UPalCharacterImportanceManager:GetImportantNPC(OutArray) end
 ---@param OutArray TArray<APalCharacter>
@@ -13486,6 +16687,9 @@ function UPalCharacterImportanceManager:GetAllNPC(OutArray) end
 ---@field bIsLifting boolean
 ---@field bEnableLiftup boolean
 UPalCharacterLiftupObjectComponent = {}
+
+---@return UPalCharacterLiftupObjectComponent
+function UPalCharacterLiftupObjectComponent:get() end
 
 ---@param bInEnable boolean
 function UPalCharacterLiftupObjectComponent:SetEnable(bInEnable) end
@@ -13519,6 +16723,9 @@ function UPalCharacterLiftupObjectComponent:BroadcastSetBeingThrown(bInBeingThro
 ---@field CachedIndividualParameterList TArray<UPalIndividualCharacterParameter>
 ---@field LoadedCharacterIDs TSet<FPalInstanceID>
 UPalCharacterManager = {}
+
+---@return UPalCharacterManager
+function UPalCharacterManager:get() end
 
 ---@param Handle UPalIndividualCharacterHandle
 ---@param SpawnParameter FNetworkActorSpawnParameters
@@ -13594,6 +16801,9 @@ function UPalCharacterManager:CharacterHandleDelegate__DelegateSignature(Charact
 ---@class UPalCharacterManagerReplicator : UPalGameStateReplicatorBase
 ---@field CharacterParameterInfosFast FFastCharacterParameterRepInfoArray
 UPalCharacterManagerReplicator = {}
+
+---@return UPalCharacterManagerReplicator
+function UPalCharacterManagerReplicator:get() end
 
 ---@param Item FCharacterParameterRepInfo
 function UPalCharacterManagerReplicator:OnPreReplicatedRemoveItem(Item) end
@@ -13678,6 +16888,9 @@ function UPalCharacterManagerReplicator:OnPep_CharacterParameterInfos() end
 ---@field WaitTimeToSwimInFalling float
 ---@field bIsDashSwim boolean
 UPalCharacterMovementComponent = {}
+
+---@return UPalCharacterMovementComponent
+function UPalCharacterMovementComponent:get() end
 
 ---@param HitLocation FVector
 ---@param HitNormal FVector
@@ -13885,6 +17098,9 @@ function UPalCharacterMovementComponent:CanDashSwimming() end
 ---@field OnCompleteInitializeParameterDelegate FPalCharacterOnCompleteInitializeParameterWrapperOnCompleteInitializeParameterDelegate
 UPalCharacterOnCompleteInitializeParameterWrapper = {}
 
+---@return UPalCharacterOnCompleteInitializeParameterWrapper
+function UPalCharacterOnCompleteInitializeParameterWrapper:get() end
+
 ---@param Character APalCharacter
 function UPalCharacterOnCompleteInitializeParameterWrapper:Broadcast(Character) end
 
@@ -13966,6 +17182,9 @@ function UPalCharacterOnCompleteInitializeParameterWrapper:Broadcast(Character) 
 ---@field OtomoAttackStopJudge UPalOtomoAttackStopJudgeByBallList
 ---@field UnreachableMapObjectRepInfoArray TArray<FPalMapObjectAppearanceDataWithId>
 UPalCharacterParameterComponent = {}
+
+---@return UPalCharacterParameterComponent
+function UPalCharacterParameterComponent:get() end
 
 function UPalCharacterParameterComponent:ZeroDyingHP_ToServer() end
 function UPalCharacterParameterComponent:ZeroDyingHP() end
@@ -14156,10 +17375,16 @@ function UPalCharacterParameterComponent:AddDyingHP(AddHP) end
 ---@field StoredParameterInfoMap TMap<FPalCharacterStoredParameterId, FPalCharacterStoredParameterInfo>
 UPalCharacterParameterStorageSubsystem = {}
 
+---@return UPalCharacterParameterStorageSubsystem
+function UPalCharacterParameterStorageSubsystem:get() end
+
 
 
 ---@class UPalCharacterRankUpUtility : UBlueprintFunctionLibrary
 UPalCharacterRankUpUtility = {}
+
+---@return UPalCharacterRankUpUtility
+function UPalCharacterRankUpUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param Target UPalIndividualCharacterHandle
@@ -14183,10 +17408,16 @@ function UPalCharacterRankUpUtility:GetRequiredInitRankCharacterNum(WorldContext
 ---@field LocalLostPalProductArray TArray<UPalShopProduct_LostPal>
 UPalCharacterShop = {}
 
+---@return UPalCharacterShop
+function UPalCharacterShop:get() end
+
 
 
 ---@class UPalCharacterStatusOperation : UObject
 UPalCharacterStatusOperation = {}
+
+---@return UPalCharacterStatusOperation
+function UPalCharacterStatusOperation:get() end
 
 ---@param WorldContextObject UObject
 ---@param TargetIndividualParameter UPalIndividualCharacterParameter
@@ -14231,6 +17462,9 @@ function UPalCharacterStatusOperation:GetCurrentLocalPlayerTotalStatusPoint(Worl
 ---@field CharacterID FName
 UPalCharacterVisualSkeletalMeshComponent = {}
 
+---@return UPalCharacterVisualSkeletalMeshComponent
+function UPalCharacterVisualSkeletalMeshComponent:get() end
+
 ---@param InCharacterId FName
 ---@param GeneralMontageType EPalGeneralMontageType
 ---@param bImmediately boolean
@@ -14243,6 +17477,9 @@ function UPalCharacterVisualSkeletalMeshComponent:UpdateCharacter(InCharacterId)
 ---@field OnFilteredChatMessageDelegate FPalChatFilteringWaiterOnFilteredChatMessageDelegate
 ---@field ChatData FPalChatMessage
 UPalChatFilteringWaiter = {}
+
+---@return UPalChatFilteringWaiter
+function UPalChatFilteringWaiter:get() end
 
 ---@param ResponseBody FString
 ---@param bResponseOK boolean
@@ -14261,6 +17498,9 @@ function UPalChatFilteringWaiter:OnFilteredChatMessageDelegate__DelegateSignatur
 ---@field PalCountSystem UPalStatPalCount
 ---@field SpawnInfoReporter APalDebug_SpawnInfoReporter
 UPalCheatManager = {}
+
+---@return UPalCheatManager
+function UPalCheatManager:get() end
 
 function UPalCheatManager:WorkerEventLog() end
 ---@param Interval float
@@ -14790,11 +18030,17 @@ function UPalCheatManager:AddBaseCampEnergyAmount(EnergyType, Amount) end
 ---@class UPalCheckBox : UCheckBox
 UPalCheckBox = {}
 
+---@return UPalCheckBox
+function UPalCheckBox:get() end
+
 function UPalCheckBox:ToggleCheck() end
 
 
 ---@class UPalClimbingComponent : UActorComponent
 UPalClimbingComponent = {}
+
+---@return UPalClimbingComponent
+function UPalClimbingComponent:get() end
 
 ---@return boolean
 function UPalClimbingComponent:TryClimbAfterGrappling() end
@@ -14805,6 +18051,9 @@ function UPalClimbingComponent:ForceCancelClimb() end
 
 ---@class UPalCombiMonsterParameter : UObject
 UPalCombiMonsterParameter = {}
+
+---@return UPalCombiMonsterParameter
+function UPalCombiMonsterParameter:get() end
 
 
 ---@class UPalComboBoxString : UWidget
@@ -14824,6 +18073,9 @@ UPalCombiMonsterParameter = {}
 ---@field OnSelectionChanged FPalComboBoxStringOnSelectionChanged
 ---@field OnOpening FPalComboBoxStringOnOpening
 UPalComboBoxString = {}
+
+---@return UPalComboBoxString
+function UPalComboBoxString:get() end
 
 ---@param Option FString
 function UPalComboBoxString:SetSelectedOption(Option) end
@@ -14860,10 +18112,16 @@ function UPalComboBoxString:AddOption(Option) end
 ---@class UPalCommonBoundActionButton : UCommonBoundActionButton
 UPalCommonBoundActionButton = {}
 
+---@return UPalCommonBoundActionButton
+function UPalCommonBoundActionButton:get() end
+
 
 ---@class UPalCommonQuestRewardGiver : UPalQuestRewardGiver
 ---@field RewardData FPalCommonQuestRewardData
 UPalCommonQuestRewardGiver = {}
+
+---@return UPalCommonQuestRewardGiver
+function UPalCommonQuestRewardGiver:get() end
 
 ---@param InRewardList FPalCommonQuestRewardData
 function UPalCommonQuestRewardGiver:SetCommonRewardData(InRewardList) end
@@ -14871,6 +18129,9 @@ function UPalCommonQuestRewardGiver:SetCommonRewardData(InRewardList) end
 
 ---@class UPalCommonScrollListBase : UPalUserWidget
 UPalCommonScrollListBase = {}
+
+---@return UPalCommonScrollListBase
+function UPalCommonScrollListBase:get() end
 
 ---@param Num int32
 ---@param MoveItemSlot UPalItemSlot
@@ -14881,6 +18142,9 @@ function UPalCommonScrollListBase:MoveItem(Num, MoveItemSlot, TargetContainerId)
 ---@class UPalCommonUIActionRouter : UCommonUIActionRouterBase
 UPalCommonUIActionRouter = {}
 
+---@return UPalCommonUIActionRouter
+function UPalCommonUIActionRouter:get() end
+
 
 ---@class UPalContainerBase : UObject
 ---@field OnDisposeContainerDelegate FPalContainerBaseOnDisposeContainerDelegate
@@ -14888,6 +18152,9 @@ UPalCommonUIActionRouter = {}
 ---@field OperationRestrictType EPalContainerOperationRestrictType
 ---@field bIgnoreOnSave boolean
 UPalContainerBase = {}
+
+---@return UPalContainerBase
+function UPalContainerBase:get() end
 
 ---@return boolean
 function UPalContainerBase:IsEmpty() end
@@ -14898,6 +18165,9 @@ function UPalContainerBase:DisposeContainerDelegate__DelegateSignature() end
 
 ---@class UPalContainerIdUtility : UBlueprintFunctionLibrary
 UPalContainerIdUtility = {}
+
+---@return UPalContainerIdUtility
+function UPalContainerIdUtility:get() end
 
 ---@return FPalContainerId
 function UPalContainerIdUtility:NoneContainerId() end
@@ -14917,6 +18187,9 @@ function UPalContainerIdUtility:BP_Equal(A, B) end
 ---@class UPalContainerUtility : UObject
 UPalContainerUtility = {}
 
+---@return UPalContainerUtility
+function UPalContainerUtility:get() end
+
 
 ---@class UPalCoopClimbPlayer : UObject
 ---@field Player APalCharacter
@@ -14928,6 +18201,9 @@ UPalContainerUtility = {}
 ---@field Complete boolean
 ---@field StartStandAnimeDelegate FPalCoopClimbPlayerStartStandAnimeDelegate
 UPalCoopClimbPlayer = {}
+
+---@return UPalCoopClimbPlayer
+function UPalCoopClimbPlayer:get() end
 
 ---@param Climber FTransform
 ---@param ProgressSpeed float
@@ -14948,6 +18224,9 @@ function UPalCoopClimbPlayer:InitializeNode(EntryBone, PlayerCharacter, Climber)
 ---@field PassiveSkillAssignFlagName FName
 UPalCoopSkillModuleAssignPassiveSkill = {}
 
+---@return UPalCoopSkillModuleAssignPassiveSkill
+function UPalCoopSkillModuleAssignPassiveSkill:get() end
+
 function UPalCoopSkillModuleAssignPassiveSkill:RemovePassiveSkills() end
 ---@param AssignSkillName TArray<FPalDataTableRowName_PassiveSkillData>
 function UPalCoopSkillModuleAssignPassiveSkill:AssignPassiveSkills(AssignSkillName) end
@@ -14959,6 +18238,9 @@ function UPalCoopSkillModuleAssignPassiveSkill:AssignPassiveSkill(SkillName) end
 ---@field ExecuteLog EPalLogType
 ---@field OwnerCharacter APalCharacter
 UPalCoopSkillModuleBase = {}
+
+---@return UPalCoopSkillModuleBase
+function UPalCoopSkillModuleBase:get() end
 
 function UPalCoopSkillModuleBase:Start() end
 ---@param IsCoop boolean
@@ -14992,6 +18274,9 @@ function UPalCoopSkillModuleBase:Abort() end
 ---@field SearchResultParameters TArray<FPalCoopSkillSearchResultParameter>
 ---@field IsNotFinishAfterSearched boolean
 UPalCoopSkillSearchBase = {}
+
+---@return UPalCoopSkillSearchBase
+function UPalCoopSkillSearchBase:get() end
 
 ---@param DeltaTime float
 ---@param LocationRegister UPalCoopSkillSearchLocationRegister
@@ -15046,6 +18331,9 @@ function UPalCoopSkillSearchBase:AddSearchResultParameter(ResultParameter) end
 ---@class UPalCoopSkillSearchCharacter : UPalCoopSkillSearchBase
 UPalCoopSkillSearchCharacter = {}
 
+---@return UPalCoopSkillSearchCharacter
+function UPalCoopSkillSearchCharacter:get() end
+
 ---@param Origin FVector
 ---@param SearchRadius float
 ---@param RequestPlayerUId FGuid
@@ -15054,6 +18342,9 @@ function UPalCoopSkillSearchCharacter:SearchMonsters(Origin, SearchRadius, Reque
 
 ---@class UPalCoopSkillSearchDungeonGoal : UPalCoopSkillSearchBase
 UPalCoopSkillSearchDungeonGoal = {}
+
+---@return UPalCoopSkillSearchDungeonGoal
+function UPalCoopSkillSearchDungeonGoal:get() end
 
 ---@param Origin FVector
 ---@param SearchRadius float
@@ -15066,6 +18357,9 @@ function UPalCoopSkillSearchDungeonGoal:SearchDungeonGoal(Origin, SearchRadius, 
 ---@class UPalCoopSkillSearchDungeonPortal : UPalCoopSkillSearchBase
 UPalCoopSkillSearchDungeonPortal = {}
 
+---@return UPalCoopSkillSearchDungeonPortal
+function UPalCoopSkillSearchDungeonPortal:get() end
+
 ---@param Origin FVector
 ---@param SearchRadius float
 ---@param RequestPlayerUId FGuid
@@ -15074,6 +18368,9 @@ function UPalCoopSkillSearchDungeonPortal:SearchDungeonPortal(Origin, SearchRadi
 
 ---@class UPalCoopSkillSearchEffectController : UObject
 UPalCoopSkillSearchEffectController = {}
+
+---@return UPalCoopSkillSearchEffectController
+function UPalCoopSkillSearchEffectController:get() end
 
 ---@param DeltaTime float
 function UPalCoopSkillSearchEffectController:Tick(DeltaTime) end
@@ -15095,6 +18392,9 @@ function UPalCoopSkillSearchEffectController:End() end
 ---@field LocationDisplayTimeSec float
 UPalCoopSkillSearchLocationRegister = {}
 
+---@return UPalCoopSkillSearchLocationRegister
+function UPalCoopSkillSearchLocationRegister:get() end
+
 ---@param guiid FGuid
 function UPalCoopSkillSearchLocationRegister:UnregisterMapObjectLocationsFromCompass(guiid) end
 ---@param ResultParameter FPalCoopSkillSearchResultParameter
@@ -15103,6 +18403,9 @@ function UPalCoopSkillSearchLocationRegister:RegisterMapObjectLocationsToCompass
 
 ---@class UPalCoopSkillSearchMapObject : UPalCoopSkillSearchBase
 UPalCoopSkillSearchMapObject = {}
+
+---@return UPalCoopSkillSearchMapObject
+function UPalCoopSkillSearchMapObject:get() end
 
 ---@param SearchMapObjIds TArray<FName>
 ---@param Origin FVector
@@ -15118,6 +18421,9 @@ function UPalCoopSkillSearchMapObject:SearchMapObjects(SearchMapObjIds, Origin, 
 ---@field SearchObjects TArray<UPalCoopSkillSearchBase>
 UPalCoopSkillSearchSystem = {}
 
+---@return UPalCoopSkillSearchSystem
+function UPalCoopSkillSearchSystem:get() end
+
 ---@param EffectParam FPalCoopSkillSearchEffectParameter
 function UPalCoopSkillSearchSystem:StartSearchEffect(EffectParam) end
 ---@param SearchClass TSubclassOf<UPalCoopSkillSearchBase>
@@ -15128,12 +18434,18 @@ function UPalCoopSkillSearchSystem:CreateSearchObject(SearchClass) end
 ---@class UPalCryComponentBase : UActorComponent
 UPalCryComponentBase = {}
 
+---@return UPalCryComponentBase
+function UPalCryComponentBase:get() end
+
 
 ---@class UPalCustomPrimitiveWidget : UPalUserWidget
 ---@field SlateBrush USlateBrushAsset
 ---@field VertexData TArray<FPalUMGCustomVertexData>
 ---@field vertexIndexes TArray<int32>
 UPalCustomPrimitiveWidget = {}
+
+---@return UPalCustomPrimitiveWidget
+function UPalCustomPrimitiveWidget:get() end
 
 ---@param Index int32
 ---@param inVertexData FPalUMGCustomVertexData
@@ -15148,10 +18460,16 @@ function UPalCustomPrimitiveWidget:DrawVertexData(Context) end
 ---@field PreBattleEvent APalArenaPreBattleCutsceneEvent
 UPalCutsceneArenaPreBattleBindParameter = {}
 
+---@return UPalCutsceneArenaPreBattleBindParameter
+function UPalCutsceneArenaPreBattleBindParameter:get() end
+
 
 
 ---@class UPalCutsceneBindParameter : UObject
 UPalCutsceneBindParameter = {}
+
+---@return UPalCutsceneBindParameter
+function UPalCutsceneBindParameter:get() end
 
 
 ---@class UPalCutsceneComponent : UActorComponent
@@ -15160,6 +18478,9 @@ UPalCutsceneBindParameter = {}
 ---@field CutsceneActor APalCutsceneActor
 ---@field FadeParam UPalHUDDispatchParameter_FadeWidget
 UPalCutsceneComponent = {}
+
+---@return UPalCutsceneComponent
+function UPalCutsceneComponent:get() end
 
 function UPalCutsceneComponent:StopCutsceneToServer() end
 function UPalCutsceneComponent:StopCutscene() end
@@ -15186,6 +18507,9 @@ function UPalCutsceneComponent:CutsceneDelegate__DelegateSignature() end
 ---@class UPalDamageDisplayCanvas : UPalUserWidget
 UPalDamageDisplayCanvas = {}
 
+---@return UPalDamageDisplayCanvas
+function UPalDamageDisplayCanvas:get() end
+
 ---@param DamageInfo FPalDamageInfo
 ---@param Defender AActor
 ---@param outSpecialDamageRate float
@@ -15199,6 +18523,9 @@ function UPalDamageDisplayCanvas:CalcDisplayDamage(DamageInfo, Defender, outSpec
 ---@field OnDamageDelegate_Ex FPalDamageExplodeComponentOnDamageDelegate_Ex
 ---@field IsExploded boolean
 UPalDamageExplodeComponent = {}
+
+---@return UPalDamageExplodeComponent
+function UPalDamageExplodeComponent:get() end
 
 ---@param Attacker AActor
 ---@param DelayTime float
@@ -15214,6 +18541,9 @@ function UPalDamageExplodeComponent:ForceExplode(Attacker) end
 ---@class UPalDamageInfoUtility : UObject
 UPalDamageInfoUtility = {}
 
+---@return UPalDamageInfoUtility
+function UPalDamageInfoUtility:get() end
+
 ---@param DamageInfo FPalDamageInfo
 ---@param Type EPalSpecialAttackRateType
 ---@return float
@@ -15223,6 +18553,9 @@ function UPalDamageInfoUtility:GetSpecialAttackRate(DamageInfo, Type) end
 ---@class UPalDamagePopUpManager : UObject
 ---@field OnAddDamagePopupDelegate FPalDamagePopUpManagerOnAddDamagePopupDelegate
 UPalDamagePopUpManager = {}
+
+---@return UPalDamagePopUpManager
+function UPalDamagePopUpManager:get() end
 
 ---@param DamageInfo FPalDamageInfo
 ---@param Defender AActor
@@ -15251,6 +18584,9 @@ function UPalDamagePopUpManager:AddDamagePopUp(DamageInfo, Defender) end
 ---@field DisableLargeDown boolean
 ---@field LastAttackerInstanceID FPalInstanceID
 UPalDamageReactionComponent = {}
+
+---@return UPalDamageReactionComponent
+function UPalDamageReactionComponent:get() end
 
 ---@param Damage int32
 ---@param Velocity FVector
@@ -15330,12 +18666,18 @@ function UPalDamageReactionComponent:AddDeadImplus(DamageResult) end
 ---@field RandomPositionMax FVector2D
 UPalDamageText = {}
 
+---@return UPalDamageText
+function UPalDamageText:get() end
+
 
 
 ---@class UPalDataTableRowIdMapper : UObject
 ---@field DataTables TArray<UDataTable>
 ---@field RowNameHashMap TMap<FName, int32>
 UPalDataTableRowIdMapper = {}
+
+---@return UPalDataTableRowIdMapper
+function UPalDataTableRowIdMapper:get() end
 
 
 
@@ -15364,6 +18706,9 @@ UPalDataTableRowIdMapper = {}
 ---@field PettingPressetInstance UPalPettingPresset
 ---@field CombiMonsterParameter UPalCombiMonsterParameter
 UPalDatabaseCharacterParameter = {}
+
+---@return UPalDatabaseCharacterParameter
+function UPalDatabaseCharacterParameter:get() end
 
 ---@param IndividualParameter UPalIndividualCharacterParameter
 function UPalDatabaseCharacterParameter:UpdateApplyDatabaseToIndividualParameter(IndividualParameter) end
@@ -15547,6 +18892,9 @@ function UPalDatabaseCharacterParameter:CalcCorrectedLevel(TrainerLevel, TargetC
 ---@field DeadPalList TArray<UPalIndividualCharacterHandle>
 UPalDeadBodyManager = {}
 
+---@return UPalDeadBodyManager
+function UPalDeadBodyManager:get() end
+
 ---@param OutArray TArray<UPalIndividualCharacterHandle>
 function UPalDeadBodyManager:GetDeadPalList(OutArray) end
 
@@ -15559,6 +18907,9 @@ function UPalDeadBodyManager:GetDeadPalList(OutArray) end
 ---@field DeathPenaMap TMap<FGuid, FPalDeathPenaltyList>
 UPalDeathPenaltyManager = {}
 
+---@return UPalDeathPenaltyManager
+function UPalDeathPenaltyManager:get() end
+
 ---@param Player APalPlayerCharacter
 function UPalDeathPenaltyManager:DropDeathPenaltyChest(Player) end
 
@@ -15566,6 +18917,9 @@ function UPalDeathPenaltyManager:DropDeathPenaltyChest(Player) end
 ---@class UPalDebugInfoGameInstanceSubsystem : UGameInstanceSubsystem
 ---@field FontObject UFont
 UPalDebugInfoGameInstanceSubsystem = {}
+
+---@return UPalDebugInfoGameInstanceSubsystem
+function UPalDebugInfoGameInstanceSubsystem:get() end
 
 
 
@@ -15864,16 +19218,25 @@ UPalDebugInfoGameInstanceSubsystem = {}
 ---@field HardTowerBossDebugNo int32
 UPalDebugSetting = {}
 
+---@return UPalDebugSetting
+function UPalDebugSetting:get() end
+
 
 
 ---@class UPalDebugWindowSetting : UDataAsset
 ---@field PriorityFunctions TArray<FString>
 UPalDebugWindowSetting = {}
 
+---@return UPalDebugWindowSetting
+function UPalDebugWindowSetting:get() end
+
 
 
 ---@class UPalDefine : UBlueprintFunctionLibrary
 UPalDefine = {}
+
+---@return UPalDefine
+function UPalDefine:get() end
 
 ---@return FGameplayTag
 function UPalDefine:UILayerTag_Modal() end
@@ -16046,6 +19409,9 @@ function UPalDefine:ActionBBKey_FeedItem() end
 ---@field IsEnableShortcutConfirmInput boolean
 UPalDialogParameterBase = {}
 
+---@return UPalDialogParameterBase
+function UPalDialogParameterBase:get() end
+
 ---@param bResult boolean
 function UPalDialogParameterBase:InvokeCallback(bResult) end
 
@@ -16053,6 +19419,9 @@ function UPalDialogParameterBase:InvokeCallback(bResult) end
 ---@class UPalDialogParameterDialog : UPalDialogParameterBase
 ---@field bDefaultNegative boolean
 UPalDialogParameterDialog = {}
+
+---@return UPalDialogParameterDialog
+function UPalDialogParameterDialog:get() end
 
 ---@param InMessage FText
 ---@param InDialogType EPalDialogType
@@ -16066,24 +19435,39 @@ function UPalDialogParameterDialog:SetParameters(InMessage, InDialogType, bInNeg
 ---@field TargetPlayerInstanceId FPalInstanceID
 UPalDialogParameter_RequestJoinGuild = {}
 
+---@return UPalDialogParameter_RequestJoinGuild
+function UPalDialogParameter_RequestJoinGuild:get() end
+
 
 
 ---@class UPalDialogParameter_RequestMapObjectDismantle : UPalDialogParameterDialog
 ---@field MapObjectInstanceId FGuid
 UPalDialogParameter_RequestMapObjectDismantle = {}
 
+---@return UPalDialogParameter_RequestMapObjectDismantle
+function UPalDialogParameter_RequestMapObjectDismantle:get() end
+
 
 
 ---@class UPalDisplaySafeAreaDebugger : UObject
 UPalDisplaySafeAreaDebugger = {}
 
+---@return UPalDisplaySafeAreaDebugger
+function UPalDisplaySafeAreaDebugger:get() end
+
 
 ---@class UPalDungeonDefines : UObject
 UPalDungeonDefines = {}
 
+---@return UPalDungeonDefines
+function UPalDungeonDefines:get() end
+
 
 ---@class UPalDungeonInfoParameterUtility : UObject
 UPalDungeonInfoParameterUtility = {}
+
+---@return UPalDungeonInfoParameterUtility
+function UPalDungeonInfoParameterUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param InParameter FPalDungeonInfoParameter
@@ -16112,6 +19496,9 @@ function UPalDungeonInfoParameterUtility:CalcDisappearRemainSeconds(WorldContext
 ---@field ReservedDataLayerAssetIndex int32
 ---@field ReservedDataLayerAsset UDataLayerAsset
 UPalDungeonInstanceModel = {}
+
+---@return UPalDungeonInstanceModel
+function UPalDungeonInstanceModel:get() end
 
 ---@param Self UPalDungeonInstanceModel
 function UPalDungeonInstanceModel:ReturnSelfDelegate__DelegateSignature(Self) end
@@ -16150,6 +19537,9 @@ function UPalDungeonInstanceModel:CalcDisappearRemainSeconds(WorldContextObject,
 ---@field RespawnBossTimeAt FGameDateTime
 UPalDungeonInstanceModelFixedDungeon = {}
 
+---@return UPalDungeonInstanceModelFixedDungeon
+function UPalDungeonInstanceModelFixedDungeon:get() end
+
 ---@return FGameDateTime
 function UPalDungeonInstanceModelFixedDungeon:GetRespawnBossTimeAt() end
 
@@ -16158,11 +19548,17 @@ function UPalDungeonInstanceModelFixedDungeon:GetRespawnBossTimeAt() end
 ---@field LevelBounds FBox
 UPalDungeonLevelDataAsset = {}
 
+---@return UPalDungeonLevelDataAsset
+function UPalDungeonLevelDataAsset:get() end
+
 
 
 ---@class UPalDungeonSpawnerDataAsset : UDataAsset
 ---@field SpawnerPatternNames TArray<FName>
 UPalDungeonSpawnerDataAsset = {}
+
+---@return UPalDungeonSpawnerDataAsset
+function UPalDungeonSpawnerDataAsset:get() end
 
 
 
@@ -16175,6 +19571,9 @@ UPalDungeonSpawnerDataAsset = {}
 ---@field PointMarkersWaitSystemInitializeInServer TArray<APalDungeonPointMarker>
 ---@field bInitializedWithSaveData boolean
 UPalDungeonWorldSubsystem = {}
+
+---@return UPalDungeonWorldSubsystem
+function UPalDungeonWorldSubsystem:get() end
 
 ---@param StageInstanceId FPalStageInstanceId
 ---@param OutInfo FPalDungeonInfoParameter
@@ -16191,6 +19590,9 @@ function UPalDungeonWorldSubsystem:Debug_GetDungeonInstanceIdByIndex(Index) end
 ---@field OldDurability float
 ---@field PassiveSkillList TArray<FName>
 UPalDynamicArmorItemDataBase = {}
+
+---@return UPalDynamicArmorItemDataBase
+function UPalDynamicArmorItemDataBase:get() end
 
 ---@param NewDurability float
 function UPalDynamicArmorItemDataBase:SetDurability(NewDurability) end
@@ -16216,6 +19618,9 @@ function UPalDynamicArmorItemDataBase:AddPassiveSkill(SkillName) end
 ---@field StaticId FName
 UPalDynamicItemDataBase = {}
 
+---@return UPalDynamicItemDataBase
+function UPalDynamicItemDataBase:get() end
+
 ---@return FName
 function UPalDynamicItemDataBase:GetStaticId() end
 ---@return FPalDynamicItemId
@@ -16230,6 +19635,9 @@ function UPalDynamicItemDataBase:GetId() end
 ---@field DisposeDynamicItemIdRequestWaitInfoMap_ServerInternal TMap<FGuid, FPalDynamicItemDisposeWaitNotifyInfo>
 UPalDynamicItemDataManager = {}
 
+---@return UPalDynamicItemDataManager
+function UPalDynamicItemDataManager:get() end
+
 
 
 ---@class UPalDynamicItemWorldSubsystem : UPalWorldSubsystem
@@ -16238,12 +19646,18 @@ UPalDynamicItemDataManager = {}
 ---@field DynamicItemDataCache_InClient TArray<UPalDynamicItemDataBase>
 UPalDynamicItemWorldSubsystem = {}
 
+---@return UPalDynamicItemWorldSubsystem
+function UPalDynamicItemWorldSubsystem:get() end
+
 
 
 ---@class UPalDynamicPalEggItemDataBase : UPalDynamicItemDataBase
 ---@field CharacterID FName
 ---@field SaveParameter FPalIndividualCharacterSaveParameter
 UPalDynamicPalEggItemDataBase = {}
+
+---@return UPalDynamicPalEggItemDataBase
+function UPalDynamicPalEggItemDataBase:get() end
 
 
 
@@ -16255,6 +19669,9 @@ UPalDynamicPalEggItemDataBase = {}
 ---@field PassiveSkillList TArray<FName>
 ---@field ForceUpdateBulletsCounter uint8
 UPalDynamicWeaponItemDataBase = {}
+
+---@return UPalDynamicWeaponItemDataBase
+function UPalDynamicWeaponItemDataBase:get() end
 
 ---@param useNum int32
 ---@return int32
@@ -16290,6 +19707,9 @@ function UPalDynamicWeaponItemDataBase:AddPassiveSkill(SkillName) end
 ---@class UPalEditorNpcMultiTalkDataUtility : UBlueprintFunctionLibrary
 UPalEditorNpcMultiTalkDataUtility = {}
 
+---@return UPalEditorNpcMultiTalkDataUtility
+function UPalEditorNpcMultiTalkDataUtility:get() end
+
 
 ---@class UPalEditorSetting : UObject
 ---@field ItemDataTableAssetPath FSoftObjectPath
@@ -16317,19 +19737,31 @@ UPalEditorNpcMultiTalkDataUtility = {}
 UPalEditorSetting = {}
 
 ---@return UPalEditorSetting
+function UPalEditorSetting:get() end
+
+---@return UPalEditorSetting
 function UPalEditorSetting:GetPalEditorSettings() end
 
 
 ---@class UPalEditorTalkTreeDataTable : UObject
 UPalEditorTalkTreeDataTable = {}
 
+---@return UPalEditorTalkTreeDataTable
+function UPalEditorTalkTreeDataTable:get() end
+
 
 ---@class UPalEditorTalkTreeDataUtility : UBlueprintFunctionLibrary
 UPalEditorTalkTreeDataUtility = {}
 
+---@return UPalEditorTalkTreeDataUtility
+function UPalEditorTalkTreeDataUtility:get() end
+
 
 ---@class UPalEnergyTypeUtility : UBlueprintFunctionLibrary
 UPalEnergyTypeUtility = {}
+
+---@return UPalEnergyTypeUtility
+function UPalEnergyTypeUtility:get() end
 
 ---@param EnergyType EPalEnergyType
 ---@param ElementTypes TArray<EPalElementType>
@@ -16339,10 +19771,16 @@ function UPalEnergyTypeUtility:CollectWorkableElementTypes(EnergyType, ElementTy
 ---@class UPalEquipItemContainerUtility : UBlueprintFunctionLibrary
 UPalEquipItemContainerUtility = {}
 
+---@return UPalEquipItemContainerUtility
+function UPalEquipItemContainerUtility:get() end
+
 
 ---@class UPalEquipWeaponShooterComponent : UActorComponent
 ---@field SpawnedWeaponInfoMap TMap<EPalMonsterEquipWeaponSocketType, FPalEquipWeaponInfo>
 UPalEquipWeaponShooterComponent = {}
+
+---@return UPalEquipWeaponShooterComponent
+function UPalEquipWeaponShooterComponent:get() end
 
 ---@param SocketType EPalMonsterEquipWeaponSocketType
 ---@param WeaponActorClass TSubclassOf<APalMonsterEquipWeaponBase>
@@ -16356,11 +19794,17 @@ function UPalEquipWeaponShooterComponent:PullTrigger() end
 ---@class UPalEventNotifyBase : UObject
 UPalEventNotifyBase = {}
 
+---@return UPalEventNotifyBase
+function UPalEventNotifyBase:get() end
+
 
 ---@class UPalEventNotifySystem : UPalWorldSubsystem
 ---@field EventNotifyClassArray TArray<TSubclassOf<UPalEventNotifyBase>>
 ---@field EventNotifyMap TMap<TSubclassOf<UPalEventNotifyBase>, UPalEventNotifyBase>
 UPalEventNotifySystem = {}
+
+---@return UPalEventNotifySystem
+function UPalEventNotifySystem:get() end
 
 ---@param Class TSubclassOf<UPalEventNotifyBase>
 ---@return UPalEventNotifyBase
@@ -16370,11 +19814,17 @@ function UPalEventNotifySystem:GetEventNotify(Class) end
 ---@class UPalEventNotifySystem_Concrete : UBlueprintFunctionLibrary
 UPalEventNotifySystem_Concrete = {}
 
+---@return UPalEventNotifySystem_Concrete
+function UPalEventNotifySystem_Concrete:get() end
+
 
 ---@class UPalEventNotify_Area : UPalEventNotifyBase
 ---@field OnNotifyEventBeginInvasionInServer FPalEventNotify_AreaOnNotifyEventBeginInvasionInServer
 ---@field OnNotifyEventEndInvasionInServer FPalEventNotify_AreaOnNotifyEventEndInvasionInServer
 UPalEventNotify_Area = {}
+
+---@return UPalEventNotify_Area
+function UPalEventNotify_Area:get() end
 
 ---@param TriggerBase APalTriggerAreaBase
 function UPalEventNotify_Area:OnRegiterdArea_ServerInternal(TriggerBase) end
@@ -16394,6 +19844,9 @@ function UPalEventNotify_Area:GetEventNotify_Area(WorldContextObject) end
 ---@field OnNotifyEventDeadInServer FPalEventNotify_CharacterOnNotifyEventDeadInServer
 UPalEventNotify_Character = {}
 
+---@return UPalEventNotify_Character
+function UPalEventNotify_Character:get() end
+
 ---@param CharacterHandle UPalIndividualCharacterHandle
 function UPalEventNotify_Character:OnCharacterSpawned_ServerInternal(CharacterHandle) end
 ---@param DeadInfo FPalDeadInfo
@@ -16409,6 +19862,9 @@ function UPalEventNotify_Character:GetEventNotify_Character(WorldContextObject) 
 ---@field OnNotifyEventMoveInServer FPalEventNotify_ItemContainerOnNotifyEventMoveInServer
 UPalEventNotify_ItemContainer = {}
 
+---@return UPalEventNotify_ItemContainer
+function UPalEventNotify_ItemContainer:get() end
+
 ---@param OperationInfoSet TArray<FPalItemOperationInfo_Move>
 function UPalEventNotify_ItemContainer:OnItemOperationMove_ServerInternal(OperationInfoSet) end
 ---@param WorldContextObject UObject
@@ -16420,6 +19876,9 @@ function UPalEventNotify_ItemContainer:GetEventNotify_Item(WorldContextObject) e
 ---@field ExpDataTable UDataTable
 ---@field PaldexBonusExpDataTable UDataTable
 UPalExpDatabase = {}
+
+---@return UPalExpDatabase
+function UPalExpDatabase:get() end
 
 ---@param Level int32
 ---@param IsPlayer boolean
@@ -16470,6 +19929,9 @@ function UPalExpDatabase:AddExp_EnemyDeath(DeadInfo) end
 ---@field MainModule UPalFacial_MainModule
 UPalFacialComponent = {}
 
+---@return UPalFacialComponent
+function UPalFacialComponent:get() end
+
 ---@param SkeletalMeshComponent USkeletalMeshComponent
 function UPalFacialComponent:SetUpTestMesh(SkeletalMeshComponent) end
 ---@param Disable boolean
@@ -16504,6 +19966,9 @@ function UPalFacialComponent:Blink() end
 ---@field BlendShape_MouthWeight TMap<FName, float>
 UPalFacial_MainModule = {}
 
+---@return UPalFacial_MainModule
+function UPalFacial_MainModule:get() end
+
 ---@param SkeletalMeshComponent USkeletalMeshComponent
 function UPalFacial_MainModule:Setup_FacialModule(SkeletalMeshComponent) end
 
@@ -16511,9 +19976,15 @@ function UPalFacial_MainModule:Setup_FacialModule(SkeletalMeshComponent) end
 ---@class UPalFadeWidgetBase : UPalUserWidget
 UPalFadeWidgetBase = {}
 
+---@return UPalFadeWidgetBase
+function UPalFadeWidgetBase:get() end
+
 
 ---@class UPalFirePointLightComponent : UPointLightComponent
 UPalFirePointLightComponent = {}
+
+---@return UPalFirePointLightComponent
+function UPalFirePointLightComponent:get() end
 
 
 ---@class UPalFlyMeshHeightCtrlComponent : UActorComponent
@@ -16524,6 +19995,9 @@ UPalFirePointLightComponent = {}
 ---@field bIsHighFlingCache boolean
 ---@field SK USkeletalMeshComponent
 UPalFlyMeshHeightCtrlComponent = {}
+
+---@return UPalFlyMeshHeightCtrlComponent
+function UPalFlyMeshHeightCtrlComponent:get() end
 
 ---@param Duration float
 function UPalFlyMeshHeightCtrlComponent:ToLand_All(Duration) end
@@ -16558,6 +20032,9 @@ function UPalFlyMeshHeightCtrlComponent:Debug_ForceHighFlingEnd() end
 ---@field EffectSlot UPalHitEffectSlot
 UPalFoliageDamageReactionComponent = {}
 
+---@return UPalFoliageDamageReactionComponent
+function UPalFoliageDamageReactionComponent:get() end
+
 
 
 ---@class UPalFoliageGridModel : UObject
@@ -16566,15 +20043,24 @@ UPalFoliageDamageReactionComponent = {}
 ---@field InstanceIdMapByLocation TMap<FVector, FPalFoliageInstanceId>
 UPalFoliageGridModel = {}
 
+---@return UPalFoliageGridModel
+function UPalFoliageGridModel:get() end
+
 
 
 ---@class UPalFoliageISMComponent : UFoliageInstancedStaticMeshComponent
 UPalFoliageISMComponent = {}
 
+---@return UPalFoliageISMComponent
+function UPalFoliageISMComponent:get() end
+
 
 ---@class UPalFoliageISMComponentBase : UPalFoliageISMComponent
 ---@field InstanceIndexMapByLocation TMap<FVector, int32>
 UPalFoliageISMComponentBase = {}
+
+---@return UPalFoliageISMComponentBase
+function UPalFoliageISMComponentBase:get() end
 
 ---@param Instance UPalFoliageInstance
 function UPalFoliageISMComponentBase:SpawnInstance(Instance) end
@@ -16596,11 +20082,17 @@ function UPalFoliageISMComponentBase:DespawnInstance(Instance) end
 ---@field InstallDataSetMap TMap<FName, TSoftObjectPtr<UPalFoliageInstallDataAssetByIFA>>
 UPalFoliageInstallDataAsset = {}
 
+---@return UPalFoliageInstallDataAsset
+function UPalFoliageInstallDataAsset:get() end
+
 
 
 ---@class UPalFoliageInstallDataAssetByIFA : UDataAsset
 ---@field InstallDataArrayMap TMap<FName, FPalFoliageInstallDataArray>
 UPalFoliageInstallDataAssetByIFA = {}
+
+---@return UPalFoliageInstallDataAssetByIFA
+function UPalFoliageInstallDataAssetByIFA:get() end
 
 
 
@@ -16615,6 +20107,9 @@ UPalFoliageInstallDataAssetByIFA = {}
 ---@field RespawnTimeAt FGameDateTime
 UPalFoliageInstance = {}
 
+---@return UPalFoliageInstance
+function UPalFoliageInstance:get() end
+
 function UPalFoliageInstance:OnRep_WorldTransform() end
 ---@param bOldValue boolean
 function UPalFoliageInstance:OnRep_Alive(bOldValue) end
@@ -16626,16 +20121,25 @@ function UPalFoliageInstance:FoliageInstanceDelegate__DelegateSignature(Instance
 ---@field Presets TMap<EPalFoliagePresetType, FPalFoliagePresetData>
 UPalFoliagePresetDataSet = {}
 
+---@return UPalFoliagePresetDataSet
+function UPalFoliagePresetDataSet:get() end
+
 
 
 ---@class UPalFoliageType_InstancedStaticMesh : UFoliageType_InstancedStaticMesh
 ---@field PresetType EPalFoliagePresetType
 UPalFoliageType_InstancedStaticMesh = {}
 
+---@return UPalFoliageType_InstancedStaticMesh
+function UPalFoliageType_InstancedStaticMesh:get() end
+
 
 
 ---@class UPalFollowingComponent : UPathFollowingComponent
 UPalFollowingComponent = {}
+
+---@return UPalFollowingComponent
+function UPalFollowingComponent:get() end
 
 
 ---@class UPalFootIKComponent : UActorComponent
@@ -16647,6 +20151,9 @@ UPalFollowingComponent = {}
 ---@field FootGroundResult TMap<EPalFootType, FHitResult>
 UPalFootIKComponent = {}
 
+---@return UPalFootIKComponent
+function UPalFootIKComponent:get() end
+
 ---@param flagName FName
 ---@param bIsDisable boolean
 function UPalFootIKComponent:SetFootIKDisable(flagName, bIsDisable) end
@@ -16657,6 +20164,9 @@ function UPalFootIKComponent:IsEnableFootIK() end
 ---@class UPalFootStepEffectAssetBase : UObject
 ---@field FootStepEffectInfo TMap<EPalLandingType, FFootStepEffectInfo>
 UPalFootStepEffectAssetBase = {}
+
+---@return UPalFootStepEffectAssetBase
+function UPalFootStepEffectAssetBase:get() end
 
 ---@param LandingType EPalLandingType
 ---@param PhysicalSurface EPhysicalSurface
@@ -16672,6 +20182,9 @@ function UPalFootStepEffectAssetBase:GetEffectInfo(LandingType, OutVal) end
 ---@field ManagedCharacterInfo TMap<FGuid, FPalFunnelCharacterManagementInfo>
 ---@field PickupTarget TMap<FGuid, FPalInstanceID>
 UPalFunnelCharacterManager = {}
+
+---@return UPalFunnelCharacterManager
+function UPalFunnelCharacterManager:get() end
 
 ---@param Guid FGuid
 ---@param Actor AActor
@@ -16693,6 +20206,9 @@ function UPalFunnelCharacterManager:GetIndexOfFunnelsWithinSameTrainer(FunnelCha
 ---@field FunnelCharacter APalFunnelCharacter
 UPalFunnelSkillModule = {}
 
+---@return UPalFunnelSkillModule
+function UPalFunnelSkillModule:get() end
+
 ---@return boolean
 function UPalFunnelSkillModule:ShouldSetSkillAction() end
 ---@param Character APalCharacter
@@ -16710,6 +20226,9 @@ function UPalFunnelSkillModule:GetCharacter() end
 ---@field bShouldSetSkillAction boolean
 ---@field SearchItemInfoList TMap<FGuid, FPalFunnelSkillModuleCollectItemSearchInfo>
 UPalFunnelSkillModuleCollectItem = {}
+
+---@return UPalFunnelSkillModuleCollectItem
+function UPalFunnelSkillModuleCollectItem:get() end
 
 ---@param DeltaTime float
 function UPalFunnelSkillModuleCollectItem:SearchCollectableItem(DeltaTime) end
@@ -16736,6 +20255,9 @@ function UPalFunnelSkillModuleCollectItem:GetTargetId() end
 ---@field CoolTime float
 ---@field ReticleTarget TWeakObjectPtr<APalCharacter>
 UPalFunnelSkillModuleReticleTargetAttack = {}
+
+---@return UPalFunnelSkillModuleReticleTargetAttack
+function UPalFunnelSkillModuleReticleTargetAttack:get() end
 
 function UPalFunnelSkillModuleReticleTargetAttack:Reset() end
 ---@return APalCharacter
@@ -16831,6 +20353,9 @@ function UPalFunnelSkillModuleReticleTargetAttack:GetTarget() end
 ---@field NewGameWorldSetting FPalOptionWorldSettings
 UPalGameInstance = {}
 
+---@return UPalGameInstance
+function UPalGameInstance:get() end
+
 ---@param bOverrideChecking boolean
 function UPalGameInstance:ShowUIMultiplayRestriction(bOverrideChecking) end
 function UPalGameInstance:ShowCharacterMakeScreen() end
@@ -16891,6 +20416,9 @@ function UPalGameInstance:ApplicationHasEnteredForeground() end
 ---@field DLSSMode UDLSSMode
 ---@field GraphicsCommonQuality int32
 UPalGameLocalSettings = {}
+
+---@return UPalGameLocalSettings
+function UPalGameLocalSettings:get() end
 
 ---@return boolean
 function UPalGameLocalSettings:RequireBenchMarkScalaBility() end
@@ -17376,6 +20904,9 @@ function UPalGameLocalSettings:RequireBenchMarkScalaBility() end
 ---@field OptimizeParameterSettingClass TMap<EPalPlatformType, TSubclassOf<UPalOptimizeParameterSetting>>
 UPalGameSetting = {}
 
+---@return UPalGameSetting
+function UPalGameSetting:get() end
+
 ---@param WorkSuitability EPalWorkSuitability
 ---@param outDefineData FPalWorkSuitabilityDefineData
 ---@return boolean
@@ -17427,11 +20958,17 @@ function UPalGameSetting:CalcCaptureRate(captureItemLevel, targetHandle, throwCh
 ---@class UPalGameStateReplicatorBase : UObject
 UPalGameStateReplicatorBase = {}
 
+---@return UPalGameStateReplicatorBase
+function UPalGameStateReplicatorBase:get() end
+
 
 ---@class UPalGameSystemInitManagerComponent : UGameStateComponent
 ---@field InitSequences TArray<FPalGameSystemInitSequenceSet>
 ---@field CurrentSequenceIndex int32
 UPalGameSystemInitManagerComponent = {}
+
+---@return UPalGameSystemInitManagerComponent
+function UPalGameSystemInitManagerComponent:get() end
 
 ---@param ChangedProcessHandle UPalGameSystemInitProcessHandle
 function UPalGameSystemInitManagerComponent:OnChangeProcessState(ChangedProcessHandle) end
@@ -17443,70 +20980,118 @@ function UPalGameSystemInitManagerComponent:OnChangeProcessProgressRate(ChangedP
 ---@field ChildProcessHandles TArray<UPalGameSystemInitProcessHandle>
 UPalGameSystemInitProcessHandle = {}
 
+---@return UPalGameSystemInitProcessHandle
+function UPalGameSystemInitProcessHandle:get() end
+
 
 
 ---@class UPalGameSystemInitSequenceBase : UObject
 ---@field ProcessHandles TArray<UPalGameSystemInitProcessHandle>
 UPalGameSystemInitSequenceBase = {}
 
+---@return UPalGameSystemInitSequenceBase
+function UPalGameSystemInitSequenceBase:get() end
+
 
 
 ---@class UPalGameSystemInitSequence_ApplyWorldSaveData : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_ApplyWorldSaveData = {}
 
+---@return UPalGameSystemInitSequence_ApplyWorldSaveData
+function UPalGameSystemInitSequence_ApplyWorldSaveData:get() end
+
 
 ---@class UPalGameSystemInitSequence_CreateSystemForDedicatedServer : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_CreateSystemForDedicatedServer = {}
+
+---@return UPalGameSystemInitSequence_CreateSystemForDedicatedServer
+function UPalGameSystemInitSequence_CreateSystemForDedicatedServer:get() end
 
 
 ---@class UPalGameSystemInitSequence_InitializeWorld : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_InitializeWorld = {}
 
+---@return UPalGameSystemInitSequence_InitializeWorld
+function UPalGameSystemInitSequence_InitializeWorld:get() end
+
 
 ---@class UPalGameSystemInitSequence_InitializeWorldAfterAppliedSaveData : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_InitializeWorldAfterAppliedSaveData = {}
+
+---@return UPalGameSystemInitSequence_InitializeWorldAfterAppliedSaveData
+function UPalGameSystemInitSequence_InitializeWorldAfterAppliedSaveData:get() end
 
 
 ---@class UPalGameSystemInitSequence_MapObjectRegistration : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_MapObjectRegistration = {}
 
+---@return UPalGameSystemInitSequence_MapObjectRegistration
+function UPalGameSystemInitSequence_MapObjectRegistration:get() end
+
 
 ---@class UPalGameSystemInitSequence_ReadyWorldSaveData : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_ReadyWorldSaveData = {}
+
+---@return UPalGameSystemInitSequence_ReadyWorldSaveData
+function UPalGameSystemInitSequence_ReadyWorldSaveData:get() end
 
 
 ---@class UPalGameSystemInitSequence_StartAutoSave_WorldAndLocal : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_StartAutoSave_WorldAndLocal = {}
 
+---@return UPalGameSystemInitSequence_StartAutoSave_WorldAndLocal
+function UPalGameSystemInitSequence_StartAutoSave_WorldAndLocal:get() end
+
 
 ---@class UPalGameSystemInitSequence_StartAutoSave_WorldOnly : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_StartAutoSave_WorldOnly = {}
+
+---@return UPalGameSystemInitSequence_StartAutoSave_WorldOnly
+function UPalGameSystemInitSequence_StartAutoSave_WorldOnly:get() end
 
 
 ---@class UPalGameSystemInitSequence_WaitForLocalNetworkTransmitter : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_WaitForLocalNetworkTransmitter = {}
 
+---@return UPalGameSystemInitSequence_WaitForLocalNetworkTransmitter
+function UPalGameSystemInitSequence_WaitForLocalNetworkTransmitter:get() end
+
 
 ---@class UPalGameSystemInitSequence_WaitForLocalPlayerStateSetup : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_WaitForLocalPlayerStateSetup = {}
+
+---@return UPalGameSystemInitSequence_WaitForLocalPlayerStateSetup
+function UPalGameSystemInitSequence_WaitForLocalPlayerStateSetup:get() end
 
 
 ---@class UPalGameSystemInitSequence_WaitForWorldSystemInit : UPalGameSystemInitSequenceBase
 UPalGameSystemInitSequence_WaitForWorldSystemInit = {}
 
+---@return UPalGameSystemInitSequence_WaitForWorldSystemInit
+function UPalGameSystemInitSequence_WaitForWorldSystemInit:get() end
+
 
 ---@class UPalGameViewportClient : UCommonGameViewportClient
 UPalGameViewportClient = {}
+
+---@return UPalGameViewportClient
+function UPalGameViewportClient:get() end
 
 
 ---@class UPalGameWorldSettings : UObject
 ---@field OptionSettings FPalOptionWorldSettings
 UPalGameWorldSettings = {}
 
+---@return UPalGameWorldSettings
+function UPalGameWorldSettings:get() end
+
 
 
 ---@class UPalGaugeInterpolationCalculatorUtility : UBlueprintFunctionLibrary
 UPalGaugeInterpolationCalculatorUtility = {}
+
+---@return UPalGaugeInterpolationCalculatorUtility
+function UPalGaugeInterpolationCalculatorUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param Target FPalGaugeInterpolationCalculator
@@ -17520,6 +21105,9 @@ function UPalGaugeInterpolationCalculatorUtility:SetGaugeInterpolationTargetValu
 ---@class UPalGetWorldUObject : UObject
 UPalGetWorldUObject = {}
 
+---@return UPalGetWorldUObject
+function UPalGetWorldUObject:get() end
+
 
 ---@class UPalGliderComponent : UActorComponent
 ---@field OnStartGlidingDelegate FPalGliderComponentOnStartGlidingDelegate
@@ -17531,6 +21119,9 @@ UPalGetWorldUObject = {}
 ---@field CurrentGliderClass TSubclassOf<APalGliderObject>
 ---@field bIsGliding boolean
 UPalGliderComponent = {}
+
+---@return UPalGliderComponent
+function UPalGliderComponent:get() end
 
 ---@return UPalIndividualCharacterHandle
 function UPalGliderComponent:TryGetGliderIndividualHandleFromOtomoHolder() end
@@ -17605,6 +21196,9 @@ function UPalGliderComponent:CancelGliding() end
 ---@field IndividualCharacterHandleIds FFastPalIndividualCharacterHandleIdArray
 UPalGroupBase = {}
 
+---@return UPalGroupBase
+function UPalGroupBase:get() end
+
 ---@param CharacterHandle UPalIndividualCharacterHandle
 function UPalGroupBase:OnUpdateIndividualActor(CharacterHandle) end
 function UPalGroupBase:OnRep_GroupName() end
@@ -17621,11 +21215,17 @@ function UPalGroupBase:ChangedGroupNameDelegate__DelegateSignature(NewGroupName)
 ---@class UPalGroupDefine : UObject
 UPalGroupDefine = {}
 
+---@return UPalGroupDefine
+function UPalGroupDefine:get() end
+
 
 ---@class UPalGroupGuild : UPalGroupGuildBase
 ---@field PlayerInfoRepInfoArray FPalFastGuildPlayerInfoRepInfoArray
 ---@field AdminPlayerUId FGuid
 UPalGroupGuild = {}
+
+---@return UPalGroupGuild
+function UPalGroupGuild:get() end
 
 ---@param Waiter UPlGuildPlayerInfoFilteringWaiter
 ---@param FilteredInfo FPalGuildPlayerInfo
@@ -17644,6 +21244,9 @@ function UPalGroupGuild:OnChangedGuildMemberNickName(Parameter, NickName) end
 ---@field OldGuildName FString
 ---@field bAllPlayerNotOnlineAndAlreadyReset boolean
 UPalGroupGuildBase = {}
+
+---@return UPalGroupGuildBase
+function UPalGroupGuildBase:get() end
 
 ---@param NewGuildName FString
 function UPalGroupGuildBase:UpdatedGuildNameDelegate__DelegateSignature(NewGuildName) end
@@ -17684,6 +21287,9 @@ function UPalGroupGuildBase:GetBaseCampLevel() end
 ---@field PlayerInfo FPalGuildPlayerInfo
 UPalGroupIndependentGuild = {}
 
+---@return UPalGroupIndependentGuild
+function UPalGroupIndependentGuild:get() end
+
 
 
 ---@class UPalGroupManager : UPalWorldSubsystem
@@ -17694,6 +21300,9 @@ UPalGroupIndependentGuild = {}
 ---@field GuildRequestFlowMap TMap<FGuid, UPalGuildRequestFlowBase>
 ---@field GuildEnterRequestLogInfoMap TMap<FGuid, FPalGuildEnterRequestLogInfo>
 UPalGroupManager = {}
+
+---@return UPalGroupManager
+function UPalGroupManager:get() end
 
 ---@param GroupId FGuid
 ---@param OutGuildName FString
@@ -17736,15 +21345,24 @@ function UPalGroupManager:Debug_GetFirstGroupByType(Type) end
 ---@class UPalGroupNeutral : UPalGroupBase
 UPalGroupNeutral = {}
 
+---@return UPalGroupNeutral
+function UPalGroupNeutral:get() end
+
 
 ---@class UPalGroupOperationResultUtility : UObject
 UPalGroupOperationResultUtility = {}
+
+---@return UPalGroupOperationResultUtility
+function UPalGroupOperationResultUtility:get() end
 
 
 ---@class UPalGroupOrganization : UPalGroupBase
 ---@field OrganizationType EPalOrganizationType
 ---@field BaseCampIds TArray<FGuid>
 UPalGroupOrganization = {}
+
+---@return UPalGroupOrganization
+function UPalGroupOrganization:get() end
 
 ---@param DeadInfo FPalDeadInfo
 function UPalGroupOrganization:OnDead(DeadInfo) end
@@ -17755,9 +21373,15 @@ function UPalGroupOrganization:OnDamage(DamageResult) end
 ---@class UPalGroupResidentEnemy : UPalGroupBase
 UPalGroupResidentEnemy = {}
 
+---@return UPalGroupResidentEnemy
+function UPalGroupResidentEnemy:get() end
+
 
 ---@class UPalGroupUtility : UBlueprintFunctionLibrary
 UPalGroupUtility = {}
+
+---@return UPalGroupUtility
+function UPalGroupUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param IndividualId FPalInstanceID
@@ -17782,14 +21406,23 @@ function UPalGroupUtility:GetGroupIdByIndividualId(WorldContextObject, Individua
 ---@field ApplicantPlayerUId FGuid
 UPalGuildChangeAdminRequestFlow = {}
 
+---@return UPalGuildChangeAdminRequestFlow
+function UPalGuildChangeAdminRequestFlow:get() end
+
 
 
 ---@class UPalGuildChangeAdminRequestSequence_ChangeAdminMainProcess : USequentialProcessSequenceBase
 UPalGuildChangeAdminRequestSequence_ChangeAdminMainProcess = {}
 
+---@return UPalGuildChangeAdminRequestSequence_ChangeAdminMainProcess
+function UPalGuildChangeAdminRequestSequence_ChangeAdminMainProcess:get() end
+
 
 ---@class UPalGuildChangeAdminRequestSequence_Trigger : USequentialProcessSequenceBase
 UPalGuildChangeAdminRequestSequence_Trigger = {}
+
+---@return UPalGuildChangeAdminRequestSequence_Trigger
+function UPalGuildChangeAdminRequestSequence_Trigger:get() end
 
 
 ---@class UPalGuildEnterRequestFlow : UPalGuildRequestFlowBase
@@ -17797,30 +21430,51 @@ UPalGuildChangeAdminRequestSequence_Trigger = {}
 ---@field RespondentPlayerUId FGuid
 UPalGuildEnterRequestFlow = {}
 
+---@return UPalGuildEnterRequestFlow
+function UPalGuildEnterRequestFlow:get() end
+
 
 
 ---@class UPalGuildEnterRequestSequence_ConfirmEnterGuildToApplicantPlayer : UPalGuildRequestFlowSequenceWaitForConfirmPlayer
 UPalGuildEnterRequestSequence_ConfirmEnterGuildToApplicantPlayer = {}
 
+---@return UPalGuildEnterRequestSequence_ConfirmEnterGuildToApplicantPlayer
+function UPalGuildEnterRequestSequence_ConfirmEnterGuildToApplicantPlayer:get() end
+
 
 ---@class UPalGuildEnterRequestSequence_ConfirmLoseBaseCampToApplicantPlayer : UPalGuildRequestFlowSequenceWaitForConfirmPlayer
 UPalGuildEnterRequestSequence_ConfirmLoseBaseCampToApplicantPlayer = {}
+
+---@return UPalGuildEnterRequestSequence_ConfirmLoseBaseCampToApplicantPlayer
+function UPalGuildEnterRequestSequence_ConfirmLoseBaseCampToApplicantPlayer:get() end
 
 
 ---@class UPalGuildEnterRequestSequence_EnterGuildMainProcess : USequentialProcessSequenceBase
 UPalGuildEnterRequestSequence_EnterGuildMainProcess = {}
 
+---@return UPalGuildEnterRequestSequence_EnterGuildMainProcess
+function UPalGuildEnterRequestSequence_EnterGuildMainProcess:get() end
+
 
 ---@class UPalGuildEnterRequestSequence_ExitGuildMainProcess : USequentialProcessSequenceBase
 UPalGuildEnterRequestSequence_ExitGuildMainProcess = {}
+
+---@return UPalGuildEnterRequestSequence_ExitGuildMainProcess
+function UPalGuildEnterRequestSequence_ExitGuildMainProcess:get() end
 
 
 ---@class UPalGuildEnterRequestSequence_OfferEnterGuildToRespondentPlayer : UPalGuildRequestFlowSequenceWaitForConfirmPlayer
 UPalGuildEnterRequestSequence_OfferEnterGuildToRespondentPlayer = {}
 
+---@return UPalGuildEnterRequestSequence_OfferEnterGuildToRespondentPlayer
+function UPalGuildEnterRequestSequence_OfferEnterGuildToRespondentPlayer:get() end
+
 
 ---@class UPalGuildEnterRequestSequence_Trigger : USequentialProcessSequenceBase
 UPalGuildEnterRequestSequence_Trigger = {}
+
+---@return UPalGuildEnterRequestSequence_Trigger
+function UPalGuildEnterRequestSequence_Trigger:get() end
 
 
 ---@class UPalGuildExitRequestFlow : UPalGuildRequestFlowBase
@@ -17829,18 +21483,30 @@ UPalGuildEnterRequestSequence_Trigger = {}
 ---@field ApplicantPlayerUId FGuid
 UPalGuildExitRequestFlow = {}
 
+---@return UPalGuildExitRequestFlow
+function UPalGuildExitRequestFlow:get() end
+
 
 
 ---@class UPalGuildExitRequestSequence_Trigger : USequentialProcessSequenceBase
 UPalGuildExitRequestSequence_Trigger = {}
 
+---@return UPalGuildExitRequestSequence_Trigger
+function UPalGuildExitRequestSequence_Trigger:get() end
+
 
 ---@class UPalGuildJoinRequestResultUtility : UObject
 UPalGuildJoinRequestResultUtility = {}
 
+---@return UPalGuildJoinRequestResultUtility
+function UPalGuildJoinRequestResultUtility:get() end
+
 
 ---@class UPalGuildPalStorage : UObject
 UPalGuildPalStorage = {}
+
+---@return UPalGuildPalStorage
+function UPalGuildPalStorage:get() end
 
 ---@param Handle UPalIndividualCharacterHandle
 function UPalGuildPalStorage:OnNotifiedRemovedCharacterFromPalBoxInServer(Handle) end
@@ -17851,6 +21517,9 @@ function UPalGuildPalStorage:OnNotifiedObtainCharacterInServer(Handle) end
 ---@class UPalGuildPlayerInfoUtility : UBlueprintFunctionLibrary
 UPalGuildPlayerInfoUtility = {}
 
+---@return UPalGuildPlayerInfoUtility
+function UPalGuildPlayerInfoUtility:get() end
+
 ---@param PlayerInfo FPalGuildPlayerInfo
 ---@return boolean
 function UPalGuildPlayerInfoUtility:IsValid(PlayerInfo) end
@@ -17859,6 +21528,9 @@ function UPalGuildPlayerInfoUtility:IsValid(PlayerInfo) end
 ---@class UPalGuildRequestFlowBase : USequentialProcessSystem
 ---@field FlowId FGuid
 UPalGuildRequestFlowBase = {}
+
+---@return UPalGuildRequestFlowBase
+function UPalGuildRequestFlowBase:get() end
 
 ---@param Flow UPalGuildRequestFlowBase
 function UPalGuildRequestFlowBase:ReturnSelfDelegate__DelegateSignature(Flow) end
@@ -17871,6 +21543,9 @@ function UPalGuildRequestFlowBase:OnFinishFlow() end
 ---@field ProgressTime float
 UPalGuildRequestFlowSequenceWaitForConfirmPlayer = {}
 
+---@return UPalGuildRequestFlowSequenceWaitForConfirmPlayer
+function UPalGuildRequestFlowSequenceWaitForConfirmPlayer:get() end
+
 
 
 ---@class UPalHUDDispatchParame_JoinGameInputCode : UPalHUDDispatchParameterBase
@@ -17879,6 +21554,9 @@ UPalGuildRequestFlowSequenceWaitForConfirmPlayer = {}
 ---@field TargetServerDisplayInfo FPalUIServerDisplayData
 UPalHUDDispatchParame_JoinGameInputCode = {}
 
+---@return UPalHUDDispatchParame_JoinGameInputCode
+function UPalHUDDispatchParame_JoinGameInputCode:get() end
+
 
 
 ---@class UPalHUDDispatchParame_PickingGame : UPalHUDDispatchParameterBase
@@ -17886,11 +21564,17 @@ UPalHUDDispatchParame_JoinGameInputCode = {}
 ---@field OutResult boolean
 UPalHUDDispatchParame_PickingGame = {}
 
+---@return UPalHUDDispatchParame_PickingGame
+function UPalHUDDispatchParame_PickingGame:get() end
+
 
 
 ---@class UPalHUDDispatchParameterBase : UObject
 ---@field OnClose FPalHUDDispatchParameterBaseOnClose
 UPalHUDDispatchParameterBase = {}
+
+---@return UPalHUDDispatchParameterBase
+function UPalHUDDispatchParameterBase:get() end
 
 
 
@@ -17899,11 +21583,17 @@ UPalHUDDispatchParameterBase = {}
 ---@field OnPalSelected FPalHUDDispatchParameter_ArenaPalSelectOnPalSelected
 UPalHUDDispatchParameter_ArenaPalSelect = {}
 
+---@return UPalHUDDispatchParameter_ArenaPalSelect
+function UPalHUDDispatchParameter_ArenaPalSelect:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_Authentication : UPalHUDDispatchParameter_MapObject
 ---@field IsAuthentication boolean
 UPalHUDDispatchParameter_Authentication = {}
+
+---@return UPalHUDDispatchParameter_Authentication
+function UPalHUDDispatchParameter_Authentication:get() end
 
 
 
@@ -17911,17 +21601,26 @@ UPalHUDDispatchParameter_Authentication = {}
 ---@field TargetBaseCampID FGuid
 UPalHUDDispatchParameter_BaseCampTask = {}
 
+---@return UPalHUDDispatchParameter_BaseCampTask
+function UPalHUDDispatchParameter_BaseCampTask:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_BaseCampWorkFixedAssignManage : UPalHUDDispatchParameterBase
 ---@field Model UPalUIBaseCampWorkFixedAssignManageModel
 UPalHUDDispatchParameter_BaseCampWorkFixedAssignManage = {}
 
+---@return UPalHUDDispatchParameter_BaseCampWorkFixedAssignManage
+function UPalHUDDispatchParameter_BaseCampWorkFixedAssignManage:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_CharacterDisplay : UPalHUDDispatchParameterBase
 ---@field Model UPalMapObjectDisplayCharacterModel
 UPalHUDDispatchParameter_CharacterDisplay = {}
+
+---@return UPalHUDDispatchParameter_CharacterDisplay
+function UPalHUDDispatchParameter_CharacterDisplay:get() end
 
 
 
@@ -17930,16 +21629,25 @@ UPalHUDDispatchParameter_CharacterDisplay = {}
 ---@field bIsRemake boolean
 UPalHUDDispatchParameter_CharacterMake = {}
 
+---@return UPalHUDDispatchParameter_CharacterMake
+function UPalHUDDispatchParameter_CharacterMake:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_CharacterRankUp : UPalHUDDispatchParameterBase
 ---@field ConcreteModel UPalMapObjectRankUpCharacterModel
 UPalHUDDispatchParameter_CharacterRankUp = {}
 
+---@return UPalHUDDispatchParameter_CharacterRankUp
+function UPalHUDDispatchParameter_CharacterRankUp:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_CharacterStatusOperator : UPalHUDDispatchParameterBase
 UPalHUDDispatchParameter_CharacterStatusOperator = {}
+
+---@return UPalHUDDispatchParameter_CharacterStatusOperator
+function UPalHUDDispatchParameter_CharacterStatusOperator:get() end
 
 ---@param WorldContextObject UObject
 ---@param Type EPalCharacterStatusOperationResult
@@ -17954,11 +21662,17 @@ function UPalHUDDispatchParameter_CharacterStatusOperator:BindReceiveRequestResu
 ---@field ConvertItemModel UPalMapObjectConvertItemModel
 UPalHUDDispatchParameter_ConvertItem = {}
 
+---@return UPalHUDDispatchParameter_ConvertItem
+function UPalHUDDispatchParameter_ConvertItem:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_CutsceneOverlay : UPalHUDDispatchParameterBase
 ---@field CutsceneComponent UPalCutsceneComponent
 UPalHUDDispatchParameter_CutsceneOverlay = {}
+
+---@return UPalHUDDispatchParameter_CutsceneOverlay
+function UPalHUDDispatchParameter_CutsceneOverlay:get() end
 
 
 
@@ -17974,17 +21688,26 @@ UPalHUDDispatchParameter_CutsceneOverlay = {}
 ---@field OnEndFadeOut FPalHUDDispatchParameter_FadeWidgetOnEndFadeOut
 UPalHUDDispatchParameter_FadeWidget = {}
 
+---@return UPalHUDDispatchParameter_FadeWidget
+function UPalHUDDispatchParameter_FadeWidget:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_HatchingEgg : UPalHUDDispatchParameterBase
 ---@field HatchingEggModel UPalMapObjectHatchingEggModel
 UPalHUDDispatchParameter_HatchingEgg = {}
 
+---@return UPalHUDDispatchParameter_HatchingEgg
+function UPalHUDDispatchParameter_HatchingEgg:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_HelpGuide : UPalHUDDispatchParameterBase
 ---@field SelectGuideID FName
 UPalHUDDispatchParameter_HelpGuide = {}
+
+---@return UPalHUDDispatchParameter_HelpGuide
+function UPalHUDDispatchParameter_HelpGuide:get() end
 
 
 
@@ -17993,11 +21716,17 @@ UPalHUDDispatchParameter_HelpGuide = {}
 ---@field BelongGroupId FGuid
 UPalHUDDispatchParameter_HungerIcon = {}
 
+---@return UPalHUDDispatchParameter_HungerIcon
+function UPalHUDDispatchParameter_HungerIcon:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_Invader : UPalHUDDispatchParameterBase
 ---@field ParentCharacter TSoftObjectPtr<APalCharacter>
 UPalHUDDispatchParameter_Invader = {}
+
+---@return UPalHUDDispatchParameter_Invader
+function UPalHUDDispatchParameter_Invader:get() end
 
 
 
@@ -18005,11 +21734,17 @@ UPalHUDDispatchParameter_Invader = {}
 ---@field Shop UPalShopBase
 UPalHUDDispatchParameter_ItemShop = {}
 
+---@return UPalHUDDispatchParameter_ItemShop
+function UPalHUDDispatchParameter_ItemShop:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_MapObject : UPalHUDDispatchParameterBase
 ---@field MapObjectConcreteModel UPalMapObjectConcreteModelBase
 UPalHUDDispatchParameter_MapObject = {}
+
+---@return UPalHUDDispatchParameter_MapObject
+function UPalHUDDispatchParameter_MapObject:get() end
 
 
 
@@ -18017,11 +21752,17 @@ UPalHUDDispatchParameter_MapObject = {}
 ---@field EnergyModule UPalMapObjectEnergyModule
 UPalHUDDispatchParameter_MapObjectEnergyModule = {}
 
+---@return UPalHUDDispatchParameter_MapObjectEnergyModule
+function UPalHUDDispatchParameter_MapObjectEnergyModule:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_MonsterDetail : UPalHUDDispatchParameterBase
 ---@field IndividualHandle UPalIndividualCharacterHandle
 UPalHUDDispatchParameter_MonsterDetail = {}
+
+---@return UPalHUDDispatchParameter_MonsterDetail
+function UPalHUDDispatchParameter_MonsterDetail:get() end
 
 
 
@@ -18029,11 +21770,17 @@ UPalHUDDispatchParameter_MonsterDetail = {}
 ---@field BaseCampId FGuid
 UPalHUDDispatchParameter_PalBox = {}
 
+---@return UPalHUDDispatchParameter_PalBox
+function UPalHUDDispatchParameter_PalBox:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_PalShop : UPalHUDDispatchParameterBase
 ---@field Shop UPalShopBase
 UPalHUDDispatchParameter_PalShop = {}
+
+---@return UPalHUDDispatchParameter_PalShop
+function UPalHUDDispatchParameter_PalShop:get() end
 
 
 
@@ -18041,17 +21788,26 @@ UPalHUDDispatchParameter_PalShop = {}
 ---@field RecoverOtomoModel UPalMapObjectRecoverOtomoModel
 UPalHUDDispatchParameter_RecoverOtomo = {}
 
+---@return UPalHUDDispatchParameter_RecoverOtomo
+function UPalHUDDispatchParameter_RecoverOtomo:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_RepairBench : UPalHUDDispatchParameterBase
 ---@field Model UPalMapObjectRepairItemModel
 UPalHUDDispatchParameter_RepairBench = {}
 
+---@return UPalHUDDispatchParameter_RepairBench
+function UPalHUDDispatchParameter_RepairBench:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_SaveDataBackupSelect : UPalHUDDispatchParameterBase
 ---@field WorldDirectoryName FString
 UPalHUDDispatchParameter_SaveDataBackupSelect = {}
+
+---@return UPalHUDDispatchParameter_SaveDataBackupSelect
+function UPalHUDDispatchParameter_SaveDataBackupSelect:get() end
 
 
 
@@ -18064,6 +21820,9 @@ UPalHUDDispatchParameter_SaveDataBackupSelect = {}
 ---@field Callback FPalHUDDispatchParameter_SelectItemInventoryCallback
 UPalHUDDispatchParameter_SelectItemInventory = {}
 
+---@return UPalHUDDispatchParameter_SelectItemInventory
+function UPalHUDDispatchParameter_SelectItemInventory:get() end
+
 ---@param itemSlotId FPalItemSlotId
 ---@param itemNum int32
 function UPalHUDDispatchParameter_SelectItemInventory:InvokeCallback(itemSlotId, itemNum) end
@@ -18075,11 +21834,17 @@ function UPalHUDDispatchParameter_SelectItemInventory:InvokeCallback(itemSlotId,
 ---@field OnUpdateTextDelegate FPalHUDDispatchParameter_SignboardOnUpdateTextDelegate
 UPalHUDDispatchParameter_Signboard = {}
 
+---@return UPalHUDDispatchParameter_Signboard
+function UPalHUDDispatchParameter_Signboard:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_WorkSuitabilityPreference : UPalHUDDispatchParameterBase
 ---@field Model UPalUIWorkSuitabilitySettingModel
 UPalHUDDispatchParameter_WorkSuitabilityPreference = {}
+
+---@return UPalHUDDispatchParameter_WorkSuitabilityPreference
+function UPalHUDDispatchParameter_WorkSuitabilityPreference:get() end
 
 
 
@@ -18088,6 +21853,9 @@ UPalHUDDispatchParameter_WorkSuitabilityPreference = {}
 ---@field resultType EPalWorkerRadialMenuResult
 UPalHUDDispatchParameter_WorkerRadialMenu = {}
 
+---@return UPalHUDDispatchParameter_WorkerRadialMenu
+function UPalHUDDispatchParameter_WorkerRadialMenu:get() end
+
 
 
 ---@class UPalHUDDispatchParameter_WorldMap : UPalHUDDispatchParameterBase
@@ -18095,6 +21863,9 @@ UPalHUDDispatchParameter_WorkerRadialMenu = {}
 ---@field ForRespawn boolean
 ---@field IsInitSelect boolean
 UPalHUDDispatchParameter_WorldMap = {}
+
+---@return UPalHUDDispatchParameter_WorldMap
+function UPalHUDDispatchParameter_WorldMap:get() end
 
 
 
@@ -18105,11 +21876,17 @@ UPalHUDDispatchParameter_WorldMap = {}
 ---@field CanMultiplay boolean
 UPalHUDDispatchParameter_WorldSetting = {}
 
+---@return UPalHUDDispatchParameter_WorldSetting
+function UPalHUDDispatchParameter_WorldSetting:get() end
+
 
 
 ---@class UPalHUDLayout : UPalActivatableWidget
 ---@field EscapeMenuClass TSoftClassPtr<UCommonActivatableWidget>
 UPalHUDLayout = {}
+
+---@return UPalHUDLayout
+function UPalHUDLayout:get() end
 
 
 
@@ -18121,6 +21898,9 @@ UPalHUDLayout = {}
 ---@field TransientData FUITransientData
 ---@field ServiceProvider TScriptInterface<IPalHUDServiceProviderInterface>
 UPalHUDService = {}
+
+---@return UPalHUDService
+function UPalHUDService:get() end
 
 ---@param LayerType EPalFadeWidgetLayerType
 function UPalHUDService:StartFadeOut(LayerType) end
@@ -18200,6 +21980,9 @@ function UPalHUDService:ActivateFocusCursor(TargetWidget) end
 ---@field HateTimerHandle FTimerHandle
 UPalHate = {}
 
+---@return UPalHate
+function UPalHate:get() end
+
 ---@param DeadInfo FPalDeadInfo
 function UPalHate:SelfDeathEvent(DeadInfo) end
 ---@param OtomoPal AActor
@@ -18219,6 +22002,9 @@ function UPalHate:AttackSuccessEvent(DamageResult) end
 ---@field HeadUpOffset float
 UPalHeadUpDisplayComponent = {}
 
+---@return UPalHeadUpDisplayComponent
+function UPalHeadUpDisplayComponent:get() end
+
 function UPalHeadUpDisplayComponent:UpdateInvaderHUD() end
 function UPalHeadUpDisplayComponent:ShowInvaderHUD() end
 ---@param Parameter UPalCharacterParameterComponent
@@ -18234,6 +22020,9 @@ function UPalHeadUpDisplayComponent:OnInitializedCharacter(OwnerCharacter) end
 ---@field HeatSourceModule UPalHeatSourceModule
 UPalHeatSourceBoxComponent = {}
 
+---@return UPalHeatSourceBoxComponent
+function UPalHeatSourceBoxComponent:get() end
+
 ---@param NextIsActive boolean
 function UPalHeatSourceBoxComponent:SetActiveHeatSource(NextIsActive) end
 ---@return UPalHeatSourceModule
@@ -18247,6 +22036,9 @@ function UPalHeatSourceBoxComponent:GetModule() end
 ---@field UnieqName FName
 ---@field HeatSourceInfo FPalHeatSourceInfo
 UPalHeatSourceModule = {}
+
+---@return UPalHeatSourceModule
+function UPalHeatSourceModule:get() end
 
 ---@param Active boolean
 function UPalHeatSourceModule:SetActivate(Active) end
@@ -18269,6 +22061,9 @@ function UPalHeatSourceModule:AddActor(Actor) end
 ---@field HeatSourceModule UPalHeatSourceModule
 UPalHeatSourceSphereComponent = {}
 
+---@return UPalHeatSourceSphereComponent
+function UPalHeatSourceSphereComponent:get() end
+
 ---@param NextIsActive boolean
 function UPalHeatSourceSphereComponent:SetActiveHeatSource(NextIsActive) end
 ---@return UPalHeatSourceModule
@@ -18277,6 +22072,9 @@ function UPalHeatSourceSphereComponent:GetModule() end
 
 ---@class UPalHiddenBoxComponent : UBoxComponent
 UPalHiddenBoxComponent = {}
+
+---@return UPalHiddenBoxComponent
+function UPalHiddenBoxComponent:get() end
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
@@ -18295,6 +22093,9 @@ function UPalHiddenBoxComponent:BeginOverlapEvent(OverlappedComponent, OtherActo
 ---@class UPalHiddenCapsuleComponent : UCapsuleComponent
 UPalHiddenCapsuleComponent = {}
 
+---@return UPalHiddenCapsuleComponent
+function UPalHiddenCapsuleComponent:get() end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
@@ -18312,6 +22113,9 @@ function UPalHiddenCapsuleComponent:BeginOverlapEvent(OverlappedComponent, Other
 ---@class UPalHitEffectSlot : UObject
 UPalHitEffectSlot = {}
 
+---@return UPalHitEffectSlot
+function UPalHitEffectSlot:get() end
+
 ---@param Info FPalDamageInfo
 function UPalHitEffectSlot:PlayHitEffect(Info) end
 function UPalHitEffectSlot:Initialize() end
@@ -18326,6 +22130,9 @@ function UPalHitEffectSlot:Initialize() end
 ---@field OnHitDelegate FPalHitFilterOnHitDelegate
 ---@field OnOverlapEndDelegate FPalHitFilterOnOverlapEndDelegate
 UPalHitFilter = {}
+
+---@return UPalHitFilter
+function UPalHitFilter:get() end
 
 ---@param Component UPrimitiveComponent
 function UPalHitFilter:UnbindPrimitiveComponent(Component) end
@@ -18364,6 +22171,9 @@ function UPalHitFilter:BindPrimitiveComponent(Component) end
 ---@class UPalHitLocationCalculator : UObject
 UPalHitLocationCalculator = {}
 
+---@return UPalHitLocationCalculator
+function UPalHitLocationCalculator:get() end
+
 ---@param MyHitComponent UPrimitiveComponent
 ---@param OtherHitComponent UPrimitiveComponent
 ---@return FVector
@@ -18381,6 +22191,9 @@ function UPalHitLocationCalculator:CalcLocation(MyHitComponent, OtherHitComponen
 ---@field OwnerObject UObject
 ---@field ExecState EPalIncidentState
 UPalIncidentBase = {}
+
+---@return UPalIncidentBase
+function UPalIncidentBase:get() end
 
 ---@param DeltaTime float
 function UPalIncidentBase:Tick(DeltaTime) end
@@ -18449,11 +22262,17 @@ function UPalIncidentBase:DropItem(ItemId, DropNum, SpawnLocation, ReleaseDirect
 ---@field Other AActor
 UPalIncidentDynamicParameter = {}
 
+---@return UPalIncidentDynamicParameter
+function UPalIncidentDynamicParameter:get() end
+
 
 
 ---@class UPalIncidentDynamicParameterInvader : UPalIncidentDynamicParameter
 ---@field TargetBaseCampID FGuid
 UPalIncidentDynamicParameterInvader = {}
+
+---@return UPalIncidentDynamicParameterInvader
+function UPalIncidentDynamicParameterInvader:get() end
 
 
 
@@ -18461,6 +22280,9 @@ UPalIncidentDynamicParameterInvader = {}
 ---@field SettingName FName
 ---@field PlayerId int32
 UPalIncidentDynamicParameterRandom = {}
+
+---@return UPalIncidentDynamicParameterRandom
+function UPalIncidentDynamicParameterRandom:get() end
 
 
 
@@ -18472,6 +22294,9 @@ UPalIncidentDynamicParameterRandom = {}
 ---@field IsRequestSucceed boolean
 UPalIncidentDynamicParameterTalk = {}
 
+---@return UPalIncidentDynamicParameterTalk
+function UPalIncidentDynamicParameterTalk:get() end
+
 
 
 ---@class UPalIncidentList : UPalIncidentBase
@@ -18481,6 +22306,9 @@ UPalIncidentDynamicParameterTalk = {}
 ---@field CompletedIncidents TArray<UPalIncidentBase>
 ---@field ProgressCount int32
 UPalIncidentList = {}
+
+---@return UPalIncidentList
+function UPalIncidentList:get() end
 
 ---@param PrevIncident UPalIncidentBase
 ---@param NextIncident UPalIncidentBase
@@ -18504,6 +22332,9 @@ function UPalIncidentList:AddIncident(ID) end
 ---@field FilterIncidentIds TArray<FName>
 ---@field FilterIncidentTypes TArray<FName>
 UPalIncidentNotifyListener = {}
+
+---@return UPalIncidentNotifyListener
+function UPalIncidentNotifyListener:get() end
 
 function UPalIncidentNotifyListener:UnregisterFromIncidentSystem() end
 ---@param FilterOwner UObject
@@ -18559,6 +22390,9 @@ function UPalIncidentNotifyListener:IncidentStateNotifyDelegate__DelegateSignatu
 ---@field Listeners TArray<UPalIncidentNotifyListener>
 UPalIncidentSystem = {}
 
+---@return UPalIncidentSystem
+function UPalIncidentSystem:get() end
+
 ---@param TalkPlayer APalPlayerCharacter
 ---@param TargetNPC APalCharacter
 ---@param CunstomFuncParam UDataTable
@@ -18608,6 +22442,9 @@ function UPalIncidentSystem:ForceStopByIncidentId(IncidentId) end
 ---@field bCanSetFavorite boolean
 UPalIndividualCharacterContainer = {}
 
+---@return UPalIndividualCharacterContainer
+function UPalIndividualCharacterContainer:get() end
+
 ---@param Container UPalIndividualCharacterContainer
 function UPalIndividualCharacterContainer:UpdateContentsDelegate__DelegateSignature(Container) end
 function UPalIndividualCharacterContainer:OnRep_Slots() end
@@ -18630,6 +22467,9 @@ function UPalIndividualCharacterContainer:FindByHandle(Handle) end
 ---@field ID FPalInstanceID
 UPalIndividualCharacterHandle = {}
 
+---@return UPalIndividualCharacterHandle
+function UPalIndividualCharacterHandle:get() end
+
 ---@param Handle UPalIndividualCharacterHandle
 function UPalIndividualCharacterHandle:UpdateIndividualActorDelegate__DelegateSignature(Handle) end
 ---@param PhantomId int32
@@ -18648,6 +22488,9 @@ function UPalIndividualCharacterHandle:GetIndividualID() end
 
 ---@class UPalIndividualCharacterHandleReference : UPalIndividualCharacterHandle
 UPalIndividualCharacterHandleReference = {}
+
+---@return UPalIndividualCharacterHandleReference
+function UPalIndividualCharacterHandleReference:get() end
 
 
 ---@class UPalIndividualCharacterParameter : UObject
@@ -18704,6 +22547,9 @@ UPalIndividualCharacterHandleReference = {}
 ---@field SkinClassPtr TSoftClassPtr<APalCharacter>
 ---@field Debug_CurrentAIActionName FString
 UPalIndividualCharacterParameter = {}
+
+---@return UPalIndividualCharacterParameter
+function UPalIndividualCharacterParameter:get() end
 
 function UPalIndividualCharacterParameter:WorkSuitabilityChangedDelegate__DelegateSignature() end
 ---@param SlotIdAndNum FPalItemSlotIdAndNum
@@ -19061,6 +22907,9 @@ function UPalIndividualCharacterParameter:AddEquipWaza(WazaID) end
 ---@class UPalIndividualCharacterParameterUtility : UBlueprintFunctionLibrary
 UPalIndividualCharacterParameterUtility = {}
 
+---@return UPalIndividualCharacterParameterUtility
+function UPalIndividualCharacterParameterUtility:get() end
+
 ---@param WorkSuitability EPalWorkSuitability
 ---@param Parameter UPalIndividualCharacterParameter
 ---@return int32
@@ -19075,16 +22924,25 @@ function UPalIndividualCharacterParameterUtility:CraftSpeed(Parameter) end
 ---@field IndividualId FPalInstanceID
 UPalIndividualCharacterReferenceSlot = {}
 
+---@return UPalIndividualCharacterReferenceSlot
+function UPalIndividualCharacterReferenceSlot:get() end
+
 
 
 ---@class UPalIndividualCharacterSaveParameterObject : UObject
 ---@field SaveParameter FPalIndividualCharacterSaveParameter
 UPalIndividualCharacterSaveParameterObject = {}
 
+---@return UPalIndividualCharacterSaveParameterObject
+function UPalIndividualCharacterSaveParameterObject:get() end
+
 
 
 ---@class UPalIndividualCharacterSaveParameterUtility : UObject
 UPalIndividualCharacterSaveParameterUtility = {}
+
+---@return UPalIndividualCharacterSaveParameterUtility
+function UPalIndividualCharacterSaveParameterUtility:get() end
 
 ---@param SaveParameter FPalIndividualCharacterSaveParameter
 ---@return boolean
@@ -19102,6 +22960,9 @@ function UPalIndividualCharacterSaveParameterUtility:IsValid(SaveParameter) end
 ---@field PermissionTribeID EPalTribeID
 ---@field bIsReplicateCharacterParameter boolean
 UPalIndividualCharacterSlot = {}
+
+---@return UPalIndividualCharacterSlot
+function UPalIndividualCharacterSlot:get() end
 
 ---@param Slot UPalIndividualCharacterSlot
 function UPalIndividualCharacterSlot:UpdateSlotLockDelegate__DelegateSignature(Slot) end
@@ -19131,6 +22992,9 @@ function UPalIndividualCharacterSlot:GetHandle() end
 ---@field OnUpdateContainerDelegate FPalIndividualCharacterSlotsObserverOnUpdateContainerDelegate
 UPalIndividualCharacterSlotsObserver = {}
 
+---@return UPalIndividualCharacterSlotsObserver
+function UPalIndividualCharacterSlotsObserver:get() end
+
 function UPalIndividualCharacterSlotsObserver:UpdateContainerDelegate__DelegateSignature() end
 ---@param Slot UPalIndividualCharacterSlot
 ---@param LastHandle UPalIndividualCharacterHandle
@@ -19148,6 +23012,9 @@ function UPalIndividualCharacterSlotsObserver:OnUpdateContainer(Container) end
 ---@field OnLeaveBaseCampDelegate FPalInsideBaseCampCheckComponentOnLeaveBaseCampDelegate
 ---@field NowInsideBaseCampID FGuid
 UPalInsideBaseCampCheckComponent = {}
+
+---@return UPalInsideBaseCampCheckComponent
+function UPalInsideBaseCampCheckComponent:get() end
 
 function UPalInsideBaseCampCheckComponent:OnLeaveBaseCampDelegate__DelegateSignature() end
 ---@param Model UPalBaseCampModel
@@ -19170,6 +23037,9 @@ function UPalInsideBaseCampCheckComponent:GetInsideBaseCampID() end
 ---@field LastInteractingObject TScriptInterface<IPalInteractiveObjectComponentInterface>
 ---@field InteractDisableFlags FFlagContainer
 UPalInteractComponent = {}
+
+---@return UPalInteractComponent
+function UPalInteractComponent:get() end
 
 ---@param InteractiveObject TScriptInterface<IPalInteractiveObjectComponentInterface>
 function UPalInteractComponent:UpdateInteractiveObjectDelegate__DelegateSignature(InteractiveObject) end
@@ -19212,14 +23082,23 @@ function UPalInteractComponent:EndInteractiveObjectDelegate__DelegateSignature()
 ---@field OnTriggeringInteract FPalInteractDelegatesOnTriggeringInteract
 UPalInteractDelegates = {}
 
+---@return UPalInteractDelegates
+function UPalInteractDelegates:get() end
+
 
 
 ---@class UPalInteractableSphereComponentNative : UPalInteractiveObjectSphereComponent
 UPalInteractableSphereComponentNative = {}
 
+---@return UPalInteractableSphereComponentNative
+function UPalInteractableSphereComponentNative:get() end
+
 
 ---@class UPalInteractiveObjectActionInfoUtility : UObject
 UPalInteractiveObjectActionInfoUtility = {}
+
+---@return UPalInteractiveObjectActionInfoUtility
+function UPalInteractiveObjectActionInfoUtility:get() end
 
 ---@param ActionInfo FPalInteractiveObjectActionInfoSet
 ---@param ActionType EPalInteractiveObjectActionType
@@ -19241,6 +23120,9 @@ function UPalInteractiveObjectActionInfoUtility:CreateSituationInfo(WorldContext
 ---@field IndicatorInterface TScriptInterface<IPalInteractiveObjectIndicatorInterface>
 ---@field OnCreateInteractDelegatesDelegate FPalInteractiveObjectBoxComponentOnCreateInteractDelegatesDelegate
 UPalInteractiveObjectBoxComponent = {}
+
+---@return UPalInteractiveObjectBoxComponent
+function UPalInteractiveObjectBoxComponent:get() end
 
 ---@param InIndicatorInterface TScriptInterface<IPalInteractiveObjectIndicatorInterface>
 function UPalInteractiveObjectBoxComponent:SetIndicatorInterface(InIndicatorInterface) end
@@ -19283,6 +23165,9 @@ function UPalInteractiveObjectBoxComponent:CallOrRegisterOnCreateInteractDelegat
 ---@field OnCreateInteractDelegatesDelegate FPalInteractiveObjectCapsuleComponentOnCreateInteractDelegatesDelegate
 UPalInteractiveObjectCapsuleComponent = {}
 
+---@return UPalInteractiveObjectCapsuleComponent
+function UPalInteractiveObjectCapsuleComponent:get() end
+
 ---@param InIndicatorInterface TScriptInterface<IPalInteractiveObjectIndicatorInterface>
 function UPalInteractiveObjectCapsuleComponent:SetIndicatorInterface(InIndicatorInterface) end
 ---@param OverlappedComp UPrimitiveComponent
@@ -19314,9 +23199,15 @@ function UPalInteractiveObjectCapsuleComponent:CallOrRegisterOnCreateInteractDel
 ---@class UPalInteractiveObjectComponentUtility : UObject
 UPalInteractiveObjectComponentUtility = {}
 
+---@return UPalInteractiveObjectComponentUtility
+function UPalInteractiveObjectComponentUtility:get() end
+
 
 ---@class UPalInteractiveObjectIndicatorTypeUtility : UObject
 UPalInteractiveObjectIndicatorTypeUtility = {}
+
+---@return UPalInteractiveObjectIndicatorTypeUtility
+function UPalInteractiveObjectIndicatorTypeUtility:get() end
 
 ---@param WorldObjectContext UObject
 ---@param Type EPalInteractiveObjectIndicatorType
@@ -19334,6 +23225,9 @@ function UPalInteractiveObjectIndicatorTypeUtility:ToText(WorldObjectContext, Ty
 ---@field IndicatorInterface TScriptInterface<IPalInteractiveObjectIndicatorInterface>
 ---@field OnCreateInteractDelegatesDelegate FPalInteractiveObjectSphereComponentOnCreateInteractDelegatesDelegate
 UPalInteractiveObjectSphereComponent = {}
+
+---@return UPalInteractiveObjectSphereComponent
+function UPalInteractiveObjectSphereComponent:get() end
 
 ---@param InIndicatorInterface TScriptInterface<IPalInteractiveObjectIndicatorInterface>
 function UPalInteractiveObjectSphereComponent:SetIndicatorInterface(InIndicatorInterface) end
@@ -19374,6 +23268,9 @@ function UPalInteractiveObjectSphereComponent:CallOrRegisterOnCreateInteractDele
 ---@field PlayerHandlesCache TArray<UPalIndividualCharacterHandle>
 UPalInvaderBaseCampObserver = {}
 
+---@return UPalInvaderBaseCampObserver
+function UPalInvaderBaseCampObserver:get() end
+
 ---@param Handle UPalIndividualCharacterHandle
 function UPalInvaderBaseCampObserver:OnExitCharacter(Handle) end
 ---@param Handle UPalIndividualCharacterHandle
@@ -19393,6 +23290,9 @@ function UPalInvaderBaseCampObserver:OnEnterCharacter(Handle) end
 ---@field Squad UPalSquad
 ---@field LocationMap TMap<FPalInstanceID, FGuid>
 UPalInvaderIncidentBase = {}
+
+---@return UPalInvaderIncidentBase
+function UPalInvaderIncidentBase:get() end
 
 function UPalInvaderIncidentBase:StartInvader() end
 ---@param StartLocation FVector
@@ -19446,6 +23346,9 @@ function UPalInvaderIncidentBase:AddGroupCharacter(AddIndividualHandle, Location
 ---@field InvaderSaveDataMapCache TMap<FGuid, FPalInvaderSaveData>
 UPalInvaderManager = {}
 
+---@return UPalInvaderManager
+function UPalInvaderManager:get() end
+
 function UPalInvaderManager:VisitorTravelTest() end
 ---@param LogType EPalLogType
 function UPalInvaderManager:VisitorTravelLog(LogType) end
@@ -19494,6 +23397,9 @@ function UPalInvaderManager:InvaderEndDelegate__DelegateSignature(Parameter) end
 ---@field BelongInfo FPalItemContainerBelongInfo
 UPalItemContainer = {}
 
+---@return UPalItemContainer
+function UPalItemContainer:get() end
+
 ---@param Container UPalItemContainer
 function UPalItemContainer:UpdateContentsDelegate__DelegateSignature(Container) end
 ---@param Slot UPalItemSlot
@@ -19524,6 +23430,9 @@ function UPalItemContainer:Get(Index) end
 ---@field LoadedContainerIDs TSet<FPalContainerId>
 UPalItemContainerManager = {}
 
+---@return UPalItemContainerManager
+function UPalItemContainerManager:get() end
+
 ---@param SlotID FPalItemSlotId
 ---@param Slot UPalItemSlot
 ---@return boolean
@@ -19552,6 +23461,9 @@ function UPalItemContainerManager:GetContainer(ContainerId) end
 ---@field Containers TArray<UPalItemContainer>
 UPalItemContainerMultiHelper = {}
 
+---@return UPalItemContainerMultiHelper
+function UPalItemContainerMultiHelper:get() end
+
 ---@param Self UPalItemContainerMultiHelper
 function UPalItemContainerMultiHelper:UpdateContentDelegate__DelegateSignature(Self) end
 ---@param Container UPalItemContainer
@@ -19576,6 +23488,9 @@ function UPalItemContainerMultiHelper:FindByStaticItemId(StaticItemId, StaticIte
 ---@field FlowingItemInfos TArray<FPalItemFlowInSplineInfo>
 UPalItemFlowSplineComponent = {}
 
+---@return UPalItemFlowSplineComponent
+function UPalItemFlowSplineComponent:get() end
+
 ---@param InStaticItemId FName
 function UPalItemFlowSplineComponent:UpdateTargetItem(InStaticItemId) end
 ---@param bOn boolean
@@ -19590,6 +23505,9 @@ function UPalItemFlowSplineComponent:UpdateIsFlowing(bOn) end
 ---@field MoneyItemRowName FPalDataTableRowName_ItemData
 ---@field StaticItemDataTable UPalStaticItemDataTable
 UPalItemIDManager = {}
+
+---@return UPalItemIDManager
+function UPalItemIDManager:get() end
 
 ---@param WorldContextObject UObject
 ---@param CharacterID FName
@@ -19606,15 +23524,24 @@ function UPalItemIDManager:GetItemData(ItemId) end
 ---@class UPalItemInventoryBase : UObject
 UPalItemInventoryBase = {}
 
+---@return UPalItemInventoryBase
+function UPalItemInventoryBase:get() end
+
 
 ---@class UPalItemOperationResultUtility : UObject
 UPalItemOperationResultUtility = {}
+
+---@return UPalItemOperationResultUtility
+function UPalItemOperationResultUtility:get() end
 
 
 ---@class UPalItemSelectorComponent : UActorComponent
 ---@field OnChangeSelectedIndex FPalItemSelectorComponentOnChangeSelectedIndex
 ---@field itemSelectDataMap TMap<EPalPlayerInventoryType, FPalPlayerInventorySelectData>
 UPalItemSelectorComponent = {}
+
+---@return UPalItemSelectorComponent
+function UPalItemSelectorComponent:get() end
 
 ---@param targetInventory EPalPlayerInventoryType
 function UPalItemSelectorComponent:SelectPrevItem(targetInventory) end
@@ -19660,6 +23587,9 @@ function UPalItemSelectorComponent:AddTargetInventoryType(targetInventoryType) e
 ---@field LastItemId_Client FPalItemId
 UPalItemSlot = {}
 
+---@return UPalItemSlot
+function UPalItemSlot:get() end
+
 ---@param OldDurability float
 ---@param NewDurability float
 function UPalItemSlot:UpdateSlotContentDurabilityDelegate__DelegateSignature(OldDurability, NewDurability) end
@@ -19702,6 +23632,9 @@ function UPalItemSlot:FinishLiftedContentDelegate__DelegateSignature() end
 
 ---@class UPalItemUtility : UBlueprintFunctionLibrary
 UPalItemUtility = {}
+
+---@return UPalItemUtility
+function UPalItemUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param StaticItemId FName
@@ -19763,6 +23696,9 @@ function UPalItemUtility:CanDisposeFromInventory(WorldContextObject, StaticItemI
 ---@class UPalLandingTypeUtility : UBlueprintFunctionLibrary
 UPalLandingTypeUtility = {}
 
+---@return UPalLandingTypeUtility
+function UPalLandingTypeUtility:get() end
+
 ---@param T EPalLandingType
 ---@return boolean
 function UPalLandingTypeUtility:IsRollStep(T) end
@@ -19776,6 +23712,9 @@ function UPalLandingTypeUtility:IsFootStep(T) end
 
 ---@class UPalLavaBoxComponent : UBoxComponent
 UPalLavaBoxComponent = {}
+
+---@return UPalLavaBoxComponent
+function UPalLavaBoxComponent:get() end
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
@@ -19793,6 +23732,9 @@ function UPalLavaBoxComponent:BeginOverlapEvent(OverlappedComponent, OtherActor,
 
 ---@class UPalLawUtility : UBlueprintFunctionLibrary
 UPalLawUtility = {}
+
+---@return UPalLawUtility
+function UPalLawUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param IndividualId FPalInstanceID
@@ -19812,6 +23754,9 @@ function UPalLawUtility:ExistOtherGroupFromSlotIds(WorldContextObject, Individua
 ---@class UPalLevelObjectInterfaceUtility : UObject
 UPalLevelObjectInterfaceUtility = {}
 
+---@return UPalLevelObjectInterfaceUtility
+function UPalLevelObjectInterfaceUtility:get() end
+
 ---@param Target TScriptInterface<IPalLevelObjectInterface>
 ---@return FGuid
 function UPalLevelObjectInterfaceUtility:BP_GetLevelObjectInstanceId(Target) end
@@ -19821,16 +23766,25 @@ function UPalLevelObjectInterfaceUtility:BP_GetLevelObjectInstanceId(Target) end
 ---@field LimitFlags int32
 UPalLimitVolumeBoxComponent = {}
 
+---@return UPalLimitVolumeBoxComponent
+function UPalLimitVolumeBoxComponent:get() end
+
 
 
 ---@class UPalLimitVolumeSphereComponent : USphereComponent
 ---@field LimitFlags int32
 UPalLimitVolumeSphereComponent = {}
 
+---@return UPalLimitVolumeSphereComponent
+function UPalLimitVolumeSphereComponent:get() end
+
 
 
 ---@class UPalLoadingScreenWidgetBase : UPalUserWidget
 UPalLoadingScreenWidgetBase = {}
+
+---@return UPalLoadingScreenWidgetBase
+function UPalLoadingScreenWidgetBase:get() end
 
 
 ---@class UPalLoadoutSelectorComponent : UPalItemSelectorComponent
@@ -19848,6 +23802,9 @@ UPalLoadingScreenWidgetBase = {}
 ---@field replicatedPrimaryTargetInventoryType EPalPlayerInventoryType
 ---@field replicatedCurrentItemSlotIndex int32
 UPalLoadoutSelectorComponent = {}
+
+---@return UPalLoadoutSelectorComponent
+function UPalLoadoutSelectorComponent:get() end
 
 function UPalLoadoutSelectorComponent:TryEquipNowSelectedWeapon_ToAll() end
 ---@return boolean
@@ -19917,11 +23874,17 @@ function UPalLoadoutSelectorComponent:AttachSpawnOtomoPalThrowWeapon_ToAll(issue
 ---@class UPalLocalPlayer : UCommonLocalPlayer
 UPalLocalPlayer = {}
 
+---@return UPalLocalPlayer
+function UPalLocalPlayer:get() end
+
 
 ---@class UPalLocalWorldSaveGame : USaveGame
 ---@field Version int32
 ---@field SaveData FPalLocalSaveData
 UPalLocalWorldSaveGame = {}
+
+---@return UPalLocalWorldSaveGame
+function UPalLocalWorldSaveGame:get() end
 
 
 
@@ -19932,6 +23895,9 @@ UPalLocalWorldSaveGame = {}
 ---@field bShowInMap boolean
 ---@field bShowInCompass boolean
 UPalLocationBase = {}
+
+---@return UPalLocationBase
+function UPalLocationBase:get() end
 
 ---@return boolean
 function UPalLocationBase:ShouldDisplay() end
@@ -19953,6 +23919,9 @@ function UPalLocationBase:GetLocationId() end
 ---@class UPalLocationCreateParameter : UObject
 UPalLocationCreateParameter = {}
 
+---@return UPalLocationCreateParameter
+function UPalLocationCreateParameter:get() end
+
 
 ---@class UPalLocationManager : UPalWorldSubsystem
 ---@field OnAddedLocation FPalLocationManagerOnAddedLocation
@@ -19962,6 +23931,9 @@ UPalLocationCreateParameter = {}
 ---@field LocationMap TMap<FGuid, UPalLocationBase>
 ---@field CustomLocations TArray<UPalLocationPoint_Custom>
 UPalLocationManager = {}
+
+---@return UPalLocationManager
+function UPalLocationManager:get() end
 
 ---@param LocationId FGuid
 function UPalLocationManager:RemoveLocalCustomLocation(LocationId) end
@@ -19987,6 +23959,9 @@ function UPalLocationManager:AddLocalCustomLocation(IconLocation, IconType) end
 ---@class UPalLocationPoint : UPalLocationBase
 UPalLocationPoint = {}
 
+---@return UPalLocationPoint
+function UPalLocationPoint:get() end
+
 ---@return boolean
 function UPalLocationPoint:IsEnableFastTravel() end
 function UPalLocationPoint:InvokeFastTravel() end
@@ -20006,6 +23981,9 @@ function UPalLocationPoint:GetLocation() end
 ---@field bIsAvailable boolean
 UPalLocationPointBaseCamp = {}
 
+---@return UPalLocationPointBaseCamp
+function UPalLocationPointBaseCamp:get() end
+
 function UPalLocationPointBaseCamp:SetAvailable() end
 ---@param Model UPalBaseCampModel
 function UPalLocationPointBaseCamp:OnDisposeTarget(Model) end
@@ -20019,57 +23997,99 @@ function UPalLocationPointBaseCamp:GetBaseCampId() end
 ---@class UPalLocationPointCreateParameter_BaseCamp : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_BaseCamp = {}
 
+---@return UPalLocationPointCreateParameter_BaseCamp
+function UPalLocationPointCreateParameter_BaseCamp:get() end
+
 
 ---@class UPalLocationPointCreateParameter_BossTower : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_BossTower = {}
+
+---@return UPalLocationPointCreateParameter_BossTower
+function UPalLocationPointCreateParameter_BossTower:get() end
 
 
 ---@class UPalLocationPointCreateParameter_Character : UPalLocationCreateParameter
 UPalLocationPointCreateParameter_Character = {}
 
+---@return UPalLocationPointCreateParameter_Character
+function UPalLocationPointCreateParameter_Character:get() end
+
 
 ---@class UPalLocationPointCreateParameter_CustomMarker : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_CustomMarker = {}
+
+---@return UPalLocationPointCreateParameter_CustomMarker
+function UPalLocationPointCreateParameter_CustomMarker:get() end
 
 
 ---@class UPalLocationPointCreateParameter_DroppedCharacter : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_DroppedCharacter = {}
 
+---@return UPalLocationPointCreateParameter_DroppedCharacter
+function UPalLocationPointCreateParameter_DroppedCharacter:get() end
+
 
 ---@class UPalLocationPointCreateParameter_DroppedChest : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_DroppedChest = {}
+
+---@return UPalLocationPointCreateParameter_DroppedChest
+function UPalLocationPointCreateParameter_DroppedChest:get() end
 
 
 ---@class UPalLocationPointCreateParameter_DungeonGoal : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_DungeonGoal = {}
 
+---@return UPalLocationPointCreateParameter_DungeonGoal
+function UPalLocationPointCreateParameter_DungeonGoal:get() end
+
 
 ---@class UPalLocationPointCreateParameter_DungeonPortal : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_DungeonPortal = {}
+
+---@return UPalLocationPointCreateParameter_DungeonPortal
+function UPalLocationPointCreateParameter_DungeonPortal:get() end
 
 
 ---@class UPalLocationPointCreateParameter_FastTravel : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_FastTravel = {}
 
+---@return UPalLocationPointCreateParameter_FastTravel
+function UPalLocationPointCreateParameter_FastTravel:get() end
+
 
 ---@class UPalLocationPointCreateParameter_MapObject : UPalLocationCreateParameter
 UPalLocationPointCreateParameter_MapObject = {}
+
+---@return UPalLocationPointCreateParameter_MapObject
+function UPalLocationPointCreateParameter_MapObject:get() end
 
 
 ---@class UPalLocationPointCreateParameter_Respawn : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_Respawn = {}
 
+---@return UPalLocationPointCreateParameter_Respawn
+function UPalLocationPointCreateParameter_Respawn:get() end
+
 
 ---@class UPalLocationPointCreateParameter_SupplyMarker : UPalLocationPointStaticCreateParameter
 UPalLocationPointCreateParameter_SupplyMarker = {}
+
+---@return UPalLocationPointCreateParameter_SupplyMarker
+function UPalLocationPointCreateParameter_SupplyMarker:get() end
 
 
 ---@class UPalLocationPointDungeonGoal : UPalLocationPointStatic
 UPalLocationPointDungeonGoal = {}
 
+---@return UPalLocationPointDungeonGoal
+function UPalLocationPointDungeonGoal:get() end
+
 
 ---@class UPalLocationPointDungeonPortal : UPalLocationPointStatic
 UPalLocationPointDungeonPortal = {}
+
+---@return UPalLocationPointDungeonPortal
+function UPalLocationPointDungeonPortal:get() end
 
 
 ---@class UPalLocationPointFastTravel : UPalLocationPointStatic
@@ -20078,6 +24098,9 @@ UPalLocationPointDungeonPortal = {}
 ---@field FastTravelPointID FName
 UPalLocationPointFastTravel = {}
 
+---@return UPalLocationPointFastTravel
+function UPalLocationPointFastTravel:get() end
+
 
 
 ---@class UPalLocationPointStatic : UPalLocationPoint
@@ -20085,15 +24108,24 @@ UPalLocationPointFastTravel = {}
 ---@field RotationZ float
 UPalLocationPointStatic = {}
 
+---@return UPalLocationPointStatic
+function UPalLocationPointStatic:get() end
+
 
 
 ---@class UPalLocationPointStaticCreateParameter : UPalLocationCreateParameter
 UPalLocationPointStaticCreateParameter = {}
 
+---@return UPalLocationPointStaticCreateParameter
+function UPalLocationPointStaticCreateParameter:get() end
+
 
 ---@class UPalLocationPoint_BossTower : UPalLocationPointStatic
 ---@field BossTower APalBossTower
 UPalLocationPoint_BossTower = {}
+
+---@return UPalLocationPoint_BossTower
+function UPalLocationPoint_BossTower:get() end
 
 ---@return APalBossTower
 function UPalLocationPoint_BossTower:GetBossTower() end
@@ -20105,6 +24137,9 @@ function UPalLocationPoint_BossTower:GetBossTower() end
 ---@field TargetBaseCampID FGuid
 ---@field CharacterID FName
 UPalLocationPoint_Character = {}
+
+---@return UPalLocationPoint_Character
+function UPalLocationPoint_Character:get() end
 
 ---@param Target AActor
 function UPalLocationPoint_Character:OnDestroyedTarget(Target) end
@@ -20119,6 +24154,9 @@ function UPalLocationPoint_Character:GetCharacterID() end
 ---@class UPalLocationPoint_Custom : UPalLocationPointStatic
 ---@field OnIconTypeChanged FPalLocationPoint_CustomOnIconTypeChanged
 UPalLocationPoint_Custom = {}
+
+---@return UPalLocationPoint_Custom
+function UPalLocationPoint_Custom:get() end
 
 ---@param Index int32
 function UPalLocationPoint_Custom:SetIconType(Index) end
@@ -20135,6 +24173,9 @@ function UPalLocationPoint_Custom:GetIconType() end
 ---@field OwnerPlayerUId FGuid
 UPalLocationPoint_DroppedCharacter = {}
 
+---@return UPalLocationPoint_DroppedCharacter
+function UPalLocationPoint_DroppedCharacter:get() end
+
 ---@return FGuid
 function UPalLocationPoint_DroppedCharacter:GetOwnerPlayerUId() end
 ---@return UPalMapObjectPickableCharacterModelBase
@@ -20145,6 +24186,9 @@ function UPalLocationPoint_DroppedCharacter:GetMapObjectConcreteModel() end
 ---@field OwnerPlayerUId FGuid
 UPalLocationPoint_DroppedChest = {}
 
+---@return UPalLocationPoint_DroppedChest
+function UPalLocationPoint_DroppedChest:get() end
+
 ---@return FGuid
 function UPalLocationPoint_DroppedChest:GetOwnerPlayerUId() end
 
@@ -20153,6 +24197,9 @@ function UPalLocationPoint_DroppedChest:GetOwnerPlayerUId() end
 ---@field MapObjectModelId FGuid
 ---@field InitialLocationCache FVector
 UPalLocationPoint_MapObject = {}
+
+---@return UPalLocationPoint_MapObject
+function UPalLocationPoint_MapObject:get() end
 
 ---@param Model UPalMapObjectModel
 ---@param Options FPalMapObjectDisposeOptions
@@ -20166,15 +24213,24 @@ function UPalLocationPoint_MapObject:GetMapObjectName(MapObjectName) end
 ---@field RespawnPointID FName
 UPalLocationPoint_Respawn = {}
 
+---@return UPalLocationPoint_Respawn
+function UPalLocationPoint_Respawn:get() end
+
 
 
 ---@class UPalLocationPoint_Supply : UPalLocationPointStatic
 UPalLocationPoint_Supply = {}
 
+---@return UPalLocationPoint_Supply
+function UPalLocationPoint_Supply:get() end
+
 
 ---@class UPalLocationReplicator : UPalGameStateReplicatorBase
 ---@field RepInfoArray FFastPalLocationRepInfoArray
 UPalLocationReplicator = {}
+
+---@return UPalLocationReplicator
+function UPalLocationReplicator:get() end
 
 
 
@@ -20194,6 +24250,9 @@ UPalLocationReplicator = {}
 ---@field OnAddedDeathLogDelegate FPalLogManagerOnAddedDeathLogDelegate
 ---@field OnAddedKillLogDelegate FPalLogManagerOnAddedKillLogDelegate
 UPalLogManager = {}
+
+---@return UPalLogManager
+function UPalLogManager:get() end
 
 ---@param targetLogId FGuid
 ---@return boolean
@@ -20227,6 +24286,9 @@ function UPalLogManager:AddDeathLog(DeathLogDisplayData) end
 
 ---@class UPalLogUtility : UBlueprintFunctionLibrary
 UPalLogUtility = {}
+
+---@return UPalLogUtility
+function UPalLogUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param targetData FPalLogAdditionalData
@@ -20312,6 +24374,9 @@ function UPalLogUtility:AddDeathLog(WorldContextObject, DeathLogDisplayData) end
 ---@class UPalLogWidget : UPalUserWidget
 UPalLogWidget = {}
 
+---@return UPalLogWidget
+function UPalLogWidget:get() end
+
 
 ---@class UPalLogWidgetBase : UPalUserWidget
 ---@field destroyTime float
@@ -20319,6 +24384,9 @@ UPalLogWidget = {}
 ---@field logState EPalLogWidgetState
 ---@field ItemIDAndNum FPalStaticItemIdAndNum
 UPalLogWidgetBase = {}
+
+---@return UPalLogWidgetBase
+function UPalLogWidgetBase:get() end
 
 ---@param inDestroyTime float
 function UPalLogWidgetBase:StartDisplayLog(inDestroyTime) end
@@ -20339,10 +24407,16 @@ function UPalLogWidgetBase:RequestInAnime() end
 ---@field RegisteredRespawnLocation FVector
 UPalLoginPlayer = {}
 
+---@return UPalLoginPlayer
+function UPalLoginPlayer:get() end
+
 
 
 ---@class UPalLongPressObject : UObject
 UPalLongPressObject = {}
+
+---@return UPalLongPressObject
+function UPalLongPressObject:get() end
 
 function UPalLongPressObject:ReleaseCallback() end
 function UPalLongPressObject:PressCallback() end
@@ -20362,6 +24436,9 @@ function UPalLongPressObject:LongPressCallback() end
 ---@field InterpolatedSpeed float
 ---@field bIsShowDebugImage boolean
 UPalLookAtComponent = {}
+
+---@return UPalLookAtComponent
+function UPalLookAtComponent:get() end
 
 ---@param interpTime float
 function UPalLookAtComponent:StopLookAt(interpTime) end
@@ -20391,6 +24468,9 @@ function UPalLookAtComponent:GetLookAtInInterpTime() end
 ---@class UPalMapBaseCampWorkerOrderTypeUtility : UBlueprintFunctionLibrary
 UPalMapBaseCampWorkerOrderTypeUtility = {}
 
+---@return UPalMapBaseCampWorkerOrderTypeUtility
+function UPalMapBaseCampWorkerOrderTypeUtility:get() end
+
 ---@param OrderType EPalMapBaseCampWorkerOrderType
 ---@return boolean
 function UPalMapBaseCampWorkerOrderTypeUtility:IsBattleOrderType(OrderType) end
@@ -20403,6 +24483,9 @@ function UPalMapBaseCampWorkerOrderTypeUtility:IsBattleOrderType(OrderType) end
 ---@field AffectSanityRate float
 ---@field AIActionClass TSubclassOf<UPalAIActionBase>
 UPalMapObjectAmusementModel = {}
+
+---@return UPalMapObjectAmusementModel
+function UPalMapObjectAmusementModel:get() end
 
 ---@param Model UPalMapObjectAmusementModel
 function UPalMapObjectAmusementModel:SimpleDelegate__DelegateSignature(Model) end
@@ -20421,18 +24504,30 @@ function UPalMapObjectAmusementModel:ClearCharacterHandle() end
 ---@field AIActionClass TSubclassOf<UPalAIActionBaseCampInUsingAmusement>
 UPalMapObjectAmusementParameterComponent = {}
 
+---@return UPalMapObjectAmusementParameterComponent
+function UPalMapObjectAmusementParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectBaseCampPassiveEffectModel : UPalMapObjectConcreteModelBase
 UPalMapObjectBaseCampPassiveEffectModel = {}
 
+---@return UPalMapObjectBaseCampPassiveEffectModel
+function UPalMapObjectBaseCampPassiveEffectModel:get() end
+
 
 ---@class UPalMapObjectBaseCampPassiveEffectParameterComponentBase : UActorComponent
 UPalMapObjectBaseCampPassiveEffectParameterComponentBase = {}
 
+---@return UPalMapObjectBaseCampPassiveEffectParameterComponentBase
+function UPalMapObjectBaseCampPassiveEffectParameterComponentBase:get() end
+
 
 ---@class UPalMapObjectBaseCampPassiveEffectWorkHardParameterComponent : UPalMapObjectBaseCampPassiveEffectParameterComponentBase
 UPalMapObjectBaseCampPassiveEffectWorkHardParameterComponent = {}
+
+---@return UPalMapObjectBaseCampPassiveEffectWorkHardParameterComponent
+function UPalMapObjectBaseCampPassiveEffectWorkHardParameterComponent:get() end
 
 
 ---@class UPalMapObjectBaseCampPassiveEffectWorkSpeedParameterComponent : UPalMapObjectBaseCampPassiveEffectParameterComponentBase
@@ -20441,10 +24536,16 @@ UPalMapObjectBaseCampPassiveEffectWorkHardParameterComponent = {}
 ---@field WorkSpeedAdditionalRate float
 UPalMapObjectBaseCampPassiveEffectWorkSpeedParameterComponent = {}
 
+---@return UPalMapObjectBaseCampPassiveEffectWorkSpeedParameterComponent
+function UPalMapObjectBaseCampPassiveEffectWorkSpeedParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectBaseCampPassiveWorkHardModel : UPalMapObjectBaseCampPassiveEffectModel
 UPalMapObjectBaseCampPassiveWorkHardModel = {}
+
+---@return UPalMapObjectBaseCampPassiveWorkHardModel
+function UPalMapObjectBaseCampPassiveWorkHardModel:get() end
 
 ---@param RequestPlayerId int32
 ---@param TypeInt int32
@@ -20461,6 +24562,9 @@ function UPalMapObjectBaseCampPassiveWorkHardModel:GetPassiveEffectWorkHard() en
 ---@field BaseCampId FGuid
 UPalMapObjectBaseCampPoint = {}
 
+---@return UPalMapObjectBaseCampPoint
+function UPalMapObjectBaseCampPoint:get() end
+
 ---@return boolean
 function UPalMapObjectBaseCampPoint:IsSameGuildInLocalPlayer() end
 
@@ -20469,6 +24573,9 @@ function UPalMapObjectBaseCampPoint:IsSameGuildInLocalPlayer() end
 ---@field OnNotifiedChangeBaseCampBattleTypeDelegate FPalMapObjectBaseCampWorkerDirectorModelOnNotifiedChangeBaseCampBattleTypeDelegate
 ---@field BaseCampBattleTypeForClientRead EPalBaseCampWorkerDirectionBattleType
 UPalMapObjectBaseCampWorkerDirectorModel = {}
+
+---@return UPalMapObjectBaseCampWorkerDirectorModel
+function UPalMapObjectBaseCampWorkerDirectorModel:get() end
 
 ---@param Model UPalMapObjectBaseCampWorkerDirectorModel
 function UPalMapObjectBaseCampWorkerDirectorModel:ReturnSelfDelegate__DelegateSignature(Model) end
@@ -20488,6 +24595,9 @@ function UPalMapObjectBaseCampWorkerDirectorModel:NotifyChangeBaseCampBattleType
 ---@field LastProceedWorkerIndividualIds TArray<FPalInstanceID>
 ---@field TargetBreedItemIds TArray<FName>
 UPalMapObjectBreedFarmModel = {}
+
+---@return UPalMapObjectBreedFarmModel
+function UPalMapObjectBreedFarmModel:get() end
 
 ---@param Work UPalWorkBase
 function UPalMapObjectBreedFarmModel:OnUpdateAssignedCharacter(Work) end
@@ -20512,6 +24622,9 @@ function UPalMapObjectBreedFarmModel:CanConsumeBreedItem(ConsumableItem) end
 ---@field TargetItemIds TArray<FPalDataTableRowName_ItemData>
 UPalMapObjectBreedFarmParameterComponent = {}
 
+---@return UPalMapObjectBreedFarmParameterComponent
+function UPalMapObjectBreedFarmParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectBulletLauncherParameterComponent : UActorComponent
@@ -20519,11 +24632,17 @@ UPalMapObjectBreedFarmParameterComponent = {}
 ---@field MagazineSize int32
 UPalMapObjectBulletLauncherParameterComponent = {}
 
+---@return UPalMapObjectBulletLauncherParameterComponent
+function UPalMapObjectBulletLauncherParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectCharacterContainerModule : UPalMapObjectConcreteModelModuleBase
 ---@field TargetContainer UPalIndividualCharacterContainer
 UPalMapObjectCharacterContainerModule = {}
+
+---@return UPalMapObjectCharacterContainerModule
+function UPalMapObjectCharacterContainerModule:get() end
 
 ---@param fromSlot UPalIndividualCharacterSlot
 function UPalMapObjectCharacterContainerModule:TryMoveCharacterToContainerFrom(fromSlot) end
@@ -20543,6 +24662,9 @@ function UPalMapObjectCharacterContainerModule:GetContainer() end
 ---@field CharacterMakeWidget TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectCharacterMakeModel = {}
 
+---@return UPalMapObjectCharacterMakeModel
+function UPalMapObjectCharacterMakeModel:get() end
+
 ---@param Result boolean
 function UPalMapObjectCharacterMakeModel:OnCloseCheckDialog(Result) end
 ---@param Parameter UPalHUDDispatchParameterBase
@@ -20552,12 +24674,18 @@ function UPalMapObjectCharacterMakeModel:OnCloseCharacterMake(Parameter) end
 ---@class UPalMapObjectCharacterStatusOperatorModel : UPalMapObjectConcreteModelBase
 UPalMapObjectCharacterStatusOperatorModel = {}
 
+---@return UPalMapObjectCharacterStatusOperatorModel
+function UPalMapObjectCharacterStatusOperatorModel:get() end
+
 
 ---@class UPalMapObjectCollectResourceParameterComponent : UActorComponent
 ---@field SlotNum int32
 ---@field TargetItemIds TArray<FPalDataTableRowName_ItemData>
 ---@field AdditionalRangeOutOfBaseCamp float
 UPalMapObjectCollectResourceParameterComponent = {}
+
+---@return UPalMapObjectCollectResourceParameterComponent
+function UPalMapObjectCollectResourceParameterComponent:get() end
 
 
 
@@ -20571,6 +24699,9 @@ UPalMapObjectCollectResourceParameterComponent = {}
 ---@field ModuleRepInfoArray FPalFastMapObjectModuleRepInfoArray
 ---@field WorkeeModuleCache UPalMapObjectWorkeeModule
 UPalMapObjectConcreteModelBase = {}
+
+---@return UPalMapObjectConcreteModelBase
+function UPalMapObjectConcreteModelBase:get() end
 
 ---@return FName
 function UPalMapObjectConcreteModelBase:TryGetMapObjectId() end
@@ -20623,6 +24754,9 @@ function UPalMapObjectConcreteModelBase:CallOrRegisterOnReadyModule(ModuleType, 
 ---@field bTriggeredOnSpawnedReady boolean
 UPalMapObjectConcreteModelModuleBase = {}
 
+---@return UPalMapObjectConcreteModelModuleBase
+function UPalMapObjectConcreteModelModuleBase:get() end
+
 
 
 ---@class UPalMapObjectConvertCharacterToItemModel : UPalMapObjectConcreteModelBase
@@ -20630,6 +24764,9 @@ UPalMapObjectConcreteModelModuleBase = {}
 ---@field CharacterSlotsObserver UPalIndividualCharacterSlotsObserver
 ---@field ConvertProcessArray TArray<FPalMapObjectConvertCharacterToItemProcessItem>
 UPalMapObjectConvertCharacterToItemModel = {}
+
+---@return UPalMapObjectConvertCharacterToItemModel
+function UPalMapObjectConvertCharacterToItemModel:get() end
 
 ---@param Self UPalMapObjectConvertCharacterToItemModel
 function UPalMapObjectConvertCharacterToItemModel:ReturnSelfDelegate__DelegateSignature(Self) end
@@ -20641,6 +24778,9 @@ function UPalMapObjectConvertCharacterToItemModel:OnUpdateCharacterContainer_Ser
 ---@field ConvertQueueCapacity int32
 ---@field RequiredConvertProcessTime float
 UPalMapObjectConvertCharacterToItemParameterComponent = {}
+
+---@return UPalMapObjectConvertCharacterToItemParameterComponent
+function UPalMapObjectConvertCharacterToItemParameterComponent:get() end
 
 
 
@@ -20664,6 +24804,9 @@ UPalMapObjectConvertCharacterToItemParameterComponent = {}
 ---@field IsPickUpInteractable boolean
 ---@field bCanTransportOutProduct boolean
 UPalMapObjectConvertItemModel = {}
+
+---@return UPalMapObjectConvertItemModel
+function UPalMapObjectConvertItemModel:get() end
 
 ---@param Model UPalMapObjectConvertItemModel
 function UPalMapObjectConvertItemModel:UpdateSettingDelegate__DelegateSignature(Model) end
@@ -20733,11 +24876,17 @@ function UPalMapObjectConvertItemModel:AddConvertItemResultLog(Archive) end
 ---@field EffectSlot UPalHitEffectSlot
 UPalMapObjectDamageReactionComponent = {}
 
+---@return UPalMapObjectDamageReactionComponent
+function UPalMapObjectDamageReactionComponent:get() end
+
 
 
 ---@class UPalMapObjectDamagedScarecrowModel : UPalMapObjectConcreteModelBase
 ---@field ProgressTimeStartAtDamaged float
 UPalMapObjectDamagedScarecrowModel = {}
+
+---@return UPalMapObjectDamagedScarecrowModel
+function UPalMapObjectDamagedScarecrowModel:get() end
 
 ---@param Model UPalMapObjectModel
 ---@param DamageInfo FPalDamageInfo
@@ -20750,6 +24899,9 @@ function UPalMapObjectDamagedScarecrowModel:OnDamage_ServerInternal(Model, Damag
 ---@field OwnerPlayerUId FGuid
 ---@field bCanOpenForAnyone boolean
 UPalMapObjectDeathDroppedCharacterModel = {}
+
+---@return UPalMapObjectDeathDroppedCharacterModel
+function UPalMapObjectDeathDroppedCharacterModel:get() end
 
 ---@param Model UPalMapObjectDeathDroppedCharacterModel
 function UPalMapObjectDeathDroppedCharacterModel:ReturnSelfDelegate__DelegateSignature(Model) end
@@ -20767,6 +24919,9 @@ function UPalMapObjectDeathDroppedCharacterModel:IsSameGuildInLocalPlayer() end
 ---@field bCanOpenByProgressTime boolean
 UPalMapObjectDeathPenaltyStorageModel = {}
 
+---@return UPalMapObjectDeathPenaltyStorageModel
+function UPalMapObjectDeathPenaltyStorageModel:get() end
+
 ---@param Model UPalMapObjectDeathPenaltyStorageModel
 function UPalMapObjectDeathPenaltyStorageModel:ReturnSelfDelegate__DelegateSignature(Model) end
 ---@param LocalPlayerState APalPlayerState
@@ -20777,6 +24932,9 @@ function UPalMapObjectDeathPenaltyStorageModel:IsSameGuildInLocalPlayer() end
 
 ---@class UPalMapObjectDefenseAttackModelBase : UPalMapObjectDefenseModelBase
 UPalMapObjectDefenseAttackModelBase = {}
+
+---@return UPalMapObjectDefenseAttackModelBase
+function UPalMapObjectDefenseAttackModelBase:get() end
 
 ---@return boolean
 function UPalMapObjectDefenseAttackModelBase:IsEnableRunning() end
@@ -20796,6 +24954,9 @@ function UPalMapObjectDefenseAttackModelBase:IsEnableRunning() end
 ---@field RotateAxisWorldRotation FQuat
 UPalMapObjectDefenseBulletLauncherModel = {}
 
+---@return UPalMapObjectDefenseBulletLauncherModel
+function UPalMapObjectDefenseBulletLauncherModel:get() end
+
 function UPalMapObjectDefenseBulletLauncherModel:UseBullet() end
 ---@param ReloadBulletsNum int32
 function UPalMapObjectDefenseBulletLauncherModel:ReloadBullets(ReloadBulletsNum) end
@@ -20813,6 +24974,9 @@ function UPalMapObjectDefenseBulletLauncherModel:GetBulletName() end
 ---@class UPalMapObjectDefenseModelBase : UPalMapObjectConcreteModelBase
 UPalMapObjectDefenseModelBase = {}
 
+---@return UPalMapObjectDefenseModelBase
+function UPalMapObjectDefenseModelBase:get() end
+
 ---@return FVector
 function UPalMapObjectDefenseModelBase:GetLocation() end
 ---@return EPalMapObjectDefenseType
@@ -20822,6 +24986,9 @@ function UPalMapObjectDefenseModelBase:GetDefenseType() end
 ---@class UPalMapObjectDefenseWaitModel : UPalMapObjectDefenseModelBase
 UPalMapObjectDefenseWaitModel = {}
 
+---@return UPalMapObjectDefenseWaitModel
+function UPalMapObjectDefenseWaitModel:get() end
+
 
 ---@class UPalMapObjectDisplayCharacterModel : UPalMapObjectConcreteModelBase
 ---@field RecoverAmountBySec float
@@ -20830,6 +24997,9 @@ UPalMapObjectDefenseWaitModel = {}
 ---@field MenuUIWidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 ---@field CharacterSlotsObserver UPalIndividualCharacterSlotsObserver
 UPalMapObjectDisplayCharacterModel = {}
+
+---@return UPalMapObjectDisplayCharacterModel
+function UPalMapObjectDisplayCharacterModel:get() end
 
 ---@param fromSlot UPalIndividualCharacterSlot
 function UPalMapObjectDisplayCharacterModel:TryMoveToDisplayCage(fromSlot) end
@@ -20850,10 +25020,16 @@ function UPalMapObjectDisplayCharacterModel:GetDisplaySlots(Slots) end
 ---@field MenuUIWidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectDisplayCharacterParameterComponent = {}
 
+---@return UPalMapObjectDisplayCharacterParameterComponent
+function UPalMapObjectDisplayCharacterParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectDoorModel : UPalMapObjectConcreteModelBase
 UPalMapObjectDoorModel = {}
+
+---@return UPalMapObjectDoorModel
+function UPalMapObjectDoorModel:get() end
 
 ---@param RequestPlayerId int32
 ---@param ToStateInt int32
@@ -20865,6 +25041,9 @@ function UPalMapObjectDoorModel:RequestTrigger_ServerInternal(RequestPlayerId, T
 ---@field ReleaseDirection FVector
 ---@field bEnableInteract boolean
 UPalMapObjectDropItemModel = {}
+
+---@return UPalMapObjectDropItemModel
+function UPalMapObjectDropItemModel:get() end
 
 ---@param Container UPalItemContainer
 function UPalMapObjectDropItemModel:OnUpdateItemContainerContentInServer(Container) end
@@ -20882,6 +25061,9 @@ function UPalMapObjectDropItemModel:OnEnableTriggerInteract(Component) end
 ---@field DropItems TArray<FPalMapObjectDropItemData>
 UPalMapObjectDropItemParameterComponent = {}
 
+---@return UPalMapObjectDropItemParameterComponent
+function UPalMapObjectDropItemParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectEnergyModule : UPalMapObjectConcreteModelModuleBase
@@ -20893,6 +25075,9 @@ UPalMapObjectDropItemParameterComponent = {}
 ---@field bRequiredConsumeEnergy boolean
 ---@field StatusHUDId FGuid
 UPalMapObjectEnergyModule = {}
+
+---@return UPalMapObjectEnergyModule
+function UPalMapObjectEnergyModule:get() end
 
 ---@param Module UPalMapObjectEnergyModule
 function UPalMapObjectEnergyModule:ReturnSelfMulticastDelegate__DelegateSignature(Module) end
@@ -20923,6 +25108,9 @@ function UPalMapObjectEnergyModule:CanConsumeEnergy() end
 ---@field WaterStackRateValue float
 UPalMapObjectFarmBlockV2Model = {}
 
+---@return UPalMapObjectFarmBlockV2Model
+function UPalMapObjectFarmBlockV2Model:get() end
+
 ---@param LastState EPalFarmCropState
 ---@param NextState EPalFarmCropState
 function UPalMapObjectFarmBlockV2Model:UpdateStateDelegate__DelegateSignature(LastState, NextState) end
@@ -20943,13 +25131,22 @@ function UPalMapObjectFarmBlockV2Model:GetCurrentCropDataId() end
 ---@class UPalMapObjectFarmBlockV2ModelStateBehaviourBase : UPalStateMachineStateBase
 UPalMapObjectFarmBlockV2ModelStateBehaviourBase = {}
 
+---@return UPalMapObjectFarmBlockV2ModelStateBehaviourBase
+function UPalMapObjectFarmBlockV2ModelStateBehaviourBase:get() end
+
 
 ---@class UPalMapObjectFarmBlockV2ModelStateBehaviourGrowup : UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 UPalMapObjectFarmBlockV2ModelStateBehaviourGrowup = {}
 
+---@return UPalMapObjectFarmBlockV2ModelStateBehaviourGrowup
+function UPalMapObjectFarmBlockV2ModelStateBehaviourGrowup:get() end
+
 
 ---@class UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable : UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable = {}
+
+---@return UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable
+function UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable:get() end
 
 ---@param ProgressRate float
 function UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable:UpdateHarvestProgressRateDelegate__DelegateSignature(ProgressRate) end
@@ -20966,10 +25163,16 @@ function UPalMapObjectFarmBlockV2ModelStateBehaviourHarvestable:OnFinishWorkInSe
 ---@field CurrentStateBehaviourCache UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 UPalMapObjectFarmBlockV2ModelStateBehaviourMachine = {}
 
+---@return UPalMapObjectFarmBlockV2ModelStateBehaviourMachine
+function UPalMapObjectFarmBlockV2ModelStateBehaviourMachine:get() end
+
 
 
 ---@class UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding : UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding = {}
+
+---@return UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding
+function UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding:get() end
 
 ---@param ProgressRate float
 function UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding:UpdateProgressRateDelegate__DelegateSignature(ProgressRate) end
@@ -20982,6 +25185,9 @@ function UPalMapObjectFarmBlockV2ModelStateBehaviourSeeding:OnFinishWorkInServer
 ---@class UPalMapObjectFarmBlockV2ModelStateBehaviourWatering : UPalMapObjectFarmBlockV2ModelStateBehaviourBase
 UPalMapObjectFarmBlockV2ModelStateBehaviourWatering = {}
 
+---@return UPalMapObjectFarmBlockV2ModelStateBehaviourWatering
+function UPalMapObjectFarmBlockV2ModelStateBehaviourWatering:get() end
+
 ---@param WaterStackRate float
 function UPalMapObjectFarmBlockV2ModelStateBehaviourWatering:UpdateWaterStackRateDelegate__DelegateSignature(WaterStackRate) end
 ---@param WorkProgress UPalWorkProgress
@@ -20992,6 +25198,9 @@ function UPalMapObjectFarmBlockV2ModelStateBehaviourWatering:OnFinishWorkInServe
 
 ---@class UPalMapObjectFarmCropDataUtility : UBlueprintFunctionLibrary
 UPalMapObjectFarmCropDataUtility = {}
+
+---@return UPalMapObjectFarmCropDataUtility
+function UPalMapObjectFarmCropDataUtility:get() end
 
 ---@param Data FPalMapObjectFarmCropData
 ---@param MaterialInfos TArray<FPalStaticItemIdAndNum>
@@ -21005,6 +25214,9 @@ function UPalMapObjectFarmCropDataUtility:IsValid(Data) end
 ---@field LocationInstanceId FGuid
 UPalMapObjectFastTravelPointModel = {}
 
+---@return UPalMapObjectFastTravelPointModel
+function UPalMapObjectFastTravelPointModel:get() end
+
 
 
 ---@class UPalMapObjectFoliage : UObject
@@ -21014,6 +25226,9 @@ UPalMapObjectFastTravelPointModel = {}
 ---@field GridSize int32
 ---@field GridModelMap TMap<FPalCellCoord, UPalFoliageGridModel>
 UPalMapObjectFoliage = {}
+
+---@return UPalMapObjectFoliage
+function UPalMapObjectFoliage:get() end
 
 
 
@@ -21028,6 +25243,9 @@ UPalMapObjectFoliage = {}
 ---@field CellCoord FPalCellCoord
 ---@field FoliagePresetType EPalFoliagePresetType
 UPalMapObjectFoliageModel = {}
+
+---@return UPalMapObjectFoliageModel
+function UPalMapObjectFoliageModel:get() end
 
 ---@param Self UPalMapObjectFoliageModel
 function UPalMapObjectFoliageModel:ReturnSelfDelegate__DelegateSignature(Self) end
@@ -21045,16 +25263,25 @@ function UPalMapObjectFoliageModel:InstanceDamageDelegate__DelegateSignature(Ins
 ---@class UPalMapObjectFoodBoxCoolingParameterComponent : UActorComponent
 UPalMapObjectFoodBoxCoolingParameterComponent = {}
 
+---@return UPalMapObjectFoodBoxCoolingParameterComponent
+function UPalMapObjectFoodBoxCoolingParameterComponent:get() end
+
 
 ---@class UPalMapObjectFoodBoxParameterComponent : UActorComponent
 ---@field SlotNum int32
 ---@field CorruptionMultiplier float
 UPalMapObjectFoodBoxParameterComponent = {}
 
+---@return UPalMapObjectFoodBoxParameterComponent
+function UPalMapObjectFoodBoxParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectFunctionAffectItemCorruptionByWorkStatus : UPalMapObjectFunctionAffectedByWorkStatusBase
 UPalMapObjectFunctionAffectItemCorruptionByWorkStatus = {}
+
+---@return UPalMapObjectFunctionAffectItemCorruptionByWorkStatus
+function UPalMapObjectFunctionAffectItemCorruptionByWorkStatus:get() end
 
 ---@param Container UPalItemContainer
 function UPalMapObjectFunctionAffectItemCorruptionByWorkStatus:OnUpdateContainerContent(Container) end
@@ -21063,11 +25290,17 @@ function UPalMapObjectFunctionAffectItemCorruptionByWorkStatus:OnUpdateContainer
 ---@class UPalMapObjectFunctionAffectedByWorkStatusBase : UObject
 UPalMapObjectFunctionAffectedByWorkStatusBase = {}
 
+---@return UPalMapObjectFunctionAffectedByWorkStatusBase
+function UPalMapObjectFunctionAffectedByWorkStatusBase:get() end
+
 
 ---@class UPalMapObjectGateModel : UPalMapObjectConcreteModelBase
 ---@field UnlockDateTime FGameDateTime
 ---@field WeakInteractingCharacterParameters TMap<FPalInstanceID, TWeakObjectPtr<UPalIndividualCharacterParameter>>
 UPalMapObjectGateModel = {}
+
+---@return UPalMapObjectGateModel
+function UPalMapObjectGateModel:get() end
 
 ---@param RequestPlayerId int32
 ---@param ToStateInt int32
@@ -21089,6 +25322,9 @@ function UPalMapObjectGateModel:OnInteractBegin(Other, Component) end
 ---@field ConsumeEnergySpeed float
 UPalMapObjectGenerateEnergyModel = {}
 
+---@return UPalMapObjectGenerateEnergyModel
+function UPalMapObjectGenerateEnergyModel:get() end
+
 ---@param Model UPalMapObjectGenerateEnergyModel
 function UPalMapObjectGenerateEnergyModel:UpdateEnergyAmountDelegate__DelegateSignature(Model) end
 ---@param Work UPalWorkBase
@@ -21108,11 +25344,17 @@ function UPalMapObjectGenerateEnergyModel:GetEnergyType() end
 ---@field MaxEnergyStorage float
 UPalMapObjectGenerateEnergyParameterComponent = {}
 
+---@return UPalMapObjectGenerateEnergyParameterComponent
+function UPalMapObjectGenerateEnergyParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectHPWorldHUDParameter : UPalHUDDispatchParameterBase
 ---@field MapObject APalMapObject
 UPalMapObjectHPWorldHUDParameter = {}
+
+---@return UPalMapObjectHPWorldHUDParameter
+function UPalMapObjectHPWorldHUDParameter:get() end
 
 
 
@@ -21127,6 +25369,9 @@ UPalMapObjectHPWorldHUDParameter = {}
 ---@field CurrentPalEggTemperatureDiff int32
 ---@field HatchedPalEggData UPalDynamicPalEggItemDataBase
 UPalMapObjectHatchingEggModel = {}
+
+---@return UPalMapObjectHatchingEggModel
+function UPalMapObjectHatchingEggModel:get() end
 
 ---@param NewWorkAmountBySec float
 function UPalMapObjectHatchingEggModel:UpdateWorkAmountBySec(NewWorkAmountBySec) end
@@ -21166,12 +25411,18 @@ function UPalMapObjectHatchingEggModel:GetPalEggRankInfo(OutPalEggRankInfo) end
 ---@field MenuUIWidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectHatchingEggParameterComponent = {}
 
+---@return UPalMapObjectHatchingEggParameterComponent
+function UPalMapObjectHatchingEggParameterComponent:get() end
+
 ---@return float
 function UPalMapObjectHatchingEggParameterComponent:GetDefaultAutoWorkAmountBySec() end
 
 
 ---@class UPalMapObjectHeatSourceModel : UPalMapObjectConcreteModelBase
 UPalMapObjectHeatSourceModel = {}
+
+---@return UPalMapObjectHeatSourceModel
+function UPalMapObjectHeatSourceModel:get() end
 
 ---@param EnergyModule UPalMapObjectEnergyModule
 function UPalMapObjectHeatSourceModel:OnUpdateEnergyModuleState_ServerInternal(EnergyModule) end
@@ -21182,11 +25433,17 @@ function UPalMapObjectHeatSourceModel:OnUpdateAssignedCharacter_ServerInternal(W
 ---@class UPalMapObjectInteractRestrictTypeUtility : UBlueprintFunctionLibrary
 UPalMapObjectInteractRestrictTypeUtility = {}
 
+---@return UPalMapObjectInteractRestrictTypeUtility
+function UPalMapObjectInteractRestrictTypeUtility:get() end
+
 
 ---@class UPalMapObjectItemChestModel : UPalMapObjectItemStorageModel
 ---@field OnUpdatePrivateLockPlayerUIdDelegate FPalMapObjectItemChestModelOnUpdatePrivateLockPlayerUIdDelegate
 ---@field PrivateLockPlayerUId FGuid
 UPalMapObjectItemChestModel = {}
+
+---@return UPalMapObjectItemChestModel
+function UPalMapObjectItemChestModel:get() end
 
 ---@param Self UPalMapObjectItemChestModel
 function UPalMapObjectItemChestModel:ReturnSelfDelegate__DelegateSignature(Self) end
@@ -21226,11 +25483,17 @@ function UPalMapObjectItemChestModel:IsLockedPrivate() end
 ---@field CorruptionMultiplier float
 UPalMapObjectItemChestParameterComponent = {}
 
+---@return UPalMapObjectItemChestParameterComponent
+function UPalMapObjectItemChestParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectItemChest_AffectCorruption : UPalMapObjectItemChestModel
 ---@field WorkAffection UPalMapObjectFunctionAffectedByWorkStatusBase
 UPalMapObjectItemChest_AffectCorruption = {}
+
+---@return UPalMapObjectItemChest_AffectCorruption
+function UPalMapObjectItemChest_AffectCorruption:get() end
 
 
 
@@ -21241,6 +25504,9 @@ UPalMapObjectItemChest_AffectCorruption = {}
 ---@field AllSlotAttribute TArray<EPalMapObjectItemContainerSlotAttribute>
 ---@field UsageType EPalContainerUsageType
 UPalMapObjectItemContainerModule = {}
+
+---@return UPalMapObjectItemContainerModule
+function UPalMapObjectItemContainerModule:get() end
 
 ---@param Module UPalMapObjectItemContainerModule
 function UPalMapObjectItemContainerModule:UpdateContentsMulticastDelegate__DelegateSignature(Module) end
@@ -21283,11 +25549,17 @@ function UPalMapObjectItemContainerModule:BindUpdateContents(Delegate) end
 ---@field WorkSpeedAdditionalRate float
 UPalMapObjectItemConverterParameterComponent = {}
 
+---@return UPalMapObjectItemConverterParameterComponent
+function UPalMapObjectItemConverterParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectItemDropOnDamagModel : UPalMapObjectConcreteModelBase
 ---@field DropItemInfos TArray<FPalItemAndNum>
 UPalMapObjectItemDropOnDamagModel = {}
+
+---@return UPalMapObjectItemDropOnDamagModel
+function UPalMapObjectItemDropOnDamagModel:get() end
 
 ---@param Model UPalMapObjectModel
 ---@param DamageInfo FPalDamageInfo
@@ -21302,11 +25574,17 @@ function UPalMapObjectItemDropOnDamagModel:OnDamage_ServerInternal(Model, Damage
 ---@field bIsGainExp boolean
 UPalMapObjectItemSimpleProductParameterComponent = {}
 
+---@return UPalMapObjectItemSimpleProductParameterComponent
+function UPalMapObjectItemSimpleProductParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectItemStorageModel : UPalMapObjectConcreteModelBase
 ---@field bAutoDestroyIfEmpty boolean
 UPalMapObjectItemStorageModel = {}
+
+---@return UPalMapObjectItemStorageModel
+function UPalMapObjectItemStorageModel:get() end
 
 function UPalMapObjectItemStorageModel:RequestSortContainer() end
 ---@param Container UPalItemContainer
@@ -21316,6 +25594,9 @@ function UPalMapObjectItemStorageModel:OnUpdateContainerContentInServer(Containe
 ---@class UPalMapObjectLampModel : UPalMapObjectConcreteModelBase
 UPalMapObjectLampModel = {}
 
+---@return UPalMapObjectLampModel
+function UPalMapObjectLampModel:get() end
+
 ---@param EnergyModule UPalMapObjectEnergyModule
 function UPalMapObjectLampModel:OnUpdateEnergyModuleState(EnergyModule) end
 
@@ -21324,6 +25605,9 @@ function UPalMapObjectLampModel:OnUpdateEnergyModuleState(EnergyModule) end
 ---@field LocationId FGuid
 UPalMapObjectLocationComponent = {}
 
+---@return UPalMapObjectLocationComponent
+function UPalMapObjectLocationComponent:get() end
+
 function UPalMapObjectLocationComponent:SetLocationId() end
 
 
@@ -21331,6 +25615,9 @@ function UPalMapObjectLocationComponent:SetLocationId() end
 ---@field OnEndPickingGameDelegate FPalMapObjectLockPickingModuleOnEndPickingGameDelegate
 ---@field bAnyonePicking boolean
 UPalMapObjectLockPickingModule = {}
+
+---@return UPalMapObjectLockPickingModule
+function UPalMapObjectLockPickingModule:get() end
 
 ---@param Param UPalHUDDispatchParameterBase
 function UPalMapObjectLockPickingModule:OnEndPickingGame_Client(Param) end
@@ -21413,6 +25700,9 @@ function UPalMapObjectLockPickingModule:EndPickingGame__DelegateSignature(IsSucc
 ---@field PointLightComponents TArray<TWeakObjectPtr<UObject>>
 UPalMapObjectManager = {}
 
+---@return UPalMapObjectManager
+function UPalMapObjectManager:get() end
+
 ---@param InExecuteCount int32
 function UPalMapObjectManager:UpdateSkeletalMeshComponentForLOD(InExecuteCount) end
 function UPalMapObjectManager:UpdatePointLightComponentForCulling() end
@@ -21463,6 +25753,9 @@ function UPalMapObjectManager:FindConcreteModel(InstanceId) end
 ---@field AffectSanityRate float
 UPalMapObjectMedicalPalBedModel = {}
 
+---@return UPalMapObjectMedicalPalBedModel
+function UPalMapObjectMedicalPalBedModel:get() end
+
 ---@param Model UPalMapObjectMedicalPalBedModel
 function UPalMapObjectMedicalPalBedModel:SimpleDelegate__DelegateSignature(Model) end
 ---@param Other AActor
@@ -21479,6 +25772,9 @@ function UPalMapObjectMedicalPalBedModel:ClearSleepingCharacterHandle() end
 ---@field AdditionalHealingRate float
 ---@field AffectSanityRate float
 UPalMapObjectMedicalPalBedParameterComponent = {}
+
+---@return UPalMapObjectMedicalPalBedParameterComponent
+function UPalMapObjectMedicalPalBedParameterComponent:get() end
 
 
 
@@ -21523,6 +25819,9 @@ UPalMapObjectMedicalPalBedParameterComponent = {}
 ---@field TickFlagContainer FFlagContainer
 UPalMapObjectModel = {}
 
+---@return UPalMapObjectModel
+function UPalMapObjectModel:get() end
+
 ---@param RequestPlayerUId FGuid
 function UPalMapObjectModel:RequestRepairByPlayer_ToServer_ServerInternal(RequestPlayerUId) end
 ---@param TargetBuildProcess UPalBuildProcess
@@ -21558,19 +25857,31 @@ function UPalMapObjectModel:GetHP() end
 ---@class UPalMapObjectModelConnectorAttach : UPalMapObjectModelConnectorBase
 UPalMapObjectModelConnectorAttach = {}
 
+---@return UPalMapObjectModelConnectorAttach
+function UPalMapObjectModelConnectorAttach:get() end
+
 
 ---@class UPalMapObjectModelConnectorAttachToCeil : UPalMapObjectModelConnectorAttach
 UPalMapObjectModelConnectorAttachToCeil = {}
 
+---@return UPalMapObjectModelConnectorAttachToCeil
+function UPalMapObjectModelConnectorAttachToCeil:get() end
+
 
 ---@class UPalMapObjectModelConnectorAttachToWall : UPalMapObjectModelConnectorAttach
 UPalMapObjectModelConnectorAttachToWall = {}
+
+---@return UPalMapObjectModelConnectorAttachToWall
+function UPalMapObjectModelConnectorAttachToWall:get() end
 
 
 ---@class UPalMapObjectModelConnectorBase : UObject
 ---@field SupportedLevel int32
 ---@field ConnectInfoAnyPlace FPalMapObjectModelConnectInfo
 UPalMapObjectModelConnectorBase = {}
+
+---@return UPalMapObjectModelConnectorBase
+function UPalMapObjectModelConnectorBase:get() end
 
 
 
@@ -21585,6 +25896,9 @@ UPalMapObjectModelConnectorBase = {}
 ---@field CornerBackRightConnectInfo FPalMapObjectModelConnectInfo
 UPalMapObjectModelConnectorFoundation = {}
 
+---@return UPalMapObjectModelConnectorFoundation
+function UPalMapObjectModelConnectorFoundation:get() end
+
 
 
 ---@class UPalMapObjectModelConnectorPillar : UPalMapObjectModelConnectorBase
@@ -21592,6 +25906,9 @@ UPalMapObjectModelConnectorFoundation = {}
 ---@field DownConnectInfo FPalMapObjectModelConnectInfo
 ---@field bStuckInBackground boolean
 UPalMapObjectModelConnectorPillar = {}
+
+---@return UPalMapObjectModelConnectorPillar
+function UPalMapObjectModelConnectorPillar:get() end
 
 
 
@@ -21606,12 +25923,18 @@ UPalMapObjectModelConnectorPillar = {}
 ---@field CornerBackRightConnectInfo FPalMapObjectModelConnectInfo
 UPalMapObjectModelConnectorRoof = {}
 
+---@return UPalMapObjectModelConnectorRoof
+function UPalMapObjectModelConnectorRoof:get() end
+
 
 
 ---@class UPalMapObjectModelConnectorStair : UPalMapObjectModelConnectorBase
 ---@field UpConnectInfo FPalMapObjectModelConnectInfo
 ---@field DownConnectInfo FPalMapObjectModelConnectInfo
 UPalMapObjectModelConnectorStair = {}
+
+---@return UPalMapObjectModelConnectorStair
+function UPalMapObjectModelConnectorStair:get() end
 
 
 
@@ -21620,21 +25943,33 @@ UPalMapObjectModelConnectorStair = {}
 ---@field DownConnectInfo FPalMapObjectModelConnectInfo
 UPalMapObjectModelConnectorWallV2 = {}
 
+---@return UPalMapObjectModelConnectorWallV2
+function UPalMapObjectModelConnectorWallV2:get() end
+
 
 
 ---@class UPalMapObjectModelEffect : UObject
 ---@field RepInfoArray FPalFastMapObjectModelEffectRepInfoArray
 UPalMapObjectModelEffect = {}
 
+---@return UPalMapObjectModelEffect
+function UPalMapObjectModelEffect:get() end
+
 
 
 ---@class UPalMapObjectModelEffectBase : UObject
 UPalMapObjectModelEffectBase = {}
 
+---@return UPalMapObjectModelEffectBase
+function UPalMapObjectModelEffectBase:get() end
+
 
 ---@class UPalMapObjectModelEffectGrantParameterBase : UObject
 ---@field OwnerModel UPalMapObjectModel
 UPalMapObjectModelEffectGrantParameterBase = {}
+
+---@return UPalMapObjectModelEffectGrantParameterBase
+function UPalMapObjectModelEffectGrantParameterBase:get() end
 
 
 
@@ -21642,15 +25977,24 @@ UPalMapObjectModelEffectGrantParameterBase = {}
 ---@field Value float
 UPalMapObjectModelEffectGrantParameter_AccumulateTrigger = {}
 
+---@return UPalMapObjectModelEffectGrantParameter_AccumulateTrigger
+function UPalMapObjectModelEffectGrantParameter_AccumulateTrigger:get() end
+
 
 
 ---@class UPalMapObjectModelEffectGrantParameter_Burn : UPalMapObjectModelEffectGrantParameter_AccumulateTrigger
 UPalMapObjectModelEffectGrantParameter_Burn = {}
 
+---@return UPalMapObjectModelEffectGrantParameter_Burn
+function UPalMapObjectModelEffectGrantParameter_Burn:get() end
+
 
 ---@class UPalMapObjectModelEffect_AccumulateTrigger : UPalMapObjectModelEffectBase
 ---@field AccumulateValue float
 UPalMapObjectModelEffect_AccumulateTrigger = {}
+
+---@return UPalMapObjectModelEffect_AccumulateTrigger
+function UPalMapObjectModelEffect_AccumulateTrigger:get() end
 
 
 
@@ -21659,6 +26003,9 @@ UPalMapObjectModelEffect_AccumulateTrigger = {}
 ---@field PersistenceValue float
 ---@field HitCollisionBox APalHitCollisionBox
 UPalMapObjectModelEffect_Burn = {}
+
+---@return UPalMapObjectModelEffect_Burn
+function UPalMapObjectModelEffect_Burn:get() end
 
 ---@param bLastValue boolean
 function UPalMapObjectModelEffect_Burn:OnRep_Burning(bLastValue) end
@@ -21674,10 +26021,16 @@ function UPalMapObjectModelEffect_Burn:OnHitCollisionBox(MyHitComponent, OtherHi
 ---@class UPalMapObjectModelInitializeExtraParameterBase : UObject
 UPalMapObjectModelInitializeExtraParameterBase = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterBase
+function UPalMapObjectModelInitializeExtraParameterBase:get() end
+
 
 ---@class UPalMapObjectModelInitializeExtraParameterBuild : UPalMapObjectModelInitializeExtraParameterBase
 ---@field BuildWorkAmount float
 UPalMapObjectModelInitializeExtraParameterBuild = {}
+
+---@return UPalMapObjectModelInitializeExtraParameterBuild
+function UPalMapObjectModelInitializeExtraParameterBuild:get() end
 
 
 
@@ -21685,12 +26038,18 @@ UPalMapObjectModelInitializeExtraParameterBuild = {}
 ---@field ByPlayerUId FGuid
 UPalMapObjectModelInitializeExtraParameterByPlayerUId = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterByPlayerUId
+function UPalMapObjectModelInitializeExtraParameterByPlayerUId:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterDropCharacter : UPalMapObjectModelInitializeExtraParameterBase
 ---@field ByPlayerUId FGuid
 ---@field bPickableAnyone boolean
 UPalMapObjectModelInitializeExtraParameterDropCharacter = {}
+
+---@return UPalMapObjectModelInitializeExtraParameterDropCharacter
+function UPalMapObjectModelInitializeExtraParameterDropCharacter:get() end
 
 
 
@@ -21700,6 +26059,9 @@ UPalMapObjectModelInitializeExtraParameterDropCharacter = {}
 ---@field bAutoPickup boolean
 UPalMapObjectModelInitializeExtraParameterDropItem = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterDropItem
+function UPalMapObjectModelInitializeExtraParameterDropItem:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterInitialCharacter : UPalMapObjectModelInitializeExtraParameterBase
@@ -21707,11 +26069,17 @@ UPalMapObjectModelInitializeExtraParameterDropItem = {}
 ---@field CreateLocationPoint boolean
 UPalMapObjectModelInitializeExtraParameterInitialCharacter = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterInitialCharacter
+function UPalMapObjectModelInitializeExtraParameterInitialCharacter:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterInitialItem : UPalMapObjectModelInitializeExtraParameterBase
 ---@field ItemInfos TArray<FPalItemAndNum>
 UPalMapObjectModelInitializeExtraParameterInitialItem = {}
+
+---@return UPalMapObjectModelInitializeExtraParameterInitialItem
+function UPalMapObjectModelInitializeExtraParameterInitialItem:get() end
 
 
 
@@ -21719,11 +26087,17 @@ UPalMapObjectModelInitializeExtraParameterInitialItem = {}
 ---@field RestrictType EPalMapObjectInteractRestrictType
 UPalMapObjectModelInitializeExtraParameterInteract = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterInteract
+function UPalMapObjectModelInitializeExtraParameterInteract:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterItem : UPalMapObjectModelInitializeExtraParameterBase
 ---@field ItemInfos TArray<FPalItemAndNum>
 UPalMapObjectModelInitializeExtraParameterItem = {}
+
+---@return UPalMapObjectModelInitializeExtraParameterItem
+function UPalMapObjectModelInitializeExtraParameterItem:get() end
 
 
 
@@ -21731,11 +26105,17 @@ UPalMapObjectModelInitializeExtraParameterItem = {}
 ---@field AllSlotAttribute TArray<EPalMapObjectItemContainerSlotAttribute>
 UPalMapObjectModelInitializeExtraParameterItemContainerAttribute = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterItemContainerAttribute
+function UPalMapObjectModelInitializeExtraParameterItemContainerAttribute:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterItemDropObject : UPalMapObjectModelInitializeExtraParameterBase
 ---@field ItemInfos TArray<FPalItemAndNum>
 UPalMapObjectModelInitializeExtraParameterItemDropObject = {}
+
+---@return UPalMapObjectModelInitializeExtraParameterItemDropObject
+function UPalMapObjectModelInitializeExtraParameterItemDropObject:get() end
 
 
 
@@ -21743,17 +26123,26 @@ UPalMapObjectModelInitializeExtraParameterItemDropObject = {}
 ---@field NoteRowName FName
 UPalMapObjectModelInitializeExtraParameterNote = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterNote
+function UPalMapObjectModelInitializeExtraParameterNote:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterPalEgg : UPalMapObjectModelInitializeExtraParameterBase
 ---@field CharacterID FName
 UPalMapObjectModelInitializeExtraParameterPalEgg = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterPalEgg
+function UPalMapObjectModelInitializeExtraParameterPalEgg:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterSpawnedBy : UPalMapObjectModelInitializeExtraParameterBase
 ---@field ByMapObjectModelInstanceId FGuid
 UPalMapObjectModelInitializeExtraParameterSpawnedBy = {}
+
+---@return UPalMapObjectModelInitializeExtraParameterSpawnedBy
+function UPalMapObjectModelInitializeExtraParameterSpawnedBy:get() end
 
 
 
@@ -21762,21 +26151,33 @@ UPalMapObjectModelInitializeExtraParameterSpawnedBy = {}
 ---@field OwnerSpawnerStageInstanceId FPalStageInstanceId
 UPalMapObjectModelInitializeExtraParameterSpawner = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterSpawner
+function UPalMapObjectModelInitializeExtraParameterSpawner:get() end
+
 
 
 ---@class UPalMapObjectModelInitializeExtraParameterTreasureBox : UPalMapObjectModelInitializeExtraParameterBase
 ---@field GradeType EPalMapObjectTreasureGradeType
 UPalMapObjectModelInitializeExtraParameterTreasureBox = {}
 
+---@return UPalMapObjectModelInitializeExtraParameterTreasureBox
+function UPalMapObjectModelInitializeExtraParameterTreasureBox:get() end
+
 
 
 ---@class UPalMapObjectMonsterFarmModel : UPalMapObjectConcreteModelBase
 UPalMapObjectMonsterFarmModel = {}
 
+---@return UPalMapObjectMonsterFarmModel
+function UPalMapObjectMonsterFarmModel:get() end
+
 
 ---@class UPalMapObjectMonsterFarmParameterComponent : UActorComponent
 ---@field ActionIntervalSeconds FFloatInterval
 UPalMapObjectMonsterFarmParameterComponent = {}
+
+---@return UPalMapObjectMonsterFarmParameterComponent
+function UPalMapObjectMonsterFarmParameterComponent:get() end
 
 
 
@@ -21784,19 +26185,31 @@ UPalMapObjectMonsterFarmParameterComponent = {}
 ---@field NoteRowName FPalDataTableRowName_NoteData
 UPalMapObjectNoteObjectParameterComponent = {}
 
+---@return UPalMapObjectNoteObjectParameterComponent
+function UPalMapObjectNoteObjectParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectOperationResultUtility : UObject
 UPalMapObjectOperationResultUtility = {}
 
+---@return UPalMapObjectOperationResultUtility
+function UPalMapObjectOperationResultUtility:get() end
+
 
 ---@class UPalMapObjectPalEggModel : UPalMapObjectPickupItemOnLevelModel
 UPalMapObjectPalEggModel = {}
+
+---@return UPalMapObjectPalEggModel
+function UPalMapObjectPalEggModel:get() end
 
 
 ---@class UPalMapObjectPalFoodBoxModel : UPalMapObjectConcreteModelBase
 ---@field WorkAffection UPalMapObjectFunctionAffectedByWorkStatusBase
 UPalMapObjectPalFoodBoxModel = {}
+
+---@return UPalMapObjectPalFoodBoxModel
+function UPalMapObjectPalFoodBoxModel:get() end
 
 
 
@@ -21804,6 +26217,9 @@ UPalMapObjectPalFoodBoxModel = {}
 ---@field OnSpawnedCharacterDelegate FPalMapObjectPalStorageModelOnSpawnedCharacterDelegate
 ---@field SpawnedIndividualIds TArray<FPalInstanceID>
 UPalMapObjectPalStorageModel = {}
+
+---@return UPalMapObjectPalStorageModel
+function UPalMapObjectPalStorageModel:get() end
 
 ---@param IndividualId FPalInstanceID
 ---@param PhantomId int32
@@ -21840,6 +26256,9 @@ function UPalMapObjectPalStorageModel:OnAddGuildPalStorage_ServerInternal(NewCha
 ---@field PlayerInfos TArray<FPalMapObjectPasswordLockPlayerInfo>
 ---@field TryAuthenticateMaxNum int32
 UPalMapObjectPasswordLockModule = {}
+
+---@return UPalMapObjectPasswordLockModule
+function UPalMapObjectPasswordLockModule:get() end
 
 ---@param Module UPalMapObjectPasswordLockModule
 function UPalMapObjectPasswordLockModule:ReturnSelfMulticastDelegate__DelegateSignature(Module) end
@@ -21885,6 +26304,9 @@ function UPalMapObjectPasswordLockModule:CanTryAuthenticateByPlayer(RequestPlaye
 ---@field CreatedAtRealTime FDateTime
 UPalMapObjectPickableCharacterModelBase = {}
 
+---@return UPalMapObjectPickableCharacterModelBase
+function UPalMapObjectPickableCharacterModelBase:get() end
+
 ---@param RequestPlayerId int32
 function UPalMapObjectPickableCharacterModelBase:RequestPickup_ServerInternal(RequestPlayerId) end
 function UPalMapObjectPickableCharacterModelBase:RequestPickup() end
@@ -21898,6 +26320,9 @@ function UPalMapObjectPickableCharacterModelBase:GetCharacterSaveParameter() end
 ---@field bAutoPickedUp boolean
 ---@field RemovePickupGuardTimerHandle FTimerHandle
 UPalMapObjectPickableItemModelBase = {}
+
+---@return UPalMapObjectPickableItemModelBase
+function UPalMapObjectPickableItemModelBase:get() end
 
 ---@param RequestPlayerId int32
 ---@param bByAutoPickup boolean
@@ -21915,6 +26340,9 @@ function UPalMapObjectPickableItemModelBase:CreatePickupItemInfo() end
 ---@field InteractPlayerActionType EPalActionType
 UPalMapObjectPickupItemOnLevelModel = {}
 
+---@return UPalMapObjectPickupItemOnLevelModel
+function UPalMapObjectPickupItemOnLevelModel:get() end
+
 ---@param Container UPalItemContainer
 function UPalMapObjectPickupItemOnLevelModel:OnUpdateItemContainerContents(Container) end
 ---@return FName
@@ -21925,6 +26353,9 @@ function UPalMapObjectPickupItemOnLevelModel:GetVisualStaticItemId() end
 ---@field PalEggData FPalMapObjectPickupItemPalEggData
 UPalMapObjectPickupItemPalEggParameterComponent = {}
 
+---@return UPalMapObjectPickupItemPalEggParameterComponent
+function UPalMapObjectPickupItemPalEggParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectPickupItemParameterComponent : UPalMapObjectPickupItemParameterComponentBase
@@ -21934,14 +26365,23 @@ UPalMapObjectPickupItemPalEggParameterComponent = {}
 ---@field bForceIgnoreSaveItemContainer boolean
 UPalMapObjectPickupItemParameterComponent = {}
 
+---@return UPalMapObjectPickupItemParameterComponent
+function UPalMapObjectPickupItemParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectPickupItemParameterComponentBase : UActorComponent
 UPalMapObjectPickupItemParameterComponentBase = {}
 
+---@return UPalMapObjectPickupItemParameterComponentBase
+function UPalMapObjectPickupItemParameterComponentBase:get() end
+
 
 ---@class UPalMapObjectPillarInstallUtility : UObject
 UPalMapObjectPillarInstallUtility = {}
+
+---@return UPalMapObjectPillarInstallUtility
+function UPalMapObjectPillarInstallUtility:get() end
 
 
 ---@class UPalMapObjectPlayerBedModel : UPalMapObjectConcreteModelBase
@@ -21950,6 +26390,9 @@ UPalMapObjectPillarInstallUtility = {}
 ---@field SleepingCharacter ACharacter
 ---@field SleepPlayerBedAction UPalAction_SleepPlayerBed
 UPalMapObjectPlayerBedModel = {}
+
+---@return UPalMapObjectPlayerBedModel
+function UPalMapObjectPlayerBedModel:get() end
 
 ---@param RequestPlayerId int32
 function UPalMapObjectPlayerBedModel:RequestTriggerSleepPlayerBed_ToServer(RequestPlayerId) end
@@ -21981,6 +26424,9 @@ function UPalMapObjectPlayerBedModel:BP_OnTriggerInteract_SleepPlayerBed(Other, 
 ---@field TargetKey FName
 UPalMapObjectPlayerRecordModule = {}
 
+---@return UPalMapObjectPlayerRecordModule
+function UPalMapObjectPlayerRecordModule:get() end
+
 ---@param Key FName
 ---@param Value int32
 function UPalMapObjectPlayerRecordModule:OnUpdatePlayerRecordIntVal(Key, Value) end
@@ -22005,6 +26451,9 @@ function UPalMapObjectPlayerRecordModule:MulticastBoolValDelegate__DelegateSigna
 ---@field ProductItemId FName
 ---@field WorkSpeedAdditionalRate float
 UPalMapObjectProductItemModel = {}
+
+---@return UPalMapObjectProductItemModel
+function UPalMapObjectProductItemModel:get() end
 
 ---@param Model UPalMapObjectProductItemModel
 function UPalMapObjectProductItemModel:SimpleDelegate__DelegateSignature(Model) end
@@ -22031,6 +26480,9 @@ function UPalMapObjectProductItemModel:CalcRequiredAmount(BaseRequiredAmount) en
 ---@field SummonRequestPlayerUId FGuid
 UPalMapObjectRaidBossSummon = {}
 
+---@return UPalMapObjectRaidBossSummon
+function UPalMapObjectRaidBossSummon:get() end
+
 ---@param RequestPlayerId int32
 function UPalMapObjectRaidBossSummon:RequestSummonRaidBoss_ServerInternal(RequestPlayerId) end
 function UPalMapObjectRaidBossSummon:RaidBossSummonDelegate__DelegateSignature() end
@@ -22041,12 +26493,18 @@ function UPalMapObjectRaidBossSummon:OnReceiveConfirmSummonRaidBossResult(bResul
 ---@class UPalMapObjectRaidBossSummonParameterComponent : UActorComponent
 UPalMapObjectRaidBossSummonParameterComponent = {}
 
+---@return UPalMapObjectRaidBossSummonParameterComponent
+function UPalMapObjectRaidBossSummonParameterComponent:get() end
+
 
 ---@class UPalMapObjectRankUpCharacterModel : UPalMapObjectConcreteModelBase
 ---@field OnReceiveRequestResultDelegate FPalMapObjectRankUpCharacterModelOnReceiveRequestResultDelegate
 ---@field BaseCampIdBelongTo FGuid
 ---@field MenuUIWidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectRankUpCharacterModel = {}
+
+---@return UPalMapObjectRankUpCharacterModel
+function UPalMapObjectRankUpCharacterModel:get() end
 
 ---@param RequestPlayerId int32
 ---@param Archive FPalNetArchive
@@ -22059,6 +26517,9 @@ function UPalMapObjectRankUpCharacterModel:ReceiveOperationResult(ResultInt) end
 ---@field RecoverAmountBySec float
 ---@field MenuUIWidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectRecoverOtomoModel = {}
+
+---@return UPalMapObjectRecoverOtomoModel
+function UPalMapObjectRecoverOtomoModel:get() end
 
 ---@param RequestPlayerId int32
 function UPalMapObjectRecoverOtomoModel:StoreAllOtomo_ServerInternal(RequestPlayerId) end
@@ -22076,12 +26537,18 @@ function UPalMapObjectRecoverOtomoModel:ObtainAll_ServerInternal(RequestPlayerId
 ---@field MenuUIWidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectRecoverOtomoParameterComponent = {}
 
+---@return UPalMapObjectRecoverOtomoParameterComponent
+function UPalMapObjectRecoverOtomoParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectRepairItemModel : UPalMapObjectConcreteModelBase
 ---@field RequiredRepairItemRate float
 ---@field WidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectRepairItemModel = {}
+
+---@return UPalMapObjectRepairItemModel
+function UPalMapObjectRepairItemModel:get() end
 
 ---@param TargetItemSlotIdArray TArray<FPalItemSlotId>
 function UPalMapObjectRepairItemModel:RequestRepairItem(TargetItemSlotIdArray) end
@@ -22101,11 +26568,17 @@ function UPalMapObjectRepairItemModel:GetRequiredMaterials(TargetRepairItemIdArr
 ---@field RequiredRepairItemPercent float
 UPalMapObjectRepairItemParameterComponent = {}
 
+---@return UPalMapObjectRepairItemParameterComponent
+function UPalMapObjectRepairItemParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectRequireElementalActionModule : UPalMapObjectConcreteModelModuleBase
 ---@field AssignDefineId FName
 UPalMapObjectRequireElementalActionModule = {}
+
+---@return UPalMapObjectRequireElementalActionModule
+function UPalMapObjectRequireElementalActionModule:get() end
 
 ---@return FName
 function UPalMapObjectRequireElementalActionModule:GetAssignDefineId() end
@@ -22115,17 +26588,26 @@ function UPalMapObjectRequireElementalActionModule:GetAssignDefineId() end
 ---@field bLocked boolean
 UPalMapObjectRequireElementalActionModule_ForUnlockTreasureBox = {}
 
+---@return UPalMapObjectRequireElementalActionModule_ForUnlockTreasureBox
+function UPalMapObjectRequireElementalActionModule_ForUnlockTreasureBox:get() end
+
 
 
 ---@class UPalMapObjectRespawnPointModel : UPalMapObjectConcreteModelBase
 ---@field LocationId FGuid
 UPalMapObjectRespawnPointModel = {}
 
+---@return UPalMapObjectRespawnPointModel
+function UPalMapObjectRespawnPointModel:get() end
+
 
 
 ---@class UPalMapObjectShippingItemModel : UPalMapObjectConcreteModelBase
 ---@field ShippingHours TArray<int32>
 UPalMapObjectShippingItemModel = {}
+
+---@return UPalMapObjectShippingItemModel
+function UPalMapObjectShippingItemModel:get() end
 
 function UPalMapObjectShippingItemModel:OnChangeTimeHoursInServer() end
 
@@ -22135,6 +26617,9 @@ function UPalMapObjectShippingItemModel:OnChangeTimeHoursInServer() end
 ---@field ShippingHours TArray<int32>
 UPalMapObjectShippingItemParameterComponent = {}
 
+---@return UPalMapObjectShippingItemParameterComponent
+function UPalMapObjectShippingItemParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectSignboardModel : UPalMapObjectConcreteModelBase
@@ -22143,6 +26628,9 @@ UPalMapObjectShippingItemParameterComponent = {}
 ---@field SignboardText FString
 ---@field bIsEditing boolean
 UPalMapObjectSignboardModel = {}
+
+---@return UPalMapObjectSignboardModel
+function UPalMapObjectSignboardModel:get() end
 
 ---@param TextValue FString
 function UPalMapObjectSignboardModel:UpdateSignboardTextDelegate__DelegateSignature(TextValue) end
@@ -22168,12 +26656,18 @@ function UPalMapObjectSignboardModel:GetSignboardText() end
 ---@field MenuUIWidgetClass TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectSignboardParameterComponent = {}
 
+---@return UPalMapObjectSignboardParameterComponent
+function UPalMapObjectSignboardParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectSkeletalMeshComponent : UPalSkeletalMeshComponent
 ---@field bAnimateInWorking boolean
 ---@field TickableFlagContainer FFlagContainer
 UPalMapObjectSkeletalMeshComponent = {}
+
+---@return UPalMapObjectSkeletalMeshComponent
+function UPalMapObjectSkeletalMeshComponent:get() end
 
 ---@param Module UPalMapObjectWorkeeModule
 ---@param Work UPalWorkBase
@@ -22189,11 +26683,17 @@ function UPalMapObjectSkeletalMeshComponent:OnChangeWorkInProgress(WorkProgress)
 ---@field SkinChangerWidget TSubclassOf<UPalUserWidgetOverlayUI>
 UPalMapObjectSkinChangeModel = {}
 
+---@return UPalMapObjectSkinChangeModel
+function UPalMapObjectSkinChangeModel:get() end
+
 
 
 ---@class UPalMapObjectSpawnRequestHandler : UObject
 ---@field ExtraParameters FPalMapObjectModelInitializeExtraParameters
 UPalMapObjectSpawnRequestHandler = {}
+
+---@return UPalMapObjectSpawnRequestHandler
+function UPalMapObjectSpawnRequestHandler:get() end
 
 
 
@@ -22202,19 +26702,31 @@ UPalMapObjectSpawnRequestHandler = {}
 ---@field EffectSlot UPalHitEffectSlot
 UPalMapObjectSpawnerDamageReactionComponent = {}
 
+---@return UPalMapObjectSpawnerDamageReactionComponent
+function UPalMapObjectSpawnerDamageReactionComponent:get() end
+
 
 
 ---@class UPalMapObjectSpawnerMultiItemLocationComponent : UStaticMeshComponent
 UPalMapObjectSpawnerMultiItemLocationComponent = {}
 
+---@return UPalMapObjectSpawnerMultiItemLocationComponent
+function UPalMapObjectSpawnerMultiItemLocationComponent:get() end
+
 
 ---@class UPalMapObjectStaticMeshComponentBase : UStaticMeshComponent
 UPalMapObjectStaticMeshComponentBase = {}
+
+---@return UPalMapObjectStaticMeshComponentBase
+function UPalMapObjectStaticMeshComponentBase:get() end
 
 
 ---@class UPalMapObjectStaticMeshComponentHiddenInNoItem : UPalMapObjectStaticMeshComponentBase
 ---@field bExistsItems boolean
 UPalMapObjectStaticMeshComponentHiddenInNoItem = {}
+
+---@return UPalMapObjectStaticMeshComponentHiddenInNoItem
+function UPalMapObjectStaticMeshComponentHiddenInNoItem:get() end
 
 ---@param Module UPalMapObjectItemContainerModule
 function UPalMapObjectStaticMeshComponentHiddenInNoItem:OnUpdateItemContainerContents(Module) end
@@ -22230,6 +26742,9 @@ function UPalMapObjectStaticMeshComponentHiddenInNoItem:OnReadyModule_ServerInte
 ---@field OnDamageInServerDelegate FPalMapObjectStatusObserverModuleOnDamageInServerDelegate
 UPalMapObjectStatusObserverModule = {}
 
+---@return UPalMapObjectStatusObserverModule
+function UPalMapObjectStatusObserverModule:get() end
+
 ---@param Model UPalMapObjectModel
 ---@param DamageInfo FPalDamageInfo
 ---@param LastHp int32
@@ -22241,12 +26756,18 @@ function UPalMapObjectStatusObserverModule:OnDamage_ServerInternal(Model, Damage
 ---@field CreatedAtRealTime FDateTime
 UPalMapObjectSupplyStorageModel = {}
 
+---@return UPalMapObjectSupplyStorageModel
+function UPalMapObjectSupplyStorageModel:get() end
+
 
 
 ---@class UPalMapObjectSwitchModule : UPalMapObjectConcreteModelModuleBase
 ---@field OnUpdateSwitchStateDelegate FPalMapObjectSwitchModuleOnUpdateSwitchStateDelegate
 ---@field SwitchState EPalMapObjectSwitchState
 UPalMapObjectSwitchModule = {}
+
+---@return UPalMapObjectSwitchModule
+function UPalMapObjectSwitchModule:get() end
 
 ---@param Module UPalMapObjectSwitchModule
 function UPalMapObjectSwitchModule:ReturnSelfMulticastDelegate__DelegateSignature(Module) end
@@ -22258,12 +26779,18 @@ function UPalMapObjectSwitchModule:GetSwitchState() end
 ---@class UPalMapObjectSwitchOnInWorking : UPalMapObjectConcreteModelBase
 UPalMapObjectSwitchOnInWorking = {}
 
+---@return UPalMapObjectSwitchOnInWorking
+function UPalMapObjectSwitchOnInWorking:get() end
+
 ---@param Work UPalWorkBase
 function UPalMapObjectSwitchOnInWorking:OnUpdateAssignedCharacter_ServerInternal(Work) end
 
 
 ---@class UPalMapObjectTestFunctionModel : UPalMapObjectConcreteModelBase
 UPalMapObjectTestFunctionModel = {}
+
+---@return UPalMapObjectTestFunctionModel
+function UPalMapObjectTestFunctionModel:get() end
 
 ---@param RequestPlayerId int32
 function UPalMapObjectTestFunctionModel:RequestCountUpSIngle_ServerInternal(RequestPlayerId) end
@@ -22278,6 +26805,9 @@ function UPalMapObjectTestFunctionModel:OnRecieveCountUp(ReflectedCounter) end
 
 ---@class UPalMapObjectTestGlobalContainerModel : UPalMapObjectConcreteModelBase
 UPalMapObjectTestGlobalContainerModel = {}
+
+---@return UPalMapObjectTestGlobalContainerModel
+function UPalMapObjectTestGlobalContainerModel:get() end
 
 function UPalMapObjectTestGlobalContainerModel:WatchContainer() end
 ---@param ASlotIndex int32
@@ -22311,6 +26841,9 @@ function UPalMapObjectTestGlobalContainerModel:CloseContainerUI() end
 ---@field DropItemInfos TArray<FPalItemAndNum>
 UPalMapObjectTestItemDestroyedDropModel = {}
 
+---@return UPalMapObjectTestItemDestroyedDropModel
+function UPalMapObjectTestItemDestroyedDropModel:get() end
+
 ---@param Model UPalMapObjectModel
 function UPalMapObjectTestItemDestroyedDropModel:OnDestroy_ServerInternal(Model) end
 
@@ -22319,6 +26852,9 @@ function UPalMapObjectTestItemDestroyedDropModel:OnDestroy_ServerInternal(Model)
 ---@field IgnitionMinutes int32
 ---@field ExtinctionDateTime FGameDateTime
 UPalMapObjectTorchModel = {}
+
+---@return UPalMapObjectTorchModel
+function UPalMapObjectTorchModel:get() end
 
 ---@param RequestPlayerId int32
 function UPalMapObjectTorchModel:RequestTriggerIgnition_ToServer(RequestPlayerId) end
@@ -22330,12 +26866,18 @@ function UPalMapObjectTorchModel:OnWorkBootUp_ServerInternal(Work) end
 ---@field IgnitionMinutes int32
 UPalMapObjectTorchParameterComponent = {}
 
+---@return UPalMapObjectTorchParameterComponent
+function UPalMapObjectTorchParameterComponent:get() end
+
 
 
 ---@class UPalMapObjectTreasureBoxLockComponent : UActorComponent
 ---@field UnlockWorkAssignDefineId FName
 ---@field UnlockWorkRequiredRealSeconds float
 UPalMapObjectTreasureBoxLockComponent = {}
+
+---@return UPalMapObjectTreasureBoxLockComponent
+function UPalMapObjectTreasureBoxLockComponent:get() end
 
 
 
@@ -22346,6 +26888,9 @@ UPalMapObjectTreasureBoxLockComponent = {}
 ---@field LongHoldInteractDuration float
 ---@field InteractPlayerActionType EPalActionType
 UPalMapObjectTreasureBoxModel = {}
+
+---@return UPalMapObjectTreasureBoxModel
+function UPalMapObjectTreasureBoxModel:get() end
 
 ---@param RequestPlayerId int32
 function UPalMapObjectTreasureBoxModel:RequestPicking_ServerInternal(RequestPlayerId) end
@@ -22372,6 +26917,9 @@ function UPalMapObjectTreasureBoxModel:CreateItemInfo() end
 
 ---@class UPalMapObjectUtility : UBlueprintFunctionLibrary
 UPalMapObjectUtility = {}
+
+---@return UPalMapObjectUtility
+function UPalMapObjectUtility:get() end
 
 ---@param actorClass TSubclassOf<AActor>
 ---@param OutStaticMesh UStaticMesh
@@ -22403,6 +26951,9 @@ function UPalMapObjectUtility:GetItemVisualModelFX(actorClass, OutFXInfos) end
 ---@field SpawnedEffectMap TMap<EPalMapObjectVisualEffectType, FPalMapObjectVisualEffectInstanceSet>
 UPalMapObjectVisualEffectComponent = {}
 
+---@return UPalMapObjectVisualEffectComponent
+function UPalMapObjectVisualEffectComponent:get() end
+
 ---@param Effect UPalMapObjectModelEffectBase
 function UPalMapObjectVisualEffectComponent:UpdateVisualByEffect(Effect) end
 ---@param Model UPalMapObjectModel
@@ -22418,6 +26969,9 @@ function UPalMapObjectVisualEffectComponent:OnGrantedEffect(Model, Effect) end
 ---@field TargetWork UPalWorkBase
 UPalMapObjectWorkeeModule = {}
 
+---@return UPalMapObjectWorkeeModule
+function UPalMapObjectWorkeeModule:get() end
+
 function UPalMapObjectWorkeeModule:OnRep_TargetWork() end
 ---@return UPalWorkProgress
 function UPalMapObjectWorkeeModule:GetWorkProgress() end
@@ -22431,15 +26985,24 @@ function UPalMapObjectWorkeeModule:CallOrRegisterOnReadyWork(Delegate) end
 ---@field WorldDisposers TArray<UPalMapObjectWorldDisposerBase>
 UPalMapObjectWorldDisposer = {}
 
+---@return UPalMapObjectWorldDisposer
+function UPalMapObjectWorldDisposer:get() end
+
 
 
 ---@class UPalMapObjectWorldDisposerBase : UObject
 UPalMapObjectWorldDisposerBase = {}
 
+---@return UPalMapObjectWorldDisposerBase
+function UPalMapObjectWorldDisposerBase:get() end
+
 
 ---@class UPalMapObjectWorldDisposer_DropItem : UPalMapObjectWorldDisposerBase
 ---@field DropItemInfoSetMap TMap<EPalDropItemType, FPalMapObjectWorldDropItemInfoSet>
 UPalMapObjectWorldDisposer_DropItem = {}
+
+---@return UPalMapObjectWorldDisposer_DropItem
+function UPalMapObjectWorldDisposer_DropItem:get() end
 
 ---@param Model UPalMapObjectModel
 function UPalMapObjectWorldDisposer_DropItem:OnRestoreMapObject_ServerInternal(Model) end
@@ -22452,12 +27015,18 @@ function UPalMapObjectWorldDisposer_DropItem:OnCreateMapObject_ServerInternal(Sp
 ---@field DataTable UDataTable
 UPalMasterDataTableAccessBase = {}
 
+---@return UPalMasterDataTableAccessBase
+function UPalMasterDataTableAccessBase:get() end
+
 ---@return TArray<FName>
 function UPalMasterDataTableAccessBase:GetRowNames() end
 
 
 ---@class UPalMasterDataTableAccess_BaseCampLevelData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_BaseCampLevelData = {}
+
+---@return UPalMasterDataTableAccess_BaseCampLevelData
+function UPalMasterDataTableAccess_BaseCampLevelData:get() end
 
 ---@return int32
 function UPalMasterDataTableAccess_BaseCampLevelData:GetMaxWorkerMaxNum() end
@@ -22472,6 +27041,9 @@ function UPalMasterDataTableAccess_BaseCampLevelData:GetLevelInfo(Level) end
 
 ---@class UPalMasterDataTableAccess_BuildObjectData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_BuildObjectData = {}
+
+---@return UPalMasterDataTableAccess_BuildObjectData
+function UPalMasterDataTableAccess_BuildObjectData:get() end
 
 ---@param MapObjectId FName
 ---@param ExecType EPalMasterDataExecPinType
@@ -22495,6 +27067,9 @@ function UPalMasterDataTableAccess_BuildObjectData:BP_FindRow(RowName, bResult) 
 ---@class UPalMasterDataTableAccess_BuildObjectIconData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_BuildObjectIconData = {}
 
+---@return UPalMasterDataTableAccess_BuildObjectIconData
+function UPalMasterDataTableAccess_BuildObjectIconData:get() end
+
 ---@param RowName FName
 ---@param ExecType EPalMasterDataExecPinType
 ---@param OutData FPalBuildObjectIconData
@@ -22508,6 +27083,9 @@ function UPalMasterDataTableAccess_BuildObjectIconData:BP_FindRow(RowName, bResu
 ---@class UPalMasterDataTableAccess_CharacterUpgradeData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_CharacterUpgradeData = {}
 
+---@return UPalMasterDataTableAccess_CharacterUpgradeData
+function UPalMasterDataTableAccess_CharacterUpgradeData:get() end
+
 ---@return int32
 function UPalMasterDataTableAccess_CharacterUpgradeData:GetMaxRank() end
 
@@ -22515,17 +27093,29 @@ function UPalMasterDataTableAccess_CharacterUpgradeData:GetMaxRank() end
 ---@class UPalMasterDataTableAccess_DungeonEnemySpawnerData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_DungeonEnemySpawnerData = {}
 
+---@return UPalMasterDataTableAccess_DungeonEnemySpawnerData
+function UPalMasterDataTableAccess_DungeonEnemySpawnerData:get() end
+
 
 ---@class UPalMasterDataTableAccess_DungeonItemLotteryData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_DungeonItemLotteryData = {}
+
+---@return UPalMasterDataTableAccess_DungeonItemLotteryData
+function UPalMasterDataTableAccess_DungeonItemLotteryData:get() end
 
 
 ---@class UPalMasterDataTableAccess_DungeonLevelData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_DungeonLevelData = {}
 
+---@return UPalMasterDataTableAccess_DungeonLevelData
+function UPalMasterDataTableAccess_DungeonLevelData:get() end
+
 
 ---@class UPalMasterDataTableAccess_DungeonSpawnAreaData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_DungeonSpawnAreaData = {}
+
+---@return UPalMasterDataTableAccess_DungeonSpawnAreaData
+function UPalMasterDataTableAccess_DungeonSpawnAreaData:get() end
 
 ---@param RowName FName
 ---@param bResult boolean
@@ -22535,6 +27125,9 @@ function UPalMasterDataTableAccess_DungeonSpawnAreaData:BP_FindRow(RowName, bRes
 
 ---@class UPalMasterDataTableAccess_FarmCropData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_FarmCropData = {}
+
+---@return UPalMasterDataTableAccess_FarmCropData
+function UPalMasterDataTableAccess_FarmCropData:get() end
 
 ---@param CropItemId FName
 ---@param ExecType EPalMasterDataExecPinType
@@ -22557,17 +27150,29 @@ function UPalMasterDataTableAccess_FarmCropData:BP_FindRow(RowName, bResult) end
 ---@class UPalMasterDataTableAccess_FieldLotteryNameData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_FieldLotteryNameData = {}
 
+---@return UPalMasterDataTableAccess_FieldLotteryNameData
+function UPalMasterDataTableAccess_FieldLotteryNameData:get() end
+
 
 ---@class UPalMasterDataTableAccess_ItemLotteryData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_ItemLotteryData = {}
+
+---@return UPalMasterDataTableAccess_ItemLotteryData
+function UPalMasterDataTableAccess_ItemLotteryData:get() end
 
 
 ---@class UPalMasterDataTableAccess_ItemProductData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_ItemProductData = {}
 
+---@return UPalMasterDataTableAccess_ItemProductData
+function UPalMasterDataTableAccess_ItemProductData:get() end
+
 
 ---@class UPalMasterDataTableAccess_ItemRecipe : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_ItemRecipe = {}
+
+---@return UPalMasterDataTableAccess_ItemRecipe
+function UPalMasterDataTableAccess_ItemRecipe:get() end
 
 ---@param RowName FName
 ---@param ExecType EPalMasterDataExecPinType
@@ -22582,13 +27187,22 @@ function UPalMasterDataTableAccess_ItemRecipe:BP_FindRow(RowName, bResult) end
 ---@class UPalMasterDataTableAccess_ItemShop : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_ItemShop = {}
 
+---@return UPalMasterDataTableAccess_ItemShop
+function UPalMasterDataTableAccess_ItemShop:get() end
+
 
 ---@class UPalMasterDataTableAccess_ItemShopLottery : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_ItemShopLottery = {}
 
+---@return UPalMasterDataTableAccess_ItemShopLottery
+function UPalMasterDataTableAccess_ItemShopLottery:get() end
+
 
 ---@class UPalMasterDataTableAccess_LocalizeText : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_LocalizeText = {}
+
+---@return UPalMasterDataTableAccess_LocalizeText
+function UPalMasterDataTableAccess_LocalizeText:get() end
 
 ---@param RowName FName
 ---@return FText
@@ -22597,6 +27211,9 @@ function UPalMasterDataTableAccess_LocalizeText:FindRow(RowName) end
 
 ---@class UPalMasterDataTableAccess_MapObjectMasterData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_MapObjectMasterData = {}
+
+---@return UPalMasterDataTableAccess_MapObjectMasterData
+function UPalMasterDataTableAccess_MapObjectMasterData:get() end
 
 ---@param RowName FName
 ---@param ExecType EPalMasterDataExecPinType
@@ -22611,13 +27228,22 @@ function UPalMasterDataTableAccess_MapObjectMasterData:BP_FindRow(RowName, bResu
 ---@class UPalMasterDataTableAccess_PalRandomizerData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_PalRandomizerData = {}
 
+---@return UPalMasterDataTableAccess_PalRandomizerData
+function UPalMasterDataTableAccess_PalRandomizerData:get() end
+
 
 ---@class UPalMasterDataTableAccess_PalShop : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_PalShop = {}
 
+---@return UPalMasterDataTableAccess_PalShop
+function UPalMasterDataTableAccess_PalShop:get() end
+
 
 ---@class UPalMasterDataTableAccess_PlayerStatusRankData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_PlayerStatusRankData = {}
+
+---@return UPalMasterDataTableAccess_PlayerStatusRankData
+function UPalMasterDataTableAccess_PlayerStatusRankData:get() end
 
 ---@return int32
 function UPalMasterDataTableAccess_PlayerStatusRankData:GetMaxRank() end
@@ -22626,13 +27252,22 @@ function UPalMasterDataTableAccess_PlayerStatusRankData:GetMaxRank() end
 ---@class UPalMasterDataTableAccess_SpawnerPlacementData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_SpawnerPlacementData = {}
 
+---@return UPalMasterDataTableAccess_SpawnerPlacementData
+function UPalMasterDataTableAccess_SpawnerPlacementData:get() end
+
 
 ---@class UPalMasterDataTableAccess_UIInputActionData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_UIInputActionData = {}
 
+---@return UPalMasterDataTableAccess_UIInputActionData
+function UPalMasterDataTableAccess_UIInputActionData:get() end
+
 
 ---@class UPalMasterDataTableAccess_WildSpawnerData : UPalMasterDataTableAccessBase
 UPalMasterDataTableAccess_WildSpawnerData = {}
+
+---@return UPalMasterDataTableAccess_WildSpawnerData
+function UPalMasterDataTableAccess_WildSpawnerData:get() end
 
 
 ---@class UPalMasterDataTables : UObject
@@ -22688,10 +27323,16 @@ UPalMasterDataTableAccess_WildSpawnerData = {}
 ---@field Access_PalRandomizerDataTable UPalMasterDataTableAccess_PalRandomizerData
 UPalMasterDataTables = {}
 
+---@return UPalMasterDataTables
+function UPalMasterDataTables:get() end
+
 
 
 ---@class UPalMasterDataTablesUtility : UBlueprintFunctionLibrary
 UPalMasterDataTablesUtility = {}
+
+---@return UPalMasterDataTablesUtility
+function UPalMasterDataTablesUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@return UPalMasterDataTableAccess_WildSpawnerData
@@ -22835,6 +27476,9 @@ function UPalMasterDataTablesUtility:GetBaseCampLevelDataTable(WorldContextObjec
 ---@class UPalMathBlueprintFunction : UBlueprintFunctionLibrary
 UPalMathBlueprintFunction = {}
 
+---@return UPalMathBlueprintFunction
+function UPalMathBlueprintFunction:get() end
+
 ---@param InValue FVector
 ---@param Min FVector
 ---@param Max FVector
@@ -22847,6 +27491,9 @@ function UPalMathBlueprintFunction:ClampVectorElement(InValue, Min, Max) end
 ---@field OnAddMoneyDelegate FPalMoneyDataOnAddMoneyDelegate
 ---@field parentInventoryData UPalPlayerInventoryData
 UPalMoneyData = {}
+
+---@return UPalMoneyData
+function UPalMoneyData:get() end
 
 ---@param NowMoney int64
 function UPalMoneyData:UpdatedMoneyDelegate__DelegateSignature(NowMoney) end
@@ -22862,9 +27509,15 @@ function UPalMoneyData:AddMoneyDelegate__DelegateSignature(OldMoney, AddMoney) e
 ---@class UPalMonsterControllerBaseCampLogTypeUtility : UBlueprintFunctionLibrary
 UPalMonsterControllerBaseCampLogTypeUtility = {}
 
+---@return UPalMonsterControllerBaseCampLogTypeUtility
+function UPalMonsterControllerBaseCampLogTypeUtility:get() end
+
 
 ---@class UPalMonsterControllerBaseCampUtility : UBlueprintFunctionLibrary
 UPalMonsterControllerBaseCampUtility = {}
+
+---@return UPalMonsterControllerBaseCampUtility
+function UPalMonsterControllerBaseCampUtility:get() end
 
 ---@param WorldObjectContext UObject
 ---@param Parameter FPalMonsterControllerBaseCampHungryParameter
@@ -22878,6 +27531,9 @@ function UPalMonsterControllerBaseCampUtility:SetHungryParameterToDefault(WorldO
 ---@field ShooterHuman AActor
 ---@field FireStateClass TSubclassOf<UPalStateMachineStateBase>
 UPalNPCAIWeaponHandle = {}
+
+---@return UPalNPCAIWeaponHandle
+function UPalNPCAIWeaponHandle:get() end
 
 function UPalNPCAIWeaponHandle:UnequipWeapon() end
 function UPalNPCAIWeaponHandle:TerminateNPCWeapon() end
@@ -22934,6 +27590,9 @@ function UPalNPCAIWeaponHandle:AimToTarget(TargetActor, Aim, DeltaTime) end
 ---@class UPalNPCInteractCondition : UObject
 UPalNPCInteractCondition = {}
 
+---@return UPalNPCInteractCondition
+function UPalNPCInteractCondition:get() end
+
 ---@param bResult boolean
 function UPalNPCInteractCondition:SetResult(bResult) end
 
@@ -22941,6 +27600,9 @@ function UPalNPCInteractCondition:SetResult(bResult) end
 ---@class UPalNPCInteractConditionFunctions : UObject
 ---@field Owner UObject
 UPalNPCInteractConditionFunctions = {}
+
+---@return UPalNPCInteractConditionFunctions
+function UPalNPCInteractConditionFunctions:get() end
 
 ---@param Owner UObject
 function UPalNPCInteractConditionFunctions:SetOwner(Owner) end
@@ -22957,6 +27619,9 @@ function UPalNPCInteractConditionFunctions:GetOwner() end
 ---@field ConditionFunctions UPalNPCInteractConditionFunctions
 UPalNPCInteractionComponent = {}
 
+---@return UPalNPCInteractionComponent
+function UPalNPCInteractionComponent:get() end
+
 ---@param Other AActor
 ---@param IndicatorType EPalInteractiveObjectIndicatorType
 function UPalNPCInteractionComponent:OnTriggerInteract(Other, IndicatorType) end
@@ -22970,6 +27635,9 @@ function UPalNPCInteractionComponent:BeginPlay() end
 
 ---@class UPalNPCInteractionDataTableUtility : UBlueprintFunctionLibrary
 UPalNPCInteractionDataTableUtility = {}
+
+---@return UPalNPCInteractionDataTableUtility
+function UPalNPCInteractionDataTableUtility:get() end
 
 ---@param OutString FString
 ---@param DataRows TMap<FName, FPalNPCInteractionDataTableRow>
@@ -22989,6 +27657,9 @@ function UPalNPCInteractionDataTableUtility:GetJSONStringByInteractionDataTable(
 ---@field TalkDataTableMap TMap<EPalNPCTalkUIType, UDataTable>
 ---@field NPCNameTalkTypeMap TMap<FName, EPalNPCTalkUIType>
 UPalNPCManager = {}
+
+---@return UPalNPCManager
+function UPalNPCManager:get() end
 
 ---@param ID FPalInstanceID
 function UPalNPCManager:SpawNPCCallback(ID) end
@@ -23046,6 +27717,9 @@ function UPalNPCManager:AllResetBossRespawnFlag() end
 ---@field TalkId FName
 UPalNPCMultiTalkHandle = {}
 
+---@return UPalNPCMultiTalkHandle
+function UPalNPCMultiTalkHandle:get() end
+
 ---@param IsTransient boolean
 function UPalNPCMultiTalkHandle:SetIsTransientTalkCount(IsTransient) end
 function UPalNPCMultiTalkHandle:OnFinishOneTalk() end
@@ -23068,6 +27742,9 @@ function UPalNPCMultiTalkHandle:GetCurrentTalkCount() end
 ---@field OnTalkStartDelegate FPalNPCTalkComponentOnTalkStartDelegate
 ---@field OnTalkEndDelegate FPalNPCTalkComponentOnTalkEndDelegate
 UPalNPCTalkComponent = {}
+
+---@return UPalNPCTalkComponent
+function UPalNPCTalkComponent:get() end
 
 ---@param Other AActor
 ---@param IndicatorType EPalInteractiveObjectIndicatorType
@@ -23103,6 +27780,9 @@ function UPalNPCTalkComponent:GetIsTalking() end
 ---@field CustomFuncTalkDataIndex int32
 UPalNPCTalkSystem = {}
 
+---@return UPalNPCTalkSystem
+function UPalNPCTalkSystem:get() end
+
 ---@param Result EPalNPCTalkCustomFunctionResult
 function UPalNPCTalkSystem:SetCustomFunctionResult_Implementation(Result) end
 ---@param Index int32
@@ -23129,6 +27809,9 @@ function UPalNPCTalkSystem:AddArgument_Implementation(Key, Text) end
 ---@field IsDefaultEquipWeapon boolean
 UPalNPCWeaponGenerator = {}
 
+---@return UPalNPCWeaponGenerator
+function UPalNPCWeaponGenerator:get() end
+
 ---@param WeaponActor APalWeaponBase
 function UPalNPCWeaponGenerator:OnSpawnEvent(WeaponActor) end
 ---@param WeaponType EPalWeaponType
@@ -23139,6 +27822,9 @@ function UPalNPCWeaponGenerator:GenerateWeapn(WeaponType, IsDefaultEquip) end
 ---@class UPalNavArea_HighObstacle : UNavArea
 UPalNavArea_HighObstacle = {}
 
+---@return UPalNavArea_HighObstacle
+function UPalNavArea_HighObstacle:get() end
+
 
 ---@class UPalNavigationInvokerComponent : UNavigationInvokerComponent
 ---@field bIsAutoActivateInvoker boolean
@@ -23146,6 +27832,9 @@ UPalNavArea_HighObstacle = {}
 ---@field AreaBelongTo FIntPoint
 ---@field IsDisableInvorkerFlag FFlagContainer
 UPalNavigationInvokerComponent = {}
+
+---@return UPalNavigationInvokerComponent
+function UPalNavigationInvokerComponent:get() end
 
 ---@param flagName FName
 ---@param isDisable boolean
@@ -23159,14 +27848,23 @@ function UPalNavigationInvokerComponent:ActivateInvoker() end
 ---@field UpdateInvokerCounter int32
 UPalNavigationSystemV1 = {}
 
+---@return UPalNavigationSystemV1
+function UPalNavigationSystemV1:get() end
+
 
 
 ---@class UPalNetArchiveObject : UObject
 UPalNetArchiveObject = {}
 
+---@return UPalNetArchiveObject
+function UPalNetArchiveObject:get() end
+
 
 ---@class UPalNetworkArenaComponent : UActorComponent
 UPalNetworkArenaComponent = {}
+
+---@return UPalNetworkArenaComponent
+function UPalNetworkArenaComponent:get() end
 
 ---@param PlayerIndex EPalArenaPlayerIndex
 ---@param ArenaPlayerParty FPalArenaPlayerParty
@@ -23196,6 +27894,9 @@ function UPalNetworkArenaComponent:AdvanceSequence_ToClient() end
 ---@field BurningBaseCampLogId FGuid
 ---@field BurningBaseCampIds TArray<FGuid>
 UPalNetworkBaseCampComponent = {}
+
+---@return UPalNetworkBaseCampComponent
+function UPalNetworkBaseCampComponent:get() end
 
 ---@param BaseCampId FGuid
 ---@param WorkId FGuid
@@ -23373,6 +28074,9 @@ function UPalNetworkBaseCampComponent:AddBaseCampBurningLog_Client(BaseCampId) e
 ---@class UPalNetworkBossBattleComponent : UActorComponent
 UPalNetworkBossBattleComponent = {}
 
+---@return UPalNetworkBossBattleComponent
+function UPalNetworkBossBattleComponent:get() end
+
 ---@param BossType EPalBossType
 function UPalNetworkBossBattleComponent:UnlockAchievement_ToClient(BossType) end
 ---@param BossType EPalBossType
@@ -23404,6 +28108,9 @@ function UPalNetworkBossBattleComponent:ChangeSequence_ToClient(BossType, NextSe
 ---@class UPalNetworkCharacterComponent : UActorComponent
 UPalNetworkCharacterComponent = {}
 
+---@return UPalNetworkCharacterComponent
+function UPalNetworkCharacterComponent:get() end
+
 ---@param Character APalCharacter
 function UPalNetworkCharacterComponent:RequestReflectAction_ToServer(Character) end
 ---@param Character APalCharacter
@@ -23429,6 +28136,9 @@ function UPalNetworkCharacterComponent:ArenaSetup_ToClient() end
 ---@field ContainerParamMap TMap<FGuid, FPalNetworkCharacterContainerParameter>
 UPalNetworkCharacterContainerComponent = {}
 
+---@return UPalNetworkCharacterContainerComponent
+function UPalNetworkCharacterContainerComponent:get() end
+
 ---@param RequestID FGuid
 ---@param SlotID FPalCharacterSlotId
 function UPalNetworkCharacterContainerComponent:RequestUnlockSlot_ToServer(RequestID, SlotID) end
@@ -23453,6 +28163,9 @@ function UPalNetworkCharacterContainerComponent:RecieveUnlockSlot_ToClient(SlotI
 ---@class UPalNetworkCharacterStatusOperationComponent : UActorComponent
 ---@field OnReceiveRequestResultDelegate FPalNetworkCharacterStatusOperationComponentOnReceiveRequestResultDelegate
 UPalNetworkCharacterStatusOperationComponent = {}
+
+---@return UPalNetworkCharacterStatusOperationComponent
+function UPalNetworkCharacterStatusOperationComponent:get() end
 
 ---@param Character APalCharacter
 function UPalNetworkCharacterStatusOperationComponent:RequestReviveCharacterFromDying_ToServer(Character) end
@@ -23490,9 +28203,15 @@ function UPalNetworkCharacterStatusOperationComponent:NetCharacterStatusOperatio
 ---@class UPalNetworkComponentUtility : UObject
 UPalNetworkComponentUtility = {}
 
+---@return UPalNetworkComponentUtility
+function UPalNetworkComponentUtility:get() end
+
 
 ---@class UPalNetworkIndividualComponent : UActorComponent
 UPalNetworkIndividualComponent = {}
+
+---@return UPalNetworkIndividualComponent
+function UPalNetworkIndividualComponent:get() end
 
 ---@param ID FPalInstanceID
 ---@param SlotAndNum FPalItemSlotIdAndNum
@@ -23599,6 +28318,9 @@ function UPalNetworkIndividualComponent:AddHighPriorityList_ToServer(ID, TargetP
 ---@class UPalNetworkInvaderComponent : UActorComponent
 UPalNetworkInvaderComponent = {}
 
+---@return UPalNetworkInvaderComponent
+function UPalNetworkInvaderComponent:get() end
+
 ---@param Parameter FPalIncidentBroadcastParameter
 function UPalNetworkInvaderComponent:OnInvaderStart(Parameter) end
 ---@param Parameter FPalIncidentBroadcastParameter
@@ -23613,6 +28335,9 @@ function UPalNetworkInvaderComponent:OnInvaderArrived(Parameter) end
 ---@field ItemOperationParamMap TMap<FGuid, FPalNetworkItemOperationParameter>
 ---@field OperationParamMap TMap<FGuid, FPalNetworkParameter>
 UPalNetworkItemComponent = {}
+
+---@return UPalNetworkItemComponent
+function UPalNetworkItemComponent:get() end
 
 ---@param RequestID FGuid
 ---@param SlotA FPalItemSlotId
@@ -23639,6 +28364,9 @@ function UPalNetworkItemComponent:RequestDispose_ToServer(RequestID, SlotInfo) e
 ---@field MapObjectSpawnRequestParameterMap TMap<FGuid, FPalNetworkMapObjectSpawnRequestParameter>
 ---@field SpawnRequestHandlerMap TMap<FGuid, UPalMapObjectSpawnRequestHandler>
 UPalNetworkMapObjectComponent = {}
+
+---@return UPalNetworkMapObjectComponent
+function UPalNetworkMapObjectComponent:get() end
 
 ---@param RequestID FGuid
 ---@param MapObjectId FName
@@ -23880,6 +28608,9 @@ function UPalNetworkMapObjectComponent:Dev_FetchMapObjectsTickIntervalInBackgrou
 ---@class UPalNetworkPlayerComponent : UActorComponent
 UPalNetworkPlayerComponent = {}
 
+---@return UPalNetworkPlayerComponent
+function UPalNetworkPlayerComponent:get() end
+
 function UPalNetworkPlayerComponent:ShowUnlockHardModeUI_ToClient() end
 ---@param TechPoint int32
 ---@param AfterTeleport boolean
@@ -23955,14 +28686,23 @@ function UPalNetworkPlayerComponent:Dev_RequestTeleportToBossTower_ToServer(Boss
 ---@field ObtainClientParamMap TMap<FGuid, FPalNetworkPlayerObtainClientParameter>
 UPalNetworkPlayerStateComponent = {}
 
+---@return UPalNetworkPlayerStateComponent
+function UPalNetworkPlayerStateComponent:get() end
+
 
 
 ---@class UPalNetworkRaidBossComponent : UActorComponent
 UPalNetworkRaidBossComponent = {}
 
+---@return UPalNetworkRaidBossComponent
+function UPalNetworkRaidBossComponent:get() end
+
 
 ---@class UPalNetworkShopComponent : UActorComponent
 UPalNetworkShopComponent = {}
+
+---@return UPalNetworkShopComponent
+function UPalNetworkShopComponent:get() end
 
 ---@param VenderActor AActor
 function UPalNetworkShopComponent:SetupShopDataForActor_ToServer(VenderActor) end
@@ -23996,6 +28736,9 @@ function UPalNetworkShopComponent:ReceiveDroppedPalProductData_ToClient(Collecte
 ---@class UPalNetworkTimeComponent : UActorComponent
 UPalNetworkTimeComponent = {}
 
+---@return UPalNetworkTimeComponent
+function UPalNetworkTimeComponent:get() end
+
 ---@param PlayerNum int32
 function UPalNetworkTimeComponent:UpdateSleepingPlayerNum_ToClient(PlayerNum) end
 function UPalNetworkTimeComponent:PreNightSkip_ToClient() end
@@ -24004,6 +28747,9 @@ function UPalNetworkTimeComponent:NightSkip_ToClient() end
 
 ---@class UPalNetworkWorkProgressComponent : UActorComponent
 UPalNetworkWorkProgressComponent = {}
+
+---@return UPalNetworkWorkProgressComponent
+function UPalNetworkWorkProgressComponent:get() end
 
 ---@param RequestID FGuid
 ---@param WorkProgressId FGuid
@@ -24020,11 +28766,17 @@ function UPalNetworkWorkProgressComponent:AddCompleteBuildWorkLog(Archive) end
 ---@class UPalNetworkWorldSecurityComponent : UActorComponent
 UPalNetworkWorldSecurityComponent = {}
 
+---@return UPalNetworkWorldSecurityComponent
+function UPalNetworkWorldSecurityComponent:get() end
+
 
 ---@class UPalNiagaraDataInterfaceSoundPlayer : UNiagaraDataInterface
 ---@field AkEvent UAkAudioEvent
 ---@field FadeOutDuration float
 UPalNiagaraDataInterfaceSoundPlayer = {}
+
+---@return UPalNiagaraDataInterfaceSoundPlayer
+function UPalNiagaraDataInterfaceSoundPlayer:get() end
 
 
 
@@ -24033,11 +28785,17 @@ UPalNiagaraDataInterfaceSoundPlayer = {}
 ---@field Texture TSoftObjectPtr<UTexture2D>
 UPalNoteData = {}
 
+---@return UPalNoteData
+function UPalNoteData:get() end
+
 
 
 ---@class UPalNoteDataAsset : UDataAsset
 ---@field NoteDataMap TMap<FName, UPalNoteData>
 UPalNoteDataAsset = {}
+
+---@return UPalNoteDataAsset
+function UPalNoteDataAsset:get() end
 
 ---@param ID FName
 ---@return UPalNoteData
@@ -24061,16 +28819,25 @@ function UPalNoteDataAsset:Find(ID) end
 ---@field NearDistanceForSpawnerBaseFromBaseCamp float
 UPalObjectCollector = {}
 
+---@return UPalObjectCollector
+function UPalObjectCollector:get() end
+
 
 
 ---@class UPalObjectReplicatorComponent : UActorComponent
 ---@field ReplicateObject TArray<UObject>
 UPalObjectReplicatorComponent = {}
 
+---@return UPalObjectReplicatorComponent
+function UPalObjectReplicatorComponent:get() end
+
 
 
 ---@class UPalOilrigLightComponent : UActorComponent
 UPalOilrigLightComponent = {}
+
+---@return UPalOilrigLightComponent
+function UPalOilrigLightComponent:get() end
 
 ---@param IsCombat boolean
 function UPalOilrigLightComponent:ChangeLightColor(IsCombat) end
@@ -24086,6 +28853,9 @@ function UPalOilrigLightComponent:ChangeLightColor(IsCombat) end
 ---@field IsMachineStartCountUp boolean
 ---@field IsMachineDestroyed boolean
 UPalOilrigMachineSpawnerComponent = {}
+
+---@return UPalOilrigMachineSpawnerComponent
+function UPalOilrigMachineSpawnerComponent:get() end
 
 ---@param Location FVector
 ---@param Rotate FRotator
@@ -24106,6 +28876,9 @@ function UPalOilrigMachineSpawnerComponent:DespawnMachine() end
 ---@field GroupGuid FGuid
 UPalOilrigManager = {}
 
+---@return UPalOilrigManager
+function UPalOilrigManager:get() end
+
 ---@param Actor AActor
 ---@param EndPlayReason EEndPlayReason::Type
 function UPalOilrigManager:OnEndPlayNPC(Actor, EndPlayReason) end
@@ -24120,10 +28893,16 @@ function UPalOilrigManager:FindNearestOilrigController(Location) end
 ---@class UPalOnlineSubsystemSteam : UObject
 UPalOnlineSubsystemSteam = {}
 
+---@return UPalOnlineSubsystemSteam
+function UPalOnlineSubsystemSteam:get() end
+
 
 ---@class UPalOptimizeParameterSetting : UObject
 ---@field Parameter FPalOptimizeParameter
 UPalOptimizeParameterSetting = {}
+
+---@return UPalOptimizeParameterSetting
+function UPalOptimizeParameterSetting:get() end
 
 
 
@@ -24131,12 +28910,18 @@ UPalOptimizeParameterSetting = {}
 ---@field OptionWorldSettings FPalOptionWorldSettings
 UPalOptionReplicator = {}
 
+---@return UPalOptionReplicator
+function UPalOptionReplicator:get() end
+
 function UPalOptionReplicator:OnRep_OptionWorldSettings() end
 
 
 ---@class UPalOptionSaveGame : USaveGame
 ---@field OptionSaveData FPalOptionSaveData
 UPalOptionSaveGame = {}
+
+---@return UPalOptionSaveGame
+function UPalOptionSaveGame:get() end
 
 
 
@@ -24167,6 +28952,9 @@ UPalOptionSaveGame = {}
 ---@field OptionGraphicsPresetTable UDataTable
 ---@field PalPlayerCharacterClass TSubclassOf<APalPlayerCharacter>
 UPalOptionSubsystem = {}
+
+---@return UPalOptionSubsystem
+function UPalOptionSubsystem:get() end
 
 ---@param InUISettings FPalOptionUISettings
 function UPalOptionSubsystem:SetUISettings(InUISettings) end
@@ -24256,11 +29044,17 @@ function UPalOptionSubsystem:ApplyGraphicsPreset(OutSettings, GraphicsLevel) end
 ---@field IsProhibitAttack boolean
 UPalOtomoAttackStopJudgeByBall = {}
 
+---@return UPalOtomoAttackStopJudgeByBall
+function UPalOtomoAttackStopJudgeByBall:get() end
+
 
 
 ---@class UPalOtomoAttackStopJudgeByBallList : UObject
 ---@field JudgeList TMap<FGuid, UPalOtomoAttackStopJudgeByBall>
 UPalOtomoAttackStopJudgeByBallList = {}
+
+---@return UPalOtomoAttackStopJudgeByBallList
+function UPalOtomoAttackStopJudgeByBallList:get() end
 
 ---@param Attacker AActor
 function UPalOtomoAttackStopJudgeByBallList:OnHitCaptureBall(Attacker) end
@@ -24279,6 +29073,9 @@ function UPalOtomoAttackStopJudgeByBallList:OnHitCaptureBall(Attacker) end
 ---@field bIsDisableDespawnCharacter boolean
 ---@field bDisableDeadReturnOtomo boolean
 UPalOtomoHolderComponentBase = {}
+
+---@return UPalOtomoHolderComponentBase
+function UPalOtomoHolderComponentBase:get() end
 
 ---@param Character APalCharacter
 function UPalOtomoHolderComponentBase:UpdateOtomoSlotWithInitializedParameterDelegate__DelegateSignature(Character) end
@@ -24452,6 +29249,9 @@ function UPalOtomoHolderComponentBase:ActivateCurrentOtomo(SpawnTransform) end
 ---@class UPalOtomoSpawnCollisionChecker : UObject
 UPalOtomoSpawnCollisionChecker = {}
 
+---@return UPalOtomoSpawnCollisionChecker
+function UPalOtomoSpawnCollisionChecker:get() end
+
 ---@param Trainer AActor
 ---@return FTransform
 function UPalOtomoSpawnCollisionChecker:GetTransform_WhenSpawnPalNearTrainer(Trainer) end
@@ -24463,6 +29263,9 @@ function UPalOtomoSpawnCollisionChecker:GetLocation_WhenSpawnPalSphgereThrow(Hit
 
 ---@class UPalOtomoUiBase : UPalUserWidget
 UPalOtomoUiBase = {}
+
+---@return UPalOtomoUiBase
+function UPalOtomoUiBase:get() end
 
 ---@param TargetActorClass TSubclassOf<AActor>
 ---@return EPalTribeID
@@ -24511,6 +29314,9 @@ function UPalOtomoUiBase:GetTribeIDFromClass(TargetActorClass) end
 ---@field FunnelDisableFlag FFlagContainer
 ---@field GliderDisableFlag FFlagContainer
 UPalPartnerSkillParameterComponent = {}
+
+---@return UPalPartnerSkillParameterComponent
+function UPalPartnerSkillParameterComponent:get() end
 
 function UPalPartnerSkillParameterComponent:Stop() end
 function UPalPartnerSkillParameterComponent:Start() end
@@ -24647,6 +29453,9 @@ function UPalPartnerSkillParameterComponent:CallOnCoolDownCompleted_ToAll() end
 ---@field CurrentRank int32
 UPalPartnerSkillPassiveSkill = {}
 
+---@return UPalPartnerSkillPassiveSkill
+function UPalPartnerSkillPassiveSkill:get() end
+
 ---@param Parameter UPalCharacterParameterComponent
 function UPalPartnerSkillPassiveSkill:OnWorkerAssignChanged(Parameter) end
 ---@param Character APalCharacter
@@ -24706,6 +29515,9 @@ function UPalPartnerSkillPassiveSkill:GetOtomoRank() end
 ---@field OnChangeDisablePassiveSkill FPalPassiveSkillComponentOnChangeDisablePassiveSkill
 UPalPassiveSkillComponent = {}
 
+---@return UPalPassiveSkillComponent
+function UPalPassiveSkillComponent:get() end
+
 ---@param OwnerObject UObject
 ---@param skillList TArray<FName>
 function UPalPassiveSkillComponent:SetupSkillFromSelf(OwnerObject, skillList) end
@@ -24755,6 +29567,9 @@ function UPalPassiveSkillComponent:AddSpecialAttackRateInfo(SpecialAttackRateInf
 ---@field AccessoryAssignableSkillMap TMap<FName, FPalPassiveSkillDatabaseRow>
 UPalPassiveSkillManager = {}
 
+---@return UPalPassiveSkillManager
+function UPalPassiveSkillManager:get() end
+
 ---@param CreatedItemData UPalDynamicItemDataBase
 ---@param CreateParameter FPalItemCreateParameter
 function UPalPassiveSkillManager:OnCreatedDynamicItemDataInServer(CreatedItemData, CreateParameter) end
@@ -24796,6 +29611,9 @@ function UPalPassiveSkillManager:GetNameTextId(SkillName) end
 ---@field PlayActor TWeakObjectPtr<AActor>
 UPalPersistentSoundPlayer = {}
 
+---@return UPalPersistentSoundPlayer
+function UPalPersistentSoundPlayer:get() end
+
 
 
 ---@class UPalPettingPresset : UObject
@@ -24804,6 +29622,9 @@ UPalPersistentSoundPlayer = {}
 ---@field MediumPreset FPalPettingParameter
 ---@field LargePreset FPalPettingParameter
 UPalPettingPresset = {}
+
+---@return UPalPettingPresset
+function UPalPettingPresset:get() end
 
 ---@param Pal AActor
 ---@return float
@@ -24822,9 +29643,15 @@ function UPalPettingPresset:GetCameraArmLength(Pal) end
 ---@class UPalPhysicsDefine : UObject
 UPalPhysicsDefine = {}
 
+---@return UPalPhysicsDefine
+function UPalPhysicsDefine:get() end
+
 
 ---@class UPalPhysicsUtility : UBlueprintFunctionLibrary
 UPalPhysicsUtility = {}
+
+---@return UPalPhysicsUtility
+function UPalPhysicsUtility:get() end
 
 ---@param Component UActorComponent
 ---@param bAffect boolean
@@ -24835,6 +29662,9 @@ function UPalPhysicsUtility:SetCanEverAffectNavigation(Component, bAffect) end
 ---@field PickingGameProcessorClass TSubclassOf<UPalPickingGameProcessor>
 ---@field TreasureBoxGradeDifficultyMap TMap<EPalMapObjectTreasureGradeType, EPalPickingGameDifficultyType>
 UPalPickingGameDataComponent = {}
+
+---@return UPalPickingGameDataComponent
+function UPalPickingGameDataComponent:get() end
 
 
 
@@ -24849,6 +29679,9 @@ UPalPickingGameDataComponent = {}
 ---@field ModifiedSettingData FPalPickingGameSettingData
 ---@field FixedDifficultyType EPalPickingGameDifficultyType
 UPalPickingGameProcessor = {}
+
+---@return UPalPickingGameProcessor
+function UPalPickingGameProcessor:get() end
 
 ---@param ToolPosition float
 function UPalPickingGameProcessor:UpdatePickingToolPosition__DelegateSignature(ToolPosition) end
@@ -24900,6 +29733,9 @@ function UPalPickingGameProcessor:AddKeyPosition(AddPosition) end
 ---@field bShouldSaveOnNextTime boolean
 UPalPlayerAccount = {}
 
+---@return UPalPlayerAccount
+function UPalPlayerAccount:get() end
+
 
 
 ---@class UPalPlayerBattleSituation : UObject
@@ -24913,16 +29749,25 @@ UPalPlayerAccount = {}
 ---@field CurrentMaxRank EPalBattleBGMType
 UPalPlayerBattleSituation = {}
 
+---@return UPalPlayerBattleSituation
+function UPalPlayerBattleSituation:get() end
+
 
 
 ---@class UPalPlayerDamageCamShakeRegulator : UObject
 ---@field DamageCameraShakeTable UDataTable
 UPalPlayerDamageCamShakeRegulator = {}
 
+---@return UPalPlayerDamageCamShakeRegulator
+function UPalPlayerDamageCamShakeRegulator:get() end
+
 
 
 ---@class UPalPlayerDataCharacterMake : UObject
 UPalPlayerDataCharacterMake = {}
+
+---@return UPalPlayerDataCharacterMake
+function UPalPlayerDataCharacterMake:get() end
 
 ---@return FName
 function UPalPlayerDataCharacterMake:GetRandomHeadMeshName() end
@@ -24948,6 +29793,9 @@ function UPalPlayerDataCharacterMake:GetMakeData() end
 ---@field bIsForceSyncAllSlot boolean
 UPalPlayerDataPalStorage = {}
 
+---@return UPalPlayerDataPalStorage
+function UPalPlayerDataPalStorage:get() end
+
 function UPalPlayerDataPalStorage:OnUpdateCharacterContainer_InServer() end
 function UPalPlayerDataPalStorage:OnRep_TargetContainer() end
 ---@param pageIndex int32
@@ -24964,6 +29812,9 @@ function UPalPlayerDataPalStorage:GetPageNum() end
 ---@class UPalPlayerDataStorage : UObject
 UPalPlayerDataStorage = {}
 
+---@return UPalPlayerDataStorage
+function UPalPlayerDataStorage:get() end
+
 ---@return UPalPlayerDataPalStorage
 function UPalPlayerDataStorage:GetPalStorage() end
 ---@param outInventoryInfo FPalPlayerDataInventoryInfo
@@ -24979,12 +29830,18 @@ function UPalPlayerDataStorage:GetInventoryContainers() end
 ---@field bIsFamale boolean
 UPalPlayerGenderChanger = {}
 
+---@return UPalPlayerGenderChanger
+function UPalPlayerGenderChanger:get() end
+
 
 
 ---@class UPalPlayerHeadAnimInstance : UAnimInstance
 ---@field PlayerEyeLocationRight FVector
 ---@field PlayerEyeLocationLeft FVector
 UPalPlayerHeadAnimInstance = {}
+
+---@return UPalPlayerHeadAnimInstance
+function UPalPlayerHeadAnimInstance:get() end
 
 ---@param HeadMesh USkeletalMesh
 function UPalPlayerHeadAnimInstance:SetPlayerEyeLocation(HeadMesh) end
@@ -24995,6 +29852,9 @@ function UPalPlayerHeadAnimInstance:SetPlayerEyeLocation(HeadMesh) end
 ---@field EnableKeys TSet<FKey>
 ---@field DisableKeys TSet<FKey>
 UPalPlayerInput = {}
+
+---@return UPalPlayerInput
+function UPalPlayerInput:get() end
 
 ---@param InActionName FName
 ---@param NewKey FPalKeyConfigKeys
@@ -25044,6 +29904,9 @@ function UPalPlayerInput:FiltterCategoryActionMappings(Category, Mappings) end
 ---@field CurrentState EPalPlayerInputButtonType
 UPalPlayerInputOneFlameCommand = {}
 
+---@return UPalPlayerInputOneFlameCommand
+function UPalPlayerInputOneFlameCommand:get() end
+
 function UPalPlayerInputOneFlameCommand:OnRelease() end
 function UPalPlayerInputOneFlameCommand:OnPress() end
 
@@ -25053,10 +29916,16 @@ function UPalPlayerInputOneFlameCommand:OnPress() end
 ---@field DebugName FName
 UPalPlayerInputOneFlameCommandList = {}
 
+---@return UPalPlayerInputOneFlameCommandList
+function UPalPlayerInputOneFlameCommandList:get() end
+
 
 
 ---@class UPalPlayerInventory : UPalItemInventoryBase
 UPalPlayerInventory = {}
+
+---@return UPalPlayerInventory
+function UPalPlayerInventory:get() end
 
 
 ---@class UPalPlayerInventoryData : UObject
@@ -25084,6 +29953,9 @@ UPalPlayerInventory = {}
 ---@field MyMoneyData UPalMoneyData
 ---@field EquipmentBreakAudioEvent UAkAudioEvent
 UPalPlayerInventoryData = {}
+
+---@return UPalPlayerInventoryData
+function UPalPlayerInventoryData:get() end
 
 ---@param NowWeight float
 function UPalPlayerInventoryData:UpdateWeightInventoryDelegate__DelegateSignature(NowWeight) end
@@ -25252,6 +30124,9 @@ function UPalPlayerInventoryData:AddFullInventoryLog_Client() end
 ---@field Local_PlayTime int32
 UPalPlayerLocalRecordData = {}
 
+---@return UPalPlayerLocalRecordData
+function UPalPlayerLocalRecordData:get() end
+
 
 
 ---@class UPalPlayerManager : UPalWorldSubsystem
@@ -25260,6 +30135,9 @@ UPalPlayerLocalRecordData = {}
 ---@field LoginPlayerMap TMap<FGuid, UPalLoginPlayer>
 ---@field HoldingNotYetLoginPlayerHandleMap TMap<FPalInstanceID, UPalIndividualCharacterHandle>
 UPalPlayerManager = {}
+
+---@return UPalPlayerManager
+function UPalPlayerManager:get() end
 
 ---@param PlayerAccount UPalPlayerAccount
 function UPalPlayerManager:PlayerAccountDelegate__DelegateSignature(PlayerAccount) end
@@ -25271,6 +30149,9 @@ function UPalPlayerManager:OnCreatedIndividualHandleByAppliedSaveData_ServerInte
 ---@field SelectItemSlot FPalItemSlotId
 ---@field IsDraging boolean
 UPalPlayerMenuUI = {}
+
+---@return UPalPlayerMenuUI
+function UPalPlayerMenuUI:get() end
 
 ---@param SelectSlot FPalItemSlotId
 function UPalPlayerMenuUI:SetSelectedItemSlot(SelectSlot) end
@@ -25304,6 +30185,9 @@ function UPalPlayerMenuUI:AddMousePitchInput(Val) end
 ---@field PlayerMenuUI UPalPlayerMenuUI
 UPalPlayerMenuUIManager = {}
 
+---@return UPalPlayerMenuUIManager
+function UPalPlayerMenuUIManager:get() end
+
 function UPalPlayerMenuUIManager:ToggleInventoryWindow() end
 ---@param ContainerId FPalContainerId
 function UPalPlayerMenuUIManager:Test_SetPlayerContainerID(ContainerId) end
@@ -25318,6 +30202,9 @@ function UPalPlayerMenuUIManager:SelectItem(SelectSlot) end
 ---@field OtomoOrder EPalOtomoPalOrderType
 UPalPlayerOtomoData = {}
 
+---@return UPalPlayerOtomoData
+function UPalPlayerOtomoData:get() end
+
 
 
 ---@class UPalPlayerPartyPalHolder : UObject
@@ -25328,6 +30215,9 @@ UPalPlayerOtomoData = {}
 ---@field SecondCoolTimer float
 ---@field CoolDownTime float
 UPalPlayerPartyPalHolder = {}
+
+---@return UPalPlayerPartyPalHolder
+function UPalPlayerPartyPalHolder:get() end
 
 ---@param DeltaTime float
 function UPalPlayerPartyPalHolder:UpdateCoolTimer(DeltaTime) end
@@ -25391,6 +30281,9 @@ function UPalPlayerPartyPalHolder:ChangePalSlot(SecondPal) end
 ---@field PalCaptureCountBonusCount_Tier3_Old int32
 UPalPlayerRecordData = {}
 
+---@return UPalPlayerRecordData
+function UPalPlayerRecordData:get() end
+
 function UPalPlayerRecordData:OnRep_RelicNum() end
 function UPalPlayerRecordData:OnRelicNumUpdateDelegate__DelegateSignature() end
 ---@param AddNum int32
@@ -25402,13 +30295,22 @@ function UPalPlayerRecordData:OnCompleteBuild_ServerInternal(MapObjectModel) end
 ---@class UPalPlayerRecordDataInternals : UObject
 UPalPlayerRecordDataInternals = {}
 
+---@return UPalPlayerRecordDataInternals
+function UPalPlayerRecordDataInternals:get() end
+
 
 ---@class UPalPlayerRecordDataTrigger : UObject
 UPalPlayerRecordDataTrigger = {}
 
+---@return UPalPlayerRecordDataTrigger
+function UPalPlayerRecordDataTrigger:get() end
+
 
 ---@class UPalPlayerRecordDataUtility : UBlueprintFunctionLibrary
 UPalPlayerRecordDataUtility = {}
+
+---@return UPalPlayerRecordDataUtility
+function UPalPlayerRecordDataUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param RecordData FPalPlayerRecordDataRepInfoArray_BoolVal
@@ -25481,11 +30383,17 @@ function UPalPlayerRecordDataUtility:ContainsRecordData_TribeIdCount(RecordData,
 ---@class UPalPlayerSaveDataObject : UObject
 UPalPlayerSaveDataObject = {}
 
+---@return UPalPlayerSaveDataObject
+function UPalPlayerSaveDataObject:get() end
+
 
 ---@class UPalPlayerSkinData : UObject
 ---@field SkinInventoryInfo FPalSkinInventoryInfo
 ---@field PlayerUId FGuid
 UPalPlayerSkinData = {}
+
+---@return UPalPlayerSkinData
+function UPalPlayerSkinData:get() end
 
 ---@param NewInfo FPalSkinInventoryInfo
 function UPalPlayerSkinData:SendNewInventoryInfo(NewInfo) end
@@ -25526,9 +30434,15 @@ function UPalPlayerSkinData:AddSkin(SkinName) end
 ---@class UPalPlayerUIDCommandlet : UCommandlet
 UPalPlayerUIDCommandlet = {}
 
+---@return UPalPlayerUIDCommandlet
+function UPalPlayerUIDCommandlet:get() end
+
 
 ---@class UPalPlayerUtility : UBlueprintFunctionLibrary
 UPalPlayerUtility = {}
+
+---@return UPalPlayerUtility
+function UPalPlayerUtility:get() end
 
 ---@param Blackboard FPalNetArchive
 ---@param HitLocatoin FVector
@@ -25554,6 +30468,9 @@ function UPalPlayerUtility:ReadPlayerFeedItemTo(Blackboard, itemSlotId, itemNum)
 
 ---@class UPalPoseableMeshComponent : USkeletalMeshComponent
 UPalPoseableMeshComponent = {}
+
+---@return UPalPoseableMeshComponent
+function UPalPoseableMeshComponent:get() end
 
 ---@param BoneName FName
 ---@param InTransform FTransform
@@ -25596,6 +30513,9 @@ function UPalPoseableMeshComponent:CopyPoseFromSkeletalComponent(InComponentToCo
 ---@class UPalPrimaryGameLayoutBase : UPrimaryGameLayout
 UPalPrimaryGameLayoutBase = {}
 
+---@return UPalPrimaryGameLayoutBase
+function UPalPrimaryGameLayoutBase:get() end
+
 function UPalPrimaryGameLayoutBase:ShowLiftIcon() end
 ---@param TargetWidget UWidget
 function UPalPrimaryGameLayoutBase:ShowFocusCursor(TargetWidget) end
@@ -25618,10 +30538,16 @@ function UPalPrimaryGameLayoutBase:FadeIn(LayerType, FadeParameter) end
 ---@field SpawningShape UShapeComponent
 UPalProceduralFoliageComponent = {}
 
+---@return UPalProceduralFoliageComponent
+function UPalProceduralFoliageComponent:get() end
+
 
 
 ---@class UPalProgressBar : UProgressBar
 UPalProgressBar = {}
+
+---@return UPalProgressBar
+function UPalProgressBar:get() end
 
 ---@param NewImage FSlateBrush
 function UPalProgressBar:SetFillImage(NewImage) end
@@ -25630,12 +30556,18 @@ function UPalProgressBar:SetFillImage(NewImage) end
 ---@class UPalProjectileMovementComponent : UProjectileMovementComponent
 UPalProjectileMovementComponent = {}
 
+---@return UPalProjectileMovementComponent
+function UPalProjectileMovementComponent:get() end
+
 
 ---@class UPalQuestBlock : UObject
 ---@field OnUpdatedBlockDelegate FPalQuestBlockOnUpdatedBlockDelegate
 ---@field OnCompletedBlockDelegate FPalQuestBlockOnCompletedBlockDelegate
 ---@field IsAutoComplete boolean
 UPalQuestBlock = {}
+
+---@return UPalQuestBlock
+function UPalQuestBlock:get() end
 
 ---@param UpdatedQuestBlock UPalQuestBlock
 function UPalQuestBlock:UpdatedBlockDelegate__DelegateSignature(UpdatedQuestBlock) end
@@ -25664,6 +30596,9 @@ function UPalQuestBlock:CallUpdateBlockDelegate_ForBP() end
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_BaseCampLevel = {}
 
+---@return UPalQuestBlock_BaseCampLevel
+function UPalQuestBlock_BaseCampLevel:get() end
+
 function UPalQuestBlock_BaseCampLevel:OnTimer_CheckBaseCampLevel() end
 
 
@@ -25671,6 +30606,9 @@ function UPalQuestBlock_BaseCampLevel:OnTimer_CheckBaseCampLevel() end
 ---@field CheckBossType EPalBossType
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_CheckBossDefeat = {}
+
+---@return UPalQuestBlock_CheckBossDefeat
+function UPalQuestBlock_CheckBossDefeat:get() end
 
 function UPalQuestBlock_CheckBossDefeat:CheckFlag() end
 
@@ -25682,6 +30620,9 @@ function UPalQuestBlock_CheckBossDefeat:CheckFlag() end
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_CheckPalCaptureNum = {}
 
+---@return UPalQuestBlock_CheckPalCaptureNum
+function UPalQuestBlock_CheckPalCaptureNum:get() end
+
 function UPalQuestBlock_CheckPalCaptureNum:CheckCount() end
 
 
@@ -25689,11 +30630,17 @@ function UPalQuestBlock_CheckPalCaptureNum:CheckCount() end
 ---@field RequireTechnologyName FPalDataTableRowName_RecipeTechnologyData
 UPalQuestBlock_CheckTechnology = {}
 
+---@return UPalQuestBlock_CheckTechnology
+function UPalQuestBlock_CheckTechnology:get() end
+
 function UPalQuestBlock_CheckTechnology:OnUnlockedAnyTechnology() end
 
 
 ---@class UPalQuestBlock_CollectItem : UPalQuestBlock
 UPalQuestBlock_CollectItem = {}
+
+---@return UPalQuestBlock_CollectItem
+function UPalQuestBlock_CollectItem:get() end
 
 
 ---@class UPalQuestBlock_CountBaseCamp : UPalQuestBlock
@@ -25701,6 +30648,9 @@ UPalQuestBlock_CollectItem = {}
 ---@field NowBaseCampCount int32
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_CountBaseCamp = {}
+
+---@return UPalQuestBlock_CountBaseCamp
+function UPalQuestBlock_CountBaseCamp:get() end
 
 function UPalQuestBlock_CountBaseCamp:OnTimer_CheckBaseCamp() end
 
@@ -25713,6 +30663,9 @@ function UPalQuestBlock_CountBaseCamp:OnTimer_CheckBaseCamp() end
 ---@field CheckMapObjectModels TArray<TWeakObjectPtr<UPalMapObjectModel>>
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_CountBuild = {}
+
+---@return UPalQuestBlock_CountBuild
+function UPalQuestBlock_CountBuild:get() end
 
 function UPalQuestBlock_CountBuild:OnTimer_CheckMapObject() end
 ---@param MapObjectModel UPalMapObjectModel
@@ -25728,6 +30681,9 @@ function UPalQuestBlock_CountBuild:OnAddedMapObjectModel_Server(MapObjectModel, 
 ---@field NowPickupCount int32
 UPalQuestBlock_CountPickupItem = {}
 
+---@return UPalQuestBlock_CountPickupItem
+function UPalQuestBlock_CountPickupItem:get() end
+
 ---@param ItemInfos TArray<FPalItemAndNum>
 function UPalQuestBlock_CountPickupItem:OnPickupItem(ItemInfos) end
 
@@ -25738,6 +30694,9 @@ function UPalQuestBlock_CountPickupItem:OnPickupItem(ItemInfos) end
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_CountWorker = {}
 
+---@return UPalQuestBlock_CountWorker
+function UPalQuestBlock_CountWorker:get() end
+
 function UPalQuestBlock_CountWorker:OnTimer_CheckBaseCampWorker() end
 
 
@@ -25745,6 +30704,9 @@ function UPalQuestBlock_CountWorker:OnTimer_CheckBaseCampWorker() end
 ---@field BossSpawnerName FName
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_DefeatWildBoss = {}
+
+---@return UPalQuestBlock_DefeatWildBoss
+function UPalQuestBlock_DefeatWildBoss:get() end
 
 function UPalQuestBlock_DefeatWildBoss:CheckFlag() end
 
@@ -25754,6 +30716,9 @@ function UPalQuestBlock_DefeatWildBoss:CheckFlag() end
 ---@field DetectPalName FPalDataTableRowName_PalMonsterData
 ---@field NowCaptureCount int32
 UPalQuestBlock_DetectCapturePal = {}
+
+---@return UPalQuestBlock_DetectCapturePal
+function UPalQuestBlock_DetectCapturePal:get() end
 
 ---@param CaptureInfo FPalUIPalCaptureInfo
 function UPalQuestBlock_DetectCapturePal:OnCapturedPal(CaptureInfo) end
@@ -25765,6 +30730,9 @@ function UPalQuestBlock_DetectCapturePal:OnCapturedPal(CaptureInfo) end
 ---@field NowCraftNumCount int32
 UPalQuestBlock_DetectCraft = {}
 
+---@return UPalQuestBlock_DetectCraft
+function UPalQuestBlock_DetectCraft:get() end
+
 ---@param ItemInfos TArray<FPalItemAndNum>
 function UPalQuestBlock_DetectCraft:OnCraftItem(ItemInfos) end
 
@@ -25774,6 +30742,9 @@ function UPalQuestBlock_DetectCraft:OnCraftItem(ItemInfos) end
 ---@field NowMealCount int32
 UPalQuestBlock_DetectMeal = {}
 
+---@return UPalQuestBlock_DetectMeal
+function UPalQuestBlock_DetectMeal:get() end
+
 function UPalQuestBlock_DetectMeal:OnTriedMeal() end
 
 
@@ -25781,6 +30752,9 @@ function UPalQuestBlock_DetectMeal:OnTriedMeal() end
 ---@field RequireUnlockCount int32
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_FastTravelCount = {}
+
+---@return UPalQuestBlock_FastTravelCount
+function UPalQuestBlock_FastTravelCount:get() end
 
 function UPalQuestBlock_FastTravelCount:CheckFlag() end
 
@@ -25790,6 +30764,9 @@ function UPalQuestBlock_FastTravelCount:CheckFlag() end
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_HasItem = {}
 
+---@return UPalQuestBlock_HasItem
+function UPalQuestBlock_HasItem:get() end
+
 function UPalQuestBlock_HasItem:CheckItem() end
 
 
@@ -25797,11 +30774,17 @@ function UPalQuestBlock_HasItem:CheckItem() end
 ---@field CheckTimerHandle FTimerHandle
 UPalQuestBlock_OpenSurvivalGuide = {}
 
+---@return UPalQuestBlock_OpenSurvivalGuide
+function UPalQuestBlock_OpenSurvivalGuide:get() end
+
 function UPalQuestBlock_OpenSurvivalGuide:OnTimer_CheckOpen() end
 
 
 ---@class UPalQuestBlock_UseStatusPoint : UPalQuestBlock
 UPalQuestBlock_UseStatusPoint = {}
+
+---@return UPalQuestBlock_UseStatusPoint
+function UPalQuestBlock_UseStatusPoint:get() end
 
 function UPalQuestBlock_UseStatusPoint:OnUpdateStatusPoint() end
 
@@ -25814,6 +30797,9 @@ function UPalQuestBlock_UseStatusPoint:OnUpdateStatusPoint() end
 ---@field CommonRewardData FPalCommonQuestRewardData
 ---@field CustomQuestRewardGiverClass TSoftClassPtr<UPalQuestRewardGiver>
 UPalQuestData = {}
+
+---@return UPalQuestData
+function UPalQuestData:get() end
 
 ---@param UpdatedQuest UPalQuestData
 function UPalQuestData:UpdatedQuestDelegate__DelegateSignature(UpdatedQuest) end
@@ -25853,6 +30839,9 @@ function UPalQuestData:CompleteNowBlock() end
 ---@field CommonRewardGiver UPalCommonQuestRewardGiver
 UPalQuestManager = {}
 
+---@return UPalQuestManager
+function UPalQuestManager:get() end
+
 ---@param UpdatedQuest UPalQuestData
 function UPalQuestManager:UpdatedAnyQuestDelegate__DelegateSignature(UpdatedQuest) end
 ---@param UpdatedQuest UPalQuestData
@@ -25868,6 +30857,9 @@ function UPalQuestManager:CompletedAnyQuestDelegate__DelegateSignature(Completed
 ---@class UPalQuestRewardGiver : UObject
 UPalQuestRewardGiver = {}
 
+---@return UPalQuestRewardGiver
+function UPalQuestRewardGiver:get() end
+
 ---@param PlayerState APalPlayerState
 function UPalQuestRewardGiver:TakeReward(PlayerState) end
 
@@ -25875,9 +30867,15 @@ function UPalQuestRewardGiver:TakeReward(PlayerState) end
 ---@class UPalRCONSubsystem : UGameInstanceSubsystem
 UPalRCONSubsystem = {}
 
+---@return UPalRCONSubsystem
+function UPalRCONSubsystem:get() end
+
 
 ---@class UPalRESTAPISubsystem : UGameInstanceSubsystem
 UPalRESTAPISubsystem = {}
+
+---@return UPalRESTAPISubsystem
+function UPalRESTAPISubsystem:get() end
 
 
 ---@class UPalRadarChartWidgetBase : UPalCustomPrimitiveWidget
@@ -25892,6 +30890,9 @@ UPalRESTAPISubsystem = {}
 ---@field borderSize float
 ---@field isCheckParameterMaxValue boolean
 UPalRadarChartWidgetBase = {}
+
+---@return UPalRadarChartWidgetBase
+function UPalRadarChartWidgetBase:get() end
 
 ---@param Index int32
 ---@param Value int32
@@ -25911,6 +30912,9 @@ function UPalRadarChartWidgetBase:BuildVertexData() end
 ---@field AngularDamping float
 UPalRagdollPreset = {}
 
+---@return UPalRagdollPreset
+function UPalRagdollPreset:get() end
+
 
 
 ---@class UPalRaidBossComponent : UActorComponent
@@ -25924,6 +30928,9 @@ UPalRagdollPreset = {}
 ---@field StartItemName FName
 ---@field StartRequestPlayerUID FGuid
 UPalRaidBossComponent = {}
+
+---@return UPalRaidBossComponent
+function UPalRaidBossComponent:get() end
 
 ---@param SpawnInfo FPalRaidBossSpawnInfoList
 ---@param SpawnTransform FTransform
@@ -25969,6 +30976,9 @@ function UPalRaidBossComponent:AddGroupCharacter(PalHandle) end
 ---@field GroupGuid FGuid
 UPalRaidBossManager = {}
 
+---@return UPalRaidBossManager
+function UPalRaidBossManager:get() end
+
 ---@param CampID FGuid
 function UPalRaidBossManager:OnRaidBossBattleStartDelegate__DelegateSignature(CampID) end
 ---@param CampID FGuid
@@ -25998,6 +31008,9 @@ function UPalRaidBossManager:FindRaidBossData(ItemName) end
 ---@field bIsTickable boolean
 UPalRandomIncidentActionBase = {}
 
+---@return UPalRandomIncidentActionBase
+function UPalRandomIncidentActionBase:get() end
+
 function UPalRandomIncidentActionBase:Terminate() end
 function UPalRandomIncidentActionBase:Start() end
 ---@param isTickable boolean
@@ -26021,6 +31034,9 @@ function UPalRandomIncidentActionBase:Initialize() end
 ---@field bIsFinishWithIncidentSpawner boolean
 ---@field PrevEnterArea EPalRandomIncidentSpawnerAreaType
 UPalRandomIncidentBase = {}
+
+---@return UPalRandomIncidentBase
+function UPalRandomIncidentBase:get() end
 
 ---@param Center FVector
 ---@param Radius float
@@ -26055,6 +31071,9 @@ function UPalRandomIncidentBase:BroadcastOnEnterAreaAndOnExitArea(PlayerId) end
 ---@field LotteryParameters TArray<FPalRandomIncidentSpawnIncidentParameter>
 UPalRandomIncidentLotteryBase = {}
 
+---@return UPalRandomIncidentLotteryBase
+function UPalRandomIncidentLotteryBase:get() end
+
 ---@param OutResult FPalRandomIncidentSpawnIncidentParameter
 ---@return boolean
 function UPalRandomIncidentLotteryBase:LotteryIncident(OutResult) end
@@ -26070,16 +31089,25 @@ function UPalRandomIncidentLotteryBase:GetLotteryParameters(OutParam) end
 ---@field itemNum int32
 UPalRandomIncidentPlacementDropItemDataComponent = {}
 
+---@return UPalRandomIncidentPlacementDropItemDataComponent
+function UPalRandomIncidentPlacementDropItemDataComponent:get() end
+
 
 
 ---@class UPalRandomIncidentPlacementEggDataComponent : UStaticMeshComponent
 ---@field PalMonsterId FPalDataTableRowName_PalMonsterData
 UPalRandomIncidentPlacementEggDataComponent = {}
 
+---@return UPalRandomIncidentPlacementEggDataComponent
+function UPalRandomIncidentPlacementEggDataComponent:get() end
+
 
 
 ---@class UPalRandomizerManager : UPalWorldSubsystem
 UPalRandomizerManager = {}
+
+---@return UPalRandomizerManager
+function UPalRandomizerManager:get() end
 
 ---@param PrevSettings FPalOptionWorldSettings
 ---@param NewSettings FPalOptionWorldSettings
@@ -26107,6 +31135,9 @@ function UPalRandomizerManager:GetCoolTime(InSpawnerName) end
 ---@class UPalRecordTrigger_BossBattle : UPalPlayerRecordDataTrigger
 UPalRecordTrigger_BossBattle = {}
 
+---@return UPalRecordTrigger_BossBattle
+function UPalRecordTrigger_BossBattle:get() end
+
 ---@param LocalPlayer APalPlayerCharacter
 ---@param BossType EPalBossType
 function UPalRecordTrigger_BossBattle:OnLocalPlayerBossBattleSuccessed(LocalPlayer, BossType) end
@@ -26115,6 +31146,9 @@ function UPalRecordTrigger_BossBattle:OnLocalPlayerBossBattleSuccessed(LocalPlay
 ---@class UPalReplaceSetting : UObject
 ---@field CharacterIDReplacer TMap<FName, FName>
 UPalReplaceSetting = {}
+
+---@return UPalReplaceSetting
+function UPalReplaceSetting:get() end
 
 
 
@@ -26126,6 +31160,9 @@ UPalReplaceSetting = {}
 ---@field AlwaysRelevantNode UReplicationGraphNode_ActorList
 UPalReplicationGraph = {}
 
+---@return UPalReplicationGraph
+function UPalReplicationGraph:get() end
+
 
 
 ---@class UPalReplicationGraphNode_AlwaysRelevant_ForConnection : UReplicationGraphNode
@@ -26133,18 +31170,30 @@ UPalReplicationGraph = {}
 ---@field PastRelevantActors TArray<FAlwaysRelevantActorInfo>
 UPalReplicationGraphNode_AlwaysRelevant_ForConnection = {}
 
+---@return UPalReplicationGraphNode_AlwaysRelevant_ForConnection
+function UPalReplicationGraphNode_AlwaysRelevant_ForConnection:get() end
+
 
 
 ---@class UPalReplicationGraphNode_PlayerStateFrequencyLimiter : UReplicationGraphNode
 UPalReplicationGraphNode_PlayerStateFrequencyLimiter = {}
 
+---@return UPalReplicationGraphNode_PlayerStateFrequencyLimiter
+function UPalReplicationGraphNode_PlayerStateFrequencyLimiter:get() end
+
 
 ---@class UPalRetainerBox : URetainerBox
 UPalRetainerBox = {}
 
+---@return UPalRetainerBox
+function UPalRetainerBox:get() end
+
 
 ---@class UPalReticleTargetUtility : UObject
 UPalReticleTargetUtility = {}
+
+---@return UPalReticleTargetUtility
+function UPalReticleTargetUtility:get() end
 
 
 ---@class UPalRichTextBlockBase : UCommonRichTextBlock
@@ -26154,6 +31203,9 @@ UPalReticleTargetUtility = {}
 ---@field IsAutoAdjustScale boolean
 ---@field MaxWidth int32
 UPalRichTextBlockBase = {}
+
+---@return UPalRichTextBlockBase
+function UPalRichTextBlockBase:get() end
 
 ---@param IsSuccess boolean
 ---@param OutString FString
@@ -26170,6 +31222,9 @@ function UPalRichTextBlockBase:GetBindedOriginalText() end
 ---@class UPalRichTextDecorator_TagText : URichTextBlockDecorator
 UPalRichTextDecorator_TagText = {}
 
+---@return UPalRichTextDecorator_TagText
+function UPalRichTextDecorator_TagText:get() end
+
 ---@param WorldContextObject UObject
 ---@param ID FName
 ---@return FString
@@ -26181,6 +31236,9 @@ function UPalRichTextDecorator_TagText:GetTagName() end
 ---@class UPalRichTextIconDecorator : URichTextBlockImageDecorator
 ---@field ControlKeyIconData UDataTable
 UPalRichTextIconDecorator = {}
+
+---@return UPalRichTextIconDecorator
+function UPalRichTextIconDecorator:get() end
 
 
 
@@ -26198,6 +31256,9 @@ UPalRichTextIconDecorator = {}
 ---@field SkillSlot UPalActiveSkillSlot
 ---@field WeaponActor APalUniqueRideWeaponBase
 UPalRideMarkerComponent = {}
+
+---@return UPalRideMarkerComponent
+function UPalRideMarkerComponent:get() end
 
 ---@param IndividualParameter UPalIndividualCharacterParameter
 function UPalRideMarkerComponent:SyncActiveSkill(IndividualParameter) end
@@ -26242,6 +31303,9 @@ function UPalRideMarkerComponent:CameraChangeActorActive(Active) end
 ---@field UniqueRideAnimBPClassMap TMap<FPalDataTableRowName_PalMonsterData, TSubclassOf<UPalUniqueRideAnimeAssetBase>>
 ---@field UniqueRideAnimeAssetMap TMap<FName, UPalUniqueRideAnimeAssetBase>
 UPalRiderComponent = {}
+
+---@return UPalRiderComponent
+function UPalRiderComponent:get() end
 
 function UPalRiderComponent:StopShakingMontage() end
 ---@param ID int32
@@ -26373,6 +31437,9 @@ function UPalRiderComponent:AttachRider() end
 ---@field UsedDynamicItemIDSetInLoad TSet<FPalDynamicItemId>
 UPalSaveGameManager = {}
 
+---@return UPalSaveGameManager
+function UPalSaveGameManager:get() end
+
 function UPalSaveGameManager:StartWorldDataAutoSave() end
 function UPalSaveGameManager:StartLocalWorldDataAutoSave() end
 function UPalSaveGameManager:OnStartedWorldAutoSave__DelegateSignature() end
@@ -26449,6 +31516,9 @@ function UPalSaveGameManager:GetLoadedLocalWorldSaveData() end
 ---@field OnUserScrolled FPalScrollBoxOnUserScrolled
 UPalScrollBox = {}
 
+---@return UPalScrollBox
+function UPalScrollBox:get() end
+
 ---@param NewWheelScrollMultiplier float
 function UPalScrollBox:SetWheelScrollMultiplier(NewWheelScrollMultiplier) end
 ---@param NewScrollWhenFocusChanges EPalScrollWhenFocusChanges
@@ -26493,6 +31563,9 @@ function UPalScrollBox:EndInertialScrolling() end
 ---@field VerticalAlignment EVerticalAlignment
 UPalScrollBoxSlot = {}
 
+---@return UPalScrollBoxSlot
+function UPalScrollBoxSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UPalScrollBoxSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InPadding FMargin
@@ -26504,10 +31577,16 @@ function UPalScrollBoxSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@class UPalSetDefaultsCommandlet : UCommandlet
 UPalSetDefaultsCommandlet = {}
 
+---@return UPalSetDefaultsCommandlet
+function UPalSetDefaultsCommandlet:get() end
+
 
 ---@class UPalShooterAnimeAssetBase : UObject
 ---@field AnimeInfo FWeaponAnimationInfo
 UPalShooterAnimeAssetBase = {}
+
+---@return UPalShooterAnimeAssetBase
+function UPalShooterAnimeAssetBase:get() end
 
 ---@param NextAnim UAnimMontage
 ---@param AnimType EWeaponAnimationType
@@ -26570,6 +31649,9 @@ function UPalShooterAnimeAssetBase:ChangeRideMontage(NextAnim, AnimType) end
 ---@field RapidFireBlur float
 ---@field RandomStream FRandomStream
 UPalShooterComponent = {}
+
+---@return UPalShooterComponent
+function UPalShooterComponent:get() end
 
 function UPalShooterComponent:StopWeaponChangeAnimation() end
 function UPalShooterComponent:StopReloadInternal() end
@@ -26821,6 +31903,9 @@ function UPalShooterComponent:AddRapidFireBlur() end
 ---@field ArmLengthScaleContainer FFloatContainer
 UPalShooterSpringArmComponent = {}
 
+---@return UPalShooterSpringArmComponent
+function UPalShooterSpringArmComponent:get() end
+
 ---@param DeltaTime float
 function UPalShooterSpringArmComponent:UpdateCameraInterp(DeltaTime) end
 function UPalShooterSpringArmComponent:UnregisterAdditionalOffsets() end
@@ -26882,6 +31967,9 @@ function UPalShooterSpringArmComponent:ChangeArmParameter_forBP() end
 ---@field RestockTimerHandle_ForServer FTimerHandle
 UPalShopBase = {}
 
+---@return UPalShopBase
+function UPalShopBase:get() end
+
 function UPalShopBase:UpdateAnyProductDelegate__DelegateSignature() end
 ---@param NowStock int32
 function UPalShopBase:OnUpdateAnyProductStock(NowStock) end
@@ -26907,6 +31995,9 @@ function UPalShopBase:GetAllProduct(OutProductArray) end
 ---@field LostPalProduct_Tmp UPalShopProduct_LostPal
 UPalShopManager = {}
 
+---@return UPalShopManager
+function UPalShopManager:get() end
+
 
 
 ---@class UPalShopProductBase : UObject
@@ -26918,6 +32009,9 @@ UPalShopManager = {}
 ---@field MaxStockNum int32
 ---@field IsValidProductFlag boolean
 UPalShopProductBase = {}
+
+---@return UPalShopProductBase
+function UPalShopProductBase:get() end
 
 ---@param NowStock int32
 function UPalShopProductBase:UpdateNowStockNumDelegate__DelegateSignature(NowStock) end
@@ -26948,15 +32042,24 @@ function UPalShopProductBase:CanBuy_LocalPlayer() end
 ---@class UPalShopProduct_LostPal : UPalShopProduct_PalSaveParameter
 UPalShopProduct_LostPal = {}
 
+---@return UPalShopProduct_LostPal
+function UPalShopProduct_LostPal:get() end
+
 
 ---@class UPalShopProduct_OnlyBuyOneItem : UPalShopProduct_TradeItem
 UPalShopProduct_OnlyBuyOneItem = {}
+
+---@return UPalShopProduct_OnlyBuyOneItem
+function UPalShopProduct_OnlyBuyOneItem:get() end
 
 
 ---@class UPalShopProduct_PalSaveParameter : UPalShopProductBase
 ---@field ProductPalSaveParameter FPalIndividualCharacterSaveParameter
 ---@field ReservedPlayerUID FGuid
 UPalShopProduct_PalSaveParameter = {}
+
+---@return UPalShopProduct_PalSaveParameter
+function UPalShopProduct_PalSaveParameter:get() end
 
 ---@param CreatedPalInstanceID FPalInstanceID
 function UPalShopProduct_PalSaveParameter:OnCreatedBuyPal(CreatedPalInstanceID) end
@@ -26974,6 +32077,9 @@ function UPalShopProduct_PalSaveParameter:GetPrice(PlayerUId) end
 ---@field RequireStaticItemID FName
 UPalShopProduct_TradeItem = {}
 
+---@return UPalShopProduct_TradeItem
+function UPalShopProduct_TradeItem:get() end
+
 ---@param PlayerUId FGuid
 ---@return int32
 function UPalShopProduct_TradeItem:GetRequireItemNum(PlayerUId) end
@@ -26985,6 +32091,9 @@ function UPalShopProduct_TradeItem:GetProductStaticItemID(OutStaticID) end
 
 ---@class UPalShopUtility : UBlueprintFunctionLibrary
 UPalShopUtility = {}
+
+---@return UPalShopUtility
+function UPalShopUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param ItemShopLotteryName FName
@@ -27058,14 +32167,23 @@ function UPalShopUtility:CalcItemBuyPriceBuffRate(WorldContextObject, OwnerChara
 ---@field MapObjectUpdateDivideNum int32
 UPalSignificanceManager = {}
 
+---@return UPalSignificanceManager
+function UPalSignificanceManager:get() end
+
 
 
 ---@class UPalSignificanceManagerUtility : UObject
 UPalSignificanceManagerUtility = {}
 
+---@return UPalSignificanceManagerUtility
+function UPalSignificanceManagerUtility:get() end
+
 
 ---@class UPalSignificanceManagerUtility_MapObject : UObject
 UPalSignificanceManagerUtility_MapObject = {}
+
+---@return UPalSignificanceManagerUtility_MapObject
+function UPalSignificanceManagerUtility_MapObject:get() end
 
 
 ---@class UPalSkeletalMeshComponent : USkeletalMeshComponent
@@ -27102,6 +32220,9 @@ UPalSignificanceManagerUtility_MapObject = {}
 ---@field DefaultTickOption EVisibilityBasedAnimTickOption
 ---@field CharacterMakeInfo FPalPlayerDataCharacterMakeInfo
 UPalSkeletalMeshComponent = {}
+
+---@return UPalSkeletalMeshComponent
+function UPalSkeletalMeshComponent:get() end
 
 ---@param InRate float
 ---@param bResetCurrentInterval boolean
@@ -27149,6 +32270,9 @@ function UPalSkeletalMeshComponent:AppliedMakeInfoDelegate__DelegateSignature(Sk
 ---@field EffectSlot UPalHitEffectSlot
 UPalSkillDamageReactionComponent = {}
 
+---@return UPalSkillDamageReactionComponent
+function UPalSkillDamageReactionComponent:get() end
+
 
 
 ---@class UPalSkinDataArmor : UPalSkinDataBase
@@ -27156,6 +32280,9 @@ UPalSkillDamageReactionComponent = {}
 ---@field ArmorAnimBP TMap<FName, TSoftClassPtr<UAnimInstance>>
 ---@field HairAttachSocketNameMap TMap<FName, FName>
 UPalSkinDataArmor = {}
+
+---@return UPalSkinDataArmor
+function UPalSkinDataArmor:get() end
 
 
 
@@ -27170,6 +32297,9 @@ UPalSkinDataArmor = {}
 ---@field PlatformItemID_Steam int32
 UPalSkinDataBase = {}
 
+---@return UPalSkinDataBase
+function UPalSkinDataBase:get() end
+
 ---@param WorldContextObject UObject
 ---@return FText
 function UPalSkinDataBase:GetLocalizedSkinName(WorldContextObject) end
@@ -27179,12 +32309,18 @@ function UPalSkinDataBase:GetLocalizedSkinName(WorldContextObject) end
 ---@field Materials TArray<TSoftObjectPtr<UMaterialInterface>>
 UPalSkinDataMaterials = {}
 
+---@return UPalSkinDataMaterials
+function UPalSkinDataMaterials:get() end
+
 
 
 ---@class UPalSkinDataPalCharacterClass : UPalSkinDataBase
 ---@field NormalCharacterClass TSoftClassPtr<APalCharacter>
 ---@field BossCharacterClass TSoftClassPtr<APalCharacter>
 UPalSkinDataPalCharacterClass = {}
+
+---@return UPalSkinDataPalCharacterClass
+function UPalSkinDataPalCharacterClass:get() end
 
 
 
@@ -27194,17 +32330,26 @@ UPalSkinDataPalCharacterClass = {}
 ---@field HairAttachSocketName FName
 UPalSkinDataSkeletalMesh = {}
 
+---@return UPalSkinDataSkeletalMesh
+function UPalSkinDataSkeletalMesh:get() end
+
 
 
 ---@class UPalSkinDataStaticMesh : UPalSkinDataBase
 ---@field StaticMesh TSoftObjectPtr<UStaticMesh>
 UPalSkinDataStaticMesh = {}
 
+---@return UPalSkinDataStaticMesh
+function UPalSkinDataStaticMesh:get() end
+
 
 
 ---@class UPalSkinManager : UObject
 ---@field SkinDataAsset UPalStaticSkinDataAsset
 UPalSkinManager = {}
+
+---@return UPalSkinManager
+function UPalSkinManager:get() end
 
 ---@param SkinName FName
 ---@param bIsBoss boolean
@@ -27235,6 +32380,9 @@ function UPalSkinManager:AddSkin(InPlayerUId, SkinName) end
 ---@class UPalSoundEmitterComponent : UActorComponent
 UPalSoundEmitterComponent = {}
 
+---@return UPalSoundEmitterComponent
+function UPalSoundEmitterComponent:get() end
+
 ---@param SoundFName FName
 ---@param EmitterCharacter AActor
 ---@param EmitLocation FVector
@@ -27252,6 +32400,9 @@ function UPalSoundEmitterComponent:EmitSound(SoundFName, EmitterCharacter, EmitL
 ---@field PlaySoundParameters TMap<int32, FPalSoundPlayingParameter>
 ---@field OutputBusVolumes TMap<FName, float>
 UPalSoundPlayer = {}
+
+---@return UPalSoundPlayer
+function UPalSoundPlayer:get() end
 
 function UPalSoundPlayer:UpdateOutputBusBolume() end
 function UPalSoundPlayer:Terminate() end
@@ -27307,6 +32458,9 @@ function UPalSoundPlayer:ClearOutputBusVolume(Name) end
 ---@field PalSoundSlotCache UPalSoundSlot
 UPalSoundPlayerComponent = {}
 
+---@return UPalSoundPlayerComponent
+function UPalSoundPlayerComponent:get() end
+
 ---@return USceneComponent
 function UPalSoundPlayerComponent:OnGetAkOwnerComponent__DelegateSignature() end
 function UPalSoundPlayerComponent:BeginPlay() end
@@ -27317,6 +32471,9 @@ function UPalSoundPlayerComponent:BeginPlay() end
 ---@field PalSoundSlotCache UPalSoundSlot
 UPalSoundPlayerInEditorComponent = {}
 
+---@return UPalSoundPlayerInEditorComponent
+function UPalSoundPlayerInEditorComponent:get() end
+
 ---@param PhysicalSurface EPhysicalSurface
 function UPalSoundPlayerInEditorComponent:SetPhysicalMaterial(PhysicalSurface) end
 
@@ -27326,6 +32483,9 @@ function UPalSoundPlayerInEditorComponent:SetPhysicalMaterial(PhysicalSurface) e
 ---@field PlaySoundParameters TMap<int32, FPalDataTableRowName_SoundID>
 ---@field SoundPlayer UPalSoundPlayer
 UPalSoundSlot = {}
+
+---@return UPalSoundSlot
+function UPalSoundSlot:get() end
 
 function UPalSoundSlot:Terminate() end
 ---@param SoundId FPalDataTableRowName_SoundID
@@ -27366,6 +32526,9 @@ function UPalSoundSlot:GetAkEvent(ID) end
 
 ---@class UPalSoundUtility : UBlueprintFunctionLibrary
 UPalSoundUtility = {}
+
+---@return UPalSoundUtility
+function UPalSoundUtility:get() end
 
 ---@param Actor AActor
 ---@param ID FPalDataTableRowName_SoundID
@@ -27419,6 +32582,9 @@ function UPalSoundUtility:IsSoundPlayingByActor(Actor, ID, cb) end
 ---@field HitPalList TArray<FPalInstanceID>
 UPalSpeedCollisionComponent = {}
 
+---@return UPalSpeedCollisionComponent
+function UPalSpeedCollisionComponent:get() end
+
 ---@param ActionComponent UPalActionComponent
 function UPalSpeedCollisionComponent:OnAllActionEnd(ActionComponent) end
 ---@param action UPalActionBase
@@ -27437,6 +32603,9 @@ function UPalSpeedCollisionComponent:BeginOverlapEvent(OverlappedComponent, Othe
 ---@field WaterProbeChannel ECollisionChannel
 UPalSpringArmComponent = {}
 
+---@return UPalSpringArmComponent
+function UPalSpringArmComponent:get() end
+
 
 
 ---@class UPalSquad : UObject
@@ -27447,6 +32616,9 @@ UPalSpringArmComponent = {}
 ---@field MemberIDList TArray<FPalInstanceID>
 ---@field LeaderBB UPalAIBlackboardBase
 UPalSquad = {}
+
+---@return UPalSquad
+function UPalSquad:get() end
 
 ---@param DestoryActor AActor
 function UPalSquad:RemoveWhenDestoryActor(DestoryActor) end
@@ -27473,10 +32645,16 @@ function UPalSquad:AddCharacter(PalInstanceID) end
 ---@class UPalStageDefines : UObject
 UPalStageDefines = {}
 
+---@return UPalStageDefines
+function UPalStageDefines:get() end
+
 
 ---@class UPalStageModelArena : UPalStageModelBase
 ---@field InstanceModel UPalArenaInstanceModel
 UPalStageModelArena = {}
+
+---@return UPalStageModelArena
+function UPalStageModelArena:get() end
 
 ---@return UPalArenaInstanceModel
 function UPalStageModelArena:GetInstanceModel() end
@@ -27487,6 +32665,9 @@ function UPalStageModelArena:GetInstanceModel() end
 ---@field PlayerInfos TArray<FPalStagePlayerInfo>
 UPalStageModelBase = {}
 
+---@return UPalStageModelBase
+function UPalStageModelBase:get() end
+
 ---@param TargetStageModel UPalStageModelBase
 function UPalStageModelBase:OnCompleteLoadStage_ServerInternal(TargetStageModel) end
 
@@ -27494,6 +32675,9 @@ function UPalStageModelBase:OnCompleteLoadStage_ServerInternal(TargetStageModel)
 ---@class UPalStageModelBossBattle : UPalStageModelBase
 ---@field InstanceModel UPalBossBattleInstanceModel
 UPalStageModelBossBattle = {}
+
+---@return UPalStageModelBossBattle
+function UPalStageModelBossBattle:get() end
 
 function UPalStageModelBossBattle:OnRep_InstanceModel() end
 ---@return UPalBossBattleInstanceModel
@@ -27504,6 +32688,9 @@ function UPalStageModelBossBattle:GetInstanceModel() end
 ---@field InstanceModel UPalDungeonInstanceModel
 UPalStageModelDungeon = {}
 
+---@return UPalStageModelDungeon
+function UPalStageModelDungeon:get() end
+
 ---@return UPalDungeonInstanceModel
 function UPalStageModelDungeon:GetInstanceModel() end
 
@@ -27511,27 +32698,45 @@ function UPalStageModelDungeon:GetInstanceModel() end
 ---@class UPalStageRegistrationParameterArena : UPalStageRegistrationParameterBase
 UPalStageRegistrationParameterArena = {}
 
+---@return UPalStageRegistrationParameterArena
+function UPalStageRegistrationParameterArena:get() end
+
 
 ---@class UPalStageRegistrationParameterBase : UObject
 UPalStageRegistrationParameterBase = {}
+
+---@return UPalStageRegistrationParameterBase
+function UPalStageRegistrationParameterBase:get() end
 
 
 ---@class UPalStageRegistrationParameterBossBattle : UPalStageRegistrationParameterBase
 UPalStageRegistrationParameterBossBattle = {}
 
+---@return UPalStageRegistrationParameterBossBattle
+function UPalStageRegistrationParameterBossBattle:get() end
+
 
 ---@class UPalStageRegistrationParameterDungeon : UPalStageRegistrationParameterBase
 UPalStageRegistrationParameterDungeon = {}
+
+---@return UPalStageRegistrationParameterDungeon
+function UPalStageRegistrationParameterDungeon:get() end
 
 
 ---@class UPalStageReplicator : UPalGameStateReplicatorBase
 ---@field RepInfoArray FPalFastStageModelRepInfoArray
 UPalStageReplicator = {}
 
+---@return UPalStageReplicator
+function UPalStageReplicator:get() end
+
 
 
 ---@class UPalStageUtility : UBlueprintFunctionLibrary
 UPalStageUtility = {}
+
+---@return UPalStageUtility
+function UPalStageUtility:get() end
 
 
 ---@class UPalStageWorldSubsystem : UPalWorldSubsystem
@@ -27539,10 +32744,16 @@ UPalStageUtility = {}
 ---@field StageAreaInfoMap TMap<UDataLayerAsset, FPalStageAreaInfo>
 UPalStageWorldSubsystem = {}
 
+---@return UPalStageWorldSubsystem
+function UPalStageWorldSubsystem:get() end
+
 
 
 ---@class UPalStatModelPerformance : UObject
 UPalStatModelPerformance = {}
+
+---@return UPalStatModelPerformance
+function UPalStatModelPerformance:get() end
 
 ---@param FrameTime float
 ---@param GameThreadTime float
@@ -27557,12 +32768,18 @@ function UPalStatModelPerformance:Deinitialize() end
 ---@field FontObject UFont
 UPalStatPalCount = {}
 
+---@return UPalStatPalCount
+function UPalStatPalCount:get() end
+
 
 
 ---@class UPalStateMachine : UObject
 ---@field StateMap TMap<UClass, UPalStateMachineStateBase>
 ---@field CurrentState UPalStateMachineStateBase
 UPalStateMachine = {}
+
+---@return UPalStateMachine
+function UPalStateMachine:get() end
 
 ---@param DeltaTime float
 function UPalStateMachine:Tick(DeltaTime) end
@@ -27580,9 +32797,15 @@ function UPalStateMachine:AddState(State) end
 ---@class UPalStateMachineStateBase : UObject
 UPalStateMachineStateBase = {}
 
+---@return UPalStateMachineStateBase
+function UPalStateMachineStateBase:get() end
+
 
 ---@class UPalStateMachineStateBase_BlueprintBase : UPalStateMachineStateBase
 UPalStateMachineStateBase_BlueprintBase = {}
+
+---@return UPalStateMachineStateBase_BlueprintBase
+function UPalStateMachineStateBase_BlueprintBase:get() end
 
 ---@param DeltaTime float
 function UPalStateMachineStateBase_BlueprintBase:StateTick(DeltaTime) end
@@ -27596,6 +32819,9 @@ function UPalStateMachineStateBase_BlueprintBase:StateEnter() end
 ---@field HPValue int32
 ---@field ShieldValue int32
 UPalStaticArmorItemData = {}
+
+---@return UPalStaticArmorItemData
+function UPalStaticArmorItemData:get() end
 
 ---@return int32
 function UPalStaticArmorItemData:GetShieldValue() end
@@ -27677,6 +32903,9 @@ function UPalStaticArmorItemData:GetAttackValue() end
 ---@field IsRaidBoss_BP boolean
 UPalStaticCharacterParameterComponent = {}
 
+---@return UPalStaticCharacterParameterComponent
+function UPalStaticCharacterParameterComponent:get() end
+
 ---@param SpawnedType EPalSpawnedCharacterType
 function UPalStaticCharacterParameterComponent:SetSpawnedCharacterType(SpawnedType) end
 ---@param WazaID EPalWazaID
@@ -27722,6 +32951,9 @@ function UPalStaticCharacterParameterComponent:FindMontange(ActionType, bExist) 
 ---@field WazaID EPalWazaID
 UPalStaticConsumeItemData = {}
 
+---@return UPalStaticConsumeItemData
+function UPalStaticConsumeItemData:get() end
+
 ---@return EPalWazaID
 function UPalStaticConsumeItemData:GetWazaID() end
 ---@return int32
@@ -27738,6 +32970,9 @@ function UPalStaticConsumeItemData:GetRestoreHP() end
 ---@field StaticItemDataMap TMap<FName, UPalStaticItemDataBase>
 ---@field UndefinedVisualBlueprintClassSoft TSoftClassPtr<AActor>
 UPalStaticItemDataAsset = {}
+
+---@return UPalStaticItemDataAsset
+function UPalStaticItemDataAsset:get() end
 
 
 
@@ -27769,6 +33004,9 @@ UPalStaticItemDataAsset = {}
 ---@field OverrideNameMsgID FName
 ---@field OverrideDescMsgID FName
 UPalStaticItemDataBase = {}
+
+---@return UPalStaticItemDataBase
+function UPalStaticItemDataBase:get() end
 
 ---@param DynamicItemData UPalDynamicItemDataBase
 ---@param WorldContextObject UObject
@@ -27811,11 +33049,17 @@ function UPalStaticItemDataBase:GetActorClass() end
 ---@field StaticItemDataAsset UPalStaticItemDataAsset
 UPalStaticItemDataManager = {}
 
+---@return UPalStaticItemDataManager
+function UPalStaticItemDataManager:get() end
+
 
 
 ---@class UPalStaticItemDataTable : UObject
 ---@field DataAsset UPalStaticItemDataAsset
 UPalStaticItemDataTable = {}
+
+---@return UPalStaticItemDataTable
+function UPalStaticItemDataTable:get() end
 
 
 
@@ -27823,6 +33067,9 @@ UPalStaticItemDataTable = {}
 ---@field overInventoryWeightId FGuid
 ---@field targetLogManager UPalLogManager
 UPalStaticLogCollector = {}
+
+---@return UPalStaticLogCollector
+function UPalStaticLogCollector:get() end
 
 function UPalStaticLogCollector:RegisterLogCollectEvent_BP() end
 ---@param PlayerDataStorage UPalPlayerDataStorage
@@ -27839,6 +33086,9 @@ function UPalStaticLogCollector:OnEndedWorldAutoSave(IsSuccess) end
 ---@field StaticSkinMap TMap<FName, UPalSkinDataBase>
 UPalStaticSkinDataAsset = {}
 
+---@return UPalStaticSkinDataAsset
+function UPalStaticSkinDataAsset:get() end
+
 
 
 ---@class UPalStaticWeaponItemData : UPalStaticItemDataBase
@@ -27847,6 +33097,9 @@ UPalStaticSkinDataAsset = {}
 ---@field AttackValue int32
 ---@field DefenseValue int32
 UPalStaticWeaponItemData = {}
+
+---@return UPalStaticWeaponItemData
+function UPalStaticWeaponItemData:get() end
 
 ---@return int32
 function UPalStaticWeaponItemData:GetWeaponDefense() end
@@ -27866,6 +33119,9 @@ function UPalStaticWeaponItemData:GetMaxMagazineSize() end
 ---@field bIsNerverEnd boolean
 UPalStatusBase = {}
 
+---@return UPalStatusBase
+function UPalStatusBase:get() end
+
 ---@param DeltaTime float
 function UPalStatusBase:TickStatus(DeltaTime) end
 function UPalStatusBase:SetHalfDurationTimer() end
@@ -27882,6 +33138,9 @@ function UPalStatusBase:GetOwner() end
 ---@class UPalStatusCollectItem : UPalStatusBase
 ---@field CollectItemInfo FPalStaticItemIdAndNum
 UPalStatusCollectItem = {}
+
+---@return UPalStatusCollectItem
+function UPalStatusCollectItem:get() end
 
 ---@param DeltaTime float
 function UPalStatusCollectItem:TickStatus_Implementation(DeltaTime) end
@@ -27927,6 +33186,9 @@ function UPalStatusCollectItem:CanSpawnItem() end
 ---@field DisableAddStatusIDs TArray<EPalStatusID>
 UPalStatusComponent = {}
 
+---@return UPalStatusComponent
+function UPalStatusComponent:get() end
+
 ---@param StatusId EPalStatusID
 ---@param Param FStatusDynamicParameter
 function UPalStatusComponent:SomeStatus_ToAll(StatusId, Param) end
@@ -27967,6 +33229,9 @@ function UPalStatusComponent:AddStatus(StatusId) end
 ---@class UPalStatusHungerTypeUtility : UBlueprintFunctionLibrary
 UPalStatusHungerTypeUtility = {}
 
+---@return UPalStatusHungerTypeUtility
+function UPalStatusHungerTypeUtility:get() end
+
 ---@param Type EPalStatusHungerType
 ---@return boolean
 function UPalStatusHungerTypeUtility:IsHunger(Type) end
@@ -27974,6 +33239,9 @@ function UPalStatusHungerTypeUtility:IsHunger(Type) end
 
 ---@class UPalStatusLifeSteal : UPalStatusBase
 UPalStatusLifeSteal = {}
+
+---@return UPalStatusLifeSteal
+function UPalStatusLifeSteal:get() end
 
 ---@param Damage int32
 function UPalStatusLifeSteal:OnLifeSteal(Damage) end
@@ -27986,6 +33254,9 @@ function UPalStatusLifeSteal:CalucRecoverPoint(Damage) end
 ---@field IsLocalPlayerOrPal boolean
 ---@field IsPreCliming boolean
 UPalStatus_StaminaControl = {}
+
+---@return UPalStatus_StaminaControl
+function UPalStatus_StaminaControl:get() end
 
 function UPalStatus_StaminaControl:DecreaseStepStamina() end
 ---@param Movement UPalCharacterMovementComponent
@@ -28011,6 +33282,9 @@ function UPalStatus_StaminaControl:DecreaseJumpStamina(Movement) end
 ---@field SupplyCapsuleDropClass TSubclassOf<APalSupplyDropActor>
 ---@field SupplyMeteorDropClass TSubclassOf<APalSupplyDropActor>
 UPalSupplyManager = {}
+
+---@return UPalSupplyManager
+function UPalSupplyManager:get() end
 
 ---@param IncidentSpawner APalRandomIncidentSpawnerBase
 ---@return UPalSupplySpawnerData
@@ -28063,6 +33337,9 @@ function UPalSupplyManager:CompleteIncident(bIsPalSpawner, SpawnerBase) end
 ---@field Transform FTransform
 UPalSupplySpawnerData = {}
 
+---@return UPalSupplySpawnerData
+function UPalSupplySpawnerData:get() end
+
 ---@param InSpawner APalNPCSpawnerBase
 ---@param bPalSpawner boolean
 function UPalSupplySpawnerData:RegisterNPCSpawner(InSpawner, bPalSpawner) end
@@ -28093,6 +33370,9 @@ function UPalSupplySpawnerData:BroadcastDestroyDropActor(InSupplyMapObjectId, bF
 ---@field DefaultStartSE UAkAudioEvent
 ---@field FadeParameter UPalHUDDispatchParameter_FadeWidget
 UPalSyncTeleportComponent = {}
+
+---@return UPalSyncTeleportComponent
+function UPalSyncTeleportComponent:get() end
 
 function UPalSyncTeleportComponent:SyncTeleportPlayerMovedDynamicDelegate__DelegateSignature() end
 ---@param Parameter FPalSyncTeleportRequestParameter
@@ -28127,11 +33407,17 @@ function UPalSyncTeleportComponent:GetTeleportLocation() end
 ---@field IsCancel boolean
 UPalTalkWidgetParameter = {}
 
+---@return UPalTalkWidgetParameter
+function UPalTalkWidgetParameter:get() end
+
 
 
 ---@class UPalTalkWindowWidgetBase : UPalUserWidgetOverlayUI
 ---@field talkSystem UPalNPCTalkSystem
 UPalTalkWindowWidgetBase = {}
+
+---@return UPalTalkWindowWidgetBase
+function UPalTalkWindowWidgetBase:get() end
 
 ---@param choiceTextIDList TArray<FName>
 function UPalTalkWindowWidgetBase:ShowChoice(choiceTextIDList) end
@@ -28168,6 +33454,9 @@ function UPalTalkWindowWidgetBase:AddArgument(Key, Text) end
 ---@field DefaultLockRecipeNameArray TArray<FName>
 ---@field DefaultLockBuildObjectNameArray TArray<FName>
 UPalTechnologyData = {}
+
+---@return UPalTechnologyData
+function UPalTechnologyData:get() end
 
 ---@param UnlockTechnologyName FName
 function UPalTechnologyData:RequestUnlockRecipeTechnology(UnlockTechnologyName) end
@@ -28238,6 +33527,9 @@ function UPalTechnologyData:CheckNewUnlockedFlag_Radial(BuildName) end
 ---@field SelfKeyName FName
 UPalTemperatureComponent = {}
 
+---@return UPalTemperatureComponent
+function UPalTemperatureComponent:get() end
+
 ---@param UniqueName FName
 function UPalTemperatureComponent:RemoveHeatSource(UniqueName) end
 function UPalTemperatureComponent:OnRep_CurrentTemperature() end
@@ -28262,6 +33554,9 @@ function UPalTemperatureComponent:AddHeatSource(UniqueName, HeatLevel) end
 ---@field MaxWidth int32
 UPalTextBlockBase = {}
 
+---@return UPalTextBlockBase
+function UPalTextBlockBase:get() end
+
 ---@param RowName FName
 function UPalTextBlockBase:UpdateRowName(RowName) end
 ---@param IsSuccess boolean
@@ -28285,6 +33580,9 @@ function UPalTextBlockBase:BP_ReflectText() end
 ---@field SleepingPlayers TArray<APalPlayerCharacter>
 ---@field NightSkipTimerHandle FTimerHandle
 UPalTimeManager = {}
+
+---@return UPalTimeManager
+function UPalTimeManager:get() end
 
 function UPalTimeManager:TimerEventDelegate__DelegateSignature() end
 ---@param DeltaTime float
@@ -28344,6 +33642,9 @@ function UPalTimeManager:AddSleepPlayer(Player) end
 ---@field EnableWhenDayTimeFlag FFlagContainer
 UPalTimerPointLightComponent = {}
 
+---@return UPalTimerPointLightComponent
+function UPalTimerPointLightComponent:get() end
+
 ---@param Key FName
 ---@param Enable boolean
 function UPalTimerPointLightComponent:SetEnableWhenDayTime(Key, Enable) end
@@ -28353,6 +33654,9 @@ function UPalTimerPointLightComponent:CheckOtomoPal_AndSetRange(SelfCharacter) e
 
 ---@class UPalToolUtility : UBlueprintFunctionLibrary
 UPalToolUtility = {}
+
+---@return UPalToolUtility
+function UPalToolUtility:get() end
 
 ---@param sourceFileName FString
 ---@param destFileName FString
@@ -28365,6 +33669,9 @@ function UPalToolUtility:CopyFileOverride(sourceFileName, destFileName) end
 ---@field MsgDataTable UDataTable
 ---@field TutorialTriggersDataTable UDataTable
 UPalTutorialManager = {}
+
+---@return UPalTutorialManager
+function UPalTutorialManager:get() end
 
 ---@param TutorialMsg FDataTableRowHandle
 function UPalTutorialManager:TutorialTriggerDelegate__DelegateSignature(TutorialMsg) end
@@ -28379,6 +33686,9 @@ function UPalTutorialManager:TutorialTrigger_Capture(CaptureInfo, CaptureSuccess
 ---@field CachedOrderedQuestSaveData TArray<FPalOrderedQuestSaveData>
 UPalTutorialQuestManager = {}
 
+---@return UPalTutorialQuestManager
+function UPalTutorialQuestManager:get() end
+
 
 
 ---@class UPalTutorialTriggerBase : UObject
@@ -28386,6 +33696,9 @@ UPalTutorialQuestManager = {}
 ---@field CanTriggerMultiple boolean
 ---@field TutorialMsgID FDataTableRowHandle
 UPalTutorialTriggerBase = {}
+
+---@return UPalTutorialTriggerBase
+function UPalTutorialTriggerBase:get() end
 
 ---@return EPalTutorialTriggerType
 function UPalTutorialTriggerBase:GetType() end
@@ -28397,6 +33710,9 @@ function UPalTutorialTriggerBase:GetType() end
 ---@field BuildObjectId FName
 UPalTutorialTrigger_AddItem = {}
 
+---@return UPalTutorialTrigger_AddItem
+function UPalTutorialTrigger_AddItem:get() end
+
 
 
 ---@class UPalTutorialTrigger_Capture : UPalTutorialTriggerBase
@@ -28404,11 +33720,17 @@ UPalTutorialTrigger_AddItem = {}
 ---@field TriggerCount int32
 UPalTutorialTrigger_Capture = {}
 
+---@return UPalTutorialTrigger_Capture
+function UPalTutorialTrigger_Capture:get() end
+
 
 
 ---@class UPalTutorialTrigger_Common : UPalTutorialTriggerBase
 ---@field TriggerType EPalTutorialTriggerConditionType
 UPalTutorialTrigger_Common = {}
+
+---@return UPalTutorialTrigger_Common
+function UPalTutorialTrigger_Common:get() end
 
 
 
@@ -28416,16 +33738,25 @@ UPalTutorialTrigger_Common = {}
 ---@field TriggerType EPalTutorialTriggerConditionType
 UPalTutorialTrigger_Individual = {}
 
+---@return UPalTutorialTrigger_Individual
+function UPalTutorialTrigger_Individual:get() end
+
 
 
 ---@class UPalTutorialTrigger_Respawn : UPalTutorialTriggerBase
 ---@field LocationTypes TArray<EPalLocationType>
 UPalTutorialTrigger_Respawn = {}
 
+---@return UPalTutorialTrigger_Respawn
+function UPalTutorialTrigger_Respawn:get() end
+
 
 
 ---@class UPalUIActionWidgetBase : UCommonActionWidget
 UPalUIActionWidgetBase = {}
+
+---@return UPalUIActionWidgetBase
+function UPalUIActionWidgetBase:get() end
 
 ---@param InputType ECommonInputType
 function UPalUIActionWidgetBase:OverrideInputType(InputType) end
@@ -28441,6 +33772,9 @@ function UPalUIActionWidgetBase:GetLocalizedDisplayText() end
 ---@field OverridePadInputActionName FName
 ---@field OverrideInputType int32
 UPalUIActionWidgetForPlayerInput = {}
+
+---@return UPalUIActionWidgetForPlayerInput
+function UPalUIActionWidgetForPlayerInput:get() end
 
 ---@param newBrush FSlateBrush
 function UPalUIActionWidgetForPlayerInput:UpdateImage(newBrush) end
@@ -28459,6 +33793,9 @@ function UPalUIActionWidgetForPlayerInput:BindInputMethodChangeEvent() end
 
 ---@class UPalUIAimReticleBase : UPalUserWidget
 UPalUIAimReticleBase = {}
+
+---@return UPalUIAimReticleBase
+function UPalUIAimReticleBase:get() end
 
 ---@param HitResult FHitResult
 function UPalUIAimReticleBase:TickDisplayOutline(HitResult) end
@@ -28483,6 +33820,9 @@ function UPalUIAimReticleBase:IsAssignableToHitResult(HitResult, checkCharacterP
 ---@field BaseCampParty UPalUIBaseCampPartyModel
 UPalUIBaseCampManageModel = {}
 
+---@return UPalUIBaseCampManageModel
+function UPalUIBaseCampManageModel:get() end
+
 ---@param SlotIndex int32
 function UPalUIBaseCampManageModel:MoveWaiterToWorker(SlotIndex) end
 ---@param Slot UPalIndividualCharacterSlot
@@ -28497,6 +33837,9 @@ function UPalUIBaseCampManageModel:Initialize(BaseCampId) end
 
 ---@class UPalUIBaseCampPartyModel : UObject
 UPalUIBaseCampPartyModel = {}
+
+---@return UPalUIBaseCampPartyModel
+function UPalUIBaseCampPartyModel:get() end
 
 ---@param DisplayIndex int32
 ---@param PressType EPalItemSlotPressType
@@ -28513,6 +33856,9 @@ function UPalUIBaseCampPartyModel:GetCurrentPageSlots() end
 ---@field lastCheckedBaseCampLevel int32
 ---@field taskChecker UPalBaseCampTaskChecker
 UPalUIBaseCampTaskBase = {}
+
+---@return UPalUIBaseCampTaskBase
+function UPalUIBaseCampTaskBase:get() end
 
 ---@return boolean
 function UPalUIBaseCampTaskBase:TryBaseCampLevelUp() end
@@ -28544,6 +33890,9 @@ function UPalUIBaseCampTaskBase:CheckTask(outChedckedData) end
 ---@class UPalUIBaseCampWaitersModel : UObject
 UPalUIBaseCampWaitersModel = {}
 
+---@return UPalUIBaseCampWaitersModel
+function UPalUIBaseCampWaitersModel:get() end
+
 ---@param DisplayIndex int32
 ---@param PressType EPalItemSlotPressType
 function UPalUIBaseCampWaitersModel:SelectHandleSlot(DisplayIndex, PressType) end
@@ -28555,6 +33904,9 @@ function UPalUIBaseCampWaitersModel:GetCurrentPageSlots() end
 
 ---@class UPalUIBaseCampWorkFixedAssignInfoUtility : UBlueprintFunctionLibrary
 UPalUIBaseCampWorkFixedAssignInfoUtility = {}
+
+---@return UPalUIBaseCampWorkFixedAssignInfoUtility
+function UPalUIBaseCampWorkFixedAssignInfoUtility:get() end
 
 ---@param Info FPalUIBaseCampWorkFixedAssignInfo
 ---@return EPalWorkType
@@ -28579,6 +33931,9 @@ function UPalUIBaseCampWorkFixedAssignInfoUtility:GetAssignableNum(Info) end
 ---@class UPalUIBaseCampWorkFixedAssignManageModel : UObject
 ---@field OnUpdateWorkInBaseCampDelegate FPalUIBaseCampWorkFixedAssignManageModelOnUpdateWorkInBaseCampDelegate
 UPalUIBaseCampWorkFixedAssignManageModel = {}
+
+---@return UPalUIBaseCampWorkFixedAssignManageModel
+function UPalUIBaseCampWorkFixedAssignManageModel:get() end
 
 ---@param SortType EPalUIFixedAssignManageListSortType
 ---@param OriginalArray TArray<FPalUIBaseCampWorkFixedAssignInfo>
@@ -28614,6 +33969,9 @@ function UPalUIBaseCampWorkFixedAssignManageModel:GetFixedAssignableWorks(OutWor
 ---@field CurrentDisplayBaseCampId FGuid
 UPalUIBaseCampWorkerListModel = {}
 
+---@return UPalUIBaseCampWorkerListModel
+function UPalUIBaseCampWorkerListModel:get() end
+
 ---@param Model UPalUIBaseCampWorkerListModel
 function UPalUIBaseCampWorkerListModel:UpdatePageDelegate__DelegateSignature(Model) end
 ---@param DisplayIndex int32
@@ -28636,6 +33994,9 @@ function UPalUIBaseCampWorkerListModel:GetBaseCampId() end
 ---@field OnUpdatePageDelegate FPalUIBaseCampWorkersModelOnUpdatePageDelegate
 ---@field CurrentPageIndex int32
 UPalUIBaseCampWorkersModel = {}
+
+---@return UPalUIBaseCampWorkersModel
+function UPalUIBaseCampWorkersModel:get() end
 
 ---@param Model UPalUIBaseCampWorkersModel
 function UPalUIBaseCampWorkersModel:UpdatePageDelegate__DelegateSignature(Model) end
@@ -28662,6 +34023,9 @@ function UPalUIBaseCampWorkersModel:GetBaseCampId() end
 ---@field ForceBuildPalBoxTextId FName
 UPalUIBuildModel = {}
 
+---@return UPalUIBuildModel
+function UPalUIBuildModel:get() end
+
 ---@param LastSelectedIndex int32
 ---@param bFromRadialMenu boolean
 function UPalUIBuildModel:StartDismantleMode(LastSelectedIndex, bFromRadialMenu) end
@@ -28681,6 +34045,9 @@ function UPalUIBuildModel:FinishDismantleMode() end
 ---@field BuildProcess UPalBuildProcess
 UPalUIBuildProgressWorldHUD = {}
 
+---@return UPalUIBuildProgressWorldHUD
+function UPalUIBuildProgressWorldHUD:get() end
+
 ---@param Work UPalWorkProgress
 function UPalUIBuildProgressWorldHUD:SetProgress(Work) end
 ---@param TargetWork UPalWorkBase
@@ -28694,6 +34061,9 @@ function UPalUIBuildProgressWorldHUD:BindUpdateAssingedCharacterDelegate() end
 ---@class UPalUIBuilding : UPalUserWidgetStackableUI
 UPalUIBuilding = {}
 
+---@return UPalUIBuilding
+function UPalUIBuilding:get() end
+
 ---@return boolean
 function UPalUIBuilding:IsExistBaseCamp() end
 function UPalUIBuilding:BuildObjectSuccessed() end
@@ -28704,6 +34074,9 @@ function UPalUIBuilding:BuildObjectFailed(ResultIntValue) end
 ---@class UPalUIBuildingModel : UObject
 ---@field BuildObjectId FName
 UPalUIBuildingModel = {}
+
+---@return UPalUIBuildingModel
+function UPalUIBuildingModel:get() end
 
 ---@return boolean
 function UPalUIBuildingModel:ShouldDisplayWarningForBuildObject() end
@@ -28738,6 +34111,9 @@ function UPalUIBuildingModel:BuildObject(bContinuously) end
 ---@field BuildObjectId int32
 UPalUIBuildingParameter = {}
 
+---@return UPalUIBuildingParameter
+function UPalUIBuildingParameter:get() end
+
 
 
 ---@class UPalUICharacterDisplayModel : UObject
@@ -28745,6 +34121,9 @@ UPalUIBuildingParameter = {}
 ---@field DisplaySlots TArray<UPalIndividualCharacterSlot>
 ---@field NotSelectableIndividualIds TArray<FPalInstanceID>
 UPalUICharacterDisplayModel = {}
+
+---@return UPalUICharacterDisplayModel
+function UPalUICharacterDisplayModel:get() end
 
 ---@param Model UPalUICharacterDisplayModel
 function UPalUICharacterDisplayModel:UpdateDelegate__DelegateSignature(Model) end
@@ -28759,6 +34138,9 @@ function UPalUICharacterDisplayModel:GetDisplaySlots(OutSlots) end
 
 ---@class UPalUICharacterHPGaugeBase : UPalUserWidget
 UPalUICharacterHPGaugeBase = {}
+
+---@return UPalUICharacterHPGaugeBase
+function UPalUICharacterHPGaugeBase:get() end
 
 function UPalUICharacterHPGaugeBase:UpdateVisibility() end
 function UPalUICharacterHPGaugeBase:UpdateText() end
@@ -28775,6 +34157,9 @@ function UPalUICharacterHPGaugeBase:OnRequestClose() end
 ---@class UPalUICharacterMakeBase : UPalUserWidgetOverlayUI
 UPalUICharacterMakeBase = {}
 
+---@return UPalUICharacterMakeBase
+function UPalUICharacterMakeBase:get() end
+
 ---@param NewPlayerName FString
 function UPalUICharacterMakeBase:RequestChangePlayerName(NewPlayerName) end
 ---@param OutMakeInfo FPalPlayerDataCharacterMakeInfo
@@ -28789,6 +34174,9 @@ function UPalUICharacterMakeBase:ApplyMakeInfoToPlayerData(MakeInfo) end
 ---@field CachedSkinInfoMap TMap<FName, FPalUICharacterSkinDisplayInfo>
 UPalUICharacterSkinChanger = {}
 
+---@return UPalUICharacterSkinChanger
+function UPalUICharacterSkinChanger:get() end
+
 function UPalUICharacterSkinChanger:UpdateSkinInfoDelegate__DelegateSignature() end
 ---@param TargetSlot UPalIndividualCharacterSlot
 function UPalUICharacterSkinChanger:RequestRemoveSkin(TargetSlot) end
@@ -28802,6 +34190,9 @@ function UPalUICharacterSkinChanger:GetCachedSkinInfo() end
 
 ---@class UPalUICharacterStatus : UPalUserWidgetOverlayUI
 UPalUICharacterStatus = {}
+
+---@return UPalUICharacterStatus
+function UPalUICharacterStatus:get() end
 
 ---@param targetHandle UPalIndividualCharacterHandle
 function UPalUICharacterStatus:ToggleFavoritePal(targetHandle) end
@@ -28827,6 +34218,9 @@ function UPalUICharacterStatus:AddActiveSkill(targetHandle, newWazaID) end
 ---@field FilteringWaiterArray TArray<UPalChatFilteringWaiter>
 UPalUIChat = {}
 
+---@return UPalUIChat
+function UPalUIChat:get() end
+
 ---@param Message FPalChatMessage
 function UPalUIChat:OnRecievedFilteredMessageDelegate__DelegateSignature(Message) end
 ---@param Message FPalChatMessage
@@ -28839,6 +34233,9 @@ function UPalUIChat:OnFilteredChat(Waiter, Message) end
 ---@class UPalUICompassIconBase : UPalUserWidget
 UPalUICompassIconBase = {}
 
+---@return UPalUICompassIconBase
+function UPalUICompassIconBase:get() end
+
 
 ---@class UPalUIConvertItemModel : UObject
 ---@field OnUpdateCanTransportOut FPalUIConvertItemModelOnUpdateCanTransportOut
@@ -28846,6 +34243,9 @@ UPalUICompassIconBase = {}
 ---@field WeakConvertItemModel TWeakObjectPtr<UPalMapObjectConvertItemModel>
 ---@field bCanTransportOut boolean
 UPalUIConvertItemModel = {}
+
+---@return UPalUIConvertItemModel
+function UPalUIConvertItemModel:get() end
 
 ---@param bOn boolean
 function UPalUIConvertItemModel:UpdateProductSetting_TransportToStorage(bOn) end
@@ -28871,6 +34271,9 @@ function UPalUIConvertItemModel:CancelProduct() end
 ---@field nowSeq EPalDamageTextSeq
 ---@field TargetLocation FVector
 UPalUIDamageTextBase = {}
+
+---@return UPalUIDamageTextBase
+function UPalUIDamageTextBase:get() end
 
 ---@param targetWorldLocation FVector
 function UPalUIDamageTextBase:UpdatePosition(targetWorldLocation) end
@@ -28899,6 +34302,9 @@ function UPalUIDamageTextBase:OnRequestClose() end
 ---@field delayGaugeProgressPerSecond float
 UPalUIDelayGaugeCalculator = {}
 
+---@return UPalUIDelayGaugeCalculator
+function UPalUIDelayGaugeCalculator:get() end
+
 ---@param DeltaTime float
 function UPalUIDelayGaugeCalculator:Update(DeltaTime) end
 function UPalUIDelayGaugeCalculator:StartDelayGaugeTimerDelegate__DelegateSignature() end
@@ -28915,9 +34321,15 @@ function UPalUIDelayGaugeCalculator:EndDelayGaugeDelegate__DelegateSignature() e
 ---@class UPalUIDialogBase : UPalUserWidgetOverlayUI
 UPalUIDialogBase = {}
 
+---@return UPalUIDialogBase
+function UPalUIDialogBase:get() end
+
 
 ---@class UPalUIDismantling : UPalUserWidgetStackableUI
 UPalUIDismantling = {}
+
+---@return UPalUIDismantling
+function UPalUIDismantling:get() end
 
 function UPalUIDismantling:DismantleObjectSuccessed() end
 function UPalUIDismantling:DismantleObjectFailed() end
@@ -28926,6 +34338,9 @@ function UPalUIDismantling:DismantleObjectFailed() end
 ---@class UPalUIDismantlingModel : UObject
 ---@field BuildObjectId FName
 UPalUIDismantlingModel = {}
+
+---@return UPalUIDismantlingModel
+function UPalUIDismantlingModel:get() end
 
 function UPalUIDismantlingModel:Setup() end
 ---@param Container UPalItemContainer
@@ -28939,9 +34354,15 @@ function UPalUIDismantlingModel:DismantleObject(bContinuously) end
 ---@class UPalUIFixedWorkAssignManage : UPalUserWidgetOverlayUI
 UPalUIFixedWorkAssignManage = {}
 
+---@return UPalUIFixedWorkAssignManage
+function UPalUIFixedWorkAssignManage:get() end
+
 
 ---@class UPalUIGameOver : UPalUserWidgetOverlayUI
 UPalUIGameOver = {}
+
+---@return UPalUIGameOver
+function UPalUIGameOver:get() end
 
 ---@return boolean
 function UPalUIGameOver:IsExistRespawnLocation() end
@@ -28949,6 +34370,9 @@ function UPalUIGameOver:IsExistRespawnLocation() end
 
 ---@class UPalUIGuildMenu : UPalUserWidgetOverlayUI
 UPalUIGuildMenu = {}
+
+---@return UPalUIGuildMenu
+function UPalUIGuildMenu:get() end
 
 function UPalUIGuildMenu:RequestExitGuild() end
 ---@param NewGuildName FString
@@ -28990,6 +34414,9 @@ function UPalUIGuildMenu:CanExitGuild() end
 ---@class UPalUIHUDLayoutBase : UCommonActivatableWidget
 UPalUIHUDLayoutBase = {}
 
+---@return UPalUIHUDLayoutBase
+function UPalUIHUDLayoutBase:get() end
+
 ---@param changedVisibility ESlateVisibility
 function UPalUIHUDLayoutBase:VisibilityOverride(changedVisibility) end
 ---@param Widget UPalUserWidgetWorldHUD
@@ -29006,6 +34433,9 @@ function UPalUIHUDLayoutBase:AddHUD(Widget, ZOrder) end
 ---@class UPalUIInGameGeneralDispatchEventReciever : UPalUserWidget
 UPalUIInGameGeneralDispatchEventReciever = {}
 
+---@return UPalUIInGameGeneralDispatchEventReciever
+function UPalUIInGameGeneralDispatchEventReciever:get() end
+
 ---@param LastSelectedIndex int32
 function UPalUIInGameGeneralDispatchEventReciever:OpenDismantlingUIFromRadialMenu(LastSelectedIndex) end
 function UPalUIInGameGeneralDispatchEventReciever:OpenDismantlingUI() end
@@ -29020,6 +34450,9 @@ function UPalUIInGameGeneralDispatchEventReciever:CloseBuildingUI() end
 ---@class UPalUIInGameInputListener : UPalUserWidgetStackableUI
 UPalUIInGameInputListener = {}
 
+---@return UPalUIInGameInputListener
+function UPalUIInGameInputListener:get() end
+
 ---@param SelectedIndex int32
 function UPalUIInGameInputListener:OpenBuildRadialMenuWithSelectedIndex(SelectedIndex) end
 ---@param BuildObjectId FName
@@ -29031,6 +34464,9 @@ function UPalUIInGameInputListener:OpenBuildMenu(BuildObjectTypeA) end
 ---@class UPalUIInGameMainMenuBuildModel : UObject
 UPalUIInGameMainMenuBuildModel = {}
 
+---@return UPalUIInGameMainMenuBuildModel
+function UPalUIInGameMainMenuBuildModel:get() end
+
 function UPalUIInGameMainMenuBuildModel:Setup() end
 ---@param Container UPalItemContainer
 function UPalUIInGameMainMenuBuildModel:OnUpdateInventory(Container) end
@@ -29040,13 +34476,22 @@ function UPalUIInGameMainMenuBuildModel:Dispose() end
 ---@class UPalUIInGameMainMenuInventoryModel : UObject
 UPalUIInGameMainMenuInventoryModel = {}
 
+---@return UPalUIInGameMainMenuInventoryModel
+function UPalUIInGameMainMenuInventoryModel:get() end
+
 
 ---@class UPalUIInGameMainMenuModel : UObject
 UPalUIInGameMainMenuModel = {}
 
+---@return UPalUIInGameMainMenuModel
+function UPalUIInGameMainMenuModel:get() end
+
 
 ---@class UPalUIInputGuard : UPalUserWidget
 UPalUIInputGuard = {}
+
+---@return UPalUIInputGuard
+function UPalUIInputGuard:get() end
 
 function UPalUIInputGuard:OnTriggerReleaseGuardInput() end
 
@@ -29064,6 +34509,9 @@ function UPalUIInputGuard:OnTriggerReleaseGuardInput() end
 ---@field WeakBaseCampWorkerDirectorModelArray TArray<TWeakObjectPtr<UPalMapObjectBaseCampWorkerDirectorModel>>
 ---@field WeakBaseCampWorkHardModelArray TArray<TWeakObjectPtr<UPalMapObjectBaseCampPassiveWorkHardModel>>
 UPalUIInsideBaseCampCanvas = {}
+
+---@return UPalUIInsideBaseCampCanvas
+function UPalUIInsideBaseCampCanvas:get() end
 
 ---@param Model UPalBaseCampModel
 function UPalUIInsideBaseCampCanvas:UnregisterTaskProgressEvent(Model) end
@@ -29111,6 +34559,9 @@ function UPalUIInsideBaseCampCanvas:CheckInsidePalBox() end
 ---@class UPalUIInventoryEquipment : UPalUserWidget
 UPalUIInventoryEquipment = {}
 
+---@return UPalUIInventoryEquipment
+function UPalUIInventoryEquipment:get() end
+
 function UPalUIInventoryEquipment:ToggleHeadEquipVisible() end
 ---@param SlotA UPalItemSlot
 ---@param SlotB UPalItemSlot
@@ -29132,6 +34583,9 @@ function UPalUIInventoryEquipment:ChangeLocalPlayerNickname(NewName) end
 ---@field tmpLiftedItemSlotId FPalItemSlotId
 ---@field tmpLiftedItemAndNum FPalItemAndNum
 UPalUIInventoryModel = {}
+
+---@return UPalUIInventoryModel
+function UPalUIInventoryModel:get() end
 
 function UPalUIInventoryModel:UpdateContainerContentDelegate__DelegateSignature() end
 ---@param fromSlot UPalItemSlot
@@ -29183,11 +34637,17 @@ function UPalUIInventoryModel:CheckLiftItemTypeA(checkType) end
 ---@class UPalUIItemBoxModel : UObject
 UPalUIItemBoxModel = {}
 
+---@return UPalUIItemBoxModel
+function UPalUIItemBoxModel:get() end
+
 
 ---@class UPalUIItemChestFilterModel : UObject
 ---@field OnUpdateFilterPreferenceDelegate FPalUIItemChestFilterModelOnUpdateFilterPreferenceDelegate
 ---@field WeakTargetModel TWeakObjectPtr<UPalMapObjectConcreteModelBase>
 UPalUIItemChestFilterModel = {}
+
+---@return UPalUIItemChestFilterModel
+function UPalUIItemChestFilterModel:get() end
 
 ---@param InConcreteModel UPalMapObjectConcreteModelBase
 function UPalUIItemChestFilterModel:Setup(InConcreteModel) end
@@ -29208,15 +34668,24 @@ function UPalUIItemChestFilterModel:Dispose() end
 ---@class UPalUIItemPossessStatusIndicator : UPalUserWidgetWorldHUD
 UPalUIItemPossessStatusIndicator = {}
 
+---@return UPalUIItemPossessStatusIndicator
+function UPalUIItemPossessStatusIndicator:get() end
+
 
 ---@class UPalUIItemPossessStatusIndicatorParameter : UPalHUDDispatchParameterBase
 ---@field TargetCharacter UPalIndividualCharacterHandle
 UPalUIItemPossessStatusIndicatorParameter = {}
 
+---@return UPalUIItemPossessStatusIndicatorParameter
+function UPalUIItemPossessStatusIndicatorParameter:get() end
+
 
 
 ---@class UPalUIItemShopBase : UPalUserWidgetOverlayUI
 UPalUIItemShopBase = {}
+
+---@return UPalUIItemShopBase
+function UPalUIItemShopBase:get() end
 
 ---@param buyProductID FGuid
 ---@param stealNum int32
@@ -29247,6 +34716,9 @@ function UPalUIItemShopBase:GetMyShop(OutShop) end
 ---@field LastSelectedRegionName FString
 ---@field SaveConfigCategoryName FString
 UPalUIJoinGameBase = {}
+
+---@return UPalUIJoinGameBase
+function UPalUIJoinGameBase:get() end
 
 function UPalUIJoinGameBase:SaveConfigValue() end
 function UPalUIJoinGameBase:RequestOfficialServerIPRange() end
@@ -29283,6 +34755,9 @@ function UPalUIJoinGameBase:CollectServerDisplayInfo(CollectInfo, OutServerInfo)
 ---@field CahcedInputInviteCode FString
 UPalUIJoinGameInputCodeBase = {}
 
+---@return UPalUIJoinGameInputCodeBase
+function UPalUIJoinGameInputCodeBase:get() end
+
 ---@param InputPassword FString
 function UPalUIJoinGameInputCodeBase:VerifyPassword(InputPassword) end
 ---@param InputCode FString
@@ -29312,6 +34787,9 @@ function UPalUIJoinGameInputCodeBase:OnCompletedFindSessions(IsSuccess, Results,
 ---@field CharacterSlot UPalIndividualCharacterSlot
 UPalUILiftSlotModel = {}
 
+---@return UPalUILiftSlotModel
+function UPalUILiftSlotModel:get() end
+
 ---@param SlotID FPalItemSlotId
 ---@param Type EPalItemSlotPressType
 function UPalUILiftSlotModel:SelectItemSlot(SlotID, Type) end
@@ -29340,6 +34818,9 @@ function UPalUILiftSlotModel:IsLift() end
 ---@field draggedTargetContainerType EPalPlayerInventoryType
 UPalUILoadOutModel = {}
 
+---@return UPalUILoadOutModel
+function UPalUILoadOutModel:get() end
+
 ---@param targetType EPalPlayerInventoryType
 ---@param Container UPalItemContainer
 ---@return boolean
@@ -29355,6 +34836,9 @@ function UPalUILoadOutModel:CanSetItem(ItemData) end
 ---@class UPalUILocalWorldSelectBase : UPalUserWidgetOverlayUI
 ---@field LoadedBaseInfoMap TMap<FString, FPalWorldBaseInfoData>
 UPalUILocalWorldSelectBase = {}
+
+---@return UPalUILocalWorldSelectBase
+function UPalUILocalWorldSelectBase:get() end
 
 ---@param WorldSaveDirectoryName FString
 ---@param WorldName FString
@@ -29374,17 +34858,29 @@ function UPalUILocalWorldSelectBase:DeleteWorld(WorldSaveDirectoryName) end
 ---@class UPalUIManager : UObject
 UPalUIManager = {}
 
+---@return UPalUIManager
+function UPalUIManager:get() end
+
 
 ---@class UPalUIManagerSubsystem : UGameUIManagerSubsystem
 UPalUIManagerSubsystem = {}
+
+---@return UPalUIManagerSubsystem
+function UPalUIManagerSubsystem:get() end
 
 
 ---@class UPalUIMapObjectHPWorldHUD : UPalUserWidgetWorldHUD
 UPalUIMapObjectHPWorldHUD = {}
 
+---@return UPalUIMapObjectHPWorldHUD
+function UPalUIMapObjectHPWorldHUD:get() end
+
 
 ---@class UPalUIMapObjectStatusIndicatorBase : UPalUserWidgetWorldHUD
 UPalUIMapObjectStatusIndicatorBase = {}
+
+---@return UPalUIMapObjectStatusIndicatorBase
+function UPalUIMapObjectStatusIndicatorBase:get() end
 
 ---@return EPalWorkSuitability
 function UPalUIMapObjectStatusIndicatorBase:GetWorkSuitability() end
@@ -29393,12 +34889,18 @@ function UPalUIMapObjectStatusIndicatorBase:GetWorkSuitability() end
 ---@class UPalUIMapObjectStatusIndicatorParameterBase : UPalHUDDispatchParameterBase
 UPalUIMapObjectStatusIndicatorParameterBase = {}
 
+---@return UPalUIMapObjectStatusIndicatorParameterBase
+function UPalUIMapObjectStatusIndicatorParameterBase:get() end
+
 ---@return UPalMapObjectConcreteModelBase
 function UPalUIMapObjectStatusIndicatorParameterBase:GetConcreteModel() end
 
 
 ---@class UPalUINPCHPGaugeCanvasBase : UPalUserWidget
 UPalUINPCHPGaugeCanvasBase = {}
+
+---@return UPalUINPCHPGaugeCanvasBase
+function UPalUINPCHPGaugeCanvasBase:get() end
 
 
 ---@class UPalUIOffScreenLoupeBase : UPalUserWidget
@@ -29412,6 +34914,9 @@ UPalUINPCHPGaugeCanvasBase = {}
 ---@field calcedScreenPosition FVector2D
 ---@field widgetSize FVector2D
 UPalUIOffScreenLoupeBase = {}
+
+---@return UPalUIOffScreenLoupeBase
+function UPalUIOffScreenLoupeBase:get() end
 
 ---@param NewVisibility ESlateVisibility
 function UPalUIOffScreenLoupeBase:SetOverrideVisibility(NewVisibility) end
@@ -29435,6 +34940,9 @@ function UPalUIOffScreenLoupeBase:CalcScreenPosition() end
 ---@field OnUpdateSlotDelegate FPalUIOtomoListModelOnUpdateSlotDelegate
 UPalUIOtomoListModel = {}
 
+---@return UPalUIOtomoListModel
+function UPalUIOtomoListModel:get() end
+
 ---@param Model UPalUIOtomoListModel
 function UPalUIOtomoListModel:UpdateSlotDelegate__DelegateSignature(Model) end
 ---@param Model UPalUIOtomoListModel
@@ -29454,6 +34962,9 @@ function UPalUIOtomoListModel:GetContainerId() end
 
 ---@class UPalUIPalBoxBase : UPalUserWidgetOverlayUI
 UPalUIPalBoxBase = {}
+
+---@return UPalUIPalBoxBase
+function UPalUIPalBoxBase:get() end
 
 ---@param MoveSlot UPalIndividualCharacterSlot
 function UPalUIPalBoxBase:TryMoveToOtomo(MoveSlot) end
@@ -29491,6 +35002,9 @@ function UPalUIPalBoxBase:CancelLift() end
 ---@field CurrentPageIndex int32
 UPalUIPalBoxModel = {}
 
+---@return UPalUIPalBoxModel
+function UPalUIPalBoxModel:get() end
+
 ---@param Model UPalUIPalBoxModel
 function UPalUIPalBoxModel:UpdatePageDelegate__DelegateSignature(Model) end
 function UPalUIPalBoxModel:ToPrevPage() end
@@ -29509,6 +35023,9 @@ function UPalUIPalBoxModel:GetCurrentPageSlots() end
 ---@class UPalUIPalBoxSortWindow : UPalUserWidgetOverlayUI
 UPalUIPalBoxSortWindow = {}
 
+---@return UPalUIPalBoxSortWindow
+function UPalUIPalBoxSortWindow:get() end
+
 ---@param SortInfo FPalCharacterContainerSortInfo
 function UPalUIPalBoxSortWindow:RequestSort(SortInfo) end
 
@@ -29521,6 +35038,9 @@ function UPalUIPalBoxSortWindow:RequestSort(SortInfo) end
 ---@field BaseCampPartyClass TSubclassOf<UPalUIBaseCampPartyModel>
 ---@field BaseCampParty UPalUIBaseCampPartyModel
 UPalUIPalBoxTerminalManageModel = {}
+
+---@return UPalUIPalBoxTerminalManageModel
+function UPalUIPalBoxTerminalManageModel:get() end
 
 ---@param Slot UPalIndividualCharacterSlot
 function UPalUIPalBoxTerminalManageModel:MoveSlotToWorker(Slot) end
@@ -29543,6 +35063,9 @@ function UPalUIPalBoxTerminalManageModel:Initialize(BaseCampId) end
 ---@field PalStorageModel UPalUIPalStorageModel
 ---@field SelectMode EPalUIPalCharacterRankUpSelectMode
 UPalUIPalCharacterRankUpModel = {}
+
+---@return UPalUIPalCharacterRankUpModel
+function UPalUIPalCharacterRankUpModel:get() end
 
 ---@param Handle UPalIndividualCharacterHandle
 ---@return boolean
@@ -29601,13 +35124,22 @@ function UPalUIPalCharacterRankUpModel:CalcRankByCurrentSelectForUI(OutToRank, O
 ---@class UPalUIPalFarmSelectCropModel : UObject
 UPalUIPalFarmSelectCropModel = {}
 
+---@return UPalUIPalFarmSelectCropModel
+function UPalUIPalFarmSelectCropModel:get() end
+
 
 ---@class UPalUIPalFoodBoxModel : UObject
 UPalUIPalFoodBoxModel = {}
 
+---@return UPalUIPalFoodBoxModel
+function UPalUIPalFoodBoxModel:get() end
+
 
 ---@class UPalUIPalShopBase : UPalUserWidgetOverlayUI
 UPalUIPalShopBase = {}
+
+---@return UPalUIPalShopBase
+function UPalUIPalShopBase:get() end
 
 function UPalUIPalShopBase:UpdateLocalLostPalProduct() end
 ---@param SellPalSlots TArray<UPalIndividualCharacterSlot>
@@ -29633,6 +35165,9 @@ function UPalUIPalShopBase:GetMyShop(OutShop) end
 ---@field PalStorageManageRight UPalUIPalStorageManageRightModel
 UPalUIPalStorageManageModel = {}
 
+---@return UPalUIPalStorageManageModel
+function UPalUIPalStorageManageModel:get() end
+
 ---@param Slot UPalIndividualCharacterSlot
 function UPalUIPalStorageManageModel:MoveSlotToWorker(Slot) end
 ---@param Slot UPalIndividualCharacterSlot
@@ -29655,6 +35190,9 @@ function UPalUIPalStorageManageModel:Initialize(InOwnerBaseCampId) end
 ---@field OtomoList UPalUIOtomoListModel
 UPalUIPalStorageManageRightModel = {}
 
+---@return UPalUIPalStorageManageRightModel
+function UPalUIPalStorageManageRightModel:get() end
+
 ---@param Model UPalUIPalStorageManageRightModel
 function UPalUIPalStorageManageRightModel:UpdatePageDelegate__DelegateSignature(Model) end
 function UPalUIPalStorageManageRightModel:ToPrevPage() end
@@ -29670,6 +35208,9 @@ function UPalUIPalStorageManageRightModel:CanMoveToNext() end
 ---@field CurrentPageIndex int32
 ---@field DisplayModel UPalUICharacterDisplayModel
 UPalUIPalStorageModel = {}
+
+---@return UPalUIPalStorageModel
+function UPalUIPalStorageModel:get() end
 
 ---@param Model UPalUIPalStorageModel
 function UPalUIPalStorageModel:UpdatePageDelegate__DelegateSignature(Model) end
@@ -29697,15 +35238,24 @@ function UPalUIPalStorageModel:CanMoveToNext() end
 ---@field displayInfoArray TArray<FPalUIPaldex_DisplayInfo>
 UPalUIPaldex = {}
 
+---@return UPalUIPaldex
+function UPalUIPaldex:get() end
+
 function UPalUIPaldex:CreateDisplayInfo() end
 
 
 ---@class UPalUIPickingGame : UPalUserWidgetOverlayUI
 UPalUIPickingGame = {}
 
+---@return UPalUIPickingGame
+function UPalUIPickingGame:get() end
+
 
 ---@class UPalUIPlayerEquipment : UPalUserWidgetOverlayUI
 UPalUIPlayerEquipment = {}
+
+---@return UPalUIPlayerEquipment
+function UPalUIPlayerEquipment:get() end
 
 ---@param SlotA UPalItemSlot
 ---@param SlotB UPalItemSlot
@@ -29726,6 +35276,9 @@ function UPalUIPlayerEquipment:RemoveEquipment(slotType, toSlot) end
 ---@class UPalUIPlayerRadialMenuBase : UPalUserWidget
 UPalUIPlayerRadialMenuBase = {}
 
+---@return UPalUIPlayerRadialMenuBase
+function UPalUIPlayerRadialMenuBase:get() end
+
 ---@param itemSlotId FPalItemSlotId
 ---@param itemNum int32
 function UPalUIPlayerRadialMenuBase:SelectedFeed(itemSlotId, itemNum) end
@@ -29742,6 +35295,9 @@ function UPalUIPlayerRadialMenuBase:OpenOtomoFeedInventory() end
 ---@field ProductNum int32
 ---@field WeakEnergyModule TWeakObjectPtr<UPalMapObjectEnergyModule>
 UPalUIProductSettingModel = {}
+
+---@return UPalUIProductSettingModel
+function UPalUIProductSettingModel:get() end
 
 ---@param Model UPalUIProductSettingModel
 function UPalUIProductSettingModel:UpdateSettingDelegate__DelegateSignature(Model) end
@@ -29792,6 +35348,9 @@ function UPalUIProductSettingModel:CalcConsumeEnergy() end
 ---@field menuAreaEndRadian TArray<float>
 UPalUIRadialMenuWidgetBase = {}
 
+---@return UPalUIRadialMenuWidgetBase
+function UPalUIRadialMenuWidgetBase:get() end
+
 function UPalUIRadialMenuWidgetBase:UpdateSelectedIndex_ForPad() end
 ---@param MousePosition FVector2D
 ---@param CenterPosition FVector2D
@@ -29815,9 +35374,15 @@ function UPalUIRadialMenuWidgetBase:BuildRadialMenuWidget() end
 ---@class UPalUIRecipeTechnologyDetailButton : UPalUITechnologyDetailButton
 UPalUIRecipeTechnologyDetailButton = {}
 
+---@return UPalUIRecipeTechnologyDetailButton
+function UPalUIRecipeTechnologyDetailButton:get() end
+
 
 ---@class UPalUIRecoverPalBase : UPalUserWidgetOverlayUI
 UPalUIRecoverPalBase = {}
+
+---@return UPalUIRecoverPalBase
+function UPalUIRecoverPalBase:get() end
 
 ---@param TargetSlot UPalIndividualCharacterSlot
 ---@param PressType EPalItemSlotPressType
@@ -29827,9 +35392,15 @@ function UPalUIRecoverPalBase:SelectCharacterSlot(TargetSlot, PressType) end
 ---@class UPalUIRecoverPalStatusIndicator : UPalUIMapObjectStatusIndicatorBase
 UPalUIRecoverPalStatusIndicator = {}
 
+---@return UPalUIRecoverPalStatusIndicator
+function UPalUIRecoverPalStatusIndicator:get() end
+
 
 ---@class UPalUIRecoverPalStatusIndicatorParameter : UPalUIMapObjectStatusIndicatorParameterBase
 UPalUIRecoverPalStatusIndicatorParameter = {}
+
+---@return UPalUIRecoverPalStatusIndicatorParameter
+function UPalUIRecoverPalStatusIndicatorParameter:get() end
 
 ---@param ConcreteModel UPalMapObjectRecoverOtomoModel
 ---@return boolean
@@ -29839,6 +35410,9 @@ function UPalUIRecoverPalStatusIndicatorParameter:TryGetConcreteModel(ConcreteMo
 ---@class UPalUIRepairItemBase : UPalUserWidgetOverlayUI
 ---@field RepairItemModel UPalMapObjectRepairItemModel
 UPalUIRepairItemBase = {}
+
+---@return UPalUIRepairItemBase
+function UPalUIRepairItemBase:get() end
 
 ---@param TargetItemSlotArray TArray<UPalItemSlot>
 function UPalUIRepairItemBase:SetMaxDurabilityForce(TargetItemSlotArray) end
@@ -29857,6 +35431,9 @@ function UPalUIRepairItemBase:CollectRepairableSlot(OutRepairableSlots) end
 ---@class UPalUISelectItemInventoryBase : UPalUserWidgetOverlayUI
 UPalUISelectItemInventoryBase = {}
 
+---@return UPalUISelectItemInventoryBase
+function UPalUISelectItemInventoryBase:get() end
+
 
 ---@class UPalUISelectNumParameter : UPalHUDDispatchParameterBase
 ---@field complateCallBack FPalUISelectNumParameterComplateCallBack
@@ -29866,6 +35443,9 @@ UPalUISelectItemInventoryBase = {}
 ---@field defaultNum int32
 ---@field Position FVector2D
 UPalUISelectNumParameter = {}
+
+---@return UPalUISelectNumParameter
+function UPalUISelectNumParameter:get() end
 
 ---@param Result EPalUISelectNumResult
 ---@param selectedNum int32
@@ -29877,15 +35457,24 @@ function UPalUISelectNumParameter:InvokeChangedNumCallback(selectedNum) end
 ---@class UPalUISelectNumWidgetBase : UPalUserWidgetOverlayUI
 UPalUISelectNumWidgetBase = {}
 
+---@return UPalUISelectNumWidgetBase
+function UPalUISelectNumWidgetBase:get() end
+
 
 ---@class UPalUIShopInventoryModel : UPalUIInventoryModel
 UPalUIShopInventoryModel = {}
+
+---@return UPalUIShopInventoryModel
+function UPalUIShopInventoryModel:get() end
 
 
 ---@class UPalUIStatusModel : UObject
 ---@field OnChangeSelectedIndexDelegate FPalUIStatusModelOnChangeSelectedIndexDelegate
 ---@field palHandles TArray<UPalIndividualCharacterHandle>
 UPalUIStatusModel = {}
+
+---@return UPalUIStatusModel
+function UPalUIStatusModel:get() end
 
 ---@param Index int32
 function UPalUIStatusModel:OnClickedPalIcon(Index) end
@@ -29971,13 +35560,22 @@ function UPalUIStatusModel:ChangedIndex__DelegateSignature() end
 ---@class UPalUITechnologyDetailButton : UPalUserWidget
 UPalUITechnologyDetailButton = {}
 
+---@return UPalUITechnologyDetailButton
+function UPalUITechnologyDetailButton:get() end
+
 
 ---@class UPalUITitleBase : UPalUserWidgetStackableUI
 UPalUITitleBase = {}
 
+---@return UPalUITitleBase
+function UPalUITitleBase:get() end
+
 
 ---@class UPalUIUtility : UBlueprintFunctionLibrary
 UPalUIUtility = {}
+
+---@return UPalUIUtility
+function UPalUIUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param IsVisible boolean
@@ -30205,6 +35803,9 @@ function UPalUIUtility:ConvertReviveTimerToUIDisplayRemainReviveTime(WorldContex
 ---@field MyHUDDispatchParameter TWeakObjectPtr<UPalHUDDispatchParameter_WorkSuitabilityPreference>
 UPalUIWorkSuitabilitySelect = {}
 
+---@return UPalUIWorkSuitabilitySelect
+function UPalUIWorkSuitabilitySelect:get() end
+
 ---@param TargetCharacterSlot UPalIndividualCharacterSlot
 ---@param SuitabilityType EPalWorkSuitability
 ---@param IsOn boolean
@@ -30220,6 +35821,9 @@ function UPalUIWorkSuitabilitySelect:GetTargetCharacterContainer(OutContainer) e
 ---@class UPalUIWorkSuitabilitySettingModel : UObject
 UPalUIWorkSuitabilitySettingModel = {}
 
+---@return UPalUIWorkSuitabilitySettingModel
+function UPalUIWorkSuitabilitySettingModel:get() end
+
 ---@param TargetIndividualId FPalInstanceID
 ---@param WorkSuitability EPalWorkSuitability
 ---@param bOn boolean
@@ -30233,6 +35837,9 @@ function UPalUIWorkSuitabilitySettingModel:GetTargetBaseCampWorkerCharacterConta
 
 ---@class UPalUIWorkerSimpleDetailCanvas : UPalUserWidget
 UPalUIWorkerSimpleDetailCanvas = {}
+
+---@return UPalUIWorkerSimpleDetailCanvas
+function UPalUIWorkerSimpleDetailCanvas:get() end
 
 ---@param workerHandle UPalIndividualCharacterHandle
 function UPalUIWorkerSimpleDetailCanvas:UnbindWorkerEvent(workerHandle) end
@@ -30260,6 +35867,9 @@ function UPalUIWorkerSimpleDetailCanvas:BindBaseCampEvent(targetCampModel) end
 ---@class UPalUIWorldBackupSelect : UPalUserWidgetOverlayUI
 UPalUIWorldBackupSelect = {}
 
+---@return UPalUIWorldBackupSelect
+function UPalUIWorldBackupSelect:get() end
+
 ---@param SelectedBackupDirectoryName FString
 ---@return EPalSaveDataRestoreResultType
 function UPalUIWorldBackupSelect:RestoreSaveData(SelectedBackupDirectoryName) end
@@ -30270,6 +35880,9 @@ function UPalUIWorldBackupSelect:GetBackupDisplayData(OutDisplayData) end
 ---@class UPalUIWorldHUDWidgetCanvas : UPalUserWidget
 UPalUIWorldHUDWidgetCanvas = {}
 
+---@return UPalUIWorldHUDWidgetCanvas
+function UPalUIWorldHUDWidgetCanvas:get() end
+
 ---@param Widget UPalUserWidgetWorldHUD
 function UPalUIWorldHUDWidgetCanvas:RemoveWidget(Widget) end
 ---@param Widget UPalUserWidgetWorldHUD
@@ -30278,6 +35891,9 @@ function UPalUIWorldHUDWidgetCanvas:AddWidget(Widget) end
 
 ---@class UPalUIWorldMap : UPalUserWidgetOverlayUI
 UPalUIWorldMap = {}
+
+---@return UPalUIWorldMap
+function UPalUIWorldMap:get() end
 
 ---@param RespawnLocation FVector
 function UPalUIWorldMap:RegisterRespawnLocation(RespawnLocation) end
@@ -30291,6 +35907,9 @@ function UPalUIWorldMap:CreateWorldMapData(worldMapType) end
 ---@field OriginalSetting FPalOptionWorldSettings
 ---@field CachedInputWorldName FString
 UPalUIWorldSettingBase = {}
+
+---@return UPalUIWorldSettingBase
+function UPalUIWorldSettingBase:get() end
 
 ---@param NewWorldName FString
 ---@return boolean
@@ -30321,6 +35940,9 @@ function UPalUIWorldSettingBase:CompleteSetting(NewSetting) end
 ---@field WeaponNotifyAnimInfo_Ball_Fire FWeaponNotifyAnimationInfo
 UPalUniqueRideAnimeAssetBase = {}
 
+---@return UPalUniqueRideAnimeAssetBase
+function UPalUniqueRideAnimeAssetBase:get() end
+
 ---@return UAnimSequence
 function UPalUniqueRideAnimeAssetBase:GetRideAnimSequence() end
 
@@ -30329,6 +35951,9 @@ function UPalUniqueRideAnimeAssetBase:GetRideAnimSequence() end
 ---@field ActionCharacter APalCharacter
 ---@field ActionTarget AActor
 UPalUniqueSkillModule = {}
+
+---@return UPalUniqueSkillModule
+function UPalUniqueSkillModule:get() end
 
 ---@param DeltaTime float
 function UPalUniqueSkillModule:TickModule(DeltaTime) end
@@ -30347,6 +35972,9 @@ function UPalUniqueSkillModule:GetActionCharacter() end
 ---@class UPalUserAchievementChecker : UObject
 UPalUserAchievementChecker = {}
 
+---@return UPalUserAchievementChecker
+function UPalUserAchievementChecker:get() end
+
 ---@param Key FName
 ---@param NewValue int32
 function UPalUserAchievementChecker:OnUpdatePalCaptureCount(Key, NewValue) end
@@ -30357,6 +35985,9 @@ function UPalUserAchievementChecker:OnUpdatePalCaptureCount(Key, NewValue) end
 ---@field Param UPalHUDDispatchParameterBase
 ---@field BindedActionHandles TArray<FPalUIActionBindData>
 UPalUserWidget = {}
+
+---@return UPalUserWidget
+function UPalUserWidget:get() end
 
 ---@param changedVisibility ESlateVisibility
 function UPalUserWidget:VisibilityOverride(changedVisibility) end
@@ -30398,12 +36029,18 @@ function UPalUserWidget:FindParentWidget(Class) end
 ---@class UPalUserWidgetHierarchical : UPalUserWidget
 UPalUserWidgetHierarchical = {}
 
+---@return UPalUserWidgetHierarchical
+function UPalUserWidgetHierarchical:get() end
+
 
 ---@class UPalUserWidgetOverlayUI : UPalUserWidgetStackableUI
 ---@field IsEnableCancelAction boolean
 ---@field CancelInputHandle FPalUIActionBindData
 ---@field EscInputHandle FPalUIActionBindData
 UPalUserWidgetOverlayUI = {}
+
+---@return UPalUserWidgetOverlayUI
+function UPalUserWidgetOverlayUI:get() end
 
 function UPalUserWidgetOverlayUI:ResetCancelAction() end
 ---@param IsDisplayActionBar boolean
@@ -30417,6 +36054,9 @@ function UPalUserWidgetOverlayUI:ClearCancelAction() end
 ---@field OpenAkEvent UAkAudioEvent
 ---@field CloseAkEvent UAkAudioEvent
 UPalUserWidgetStackableUI = {}
+
+---@return UPalUserWidgetStackableUI
+function UPalUserWidgetStackableUI:get() end
 
 function UPalUserWidgetStackableUI:OnPreClose() end
 function UPalUserWidgetStackableUI:OnPostClose() end
@@ -30433,6 +36073,9 @@ function UPalUserWidgetStackableUI:Close() end
 ---@field Time float
 UPalUserWidgetTimerGaugeBase = {}
 
+---@return UPalUserWidgetTimerGaugeBase
+function UPalUserWidgetTimerGaugeBase:get() end
+
 ---@param changedVisibility ESlateVisibility
 function UPalUserWidgetTimerGaugeBase:VisibilityForceHidden(changedVisibility) end
 ---@param Text FText
@@ -30444,12 +36087,18 @@ function UPalUserWidgetTimerGaugeBase:SetGaugePercent(Percent) end
 ---@class UPalUserWidgetWorldHUD : UPalUserWidget
 UPalUserWidgetWorldHUD = {}
 
+---@return UPalUserWidgetWorldHUD
+function UPalUserWidgetWorldHUD:get() end
+
 function UPalUserWidgetWorldHUD:RemoveSelf() end
 function UPalUserWidgetWorldHUD:OnRequestRemove() end
 
 
 ---@class UPalUtility : UBlueprintFunctionLibrary
 UPalUtility = {}
+
+---@return UPalUtility
+function UPalUtility:get() end
 
 ---@param Character APalCharacter
 function UPalUtility:UpdatePlayerCharacterParameter(Character) end
@@ -32157,6 +37806,9 @@ function UPalUtility:AddDownForceAllRigidBody(TargetCharacter, Rate) end
 ---@field MyPalShop UPalShopBase
 UPalVenderDataComponent = {}
 
+---@return UPalVenderDataComponent
+function UPalVenderDataComponent:get() end
+
 ---@param OutShop UPalShopBase
 ---@return boolean
 function UPalVenderDataComponent:TryGetPalShop(OutShop) end
@@ -32184,6 +37836,9 @@ function UPalVenderDataComponent:IsValidItemShop() end
 ---@field IsCallEndOnComponentEndPlay boolean
 ---@field bIsEnableForDedicatedServer boolean
 UPalVisualEffectBase = {}
+
+---@return UPalVisualEffectBase
+function UPalVisualEffectBase:get() end
 
 ---@param DeltaTime float
 function UPalVisualEffectBase:TickVisualEffect(DeltaTime) end
@@ -32230,6 +37885,9 @@ function UPalVisualEffectBase:CanDeleteInstance() end
 ---@field ExecutionVisualEffects TArray<UPalVisualEffectBase>
 ---@field TerminatingVisualEffects TArray<UPalVisualEffectBase>
 UPalVisualEffectComponent = {}
+
+---@return UPalVisualEffectComponent
+function UPalVisualEffectComponent:get() end
 
 ---@param Actor AActor
 ---@param VisualEffectID EPalVisualEffectID
@@ -32303,6 +37961,9 @@ function UPalVisualEffectComponent:AddVisualEffect(VisualEffectID, Parameter) en
 ---@field VisualEffectClassDataAsset TMap<EPalVisualEffectID, TSubclassOf<UPalVisualEffectBase>>
 UPalVisualEffectDataBase = {}
 
+---@return UPalVisualEffectDataBase
+function UPalVisualEffectDataBase:get() end
+
 ---@return FName
 function UPalVisualEffectDataBase:GetMosaicKeyName() end
 
@@ -32312,6 +37973,9 @@ function UPalVisualEffectDataBase:GetMosaicKeyName() end
 ---@field isWaiting boolean
 UPalWaitInfoWorldHUDParameter = {}
 
+---@return UPalWaitInfoWorldHUDParameter
+function UPalWaitInfoWorldHUDParameter:get() end
+
 
 
 ---@class UPalWazaDatabase : UObject
@@ -32320,6 +37984,9 @@ UPalWaitInfoWorldHUDParameter = {}
 ---@field WazaMasterLevel_DataTable UDataTable
 ---@field WazaMasterTamago_DataTable UDataTable
 UPalWazaDatabase = {}
+
+---@return UPalWazaDatabase
+function UPalWazaDatabase:get() end
 
 ---@param CharacterID FName
 ---@param StartLevel int32
@@ -32345,6 +38012,9 @@ function UPalWazaDatabase:FindWazaForBP(Type, OutData) end
 ---@field Attacker AActor
 UPalWeaponFilter = {}
 
+---@return UPalWeaponFilter
+function UPalWeaponFilter:get() end
+
 
 
 ---@class UPalWidgetAnimationArray : UObject
@@ -32352,6 +38022,9 @@ UPalWeaponFilter = {}
 ---@field AnimationMap TMap<FName, UWidgetAnimation>
 ---@field multiplyTimeScale float
 UPalWidgetAnimationArray = {}
+
+---@return UPalWidgetAnimationArray
+function UPalWidgetAnimationArray:get() end
 
 ---@param animationName FName
 function UPalWidgetAnimationArray:StopAnimation(animationName) end
@@ -32385,6 +38058,9 @@ function UPalWidgetAnimationArray:GetAnimationNameArray(OutArray) end
 ---@field IsHide boolean
 UPalWidgetTimerGaugeParameter = {}
 
+---@return UPalWidgetTimerGaugeParameter
+function UPalWidgetTimerGaugeParameter:get() end
+
 
 
 ---@class UPalWildDrinkWaterSpot : UObject
@@ -32392,6 +38068,9 @@ UPalWidgetTimerGaugeParameter = {}
 ---@field SpotActorLocation FVector
 ---@field PalGoalLocations TArray<FVector>
 UPalWildDrinkWaterSpot = {}
+
+---@return UPalWildDrinkWaterSpot
+function UPalWildDrinkWaterSpot:get() end
 
 ---@param MemberList TArray<AActor>
 ---@return boolean
@@ -32403,6 +38082,9 @@ function UPalWildDrinkWaterSpot:GetActorLocation() end
 ---@class UPalWildPalDrinkWaterSpotProvider : UObject
 ---@field DrinkWaterSpotList TMap<FGuid, UPalWildDrinkWaterSpot>
 UPalWildPalDrinkWaterSpotProvider = {}
+
+---@return UPalWildPalDrinkWaterSpotProvider
+function UPalWildPalDrinkWaterSpotProvider:get() end
 
 ---@param LeaderPal AActor
 ---@param WildPalSpawnerCenter FVector
@@ -32423,6 +38105,9 @@ function UPalWildPalDrinkWaterSpotProvider:AddDrinkWaterSpot(ActorLocation, Goal
 ---@class UPalWildSpawnerDataTable : UObject
 UPalWildSpawnerDataTable = {}
 
+---@return UPalWildSpawnerDataTable
+function UPalWildSpawnerDataTable:get() end
+
 ---@param DataList TArray<FPalWildSpawnerDatabaseRow>
 ---@return TArray<FPalSpawnerGroupInfo>
 function UPalWildSpawnerDataTable:CreateGroupList(DataList) end
@@ -32430,6 +38115,9 @@ function UPalWildSpawnerDataTable:CreateGroupList(DataList) end
 
 ---@class UPalWordFilterSubsystem : UGameInstanceSubsystem
 UPalWordFilterSubsystem = {}
+
+---@return UPalWordFilterSubsystem
+function UPalWordFilterSubsystem:get() end
 
 
 ---@class UPalWorkAssign : UObject
@@ -32440,6 +38128,9 @@ UPalWordFilterSubsystem = {}
 ---@field WorkingState EPalWorkWorkerWorkingState
 ---@field LocalRandomWorkLocation FVector
 UPalWorkAssign = {}
+
+---@return UPalWorkAssign
+function UPalWorkAssign:get() end
 
 ---@return boolean
 function UPalWorkAssign:IsWorking() end
@@ -32478,6 +38169,9 @@ function UPalWorkAssign:GetAssignedCharacterParameterComponent() end
 ---@field TargetMapObjectModelId FGuid
 UPalWorkAssign_LevelObject = {}
 
+---@return UPalWorkAssign_LevelObject
+function UPalWorkAssign_LevelObject:get() end
+
 
 
 ---@class UPalWorkAssign_MonsterFarm : UPalWorkAssign
@@ -32488,11 +38182,17 @@ UPalWorkAssign_LevelObject = {}
 ---@field SpawnActionCurrentCount int32
 UPalWorkAssign_MonsterFarm = {}
 
+---@return UPalWorkAssign_MonsterFarm
+function UPalWorkAssign_MonsterFarm:get() end
+
 
 
 ---@class UPalWorkAssign_OnlyJoinAndWalkAround : UPalWorkAssign
 ---@field TargetLocation FVector
 UPalWorkAssign_OnlyJoinAndWalkAround = {}
+
+---@return UPalWorkAssign_OnlyJoinAndWalkAround
+function UPalWorkAssign_OnlyJoinAndWalkAround:get() end
 
 
 
@@ -32525,6 +38225,9 @@ UPalWorkAssign_OnlyJoinAndWalkAround = {}
 ---@field AssignRepInfoArray FPalFastWorkAssignRepInfoArray
 ---@field bGroupRaycastStartOffsetOrigin boolean
 UPalWorkBase = {}
+
+---@return UPalWorkBase
+function UPalWorkBase:get() end
 
 ---@param Work UPalWorkBase
 ---@param WorkAssign UPalWorkAssign
@@ -32571,6 +38274,9 @@ function UPalWorkBase:GetAssignableFixedType() end
 ---@field OnBootUpInServerDelegate FPalWorkBootUpOnBootUpInServerDelegate
 UPalWorkBootUp = {}
 
+---@return UPalWorkBootUp
+function UPalWorkBootUp:get() end
+
 
 
 ---@class UPalWorkDefense : UPalWorkBase
@@ -32581,15 +38287,24 @@ UPalWorkBootUp = {}
 ---@field WeakDefenseBulletLauncherModel TWeakObjectPtr<UPalMapObjectDefenseBulletLauncherModel>
 UPalWorkDefense = {}
 
+---@return UPalWorkDefense
+function UPalWorkDefense:get() end
+
 
 
 ---@class UPalWorkDefine : UBlueprintFunctionLibrary
 UPalWorkDefine = {}
 
+---@return UPalWorkDefine
+function UPalWorkDefine:get() end
+
 
 ---@class UPalWorkDeforestFoliage : UPalWorkBase
 ---@field IdentifiableInfo FPalFoliageIdentifiableInfo
 UPalWorkDeforestFoliage = {}
+
+---@return UPalWorkDeforestFoliage
+function UPalWorkDeforestFoliage:get() end
 
 
 
@@ -32597,6 +38312,9 @@ UPalWorkDeforestFoliage = {}
 ---@field LocationIndex int32
 ---@field bActiveFX boolean
 UPalWorkEffectComponent = {}
+
+---@return UPalWorkEffectComponent
+function UPalWorkEffectComponent:get() end
 
 ---@param Work UPalWorkBase
 ---@param IndividualId FPalInstanceID
@@ -32610,31 +38328,52 @@ function UPalWorkEffectComponent:OnRep_ActiveFX() end
 ---@class UPalWorkFacingComponent : UArrowComponent
 UPalWorkFacingComponent = {}
 
+---@return UPalWorkFacingComponent
+function UPalWorkFacingComponent:get() end
+
 
 ---@class UPalWorkForLevelObject : UPalWorkBase
 UPalWorkForLevelObject = {}
+
+---@return UPalWorkForLevelObject
+function UPalWorkForLevelObject:get() end
 
 
 ---@class UPalWorkForLevelObjectItemCollect : UPalWorkForLevelObject
 UPalWorkForLevelObjectItemCollect = {}
 
+---@return UPalWorkForLevelObjectItemCollect
+function UPalWorkForLevelObjectItemCollect:get() end
+
 
 ---@class UPalWorkForLevelObjectRequireElementalAction : UPalWorkForLevelObject
 UPalWorkForLevelObjectRequireElementalAction = {}
+
+---@return UPalWorkForLevelObjectRequireElementalAction
+function UPalWorkForLevelObjectRequireElementalAction:get() end
 
 
 ---@class UPalWorkMonsterFarm : UPalWorkBase
 ---@field ActionIntervalSeconds FFloatInterval
 UPalWorkMonsterFarm = {}
 
+---@return UPalWorkMonsterFarm
+function UPalWorkMonsterFarm:get() end
+
 
 
 ---@class UPalWorkOnlyJoin : UPalWorkBase
 UPalWorkOnlyJoin = {}
 
+---@return UPalWorkOnlyJoin
+function UPalWorkOnlyJoin:get() end
+
 
 ---@class UPalWorkOnlyJoinAndWalkAround : UPalWorkBase
 UPalWorkOnlyJoinAndWalkAround = {}
+
+---@return UPalWorkOnlyJoinAndWalkAround
+function UPalWorkOnlyJoinAndWalkAround:get() end
 
 
 ---@class UPalWorkProgress : UPalWorkBase
@@ -32651,6 +38390,9 @@ UPalWorkOnlyJoinAndWalkAround = {}
 ---@field ProgressTimeSinceLastTick float
 ---@field bInProgress boolean
 UPalWorkProgress = {}
+
+---@return UPalWorkProgress
+function UPalWorkProgress:get() end
 
 function UPalWorkProgress:OnRep_InProgress() end
 function UPalWorkProgress:OnRep_CurrentWorkAmount() end
@@ -32686,6 +38428,9 @@ function UPalWorkProgress:GetCurrentWorkAmount() end
 ---@field WorkTypeAssignPriorityMap TMap<EPalWorkType, int32>
 UPalWorkProgressManager = {}
 
+---@return UPalWorkProgressManager
+function UPalWorkProgressManager:get() end
+
 ---@param Work UPalWorkBase
 function UPalWorkProgressManager:WorkDelegate__DelegateSignature(Work) end
 ---@param WorkAssignId FPalWorkAssignHandleId
@@ -32702,11 +38447,17 @@ function UPalWorkProgressManager:GetWork(WorkId) end
 ---@class UPalWorkProgressTransformBase : UObject
 UPalWorkProgressTransformBase = {}
 
+---@return UPalWorkProgressTransformBase
+function UPalWorkProgressTransformBase:get() end
+
 
 ---@class UPalWorkProgressTransformCharacter : UPalWorkProgressTransformBase
 ---@field IndividualId FPalInstanceID
 ---@field TransformCache FTransform
 UPalWorkProgressTransformCharacter = {}
+
+---@return UPalWorkProgressTransformCharacter
+function UPalWorkProgressTransformCharacter:get() end
 
 
 
@@ -32717,16 +38468,25 @@ UPalWorkProgressTransformCharacter = {}
 ---@field bShouldSearchForFoliage boolean
 UPalWorkProgressTransformMapObject = {}
 
+---@return UPalWorkProgressTransformMapObject
+function UPalWorkProgressTransformMapObject:get() end
+
 
 
 ---@class UPalWorkProgressTransformStatic : UPalWorkProgressTransformBase
 ---@field Transform FTransform
 UPalWorkProgressTransformStatic = {}
 
+---@return UPalWorkProgressTransformStatic
+function UPalWorkProgressTransformStatic:get() end
+
 
 
 ---@class UPalWorkProgressUtility : UBlueprintFunctionLibrary
 UPalWorkProgressUtility = {}
+
+---@return UPalWorkProgressUtility
+function UPalWorkProgressUtility:get() end
 
 ---@param WorldContextObject UObject
 ---@param WorkAmount float
@@ -32738,6 +38498,9 @@ function UPalWorkProgressUtility:WorkAmountToManMonth(WorldContextObject, WorkAm
 ---@field TargetEffectType EPalStatusID
 UPalWorkRemoveMapObjectEffect = {}
 
+---@return UPalWorkRemoveMapObjectEffect
+function UPalWorkRemoveMapObjectEffect:get() end
+
 
 
 ---@class UPalWorkRepair : UPalWorkBase
@@ -32745,16 +38508,25 @@ UPalWorkRemoveMapObjectEffect = {}
 ---@field ConnectedModels TArray<UPalMapObjectModel>
 UPalWorkRepair = {}
 
+---@return UPalWorkRepair
+function UPalWorkRepair:get() end
+
 
 
 ---@class UPalWorkReviveCharacter : UPalWorkBase
 ---@field TargetIndividualId FPalInstanceID
 UPalWorkReviveCharacter = {}
 
+---@return UPalWorkReviveCharacter
+function UPalWorkReviveCharacter:get() end
+
 
 
 ---@class UPalWorkSuitabilityUtility : UBlueprintFunctionLibrary
 UPalWorkSuitabilityUtility = {}
+
+---@return UPalWorkSuitabilityUtility
+function UPalWorkSuitabilityUtility:get() end
 
 
 ---@class UPalWorkTransportItemInBaseCamp : UPalWorkBase
@@ -32762,14 +38534,23 @@ UPalWorkSuitabilityUtility = {}
 ---@field ApproachFailedTimeout float
 UPalWorkTransportItemInBaseCamp = {}
 
+---@return UPalWorkTransportItemInBaseCamp
+function UPalWorkTransportItemInBaseCamp:get() end
+
 
 
 ---@class UPalWorkTypeUtility : UBlueprintFunctionLibrary
 UPalWorkTypeUtility = {}
 
+---@return UPalWorkTypeUtility
+function UPalWorkTypeUtility:get() end
+
 
 ---@class UPalWorkUtility : UBlueprintFunctionLibrary
 UPalWorkUtility = {}
+
+---@return UPalWorkUtility
+function UPalWorkUtility:get() end
 
 ---@param Target UPalWorkBase
 ---@param OutLocation FVector
@@ -32783,6 +38564,9 @@ function UPalWorkUtility:BP_GetWorkLocation(Target) end
 ---@class UPalWorldBaseInfoSaveDataUtility : UBlueprintFunctionLibrary
 UPalWorldBaseInfoSaveDataUtility = {}
 
+---@return UPalWorldBaseInfoSaveDataUtility
+function UPalWorldBaseInfoSaveDataUtility:get() end
+
 ---@param SaveData FPalWorldBaseInfoSaveData
 ---@return FString
 function UPalWorldBaseInfoSaveDataUtility:GetWorldName(SaveData) end
@@ -32794,6 +38578,9 @@ function UPalWorldBaseInfoSaveDataUtility:GetWorldName(SaveData) end
 ---@field SaveData FPalWorldBaseInfoSaveData
 UPalWorldBaseInfoSaveGame = {}
 
+---@return UPalWorldBaseInfoSaveGame
+function UPalWorldBaseInfoSaveGame:get() end
+
 
 
 ---@class UPalWorldHUDDisplayInfo : UObject
@@ -32802,6 +38589,9 @@ UPalWorldBaseInfoSaveGame = {}
 ---@field bDisposeFlag boolean
 ---@field WidgetId FGuid
 UPalWorldHUDDisplayInfo = {}
+
+---@return UPalWorldHUDDisplayInfo
+function UPalWorldHUDDisplayInfo:get() end
 
 
 
@@ -32814,6 +38604,9 @@ UPalWorldHUDDisplayInfo = {}
 ---@field worldMapDataTable UDataTable
 ---@field currentPlayMapName FName
 UPalWorldMapUIData = {}
+
+---@return UPalWorldMapUIData
+function UPalWorldMapUIData:get() end
 
 ---@param regionId FName
 ---@param PlayerId int32
@@ -32838,6 +38631,9 @@ function UPalWorldMapUIData:GetCurrentPlayMapName() end
 ---@field RecorderMap TMap<UClass, UPalWorldObjectRecorderBase>
 UPalWorldObjectRecordWorldSubsystem = {}
 
+---@return UPalWorldObjectRecordWorldSubsystem
+function UPalWorldObjectRecordWorldSubsystem:get() end
+
 ---@param WorldContextObject UObject
 ---@param TargetClass TSubclassOf<UPalWorldObjectRecorderBase>
 ---@return UPalWorldObjectRecorderBase
@@ -32848,10 +38644,16 @@ function UPalWorldObjectRecordWorldSubsystem:BP_GetRecorder(WorldContextObject, 
 ---@field RecordDataMapByStageInstanceId TMap<FPalStageInstanceId, FPalWorldObjectRecordData_MapObjectSpawnerInStage>
 UPalWorldObjectRecord_MapObjectSpawnerInStage = {}
 
+---@return UPalWorldObjectRecord_MapObjectSpawnerInStage
+function UPalWorldObjectRecord_MapObjectSpawnerInStage:get() end
+
 
 
 ---@class UPalWorldObjectRecorderBase : UObject
 UPalWorldObjectRecorderBase = {}
+
+---@return UPalWorldObjectRecorderBase
+function UPalWorldObjectRecorderBase:get() end
 
 
 ---@class UPalWorldOptionSaveGame : USaveGame
@@ -32859,6 +38661,9 @@ UPalWorldObjectRecorderBase = {}
 ---@field Timestamp FDateTime
 ---@field OptionWorldData FPalOptionWorldSaveData
 UPalWorldOptionSaveGame = {}
+
+---@return UPalWorldOptionSaveGame
+function UPalWorldOptionSaveGame:get() end
 
 
 
@@ -32868,6 +38673,9 @@ UPalWorldOptionSaveGame = {}
 ---@field SaveData FPalWorldPlayerSaveData
 UPalWorldPlayerSaveGame = {}
 
+---@return UPalWorldPlayerSaveGame
+function UPalWorldPlayerSaveGame:get() end
+
 
 
 ---@class UPalWorldSaveGame : USaveGame
@@ -32875,6 +38683,9 @@ UPalWorldPlayerSaveGame = {}
 ---@field Timestamp FDateTime
 ---@field worldSaveData FPalWorldSaveData
 UPalWorldSaveGame = {}
+
+---@return UPalWorldSaveGame
+function UPalWorldSaveGame:get() end
 
 
 
@@ -32884,10 +38695,16 @@ UPalWorldSaveGame = {}
 ---@field TargetId FGuid
 UPalWorldSecurityCrimeInstance = {}
 
+---@return UPalWorldSecurityCrimeInstance
+function UPalWorldSecurityCrimeInstance:get() end
+
 
 
 ---@class UPalWorldSecurityDefine : UBlueprintFunctionLibrary
 UPalWorldSecurityDefine = {}
+
+---@return UPalWorldSecurityDefine
+function UPalWorldSecurityDefine:get() end
 
 
 ---@class UPalWorldSecurityLawBase : UObject
@@ -32897,14 +38714,23 @@ UPalWorldSecurityDefine = {}
 ---@field bNotUseReleaseTimer boolean
 UPalWorldSecurityLawBase = {}
 
+---@return UPalWorldSecurityLawBase
+function UPalWorldSecurityLawBase:get() end
+
 
 
 ---@class UPalWorldSecurityLawTrigger : UPalWorldSecurityLawBase
 UPalWorldSecurityLawTrigger = {}
 
+---@return UPalWorldSecurityLawTrigger
+function UPalWorldSecurityLawTrigger:get() end
+
 
 ---@class UPalWorldSecurityLawTrigger_AreaInvasion : UPalWorldSecurityLawTrigger
 UPalWorldSecurityLawTrigger_AreaInvasion = {}
+
+---@return UPalWorldSecurityLawTrigger_AreaInvasion
+function UPalWorldSecurityLawTrigger_AreaInvasion:get() end
 
 ---@param InvasionActor AActor
 ---@param AreaInstanceId FGuid
@@ -32921,6 +38747,9 @@ function UPalWorldSecurityLawTrigger_AreaInvasion:Condition(InvasionActor, Crimi
 ---@class UPalWorldSecurityLawTrigger_CharacterDamaged : UPalWorldSecurityLawTrigger
 UPalWorldSecurityLawTrigger_CharacterDamaged = {}
 
+---@return UPalWorldSecurityLawTrigger_CharacterDamaged
+function UPalWorldSecurityLawTrigger_CharacterDamaged:get() end
+
 ---@param DamageResult FPalDamageResult
 function UPalWorldSecurityLawTrigger_CharacterDamaged:OnNotifiedEvent(DamageResult) end
 ---@param DamageResult FPalDamageResult
@@ -32931,6 +38760,9 @@ function UPalWorldSecurityLawTrigger_CharacterDamaged:Condition(DamageResult, Cr
 
 ---@class UPalWorldSecurityLawTrigger_ItemMove : UPalWorldSecurityLawTrigger
 UPalWorldSecurityLawTrigger_ItemMove = {}
+
+---@return UPalWorldSecurityLawTrigger_ItemMove
+function UPalWorldSecurityLawTrigger_ItemMove:get() end
 
 ---@param EventInfo FPalItemOperationInfo_Move
 function UPalWorldSecurityLawTrigger_ItemMove:OnNotifiedEvent(EventInfo) end
@@ -32953,6 +38785,9 @@ function UPalWorldSecurityLawTrigger_ItemMove:Condition(EventInfo) end
 ---@field CriminalMap TMap<FGuid, UPalIndividualCharacterHandle>
 ---@field LawArray TArray<TSubclassOf<UPalWorldSecurityLawBase>>
 UPalWorldSecuritySystem = {}
+
+---@return UPalWorldSecuritySystem
+function UPalWorldSecuritySystem:get() end
 
 ---@param CriminalHandle UPalIndividualCharacterHandle
 ---@param WantedStateInfo FPalWorldSecurityWantedStateInfo
@@ -32980,6 +38815,9 @@ function UPalWorldSecuritySystem:GetCrimeIdByCrimeInstanceId(CrimeInstanceId) en
 ---@class UPalWorldSecurityUtility : UBlueprintFunctionLibrary
 UPalWorldSecurityUtility = {}
 
+---@return UPalWorldSecurityUtility
+function UPalWorldSecurityUtility:get() end
+
 ---@param Target APalCharacter
 ---@return boolean
 function UPalWorldSecurityUtility:IsWantedCharacter(Target) end
@@ -32997,6 +38835,9 @@ function UPalWorldSecurityUtility:FindCriminalsInSight(Target, Criminals) end
 ---@field PrerequisiteWorldSubsystemList TArray<TSubclassOf<UWorldSubsystem>>
 UPalWorldSubsystem = {}
 
+---@return UPalWorldSubsystem
+function UPalWorldSubsystem:get() end
+
 
 
 ---@class UPlGuildPlayerInfoFilteringWaiter : UObject
@@ -33004,6 +38845,9 @@ UPalWorldSubsystem = {}
 ---@field PlayerInfo FPalGuildPlayerInfo
 ---@field PlayerUId FGuid
 UPlGuildPlayerInfoFilteringWaiter = {}
+
+---@return UPlGuildPlayerInfoFilteringWaiter
+function UPlGuildPlayerInfoFilteringWaiter:get() end
 
 ---@param ResponseBody FString
 ---@param bResponseOK boolean
@@ -33017,6 +38861,9 @@ function UPlGuildPlayerInfoFilteringWaiter:OnFilteredGuildPlayerInfoDelegate__De
 ---@class UReactivePropertyFloatUtility : UObject
 UReactivePropertyFloatUtility = {}
 
+---@return UReactivePropertyFloatUtility
+function UReactivePropertyFloatUtility:get() end
+
 ---@param Property FReactivePropertyFloat
 ---@param Delegate FBindPropertyDelegate
 function UReactivePropertyFloatUtility:BindProperty(Property, Delegate) end
@@ -33026,11 +38873,17 @@ function UReactivePropertyFloatUtility:BindProperty(Property, Delegate) end
 ---@field ChildProcessHandles TArray<USequentialProcessHandle>
 USequentialProcessHandle = {}
 
+---@return USequentialProcessHandle
+function USequentialProcessHandle:get() end
+
 
 
 ---@class USequentialProcessSequenceBase : UObject
 ---@field ProcessHandles TArray<USequentialProcessHandle>
 USequentialProcessSequenceBase = {}
+
+---@return USequentialProcessSequenceBase
+function USequentialProcessSequenceBase:get() end
 
 
 
@@ -33038,12 +38891,18 @@ USequentialProcessSequenceBase = {}
 ---@field SelfManagedProcessHandle USequentialProcessHandle
 USequentialProcessSequenceBase_WaitOneProcess = {}
 
+---@return USequentialProcessSequenceBase_WaitOneProcess
+function USequentialProcessSequenceBase_WaitOneProcess:get() end
+
 
 
 ---@class USequentialProcessSystem : UObject
 ---@field SequenceSets TArray<FSequentialProcessSequenceSet>
 ---@field CurrentSequenceIndex int32
 USequentialProcessSystem = {}
+
+---@return USequentialProcessSystem
+function USequentialProcessSystem:get() end
 
 ---@param ChangedProcessHandle USequentialProcessHandle
 function USequentialProcessSystem:OnChangeProcessState(ChangedProcessHandle) end

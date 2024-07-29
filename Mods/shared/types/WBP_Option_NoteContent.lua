@@ -9,6 +9,9 @@
 ---@field ['New Offset'] double
 UWBP_Option_NoteContent_C = {}
 
+---@return UWBP_Option_NoteContent_C
+function UWBP_Option_NoteContent_C:get() end
+
 ---@param NewOffset double
 function UWBP_Option_NoteContent_C:ChangeOffset(NewOffset) end
 ---@param NoteData UPalNoteData

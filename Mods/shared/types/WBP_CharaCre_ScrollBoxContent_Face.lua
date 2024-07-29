@@ -14,6 +14,9 @@
 ---@field OnSelectedBrowColor FWBP_CharaCre_ScrollBoxContent_Face_COnSelectedBrowColor
 UWBP_CharaCre_ScrollBoxContent_Face_C = {}
 
+---@return UWBP_CharaCre_ScrollBoxContent_Face_C
+function UWBP_CharaCre_ScrollBoxContent_Face_C:get() end
+
 ---@param Color FLinearColor
 function UWBP_CharaCre_ScrollBoxContent_Face_C:OnChangedBrowColor(Color) end
 ---@param Param UPalHUDDispatchParameterBase

@@ -13,12 +13,18 @@
 ---@field NumberOfFramesToCapture int32
 FMediaCaptureOptions = {}
 
+---@return FMediaCaptureOptions
+function FMediaCaptureOptions:get() end
+
 
 
 ---@class FMediaIOAutoDetectableTimecodeFormat_Backup
 ---@field TimecodeFormat EMediaIOTimecodeFormat
 ---@field bAutoDetect boolean
 FMediaIOAutoDetectableTimecodeFormat_Backup = {}
+
+---@return FMediaIOAutoDetectableTimecodeFormat_Backup
+function FMediaIOAutoDetectableTimecodeFormat_Backup:get() end
 
 
 
@@ -27,6 +33,9 @@ FMediaIOAutoDetectableTimecodeFormat_Backup = {}
 ---@field MediaConnection FMediaIOConnection
 ---@field MediaMode FMediaIOMode
 FMediaIOConfiguration = {}
+
+---@return FMediaIOConfiguration
+function FMediaIOConfiguration:get() end
 
 
 
@@ -38,12 +47,18 @@ FMediaIOConfiguration = {}
 ---@field PortIdentifier int32
 FMediaIOConnection = {}
 
+---@return FMediaIOConnection
+function FMediaIOConnection:get() end
+
 
 
 ---@class FMediaIODevice
 ---@field DeviceName FName
 ---@field DeviceIdentifier int32
 FMediaIODevice = {}
+
+---@return FMediaIODevice
+function FMediaIODevice:get() end
 
 
 
@@ -53,6 +68,9 @@ FMediaIODevice = {}
 ---@field KeyPortIdentifier int32
 FMediaIOInputConfiguration = {}
 
+---@return FMediaIOInputConfiguration
+function FMediaIOInputConfiguration:get() end
+
 
 
 ---@class FMediaIOMode
@@ -61,6 +79,9 @@ FMediaIOInputConfiguration = {}
 ---@field Standard EMediaIOStandardType
 ---@field DeviceModeIdentifier int32
 FMediaIOMode = {}
+
+---@return FMediaIOMode
+function FMediaIOMode:get() end
 
 
 
@@ -72,6 +93,9 @@ FMediaIOMode = {}
 ---@field ReferencePortIdentifier int32
 FMediaIOOutputConfiguration = {}
 
+---@return FMediaIOOutputConfiguration
+function FMediaIOOutputConfiguration:get() end
+
 
 
 ---@class FMediaIOVideoTimecodeConfiguration
@@ -79,10 +103,16 @@ FMediaIOOutputConfiguration = {}
 ---@field TimecodeFormat EMediaIOAutoDetectableTimecodeFormat
 FMediaIOVideoTimecodeConfiguration = {}
 
+---@return FMediaIOVideoTimecodeConfiguration
+function FMediaIOVideoTimecodeConfiguration:get() end
+
 
 
 ---@class UFileMediaCapture : UMediaCapture
 UFileMediaCapture = {}
+
+---@return UFileMediaCapture
+function UFileMediaCapture:get() end
 
 
 ---@class UFileMediaOutput : UMediaOutput
@@ -96,6 +126,9 @@ UFileMediaCapture = {}
 ---@field bInvertAlpha boolean
 UFileMediaOutput = {}
 
+---@return UFileMediaOutput
+function UFileMediaOutput:get() end
+
 
 
 ---@class UMediaCapture : UObject
@@ -103,6 +136,9 @@ UFileMediaOutput = {}
 ---@field MediaOutput UMediaOutput
 ---@field CapturingRenderTarget UTextureRenderTarget2D
 UMediaCapture = {}
+
+---@return UMediaCapture
+function UMediaCapture:get() end
 
 ---@param RenderTarget UTextureRenderTarget2D
 ---@return boolean
@@ -129,10 +165,16 @@ function UMediaCapture:CaptureActiveSceneViewport(CaptureOptions) end
 ---@class UMediaIOCoreSubsystem : UEngineSubsystem
 UMediaIOCoreSubsystem = {}
 
+---@return UMediaIOCoreSubsystem
+function UMediaIOCoreSubsystem:get() end
+
 
 ---@class UMediaOutput : UObject
 ---@field NumberOfTextureBuffers int32
 UMediaOutput = {}
+
+---@return UMediaOutput
+function UMediaOutput:get() end
 
 ---@param OutFailureReason FString
 ---@return boolean

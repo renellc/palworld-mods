@@ -24,6 +24,9 @@
 ---@field DestroyPredictedTargetOnEndAction boolean
 UBP_ActionGeneralAttackFarBase_C = {}
 
+---@return UBP_ActionGeneralAttackFarBase_C
+function UBP_ActionGeneralAttackFarBase_C:get() end
+
 ---@param Success boolean
 function UBP_ActionGeneralAttackFarBase_C:SetEffectVelocityTowardNearestEnemy(Success) end
 function UBP_ActionGeneralAttackFarBase_C:SetEffectVelocityTowardReticle() end

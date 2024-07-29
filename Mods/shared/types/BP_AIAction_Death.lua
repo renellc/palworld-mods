@@ -6,6 +6,9 @@
 ---@field BoneIndex int32
 UBP_AIAction_Death_C = {}
 
+---@return UBP_AIAction_Death_C
+function UBP_AIAction_Death_C:get() end
+
 ---@return boolean
 function UBP_AIAction_Death_C:IsInterruptibleBySleep() end
 ---@return boolean

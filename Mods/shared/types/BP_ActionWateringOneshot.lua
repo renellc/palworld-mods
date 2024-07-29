@@ -5,6 +5,9 @@
 ---@field WateredNotifyName FName
 UBP_ActionWateringOneshot_C = {}
 
+---@return UBP_ActionWateringOneshot_C
+function UBP_ActionWateringOneshot_C:get() end
+
 ---@param NotifyName FName
 function UBP_ActionWateringOneshot_C:NotifyWatered(NotifyName) end
 ---@param NotifyName FName

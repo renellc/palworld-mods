@@ -11,6 +11,9 @@
 ---@field DyingLoupe UWBP_DyingFriendLoupe_C
 UBP_Status_Dying_C = {}
 
+---@return UBP_Status_Dying_C
+function UBP_Status_Dying_C:get() end
+
 ---@param bIsDisable boolean
 function UBP_Status_Dying_C:FlagControll(bIsDisable) end
 function UBP_Status_Dying_C:OnBeginStatus() end

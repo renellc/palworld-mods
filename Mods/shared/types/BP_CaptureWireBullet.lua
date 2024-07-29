@@ -8,6 +8,9 @@
 ---@field ThrowRotator FRotator
 ABP_CaptureWireBullet_C = {}
 
+---@return ABP_CaptureWireBullet_C
+function ABP_CaptureWireBullet_C:get() end
+
 ---@param DeltaTime double
 function ABP_CaptureWireBullet_C:UpdateRotator(DeltaTime) end
 ---@param Guid FGuid

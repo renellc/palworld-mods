@@ -7,6 +7,9 @@
 ---@field Timer double
 ABP_DebugMissWazaBullet_C = {}
 
+---@return ABP_DebugMissWazaBullet_C
+function ABP_DebugMissWazaBullet_C:get() end
+
 function ABP_DebugMissWazaBullet_C:ReceiveBeginPlay() end
 ---@param DeltaSeconds float
 function ABP_DebugMissWazaBullet_C:ReceiveTick(DeltaSeconds) end

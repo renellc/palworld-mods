@@ -6,6 +6,9 @@
 ---@field LobbyJoinServerState ELobbyBeaconJoinState
 ALobbyBeaconClient = {}
 
+---@return ALobbyBeaconClient
+function ALobbyBeaconClient:get() end
+
 ---@param InUniqueId FUniqueNetIdRepl
 ---@param InPartyOwnerId FUniqueNetIdRepl
 function ALobbyBeaconClient:ServerSetPartyOwner(InUniqueId, InPartyOwnerId) end
@@ -41,6 +44,9 @@ function ALobbyBeaconClient:ClientAckJoiningServer() end
 ---@field LobbyState ALobbyBeaconState
 ALobbyBeaconHost = {}
 
+---@return ALobbyBeaconHost
+function ALobbyBeaconHost:get() end
+
 
 
 ---@class ALobbyBeaconPlayerState : AInfo
@@ -50,6 +56,9 @@ ALobbyBeaconHost = {}
 ---@field bInLobby boolean
 ---@field ClientActor AOnlineBeaconClient
 ALobbyBeaconPlayerState = {}
+
+---@return ALobbyBeaconPlayerState
+function ALobbyBeaconPlayerState:get() end
 
 function ALobbyBeaconPlayerState:OnRep_UniqueId() end
 function ALobbyBeaconPlayerState:OnRep_PartyOwner() end
@@ -64,6 +73,9 @@ function ALobbyBeaconPlayerState:OnRep_InLobby() end
 ---@field Players FLobbyPlayerStateInfoArray
 ALobbyBeaconState = {}
 
+---@return ALobbyBeaconState
+function ALobbyBeaconState:get() end
+
 function ALobbyBeaconState:OnRep_WaitForPlayersTimeRemaining() end
 function ALobbyBeaconState:OnRep_LobbyStarted() end
 
@@ -72,12 +84,18 @@ function ALobbyBeaconState:OnRep_LobbyStarted() end
 ---@field LobbyPlayerState ALobbyBeaconPlayerState
 FLobbyPlayerStateActorInfo = {}
 
+---@return FLobbyPlayerStateActorInfo
+function FLobbyPlayerStateActorInfo:get() end
+
 
 
 ---@class FLobbyPlayerStateInfoArray : FFastArraySerializer
 ---@field Players TArray<FLobbyPlayerStateActorInfo>
 ---@field ParentState ALobbyBeaconState
 FLobbyPlayerStateInfoArray = {}
+
+---@return FLobbyPlayerStateInfoArray
+function FLobbyPlayerStateInfoArray:get() end
 
 
 

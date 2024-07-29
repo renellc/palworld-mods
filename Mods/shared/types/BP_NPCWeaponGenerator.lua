@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_NPCWeaponGenerator_C = {}
 
+---@return UBP_NPCWeaponGenerator_C
+function UBP_NPCWeaponGenerator_C:get() end
+
 ---@param WeaponActor APalWeaponBase
 function UBP_NPCWeaponGenerator_C:OnSpawnEvent(WeaponActor) end
 ---@param EntryPoint int32

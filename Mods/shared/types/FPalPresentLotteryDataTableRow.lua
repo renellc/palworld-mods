@@ -8,5 +8,8 @@
 ---@field Weight_8_F7EB66974C769D7AA8EA0B99E234AE6B double
 FFPalPresentLotteryDataTableRow = {}
 
+---@return FFPalPresentLotteryDataTableRow
+function FFPalPresentLotteryDataTableRow:get() end
+
 
 

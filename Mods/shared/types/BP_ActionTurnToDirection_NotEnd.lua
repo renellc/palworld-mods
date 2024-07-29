@@ -6,6 +6,9 @@
 ---@field DeleteTimer double
 UBP_ActionTurnToDirection_NotEnd_C = {}
 
+---@return UBP_ActionTurnToDirection_NotEnd_C
+function UBP_ActionTurnToDirection_NotEnd_C:get() end
+
 ---@param DeltaTime float
 function UBP_ActionTurnToDirection_NotEnd_C:TickAction(DeltaTime) end
 function UBP_ActionTurnToDirection_NotEnd_C:OnBeginAction() end

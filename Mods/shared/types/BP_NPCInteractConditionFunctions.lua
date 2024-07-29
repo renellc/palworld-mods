@@ -3,6 +3,9 @@
 ---@class UBP_NPCInteractConditionFunctions_C : UPalNPCInteractConditionFunctions
 UBP_NPCInteractConditionFunctions_C = {}
 
+---@return UBP_NPCInteractConditionFunctions_C
+function UBP_NPCInteractConditionFunctions_C:get() end
+
 ---@param Condition UPalNPCInteractCondition
 function UBP_NPCInteractConditionFunctions_C:IsLive(Condition) end
 ---@param Condition UPalNPCInteractCondition

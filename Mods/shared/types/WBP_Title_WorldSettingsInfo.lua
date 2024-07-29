@@ -4,5 +4,8 @@
 ---@field TextDot UImage
 UWBP_Title_WorldSettingsInfo_C = {}
 
+---@return UWBP_Title_WorldSettingsInfo_C
+function UWBP_Title_WorldSettingsInfo_C:get() end
+
 
 

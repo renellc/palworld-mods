@@ -29,6 +29,9 @@
 ---@field ActionTimer double
 UBP_ActionStepBase_C = {}
 
+---@return UBP_ActionStepBase_C
+function UBP_ActionStepBase_C:get() end
+
 ---@param NextPlayerPos FVector
 ---@param IsStop boolean
 function UBP_ActionStepBase_C:CheckOtherCharacter(NextPlayerPos, IsStop) end

@@ -9,5 +9,8 @@
 ---@field bStopServiceWhenAppDeactivates boolean
 UTcpMessagingSettings = {}
 
+---@return UTcpMessagingSettings
+function UTcpMessagingSettings:get() end
+
 
 

@@ -3,6 +3,9 @@
 ---@class AARActor : AActor
 AARActor = {}
 
+---@return AARActor
+function AARActor:get() end
+
 ---@param InComponentClass TSubclassOf<UARComponent>
 ---@param NativeID FGuid
 ---@return UARComponent
@@ -12,10 +15,16 @@ function AARActor:AddARComponent(InComponentClass, NativeID) end
 ---@class AAROriginActor : AActor
 AAROriginActor = {}
 
+---@return AAROriginActor
+function AAROriginActor:get() end
+
 
 ---@class AARSharedWorldGameMode : AGameMode
 ---@field BufferSizePerChunk int32
 AARSharedWorldGameMode = {}
+
+---@return AARSharedWorldGameMode
+function AARSharedWorldGameMode:get() end
 
 ---@param ImageData TArray<uint8>
 function AARSharedWorldGameMode:SetPreviewImageData(ImageData) end
@@ -35,11 +44,17 @@ function AARSharedWorldGameMode:GetARSharedWorldGameState() end
 ---@field ARWorldBytesDelivered int32
 AARSharedWorldGameState = {}
 
+---@return AARSharedWorldGameState
+function AARSharedWorldGameState:get() end
+
 function AARSharedWorldGameState:K2_OnARWorldMapIsReady() end
 
 
 ---@class AARSharedWorldPlayerController : APlayerController
 AARSharedWorldPlayerController = {}
+
+---@return AARSharedWorldPlayerController
+function AARSharedWorldPlayerController:get() end
 
 function AARSharedWorldPlayerController:ServerMarkReadyForReceiving() end
 ---@param Offset int32
@@ -57,6 +72,9 @@ function AARSharedWorldPlayerController:ClientInitSharedWorld(PreviewImageSize, 
 ---@field CaptureProbe UAREnvironmentCaptureProbe
 AARSkyLight = {}
 
+---@return AARSkyLight
+function AARSkyLight:get() end
+
 ---@param InCaptureProbe UAREnvironmentCaptureProbe
 function AARSkyLight:SetEnvironmentCaptureProbe(InCaptureProbe) end
 
@@ -67,11 +85,17 @@ function AARSkyLight:SetEnvironmentCaptureProbe(InCaptureProbe) end
 ---@field PrincipalPoint FVector2D
 FARCameraIntrinsics = {}
 
+---@return FARCameraIntrinsics
+function FARCameraIntrinsics:get() end
+
 
 
 ---@class FAREnvironmentProbeUpdatePayload
 ---@field WorldTransform FTransform
 FAREnvironmentProbeUpdatePayload = {}
+
+---@return FAREnvironmentProbeUpdatePayload
+function FAREnvironmentProbeUpdatePayload:get() end
 
 
 
@@ -81,6 +105,9 @@ FAREnvironmentProbeUpdatePayload = {}
 ---@field RightEyePosition FVector
 ---@field LookAtTarget FVector
 FARFaceUpdatePayload = {}
+
+---@return FARFaceUpdatePayload
+function FARFaceUpdatePayload:get() end
 
 
 
@@ -94,6 +121,9 @@ FARFaceUpdatePayload = {}
 ---@field AnchorName FString
 FARGeoAnchorUpdatePayload = {}
 
+---@return FARGeoAnchorUpdatePayload
+function FARGeoAnchorUpdatePayload:get() end
+
 
 
 ---@class FARImageUpdatePayload
@@ -103,6 +133,9 @@ FARGeoAnchorUpdatePayload = {}
 ---@field EstimatedSize FVector2D
 FARImageUpdatePayload = {}
 
+---@return FARImageUpdatePayload
+function FARImageUpdatePayload:get() end
+
 
 
 ---@class FARMeshUpdatePayload
@@ -111,11 +144,17 @@ FARImageUpdatePayload = {}
 ---@field ObjectClassification EARObjectClassification
 FARMeshUpdatePayload = {}
 
+---@return FARMeshUpdatePayload
+function FARMeshUpdatePayload:get() end
+
 
 
 ---@class FARObjectUpdatePayload
 ---@field WorldTransform FTransform
 FARObjectUpdatePayload = {}
+
+---@return FARObjectUpdatePayload
+function FARObjectUpdatePayload:get() end
 
 
 
@@ -128,10 +167,16 @@ FARObjectUpdatePayload = {}
 ---@field ObjectClassification EARObjectClassification
 FARPlaneUpdatePayload = {}
 
+---@return FARPlaneUpdatePayload
+function FARPlaneUpdatePayload:get() end
+
 
 
 ---@class FARPointUpdatePayload
 FARPointUpdatePayload = {}
+
+---@return FARPointUpdatePayload
+function FARPointUpdatePayload:get() end
 
 
 ---@class FARPose2D
@@ -139,6 +184,9 @@ FARPointUpdatePayload = {}
 ---@field JointLocations TArray<FVector2D>
 ---@field IsJointTracked TArray<boolean>
 FARPose2D = {}
+
+---@return FARPose2D
+function FARPose2D:get() end
 
 
 
@@ -149,12 +197,18 @@ FARPose2D = {}
 ---@field JointTransformSpace EARJointTransformSpace
 FARPose3D = {}
 
+---@return FARPose3D
+function FARPose3D:get() end
+
 
 
 ---@class FARPoseUpdatePayload
 ---@field WorldTransform FTransform
 ---@field JointTransforms TArray<FTransform>
 FARPoseUpdatePayload = {}
+
+---@return FARPoseUpdatePayload
+function FARPoseUpdatePayload:get() end
 
 
 
@@ -165,6 +219,9 @@ FARPoseUpdatePayload = {}
 ---@field QRCode FString
 FARQRCodeUpdatePayload = {}
 
+---@return FARQRCodeUpdatePayload
+function FARQRCodeUpdatePayload:get() end
+
 
 
 ---@class FARSessionPayload
@@ -173,12 +230,18 @@ FARQRCodeUpdatePayload = {}
 ---@field DefaultWireframeMeshMaterial UMaterialInterface
 FARSessionPayload = {}
 
+---@return FARSessionPayload
+function FARSessionPayload:get() end
+
 
 
 ---@class FARSessionStatus
 ---@field AdditionalInfo FString
 ---@field Status EARSessionStatus
 FARSessionStatus = {}
+
+---@return FARSessionStatus
+function FARSessionStatus:get() end
 
 
 
@@ -187,6 +250,9 @@ FARSessionStatus = {}
 ---@field ARWorldOffset int32
 FARSharedWorldReplicationState = {}
 
+---@return FARSharedWorldReplicationState
+function FARSharedWorldReplicationState:get() end
+
 
 
 ---@class FARSkeletonDefinition
@@ -194,6 +260,9 @@ FARSharedWorldReplicationState = {}
 ---@field JointNames TArray<FName>
 ---@field ParentIndices TArray<int32>
 FARSkeletonDefinition = {}
+
+---@return FARSkeletonDefinition
+function FARSkeletonDefinition:get() end
 
 
 
@@ -204,6 +273,9 @@ FARSkeletonDefinition = {}
 ---@field TrackedGeometry UARTrackedGeometry
 FARTraceResult = {}
 
+---@return FARTraceResult
+function FARTraceResult:get() end
+
 
 
 ---@class FARVideoFormat
@@ -211,6 +283,9 @@ FARTraceResult = {}
 ---@field Width int32
 ---@field Height int32
 FARVideoFormat = {}
+
+---@return FARVideoFormat
+function FARVideoFormat:get() end
 
 
 
@@ -220,10 +295,16 @@ FARVideoFormat = {}
 ---@field TrackedGeometry UARTrackedGeometry
 FTrackedGeometryGroup = {}
 
+---@return FTrackedGeometryGroup
+function FTrackedGeometryGroup:get() end
+
 
 
 ---@class UARBaseAsyncTaskBlueprintProxy : UBlueprintAsyncActionBase
 UARBaseAsyncTaskBlueprintProxy = {}
+
+---@return UARBaseAsyncTaskBlueprintProxy
+function UARBaseAsyncTaskBlueprintProxy:get() end
 
 
 ---@class UARBasicLightEstimate : UARLightEstimate
@@ -231,6 +312,9 @@ UARBaseAsyncTaskBlueprintProxy = {}
 ---@field AmbientColorTemperatureKelvin float
 ---@field AmbientColor FLinearColor
 UARBasicLightEstimate = {}
+
+---@return UARBasicLightEstimate
+function UARBasicLightEstimate:get() end
 
 ---@return float
 function UARBasicLightEstimate:GetAmbientIntensityLumens() end
@@ -242,6 +326,9 @@ function UARBasicLightEstimate:GetAmbientColor() end
 
 ---@class UARBlueprintLibrary : UBlueprintFunctionLibrary
 UARBlueprintLibrary = {}
+
+---@return UARBlueprintLibrary
+function UARBlueprintLibrary:get() end
 
 ---@param ComponentToUnpin USceneComponent
 function UARBlueprintLibrary:UnpinComponent(ComponentToUnpin) end
@@ -435,6 +522,9 @@ function UARBlueprintLibrary:AddManualEnvironmentCaptureProbe(Location, Extent) 
 ---@field Orientation EARCandidateImageOrientation
 UARCandidateImage = {}
 
+---@return UARCandidateImage
+function UARCandidateImage:get() end
+
 ---@return float
 function UARCandidateImage:GetPhysicalWidth() end
 ---@return float
@@ -452,6 +542,9 @@ function UARCandidateImage:GetCandidateTexture() end
 ---@field FriendlyName FString
 ---@field BoundingBox FBox
 UARCandidateObject = {}
+
+---@return UARCandidateObject
+function UARCandidateObject:get() end
 
 ---@param NewName FString
 function UARCandidateObject:SetFriendlyName(NewName) end
@@ -476,6 +569,9 @@ function UARCandidateObject:GetBoundingBox() end
 ---@field MyTrackedGeometry UARTrackedGeometry
 UARComponent = {}
 
+---@return UARComponent
+function UARComponent:get() end
+
 function UARComponent:UpdateVisualization() end
 ---@param NativeID FGuid
 function UARComponent:SetNativeID(NativeID) end
@@ -487,6 +583,9 @@ function UARComponent:GetMRMesh() end
 
 ---@class UARDependencyHandler : UObject
 UARDependencyHandler = {}
+
+---@return UARDependencyHandler
+function UARDependencyHandler:get() end
 
 ---@param WorldContextObject UObject
 ---@param SessionConfig UARSessionConfig
@@ -514,6 +613,9 @@ function UARDependencyHandler:CheckARServiceAvailability(WorldContextObject, Lat
 ---@field EnvironmentCaptureTexture UAREnvironmentCaptureProbeTexture
 UAREnvironmentCaptureProbe = {}
 
+---@return UAREnvironmentCaptureProbe
+function UAREnvironmentCaptureProbe:get() end
+
 ---@return FVector
 function UAREnvironmentCaptureProbe:GetExtent() end
 ---@return UAREnvironmentCaptureProbeTexture
@@ -527,11 +629,17 @@ function UAREnvironmentCaptureProbe:GetEnvironmentCaptureTexture() end
 ---@field Size FVector2D
 UAREnvironmentCaptureProbeTexture = {}
 
+---@return UAREnvironmentCaptureProbeTexture
+function UAREnvironmentCaptureProbeTexture:get() end
+
 
 
 ---@class UAREnvironmentProbeComponent : UARComponent
 ---@field ReplicatedPayload FAREnvironmentProbeUpdatePayload
 UAREnvironmentProbeComponent = {}
+
+---@return UAREnvironmentProbeComponent
+function UAREnvironmentProbeComponent:get() end
 
 ---@param NewPayload FAREnvironmentProbeUpdatePayload
 function UAREnvironmentProbeComponent:ServerUpdatePayload(NewPayload) end
@@ -547,6 +655,9 @@ function UAREnvironmentProbeComponent:ReceiveAdd(Payload) end
 ---@field bFaceOutOfScreen boolean
 ---@field ReplicatedPayload FARFaceUpdatePayload
 UARFaceComponent = {}
+
+---@return UARFaceComponent
+function UARFaceComponent:get() end
 
 ---@param NewDebugMode EFaceComponentDebugMode
 function UARFaceComponent:SetFaceComponentDebugMode(NewDebugMode) end
@@ -566,6 +677,9 @@ function UARFaceComponent:ReceiveAdd(Payload) end
 ---@field RightEyeTransform FTransform
 UARFaceGeometry = {}
 
+---@return UARFaceGeometry
+function UARFaceGeometry:get() end
+
 ---@param Eye EAREye
 ---@return FTransform
 function UARFaceGeometry:GetWorldSpaceEyeTransform(Eye) end
@@ -582,6 +696,9 @@ function UARFaceGeometry:GetBlendShapes() end
 ---@class UARGeoAnchor : UARTrackedGeometry
 UARGeoAnchor = {}
 
+---@return UARGeoAnchor
+function UARGeoAnchor:get() end
+
 ---@return float
 function UARGeoAnchor:GetLongitude() end
 ---@return float
@@ -596,6 +713,9 @@ function UARGeoAnchor:GetAltitudeMeters() end
 ---@field ReplicatedPayload FARGeoAnchorUpdatePayload
 UARGeoAnchorComponent = {}
 
+---@return UARGeoAnchorComponent
+function UARGeoAnchorComponent:get() end
+
 ---@param NewDebugMode EGeoAnchorComponentDebugMode
 function UARGeoAnchorComponent:SetGeoAnchorComponentDebugMode(NewDebugMode) end
 ---@param NewPayload FARGeoAnchorUpdatePayload
@@ -608,6 +728,9 @@ function UARGeoAnchorComponent:ReceiveAdd(Payload) end
 
 ---@class UARGeoTrackingSupport : UObject
 UARGeoTrackingSupport = {}
+
+---@return UARGeoTrackingSupport
+function UARGeoTrackingSupport:get() end
 
 ---@return UARGeoTrackingSupport
 function UARGeoTrackingSupport:GetGeoTrackingSupport() end
@@ -635,6 +758,9 @@ function UARGeoTrackingSupport:AddGeoAnchorAtLocation(Longitude, Latitude, Optio
 ---@field OnFailed FARGetCandidateObjectAsyncTaskBlueprintProxyOnFailed
 UARGetCandidateObjectAsyncTaskBlueprintProxy = {}
 
+---@return UARGetCandidateObjectAsyncTaskBlueprintProxy
+function UARGetCandidateObjectAsyncTaskBlueprintProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param Extent FVector
@@ -645,6 +771,9 @@ function UARGetCandidateObjectAsyncTaskBlueprintProxy:ARGetCandidateObject(World
 ---@class UARImageComponent : UARComponent
 ---@field ReplicatedPayload FARImageUpdatePayload
 UARImageComponent = {}
+
+---@return UARImageComponent
+function UARImageComponent:get() end
 
 ---@param NewDebugMode EImageComponentDebugMode
 function UARImageComponent:SetImageComponentDebugMode(NewDebugMode) end
@@ -660,6 +789,9 @@ function UARImageComponent:ReceiveAdd(Payload) end
 ---@field OnARActorSpawnedDelegate FARLifeCycleComponentOnARActorSpawnedDelegate
 ---@field OnARActorToBeDestroyedDelegate FARLifeCycleComponentOnARActorToBeDestroyedDelegate
 UARLifeCycleComponent = {}
+
+---@return UARLifeCycleComponent
+function UARLifeCycleComponent:get() end
 
 ---@param ComponentClass UClass
 ---@param NativeID FGuid
@@ -677,10 +809,16 @@ function UARLifeCycleComponent:InstanceARActorSpawnedDelegate__DelegateSignature
 ---@class UARLightEstimate : UObject
 UARLightEstimate = {}
 
+---@return UARLightEstimate
+function UARLightEstimate:get() end
+
 
 ---@class UARMeshComponent : UARComponent
 ---@field ReplicatedPayload FARMeshUpdatePayload
 UARMeshComponent = {}
+
+---@return UARMeshComponent
+function UARMeshComponent:get() end
 
 ---@param NewPayload FARMeshUpdatePayload
 function UARMeshComponent:ServerUpdatePayload(NewPayload) end
@@ -693,6 +831,9 @@ function UARMeshComponent:ReceiveAdd(Payload) end
 ---@class UARMeshGeometry : UARTrackedGeometry
 UARMeshGeometry = {}
 
+---@return UARMeshGeometry
+function UARMeshGeometry:get() end
+
 ---@param InWorldLocation FVector
 ---@param OutClassification EARObjectClassification
 ---@param OutClassificationLocation FVector
@@ -704,6 +845,9 @@ function UARMeshGeometry:GetObjectClassificationAtLocation(InWorldLocation, OutC
 ---@class UARObjectComponent : UARComponent
 ---@field ReplicatedPayload FARObjectUpdatePayload
 UARObjectComponent = {}
+
+---@return UARObjectComponent
+function UARObjectComponent:get() end
 
 ---@param NewPayload FARObjectUpdatePayload
 function UARObjectComponent:ServerUpdatePayload(NewPayload) end
@@ -722,6 +866,9 @@ function UARObjectComponent:ReceiveAdd(Payload) end
 ---@field OnARTrackingStateChanged FARPinOnARTrackingStateChanged
 ---@field OnARTransformUpdated FARPinOnARTransformUpdated
 UARPin = {}
+
+---@return UARPin
+function UARPin:get() end
 
 ---@return EARTrackingState
 function UARPin:GetTrackingState() end
@@ -746,6 +893,9 @@ function UARPin:DebugDraw(World, Color, Scale, PersistForSeconds) end
 ---@field ReplicatedPayload FARPlaneUpdatePayload
 UARPlaneComponent = {}
 
+---@return UARPlaneComponent
+function UARPlaneComponent:get() end
+
 ---@param NewDebugMode EPlaneComponentDebugMode
 function UARPlaneComponent:SetPlaneComponentDebugMode(NewDebugMode) end
 ---@param InColors TMap<EARObjectClassification, FLinearColor>
@@ -769,6 +919,9 @@ function UARPlaneComponent:GetObjectClassificationDebugColors() end
 UARPlaneGeometry = {}
 
 ---@return UARPlaneGeometry
+function UARPlaneGeometry:get() end
+
+---@return UARPlaneGeometry
 function UARPlaneGeometry:GetSubsumedBy() end
 ---@return EARPlaneOrientation
 function UARPlaneGeometry:GetOrientation() end
@@ -784,6 +937,9 @@ function UARPlaneGeometry:GetBoundaryPolygonInLocalSpace() end
 ---@field ReplicatedPayload FARPointUpdatePayload
 UARPointComponent = {}
 
+---@return UARPointComponent
+function UARPointComponent:get() end
+
 ---@param NewPayload FARPointUpdatePayload
 function UARPointComponent:ServerUpdatePayload(NewPayload) end
 ---@param Payload FARPointUpdatePayload
@@ -795,6 +951,9 @@ function UARPointComponent:ReceiveAdd(Payload) end
 ---@class UARPoseComponent : UARComponent
 ---@field ReplicatedPayload FARPoseUpdatePayload
 UARPoseComponent = {}
+
+---@return UARPoseComponent
+function UARPoseComponent:get() end
 
 ---@param NewDebugMode EPoseComponentDebugMode
 function UARPoseComponent:SetPoseComponentDebugMode(NewDebugMode) end
@@ -810,6 +969,9 @@ function UARPoseComponent:ReceiveAdd(Payload) end
 ---@field ReplicatedPayload FARQRCodeUpdatePayload
 UARQRCodeComponent = {}
 
+---@return UARQRCodeComponent
+function UARQRCodeComponent:get() end
+
 ---@param NewDebugMode EQRCodeComponentDebugMode
 function UARQRCodeComponent:SetQRCodeComponentDebugMode(NewDebugMode) end
 ---@param NewPayload FARQRCodeUpdatePayload
@@ -824,6 +986,9 @@ function UARQRCodeComponent:ReceiveAdd(Payload) end
 ---@field OnSuccess FARSaveWorldAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFailed FARSaveWorldAsyncTaskBlueprintProxyOnFailed
 UARSaveWorldAsyncTaskBlueprintProxy = {}
+
+---@return UARSaveWorldAsyncTaskBlueprintProxy
+function UARSaveWorldAsyncTaskBlueprintProxy:get() end
 
 ---@param WorldContextObject UObject
 ---@return UARSaveWorldAsyncTaskBlueprintProxy
@@ -879,6 +1044,9 @@ function UARSaveWorldAsyncTaskBlueprintProxy:ARSaveWorld(WorldContextObject) end
 ---@field DefaultMeshMaterial UMaterialInterface
 ---@field DefaultWireframeMeshMaterial UMaterialInterface
 UARSessionConfig = {}
+
+---@return UARSessionConfig
+function UARSessionConfig:get() end
 
 ---@return boolean
 function UARSessionConfig:ShouldResetTrackedObjects() end
@@ -953,6 +1121,9 @@ function UARSessionConfig:AddCandidateImage(NewCandidateImage) end
 ---@field Size FVector2D
 UARTexture = {}
 
+---@return UARTexture
+function UARTexture:get() end
+
 
 
 ---@class UARTextureCameraDepth : UARTexture
@@ -961,18 +1132,30 @@ UARTexture = {}
 ---@field bIsTemporallySmoothed boolean
 UARTextureCameraDepth = {}
 
+---@return UARTextureCameraDepth
+function UARTextureCameraDepth:get() end
+
 
 
 ---@class UARTextureCameraImage : UARTexture
 UARTextureCameraImage = {}
 
+---@return UARTextureCameraImage
+function UARTextureCameraImage:get() end
+
 
 ---@class UARTraceResultDummy : UObject
 UARTraceResultDummy = {}
 
+---@return UARTraceResultDummy
+function UARTraceResultDummy:get() end
+
 
 ---@class UARTraceResultLibrary : UBlueprintFunctionLibrary
 UARTraceResultLibrary = {}
+
+---@return UARTraceResultLibrary
+function UARTraceResultLibrary:get() end
 
 ---@param TraceResult FARTraceResult
 ---@return UARTrackedGeometry
@@ -1018,6 +1201,9 @@ function UARTraceResultLibrary:GetDistanceFromCamera(TraceResult) end
 ---@field OnRemoveTrackedObject FARTrackableNotifyComponentOnRemoveTrackedObject
 UARTrackableNotifyComponent = {}
 
+---@return UARTrackableNotifyComponent
+function UARTrackableNotifyComponent:get() end
+
 
 
 ---@class UARTrackedGeometry : UObject
@@ -1031,6 +1217,9 @@ UARTrackableNotifyComponent = {}
 ---@field LastUpdateFrameNumber int32
 ---@field DebugName FName
 UARTrackedGeometry = {}
+
+---@return UARTrackedGeometry
+function UARTrackedGeometry:get() end
 
 ---@return boolean
 function UARTrackedGeometry:IsTracked() end
@@ -1062,6 +1251,9 @@ function UARTrackedGeometry:GetDebugName() end
 ---@field EstimatedSize FVector2D
 UARTrackedImage = {}
 
+---@return UARTrackedImage
+function UARTrackedImage:get() end
+
 ---@return FVector2D
 function UARTrackedImage:GetEstimateSize() end
 ---@return UARCandidateImage
@@ -1072,6 +1264,9 @@ function UARTrackedImage:GetDetectedImage() end
 ---@field DetectedObject UARCandidateObject
 UARTrackedObject = {}
 
+---@return UARTrackedObject
+function UARTrackedObject:get() end
+
 ---@return UARCandidateObject
 function UARTrackedObject:GetDetectedObject() end
 
@@ -1079,10 +1274,16 @@ function UARTrackedObject:GetDetectedObject() end
 ---@class UARTrackedPoint : UARTrackedGeometry
 UARTrackedPoint = {}
 
+---@return UARTrackedPoint
+function UARTrackedPoint:get() end
+
 
 ---@class UARTrackedPose : UARTrackedGeometry
 ---@field TrackedPose FARPose3D
 UARTrackedPose = {}
+
+---@return UARTrackedPose
+function UARTrackedPose:get() end
 
 ---@return FARPose3D
 function UARTrackedPose:GetTrackedPoseData() end
@@ -1093,16 +1294,25 @@ function UARTrackedPose:GetTrackedPoseData() end
 ---@field Version int32
 UARTrackedQRCode = {}
 
+---@return UARTrackedQRCode
+function UARTrackedQRCode:get() end
+
 
 
 ---@class UARTypesDummyClass : UObject
 UARTypesDummyClass = {}
+
+---@return UARTypesDummyClass
+function UARTypesDummyClass:get() end
 
 
 ---@class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy : UARBaseAsyncTaskBlueprintProxy
 ---@field OnSuccess FCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFailed FCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxyOnFailed
 UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy = {}
+
+---@return UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy
+function UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy:get() end
 
 ---@param bIsAvailable boolean
 ---@param Error FString
@@ -1121,6 +1331,9 @@ function UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy:CheckGeoTrackingAv
 ---@field OnSuccess FGetGeoLocationAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFailed FGetGeoLocationAsyncTaskBlueprintProxyOnFailed
 UGetGeoLocationAsyncTaskBlueprintProxy = {}
+
+---@return UGetGeoLocationAsyncTaskBlueprintProxy
+function UGetGeoLocationAsyncTaskBlueprintProxy:get() end
 
 ---@param Longitude float
 ---@param Latitude float

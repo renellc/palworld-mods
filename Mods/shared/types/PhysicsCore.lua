@@ -10,6 +10,9 @@
 ---@field bUpdateMassWhenScaleChanges boolean
 FBodyInstanceCore = {}
 
+---@return FBodyInstanceCore
+function FBodyInstanceCore:get() end
+
 
 
 ---@class UBodySetupCore : UObject
@@ -18,6 +21,9 @@ FBodyInstanceCore = {}
 ---@field CollisionTraceFlag ECollisionTraceFlag
 ---@field CollisionReponse EBodyCollisionResponse::Type
 UBodySetupCore = {}
+
+---@return UBodySetupCore
+function UBodySetupCore:get() end
 
 
 
@@ -31,10 +37,16 @@ UBodySetupCore = {}
 ---@field SleepingAngularVelocityThreshold float
 UChaosPhysicalMaterial = {}
 
+---@return UChaosPhysicalMaterial
+function UChaosPhysicalMaterial:get() end
+
 
 
 ---@class UDEPRECATED_PhysicalMaterialPropertyBase : UObject
 UDEPRECATED_PhysicalMaterialPropertyBase = {}
+
+---@return UDEPRECATED_PhysicalMaterialPropertyBase
+function UDEPRECATED_PhysicalMaterialPropertyBase:get() end
 
 
 ---@class UPhysicalMaterial : UObject
@@ -54,6 +66,9 @@ UDEPRECATED_PhysicalMaterialPropertyBase = {}
 ---@field PhysicalMaterialProperty UDEPRECATED_PhysicalMaterialPropertyBase
 ---@field SurfaceType EPhysicalSurface
 UPhysicalMaterial = {}
+
+---@return UPhysicalMaterial
+function UPhysicalMaterial:get() end
 
 
 
@@ -82,6 +97,9 @@ UPhysicalMaterial = {}
 ---@field DefaultShapeComplexity ECollisionTraceFlag
 ---@field SolverOptions FChaosSolverConfiguration
 UPhysicsSettingsCore = {}
+
+---@return UPhysicsSettingsCore
+function UPhysicsSettingsCore:get() end
 
 
 

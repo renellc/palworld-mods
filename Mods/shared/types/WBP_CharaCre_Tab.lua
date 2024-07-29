@@ -11,6 +11,9 @@
 ---@field BindCategoryType E_UICharacterMakeCategory::Type
 UWBP_CharaCre_Tab_C = {}
 
+---@return UWBP_CharaCre_Tab_C
+function UWBP_CharaCre_Tab_C:get() end
+
 ---@param CategoryType E_UICharacterMakeCategory::Type
 function UWBP_CharaCre_Tab_C:GetBindedCategory(CategoryType) end
 function UWBP_CharaCre_Tab_C:AnmEvent_Normal() end

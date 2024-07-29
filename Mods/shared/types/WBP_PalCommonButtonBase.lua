@@ -8,6 +8,9 @@
 ---@field ClickAKAudioEvent UAkAudioEvent
 UWBP_PalCommonButtonBase_C = {}
 
+---@return UWBP_PalCommonButtonBase_C
+function UWBP_PalCommonButtonBase_C:get() end
+
 ---@param AudioEvent UAkAudioEvent
 function UWBP_PalCommonButtonBase_C:PlayAkSound(AudioEvent) end
 function UWBP_PalCommonButtonBase_C:BP_OnHovered() end

@@ -7,6 +7,9 @@
 ---@field TimerHandle FTimerHandle
 UBP_VisualEffect_SpawnFadeIn_C = {}
 
+---@return UBP_VisualEffect_SpawnFadeIn_C
+function UBP_VisualEffect_SpawnFadeIn_C:get() end
+
 ---@param Intensity double
 function UBP_VisualEffect_SpawnFadeIn_C:SetOpacity(Intensity) end
 function UBP_VisualEffect_SpawnFadeIn_C:OnEndVisualEffect() end

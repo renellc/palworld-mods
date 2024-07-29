@@ -14,6 +14,9 @@
 ---@field CachedDisplayData FPalUIBackupSaveDisplayData
 UWBP_Title_BackupSelect_ListContent_C = {}
 
+---@return UWBP_Title_BackupSelect_ListContent_C
+function UWBP_Title_BackupSelect_ListContent_C:get() end
+
 ---@param DisplayData FPalUIBackupSaveDisplayData
 function UWBP_Title_BackupSelect_ListContent_C:GetDisplayData(DisplayData) end
 ---@param DisplayData FPalUIBackupSaveDisplayData

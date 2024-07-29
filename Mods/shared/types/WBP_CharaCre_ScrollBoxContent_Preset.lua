@@ -6,6 +6,9 @@
 ---@field OnSelectedPreset FWBP_CharaCre_ScrollBoxContent_Preset_COnSelectedPreset
 UWBP_CharaCre_ScrollBoxContent_Preset_C = {}
 
+---@return UWBP_CharaCre_ScrollBoxContent_Preset_C
+function UWBP_CharaCre_ScrollBoxContent_Preset_C:get() end
+
 ---@param Widget UWidget
 function UWBP_CharaCre_ScrollBoxContent_Preset_C:GetTopFocusTarget(Widget) end
 ---@param Widget UWidget

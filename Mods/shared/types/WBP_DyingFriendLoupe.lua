@@ -7,6 +7,9 @@
 ---@field SyncId FPalInstanceID
 UWBP_DyingFriendLoupe_C = {}
 
+---@return UWBP_DyingFriendLoupe_C
+function UWBP_DyingFriendLoupe_C:get() end
+
 ---@param InstanceId FPalInstanceID
 function UWBP_DyingFriendLoupe_C:OnSyncIndividualParameter(InstanceId) end
 ---@param DyingStatus UBP_Status_Dying_C

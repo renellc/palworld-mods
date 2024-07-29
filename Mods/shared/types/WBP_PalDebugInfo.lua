@@ -6,6 +6,9 @@
 ---@field BuildConfigDisplayTextMap TMap<FString, FString>
 UWBP_PalDebugInfo_C = {}
 
+---@return UWBP_PalDebugInfo_C
+function UWBP_PalDebugInfo_C:get() end
+
 function UWBP_PalDebugInfo_C:Construct() end
 function UWBP_PalDebugInfo_C:OnSetup() end
 ---@param EntryPoint int32

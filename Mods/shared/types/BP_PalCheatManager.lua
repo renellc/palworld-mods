@@ -5,6 +5,9 @@
 ---@field tempPlayer AActor
 UBP_PalCheatManager_C = {}
 
+---@return UBP_PalCheatManager_C
+function UBP_PalCheatManager_C:get() end
+
 function UBP_PalCheatManager_C:ToggleAllDebugInfo() end
 function UBP_PalCheatManager_C:StartWildPalCombat() end
 function UBP_PalCheatManager_C:TimeStopForBP() end

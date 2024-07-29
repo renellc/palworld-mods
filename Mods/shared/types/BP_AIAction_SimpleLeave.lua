@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AIAction_SimpleLeave_C = {}
 
+---@return UBP_AIAction_SimpleLeave_C
+function UBP_AIAction_SimpleLeave_C:get() end
+
 function UBP_AIAction_SimpleLeave_C:ForceEndAction() end
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float

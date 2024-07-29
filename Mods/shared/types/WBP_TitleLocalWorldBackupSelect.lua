@@ -12,6 +12,9 @@
 ---@field FailedDialogMsgID FDataTableRowHandle
 UWBP_TitleLocalWorldBackupSelect_C = {}
 
+---@return UWBP_TitleLocalWorldBackupSelect_C
+function UWBP_TitleLocalWorldBackupSelect_C:get() end
+
 ---@param bResult boolean
 function UWBP_TitleLocalWorldBackupSelect_C:OnCloseSuccessDialog(bResult) end
 ---@param bResult boolean

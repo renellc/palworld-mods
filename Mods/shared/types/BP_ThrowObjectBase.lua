@@ -9,6 +9,9 @@
 ---@field ThrowEffect UNiagaraSystem
 ABP_ThrowObjectBase_C = {}
 
+---@return ABP_ThrowObjectBase_C
+function ABP_ThrowObjectBase_C:get() end
+
 ABP_ThrowObjectBase_C['Play Throw Sound'] = function() end
 ---@return USceneComponent
 function ABP_ThrowObjectBase_C:GetAkOwnerComponent() end

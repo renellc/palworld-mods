@@ -18,6 +18,9 @@
 ---@field ForceDisplayTime double
 UWBP_AutoSave_C = {}
 
+---@return UWBP_AutoSave_C
+function UWBP_AutoSave_C:get() end
+
 function UWBP_AutoSave_C:OnEndedForceDisplayingTime() end
 ---@param bCompleted boolean
 function UWBP_AutoSave_C:IsAllSaveCompleted(bCompleted) end

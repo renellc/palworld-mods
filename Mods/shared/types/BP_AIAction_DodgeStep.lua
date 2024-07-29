@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AIAction_DodgeStep_C = {}
 
+---@return UBP_AIAction_DodgeStep_C
+function UBP_AIAction_DodgeStep_C:get() end
+
 ---@param ActionComponent UPalActionComponent
 ---@param CanStep boolean
 function UBP_AIAction_DodgeStep_C:CanStep(ActionComponent, CanStep) end

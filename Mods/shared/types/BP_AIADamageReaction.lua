@@ -10,6 +10,9 @@
 ---@field DefaultPawn APalCharacter
 UBP_AIADamageReaction_C = {}
 
+---@return UBP_AIADamageReaction_C
+function UBP_AIADamageReaction_C:get() end
+
 ---@param IsNoose boolean
 function UBP_AIADamageReaction_C:IsNooseTrapAction(IsNoose) end
 ---@param TrapActor AActor

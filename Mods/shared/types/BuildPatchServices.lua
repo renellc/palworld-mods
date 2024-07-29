@@ -8,6 +8,9 @@
 ---@field GroupNumber uint8
 FChunkInfoData = {}
 
+---@return FChunkInfoData
+function FChunkInfoData:get() end
+
 
 
 ---@class FChunkPartData
@@ -16,12 +19,18 @@ FChunkInfoData = {}
 ---@field Size uint32
 FChunkPartData = {}
 
+---@return FChunkPartData
+function FChunkPartData:get() end
+
 
 
 ---@class FCustomFieldData
 ---@field Key FString
 ---@field Value FString
 FCustomFieldData = {}
+
+---@return FCustomFieldData
+function FCustomFieldData:get() end
 
 
 
@@ -36,11 +45,17 @@ FCustomFieldData = {}
 ---@field bIsCompressed boolean
 FFileManifestData = {}
 
+---@return FFileManifestData
+function FFileManifestData:get() end
+
 
 
 ---@class FSHAHashData
 ---@field Hash uint8
 FSHAHashData = {}
+
+---@return FSHAHashData
+function FSHAHashData:get() end
 
 
 
@@ -60,6 +75,9 @@ FSHAHashData = {}
 ---@field ChunkList TArray<FChunkInfoData>
 ---@field CustomFields TArray<FCustomFieldData>
 UBuildPatchManifest = {}
+
+---@return UBuildPatchManifest
+function UBuildPatchManifest:get() end
 
 
 

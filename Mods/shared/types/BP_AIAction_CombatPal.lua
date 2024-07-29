@@ -25,6 +25,9 @@
 ---@field Const_FanShapeDegree double
 UBP_AIAction_CombatPal_C = {}
 
+---@return UBP_AIAction_CombatPal_C
+function UBP_AIAction_CombatPal_C:get() end
+
 ---@param action UPalActionBase
 function UBP_AIAction_CombatPal_C:OnPlayAction(action) end
 function UBP_AIAction_CombatPal_C:NextAction_ByApproachFailure() end

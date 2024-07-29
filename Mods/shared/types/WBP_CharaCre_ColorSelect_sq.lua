@@ -13,6 +13,9 @@
 ---@field BindedColor FLinearColor
 UWBP_CharaCre_ColorSelect_sq_C = {}
 
+---@return UWBP_CharaCre_ColorSelect_sq_C
+function UWBP_CharaCre_ColorSelect_sq_C:get() end
+
 ---@param Color FLinearColor
 function UWBP_CharaCre_ColorSelect_sq_C:GetBindedColor(Color) end
 ---@param NewColor FLinearColor

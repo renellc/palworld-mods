@@ -5,6 +5,9 @@
 ---@field MimicMontage UAnimMontage
 UBP_Action_Mimicry_C = {}
 
+---@return UBP_Action_Mimicry_C
+function UBP_Action_Mimicry_C:get() end
+
 ---@param Montage UAnimMontage
 function UBP_Action_Mimicry_C:FindMimicMontage(Montage) end
 function UBP_Action_Mimicry_C:OnBeginAction() end

@@ -15,6 +15,9 @@
 ---@field ObjectgPlacement APalRandomIncidentObjectPlacement
 UBP_PalIncidentRandom_C = {}
 
+---@return UBP_PalIncidentRandom_C
+function UBP_PalIncidentRandom_C:get() end
+
 function UBP_PalIncidentRandom_C:SpawnDropItems() end
 function UBP_PalIncidentRandom_C:SpawnEggs() end
 function UBP_PalIncidentRandom_C:CreateObjectPlacement() end

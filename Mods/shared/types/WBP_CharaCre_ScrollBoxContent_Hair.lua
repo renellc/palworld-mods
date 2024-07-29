@@ -10,6 +10,9 @@
 ---@field RestoreFocusWIdget UWidget
 UWBP_CharaCre_ScrollBoxContent_Hair_C = {}
 
+---@return UWBP_CharaCre_ScrollBoxContent_Hair_C
+function UWBP_CharaCre_ScrollBoxContent_Hair_C:get() end
+
 ---@param Color FLinearColor
 function UWBP_CharaCre_ScrollBoxContent_Hair_C:OnChangedHairColor(Color) end
 ---@param Widget UWidget

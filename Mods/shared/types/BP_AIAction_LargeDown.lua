@@ -5,6 +5,9 @@
 ---@field DownAction UPalActionBase
 UBP_AIAction_LargeDown_C = {}
 
+---@return UBP_AIAction_LargeDown_C
+function UBP_AIAction_LargeDown_C:get() end
+
 ---@param Exist boolean
 function UBP_AIAction_LargeDown_C:ExistMontage(Exist) end
 ---@param ControlledPawn APawn

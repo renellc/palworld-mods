@@ -9,6 +9,9 @@
 ---@field PathFindSuccess boolean
 UBP_AIAction_CombatGunState_SideDashMove_C = {}
 
+---@return UBP_AIAction_CombatGunState_SideDashMove_C
+function UBP_AIAction_CombatGunState_SideDashMove_C:get() end
+
 ---@param Goal FVector
 ---@param Success boolean
 function UBP_AIAction_CombatGunState_SideDashMove_C:FindMoveGoal(Goal, Success) end

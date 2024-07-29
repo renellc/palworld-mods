@@ -12,6 +12,9 @@
 ---@field LastClickedButton UWBP_Title_MenuButton_C
 UWBP_TItle_C = {}
 
+---@return UWBP_TItle_C
+function UWBP_TItle_C:get() end
+
 ---@param bResult boolean
 function UWBP_TItle_C:WBP_TItle_AutoGenFunc(bResult) end
 ---@param bResult boolean

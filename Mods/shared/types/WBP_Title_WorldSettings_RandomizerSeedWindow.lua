@@ -9,6 +9,9 @@
 ---@field ['Default Input Name'] FString
 UWBP_Title_WorldSettings_RandomizerSeedWindow_C = {}
 
+---@return UWBP_Title_WorldSettings_RandomizerSeedWindow_C
+function UWBP_Title_WorldSettings_RandomizerSeedWindow_C:get() end
+
 ---@return UWidget
 function UWBP_Title_WorldSettings_RandomizerSeedWindow_C:BP_GetDesiredFocusTarget() end
 function UWBP_Title_WorldSettings_RandomizerSeedWindow_C:OnSetup() end

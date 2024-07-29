@@ -7,6 +7,9 @@
 ---@field LifeTime float
 ABP_PredictedTarget_C = {}
 
+---@return ABP_PredictedTarget_C
+function ABP_PredictedTarget_C:get() end
+
 function ABP_PredictedTarget_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32
 function ABP_PredictedTarget_C:ExecuteUbergraph_BP_PredictedTarget(EntryPoint) end

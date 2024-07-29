@@ -3,6 +3,9 @@
 ---@class FImgMediaSourceCustomizationSequenceProxy
 FImgMediaSourceCustomizationSequenceProxy = {}
 
+---@return FImgMediaSourceCustomizationSequenceProxy
+function FImgMediaSourceCustomizationSequenceProxy:get() end
+
 
 ---@class UImgMediaSource : UBaseMediaSource
 ---@field IsPathRelativeToProjectRoot boolean
@@ -11,6 +14,9 @@ FImgMediaSourceCustomizationSequenceProxy = {}
 ---@field bFillGapsInSequence boolean
 ---@field SequencePath FDirectoryPath
 UImgMediaSource = {}
+
+---@return UImgMediaSource
+function UImgMediaSource:get() end
 
 ---@param Path FString
 function UImgMediaSource:SetTokenizedSequencePath(Path) end

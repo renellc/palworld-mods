@@ -9,6 +9,9 @@
 ---@field Lantern ABP_Lamp_C
 ABP_PlayerBase_C = {}
 
+---@return ABP_PlayerBase_C
+function ABP_PlayerBase_C:get() end
+
 function ABP_PlayerBase_C:ClearLantern() end
 function ABP_PlayerBase_C:CreateLantern() end
 ---@param IsEnable boolean

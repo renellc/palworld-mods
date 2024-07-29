@@ -9,6 +9,9 @@
 ---@field AdditionalTags TSet<FString>
 FUpdateContextDefinition = {}
 
+---@return FUpdateContextDefinition
+function FUpdateContextDefinition:get() end
+
 
 
 ---@class UOnlineHotfixManager : UObject
@@ -17,6 +20,9 @@ FUpdateContextDefinition = {}
 ---@field DebugPrefix FString
 ---@field AssetsHotfixedFromIniFiles TArray<UObject>
 UOnlineHotfixManager = {}
+
+---@return UOnlineHotfixManager
+function UOnlineHotfixManager:get() end
 
 function UOnlineHotfixManager:StartHotfixProcess() end
 
@@ -40,6 +46,9 @@ function UOnlineHotfixManager:StartHotfixProcess() end
 ---@field UpdateContextDefinitionUnknown FUpdateContextDefinition
 ---@field UpdateContextDefinitions TArray<FUpdateContextDefinition>
 UUpdateManager = {}
+
+---@return UUpdateManager
+function UUpdateManager:get() end
 
 
 

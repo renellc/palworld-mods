@@ -6,6 +6,9 @@
 ---@field SourceTextureUVLayer int32
 FBakeMultiMeshDetailProperties = {}
 
+---@return FBakeMultiMeshDetailProperties
+function FBakeMultiMeshDetailProperties:get() end
+
 
 
 ---@class FBrushToolRadius
@@ -14,12 +17,18 @@ FBakeMultiMeshDetailProperties = {}
 ---@field WorldRadius float
 FBrushToolRadius = {}
 
+---@return FBrushToolRadius
+function FBrushToolRadius:get() end
+
 
 
 ---@class FEditPivotTarget
 ---@field TransformProxy UTransformProxy
 ---@field TransformGizmo UCombinedTransformGizmo
 FEditPivotTarget = {}
+
+---@return FEditPivotTarget
+function FEditPivotTarget:get() end
 
 
 
@@ -28,6 +37,9 @@ FEditPivotTarget = {}
 ---@field Intensity float
 FPerlinLayerProperties = {}
 
+---@return FPerlinLayerProperties
+function FPerlinLayerProperties:get() end
+
 
 
 ---@class FPhysicsBoxData
@@ -35,6 +47,9 @@ FPerlinLayerProperties = {}
 ---@field Transform FTransform
 ---@field Element FKShapeElem
 FPhysicsBoxData = {}
+
+---@return FPhysicsBoxData
+function FPhysicsBoxData:get() end
 
 
 
@@ -45,6 +60,9 @@ FPhysicsBoxData = {}
 ---@field Element FKShapeElem
 FPhysicsCapsuleData = {}
 
+---@return FPhysicsCapsuleData
+function FPhysicsCapsuleData:get() end
+
 
 
 ---@class FPhysicsConvexData
@@ -53,11 +71,17 @@ FPhysicsCapsuleData = {}
 ---@field Element FKShapeElem
 FPhysicsConvexData = {}
 
+---@return FPhysicsConvexData
+function FPhysicsConvexData:get() end
+
 
 
 ---@class FPhysicsLevelSetData
 ---@field Element FKShapeElem
 FPhysicsLevelSetData = {}
+
+---@return FPhysicsLevelSetData
+function FPhysicsLevelSetData:get() end
 
 
 
@@ -67,6 +91,9 @@ FPhysicsLevelSetData = {}
 ---@field Element FKShapeElem
 FPhysicsSphereData = {}
 
+---@return FPhysicsSphereData
+function FPhysicsSphereData:get() end
+
 
 
 ---@class FTransformMeshesTarget
@@ -74,11 +101,17 @@ FPhysicsSphereData = {}
 ---@field TransformGizmo UCombinedTransformGizmo
 FTransformMeshesTarget = {}
 
+---@return FTransformMeshesTarget
+function FTransformMeshesTarget:get() end
+
 
 
 ---@class UAcceptOutputProperties : UInteractiveToolPropertySet
 ---@field bExportSeparatedPiecesAsNewMeshAssets boolean
 UAcceptOutputProperties = {}
+
+---@return UAcceptOutputProperties
+function UAcceptOutputProperties:get() end
 
 
 
@@ -88,10 +121,16 @@ UAcceptOutputProperties = {}
 ---@field PreviewMesh UPreviewMesh
 UAddPatchTool = {}
 
+---@return UAddPatchTool
+function UAddPatchTool:get() end
+
 
 
 ---@class UAddPatchToolBuilder : UInteractiveToolBuilder
 UAddPatchToolBuilder = {}
+
+---@return UAddPatchToolBuilder
+function UAddPatchToolBuilder:get() end
 
 
 ---@class UAddPatchToolProperties : UInteractiveToolPropertySet
@@ -101,16 +140,25 @@ UAddPatchToolBuilder = {}
 ---@field Shift float
 UAddPatchToolProperties = {}
 
+---@return UAddPatchToolProperties
+function UAddPatchToolProperties:get() end
+
 
 
 ---@class UAlignObjectsTool : UMultiSelectionMeshEditingTool
 ---@field AlignProps UAlignObjectsToolProperties
 UAlignObjectsTool = {}
 
+---@return UAlignObjectsTool
+function UAlignObjectsTool:get() end
+
 
 
 ---@class UAlignObjectsToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UAlignObjectsToolBuilder = {}
+
+---@return UAlignObjectsToolBuilder
+function UAlignObjectsToolBuilder:get() end
 
 
 ---@class UAlignObjectsToolProperties : UInteractiveToolPropertySet
@@ -122,6 +170,9 @@ UAlignObjectsToolBuilder = {}
 ---@field bAlignZ boolean
 UAlignObjectsToolProperties = {}
 
+---@return UAlignObjectsToolProperties
+function UAlignObjectsToolProperties:get() end
+
 
 
 ---@class UBakeCurvatureMapToolProperties : UInteractiveToolPropertySet
@@ -131,6 +182,9 @@ UAlignObjectsToolProperties = {}
 ---@field MinRangeMultiplier float
 ---@field Clamping EBakeCurvatureClampMode
 UBakeCurvatureMapToolProperties = {}
+
+---@return UBakeCurvatureMapToolProperties
+function UBakeCurvatureMapToolProperties:get() end
 
 
 
@@ -154,6 +208,9 @@ UBakeCurvatureMapToolProperties = {}
 ---@field SourceUVLayerNamesList TArray<FString>
 UBakeInputMeshProperties = {}
 
+---@return UBakeInputMeshProperties
+function UBakeInputMeshProperties:get() end
+
 ---@return TArray<FString>
 function UBakeInputMeshProperties:GetTargetUVLayerNamesFunc() end
 ---@return TArray<FString>
@@ -164,6 +221,9 @@ function UBakeInputMeshProperties:GetSourceUVLayerNamesFunc() end
 ---@field Result TMap<EBakeMapType, UTexture2D>
 UBakeMeshAttributeMapsResultToolProperties = {}
 
+---@return UBakeMeshAttributeMapsResultToolProperties
+function UBakeMeshAttributeMapsResultToolProperties:get() end
+
 
 
 ---@class UBakeMeshAttributeMapsTool : UBakeMeshAttributeMapsToolBase
@@ -171,6 +231,9 @@ UBakeMeshAttributeMapsResultToolProperties = {}
 ---@field Settings UBakeMeshAttributeMapsToolProperties
 ---@field ResultSettings UBakeMeshAttributeMapsResultToolProperties
 UBakeMeshAttributeMapsTool = {}
+
+---@return UBakeMeshAttributeMapsTool
+function UBakeMeshAttributeMapsTool:get() end
 
 
 
@@ -185,10 +248,16 @@ UBakeMeshAttributeMapsTool = {}
 ---@field EmptyColorMapWhite UTexture2D
 UBakeMeshAttributeMapsToolBase = {}
 
+---@return UBakeMeshAttributeMapsToolBase
+function UBakeMeshAttributeMapsToolBase:get() end
+
 
 
 ---@class UBakeMeshAttributeMapsToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UBakeMeshAttributeMapsToolBuilder = {}
+
+---@return UBakeMeshAttributeMapsToolBuilder
+function UBakeMeshAttributeMapsToolBuilder:get() end
 
 
 ---@class UBakeMeshAttributeMapsToolProperties : UInteractiveToolPropertySet
@@ -200,6 +269,9 @@ UBakeMeshAttributeMapsToolBuilder = {}
 ---@field SampleFilterMask UTexture2D
 ---@field MapPreviewNamesList TArray<FString>
 UBakeMeshAttributeMapsToolProperties = {}
+
+---@return UBakeMeshAttributeMapsToolProperties
+function UBakeMeshAttributeMapsToolProperties:get() end
 
 ---@return TArray<FString>
 function UBakeMeshAttributeMapsToolProperties:GetMapPreviewNamesFunc() end
@@ -214,6 +286,9 @@ function UBakeMeshAttributeMapsToolProperties:GetMapPreviewNamesFunc() end
 ---@field ErrorPreviewMaterial UMaterialInstanceDynamic
 UBakeMeshAttributeTool = {}
 
+---@return UBakeMeshAttributeTool
+function UBakeMeshAttributeTool:get() end
+
 
 
 ---@class UBakeMeshAttributeVertexTool : UBakeMeshAttributeTool
@@ -224,10 +299,16 @@ UBakeMeshAttributeTool = {}
 ---@field PreviewAlphaMaterial UMaterialInstanceDynamic
 UBakeMeshAttributeVertexTool = {}
 
+---@return UBakeMeshAttributeVertexTool
+function UBakeMeshAttributeVertexTool:get() end
+
 
 
 ---@class UBakeMeshAttributeVertexToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UBakeMeshAttributeVertexToolBuilder = {}
+
+---@return UBakeMeshAttributeVertexToolBuilder
+function UBakeMeshAttributeVertexToolBuilder:get() end
 
 
 ---@class UBakeMeshAttributeVertexToolProperties : UInteractiveToolPropertySet
@@ -242,6 +323,9 @@ UBakeMeshAttributeVertexToolBuilder = {}
 ---@field bSplitAtUVSeams boolean
 UBakeMeshAttributeVertexToolProperties = {}
 
+---@return UBakeMeshAttributeVertexToolProperties
+function UBakeMeshAttributeVertexToolProperties:get() end
+
 
 
 ---@class UBakeMultiMeshAttributeMapsTool : UBakeMeshAttributeMapsToolBase
@@ -250,10 +334,16 @@ UBakeMeshAttributeVertexToolProperties = {}
 ---@field ResultSettings UBakeMeshAttributeMapsResultToolProperties
 UBakeMultiMeshAttributeMapsTool = {}
 
+---@return UBakeMultiMeshAttributeMapsTool
+function UBakeMultiMeshAttributeMapsTool:get() end
+
 
 
 ---@class UBakeMultiMeshAttributeMapsToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UBakeMultiMeshAttributeMapsToolBuilder = {}
+
+---@return UBakeMultiMeshAttributeMapsToolBuilder
+function UBakeMultiMeshAttributeMapsToolBuilder:get() end
 
 
 ---@class UBakeMultiMeshAttributeMapsToolProperties : UInteractiveToolPropertySet
@@ -265,6 +355,9 @@ UBakeMultiMeshAttributeMapsToolBuilder = {}
 ---@field SampleFilterMask UTexture2D
 ---@field MapPreviewNamesList TArray<FString>
 UBakeMultiMeshAttributeMapsToolProperties = {}
+
+---@return UBakeMultiMeshAttributeMapsToolProperties
+function UBakeMultiMeshAttributeMapsToolProperties:get() end
 
 ---@return TArray<FString>
 function UBakeMultiMeshAttributeMapsToolProperties:GetMapPreviewNamesFunc() end
@@ -280,6 +373,9 @@ function UBakeMultiMeshAttributeMapsToolProperties:GetMapPreviewNamesFunc() end
 ---@field TargetUVLayerNamesList TArray<FString>
 UBakeMultiMeshInputToolProperties = {}
 
+---@return UBakeMultiMeshInputToolProperties
+function UBakeMultiMeshInputToolProperties:get() end
+
 ---@return TArray<FString>
 function UBakeMultiMeshInputToolProperties:GetTargetUVLayerNamesFunc() end
 
@@ -291,12 +387,18 @@ function UBakeMultiMeshInputToolProperties:GetTargetUVLayerNamesFunc() end
 ---@field AllSourceTextures TArray<UTexture2D>
 UBakeMultiTexture2DProperties = {}
 
+---@return UBakeMultiTexture2DProperties
+function UBakeMultiTexture2DProperties:get() end
+
 ---@return TArray<FString>
 function UBakeMultiTexture2DProperties:GetUVLayerNamesFunc() end
 
 
 ---@class UBakeNormalMapToolProperties : UInteractiveToolPropertySet
 UBakeNormalMapToolProperties = {}
+
+---@return UBakeNormalMapToolProperties
+function UBakeNormalMapToolProperties:get() end
 
 
 ---@class UBakeOcclusionMapToolProperties : UInteractiveToolPropertySet
@@ -306,6 +408,9 @@ UBakeNormalMapToolProperties = {}
 ---@field BiasAngle float
 UBakeOcclusionMapToolProperties = {}
 
+---@return UBakeOcclusionMapToolProperties
+function UBakeOcclusionMapToolProperties:get() end
+
 
 
 ---@class UBakeRenderCaptureInputToolProperties : UInteractiveToolPropertySet
@@ -313,6 +418,9 @@ UBakeOcclusionMapToolProperties = {}
 ---@field TargetUVLayer FString
 ---@field TargetUVLayerNamesList TArray<FString>
 UBakeRenderCaptureInputToolProperties = {}
+
+---@return UBakeRenderCaptureInputToolProperties
+function UBakeRenderCaptureInputToolProperties:get() end
 
 ---@return TArray<FString>
 function UBakeRenderCaptureInputToolProperties:GetTargetUVLayerNamesFunc() end
@@ -329,6 +437,9 @@ function UBakeRenderCaptureInputToolProperties:GetTargetUVLayerIndex() end
 ---@field SpecularMap UTexture2D
 ---@field EmissiveMap UTexture2D
 UBakeRenderCaptureResults = {}
+
+---@return UBakeRenderCaptureResults
+function UBakeRenderCaptureResults:get() end
 
 
 
@@ -348,10 +459,16 @@ UBakeRenderCaptureResults = {}
 ---@field ComputedRenderCaptureProperties URenderCaptureProperties
 UBakeRenderCaptureTool = {}
 
+---@return UBakeRenderCaptureTool
+function UBakeRenderCaptureTool:get() end
+
 
 
 ---@class UBakeRenderCaptureToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UBakeRenderCaptureToolBuilder = {}
+
+---@return UBakeRenderCaptureToolBuilder
+function UBakeRenderCaptureToolBuilder:get() end
 
 
 ---@class UBakeRenderCaptureToolProperties : UInteractiveToolPropertySet
@@ -361,6 +478,9 @@ UBakeRenderCaptureToolBuilder = {}
 ---@field TextureSize EBakeTextureResolution
 ---@field ValidSampleDepthThreshold float
 UBakeRenderCaptureToolProperties = {}
+
+---@return UBakeRenderCaptureToolProperties
+function UBakeRenderCaptureToolProperties:get() end
 
 ---@return TArray<FString>
 function UBakeRenderCaptureToolProperties:GetMapPreviewNamesFunc() end
@@ -372,6 +492,9 @@ function UBakeRenderCaptureToolProperties:GetMapPreviewNamesFunc() end
 ---@field UVLayerNamesList TArray<FString>
 UBakeTexture2DProperties = {}
 
+---@return UBakeTexture2DProperties
+function UBakeTexture2DProperties:get() end
+
 ---@return TArray<FString>
 function UBakeTexture2DProperties:GetUVLayerNamesFunc() end
 
@@ -380,10 +503,16 @@ function UBakeTexture2DProperties:GetUVLayerNamesFunc() end
 ---@field BasicProperties UBakeTransformToolProperties
 UBakeTransformTool = {}
 
+---@return UBakeTransformTool
+function UBakeTransformTool:get() end
+
 
 
 ---@class UBakeTransformToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UBakeTransformToolBuilder = {}
+
+---@return UBakeTransformToolBuilder
+function UBakeTransformToolBuilder:get() end
 
 
 ---@class UBakeTransformToolProperties : UInteractiveToolPropertySet
@@ -393,6 +522,9 @@ UBakeTransformToolBuilder = {}
 ---@field bAllowNoScale boolean
 UBakeTransformToolProperties = {}
 
+---@return UBakeTransformToolProperties
+function UBakeTransformToolProperties:get() end
+
 
 
 ---@class UBakeVisualizationProperties : UInteractiveToolPropertySet
@@ -400,6 +532,9 @@ UBakeTransformToolProperties = {}
 ---@field Brightness float
 ---@field AOMultiplier float
 UBakeVisualizationProperties = {}
+
+---@return UBakeVisualizationProperties
+function UBakeVisualizationProperties:get() end
 
 
 
@@ -409,14 +544,23 @@ UBakeVisualizationProperties = {}
 ---@field BrushSteps int32
 UBaseKelvinletBrushOpProps = {}
 
+---@return UBaseKelvinletBrushOpProps
+function UBaseKelvinletBrushOpProps:get() end
+
 
 
 ---@class UBasePlaneBrushOpProps : UMeshSculptBrushOpProps
 UBasePlaneBrushOpProps = {}
 
+---@return UBasePlaneBrushOpProps
+function UBasePlaneBrushOpProps:get() end
+
 
 ---@class UBaseSmoothBrushOpProps : UMeshSculptBrushOpProps
 UBaseSmoothBrushOpProps = {}
+
+---@return UBaseSmoothBrushOpProps
+function UBaseSmoothBrushOpProps:get() end
 
 
 ---@class UBrushRemeshProperties : URemeshProperties
@@ -425,6 +569,9 @@ UBaseSmoothBrushOpProps = {}
 ---@field PreserveDetail int32
 ---@field Iterations int32
 UBrushRemeshProperties = {}
+
+---@return UBrushRemeshProperties
+function UBrushRemeshProperties:get() end
 
 
 
@@ -435,6 +582,9 @@ UBrushRemeshProperties = {}
 ---@field Color FColor
 UCollisionGeometryVisualizationProperties = {}
 
+---@return UCollisionGeometryVisualizationProperties
+function UCollisionGeometryVisualizationProperties:get() end
+
 
 
 ---@class UConvertMeshesTool : UMultiSelectionMeshEditingTool
@@ -442,21 +592,33 @@ UCollisionGeometryVisualizationProperties = {}
 ---@field OutputTypeProperties UCreateMeshObjectTypeProperties
 UConvertMeshesTool = {}
 
+---@return UConvertMeshesTool
+function UConvertMeshesTool:get() end
+
 
 
 ---@class UConvertMeshesToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UConvertMeshesToolBuilder = {}
+
+---@return UConvertMeshesToolBuilder
+function UConvertMeshesToolBuilder:get() end
 
 
 ---@class UConvertMeshesToolProperties : UInteractiveToolPropertySet
 ---@field bTransferMaterials boolean
 UConvertMeshesToolProperties = {}
 
+---@return UConvertMeshesToolProperties
+function UConvertMeshesToolProperties:get() end
+
 
 
 ---@class UConvertToPolygonsOperatorFactory : UObject
 ---@field ConvertToPolygonsTool UConvertToPolygonsTool
 UConvertToPolygonsOperatorFactory = {}
+
+---@return UConvertToPolygonsOperatorFactory
+function UConvertToPolygonsOperatorFactory:get() end
 
 
 
@@ -468,10 +630,16 @@ UConvertToPolygonsOperatorFactory = {}
 ---@field PreviewGeometry UPreviewGeometry
 UConvertToPolygonsTool = {}
 
+---@return UConvertToPolygonsTool
+function UConvertToPolygonsTool:get() end
+
 
 
 ---@class UConvertToPolygonsToolBuilder : USingleSelectionMeshEditingToolBuilder
 UConvertToPolygonsToolBuilder = {}
+
+---@return UConvertToPolygonsToolBuilder
+function UConvertToPolygonsToolBuilder:get() end
 
 
 ---@class UConvertToPolygonsToolProperties : UInteractiveToolPropertySet
@@ -491,10 +659,16 @@ UConvertToPolygonsToolBuilder = {}
 ---@field bShowGroupColors boolean
 UConvertToPolygonsToolProperties = {}
 
+---@return UConvertToPolygonsToolProperties
+function UConvertToPolygonsToolProperties:get() end
+
 
 
 ---@class UCubeGridDuringActivityActions : UInteractiveToolPropertySet
 UCubeGridDuringActivityActions = {}
+
+---@return UCubeGridDuringActivityActions
+function UCubeGridDuringActivityActions:get() end
 
 function UCubeGridDuringActivityActions:Done() end
 function UCubeGridDuringActivityActions:Cancel() end
@@ -518,11 +692,17 @@ function UCubeGridDuringActivityActions:Cancel() end
 ---@field Preview UMeshOpPreviewWithBackgroundCompute
 UCubeGridTool = {}
 
+---@return UCubeGridTool
+function UCubeGridTool:get() end
+
 
 
 ---@class UCubeGridToolActions : UInteractiveToolPropertySet
 ---@field GridSourceActor AActor
 UCubeGridToolActions = {}
+
+---@return UCubeGridToolActions
+function UCubeGridToolActions:get() end
 
 function UCubeGridToolActions:SlideForward() end
 function UCubeGridToolActions:SlideBack() end
@@ -535,6 +715,9 @@ function UCubeGridToolActions:CornerMode() end
 
 ---@class UCubeGridToolBuilder : UInteractiveToolWithToolTargetsBuilder
 UCubeGridToolBuilder = {}
+
+---@return UCubeGridToolBuilder
+function UCubeGridToolBuilder:get() end
 
 
 ---@class UCubeGridToolProperties : UInteractiveToolPropertySet
@@ -564,6 +747,9 @@ UCubeGridToolBuilder = {}
 ---@field bAllowedToEditGrid boolean
 UCubeGridToolProperties = {}
 
+---@return UCubeGridToolProperties
+function UCubeGridToolProperties:get() end
+
 
 
 ---@class UDeformMeshPolygonsTool : UMeshSurfacePointTool
@@ -572,10 +758,16 @@ UCubeGridToolProperties = {}
 ---@field TransformProps UDeformMeshPolygonsTransformProperties
 UDeformMeshPolygonsTool = {}
 
+---@return UDeformMeshPolygonsTool
+function UDeformMeshPolygonsTool:get() end
+
 
 
 ---@class UDeformMeshPolygonsToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 UDeformMeshPolygonsToolBuilder = {}
+
+---@return UDeformMeshPolygonsToolBuilder
+function UDeformMeshPolygonsToolBuilder:get() end
 
 
 ---@class UDeformMeshPolygonsTransformProperties : UInteractiveToolPropertySet
@@ -590,6 +782,9 @@ UDeformMeshPolygonsToolBuilder = {}
 ---@field bPostFixHandles boolean
 UDeformMeshPolygonsTransformProperties = {}
 
+---@return UDeformMeshPolygonsTransformProperties
+function UDeformMeshPolygonsTransformProperties:get() end
+
 
 
 ---@class UDiffusionSmoothProperties : UInteractiveToolPropertySet
@@ -597,6 +792,9 @@ UDeformMeshPolygonsTransformProperties = {}
 ---@field Steps int32
 ---@field bPreserveUVs boolean
 UDiffusionSmoothProperties = {}
+
+---@return UDiffusionSmoothProperties
+function UDiffusionSmoothProperties:get() end
 
 
 
@@ -613,6 +811,9 @@ UDiffusionSmoothProperties = {}
 ---@field bDisableSizeWarning boolean
 UDisplaceMeshCommonProperties = {}
 
+---@return UDisplaceMeshCommonProperties
+function UDisplaceMeshCommonProperties:get() end
+
 ---@return TArray<FString>
 function UDisplaceMeshCommonProperties:GetWeightMapsFunc() end
 
@@ -623,11 +824,17 @@ function UDisplaceMeshCommonProperties:GetWeightMapsFunc() end
 ---@field FilterWidth float
 UDisplaceMeshDirectionalFilterProperties = {}
 
+---@return UDisplaceMeshDirectionalFilterProperties
+function UDisplaceMeshDirectionalFilterProperties:get() end
+
 
 
 ---@class UDisplaceMeshPerlinNoiseProperties : UInteractiveToolPropertySet
 ---@field PerlinLayerProperties TArray<FPerlinLayerProperties>
 UDisplaceMeshPerlinNoiseProperties = {}
+
+---@return UDisplaceMeshPerlinNoiseProperties
+function UDisplaceMeshPerlinNoiseProperties:get() end
 
 
 
@@ -636,6 +843,9 @@ UDisplaceMeshPerlinNoiseProperties = {}
 ---@field SineWavePhaseShift float
 ---@field SineWaveDirection FVector
 UDisplaceMeshSineWaveProperties = {}
+
+---@return UDisplaceMeshSineWaveProperties
+function UDisplaceMeshSineWaveProperties:get() end
 
 
 
@@ -649,6 +859,9 @@ UDisplaceMeshSineWaveProperties = {}
 ---@field AdjustmentCurve UCurveFloat
 ---@field bRecalcNormals boolean
 UDisplaceMeshTextureMapProperties = {}
+
+---@return UDisplaceMeshTextureMapProperties
+function UDisplaceMeshTextureMapProperties:get() end
 
 
 
@@ -664,15 +877,24 @@ UDisplaceMeshTextureMapProperties = {}
 ---@field DynamicMeshComponent UDynamicMeshComponent
 UDisplaceMeshTool = {}
 
+---@return UDisplaceMeshTool
+function UDisplaceMeshTool:get() end
+
 
 
 ---@class UDisplaceMeshToolBuilder : USingleSelectionMeshEditingToolBuilder
 UDisplaceMeshToolBuilder = {}
 
+---@return UDisplaceMeshToolBuilder
+function UDisplaceMeshToolBuilder:get() end
+
 
 ---@class UDrawPolyPathExtrudeProperties : UInteractiveToolPropertySet
 ---@field Direction EDrawPolyPathExtrudeDirection
 UDrawPolyPathExtrudeProperties = {}
+
+---@return UDrawPolyPathExtrudeProperties
+function UDrawPolyPathExtrudeProperties:get() end
 
 
 
@@ -689,6 +911,9 @@ UDrawPolyPathExtrudeProperties = {}
 ---@field RampStartRatio float
 UDrawPolyPathProperties = {}
 
+---@return UDrawPolyPathProperties
+function UDrawPolyPathProperties:get() end
+
 
 
 ---@class UDrawPolyPathTool : UInteractiveTool
@@ -703,10 +928,16 @@ UDrawPolyPathProperties = {}
 ---@field SurfacePathMechanic UCollectSurfacePathMechanic
 UDrawPolyPathTool = {}
 
+---@return UDrawPolyPathTool
+function UDrawPolyPathTool:get() end
+
 
 
 ---@class UDrawPolyPathToolBuilder : UMeshSurfacePointToolBuilder
 UDrawPolyPathToolBuilder = {}
+
+---@return UDrawPolyPathToolBuilder
+function UDrawPolyPathToolBuilder:get() end
 
 
 ---@class UDynamicMeshBrushProperties : UInteractiveToolPropertySet
@@ -715,6 +946,9 @@ UDrawPolyPathToolBuilder = {}
 ---@field Depth float
 ---@field bHitBackFaces boolean
 UDynamicMeshBrushProperties = {}
+
+---@return UDynamicMeshBrushProperties
+function UDynamicMeshBrushProperties:get() end
 
 
 
@@ -728,11 +962,17 @@ UDynamicMeshBrushProperties = {}
 ---@field bDetailPreservingSmooth boolean
 UDynamicMeshBrushSculptProperties = {}
 
+---@return UDynamicMeshBrushSculptProperties
+function UDynamicMeshBrushSculptProperties:get() end
+
 
 
 ---@class UDynamicMeshBrushTool : UBaseBrushTool
 ---@field PreviewMesh UPreviewMesh
 UDynamicMeshBrushTool = {}
+
+---@return UDynamicMeshBrushTool
+function UDynamicMeshBrushTool:get() end
 
 
 
@@ -754,14 +994,23 @@ UDynamicMeshBrushTool = {}
 ---@field PlaneTransformProxy UTransformProxy
 UDynamicMeshSculptTool = {}
 
+---@return UDynamicMeshSculptTool
+function UDynamicMeshSculptTool:get() end
+
 
 
 ---@class UDynamicMeshSculptToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 UDynamicMeshSculptToolBuilder = {}
 
+---@return UDynamicMeshSculptToolBuilder
+function UDynamicMeshSculptToolBuilder:get() end
+
 
 ---@class UDynamicSculptToolActions : UInteractiveToolPropertySet
 UDynamicSculptToolActions = {}
+
+---@return UDynamicSculptToolActions
+function UDynamicSculptToolActions:get() end
 
 function UDynamicSculptToolActions:DiscardAttributes() end
 
@@ -769,10 +1018,16 @@ function UDynamicSculptToolActions:DiscardAttributes() end
 ---@class UEditNormalsAdvancedProperties : UInteractiveToolPropertySet
 UEditNormalsAdvancedProperties = {}
 
+---@return UEditNormalsAdvancedProperties
+function UEditNormalsAdvancedProperties:get() end
+
 
 ---@class UEditNormalsOperatorFactory : UObject
 ---@field Tool UEditNormalsTool
 UEditNormalsOperatorFactory = {}
+
+---@return UEditNormalsOperatorFactory
+function UEditNormalsOperatorFactory:get() end
 
 
 
@@ -783,10 +1038,16 @@ UEditNormalsOperatorFactory = {}
 ---@field Previews TArray<UMeshOpPreviewWithBackgroundCompute>
 UEditNormalsTool = {}
 
+---@return UEditNormalsTool
+function UEditNormalsTool:get() end
+
 
 
 ---@class UEditNormalsToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UEditNormalsToolBuilder = {}
+
+---@return UEditNormalsToolBuilder
+function UEditNormalsToolBuilder:get() end
 
 
 ---@class UEditNormalsToolProperties : UInteractiveToolPropertySet
@@ -799,6 +1060,9 @@ UEditNormalsToolBuilder = {}
 ---@field bAllowSharpVertices boolean
 UEditNormalsToolProperties = {}
 
+---@return UEditNormalsToolProperties
+function UEditNormalsToolProperties:get() end
+
 
 
 ---@class UEditPivotTool : UMultiSelectionMeshEditingTool
@@ -808,11 +1072,17 @@ UEditNormalsToolProperties = {}
 ---@field DragAlignmentMechanic UDragAlignmentMechanic
 UEditPivotTool = {}
 
+---@return UEditPivotTool
+function UEditPivotTool:get() end
+
 
 
 ---@class UEditPivotToolActionPropertySet : UInteractiveToolPropertySet
 ---@field bUseWorldBox boolean
 UEditPivotToolActionPropertySet = {}
+
+---@return UEditPivotToolActionPropertySet
+function UEditPivotToolActionPropertySet:get() end
 
 function UEditPivotToolActionPropertySet:WorldOrigin() end
 function UEditPivotToolActionPropertySet:Top() end
@@ -827,11 +1097,17 @@ function UEditPivotToolActionPropertySet:Back() end
 ---@class UEditPivotToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UEditPivotToolBuilder = {}
 
+---@return UEditPivotToolBuilder
+function UEditPivotToolBuilder:get() end
+
 
 ---@class UEditPivotToolProperties : UInteractiveToolPropertySet
 ---@field bEnableSnapDragging boolean
 ---@field RotationMode EEditPivotSnapDragRotationMode
 UEditPivotToolProperties = {}
+
+---@return UEditPivotToolProperties
+function UEditPivotToolProperties:get() end
 
 
 
@@ -844,16 +1120,25 @@ UEditPivotToolProperties = {}
 ---@field MultiTransformer UMultiTransformer
 UEditUVIslandsTool = {}
 
+---@return UEditUVIslandsTool
+function UEditUVIslandsTool:get() end
+
 
 
 ---@class UEditUVIslandsToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 UEditUVIslandsToolBuilder = {}
+
+---@return UEditUVIslandsToolBuilder
+function UEditUVIslandsToolBuilder:get() end
 
 
 ---@class UEraseBrushOpProps : UMeshSculptBrushOpProps
 ---@field Strength float
 ---@field Falloff float
 UEraseBrushOpProps = {}
+
+---@return UEraseBrushOpProps
+function UEraseBrushOpProps:get() end
 
 
 
@@ -866,10 +1151,16 @@ UEraseBrushOpProps = {}
 ---@field PreviewMesh UPreviewMesh
 UExtractCollisionGeometryTool = {}
 
+---@return UExtractCollisionGeometryTool
+function UExtractCollisionGeometryTool:get() end
+
 
 
 ---@class UExtractCollisionGeometryToolBuilder : USingleSelectionMeshEditingToolBuilder
 UExtractCollisionGeometryToolBuilder = {}
+
+---@return UExtractCollisionGeometryToolBuilder
+function UExtractCollisionGeometryToolBuilder:get() end
 
 
 ---@class UExtractCollisionToolProperties : UInteractiveToolPropertySet
@@ -880,6 +1171,9 @@ UExtractCollisionGeometryToolBuilder = {}
 ---@field bShowInputMesh boolean
 UExtractCollisionToolProperties = {}
 
+---@return UExtractCollisionToolProperties
+function UExtractCollisionToolProperties:get() end
+
 
 
 ---@class UFixedPlaneBrushOpProps : UBasePlaneBrushOpProps
@@ -888,6 +1182,9 @@ UExtractCollisionToolProperties = {}
 ---@field Depth float
 ---@field WhichSide EPlaneBrushSideMode
 UFixedPlaneBrushOpProps = {}
+
+---@return UFixedPlaneBrushOpProps
+function UFixedPlaneBrushOpProps:get() end
 
 
 
@@ -898,6 +1195,9 @@ UFixedPlaneBrushOpProps = {}
 ---@field Rotation FQuat
 UFixedPlaneBrushProperties = {}
 
+---@return UFixedPlaneBrushProperties
+function UFixedPlaneBrushProperties:get() end
+
 
 
 ---@class UFlattenBrushOpProps : UMeshSculptBrushOpProps
@@ -907,12 +1207,18 @@ UFixedPlaneBrushProperties = {}
 ---@field WhichSide EPlaneBrushSideMode
 UFlattenBrushOpProps = {}
 
+---@return UFlattenBrushOpProps
+function UFlattenBrushOpProps:get() end
+
 
 
 ---@class UGroupEraseBrushOpProps : UMeshSculptBrushOpProps
 ---@field Group int32
 ---@field bOnlyEraseCurrent boolean
 UGroupEraseBrushOpProps = {}
+
+---@return UGroupEraseBrushOpProps
+function UGroupEraseBrushOpProps:get() end
 
 
 
@@ -933,6 +1239,9 @@ UGroupEraseBrushOpProps = {}
 ---@field MinTriVertCount int32
 UGroupPaintBrushFilterProperties = {}
 
+---@return UGroupPaintBrushFilterProperties
+function UGroupPaintBrushFilterProperties:get() end
+
 
 
 ---@class UGroupPaintBrushOpProps : UMeshSculptBrushOpProps
@@ -940,11 +1249,17 @@ UGroupPaintBrushFilterProperties = {}
 ---@field bOnlyPaintUngrouped boolean
 UGroupPaintBrushOpProps = {}
 
+---@return UGroupPaintBrushOpProps
+function UGroupPaintBrushOpProps:get() end
+
 
 
 ---@class UHoleFillOperatorFactory : UObject
 ---@field FillTool UHoleFillTool
 UHoleFillOperatorFactory = {}
+
+---@return UHoleFillOperatorFactory
+function UHoleFillOperatorFactory:get() end
 
 
 
@@ -955,6 +1270,9 @@ UHoleFillOperatorFactory = {}
 ---@field FailedFills FString
 ---@field RemainingHoles FString
 UHoleFillStatisticsProperties = {}
+
+---@return UHoleFillStatisticsProperties
+function UHoleFillStatisticsProperties:get() end
 
 
 
@@ -967,10 +1285,16 @@ UHoleFillStatisticsProperties = {}
 ---@field SelectionMechanic UPolygonSelectionMechanic
 UHoleFillTool = {}
 
+---@return UHoleFillTool
+function UHoleFillTool:get() end
+
 
 
 ---@class UHoleFillToolActions : UInteractiveToolPropertySet
 UHoleFillToolActions = {}
+
+---@return UHoleFillToolActions
+function UHoleFillToolActions:get() end
 
 function UHoleFillToolActions:SelectAll() end
 function UHoleFillToolActions:Clear() end
@@ -979,6 +1303,9 @@ function UHoleFillToolActions:Clear() end
 ---@class UHoleFillToolBuilder : USingleSelectionMeshEditingToolBuilder
 UHoleFillToolBuilder = {}
 
+---@return UHoleFillToolBuilder
+function UHoleFillToolBuilder:get() end
+
 
 ---@class UHoleFillToolProperties : UInteractiveToolPropertySet
 ---@field FillType EHoleFillOpFillType
@@ -986,12 +1313,18 @@ UHoleFillToolBuilder = {}
 ---@field bQuickFillSmallHoles boolean
 UHoleFillToolProperties = {}
 
+---@return UHoleFillToolProperties
+function UHoleFillToolProperties:get() end
+
 
 
 ---@class UImplicitOffsetProperties : UInteractiveToolPropertySet
 ---@field Smoothness float
 ---@field bPreserveUVs boolean
 UImplicitOffsetProperties = {}
+
+---@return UImplicitOffsetProperties
+function UImplicitOffsetProperties:get() end
 
 
 
@@ -1002,12 +1335,18 @@ UImplicitOffsetProperties = {}
 ---@field VolumeCorrection float
 UImplicitSmoothProperties = {}
 
+---@return UImplicitSmoothProperties
+function UImplicitSmoothProperties:get() end
+
 
 
 ---@class UInflateBrushOpProps : UMeshSculptBrushOpProps
 ---@field Strength float
 ---@field Falloff float
 UInflateBrushOpProps = {}
+
+---@return UInflateBrushOpProps
+function UInflateBrushOpProps:get() end
 
 
 
@@ -1018,6 +1357,9 @@ UInflateBrushOpProps = {}
 ---@field bReprojectSmooth boolean
 UIterativeOffsetProperties = {}
 
+---@return UIterativeOffsetProperties
+function UIterativeOffsetProperties:get() end
+
 
 
 ---@class UIterativeSmoothProperties : UInteractiveToolPropertySet
@@ -1025,6 +1367,9 @@ UIterativeOffsetProperties = {}
 ---@field Steps int32
 ---@field bSmoothBoundary boolean
 UIterativeSmoothProperties = {}
+
+---@return UIterativeSmoothProperties
+function UIterativeSmoothProperties:get() end
 
 
 
@@ -1035,11 +1380,17 @@ UIterativeSmoothProperties = {}
 ---@field BrushSteps int32
 UKelvinBrushProperties = {}
 
+---@return UKelvinBrushProperties
+function UKelvinBrushProperties:get() end
+
 
 
 ---@class ULatticeDeformerOperatorFactory : UObject
 ---@field LatticeDeformerTool ULatticeDeformerTool
 ULatticeDeformerOperatorFactory = {}
+
+---@return ULatticeDeformerOperatorFactory
+function ULatticeDeformerOperatorFactory:get() end
 
 
 
@@ -1050,10 +1401,16 @@ ULatticeDeformerOperatorFactory = {}
 ---@field bLatticeDeformed boolean
 ULatticeDeformerTool = {}
 
+---@return ULatticeDeformerTool
+function ULatticeDeformerTool:get() end
+
 
 
 ---@class ULatticeDeformerToolBuilder : USingleSelectionMeshEditingToolBuilder
 ULatticeDeformerToolBuilder = {}
+
+---@return ULatticeDeformerToolBuilder
+function ULatticeDeformerToolBuilder:get() end
 
 
 ---@class ULatticeDeformerToolProperties : UInteractiveToolPropertySet
@@ -1069,6 +1426,9 @@ ULatticeDeformerToolBuilder = {}
 ---@field bSoftDeformation boolean
 ULatticeDeformerToolProperties = {}
 
+---@return ULatticeDeformerToolProperties
+function ULatticeDeformerToolProperties:get() end
+
 function ULatticeDeformerToolProperties:Constrain() end
 function ULatticeDeformerToolProperties:ClearConstraints() end
 
@@ -1078,16 +1438,25 @@ function ULatticeDeformerToolProperties:ClearConstraints() end
 ---@field Volume FString
 UMeshAnalysisProperties = {}
 
+---@return UMeshAnalysisProperties
+function UMeshAnalysisProperties:get() end
+
 
 
 ---@class UMeshAttributePaintBrushOperationProperties : UInteractiveToolPropertySet
 ---@field BrushAction EBrushActionMode
 UMeshAttributePaintBrushOperationProperties = {}
 
+---@return UMeshAttributePaintBrushOperationProperties
+function UMeshAttributePaintBrushOperationProperties:get() end
+
 
 
 ---@class UMeshAttributePaintEditActions : UInteractiveToolPropertySet
 UMeshAttributePaintEditActions = {}
+
+---@return UMeshAttributePaintEditActions
+function UMeshAttributePaintEditActions:get() end
 
 
 ---@class UMeshAttributePaintTool : UDynamicMeshBrushTool
@@ -1095,15 +1464,24 @@ UMeshAttributePaintEditActions = {}
 ---@field AttribProps UMeshAttributePaintToolProperties
 UMeshAttributePaintTool = {}
 
+---@return UMeshAttributePaintTool
+function UMeshAttributePaintTool:get() end
+
 
 
 ---@class UMeshAttributePaintToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 UMeshAttributePaintToolBuilder = {}
 
+---@return UMeshAttributePaintToolBuilder
+function UMeshAttributePaintToolBuilder:get() end
+
 
 ---@class UMeshAttributePaintToolProperties : UInteractiveToolPropertySet
 ---@field Attribute FString
 UMeshAttributePaintToolProperties = {}
+
+---@return UMeshAttributePaintToolProperties
+function UMeshAttributePaintToolProperties:get() end
 
 ---@return TArray<FString>
 function UMeshAttributePaintToolProperties:GetAttributeNames() end
@@ -1112,6 +1490,9 @@ function UMeshAttributePaintToolProperties:GetAttributeNames() end
 ---@class UMeshBoundaryToolBase : USingleSelectionMeshEditingTool
 ---@field SelectionMechanic UPolygonSelectionMechanic
 UMeshBoundaryToolBase = {}
+
+---@return UMeshBoundaryToolBase
+function UMeshBoundaryToolBase:get() end
 
 
 
@@ -1123,6 +1504,9 @@ UMeshBoundaryToolBase = {}
 ---@field bPreventNormalFlips boolean
 ---@field bPreventTinyTriangles boolean
 UMeshConstraintProperties = {}
+
+---@return UMeshConstraintProperties
+function UMeshConstraintProperties:get() end
 
 
 
@@ -1138,18 +1522,30 @@ UMeshConstraintProperties = {}
 ---@field MeshElementsDisplay UMeshElementsVisualizer
 UMeshGroupPaintTool = {}
 
+---@return UMeshGroupPaintTool
+function UMeshGroupPaintTool:get() end
+
 
 
 ---@class UMeshGroupPaintToolActionPropertySet : UInteractiveToolPropertySet
 UMeshGroupPaintToolActionPropertySet = {}
 
+---@return UMeshGroupPaintToolActionPropertySet
+function UMeshGroupPaintToolActionPropertySet:get() end
+
 
 ---@class UMeshGroupPaintToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 UMeshGroupPaintToolBuilder = {}
 
+---@return UMeshGroupPaintToolBuilder
+function UMeshGroupPaintToolBuilder:get() end
+
 
 ---@class UMeshGroupPaintToolFreezeActions : UMeshGroupPaintToolActionPropertySet
 UMeshGroupPaintToolFreezeActions = {}
+
+---@return UMeshGroupPaintToolFreezeActions
+function UMeshGroupPaintToolFreezeActions:get() end
 
 function UMeshGroupPaintToolFreezeActions:UnfreezeAll() end
 function UMeshGroupPaintToolFreezeActions:ShrinkCurrent() end
@@ -1176,6 +1572,9 @@ function UMeshGroupPaintToolFreezeActions:ClearAll() end
 ---@field TangentLength float
 UMeshInspectorProperties = {}
 
+---@return UMeshInspectorProperties
+function UMeshInspectorProperties:get() end
+
 
 
 ---@class UMeshInspectorTool : USingleSelectionMeshEditingTool
@@ -1186,14 +1585,23 @@ UMeshInspectorProperties = {}
 ---@field DefaultMaterial UMaterialInterface
 UMeshInspectorTool = {}
 
+---@return UMeshInspectorTool
+function UMeshInspectorTool:get() end
+
 
 
 ---@class UMeshInspectorToolBuilder : USingleSelectionMeshEditingToolBuilder
 UMeshInspectorToolBuilder = {}
 
+---@return UMeshInspectorToolBuilder
+function UMeshInspectorToolBuilder:get() end
+
 
 ---@class UMeshSculptBrushOpProps : UInteractiveToolPropertySet
 UMeshSculptBrushOpProps = {}
+
+---@return UMeshSculptBrushOpProps
+function UMeshSculptBrushOpProps:get() end
 
 
 ---@class UMeshSculptToolBase : UMeshSurfacePointTool
@@ -1211,10 +1619,16 @@ UMeshSculptBrushOpProps = {}
 ---@field PlaneTransformProxy UTransformProxy
 UMeshSculptToolBase = {}
 
+---@return UMeshSculptToolBase
+function UMeshSculptToolBase:get() end
+
 
 
 ---@class UMeshSelectionEditActions : UMeshSelectionToolActionPropertySet
 UMeshSelectionEditActions = {}
+
+---@return UMeshSelectionEditActions
+function UMeshSelectionEditActions:get() end
 
 function UMeshSelectionEditActions:Shrink() end
 function UMeshSelectionEditActions:SelectAll() end
@@ -1229,6 +1643,9 @@ function UMeshSelectionEditActions:Clear() end
 
 ---@class UMeshSelectionMeshEditActions : UMeshSelectionToolActionPropertySet
 UMeshSelectionMeshEditActions = {}
+
+---@return UMeshSelectionMeshEditActions
+function UMeshSelectionMeshEditActions:get() end
 
 function UMeshSelectionMeshEditActions:SmoothBorder() end
 function UMeshSelectionMeshEditActions:Separate() end
@@ -1251,14 +1668,23 @@ function UMeshSelectionMeshEditActions:CreatePolygroup() end
 ---@field SpawnedActors TArray<AActor>
 UMeshSelectionTool = {}
 
+---@return UMeshSelectionTool
+function UMeshSelectionTool:get() end
+
 
 
 ---@class UMeshSelectionToolActionPropertySet : UInteractiveToolPropertySet
 UMeshSelectionToolActionPropertySet = {}
 
+---@return UMeshSelectionToolActionPropertySet
+function UMeshSelectionToolActionPropertySet:get() end
+
 
 ---@class UMeshSelectionToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 UMeshSelectionToolBuilder = {}
+
+---@return UMeshSelectionToolBuilder
+function UMeshSelectionToolBuilder:get() end
 
 
 ---@class UMeshSelectionToolProperties : UInteractiveToolPropertySet
@@ -1268,6 +1694,9 @@ UMeshSelectionToolBuilder = {}
 ---@field bShowPoints boolean
 ---@field FaceColorMode EMeshFacesColorMode
 UMeshSelectionToolProperties = {}
+
+---@return UMeshSelectionToolProperties
+function UMeshSelectionToolProperties:get() end
 
 
 
@@ -1286,16 +1715,25 @@ UMeshSelectionToolProperties = {}
 ---@field ForwardIntervalSource UGizmoLocalFloatParameterSource
 UMeshSpaceDeformerTool = {}
 
+---@return UMeshSpaceDeformerTool
+function UMeshSpaceDeformerTool:get() end
+
 
 
 ---@class UMeshSpaceDeformerToolActionPropertySet : UInteractiveToolPropertySet
 UMeshSpaceDeformerToolActionPropertySet = {}
+
+---@return UMeshSpaceDeformerToolActionPropertySet
+function UMeshSpaceDeformerToolActionPropertySet:get() end
 
 function UMeshSpaceDeformerToolActionPropertySet:ShiftToCenter() end
 
 
 ---@class UMeshSpaceDeformerToolBuilder : USingleSelectionMeshEditingToolBuilder
 UMeshSpaceDeformerToolBuilder = {}
+
+---@return UMeshSpaceDeformerToolBuilder
+function UMeshSpaceDeformerToolBuilder:get() end
 
 
 ---@class UMeshSpaceDeformerToolProperties : UInteractiveToolPropertySet
@@ -1314,6 +1752,9 @@ UMeshSpaceDeformerToolBuilder = {}
 ---@field bAlignToNormalOnCtrlClick boolean
 UMeshSpaceDeformerToolProperties = {}
 
+---@return UMeshSpaceDeformerToolProperties
+function UMeshSpaceDeformerToolProperties:get() end
+
 
 
 ---@class UMeshStatisticsProperties : UInteractiveToolPropertySet
@@ -1322,12 +1763,18 @@ UMeshSpaceDeformerToolProperties = {}
 ---@field Attributes FString
 UMeshStatisticsProperties = {}
 
+---@return UMeshStatisticsProperties
+function UMeshStatisticsProperties:get() end
+
 
 
 ---@class UMeshSymmetryProperties : UInteractiveToolPropertySet
 ---@field bEnableSymmetry boolean
 ---@field bSymmetryCanBeEnabled boolean
 UMeshSymmetryProperties = {}
+
+---@return UMeshSymmetryProperties
+function UMeshSymmetryProperties:get() end
 
 
 
@@ -1340,15 +1787,24 @@ UMeshSymmetryProperties = {}
 ---@field DynamicMeshComponent UDynamicMeshComponent
 UMeshVertexSculptTool = {}
 
+---@return UMeshVertexSculptTool
+function UMeshVertexSculptTool:get() end
+
 
 
 ---@class UMeshVertexSculptToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 UMeshVertexSculptToolBuilder = {}
 
+---@return UMeshVertexSculptToolBuilder
+function UMeshVertexSculptToolBuilder:get() end
+
 
 ---@class UMirrorOperatorFactory : UObject
 ---@field MirrorTool UMirrorTool
 UMirrorOperatorFactory = {}
+
+---@return UMirrorOperatorFactory
+function UMirrorOperatorFactory:get() end
 
 
 
@@ -1360,10 +1816,16 @@ UMirrorOperatorFactory = {}
 ---@field PlaneMechanic UConstructionPlaneMechanic
 UMirrorTool = {}
 
+---@return UMirrorTool
+function UMirrorTool:get() end
+
 
 
 ---@class UMirrorToolActionPropertySet : UInteractiveToolPropertySet
 UMirrorToolActionPropertySet = {}
+
+---@return UMirrorToolActionPropertySet
+function UMirrorToolActionPropertySet:get() end
 
 function UMirrorToolActionPropertySet:Up() end
 function UMirrorToolActionPropertySet:ShiftToCenter() end
@@ -1376,6 +1838,9 @@ function UMirrorToolActionPropertySet:Backward() end
 
 ---@class UMirrorToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UMirrorToolBuilder = {}
+
+---@return UMirrorToolBuilder
+function UMirrorToolBuilder:get() end
 
 
 ---@class UMirrorToolProperties : UInteractiveToolPropertySet
@@ -1390,6 +1855,9 @@ UMirrorToolBuilder = {}
 ---@field SaveMode EMirrorSaveMode
 UMirrorToolProperties = {}
 
+---@return UMirrorToolProperties
+function UMirrorToolProperties:get() end
+
 
 
 ---@class UMoveBrushOpProps : UMeshSculptBrushOpProps
@@ -1398,6 +1866,9 @@ UMirrorToolProperties = {}
 ---@field Depth float
 ---@field AxisFilters FModelingToolsAxisFilter
 UMoveBrushOpProps = {}
+
+---@return UMoveBrushOpProps
+function UMoveBrushOpProps:get() end
 
 
 
@@ -1408,10 +1879,16 @@ UMoveBrushOpProps = {}
 ---@field WeightMapProperties UOffsetWeightMapSetProperties
 UOffsetMeshTool = {}
 
+---@return UOffsetMeshTool
+function UOffsetMeshTool:get() end
+
 
 
 ---@class UOffsetMeshToolBuilder : UBaseMeshProcessingToolBuilder
 UOffsetMeshToolBuilder = {}
+
+---@return UOffsetMeshToolBuilder
+function UOffsetMeshToolBuilder:get() end
 
 
 ---@class UOffsetMeshToolProperties : UInteractiveToolPropertySet
@@ -1420,11 +1897,17 @@ UOffsetMeshToolBuilder = {}
 ---@field bCreateShell boolean
 UOffsetMeshToolProperties = {}
 
+---@return UOffsetMeshToolProperties
+function UOffsetMeshToolProperties:get() end
+
 
 
 ---@class UOffsetWeightMapSetProperties : UWeightMapSetProperties
 ---@field minDistance float
 UOffsetWeightMapSetProperties = {}
+
+---@return UOffsetWeightMapSetProperties
+function UOffsetWeightMapSetProperties:get() end
 
 
 
@@ -1434,6 +1917,9 @@ UOffsetWeightMapSetProperties = {}
 ---@field bShowNewLayerName boolean
 ---@field NewLayerName FString
 UOutputPolygroupLayerProperties = {}
+
+---@return UOutputPolygroupLayerProperties
+function UOutputPolygroupLayerProperties:get() end
 
 ---@return TArray<FString>
 function UOutputPolygroupLayerProperties:GetGroupOptionsList() end
@@ -1456,10 +1942,16 @@ function UOutputPolygroupLayerProperties:GetGroupOptionsList() end
 ---@field PreviewGeometry UPreviewGeometry
 UPatternTool = {}
 
+---@return UPatternTool
+function UPatternTool:get() end
+
 
 
 ---@class UPatternToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UPatternToolBuilder = {}
+
+---@return UPatternToolBuilder
+function UPatternToolBuilder:get() end
 
 
 ---@class UPatternToolSettings : UInteractiveToolPropertySet
@@ -1469,6 +1961,9 @@ UPatternToolBuilder = {}
 ---@field bHideSources boolean
 ---@field Seed int32
 UPatternToolSettings = {}
+
+---@return UPatternToolSettings
+function UPatternToolSettings:get() end
 
 
 
@@ -1485,6 +1980,9 @@ UPatternToolSettings = {}
 ---@field bCenteredY boolean
 UPatternTool_GridSettings = {}
 
+---@return UPatternTool_GridSettings
+function UPatternTool_GridSettings:get() end
+
 
 
 ---@class UPatternTool_LinearSettings : UInteractiveToolPropertySet
@@ -1495,6 +1993,9 @@ UPatternTool_GridSettings = {}
 ---@field bCentered boolean
 UPatternTool_LinearSettings = {}
 
+---@return UPatternTool_LinearSettings
+function UPatternTool_LinearSettings:get() end
+
 
 
 ---@class UPatternTool_OutputSettings : UInteractiveToolPropertySet
@@ -1503,6 +2004,9 @@ UPatternTool_LinearSettings = {}
 ---@field bCreateISMCs boolean
 ---@field bHaveStaticMeshes boolean
 UPatternTool_OutputSettings = {}
+
+---@return UPatternTool_OutputSettings
+function UPatternTool_OutputSettings:get() end
 
 
 
@@ -1517,6 +2021,9 @@ UPatternTool_OutputSettings = {}
 ---@field bOriented boolean
 UPatternTool_RadialSettings = {}
 
+---@return UPatternTool_RadialSettings
+function UPatternTool_RadialSettings:get() end
+
 
 
 ---@class UPatternTool_RotationSettings : UInteractiveToolPropertySet
@@ -1526,6 +2033,9 @@ UPatternTool_RadialSettings = {}
 ---@field EndRotation FRotator
 ---@field RotationJitterRange FRotator
 UPatternTool_RotationSettings = {}
+
+---@return UPatternTool_RotationSettings
+function UPatternTool_RotationSettings:get() end
 
 
 
@@ -1539,6 +2049,9 @@ UPatternTool_RotationSettings = {}
 ---@field ScaleJitterRangeNonUniform FVector
 UPatternTool_ScaleSettings = {}
 
+---@return UPatternTool_ScaleSettings
+function UPatternTool_ScaleSettings:get() end
+
 
 
 ---@class UPatternTool_TranslationSettings : UInteractiveToolPropertySet
@@ -1549,6 +2062,9 @@ UPatternTool_ScaleSettings = {}
 ---@field TranslationJitterRange FVector
 UPatternTool_TranslationSettings = {}
 
+---@return UPatternTool_TranslationSettings
+function UPatternTool_TranslationSettings:get() end
+
 
 
 ---@class UPhysicsInspectorTool : UMultiSelectionMeshEditingTool
@@ -1558,10 +2074,16 @@ UPatternTool_TranslationSettings = {}
 ---@field PreviewElements TArray<UPreviewGeometry>
 UPhysicsInspectorTool = {}
 
+---@return UPhysicsInspectorTool
+function UPhysicsInspectorTool:get() end
+
 
 
 ---@class UPhysicsInspectorToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UPhysicsInspectorToolBuilder = {}
+
+---@return UPhysicsInspectorToolBuilder
+function UPhysicsInspectorToolBuilder:get() end
 
 
 ---@class UPhysicsObjectToolPropertySet : UInteractiveToolPropertySet
@@ -1574,6 +2096,9 @@ UPhysicsInspectorToolBuilder = {}
 ---@field LevelSets TArray<FPhysicsLevelSetData>
 UPhysicsObjectToolPropertySet = {}
 
+---@return UPhysicsObjectToolPropertySet
+function UPhysicsObjectToolPropertySet:get() end
+
 
 
 ---@class UPinchBrushOpProps : UMeshSculptBrushOpProps
@@ -1582,6 +2107,9 @@ UPhysicsObjectToolPropertySet = {}
 ---@field Depth float
 ---@field bPerpDamping boolean
 UPinchBrushOpProps = {}
+
+---@return UPinchBrushOpProps
+function UPinchBrushOpProps:get() end
 
 
 
@@ -1592,11 +2120,17 @@ UPinchBrushOpProps = {}
 ---@field WhichSide EPlaneBrushSideMode
 UPlaneBrushOpProps = {}
 
+---@return UPlaneBrushOpProps
+function UPlaneBrushOpProps:get() end
+
 
 
 ---@class UPlaneCutOperatorFactory : UObject
 ---@field CutTool UPlaneCutTool
 UPlaneCutOperatorFactory = {}
+
+---@return UPlaneCutOperatorFactory
+function UPlaneCutOperatorFactory:get() end
 
 
 
@@ -1608,12 +2142,18 @@ UPlaneCutOperatorFactory = {}
 ---@field PlaneMechanic UConstructionPlaneMechanic
 UPlaneCutTool = {}
 
+---@return UPlaneCutTool
+function UPlaneCutTool:get() end
+
 function UPlaneCutTool:FlipPlane() end
 function UPlaneCutTool:Cut() end
 
 
 ---@class UPlaneCutToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UPlaneCutToolBuilder = {}
+
+---@return UPlaneCutToolBuilder
+function UPlaneCutToolBuilder:get() end
 
 
 ---@class UPlaneCutToolProperties : UInteractiveToolPropertySet
@@ -1624,14 +2164,23 @@ UPlaneCutToolBuilder = {}
 ---@field bFillSpans boolean
 UPlaneCutToolProperties = {}
 
+---@return UPlaneCutToolProperties
+function UPlaneCutToolProperties:get() end
+
 
 
 ---@class UProjectToTargetTool : URemeshMeshTool
 UProjectToTargetTool = {}
 
+---@return UProjectToTargetTool
+function UProjectToTargetTool:get() end
+
 
 ---@class UProjectToTargetToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UProjectToTargetToolBuilder = {}
+
+---@return UProjectToTargetToolBuilder
+function UProjectToTargetToolBuilder:get() end
 
 
 ---@class UProjectToTargetToolProperties : URemeshMeshToolProperties
@@ -1645,12 +2194,18 @@ UProjectToTargetToolBuilder = {}
 ---@field FillAreaSmoothMultiplier float
 UProjectToTargetToolProperties = {}
 
+---@return UProjectToTargetToolProperties
+function UProjectToTargetToolProperties:get() end
+
 
 
 ---@class UPullKelvinletBrushOpProps : UBaseKelvinletBrushOpProps
 ---@field Falloff float
 ---@field Depth float
 UPullKelvinletBrushOpProps = {}
+
+---@return UPullKelvinletBrushOpProps
+function UPullKelvinletBrushOpProps:get() end
 
 
 
@@ -1661,10 +2216,16 @@ UPullKelvinletBrushOpProps = {}
 ---@field MeshElementsDisplay UMeshElementsVisualizer
 URemeshMeshTool = {}
 
+---@return URemeshMeshTool
+function URemeshMeshTool:get() end
+
 
 
 ---@class URemeshMeshToolBuilder : UMultiSelectionMeshEditingToolBuilder
 URemeshMeshToolBuilder = {}
+
+---@return URemeshMeshToolBuilder
+function URemeshMeshToolBuilder:get() end
 
 
 ---@class URemeshMeshToolProperties : URemeshProperties
@@ -1683,6 +2244,9 @@ URemeshMeshToolBuilder = {}
 ---@field BoundaryCornerAngleThreshold float
 URemeshMeshToolProperties = {}
 
+---@return URemeshMeshToolProperties
+function URemeshMeshToolProperties:get() end
+
 
 
 ---@class URemeshProperties : UMeshConstraintProperties
@@ -1692,15 +2256,24 @@ URemeshMeshToolProperties = {}
 ---@field bCollapses boolean
 URemeshProperties = {}
 
+---@return URemeshProperties
+function URemeshProperties:get() end
+
 
 
 ---@class URemoveOccludedTrianglesAdvancedProperties : UInteractiveToolPropertySet
 URemoveOccludedTrianglesAdvancedProperties = {}
 
+---@return URemoveOccludedTrianglesAdvancedProperties
+function URemoveOccludedTrianglesAdvancedProperties:get() end
+
 
 ---@class URemoveOccludedTrianglesOperatorFactory : UObject
 ---@field Tool URemoveOccludedTrianglesTool
 URemoveOccludedTrianglesOperatorFactory = {}
+
+---@return URemoveOccludedTrianglesOperatorFactory
+function URemoveOccludedTrianglesOperatorFactory:get() end
 
 
 
@@ -1712,10 +2285,16 @@ URemoveOccludedTrianglesOperatorFactory = {}
 ---@field PreviewCopies TArray<UPreviewMesh>
 URemoveOccludedTrianglesTool = {}
 
+---@return URemoveOccludedTrianglesTool
+function URemoveOccludedTrianglesTool:get() end
+
 
 
 ---@class URemoveOccludedTrianglesToolBuilder : UMultiSelectionMeshEditingToolBuilder
 URemoveOccludedTrianglesToolBuilder = {}
+
+---@return URemoveOccludedTrianglesToolBuilder
+function URemoveOccludedTrianglesToolBuilder:get() end
 
 
 ---@class URemoveOccludedTrianglesToolProperties : UInteractiveToolPropertySet
@@ -1730,6 +2309,9 @@ URemoveOccludedTrianglesToolBuilder = {}
 ---@field MinTriCountIsland int32
 ---@field action EOccludedAction
 URemoveOccludedTrianglesToolProperties = {}
+
+---@return URemoveOccludedTrianglesToolProperties
+function URemoveOccludedTrianglesToolProperties:get() end
 
 
 
@@ -1748,11 +2330,17 @@ URemoveOccludedTrianglesToolProperties = {}
 ---@field bDeviceDepthMap boolean
 URenderCaptureProperties = {}
 
+---@return URenderCaptureProperties
+function URenderCaptureProperties:get() end
+
 
 
 ---@class URevolveBoundaryOperatorFactory : UObject
 ---@field RevolveBoundaryTool URevolveBoundaryTool
 URevolveBoundaryOperatorFactory = {}
+
+---@return URevolveBoundaryOperatorFactory
+function URevolveBoundaryOperatorFactory:get() end
 
 
 
@@ -1764,10 +2352,16 @@ URevolveBoundaryOperatorFactory = {}
 ---@field Preview UMeshOpPreviewWithBackgroundCompute
 URevolveBoundaryTool = {}
 
+---@return URevolveBoundaryTool
+function URevolveBoundaryTool:get() end
+
 
 
 ---@class URevolveBoundaryToolBuilder : USingleSelectionMeshEditingToolBuilder
 URevolveBoundaryToolBuilder = {}
+
+---@return URevolveBoundaryToolBuilder
+function URevolveBoundaryToolBuilder:get() end
 
 
 ---@class URevolveBoundaryToolProperties : URevolveProperties
@@ -1777,12 +2371,18 @@ URevolveBoundaryToolBuilder = {}
 ---@field AxisOrientation FVector2D
 URevolveBoundaryToolProperties = {}
 
+---@return URevolveBoundaryToolProperties
+function URevolveBoundaryToolProperties:get() end
+
 
 
 ---@class UScaleKelvinletBrushOpProps : UBaseKelvinletBrushOpProps
 ---@field Strength float
 ---@field Falloff float
 UScaleKelvinletBrushOpProps = {}
+
+---@return UScaleKelvinletBrushOpProps
+function UScaleKelvinletBrushOpProps:get() end
 
 
 
@@ -1801,6 +2401,9 @@ UScaleKelvinletBrushOpProps = {}
 ---@field bShowSpacing boolean
 USculptBrushProperties = {}
 
+---@return USculptBrushProperties
+function USculptBrushProperties:get() end
+
 
 
 ---@class USculptMaxBrushOpProps : UMeshSculptBrushOpProps
@@ -1811,12 +2414,18 @@ USculptBrushProperties = {}
 ---@field FixedHeight float
 USculptMaxBrushOpProps = {}
 
+---@return USculptMaxBrushOpProps
+function USculptMaxBrushOpProps:get() end
+
 
 
 ---@class USculptMaxBrushProperties : UInteractiveToolPropertySet
 ---@field maxHeight float
 ---@field bFreezeCurrentHeight boolean
 USculptMaxBrushProperties = {}
+
+---@return USculptMaxBrushProperties
+function USculptMaxBrushProperties:get() end
 
 
 
@@ -1825,16 +2434,25 @@ USculptMaxBrushProperties = {}
 ---@field PreviewGeom UPreviewGeometry
 USeamSculptTool = {}
 
+---@return USeamSculptTool
+function USeamSculptTool:get() end
+
 
 
 ---@class USeamSculptToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 USeamSculptToolBuilder = {}
+
+---@return USeamSculptToolBuilder
+function USeamSculptToolBuilder:get() end
 
 
 ---@class USeamSculptToolProperties : UInteractiveToolPropertySet
 ---@field bShowWireframe boolean
 ---@field bHitBackFaces boolean
 USeamSculptToolProperties = {}
+
+---@return USeamSculptToolProperties
+function USeamSculptToolProperties:get() end
 
 
 
@@ -1844,6 +2462,9 @@ USeamSculptToolProperties = {}
 ---@field bPreserveUVFlow boolean
 USecondarySmoothBrushOpProps = {}
 
+---@return USecondarySmoothBrushOpProps
+function USecondarySmoothBrushOpProps:get() end
+
 
 
 ---@class USelectiveTessellationProperties : UInteractiveToolPropertySet
@@ -1851,6 +2472,9 @@ USecondarySmoothBrushOpProps = {}
 ---@field ActiveMaterial FName
 ---@field MaterialIDList TArray<FString>
 USelectiveTessellationProperties = {}
+
+---@return USelectiveTessellationProperties
+function USelectiveTessellationProperties:get() end
 
 ---@return TArray<FString>
 function USelectiveTessellationProperties:GetMaterialIDsFunc() end
@@ -1861,10 +2485,16 @@ function USelectiveTessellationProperties:GetMaterialIDsFunc() end
 ---@field DrawnLineSet ULineSetComponent
 USelfUnionMeshesTool = {}
 
+---@return USelfUnionMeshesTool
+function USelfUnionMeshesTool:get() end
+
 
 
 ---@class USelfUnionMeshesToolBuilder : UBaseCreateFromSelectedToolBuilder
 USelfUnionMeshesToolBuilder = {}
+
+---@return USelfUnionMeshesToolBuilder
+function USelfUnionMeshesToolBuilder:get() end
 
 
 ---@class USelfUnionMeshesToolProperties : UInteractiveToolPropertySet
@@ -1875,6 +2505,9 @@ USelfUnionMeshesToolBuilder = {}
 ---@field bShowNewBoundaryEdges boolean
 ---@field bOnlyUseFirstMeshMaterials boolean
 USelfUnionMeshesToolProperties = {}
+
+---@return USelfUnionMeshesToolProperties
+function USelfUnionMeshesToolProperties:get() end
 
 
 
@@ -1887,10 +2520,16 @@ USelfUnionMeshesToolProperties = {}
 ---@field PreviewGeom UPreviewGeometry
 USetCollisionGeometryTool = {}
 
+---@return USetCollisionGeometryTool
+function USetCollisionGeometryTool:get() end
+
 
 
 ---@class USetCollisionGeometryToolBuilder : UMultiSelectionMeshEditingToolBuilder
 USetCollisionGeometryToolBuilder = {}
+
+---@return USetCollisionGeometryToolBuilder
+function USetCollisionGeometryToolBuilder:get() end
 
 
 ---@class USetCollisionGeometryToolProperties : UInteractiveToolPropertySet
@@ -1918,12 +2557,18 @@ USetCollisionGeometryToolBuilder = {}
 ---@field SetCollisionType ECollisionGeometryMode
 USetCollisionGeometryToolProperties = {}
 
+---@return USetCollisionGeometryToolProperties
+function USetCollisionGeometryToolProperties:get() end
+
 
 
 ---@class USharpPullKelvinletBrushOpProps : UBaseKelvinletBrushOpProps
 ---@field Falloff float
 ---@field Depth float
 USharpPullKelvinletBrushOpProps = {}
+
+---@return USharpPullKelvinletBrushOpProps
+function USharpPullKelvinletBrushOpProps:get() end
 
 
 
@@ -1932,10 +2577,16 @@ USharpPullKelvinletBrushOpProps = {}
 ---@field Preview UMeshOpPreviewWithBackgroundCompute
 USkinWeightsBindingTool = {}
 
+---@return USkinWeightsBindingTool
+function USkinWeightsBindingTool:get() end
+
 
 
 ---@class USkinWeightsBindingToolBuilder : UMultiSelectionMeshEditingToolBuilder
 USkinWeightsBindingToolBuilder = {}
+
+---@return USkinWeightsBindingToolBuilder
+function USkinWeightsBindingToolBuilder:get() end
 
 
 ---@class USkinWeightsBindingToolProperties : UInteractiveToolPropertySet
@@ -1946,21 +2597,33 @@ USkinWeightsBindingToolBuilder = {}
 ---@field VoxelResolution int32
 USkinWeightsBindingToolProperties = {}
 
+---@return USkinWeightsBindingToolProperties
+function USkinWeightsBindingToolProperties:get() end
+
 
 
 ---@class USkinWeightsPaintTool : UDynamicMeshBrushTool
 ---@field ToolProps USkinWeightsPaintToolProperties
 USkinWeightsPaintTool = {}
 
+---@return USkinWeightsPaintTool
+function USkinWeightsPaintTool:get() end
+
 
 
 ---@class USkinWeightsPaintToolBuilder : UMeshSurfacePointMeshEditingToolBuilder
 USkinWeightsPaintToolBuilder = {}
 
+---@return USkinWeightsPaintToolBuilder
+function USkinWeightsPaintToolBuilder:get() end
+
 
 ---@class USkinWeightsPaintToolProperties : UInteractiveToolPropertySet
 ---@field CurrentBone FBoneReference
 USkinWeightsPaintToolProperties = {}
+
+---@return USkinWeightsPaintToolProperties
+function USkinWeightsPaintToolProperties:get() end
 
 
 
@@ -1970,6 +2633,9 @@ USkinWeightsPaintToolProperties = {}
 ---@field bPreserveUVFlow boolean
 USmoothBrushOpProps = {}
 
+---@return USmoothBrushOpProps
+function USmoothBrushOpProps:get() end
+
 
 
 ---@class USmoothFillBrushOpProps : UBaseSmoothBrushOpProps
@@ -1977,6 +2643,9 @@ USmoothBrushOpProps = {}
 ---@field Falloff float
 ---@field bPreserveUVFlow boolean
 USmoothFillBrushOpProps = {}
+
+---@return USmoothFillBrushOpProps
+function USmoothFillBrushOpProps:get() end
 
 
 
@@ -1990,6 +2659,9 @@ USmoothFillBrushOpProps = {}
 ---@field bProjectDuringRemesh boolean
 USmoothHoleFillProperties = {}
 
+---@return USmoothHoleFillProperties
+function USmoothHoleFillProperties:get() end
+
 
 
 ---@class USmoothMeshTool : UBaseMeshProcessingTool
@@ -2000,15 +2672,24 @@ USmoothHoleFillProperties = {}
 ---@field WeightMapProperties USmoothWeightMapSetProperties
 USmoothMeshTool = {}
 
+---@return USmoothMeshTool
+function USmoothMeshTool:get() end
+
 
 
 ---@class USmoothMeshToolBuilder : UBaseMeshProcessingToolBuilder
 USmoothMeshToolBuilder = {}
 
+---@return USmoothMeshToolBuilder
+function USmoothMeshToolBuilder:get() end
+
 
 ---@class USmoothMeshToolProperties : UInteractiveToolPropertySet
 ---@field SmoothingType ESmoothMeshToolSmoothType
 USmoothMeshToolProperties = {}
+
+---@return USmoothMeshToolProperties
+function USmoothMeshToolProperties:get() end
 
 
 
@@ -2016,11 +2697,17 @@ USmoothMeshToolProperties = {}
 ---@field MinSmoothMultiplier float
 USmoothWeightMapSetProperties = {}
 
+---@return USmoothWeightMapSetProperties
+function USmoothWeightMapSetProperties:get() end
+
 
 
 ---@class USpaceDeformerOperatorFactory : UObject
 ---@field SpaceDeformerTool UMeshSpaceDeformerTool
 USpaceDeformerOperatorFactory = {}
+
+---@return USpaceDeformerOperatorFactory
+function USpaceDeformerOperatorFactory:get() end
 
 
 
@@ -2029,15 +2716,24 @@ USpaceDeformerOperatorFactory = {}
 ---@field OutputTypeProperties UCreateMeshObjectTypeProperties
 USplitMeshesTool = {}
 
+---@return USplitMeshesTool
+function USplitMeshesTool:get() end
+
 
 
 ---@class USplitMeshesToolBuilder : UMultiSelectionMeshEditingToolBuilder
 USplitMeshesToolBuilder = {}
 
+---@return USplitMeshesToolBuilder
+function USplitMeshesToolBuilder:get() end
+
 
 ---@class USplitMeshesToolProperties : UInteractiveToolPropertySet
 ---@field bTransferMaterials boolean
 USplitMeshesToolProperties = {}
+
+---@return USplitMeshesToolProperties
+function USplitMeshesToolProperties:get() end
 
 
 
@@ -2046,16 +2742,25 @@ USplitMeshesToolProperties = {}
 ---@field Falloff float
 UStandardSculptBrushOpProps = {}
 
+---@return UStandardSculptBrushOpProps
+function UStandardSculptBrushOpProps:get() end
+
 
 
 ---@class UTransferMeshTool : UMultiSelectionMeshEditingTool
 ---@field BasicProperties UTransferMeshToolProperties
 UTransferMeshTool = {}
 
+---@return UTransferMeshTool
+function UTransferMeshTool:get() end
+
 
 
 ---@class UTransferMeshToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UTransferMeshToolBuilder = {}
+
+---@return UTransferMeshToolBuilder
+function UTransferMeshToolBuilder:get() end
 
 
 ---@class UTransferMeshToolProperties : UInteractiveToolPropertySet
@@ -2067,6 +2772,9 @@ UTransferMeshToolBuilder = {}
 ---@field TargetLODNamesList TArray<FString>
 ---@field bIsStaticMeshTarget boolean
 UTransferMeshToolProperties = {}
+
+---@return UTransferMeshToolProperties
+function UTransferMeshToolProperties:get() end
 
 ---@return TArray<FString>
 function UTransferMeshToolProperties:GetTargetLODNamesFunc() end
@@ -2080,10 +2788,16 @@ function UTransferMeshToolProperties:GetSourceLODNamesFunc() end
 ---@field DragAlignmentMechanic UDragAlignmentMechanic
 UTransformMeshesTool = {}
 
+---@return UTransformMeshesTool
+function UTransformMeshesTool:get() end
+
 
 
 ---@class UTransformMeshesToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UTransformMeshesToolBuilder = {}
+
+---@return UTransformMeshesToolBuilder
+function UTransformMeshesToolBuilder:get() end
 
 
 ---@class UTransformMeshesToolProperties : UInteractiveToolPropertySet
@@ -2096,12 +2810,18 @@ UTransformMeshesToolBuilder = {}
 ---@field bHaveInstances boolean
 UTransformMeshesToolProperties = {}
 
+---@return UTransformMeshesToolProperties
+function UTransformMeshesToolProperties:get() end
+
 
 
 ---@class UTwistKelvinletBrushOpProps : UBaseKelvinletBrushOpProps
 ---@field Strength float
 ---@field Falloff float
 UTwistKelvinletBrushOpProps = {}
+
+---@return UTwistKelvinletBrushOpProps
+function UTwistKelvinletBrushOpProps:get() end
 
 
 
@@ -2111,6 +2831,9 @@ UTwistKelvinletBrushOpProps = {}
 ---@field bRandomize boolean
 ---@field RandomRange float
 UVertexBrushAlphaProperties = {}
+
+---@return UVertexBrushAlphaProperties
+function UVertexBrushAlphaProperties:get() end
 
 
 
@@ -2122,6 +2845,9 @@ UVertexBrushAlphaProperties = {}
 ---@field Tool TWeakObjectPtr<UMeshVertexSculptTool>
 UVertexBrushSculptProperties = {}
 
+---@return UVertexBrushSculptProperties
+function UVertexBrushSculptProperties:get() end
+
 
 
 ---@class UViewAlignedPlaneBrushOpProps : UBasePlaneBrushOpProps
@@ -2131,12 +2857,18 @@ UVertexBrushSculptProperties = {}
 ---@field WhichSide EPlaneBrushSideMode
 UViewAlignedPlaneBrushOpProps = {}
 
+---@return UViewAlignedPlaneBrushOpProps
+function UViewAlignedPlaneBrushOpProps:get() end
+
 
 
 ---@class UViewAlignedSculptBrushOpProps : UMeshSculptBrushOpProps
 ---@field Strength float
 ---@field Falloff float
 UViewAlignedSculptBrushOpProps = {}
+
+---@return UViewAlignedSculptBrushOpProps
+function UViewAlignedSculptBrushOpProps:get() end
 
 
 
@@ -2148,10 +2880,16 @@ UViewAlignedSculptBrushOpProps = {}
 ---@field VolumeEdgesSet ULineSetComponent
 UVolumeToMeshTool = {}
 
+---@return UVolumeToMeshTool
+function UVolumeToMeshTool:get() end
+
 
 
 ---@class UVolumeToMeshToolBuilder : UInteractiveToolBuilder
 UVolumeToMeshToolBuilder = {}
+
+---@return UVolumeToMeshToolBuilder
+function UVolumeToMeshToolBuilder:get() end
 
 
 ---@class UVolumeToMeshToolProperties : UInteractiveToolPropertySet
@@ -2161,16 +2899,25 @@ UVolumeToMeshToolBuilder = {}
 ---@field bShowWireframe boolean
 UVolumeToMeshToolProperties = {}
 
+---@return UVolumeToMeshToolProperties
+function UVolumeToMeshToolProperties:get() end
+
 
 
 ---@class UVoxelBlendMeshesTool : UBaseVoxelTool
 ---@field BlendProperties UVoxelBlendMeshesToolProperties
 UVoxelBlendMeshesTool = {}
 
+---@return UVoxelBlendMeshesTool
+function UVoxelBlendMeshesTool:get() end
+
 
 
 ---@class UVoxelBlendMeshesToolBuilder : UBaseCreateFromSelectedToolBuilder
 UVoxelBlendMeshesToolBuilder = {}
+
+---@return UVoxelBlendMeshesToolBuilder
+function UVoxelBlendMeshesToolBuilder:get() end
 
 
 ---@class UVoxelBlendMeshesToolProperties : UInteractiveToolPropertySet
@@ -2182,16 +2929,25 @@ UVoxelBlendMeshesToolBuilder = {}
 ---@field ThickenShells double
 UVoxelBlendMeshesToolProperties = {}
 
+---@return UVoxelBlendMeshesToolProperties
+function UVoxelBlendMeshesToolProperties:get() end
+
 
 
 ---@class UVoxelMorphologyMeshesTool : UBaseVoxelTool
 ---@field MorphologyProperties UVoxelMorphologyMeshesToolProperties
 UVoxelMorphologyMeshesTool = {}
 
+---@return UVoxelMorphologyMeshesTool
+function UVoxelMorphologyMeshesTool:get() end
+
 
 
 ---@class UVoxelMorphologyMeshesToolBuilder : UBaseCreateFromSelectedToolBuilder
 UVoxelMorphologyMeshesToolBuilder = {}
+
+---@return UVoxelMorphologyMeshesToolBuilder
+function UVoxelMorphologyMeshesToolBuilder:get() end
 
 
 ---@class UVoxelMorphologyMeshesToolProperties : UInteractiveToolPropertySet
@@ -2202,16 +2958,25 @@ UVoxelMorphologyMeshesToolBuilder = {}
 ---@field ThickenShells double
 UVoxelMorphologyMeshesToolProperties = {}
 
+---@return UVoxelMorphologyMeshesToolProperties
+function UVoxelMorphologyMeshesToolProperties:get() end
+
 
 
 ---@class UVoxelSolidifyMeshesTool : UBaseVoxelTool
 ---@field SolidifyProperties UVoxelSolidifyMeshesToolProperties
 UVoxelSolidifyMeshesTool = {}
 
+---@return UVoxelSolidifyMeshesTool
+function UVoxelSolidifyMeshesTool:get() end
+
 
 
 ---@class UVoxelSolidifyMeshesToolBuilder : UBaseCreateFromSelectedToolBuilder
 UVoxelSolidifyMeshesToolBuilder = {}
+
+---@return UVoxelSolidifyMeshesToolBuilder
+function UVoxelSolidifyMeshesToolBuilder:get() end
 
 
 ---@class UVoxelSolidifyMeshesToolProperties : UInteractiveToolPropertySet
@@ -2223,11 +2988,17 @@ UVoxelSolidifyMeshesToolBuilder = {}
 ---@field ThickenShells double
 UVoxelSolidifyMeshesToolProperties = {}
 
+---@return UVoxelSolidifyMeshesToolProperties
+function UVoxelSolidifyMeshesToolProperties:get() end
+
 
 
 ---@class UWeldMeshEdgesOperatorFactory : UObject
 ---@field WeldMeshEdgesTool UWeldMeshEdgesTool
 UWeldMeshEdgesOperatorFactory = {}
+
+---@return UWeldMeshEdgesOperatorFactory
+function UWeldMeshEdgesOperatorFactory:get() end
 
 
 
@@ -2238,10 +3009,16 @@ UWeldMeshEdgesOperatorFactory = {}
 ---@field OperatorFactory UWeldMeshEdgesOperatorFactory
 UWeldMeshEdgesTool = {}
 
+---@return UWeldMeshEdgesTool
+function UWeldMeshEdgesTool:get() end
+
 
 
 ---@class UWeldMeshEdgesToolBuilder : USingleSelectionMeshEditingToolBuilder
 UWeldMeshEdgesToolBuilder = {}
+
+---@return UWeldMeshEdgesToolBuilder
+function UWeldMeshEdgesToolBuilder:get() end
 
 
 ---@class UWeldMeshEdgesToolProperties : UInteractiveToolPropertySet
@@ -2252,6 +3029,9 @@ UWeldMeshEdgesToolBuilder = {}
 ---@field RemainingEdges int32
 UWeldMeshEdgesToolProperties = {}
 
+---@return UWeldMeshEdgesToolProperties
+function UWeldMeshEdgesToolProperties:get() end
+
 
 
 ---@class UWorkPlaneProperties : UInteractiveToolPropertySet
@@ -2260,6 +3040,9 @@ UWeldMeshEdgesToolProperties = {}
 ---@field Position FVector
 ---@field Rotation FQuat
 UWorkPlaneProperties = {}
+
+---@return UWorkPlaneProperties
+function UWorkPlaneProperties:get() end
 
 
 

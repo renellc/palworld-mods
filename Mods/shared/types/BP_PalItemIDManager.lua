@@ -5,6 +5,9 @@
 ---@field DefaultPalEggStaticItemId FDataTableRowHandle
 UBP_PalItemIDManager_C = {}
 
+---@return UBP_PalItemIDManager_C
+function UBP_PalItemIDManager_C:get() end
+
 ---@param PalRarity int32
 ---@param WorldContextObject UObject
 ---@param PalEggRank int32

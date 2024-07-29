@@ -4,22 +4,34 @@
 ---@field SubjectName FName
 FLiveLinkClearSubject = {}
 
+---@return FLiveLinkClearSubject
+function FLiveLinkClearSubject:get() end
+
 
 
 ---@class FLiveLinkConnectMessage
 ---@field LiveLinkVersion int32
 FLiveLinkConnectMessage = {}
 
+---@return FLiveLinkConnectMessage
+function FLiveLinkConnectMessage:get() end
+
 
 
 ---@class FLiveLinkHeartbeatMessage
 FLiveLinkHeartbeatMessage = {}
+
+---@return FLiveLinkHeartbeatMessage
+function FLiveLinkHeartbeatMessage:get() end
 
 
 ---@class FLiveLinkPingMessage
 ---@field PollRequest FGuid
 ---@field LiveLinkVersion int32
 FLiveLinkPingMessage = {}
+
+---@return FLiveLinkPingMessage
+function FLiveLinkPingMessage:get() end
 
 
 
@@ -31,12 +43,18 @@ FLiveLinkPingMessage = {}
 ---@field CreationPlatformTime double
 FLiveLinkPongMessage = {}
 
+---@return FLiveLinkPongMessage
+function FLiveLinkPongMessage:get() end
+
 
 
 ---@class FLiveLinkSubjectDataMessage
 ---@field RefSkeleton FLiveLinkRefSkeleton
 ---@field SubjectName FName
 FLiveLinkSubjectDataMessage = {}
+
+---@return FLiveLinkSubjectDataMessage
+function FLiveLinkSubjectDataMessage:get() end
 
 
 
@@ -47,6 +65,9 @@ FLiveLinkSubjectDataMessage = {}
 ---@field MetaData FLiveLinkMetaData
 ---@field Time double
 FLiveLinkSubjectFrameMessage = {}
+
+---@return FLiveLinkSubjectFrameMessage
+function FLiveLinkSubjectFrameMessage:get() end
 
 
 

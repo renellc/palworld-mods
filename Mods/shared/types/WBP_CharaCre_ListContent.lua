@@ -9,6 +9,9 @@
 ---@field TitleMsgID FDataTableRowHandle
 UWBP_CharaCre_ListContent_C = {}
 
+---@return UWBP_CharaCre_ListContent_C
+function UWBP_CharaCre_ListContent_C:get() end
+
 function UWBP_CharaCre_ListContent_C:OnInitialized() end
 ---@param EntryPoint int32
 function UWBP_CharaCre_ListContent_C:ExecuteUbergraph_WBP_CharaCre_ListContent(EntryPoint) end

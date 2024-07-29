@@ -9,6 +9,9 @@
 ---@field TagName FName
 UBP_VisualEffect_PalEffectFadeIn_C = {}
 
+---@return UBP_VisualEffect_PalEffectFadeIn_C
+function UBP_VisualEffect_PalEffectFadeIn_C:get() end
+
 function UBP_VisualEffect_PalEffectFadeIn_C:OnBeginVisualEffect() end
 ---@param DeltaTime float
 function UBP_VisualEffect_PalEffectFadeIn_C:TickVisualEffect(DeltaTime) end

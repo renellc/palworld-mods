@@ -19,6 +19,9 @@
 ---@field ClickAKAudioEvent UAkAudioEvent
 UWBP_CommonButton_C = {}
 
+---@return UWBP_CommonButton_C
+function UWBP_CommonButton_C:get() end
+
 ---@param Widget UWidget
 function UWBP_CommonButton_C:GetFocusTarget(Widget) end
 ---@param isFirstFocusTarget boolean

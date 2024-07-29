@@ -8,6 +8,9 @@
 ---@field bSupportsTransparency boolean
 UWebBrowser = {}
 
+---@return UWebBrowser
+function UWebBrowser:get() end
+
 ---@param Text FText
 function UWebBrowser:OnUrlChanged__DelegateSignature(Text) end
 ---@param Message FString
@@ -33,6 +36,9 @@ function UWebBrowser:ExecuteJavascript(ScriptText) end
 ---@class UWebBrowserAssetManager : UObject
 ---@field DefaultMaterial TSoftObjectPtr<UMaterial>
 UWebBrowserAssetManager = {}
+
+---@return UWebBrowserAssetManager
+function UWebBrowserAssetManager:get() end
 
 
 

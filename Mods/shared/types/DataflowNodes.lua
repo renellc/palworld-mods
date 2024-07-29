@@ -5,12 +5,18 @@
 ---@field PropertyName FName
 FGetSkeletalMeshDataflowNode = {}
 
+---@return FGetSkeletalMeshDataflowNode
+function FGetSkeletalMeshDataflowNode:get() end
+
 
 
 ---@class FGetStaticMeshDataflowNode : FDataflowNode
 ---@field StaticMesh UStaticMesh
 ---@field PropertyName FName
 FGetStaticMeshDataflowNode = {}
+
+---@return FGetStaticMeshDataflowNode
+function FGetStaticMeshDataflowNode:get() end
 
 
 
@@ -19,6 +25,9 @@ FGetStaticMeshDataflowNode = {}
 ---@field SkeletalMesh USkeletalMesh
 ---@field BoneIndexOut int32
 FSkeletalMeshBoneDataflowNode = {}
+
+---@return FSkeletalMeshBoneDataflowNode
+function FSkeletalMeshBoneDataflowNode:get() end
 
 
 

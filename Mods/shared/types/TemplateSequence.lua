@@ -7,6 +7,9 @@
 ---@field BindingOverride FTemplateSequenceBindingOverrideData
 ATemplateSequenceActor = {}
 
+---@return ATemplateSequenceActor
+function ATemplateSequenceActor:get() end
+
 ---@param InSequence UTemplateSequence
 function ATemplateSequenceActor:SetSequence(InSequence) end
 ---@param Actor AActor
@@ -27,6 +30,9 @@ function ATemplateSequenceActor:GetSequence() end
 ---@field FloatChannel FMovieSceneFloatChannel
 FTemplateSectionPropertyScale = {}
 
+---@return FTemplateSectionPropertyScale
+function FTemplateSectionPropertyScale:get() end
+
 
 
 ---@class FTemplateSequenceBindingOverrideData
@@ -34,18 +40,30 @@ FTemplateSectionPropertyScale = {}
 ---@field bOverridesDefault boolean
 FTemplateSequenceBindingOverrideData = {}
 
+---@return FTemplateSequenceBindingOverrideData
+function FTemplateSequenceBindingOverrideData:get() end
+
 
 
 ---@class UCameraAnimationBoundObjectInstantiator : UMovieSceneEntityInstantiatorSystem
 UCameraAnimationBoundObjectInstantiator = {}
 
+---@return UCameraAnimationBoundObjectInstantiator
+function UCameraAnimationBoundObjectInstantiator:get() end
+
 
 ---@class UCameraAnimationEntitySystemLinker : UMovieSceneEntitySystemLinker
 UCameraAnimationEntitySystemLinker = {}
 
+---@return UCameraAnimationEntitySystemLinker
+function UCameraAnimationEntitySystemLinker:get() end
+
 
 ---@class UCameraAnimationSequence : UTemplateSequence
 UCameraAnimationSequence = {}
+
+---@return UCameraAnimationSequence
+function UCameraAnimationSequence:get() end
 
 
 ---@class UCameraAnimationSequenceCameraStandIn : UObject
@@ -62,6 +80,9 @@ UCameraAnimationSequence = {}
 ---@field CurrentFocusDistance float
 UCameraAnimationSequenceCameraStandIn = {}
 
+---@return UCameraAnimationSequenceCameraStandIn
+function UCameraAnimationSequenceCameraStandIn:get() end
+
 
 
 ---@class UCameraAnimationSequencePlayer : UObject
@@ -70,16 +91,25 @@ UCameraAnimationSequenceCameraStandIn = {}
 ---@field RootTemplateInstance FMovieSceneRootEvaluationTemplateInstance
 UCameraAnimationSequencePlayer = {}
 
+---@return UCameraAnimationSequencePlayer
+function UCameraAnimationSequencePlayer:get() end
+
 
 
 ---@class UCameraAnimationSequenceSubsystem : UWorldSubsystem
 ---@field Linker UMovieSceneEntitySystemLinker
 UCameraAnimationSequenceSubsystem = {}
 
+---@return UCameraAnimationSequenceSubsystem
+function UCameraAnimationSequenceSubsystem:get() end
+
 
 
 ---@class UCameraAnimationSpawnableSystem : UMovieSceneEntitySystem
 UCameraAnimationSpawnableSystem = {}
+
+---@return UCameraAnimationSpawnableSystem
+function UCameraAnimationSpawnableSystem:get() end
 
 
 ---@class USequenceCameraShakePattern : UCameraShakePattern
@@ -94,10 +124,16 @@ UCameraAnimationSpawnableSystem = {}
 ---@field CameraStandIn UCameraAnimationSequenceCameraStandIn
 USequenceCameraShakePattern = {}
 
+---@return USequenceCameraShakePattern
+function USequenceCameraShakePattern:get() end
+
 
 
 ---@class USequenceCameraShakeTestUtil : UBlueprintFunctionLibrary
 USequenceCameraShakeTestUtil = {}
+
+---@return USequenceCameraShakeTestUtil
+function USequenceCameraShakeTestUtil:get() end
 
 ---@param PlayerController APlayerController
 ---@param PPIndex int32
@@ -120,10 +156,16 @@ function USequenceCameraShakeTestUtil:GetCameraCachePOV(PlayerController) end
 ---@field BoundActorComponents TMap<FGuid, FName>
 UTemplateSequence = {}
 
+---@return UTemplateSequence
+function UTemplateSequence:get() end
+
 
 
 ---@class UTemplateSequencePlayer : UMovieSceneSequencePlayer
 UTemplateSequencePlayer = {}
+
+---@return UTemplateSequencePlayer
+function UTemplateSequencePlayer:get() end
 
 ---@param WorldContextObject UObject
 ---@param TemplateSequence UTemplateSequence
@@ -136,22 +178,37 @@ function UTemplateSequencePlayer:CreateTemplateSequencePlayer(WorldContextObject
 ---@class UTemplateSequencePropertyScalingEvaluatorSystem : UMovieSceneEntitySystem
 UTemplateSequencePropertyScalingEvaluatorSystem = {}
 
+---@return UTemplateSequencePropertyScalingEvaluatorSystem
+function UTemplateSequencePropertyScalingEvaluatorSystem:get() end
+
 
 ---@class UTemplateSequencePropertyScalingInstantiatorSystem : UMovieSceneEntitySystem
 UTemplateSequencePropertyScalingInstantiatorSystem = {}
+
+---@return UTemplateSequencePropertyScalingInstantiatorSystem
+function UTemplateSequencePropertyScalingInstantiatorSystem:get() end
 
 
 ---@class UTemplateSequenceSection : UMovieSceneSubSection
 ---@field PropertyScales TArray<FTemplateSectionPropertyScale>
 UTemplateSequenceSection = {}
 
+---@return UTemplateSequenceSection
+function UTemplateSequenceSection:get() end
+
 
 
 ---@class UTemplateSequenceSystem : UMovieSceneEntitySystem
 UTemplateSequenceSystem = {}
 
+---@return UTemplateSequenceSystem
+function UTemplateSequenceSystem:get() end
+
 
 ---@class UTemplateSequenceTrack : UMovieSceneSubTrack
 UTemplateSequenceTrack = {}
+
+---@return UTemplateSequenceTrack
+function UTemplateSequenceTrack:get() end
 
 

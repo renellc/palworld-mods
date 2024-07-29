@@ -11,6 +11,9 @@
 ---@field OnClicked FWBP_GuildMemberMenuList_COnClicked
 UWBP_GuildMemberMenuList_C = {}
 
+---@return UWBP_GuildMemberMenuList_C
+function UWBP_GuildMemberMenuList_C:get() end
+
 ---@param OutString FString
 function UWBP_GuildMemberMenuList_C:GetBindedTextString(OutString) end
 ---@param newText FText

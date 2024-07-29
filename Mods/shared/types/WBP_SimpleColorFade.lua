@@ -6,6 +6,9 @@
 ---@field Image_14 UImage
 UWBP_SimpleColorFade_C = {}
 
+---@return UWBP_SimpleColorFade_C
+function UWBP_SimpleColorFade_C:get() end
+
 function UWBP_SimpleColorFade_C:Setup_ForOverride() end
 function UWBP_SimpleColorFade_C:FadeOut() end
 function UWBP_SimpleColorFade_C:FadeIn() end

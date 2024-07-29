@@ -13,6 +13,9 @@
 ---@field Text_SubName UBP_PalTextBlock_C
 UWBP_BossBattle_BossCut04_C = {}
 
+---@return UWBP_BossBattle_BossCut04_C
+function UWBP_BossBattle_BossCut04_C:get() end
+
 ---@param MainName FText
 ---@param SubName FText
 function UWBP_BossBattle_BossCut04_C:SetTexts(MainName, SubName) end

@@ -4,10 +4,16 @@
 ---@field Headers TMap<FString, FString>
 FHttpHeader = {}
 
+---@return FHttpHeader
+function FHttpHeader:get() end
+
 
 
 ---@class UHttpBlueprintFunctionLibrary : UBlueprintFunctionLibrary
 UHttpBlueprintFunctionLibrary = {}
+
+---@return UHttpBlueprintFunctionLibrary
+function UHttpBlueprintFunctionLibrary:get() end
 
 ---@param HeaderObject FHttpHeader
 ---@param HeaderToRemove FString

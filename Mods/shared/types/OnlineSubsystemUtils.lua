@@ -6,6 +6,9 @@
 ---@field NetDriver UNetDriver
 AOnlineBeacon = {}
 
+---@return AOnlineBeacon
+function AOnlineBeacon:get() end
+
 
 
 ---@class AOnlineBeaconClient : AOnlineBeacon
@@ -13,6 +16,9 @@ AOnlineBeacon = {}
 ---@field BeaconConnection UNetConnection
 ---@field ConnectionState EBeaconConnectionState
 AOnlineBeaconClient = {}
+
+---@return AOnlineBeaconClient
+function AOnlineBeaconClient:get() end
 
 function AOnlineBeaconClient:ClientOnConnected() end
 
@@ -24,6 +30,9 @@ function AOnlineBeaconClient:ClientOnConnected() end
 ---@field ClientActors TArray<AOnlineBeaconClient>
 AOnlineBeaconHost = {}
 
+---@return AOnlineBeaconHost
+function AOnlineBeaconHost:get() end
+
 
 
 ---@class AOnlineBeaconHostObject : AActor
@@ -31,6 +40,9 @@ AOnlineBeaconHost = {}
 ---@field ClientBeaconActorClass TSubclassOf<AOnlineBeaconClient>
 ---@field ClientActors TArray<AOnlineBeaconClient>
 AOnlineBeaconHostObject = {}
+
+---@return AOnlineBeaconHostObject
+function AOnlineBeaconHostObject:get() end
 
 
 
@@ -41,6 +53,9 @@ AOnlineBeaconHostObject = {}
 ---@field bPendingReservationSent boolean
 ---@field bCancelReservation boolean
 APartyBeaconClient = {}
+
+---@return APartyBeaconClient
+function APartyBeaconClient:get() end
 
 ---@param SessionId FString
 ---@param ReservationUpdate FPartyReservation
@@ -72,6 +87,9 @@ function APartyBeaconClient:ClientCancelReservationResponse(ReservationResponse)
 ---@field TravelSessionTimeoutSecs float
 APartyBeaconHost = {}
 
+---@return APartyBeaconHost
+function APartyBeaconHost:get() end
+
 
 
 ---@class ASpectatorBeaconClient : AOnlineBeaconClient
@@ -81,6 +99,9 @@ APartyBeaconHost = {}
 ---@field bPendingReservationSent boolean
 ---@field bCancelReservation boolean
 ASpectatorBeaconClient = {}
+
+---@return ASpectatorBeaconClient
+function ASpectatorBeaconClient:get() end
 
 ---@param SessionId FString
 ---@param Reservation FSpectatorReservation
@@ -103,10 +124,16 @@ function ASpectatorBeaconClient:ClientCancelReservationResponse(ReservationRespo
 ---@field TravelSessionTimeoutSecs float
 ASpectatorBeaconHost = {}
 
+---@return ASpectatorBeaconHost
+function ASpectatorBeaconHost:get() end
+
 
 
 ---@class ATestBeaconClient : AOnlineBeaconClient
 ATestBeaconClient = {}
+
+---@return ATestBeaconClient
+function ATestBeaconClient:get() end
 
 function ATestBeaconClient:ServerPong() end
 function ATestBeaconClient:ClientPing() end
@@ -115,9 +142,15 @@ function ATestBeaconClient:ClientPing() end
 ---@class ATestBeaconHost : AOnlineBeaconHostObject
 ATestBeaconHost = {}
 
+---@return ATestBeaconHost
+function ATestBeaconHost:get() end
+
 
 ---@class FBlueprintSessionResult
 FBlueprintSessionResult = {}
+
+---@return FBlueprintSessionResult
+function FBlueprintSessionResult:get() end
 
 
 ---@class FInAppPurchaseProductInfo2
@@ -135,12 +168,18 @@ FBlueprintSessionResult = {}
 ---@field DynamicFields TMap<FString, FString>
 FInAppPurchaseProductInfo2 = {}
 
+---@return FInAppPurchaseProductInfo2
+function FInAppPurchaseProductInfo2:get() end
+
 
 
 ---@class FInAppPurchaseProductRequest2
 ---@field ProductIdentifier FString
 ---@field bIsConsumable boolean
 FInAppPurchaseProductRequest2 = {}
+
+---@return FInAppPurchaseProductRequest2
+function FInAppPurchaseProductRequest2:get() end
 
 
 
@@ -150,6 +189,9 @@ FInAppPurchaseProductRequest2 = {}
 ---@field ValidationInfo FString
 FInAppPurchaseReceiptInfo2 = {}
 
+---@return FInAppPurchaseReceiptInfo2
+function FInAppPurchaseReceiptInfo2:get() end
+
 
 
 ---@class FInAppPurchaseRestoreInfo2
@@ -157,6 +199,9 @@ FInAppPurchaseReceiptInfo2 = {}
 ---@field ItemId FString
 ---@field ValidationInfo FString
 FInAppPurchaseRestoreInfo2 = {}
+
+---@return FInAppPurchaseRestoreInfo2
+function FInAppPurchaseRestoreInfo2:get() end
 
 
 
@@ -176,6 +221,9 @@ FInAppPurchaseRestoreInfo2 = {}
 ---@field DynamicFields TMap<FString, FString>
 FOnlineProxyStoreOffer = {}
 
+---@return FOnlineProxyStoreOffer
+function FOnlineProxyStoreOffer:get() end
+
 
 
 ---@class FPIELoginSettingsInternal
@@ -185,12 +233,18 @@ FOnlineProxyStoreOffer = {}
 ---@field TokenBytes TArray<uint8>
 FPIELoginSettingsInternal = {}
 
+---@return FPIELoginSettingsInternal
+function FPIELoginSettingsInternal:get() end
+
 
 
 ---@class FPartyBeaconCrossplayPlatformMapping
 ---@field PlatformName FString
 ---@field PlatformType FString
 FPartyBeaconCrossplayPlatformMapping = {}
+
+---@return FPartyBeaconCrossplayPlatformMapping
+function FPartyBeaconCrossplayPlatformMapping:get() end
 
 
 
@@ -200,6 +254,9 @@ FPartyBeaconCrossplayPlatformMapping = {}
 ---@field PartyMembers TArray<FPlayerReservation>
 ---@field RemovedPartyMembers TArray<FPlayerReservation>
 FPartyReservation = {}
+
+---@return FPartyReservation
+function FPartyReservation:get() end
 
 
 
@@ -211,6 +268,9 @@ FPartyReservation = {}
 ---@field ElapsedTime float
 FPlayerReservation = {}
 
+---@return FPlayerReservation
+function FPlayerReservation:get() end
+
 
 
 ---@class FSpectatorReservation
@@ -218,10 +278,16 @@ FPlayerReservation = {}
 ---@field Spectator FPlayerReservation
 FSpectatorReservation = {}
 
+---@return FSpectatorReservation
+function FSpectatorReservation:get() end
+
 
 
 ---@class UAchievementBlueprintLibrary : UBlueprintFunctionLibrary
 UAchievementBlueprintLibrary = {}
+
+---@return UAchievementBlueprintLibrary
+function UAchievementBlueprintLibrary:get() end
 
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
@@ -245,6 +311,9 @@ function UAchievementBlueprintLibrary:GetCachedAchievementDescription(WorldConte
 ---@field OnFailure FAchievementQueryCallbackProxyOnFailure
 UAchievementQueryCallbackProxy = {}
 
+---@return UAchievementQueryCallbackProxy
+function UAchievementQueryCallbackProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@return UAchievementQueryCallbackProxy
@@ -260,6 +329,9 @@ function UAchievementQueryCallbackProxy:CacheAchievementDescriptions(WorldContex
 ---@field OnFailure FAchievementWriteCallbackProxyOnFailure
 UAchievementWriteCallbackProxy = {}
 
+---@return UAchievementWriteCallbackProxy
+function UAchievementWriteCallbackProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param AchievementName FName
@@ -274,6 +346,9 @@ function UAchievementWriteCallbackProxy:WriteAchievementProgress(WorldContextObj
 ---@field OnFailure FConnectionCallbackProxyOnFailure
 UConnectionCallbackProxy = {}
 
+---@return UConnectionCallbackProxy
+function UConnectionCallbackProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@return UConnectionCallbackProxy
@@ -284,6 +359,9 @@ function UConnectionCallbackProxy:ConnectToService(WorldContextObject, PlayerCon
 ---@field OnSuccess FCreateSessionCallbackProxyOnSuccess
 ---@field OnFailure FCreateSessionCallbackProxyOnFailure
 UCreateSessionCallbackProxy = {}
+
+---@return UCreateSessionCallbackProxy
+function UCreateSessionCallbackProxy:get() end
 
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
@@ -298,6 +376,9 @@ function UCreateSessionCallbackProxy:CreateSession(WorldContextObject, PlayerCon
 ---@field OnFailure FDestroySessionCallbackProxyOnFailure
 UDestroySessionCallbackProxy = {}
 
+---@return UDestroySessionCallbackProxy
+function UDestroySessionCallbackProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@return UDestroySessionCallbackProxy
@@ -308,6 +389,9 @@ function UDestroySessionCallbackProxy:DestroySession(WorldContextObject, PlayerC
 ---@field OnSuccess FEndMatchCallbackProxyOnSuccess
 ---@field OnFailure FEndMatchCallbackProxyOnFailure
 UEndMatchCallbackProxy = {}
+
+---@return UEndMatchCallbackProxy
+function UEndMatchCallbackProxy:get() end
 
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
@@ -324,6 +408,9 @@ function UEndMatchCallbackProxy:EndMatch(WorldContextObject, PlayerController, M
 ---@field OnFailure FEndTurnCallbackProxyOnFailure
 UEndTurnCallbackProxy = {}
 
+---@return UEndTurnCallbackProxy
+function UEndTurnCallbackProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param MatchID FString
@@ -336,6 +423,9 @@ function UEndTurnCallbackProxy:EndTurn(WorldContextObject, PlayerController, Mat
 ---@field OnSuccess FFindSessionsCallbackProxyOnSuccess
 ---@field OnFailure FFindSessionsCallbackProxyOnFailure
 UFindSessionsCallbackProxy = {}
+
+---@return UFindSessionsCallbackProxy
+function UFindSessionsCallbackProxy:get() end
 
 ---@param Result FBlueprintSessionResult
 ---@return FString
@@ -362,6 +452,9 @@ function UFindSessionsCallbackProxy:FindSessions(WorldContextObject, PlayerContr
 ---@field OnFailure FFindTurnBasedMatchCallbackProxyOnFailure
 UFindTurnBasedMatchCallbackProxy = {}
 
+---@return UFindTurnBasedMatchCallbackProxy
+function UFindTurnBasedMatchCallbackProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param MatchActor TScriptInterface<ITurnBasedMatchInterface>
@@ -377,6 +470,9 @@ function UFindTurnBasedMatchCallbackProxy:FindTurnBasedMatch(WorldContextObject,
 ---@field OnSuccess FInAppPurchaseCallbackProxy2OnSuccess
 ---@field OnFailure FInAppPurchaseCallbackProxy2OnFailure
 UInAppPurchaseCallbackProxy2 = {}
+
+---@return UInAppPurchaseCallbackProxy2
+function UInAppPurchaseCallbackProxy2:get() end
 
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseCallbackProxy2
@@ -395,6 +491,9 @@ function UInAppPurchaseCallbackProxy2:CreateProxyObjectForInAppPurchase(PlayerCo
 ---@field OnFailure FInAppPurchaseQueryCallbackProxy2OnFailure
 UInAppPurchaseQueryCallbackProxy2 = {}
 
+---@return UInAppPurchaseQueryCallbackProxy2
+function UInAppPurchaseQueryCallbackProxy2:get() end
+
 ---@param PlayerController APlayerController
 ---@param ProductIdentifiers TArray<FString>
 ---@return UInAppPurchaseQueryCallbackProxy2
@@ -406,6 +505,9 @@ function UInAppPurchaseQueryCallbackProxy2:CreateProxyObjectForInAppPurchaseQuer
 ---@field OnFailure FInAppPurchaseRestoreCallbackProxy2OnFailure
 UInAppPurchaseRestoreCallbackProxy2 = {}
 
+---@return UInAppPurchaseRestoreCallbackProxy2
+function UInAppPurchaseRestoreCallbackProxy2:get() end
+
 ---@param ConsumableProductFlags TArray<FInAppPurchaseProductRequest2>
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseRestoreCallbackProxy2
@@ -415,6 +517,9 @@ function UInAppPurchaseRestoreCallbackProxy2:CreateProxyObjectForInAppPurchaseRe
 ---@class UIpConnection : UNetConnection
 ---@field SocketErrorDisconnectDelay float
 UIpConnection = {}
+
+---@return UIpConnection
+function UIpConnection:get() end
 
 
 
@@ -431,12 +536,18 @@ UIpConnection = {}
 ---@field ResolutionConnectionTimeout float
 UIpNetDriver = {}
 
+---@return UIpNetDriver
+function UIpNetDriver:get() end
+
 
 
 ---@class UJoinSessionCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FJoinSessionCallbackProxyOnSuccess
 ---@field OnFailure FJoinSessionCallbackProxyOnFailure
 UJoinSessionCallbackProxy = {}
+
+---@return UJoinSessionCallbackProxy
+function UJoinSessionCallbackProxy:get() end
 
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
@@ -447,6 +558,9 @@ function UJoinSessionCallbackProxy:JoinSession(WorldContextObject, PlayerControl
 
 ---@class ULeaderboardBlueprintLibrary : UBlueprintFunctionLibrary
 ULeaderboardBlueprintLibrary = {}
+
+---@return ULeaderboardBlueprintLibrary
+function ULeaderboardBlueprintLibrary:get() end
 
 ---@param PlayerController APlayerController
 ---@param StatName FName
@@ -460,6 +574,9 @@ function ULeaderboardBlueprintLibrary:WriteLeaderboardInteger(PlayerController, 
 ---@field OnFailure FLeaderboardFlushCallbackProxyOnFailure
 ULeaderboardFlushCallbackProxy = {}
 
+---@return ULeaderboardFlushCallbackProxy
+function ULeaderboardFlushCallbackProxy:get() end
+
 ---@param PlayerController APlayerController
 ---@param SessionName FName
 ---@return ULeaderboardFlushCallbackProxy
@@ -471,6 +588,9 @@ function ULeaderboardFlushCallbackProxy:CreateProxyObjectForFlush(PlayerControll
 ---@field OnFailure FLeaderboardQueryCallbackProxyOnFailure
 ULeaderboardQueryCallbackProxy = {}
 
+---@return ULeaderboardQueryCallbackProxy
+function ULeaderboardQueryCallbackProxy:get() end
+
 ---@param PlayerController APlayerController
 ---@param StatName FName
 ---@return ULeaderboardQueryCallbackProxy
@@ -481,6 +601,9 @@ function ULeaderboardQueryCallbackProxy:CreateProxyObjectForIntQuery(PlayerContr
 ---@field OnSuccess FLogoutCallbackProxyOnSuccess
 ---@field OnFailure FLogoutCallbackProxyOnFailure
 ULogoutCallbackProxy = {}
+
+---@return ULogoutCallbackProxy
+function ULogoutCallbackProxy:get() end
 
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
@@ -494,6 +617,9 @@ function ULogoutCallbackProxy:Logout(WorldContextObject, PlayerController) end
 ---@field VoiceSubsystemNameOverride FName
 UOnlineEngineInterfaceImpl = {}
 
+---@return UOnlineEngineInterfaceImpl
+function UOnlineEngineInterfaceImpl:get() end
+
 
 
 ---@class UOnlinePIESettings : UDeveloperSettings
@@ -501,16 +627,25 @@ UOnlineEngineInterfaceImpl = {}
 ---@field Logins TArray<FPIELoginSettingsInternal>
 UOnlinePIESettings = {}
 
+---@return UOnlinePIESettings
+function UOnlinePIESettings:get() end
+
 
 
 ---@class UOnlineServicesEngineInterfaceImpl : UOnlineEngineInterface
 UOnlineServicesEngineInterfaceImpl = {}
+
+---@return UOnlineServicesEngineInterfaceImpl
+function UOnlineServicesEngineInterfaceImpl:get() end
 
 
 ---@class UOnlineSessionClient : UOnlineSession
 ---@field bIsFromInvite boolean
 ---@field bHandlingDisconnect boolean
 UOnlineSessionClient = {}
+
+---@return UOnlineSessionClient
+function UOnlineSessionClient:get() end
 
 
 
@@ -530,12 +665,18 @@ UOnlineSessionClient = {}
 ---@field Reservations TArray<FPartyReservation>
 UPartyBeaconState = {}
 
+---@return UPartyBeaconState
+function UPartyBeaconState:get() end
+
 
 
 ---@class UQuitMatchCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FQuitMatchCallbackProxyOnSuccess
 ---@field OnFailure FQuitMatchCallbackProxyOnFailure
 UQuitMatchCallbackProxy = {}
+
+---@return UQuitMatchCallbackProxy
+function UQuitMatchCallbackProxy:get() end
 
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
@@ -551,6 +692,9 @@ function UQuitMatchCallbackProxy:QuitMatch(WorldContextObject, PlayerController,
 ---@field OnFailure FShowLoginUICallbackProxyOnFailure
 UShowLoginUICallbackProxy = {}
 
+---@return UShowLoginUICallbackProxy
+function UShowLoginUICallbackProxy:get() end
+
 ---@param WorldContextObject UObject
 ---@param InPlayerController APlayerController
 ---@return UShowLoginUICallbackProxy
@@ -565,10 +709,16 @@ function UShowLoginUICallbackProxy:ShowExternalLoginUI(WorldContextObject, InPla
 ---@field Reservations TArray<FSpectatorReservation>
 USpectatorBeaconState = {}
 
+---@return USpectatorBeaconState
+function USpectatorBeaconState:get() end
+
 
 
 ---@class UTurnBasedBlueprintLibrary : UBlueprintFunctionLibrary
 UTurnBasedBlueprintLibrary = {}
+
+---@return UTurnBasedBlueprintLibrary
+function UTurnBasedBlueprintLibrary:get() end
 
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
@@ -594,6 +744,9 @@ function UTurnBasedBlueprintLibrary:GetIsMyTurn(WorldContextObject, PlayerContro
 
 ---@class UVoipListenerSynthComponent : USynthComponent
 UVoipListenerSynthComponent = {}
+
+---@return UVoipListenerSynthComponent
+function UVoipListenerSynthComponent:get() end
 
 ---@return boolean
 function UVoipListenerSynthComponent:IsIdling() end

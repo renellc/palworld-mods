@@ -9,6 +9,9 @@
 ---@field MyParameter UBP_CharaCre_ColorSelectWindowDispatchParameter_C
 UWBP_CharaCre_ColorSliderWin_C = {}
 
+---@return UWBP_CharaCre_ColorSliderWin_C
+function UWBP_CharaCre_ColorSliderWin_C:get() end
+
 ---@param MyGeometry FGeometry
 ---@param MouseEvent FPointerEvent
 ---@return FEventReply

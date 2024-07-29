@@ -5,10 +5,16 @@
 ---@field ImageData TArray<uint8>
 FAppleImageUtilsImageConversionResult = {}
 
+---@return FAppleImageUtilsImageConversionResult
+function FAppleImageUtilsImageConversionResult:get() end
+
 
 
 ---@class IAppleImageInterface : IInterface
 IAppleImageInterface = {}
+
+---@return IAppleImageInterface
+function IAppleImageInterface:get() end
 
 
 ---@class UAppleImageUtilsBaseAsyncTaskBlueprintProxy : UObject
@@ -16,6 +22,9 @@ IAppleImageInterface = {}
 ---@field OnFailure FAppleImageUtilsBaseAsyncTaskBlueprintProxyOnFailure
 ---@field ConversionResult FAppleImageUtilsImageConversionResult
 UAppleImageUtilsBaseAsyncTaskBlueprintProxy = {}
+
+---@return UAppleImageUtilsBaseAsyncTaskBlueprintProxy
+function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:get() end
 
 ---@param SourceImage UTexture
 ---@param bWantColor boolean

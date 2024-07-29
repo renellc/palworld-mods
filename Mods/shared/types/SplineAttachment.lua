@@ -13,5 +13,8 @@
 ---@field InterpolateSplineScale_63_795808994F00156B5CE473897E183DE4 boolean
 FSplineAttachment = {}
 
+---@return FSplineAttachment
+function FSplineAttachment:get() end
+
 
 

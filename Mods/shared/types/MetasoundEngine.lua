@@ -4,11 +4,17 @@
 ---@field Metasound FSoftObjectPath
 FDefaultMetaSoundAssetAutoUpdateSettings = {}
 
+---@return FDefaultMetaSoundAssetAutoUpdateSettings
+function FDefaultMetaSoundAssetAutoUpdateSettings:get() end
+
 
 
 ---@class FMetaSoundAssetDirectory
 ---@field Directory FDirectoryPath
 FMetaSoundAssetDirectory = {}
+
+---@return FMetaSoundAssetDirectory
+function FMetaSoundAssetDirectory:get() end
 
 
 
@@ -16,11 +22,17 @@ FMetaSoundAssetDirectory = {}
 ---@field Metasound UObject
 FMetaSoundAsyncAssetDependencies = {}
 
+---@return FMetaSoundAsyncAssetDependencies
+function FMetaSoundAsyncAssetDependencies:get() end
+
 
 
 ---@class UMetaSoundAssetSubsystem : UEngineSubsystem
 ---@field LoadingDependencies TArray<FMetaSoundAsyncAssetDependencies>
 UMetaSoundAssetSubsystem = {}
+
+---@return UMetaSoundAssetSubsystem
+function UMetaSoundAssetSubsystem:get() end
 
 ---@param Directories TArray<FMetaSoundAssetDirectory>
 function UMetaSoundAssetSubsystem:UnregisterAssetClassesInDirectories(Directories) end
@@ -36,6 +48,9 @@ function UMetaSoundAssetSubsystem:RegisterAssetClassesInDirectories(Directories)
 ---@field AssetClassID FGuid
 UMetaSoundPatch = {}
 
+---@return UMetaSoundPatch
+function UMetaSoundPatch:get() end
+
 
 
 ---@class UMetaSoundSettings : UDeveloperSettings
@@ -46,6 +61,9 @@ UMetaSoundPatch = {}
 ---@field DirectoriesToRegister TArray<FDirectoryPath>
 ---@field DenyListCacheChangeID int32
 UMetaSoundSettings = {}
+
+---@return UMetaSoundSettings
+function UMetaSoundSettings:get() end
 
 
 
@@ -58,9 +76,15 @@ UMetaSoundSettings = {}
 ---@field AssetClassID FGuid
 UMetaSoundSource = {}
 
+---@return UMetaSoundSource
+function UMetaSoundSource:get() end
+
 
 
 ---@class UMetasoundEditorGraphBase : UEdGraph
 UMetasoundEditorGraphBase = {}
+
+---@return UMetasoundEditorGraphBase
+function UMetasoundEditorGraphBase:get() end
 
 

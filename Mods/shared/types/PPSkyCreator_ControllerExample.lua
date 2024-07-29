@@ -54,6 +54,9 @@
 ---@field Lightnings USoundBase
 APPSkyCreator_ControllerExample_C = {}
 
+---@return APPSkyCreator_ControllerExample_C
+function APPSkyCreator_ControllerExample_C:get() end
+
 function APPSkyCreator_ControllerExample_C:SetRainVolume() end
 function APPSkyCreator_ControllerExample_C:WeatherMaterialFX_Interpolation() end
 function APPSkyCreator_ControllerExample_C:UserConstructionScript() end

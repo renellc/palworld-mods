@@ -12,6 +12,9 @@
 ---@field IsSliding boolean
 UBP_PlayerSoundEmitterComponent_C = {}
 
+---@return UBP_PlayerSoundEmitterComponent_C
+function UBP_PlayerSoundEmitterComponent_C:get() end
+
 ---@param RowName FName
 ---@param Rate double
 function UBP_PlayerSoundEmitterComponent_C:BPEmitSound(RowName, Rate) end

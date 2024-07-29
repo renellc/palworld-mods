@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_PalActionTransportItem_C = {}
 
+---@return UBP_PalActionTransportItem_C
+function UBP_PalActionTransportItem_C:get() end
+
 ---@param Montage UAnimMontage
 ---@param Exist boolean
 function UBP_PalActionTransportItem_C:FindMontage(Montage, Exist) end

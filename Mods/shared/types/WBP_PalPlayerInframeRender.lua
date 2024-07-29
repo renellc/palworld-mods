@@ -15,6 +15,9 @@
 ---@field RenderTargetMaterial UMaterialInstanceDynamic
 UWBP_PalPlayerInframeRender_C = {}
 
+---@return UWBP_PalPlayerInframeRender_C
+function UWBP_PalPlayerInframeRender_C:get() end
+
 function UWBP_PalPlayerInframeRender_C:OnTimer_CaptureScene() end
 ---@param itemSlot UPalItemSlot
 ---@param slotType EPalPlayerEquipItemSlotType

@@ -4,6 +4,9 @@
 ---@field Items TArray<FPocketpairInventoryItem>
 FPocketpairInventory = {}
 
+---@return FPocketpairInventory
+function FPocketpairInventory:get() end
+
 
 
 ---@class FPocketpairInventoryItem
@@ -11,23 +14,38 @@ FPocketpairInventory = {}
 ---@field Num int32
 FPocketpairInventoryItem = {}
 
+---@return FPocketpairInventoryItem
+function FPocketpairInventoryItem:get() end
+
 
 
 ---@class FPocketpairTelemetry
 FPocketpairTelemetry = {}
 
+---@return FPocketpairTelemetry
+function FPocketpairTelemetry:get() end
+
 
 ---@class FPocketpairTelemetry_Stat
 FPocketpairTelemetry_Stat = {}
+
+---@return FPocketpairTelemetry_Stat
+function FPocketpairTelemetry_Stat:get() end
 
 
 ---@class FSocialId
 FSocialId = {}
 
+---@return FSocialId
+function FSocialId:get() end
+
 
 ---@class UCreateSessionAsyncFunction : UBlueprintAsyncActionBase
 ---@field Completed FCreateSessionAsyncFunctionCompleted
 UCreateSessionAsyncFunction = {}
+
+---@return UCreateSessionAsyncFunction
+function UCreateSessionAsyncFunction:get() end
 
 ---@param Target UPocketpairUserSubsystem
 ---@param IsDedicatedServer boolean
@@ -50,6 +68,9 @@ function UCreateSessionAsyncFunction:CreateSessionAsyncFunction(Target, IsDedica
 ---@field Completed FFindSessionsAsyncFunctionCompleted
 UFindSessionsAsyncFunction = {}
 
+---@return UFindSessionsAsyncFunction
+function UFindSessionsAsyncFunction:get() end
+
 ---@param Target UPocketpairUserSubsystem
 ---@param IsDedicatedServer boolean
 ---@param InviteCode FString
@@ -66,6 +87,9 @@ function UFindSessionsAsyncFunction:FindSessionsAsyncFunction(Target, IsDedicate
 ---@field Completed FGDKActivityAsyncFunctionCompleted
 UGDKActivityAsyncFunction = {}
 
+---@return UGDKActivityAsyncFunction
+function UGDKActivityAsyncFunction:get() end
+
 ---@param Target UPocketpairUserSubsystem
 ---@param ConnectionString FString
 ---@param MaxPlayerNum int32
@@ -78,6 +102,9 @@ function UGDKActivityAsyncFunction:GDKActivityAsyncFunction(Target, ConnectionSt
 ---@field Completed FGDKInviteAsyncFunctionCompleted
 UGDKInviteAsyncFunction = {}
 
+---@return UGDKInviteAsyncFunction
+function UGDKInviteAsyncFunction:get() end
+
 ---@param Target UPocketpairUserSubsystem
 ---@return UGDKInviteAsyncFunction
 function UGDKInviteAsyncFunction:GDKInviteAsyncFunction(Target) end
@@ -86,6 +113,9 @@ function UGDKInviteAsyncFunction:GDKInviteAsyncFunction(Target) end
 ---@class UHTTPRequestAsyncFunction : UBlueprintAsyncActionBase
 ---@field Completed FHTTPRequestAsyncFunctionCompleted
 UHTTPRequestAsyncFunction = {}
+
+---@return UHTTPRequestAsyncFunction
+function UHTTPRequestAsyncFunction:get() end
 
 ---@param Target UPocketpairUserSubsystem
 ---@param URL FString
@@ -99,11 +129,17 @@ function UHTTPRequestAsyncFunction:HTTPRequestAsyncFunction(Target, URL, Verb) e
 ---@field Controller APlayerController
 UJoinSessionAsyncFunction = {}
 
+---@return UJoinSessionAsyncFunction
+function UJoinSessionAsyncFunction:get() end
+
 
 
 ---@class ULoginDefaultOnlineSubsystemAsyncFunction : UBlueprintAsyncActionBase
 ---@field Completed FLoginDefaultOnlineSubsystemAsyncFunctionCompleted
 ULoginDefaultOnlineSubsystemAsyncFunction = {}
+
+---@return ULoginDefaultOnlineSubsystemAsyncFunction
+function ULoginDefaultOnlineSubsystemAsyncFunction:get() end
 
 ---@param Target UPocketpairUserSubsystem
 ---@return ULoginDefaultOnlineSubsystemAsyncFunction
@@ -114,6 +150,9 @@ function ULoginDefaultOnlineSubsystemAsyncFunction:LoginDefaultAsyncFunction(Tar
 ---@field Completed FLoginEOSAsyncFunctionCompleted
 ULoginEOSAsyncFunction = {}
 
+---@return ULoginEOSAsyncFunction
+function ULoginEOSAsyncFunction:get() end
+
 ---@param Target UPocketpairUserSubsystem
 ---@return ULoginEOSAsyncFunction
 function ULoginEOSAsyncFunction:LoginEOSAsyncFunction(Target) end
@@ -123,6 +162,9 @@ function ULoginEOSAsyncFunction:LoginEOSAsyncFunction(Target) end
 ---@field OnPingComplete FPingIPOnPingComplete
 ---@field OnPingFailure FPingIPOnPingFailure
 UPingIP = {}
+
+---@return UPingIP
+function UPingIP:get() end
 
 ---@param ipAddress FString
 function UPingIP:SendPing(ipAddress) end
@@ -135,12 +177,18 @@ function UPingIP:ConstructPingObject() end
 ---@field DisplayName FString
 UPocketpairFriend = {}
 
+---@return UPocketpairFriend
+function UPocketpairFriend:get() end
+
 ---@return FUniqueNetIdRepl
 function UPocketpairFriend:GetNetId() end
 
 
 ---@class UPocketpairUserInfo : UObject
 UPocketpairUserInfo = {}
+
+---@return UPocketpairUserInfo
+function UPocketpairUserInfo:get() end
 
 ---@return FName
 function UPocketpairUserInfo:GetOnlineSubsystemName() end
@@ -155,6 +203,9 @@ function UPocketpairUserInfo:GetDebugString() end
 ---@class UPocketpairUserSubsystem : UGameInstanceSubsystem
 ---@field LocalUserInfo UPocketpairUserInfo
 UPocketpairUserSubsystem = {}
+
+---@return UPocketpairUserSubsystem
+function UPocketpairUserSubsystem:get() end
 
 ---@param ID FString
 ---@param Percent float
@@ -191,6 +242,9 @@ function UPocketpairUserSubsystem:AddPingResultCache(Address, Ping) end
 ---@field Completed FSanitizeDisplayNameAsyncFunctionCompleted
 USanitizeDisplayNameAsyncFunction = {}
 
+---@return USanitizeDisplayNameAsyncFunction
+function USanitizeDisplayNameAsyncFunction:get() end
+
 ---@param Target UPocketpairUserSubsystem
 ---@param InString FString
 ---@return USanitizeDisplayNameAsyncFunction
@@ -200,6 +254,9 @@ function USanitizeDisplayNameAsyncFunction:SanitizeDisplayNameAsyncFunction(Targ
 ---@class USwitchUserUIDefaultOnlineSubsystemAsyncFunction : UBlueprintAsyncActionBase
 ---@field Completed FSwitchUserUIDefaultOnlineSubsystemAsyncFunctionCompleted
 USwitchUserUIDefaultOnlineSubsystemAsyncFunction = {}
+
+---@return USwitchUserUIDefaultOnlineSubsystemAsyncFunction
+function USwitchUserUIDefaultOnlineSubsystemAsyncFunction:get() end
 
 ---@param Target UPocketpairUserSubsystem
 ---@return USwitchUserUIDefaultOnlineSubsystemAsyncFunction

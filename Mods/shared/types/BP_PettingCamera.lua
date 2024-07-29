@@ -6,6 +6,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PettingCamera_C = {}
 
+---@return ABP_PettingCamera_C
+function ABP_PettingCamera_C:get() end
+
 ---@param PlayerController APlayerController
 function ABP_PettingCamera_C:EndPettingCamera(PlayerController) end
 ---@param PlayerController APlayerController

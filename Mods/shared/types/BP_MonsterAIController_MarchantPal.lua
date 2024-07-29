@@ -7,6 +7,9 @@
 ---@field DespawnDelay boolean
 ABP_MonsterAIController_MarchantPal_C = {}
 
+---@return ABP_MonsterAIController_MarchantPal_C
+function ABP_MonsterAIController_MarchantPal_C:get() end
+
 function ABP_MonsterAIController_MarchantPal_C:SetupSpawnedPosition() end
 ---@param IsEscapeEnd boolean
 function ABP_MonsterAIController_MarchantPal_C:IsEscapeEnd(IsEscapeEnd) end

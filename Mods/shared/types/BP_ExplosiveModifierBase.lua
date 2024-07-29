@@ -6,6 +6,9 @@
 ---@field TrailEffect UNiagaraSystem
 UBP_ExplosiveModifierBase_C = {}
 
+---@return UBP_ExplosiveModifierBase_C
+function UBP_ExplosiveModifierBase_C:get() end
+
 ---@param Bullet APalBullet
 function UBP_ExplosiveModifierBase_C:Initialize(Bullet) end
 ---@param HitComp UPrimitiveComponent

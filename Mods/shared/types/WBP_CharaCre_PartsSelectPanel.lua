@@ -8,6 +8,9 @@
 ---@field LastClickedButton UWBP_CharaCre_PartsSelect_sq_C
 UWBP_CharaCre_PartsSelectPanel_C = {}
 
+---@return UWBP_CharaCre_PartsSelectPanel_C
+function UWBP_CharaCre_PartsSelectPanel_C:get() end
+
 ---@param PresetName FName
 function UWBP_CharaCre_PartsSelectPanel_C:SetSelectedPresetName(PresetName) end
 ---@param Button UWBP_CharaCre_PartsSelect_sq_C

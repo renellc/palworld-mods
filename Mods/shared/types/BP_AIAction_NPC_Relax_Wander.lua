@@ -10,6 +10,9 @@
 ---@field ['WalkAreaSplit Num'] int32
 UBP_AIAction_NPC_Relax_Wander_C = {}
 
+---@return UBP_AIAction_NPC_Relax_Wander_C
+function UBP_AIAction_NPC_Relax_Wander_C:get() end
+
 function UBP_AIAction_NPC_Relax_Wander_C:OnStuck() end
 ---@param V FVector
 ---@param Result boolean

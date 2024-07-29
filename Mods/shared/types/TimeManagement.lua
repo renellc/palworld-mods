@@ -3,21 +3,33 @@
 ---@class FTimedDataChannelSampleTime
 FTimedDataChannelSampleTime = {}
 
+---@return FTimedDataChannelSampleTime
+function FTimedDataChannelSampleTime:get() end
+
 
 ---@class FTimedDataInputEvaluationData
 ---@field DistanceToNewestSampleSeconds float
 ---@field DistanceToOldestSampleSeconds float
 FTimedDataInputEvaluationData = {}
 
+---@return FTimedDataInputEvaluationData
+function FTimedDataInputEvaluationData:get() end
+
 
 
 ---@class UFixedFrameRateCustomTimeStep : UEngineCustomTimeStep
 UFixedFrameRateCustomTimeStep = {}
 
+---@return UFixedFrameRateCustomTimeStep
+function UFixedFrameRateCustomTimeStep:get() end
+
 
 ---@class UGenlockedCustomTimeStep : UFixedFrameRateCustomTimeStep
 ---@field bAutoDetectFormat boolean
 UGenlockedCustomTimeStep = {}
+
+---@return UGenlockedCustomTimeStep
+function UGenlockedCustomTimeStep:get() end
 
 
 
@@ -27,16 +39,25 @@ UGenlockedCustomTimeStep = {}
 ---@field bForceSingleFrameDeltaTime boolean
 UGenlockedFixedRateCustomTimeStep = {}
 
+---@return UGenlockedFixedRateCustomTimeStep
+function UGenlockedFixedRateCustomTimeStep:get() end
+
 
 
 ---@class UGenlockedTimecodeProvider : UTimecodeProvider
 ---@field bUseGenlockToCount boolean
 UGenlockedTimecodeProvider = {}
 
+---@return UGenlockedTimecodeProvider
+function UGenlockedTimecodeProvider:get() end
+
 
 
 ---@class UTimeManagementBlueprintLibrary : UBlueprintFunctionLibrary
 UTimeManagementBlueprintLibrary = {}
+
+---@return UTimeManagementBlueprintLibrary
+function UTimeManagementBlueprintLibrary:get() end
 
 ---@param SourceTime FFrameTime
 ---@param SourceRate FFrameRate
@@ -106,6 +127,9 @@ function UTimeManagementBlueprintLibrary:Add_FrameNumberFrameNumber(A, B) end
 ---@field bUseForSynchronization boolean
 ---@field FrameOffset int32
 UTimeSynchronizationSource = {}
+
+---@return UTimeSynchronizationSource
+function UTimeSynchronizationSource:get() end
 
 
 

@@ -3,6 +3,9 @@
 ---@class UBP_PalUIFunctionLibrary_C : UBlueprintFunctionLibrary
 UBP_PalUIFunctionLibrary_C = {}
 
+---@return UBP_PalUIFunctionLibrary_C
+function UBP_PalUIFunctionLibrary_C:get() end
+
 ---@param StaticItemId FName
 ---@param __WorldContext UObject
 ---@param CanUse boolean

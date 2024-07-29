@@ -10,6 +10,9 @@
 ---@field DebugPhysicsMaterial EPhysicalSurface
 UBP_AnimNotifyState_PlaySound_C = {}
 
+---@return UBP_AnimNotifyState_PlaySound_C
+function UBP_AnimNotifyState_PlaySound_C:get() end
+
 ---@param MeshComp UMeshComponent
 ---@return boolean
 function UBP_AnimNotifyState_PlaySound_C:PlaySound_Editor(MeshComp) end

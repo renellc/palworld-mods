@@ -11,6 +11,9 @@
 ---@field MeshLocationCache FVector
 UBP_Action_Grappling_C = {}
 
+---@return UBP_Action_Grappling_C
+function UBP_Action_Grappling_C:get() end
+
 function UBP_Action_Grappling_C:TryClimb() end
 function UBP_Action_Grappling_C:GetOffRide() end
 ---@param DeltaTime float

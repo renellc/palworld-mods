@@ -19,6 +19,9 @@
 ---@field IsActionPlaying boolean
 UBP_Status_CollectItem_C = {}
 
+---@return UBP_Status_CollectItem_C
+function UBP_Status_CollectItem_C:get() end
+
 function UBP_Status_CollectItem_C:AddLog_UseSkillInBaseCamp() end
 function UBP_Status_CollectItem_C:AddLog_UseSkill() end
 ---@param Rank int32

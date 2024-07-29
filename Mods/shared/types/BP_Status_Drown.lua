@@ -6,6 +6,9 @@
 ---@field Timer FTimerHandle
 UBP_Status_Drown_C = {}
 
+---@return UBP_Status_Drown_C
+function UBP_Status_Drown_C:get() end
+
 ---@param Damage int32
 function UBP_Status_Drown_C:GetSlipDamage(Damage) end
 ---@param OwnerHP int64

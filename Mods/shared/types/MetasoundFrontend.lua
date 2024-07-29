@@ -6,6 +6,9 @@
 ---@field Interface FMetasoundFrontendClassInterface
 FMetasoundFrontendClass = {}
 
+---@return FMetasoundFrontendClass
+function FMetasoundFrontendClass:get() end
+
 
 
 ---@class FMetasoundFrontendClassEnvironmentVariable
@@ -14,11 +17,17 @@ FMetasoundFrontendClass = {}
 ---@field bIsRequired boolean
 FMetasoundFrontendClassEnvironmentVariable = {}
 
+---@return FMetasoundFrontendClassEnvironmentVariable
+function FMetasoundFrontendClassEnvironmentVariable:get() end
+
 
 
 ---@class FMetasoundFrontendClassInput : FMetasoundFrontendClassVertex
 ---@field DefaultLiteral FMetasoundFrontendLiteral
 FMetasoundFrontendClassInput = {}
+
+---@return FMetasoundFrontendClassInput
+function FMetasoundFrontendClassInput:get() end
 
 
 
@@ -28,6 +37,9 @@ FMetasoundFrontendClassInput = {}
 ---@field Environment TArray<FMetasoundFrontendClassEnvironmentVariable>
 ---@field ChangeID FGuid
 FMetasoundFrontendClassInterface = {}
+
+---@return FMetasoundFrontendClassInterface
+function FMetasoundFrontendClassInterface:get() end
 
 
 
@@ -40,6 +52,9 @@ FMetasoundFrontendClassInterface = {}
 ---@field ChangeID FGuid
 FMetasoundFrontendClassMetadata = {}
 
+---@return FMetasoundFrontendClassMetadata
+function FMetasoundFrontendClassMetadata:get() end
+
 
 
 ---@class FMetasoundFrontendClassName
@@ -48,23 +63,38 @@ FMetasoundFrontendClassMetadata = {}
 ---@field Variant FName
 FMetasoundFrontendClassName = {}
 
+---@return FMetasoundFrontendClassName
+function FMetasoundFrontendClassName:get() end
+
 
 
 ---@class FMetasoundFrontendClassOutput : FMetasoundFrontendClassVertex
 FMetasoundFrontendClassOutput = {}
 
+---@return FMetasoundFrontendClassOutput
+function FMetasoundFrontendClassOutput:get() end
+
 
 ---@class FMetasoundFrontendClassStyle
 FMetasoundFrontendClassStyle = {}
+
+---@return FMetasoundFrontendClassStyle
+function FMetasoundFrontendClassStyle:get() end
 
 
 ---@class FMetasoundFrontendClassStyleDisplay
 FMetasoundFrontendClassStyleDisplay = {}
 
+---@return FMetasoundFrontendClassStyleDisplay
+function FMetasoundFrontendClassStyleDisplay:get() end
+
 
 ---@class FMetasoundFrontendClassVariable : FMetasoundFrontendClassVertex
 ---@field DefaultLiteral FMetasoundFrontendLiteral
 FMetasoundFrontendClassVariable = {}
+
+---@return FMetasoundFrontendClassVariable
+function FMetasoundFrontendClassVariable:get() end
 
 
 
@@ -72,6 +102,9 @@ FMetasoundFrontendClassVariable = {}
 ---@field NodeID FGuid
 ---@field AccessType EMetasoundFrontendVertexAccessType
 FMetasoundFrontendClassVertex = {}
+
+---@return FMetasoundFrontendClassVertex
+function FMetasoundFrontendClassVertex:get() end
 
 
 
@@ -85,11 +118,17 @@ FMetasoundFrontendClassVertex = {}
 ---@field InterfaceVersions TArray<FMetasoundFrontendVersion>
 FMetasoundFrontendDocument = {}
 
+---@return FMetasoundFrontendDocument
+function FMetasoundFrontendDocument:get() end
+
 
 
 ---@class FMetasoundFrontendDocumentMetadata
 ---@field Version FMetasoundFrontendVersion
 FMetasoundFrontendDocumentMetadata = {}
+
+---@return FMetasoundFrontendDocumentMetadata
+function FMetasoundFrontendDocumentMetadata:get() end
 
 
 
@@ -100,6 +139,9 @@ FMetasoundFrontendDocumentMetadata = {}
 ---@field ToVertexID FGuid
 FMetasoundFrontendEdge = {}
 
+---@return FMetasoundFrontendEdge
+function FMetasoundFrontendEdge:get() end
+
 
 
 ---@class FMetasoundFrontendEdgeStyle
@@ -108,12 +150,18 @@ FMetasoundFrontendEdge = {}
 ---@field LiteralColorPairs TArray<FMetasoundFrontendEdgeStyleLiteralColorPair>
 FMetasoundFrontendEdgeStyle = {}
 
+---@return FMetasoundFrontendEdgeStyle
+function FMetasoundFrontendEdgeStyle:get() end
+
 
 
 ---@class FMetasoundFrontendEdgeStyleLiteralColorPair
 ---@field Value FMetasoundFrontendLiteral
 ---@field Color FLinearColor
 FMetasoundFrontendEdgeStyleLiteralColorPair = {}
+
+---@return FMetasoundFrontendEdgeStyleLiteralColorPair
+function FMetasoundFrontendEdgeStyleLiteralColorPair:get() end
 
 
 
@@ -123,12 +171,18 @@ FMetasoundFrontendEdgeStyleLiteralColorPair = {}
 ---@field Variables TArray<FMetasoundFrontendVariable>
 FMetasoundFrontendGraph = {}
 
+---@return FMetasoundFrontendGraph
+function FMetasoundFrontendGraph:get() end
+
 
 
 ---@class FMetasoundFrontendGraphClass : FMetasoundFrontendClass
 ---@field Graph FMetasoundFrontendGraph
 ---@field PresetOptions FMetasoundFrontendGraphClassPresetOptions
 FMetasoundFrontendGraphClass = {}
+
+---@return FMetasoundFrontendGraphClass
+function FMetasoundFrontendGraphClass:get() end
 
 
 
@@ -137,6 +191,9 @@ FMetasoundFrontendGraphClass = {}
 ---@field InputsInheritingDefault TSet<FName>
 FMetasoundFrontendGraphClassPresetOptions = {}
 
+---@return FMetasoundFrontendGraphClassPresetOptions
+function FMetasoundFrontendGraphClassPresetOptions:get() end
+
 
 
 ---@class FMetasoundFrontendGraphStyle
@@ -144,16 +201,25 @@ FMetasoundFrontendGraphClassPresetOptions = {}
 ---@field EdgeStyles TArray<FMetasoundFrontendEdgeStyle>
 FMetasoundFrontendGraphStyle = {}
 
+---@return FMetasoundFrontendGraphStyle
+function FMetasoundFrontendGraphStyle:get() end
+
 
 
 ---@class FMetasoundFrontendInterface : FMetasoundFrontendClassInterface
 ---@field Version FMetasoundFrontendVersion
 FMetasoundFrontendInterface = {}
 
+---@return FMetasoundFrontendInterface
+function FMetasoundFrontendInterface:get() end
+
 
 
 ---@class FMetasoundFrontendInterfaceStyle
 FMetasoundFrontendInterfaceStyle = {}
+
+---@return FMetasoundFrontendInterfaceStyle
+function FMetasoundFrontendInterfaceStyle:get() end
 
 
 ---@class FMetasoundFrontendLiteral
@@ -166,6 +232,9 @@ FMetasoundFrontendInterfaceStyle = {}
 ---@field AsUObject TArray<UObject>
 FMetasoundFrontendLiteral = {}
 
+---@return FMetasoundFrontendLiteral
+function FMetasoundFrontendLiteral:get() end
+
 
 
 ---@class FMetasoundFrontendNode
@@ -176,6 +245,9 @@ FMetasoundFrontendLiteral = {}
 ---@field InputLiterals TArray<FMetasoundFrontendVertexLiteral>
 FMetasoundFrontendNode = {}
 
+---@return FMetasoundFrontendNode
+function FMetasoundFrontendNode:get() end
+
 
 
 ---@class FMetasoundFrontendNodeInterface
@@ -184,14 +256,23 @@ FMetasoundFrontendNode = {}
 ---@field Environment TArray<FMetasoundFrontendVertex>
 FMetasoundFrontendNodeInterface = {}
 
+---@return FMetasoundFrontendNodeInterface
+function FMetasoundFrontendNodeInterface:get() end
+
 
 
 ---@class FMetasoundFrontendNodeStyle
 FMetasoundFrontendNodeStyle = {}
 
+---@return FMetasoundFrontendNodeStyle
+function FMetasoundFrontendNodeStyle:get() end
+
 
 ---@class FMetasoundFrontendNodeStyleDisplay
 FMetasoundFrontendNodeStyleDisplay = {}
+
+---@return FMetasoundFrontendNodeStyleDisplay
+function FMetasoundFrontendNodeStyleDisplay:get() end
 
 
 ---@class FMetasoundFrontendVariable
@@ -205,6 +286,9 @@ FMetasoundFrontendNodeStyleDisplay = {}
 ---@field DeferredAccessorNodeIDs TArray<FGuid>
 FMetasoundFrontendVariable = {}
 
+---@return FMetasoundFrontendVariable
+function FMetasoundFrontendVariable:get() end
+
 
 
 ---@class FMetasoundFrontendVersion
@@ -212,12 +296,18 @@ FMetasoundFrontendVariable = {}
 ---@field Number FMetasoundFrontendVersionNumber
 FMetasoundFrontendVersion = {}
 
+---@return FMetasoundFrontendVersion
+function FMetasoundFrontendVersion:get() end
+
 
 
 ---@class FMetasoundFrontendVersionNumber
 ---@field Major int32
 ---@field Minor int32
 FMetasoundFrontendVersionNumber = {}
+
+---@return FMetasoundFrontendVersionNumber
+function FMetasoundFrontendVersionNumber:get() end
 
 
 
@@ -227,6 +317,9 @@ FMetasoundFrontendVersionNumber = {}
 ---@field VertexID FGuid
 FMetasoundFrontendVertex = {}
 
+---@return FMetasoundFrontendVertex
+function FMetasoundFrontendVertex:get() end
+
 
 
 ---@class FMetasoundFrontendVertexLiteral
@@ -234,9 +327,15 @@ FMetasoundFrontendVertex = {}
 ---@field Value FMetasoundFrontendLiteral
 FMetasoundFrontendVertexLiteral = {}
 
+---@return FMetasoundFrontendVertexLiteral
+function FMetasoundFrontendVertexLiteral:get() end
+
 
 
 ---@class FMetasoundFrontendVertexMetadata
 FMetasoundFrontendVertexMetadata = {}
+
+---@return FMetasoundFrontendVertexMetadata
+function FMetasoundFrontendVertexMetadata:get() end
 
 

@@ -3,39 +3,66 @@
 ---@class FEdgeID : FElementID
 FEdgeID = {}
 
+---@return FEdgeID
+function FEdgeID:get() end
+
 
 ---@class FElementID
 ---@field IDValue int32
 FElementID = {}
+
+---@return FElementID
+function FElementID:get() end
 
 
 
 ---@class FPolygonGroupID : FElementID
 FPolygonGroupID = {}
 
+---@return FPolygonGroupID
+function FPolygonGroupID:get() end
+
 
 ---@class FPolygonID : FElementID
 FPolygonID = {}
+
+---@return FPolygonID
+function FPolygonID:get() end
 
 
 ---@class FTriangleID : FElementID
 FTriangleID = {}
 
+---@return FTriangleID
+function FTriangleID:get() end
+
 
 ---@class FUVID : FElementID
 FUVID = {}
+
+---@return FUVID
+function FUVID:get() end
 
 
 ---@class FVertexID : FElementID
 FVertexID = {}
 
+---@return FVertexID
+function FVertexID:get() end
+
 
 ---@class FVertexInstanceID : FElementID
 FVertexInstanceID = {}
 
+---@return FVertexInstanceID
+function FVertexInstanceID:get() end
+
 
 ---@class UMeshDescriptionBase : UObject
 UMeshDescriptionBase = {}
+
+---@return UMeshDescriptionBase
+function UMeshDescriptionBase:get() end
 
 ---@param VertexID FVertexID
 ---@param Position FVector
@@ -312,5 +339,8 @@ function UMeshDescriptionBase:ComputePolygonTriangulation(PolygonID) end
 
 ---@class UMeshDescriptionBaseBulkData : UObject
 UMeshDescriptionBaseBulkData = {}
+
+---@return UMeshDescriptionBaseBulkData
+function UMeshDescriptionBaseBulkData:get() end
 
 

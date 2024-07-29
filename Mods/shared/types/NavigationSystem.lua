@@ -3,10 +3,16 @@
 ---@class AAbstractNavData : ANavigationData
 AAbstractNavData = {}
 
+---@return AAbstractNavData
+function AAbstractNavData:get() end
+
 
 ---@class ANavMeshBoundsVolume : AVolume
 ---@field SupportedAgents FNavAgentSelector
 ANavMeshBoundsVolume = {}
+
+---@return ANavMeshBoundsVolume
+function ANavMeshBoundsVolume:get() end
 
 
 
@@ -14,6 +20,9 @@ ANavMeshBoundsVolume = {}
 ---@field AreaClass TSubclassOf<UNavArea>
 ---@field bMaskFillCollisionUnderneathForNavmesh boolean
 ANavModifierVolume = {}
+
+---@return ANavModifierVolume
+function ANavModifierVolume:get() end
 
 ---@param NewAreaClass TSubclassOf<UNavArea>
 function ANavModifierVolume:SetAreaClass(NewAreaClass) end
@@ -24,6 +33,9 @@ function ANavModifierVolume:SetAreaClass(NewAreaClass) end
 ---@field OverridePolicy ENavSystemOverridePolicy
 ---@field bLoadOnClient boolean
 ANavSystemConfigOverride = {}
+
+---@return ANavSystemConfigOverride
+function ANavSystemConfigOverride:get() end
 
 
 
@@ -42,14 +54,23 @@ ANavSystemConfigOverride = {}
 ---@field SupportedAreas TArray<FSupportedAreaData>
 ANavigationData = {}
 
+---@return ANavigationData
+function ANavigationData:get() end
+
 
 
 ---@class ANavigationGraph : ANavigationData
 ANavigationGraph = {}
 
+---@return ANavigationGraph
+function ANavigationGraph:get() end
+
 
 ---@class ANavigationGraphNode : AActor
 ANavigationGraphNode = {}
+
+---@return ANavigationGraphNode
+function ANavigationGraphNode:get() end
 
 
 ---@class ANavigationTestingActor : AActor
@@ -85,6 +106,9 @@ ANavigationGraphNode = {}
 ---@field ShowStepIndex int32
 ---@field OffsetFromCornersDistance float
 ANavigationTestingActor = {}
+
+---@return ANavigationTestingActor
+function ANavigationTestingActor:get() end
 
 
 
@@ -155,6 +179,9 @@ ANavigationTestingActor = {}
 ---@field VerticalDeviationFromGroundCompensation float
 ARecastNavMesh = {}
 
+---@return ARecastNavMesh
+function ARecastNavMesh:get() end
+
 ---@param Bounds FBox
 ---@param OldArea TSubclassOf<UNavArea>
 ---@param NewArea TSubclassOf<UNavArea>
@@ -168,6 +195,9 @@ function ARecastNavMesh:K2_ReplaceAreaInTileBounds(Bounds, OldArea, NewArea, Rep
 ---@field Extent FVector
 FNavCollisionBox = {}
 
+---@return FNavCollisionBox
+function FNavCollisionBox:get() end
+
 
 
 ---@class FNavCollisionCylinder
@@ -176,21 +206,33 @@ FNavCollisionBox = {}
 ---@field Height float
 FNavCollisionCylinder = {}
 
+---@return FNavCollisionCylinder
+function FNavCollisionCylinder:get() end
+
 
 
 ---@class FNavGraphEdge
 FNavGraphEdge = {}
+
+---@return FNavGraphEdge
+function FNavGraphEdge:get() end
 
 
 ---@class FNavGraphNode
 ---@field Owner UObject
 FNavGraphNode = {}
 
+---@return FNavGraphNode
+function FNavGraphNode:get() end
+
 
 
 ---@class FNavLinkCustomInstanceData : FActorComponentInstanceData
 ---@field NavLinkUserId uint32
 FNavLinkCustomInstanceData = {}
+
+---@return FNavLinkCustomInstanceData
+function FNavLinkCustomInstanceData:get() end
 
 
 
@@ -202,6 +244,9 @@ FNavLinkCustomInstanceData = {}
 ---@field bOverrideTravelCost boolean
 ---@field bOverrideEnteringCost boolean
 FNavigationFilterArea = {}
+
+---@return FNavigationFilterArea
+function FNavigationFilterArea:get() end
 
 
 
@@ -223,6 +268,9 @@ FNavigationFilterArea = {}
 ---@field bNavFlag14 boolean
 ---@field bNavFlag15 boolean
 FNavigationFilterFlags = {}
+
+---@return FNavigationFilterFlags
+function FNavigationFilterFlags:get() end
 
 
 
@@ -253,6 +301,9 @@ FNavigationFilterFlags = {}
 ---@field bIsWorldPartitioned boolean
 FRecastNavMeshGenerationProperties = {}
 
+---@return FRecastNavMeshGenerationProperties
+function FRecastNavMeshGenerationProperties:get() end
+
 
 
 ---@class FRecastNavMeshTileGenerationDebug
@@ -272,6 +323,9 @@ FRecastNavMeshGenerationProperties = {}
 ---@field bTileCacheDetailMesh boolean
 FRecastNavMeshTileGenerationDebug = {}
 
+---@return FRecastNavMeshTileGenerationDebug
+function FRecastNavMeshTileGenerationDebug:get() end
+
 
 
 ---@class FSupportedAreaData
@@ -280,26 +334,44 @@ FRecastNavMeshTileGenerationDebug = {}
 ---@field AreaClass TObjectPtr<UClass>
 FSupportedAreaData = {}
 
+---@return FSupportedAreaData
+function FSupportedAreaData:get() end
+
 
 
 ---@class INavLinkCustomInterface : IInterface
 INavLinkCustomInterface = {}
 
+---@return INavLinkCustomInterface
+function INavLinkCustomInterface:get() end
+
 
 ---@class INavLinkHostInterface : IInterface
 INavLinkHostInterface = {}
+
+---@return INavLinkHostInterface
+function INavLinkHostInterface:get() end
 
 
 ---@class INavNodeInterface : IInterface
 INavNodeInterface = {}
 
+---@return INavNodeInterface
+function INavNodeInterface:get() end
+
 
 ---@class INavigationPathGenerator : IInterface
 INavigationPathGenerator = {}
 
+---@return INavigationPathGenerator
+function INavigationPathGenerator:get() end
+
 
 ---@class UCrowdManagerBase : UObject
 UCrowdManagerBase = {}
+
+---@return UCrowdManagerBase
+function UCrowdManagerBase:get() end
 
 
 ---@class UNavArea : UNavAreaBase
@@ -325,10 +397,16 @@ UCrowdManagerBase = {}
 ---@field bSupportsAgent15 boolean
 UNavArea = {}
 
+---@return UNavArea
+function UNavArea:get() end
+
 
 
 ---@class UNavAreaMeta : UNavArea
 UNavAreaMeta = {}
+
+---@return UNavAreaMeta
+function UNavAreaMeta:get() end
 
 
 ---@class UNavAreaMeta_SwitchByAgent : UNavAreaMeta
@@ -350,22 +428,37 @@ UNavAreaMeta = {}
 ---@field Agent15Area TSubclassOf<UNavArea>
 UNavAreaMeta_SwitchByAgent = {}
 
+---@return UNavAreaMeta_SwitchByAgent
+function UNavAreaMeta_SwitchByAgent:get() end
+
 
 
 ---@class UNavArea_Default : UNavArea
 UNavArea_Default = {}
 
+---@return UNavArea_Default
+function UNavArea_Default:get() end
+
 
 ---@class UNavArea_LowHeight : UNavArea
 UNavArea_LowHeight = {}
+
+---@return UNavArea_LowHeight
+function UNavArea_LowHeight:get() end
 
 
 ---@class UNavArea_Null : UNavArea
 UNavArea_Null = {}
 
+---@return UNavArea_Null
+function UNavArea_Null:get() end
+
 
 ---@class UNavArea_Obstacle : UNavArea
 UNavArea_Obstacle = {}
+
+---@return UNavArea_Obstacle
+function UNavArea_Obstacle:get() end
 
 
 ---@class UNavCollision : UNavCollisionBase
@@ -376,11 +469,17 @@ UNavArea_Obstacle = {}
 ---@field bCreateOnClient boolean
 UNavCollision = {}
 
+---@return UNavCollision
+function UNavCollision:get() end
+
 
 
 ---@class UNavLinkComponent : UPrimitiveComponent
 ---@field Links TArray<FNavigationLink>
 UNavLinkComponent = {}
+
+---@return UNavLinkComponent
+function UNavLinkComponent:get() end
 
 
 
@@ -404,18 +503,30 @@ UNavLinkComponent = {}
 ---@field BroadcastChannel ECollisionChannel
 UNavLinkCustomComponent = {}
 
+---@return UNavLinkCustomComponent
+function UNavLinkCustomComponent:get() end
+
 
 
 ---@class UNavLinkRenderingComponent : UPrimitiveComponent
 UNavLinkRenderingComponent = {}
 
+---@return UNavLinkRenderingComponent
+function UNavLinkRenderingComponent:get() end
+
 
 ---@class UNavLinkTrivial : UNavLinkDefinition
 UNavLinkTrivial = {}
 
+---@return UNavLinkTrivial
+function UNavLinkTrivial:get() end
+
 
 ---@class UNavMeshRenderingComponent : UDebugDrawComponent
 UNavMeshRenderingComponent = {}
+
+---@return UNavMeshRenderingComponent
+function UNavMeshRenderingComponent:get() end
 
 
 ---@class UNavModifierComponent : UNavRelevantComponent
@@ -423,6 +534,9 @@ UNavMeshRenderingComponent = {}
 ---@field FailsafeExtent FVector
 ---@field bIncludeAgentHeight boolean
 UNavModifierComponent = {}
+
+---@return UNavModifierComponent
+function UNavModifierComponent:get() end
 
 ---@param NewAreaClass TSubclassOf<UNavArea>
 function UNavModifierComponent:SetAreaClass(NewAreaClass) end
@@ -433,12 +547,18 @@ function UNavModifierComponent:SetAreaClass(NewAreaClass) end
 ---@field CachedNavParent UObject
 UNavRelevantComponent = {}
 
+---@return UNavRelevantComponent
+function UNavRelevantComponent:get() end
+
 ---@param bRelevant boolean
 function UNavRelevantComponent:SetNavigationRelevancy(bRelevant) end
 
 
 ---@class UNavTestRenderingComponent : UDebugDrawComponent
 UNavTestRenderingComponent = {}
+
+---@return UNavTestRenderingComponent
+function UNavTestRenderingComponent:get() end
 
 
 ---@class UNavigationGraphNodeComponent : USceneComponent
@@ -447,12 +567,18 @@ UNavTestRenderingComponent = {}
 ---@field PrevNodeComponent UNavigationGraphNodeComponent
 UNavigationGraphNodeComponent = {}
 
+---@return UNavigationGraphNodeComponent
+function UNavigationGraphNodeComponent:get() end
+
 
 
 ---@class UNavigationInvokerComponent : UActorComponent
 ---@field TileGenerationRadius float
 ---@field TileRemovalRadius float
 UNavigationInvokerComponent = {}
+
+---@return UNavigationInvokerComponent
+function UNavigationInvokerComponent:get() end
 
 
 
@@ -461,6 +587,9 @@ UNavigationInvokerComponent = {}
 ---@field PathPoints TArray<FVector>
 ---@field RecalculateOnInvalidation ENavigationOptionFlag::Type
 UNavigationPath = {}
+
+---@return UNavigationPath
+function UNavigationPath:get() end
 
 ---@return boolean
 function UNavigationPath:IsValid() end
@@ -487,6 +616,9 @@ function UNavigationPath:EnableDebugDrawing(bShouldDrawDebugData, PathColor) end
 ---@field ExcludeFlags FNavigationFilterFlags
 UNavigationQueryFilter = {}
 
+---@return UNavigationQueryFilter
+function UNavigationQueryFilter:get() end
+
 
 
 ---@class UNavigationSystemModuleConfig : UNavigationSystemConfig
@@ -495,6 +627,9 @@ UNavigationQueryFilter = {}
 ---@field bAutoSpawnMissingNavData boolean
 ---@field bSpawnNavDataInNavBoundsLevel boolean
 UNavigationSystemModuleConfig = {}
+
+---@return UNavigationSystemModuleConfig
+function UNavigationSystemModuleConfig:get() end
 
 
 
@@ -526,6 +661,9 @@ UNavigationSystemModuleConfig = {}
 ---@field OnNavigationGenerationFinishedDelegate FNavigationSystemV1OnNavigationGenerationFinishedDelegate
 ---@field OperationMode FNavigationSystemRunMode
 UNavigationSystemV1 = {}
+
+---@return UNavigationSystemV1
+function UNavigationSystemV1:get() end
 
 ---@param Invoker AActor
 function UNavigationSystemV1:UnregisterNavigationInvoker(Invoker) end
@@ -630,8 +768,14 @@ function UNavigationSystemV1:FindPathToActorSynchronously(WorldContextObject, Pa
 ---@class URecastFilter_UseDefaultArea : UNavigationQueryFilter
 URecastFilter_UseDefaultArea = {}
 
+---@return URecastFilter_UseDefaultArea
+function URecastFilter_UseDefaultArea:get() end
+
 
 ---@class URecastNavMeshDataChunk : UNavigationDataChunk
 URecastNavMeshDataChunk = {}
+
+---@return URecastNavMeshDataChunk
+function URecastNavMeshDataChunk:get() end
 
 

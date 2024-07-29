@@ -5,6 +5,9 @@
 ---@field SpawnedPosition FVector
 ABP_MonsterAIController_BaseCamp_C = {}
 
+---@return ABP_MonsterAIController_BaseCamp_C
+function ABP_MonsterAIController_BaseCamp_C:get() end
+
 ---@return TSubclassOf<UPalAIControllerWorkerModule>
 function ABP_MonsterAIController_BaseCamp_C:GetWorkerModuleClass() end
 ---@param actionClass TSubclassOf<UPalAIActionBase>

@@ -12,6 +12,9 @@
 ---@field OnNotifyCloseColorSelectWindow FWBP_CharaCre_ScrollBoxContentSet_COnNotifyCloseColorSelectWindow
 UWBP_CharaCre_ScrollBoxContentSet_C = {}
 
+---@return UWBP_CharaCre_ScrollBoxContentSet_C
+function UWBP_CharaCre_ScrollBoxContentSet_C:get() end
+
 ---@param HSV FLinearColor
 function UWBP_CharaCre_ScrollBoxContentSet_C:GetSelectedEyeHSV(HSV) end
 ---@param CategoryType E_UICharacterMakeCategory::Type

@@ -5,6 +5,9 @@
 ---@field OnNotifyCloseSelectColorWIndow FWBP_CharaCre_ScrollBoxContentBase_COnNotifyCloseSelectColorWIndow
 UWBP_CharaCre_ScrollBoxContentBase_C = {}
 
+---@return UWBP_CharaCre_ScrollBoxContentBase_C
+function UWBP_CharaCre_ScrollBoxContentBase_C:get() end
+
 ---@param Widget UWidget
 function UWBP_CharaCre_ScrollBoxContentBase_C:GetRestoreFocusTarget(Widget) end
 ---@param Param UPalHUDDispatchParameterBase

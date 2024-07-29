@@ -8,6 +8,9 @@
 ---@field SleepAction UPalActionBase
 UBP_AIAction_Sleep_C = {}
 
+---@return UBP_AIAction_Sleep_C
+function UBP_AIAction_Sleep_C:get() end
+
 ---@param DamageResult FPalDamageResult
 UBP_AIAction_Sleep_C['OnDamageDelegate_イベント_0'] = function(DamageResult) end
 ---@param ControlledPawn APawn

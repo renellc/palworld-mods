@@ -5,6 +5,9 @@
 ---@field ProjectileComponent UProjectileMovementComponent
 UBP_LowHomingModifier_C = {}
 
+---@return UBP_LowHomingModifier_C
+function UBP_LowHomingModifier_C:get() end
+
 ---@param Actor AActor
 ---@param IsSuccess boolean
 function UBP_LowHomingModifier_C:SetHomingTarget(Actor, IsSuccess) end

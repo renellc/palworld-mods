@@ -5,6 +5,9 @@
 ---@field BossSpawner ABP_BossBattle_BossCharacterSpawner_C
 UBP_BossBattleEventBase_C = {}
 
+---@return UBP_BossBattleEventBase_C
+function UBP_BossBattleEventBase_C:get() end
+
 ---@param IndividualHandle UPalIndividualCharacterHandle
 ---@param Offset FVector
 function UBP_BossBattleEventBase_C:ActivateCharacter(IndividualHandle, Offset) end

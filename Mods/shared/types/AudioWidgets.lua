@@ -20,6 +20,9 @@
 ---@field Font FSlateFontInfo
 FAudioMeterStyle = {}
 
+---@return FAudioMeterStyle
+function FAudioMeterStyle:get() end
+
 
 
 ---@class FAudioRadialSliderStyle : FSlateWidgetStyle
@@ -30,6 +33,9 @@ FAudioMeterStyle = {}
 ---@field LabelPadding float
 ---@field DefaultSliderRadius float
 FAudioRadialSliderStyle = {}
+
+---@return FAudioRadialSliderStyle
+function FAudioRadialSliderStyle:get() end
 
 
 
@@ -45,12 +51,18 @@ FAudioRadialSliderStyle = {}
 ---@field WidgetBackgroundColor FSlateColor
 FAudioSliderStyle = {}
 
+---@return FAudioSliderStyle
+function FAudioSliderStyle:get() end
+
 
 
 ---@class FAudioTextBoxStyle : FSlateWidgetStyle
 ---@field BackgroundImage FSlateBrush
 ---@field BackgroundColor FSlateColor
 FAudioTextBoxStyle = {}
+
+---@return FAudioTextBoxStyle
+function FAudioTextBoxStyle:get() end
 
 
 
@@ -60,15 +72,24 @@ FAudioTextBoxStyle = {}
 ---@field ClippingValue float
 FMeterChannelInfo = {}
 
+---@return FMeterChannelInfo
+function FMeterChannelInfo:get() end
+
 
 
 ---@class UAudioFrequencyRadialSlider : UAudioRadialSlider
 UAudioFrequencyRadialSlider = {}
 
+---@return UAudioFrequencyRadialSlider
+function UAudioFrequencyRadialSlider:get() end
+
 
 ---@class UAudioFrequencySlider : UAudioSliderBase
 ---@field OutputRange FVector2D
 UAudioFrequencySlider = {}
+
+---@return UAudioFrequencySlider
+function UAudioFrequencySlider:get() end
 
 
 
@@ -85,6 +106,9 @@ UAudioFrequencySlider = {}
 ---@field MeterScaleColor FLinearColor
 ---@field MeterScaleLabelColor FLinearColor
 UAudioMeter = {}
+
+---@return UAudioMeter
+function UAudioMeter:get() end
 
 ---@param InValue FLinearColor
 function UAudioMeter:SetMeterValueColor(InValue) end
@@ -127,6 +151,9 @@ function UAudioMeter:GetMeterChannelInfo() end
 ---@field OnValueChanged FAudioRadialSliderOnValueChanged
 UAudioRadialSlider = {}
 
+---@return UAudioRadialSlider
+function UAudioRadialSlider:get() end
+
 ---@param InLayout EAudioRadialSliderLayout
 function UAudioRadialSlider:SetWidgetLayout(InLayout) end
 ---@param bIsReadOnly boolean
@@ -166,6 +193,9 @@ function UAudioRadialSlider:GetOutputValue(InSliderValue) end
 ---@field OutputToLinCurve TWeakObjectPtr<UCurveFloat>
 UAudioSlider = {}
 
+---@return UAudioSlider
+function UAudioSlider:get() end
+
 
 
 ---@class UAudioSliderBase : UWidget
@@ -189,6 +219,9 @@ UAudioSlider = {}
 ---@field Orientation EOrientation
 ---@field OnValueChanged FAudioSliderBaseOnValueChanged
 UAudioSliderBase = {}
+
+---@return UAudioSliderBase
+function UAudioSliderBase:get() end
 
 ---@param InValue FLinearColor
 function UAudioSliderBase:SetWidgetBackgroundColor(InValue) end
@@ -224,8 +257,14 @@ function UAudioSliderBase:GetLinValue(OutputValue) end
 ---@class UAudioVolumeRadialSlider : UAudioRadialSlider
 UAudioVolumeRadialSlider = {}
 
+---@return UAudioVolumeRadialSlider
+function UAudioVolumeRadialSlider:get() end
+
 
 ---@class UAudioVolumeSlider : UAudioSlider
 UAudioVolumeSlider = {}
+
+---@return UAudioVolumeSlider
+function UAudioVolumeSlider:get() end
 
 

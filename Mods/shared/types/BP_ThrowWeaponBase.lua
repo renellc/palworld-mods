@@ -6,6 +6,9 @@
 ---@field ThrowEventDispatcher FBP_ThrowWeaponBase_CThrowEventDispatcher
 ABP_ThrowWeaponBase_C = {}
 
+---@return ABP_ThrowWeaponBase_C
+function ABP_ThrowWeaponBase_C:get() end
+
 ---@return boolean
 function ABP_ThrowWeaponBase_C:IsEnableAutoAim() end
 ---@param BulletRotate FRotator

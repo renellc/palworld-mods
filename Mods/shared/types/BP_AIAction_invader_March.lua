@@ -10,6 +10,9 @@
 ---@field IsStartAble boolean
 UBP_AIAction_invader_March_C = {}
 
+---@return UBP_AIAction_invader_March_C
+function UBP_AIAction_invader_March_C:get() end
+
 UBP_AIAction_invader_March_C['Warp Move'] = function() end
 ---@param DeltaTime double
 function UBP_AIAction_invader_March_C:CountupNotStartTimer(DeltaTime) end

@@ -10,6 +10,9 @@
 ---@field InitEnd boolean
 UBP_AIAction_WanderingCage_C = {}
 
+---@return UBP_AIAction_WanderingCage_C
+function UBP_AIAction_WanderingCage_C:get() end
+
 function UBP_AIAction_WanderingCage_C:ChangeNextMovePosition() end
 ---@param ControlledPawn APawn
 function UBP_AIAction_WanderingCage_C:ActionStart(ControlledPawn) end

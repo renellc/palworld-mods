@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_PalIncidentRandomActionBase_C = {}
 
+---@return UBP_PalIncidentRandomActionBase_C
+function UBP_PalIncidentRandomActionBase_C:get() end
+
 ---@param Spawmer APalRandomIncidentNPCSpawner
 function UBP_PalIncidentRandomActionBase_C:GetSpawner(Spawmer) end
 ---@param Result boolean

@@ -13,6 +13,9 @@
 ---@field DisplayDebugArea boolean
 ABP_PalRandomIncidentSpawner_C = {}
 
+---@return ABP_PalRandomIncidentSpawner_C
+function ABP_PalRandomIncidentSpawner_C:get() end
+
 ---@param Delta double
 function ABP_PalRandomIncidentSpawner_C:CreateDebugShape(Delta) end
 function ABP_PalRandomIncidentSpawner_C:DestroyCollisionComponents() end

@@ -5,5 +5,8 @@
 ---@field OutString FString
 UBP_HUDDispatchParameter_RandomizerSeedInput_C = {}
 
+---@return UBP_HUDDispatchParameter_RandomizerSeedInput_C
+function UBP_HUDDispatchParameter_RandomizerSeedInput_C:get() end
+
 
 

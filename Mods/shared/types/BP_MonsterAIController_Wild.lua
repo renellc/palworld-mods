@@ -6,6 +6,9 @@
 ---@field BattleStartEvent FBP_MonsterAIController_Wild_CBattleStartEvent
 ABP_MonsterAIController_Wild_C = {}
 
+---@return ABP_MonsterAIController_Wild_C
+function ABP_MonsterAIController_Wild_C:get() end
+
 ---@param PalBrackboard UBP_PalAIBlackboard_Common_C
 function ABP_MonsterAIController_Wild_C:GetMyBB(PalBrackboard) end
 ---@param LeaderPalBrackboard UBP_PalAIBlackboard_Common_C

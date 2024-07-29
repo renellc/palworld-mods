@@ -15,6 +15,9 @@
 ---@field BackActionName FName
 UWBP_OptionSettingsOverLayWindow_C = {}
 
+---@return UWBP_OptionSettingsOverLayWindow_C
+function UWBP_OptionSettingsOverLayWindow_C:get() end
+
 ---@param MyGeometry FGeometry
 ---@param MouseEvent FPointerEvent
 ---@return FEventReply

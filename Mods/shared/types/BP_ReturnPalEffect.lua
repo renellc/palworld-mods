@@ -19,6 +19,9 @@
 ---@field IsMeatCutPal boolean
 ABP_ReturnPalEffect_C = {}
 
+---@return ABP_ReturnPalEffect_C
+function ABP_ReturnPalEffect_C:get() end
+
 function ABP_ReturnPalEffect_C:StopTrail() end
 ---@param DeltaTime double
 function ABP_ReturnPalEffect_C:TickEffectPosition(DeltaTime) end

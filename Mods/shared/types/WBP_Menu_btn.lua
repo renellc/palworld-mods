@@ -9,6 +9,9 @@
 ---@field OnButtonClicked FWBP_Menu_btn_COnButtonClicked
 UWBP_Menu_btn_C = {}
 
+---@return UWBP_Menu_btn_C
+function UWBP_Menu_btn_C:get() end
+
 function UWBP_Menu_btn_C:AnmEvent_Click() end
 function UWBP_Menu_btn_C:AnmEvent_Hover() end
 function UWBP_Menu_btn_C:AnmEvent_Unhover() end

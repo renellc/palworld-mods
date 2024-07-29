@@ -10,6 +10,9 @@
 ---@field Text_SimpleDesc UBP_PalTextBlock_C
 UWBP_InventoryEquipment_ItemInfo_addeffect_C = {}
 
+---@return UWBP_InventoryEquipment_ItemInfo_addeffect_C
+function UWBP_InventoryEquipment_ItemInfo_addeffect_C:get() end
+
 ---@param Text FText
 function UWBP_InventoryEquipment_ItemInfo_addeffect_C:SetImportantDescription(Text) end
 ---@param Text FText

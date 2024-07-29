@@ -10,6 +10,9 @@
 ---@field WorldBaseInfo FPalWorldBaseInfoSaveData
 UWBP_TitleSaveDataButton_OLD_C = {}
 
+---@return UWBP_TitleSaveDataButton_OLD_C
+function UWBP_TitleSaveDataButton_OLD_C:get() end
+
 function UWBP_TitleSaveDataButton_OLD_C:Construct() end
 ---@param Button UCommonButtonBase
 function UWBP_TitleSaveDataButton_OLD_C:BndEvt__WBP_TitleFriendButton_WBP_PalCommonButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end

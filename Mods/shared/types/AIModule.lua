@@ -18,6 +18,9 @@
 ---@field ReceiveMoveCompleted FAIControllerReceiveMoveCompleted
 AAIController = {}
 
+---@return AAIController
+function AAIController:get() end
+
 ---@param BlackboardAsset UBlackboardData
 ---@param BlackboardComponent UBlackboardComponent
 ---@return boolean
@@ -85,6 +88,9 @@ function AAIController:ClaimTaskResource(ResourceClass) end
 ---@class ADetourCrowdAIController : AAIController
 ADetourCrowdAIController = {}
 
+---@return ADetourCrowdAIController
+function ADetourCrowdAIController:get() end
+
 
 ---@class AEQSTestingPawn : ACharacter
 ---@field QueryTemplate UEnvQuery
@@ -102,10 +108,16 @@ ADetourCrowdAIController = {}
 ---@field NavAgentProperties FNavAgentProperties
 AEQSTestingPawn = {}
 
+---@return AEQSTestingPawn
+function AEQSTestingPawn:get() end
+
 
 
 ---@class AGridPathAIController : AAIController
 AGridPathAIController = {}
+
+---@return AGridPathAIController
+function AGridPathAIController:get() end
 
 
 ---@class ANavLinkProxy : AActor
@@ -115,6 +127,9 @@ AGridPathAIController = {}
 ---@field bSmartLinkIsRelevant boolean
 ---@field OnSmartLinkReached FNavLinkProxyOnSmartLinkReached
 ANavLinkProxy = {}
+
+---@return ANavLinkProxy
+function ANavLinkProxy:get() end
 
 ---@param bEnabled boolean
 function ANavLinkProxy:SetSmartLinkEnabled(bEnabled) end
@@ -138,11 +153,17 @@ function ANavLinkProxy:HasMovingAgents() end
 ---@field Tag FName
 FAIDamageEvent = {}
 
+---@return FAIDamageEvent
+function FAIDamageEvent:get() end
+
 
 
 ---@class FAIDataProviderBoolValue : FAIDataProviderTypedValue
 ---@field DefaultValue boolean
 FAIDataProviderBoolValue = {}
+
+---@return FAIDataProviderBoolValue
+function FAIDataProviderBoolValue:get() end
 
 
 
@@ -150,21 +171,33 @@ FAIDataProviderBoolValue = {}
 ---@field DefaultValue float
 FAIDataProviderFloatValue = {}
 
+---@return FAIDataProviderFloatValue
+function FAIDataProviderFloatValue:get() end
+
 
 
 ---@class FAIDataProviderIntValue : FAIDataProviderTypedValue
 ---@field DefaultValue int32
 FAIDataProviderIntValue = {}
 
+---@return FAIDataProviderIntValue
+function FAIDataProviderIntValue:get() end
+
 
 
 ---@class FAIDataProviderStructValue : FAIDataProviderValue
 FAIDataProviderStructValue = {}
 
+---@return FAIDataProviderStructValue
+function FAIDataProviderStructValue:get() end
+
 
 ---@class FAIDataProviderTypedValue : FAIDataProviderValue
 ---@field PropertyType TObjectPtr<UClass>
 FAIDataProviderTypedValue = {}
+
+---@return FAIDataProviderTypedValue
+function FAIDataProviderTypedValue:get() end
 
 
 
@@ -172,6 +205,9 @@ FAIDataProviderTypedValue = {}
 ---@field DataBinding UAIDataProvider
 ---@field DataField FName
 FAIDataProviderValue = {}
+
+---@return FAIDataProviderValue
+function FAIDataProviderValue:get() end
 
 
 
@@ -182,11 +218,17 @@ FAIDataProviderValue = {}
 ---@field BBKey FBlackboardKeySelector
 FAIDynamicParam = {}
 
+---@return FAIDynamicParam
+function FAIDynamicParam:get() end
+
 
 
 ---@class FAIMoveRequest
 ---@field GoalActor TWeakObjectPtr<AActor>
 FAIMoveRequest = {}
+
+---@return FAIMoveRequest
+function FAIMoveRequest:get() end
 
 
 
@@ -198,6 +240,9 @@ FAIMoveRequest = {}
 ---@field Tag FName
 FAINoiseEvent = {}
 
+---@return FAINoiseEvent
+function FAINoiseEvent:get() end
+
 
 
 ---@class FAIPredictionEvent
@@ -205,11 +250,17 @@ FAINoiseEvent = {}
 ---@field PredictedActor AActor
 FAIPredictionEvent = {}
 
+---@return FAIPredictionEvent
+function FAIPredictionEvent:get() end
+
 
 
 ---@class FAIRequestID
 ---@field RequestID uint32
 FAIRequestID = {}
+
+---@return FAIRequestID
+function FAIRequestID:get() end
 
 
 
@@ -219,12 +270,18 @@ FAIRequestID = {}
 ---@field bDetectFriendlies boolean
 FAISenseAffiliationFilter = {}
 
+---@return FAISenseAffiliationFilter
+function FAISenseAffiliationFilter:get() end
+
 
 
 ---@class FAISightEvent
 ---@field SeenActor AActor
 ---@field Observer AActor
 FAISightEvent = {}
+
+---@return FAISightEvent
+function FAISightEvent:get() end
 
 
 
@@ -238,6 +295,9 @@ FAISightEvent = {}
 ---@field bSuccessfullySensed boolean
 FAIStimulus = {}
 
+---@return FAIStimulus
+function FAIStimulus:get() end
+
 
 
 ---@class FAITeamStimulusEvent
@@ -245,12 +305,18 @@ FAIStimulus = {}
 ---@field Enemy AActor
 FAITeamStimulusEvent = {}
 
+---@return FAITeamStimulusEvent
+function FAITeamStimulusEvent:get() end
+
 
 
 ---@class FAITouchEvent
 ---@field TouchReceiver AActor
 ---@field OtherActor AActor
 FAITouchEvent = {}
+
+---@return FAITouchEvent
+function FAITouchEvent:get() end
 
 
 
@@ -260,6 +326,9 @@ FAITouchEvent = {}
 ---@field bIsHostile boolean
 FActorPerceptionBlueprintInfo = {}
 
+---@return FActorPerceptionBlueprintInfo
+function FActorPerceptionBlueprintInfo:get() end
+
 
 
 ---@class FActorPerceptionUpdateInfo
@@ -267,6 +336,9 @@ FActorPerceptionBlueprintInfo = {}
 ---@field Target TWeakObjectPtr<AActor>
 ---@field Stimulus FAIStimulus
 FActorPerceptionUpdateInfo = {}
+
+---@return FActorPerceptionUpdateInfo
+function FActorPerceptionUpdateInfo:get() end
 
 
 
@@ -277,12 +349,18 @@ FActorPerceptionUpdateInfo = {}
 ---@field DecoratorOps TArray<FBTDecoratorLogic>
 FBTCompositeChild = {}
 
+---@return FBTCompositeChild
+function FBTCompositeChild:get() end
+
 
 
 ---@class FBTDecoratorLogic
 ---@field Operation EBTDecoratorLogic::Type
 ---@field Number uint16
 FBTDecoratorLogic = {}
+
+---@return FBTDecoratorLogic
+function FBTDecoratorLogic:get() end
 
 
 
@@ -291,6 +369,9 @@ FBTDecoratorLogic = {}
 ---@field Template UBTCompositeNode
 FBehaviorTreeTemplateInfo = {}
 
+---@return FBehaviorTreeTemplateInfo
+function FBehaviorTreeTemplateInfo:get() end
+
 
 
 ---@class FBlackboardEntry
@@ -298,6 +379,9 @@ FBehaviorTreeTemplateInfo = {}
 ---@field KeyType UBlackboardKeyType
 ---@field bInstanceSynced boolean
 FBlackboardEntry = {}
+
+---@return FBlackboardEntry
+function FBlackboardEntry:get() end
 
 
 
@@ -309,10 +393,16 @@ FBlackboardEntry = {}
 ---@field bNoneIsAllowedValue boolean
 FBlackboardKeySelector = {}
 
+---@return FBlackboardKeySelector
+function FBlackboardKeySelector:get() end
+
 
 
 ---@class FCompactIndexedHandleBase
 FCompactIndexedHandleBase = {}
+
+---@return FCompactIndexedHandleBase
+function FCompactIndexedHandleBase:get() end
 
 
 ---@class FCrowdAvoidanceConfig
@@ -328,6 +418,9 @@ FCompactIndexedHandleBase = {}
 ---@field AdaptiveDepth uint8
 FCrowdAvoidanceConfig = {}
 
+---@return FCrowdAvoidanceConfig
+function FCrowdAvoidanceConfig:get() end
+
 
 
 ---@class FCrowdAvoidanceSamplingPattern
@@ -335,10 +428,16 @@ FCrowdAvoidanceConfig = {}
 ---@field Radii TArray<float>
 FCrowdAvoidanceSamplingPattern = {}
 
+---@return FCrowdAvoidanceSamplingPattern
+function FCrowdAvoidanceSamplingPattern:get() end
+
 
 
 ---@class FDefault__AISenseBlueprintListener
 FDefault__AISenseBlueprintListener = {}
+
+---@return FDefault__AISenseBlueprintListener
+function FDefault__AISenseBlueprintListener:get() end
 
 
 ---@class FEQSParametrizedQueryExecutionRequest
@@ -349,6 +448,9 @@ FDefault__AISenseBlueprintListener = {}
 ---@field bUseBBKeyForQueryTemplate boolean
 FEQSParametrizedQueryExecutionRequest = {}
 
+---@return FEQSParametrizedQueryExecutionRequest
+function FEQSParametrizedQueryExecutionRequest:get() end
+
 
 
 ---@class FEnvDirection
@@ -358,6 +460,9 @@ FEQSParametrizedQueryExecutionRequest = {}
 ---@field DirMode EEnvDirection::Type
 FEnvDirection = {}
 
+---@return FEnvDirection
+function FEnvDirection:get() end
+
 
 
 ---@class FEnvNamedValue
@@ -365,6 +470,9 @@ FEnvDirection = {}
 ---@field ParamType EAIParamType
 ---@field Value float
 FEnvNamedValue = {}
+
+---@return FEnvNamedValue
+function FEnvNamedValue:get() end
 
 
 
@@ -380,11 +488,17 @@ FEnvNamedValue = {}
 ---@field bSkipOverlapQuerier boolean
 FEnvOverlapData = {}
 
+---@return FEnvOverlapData
+function FEnvOverlapData:get() end
+
 
 
 ---@class FEnvQueryInstanceCache
 ---@field Template UEnvQuery
 FEnvQueryInstanceCache = {}
+
+---@return FEnvQueryInstanceCache
+function FEnvQueryInstanceCache:get() end
 
 
 
@@ -398,6 +512,9 @@ FEnvQueryInstanceCache = {}
 ---@field GenerationTimeWarningSeconds double
 FEnvQueryManagerConfig = {}
 
+---@return FEnvQueryManagerConfig
+function FEnvQueryManagerConfig:get() end
+
 
 
 ---@class FEnvQueryRequest
@@ -406,6 +523,9 @@ FEnvQueryManagerConfig = {}
 ---@field World UWorld
 FEnvQueryRequest = {}
 
+---@return FEnvQueryRequest
+function FEnvQueryRequest:get() end
+
 
 
 ---@class FEnvQueryResult
@@ -413,6 +533,9 @@ FEnvQueryRequest = {}
 ---@field OptionIndex int32
 ---@field QueryID int32
 FEnvQueryResult = {}
+
+---@return FEnvQueryResult
+function FEnvQueryResult:get() end
 
 
 
@@ -438,21 +561,33 @@ FEnvQueryResult = {}
 ---@field bCanProjectDown boolean
 FEnvTraceData = {}
 
+---@return FEnvTraceData
+function FEnvTraceData:get() end
+
 
 
 ---@class FGenericTeamId
 ---@field TeamID uint8
 FGenericTeamId = {}
 
+---@return FGenericTeamId
+function FGenericTeamId:get() end
+
 
 
 ---@class FIndexedHandleBase : FSimpleIndexedHandleBase
 FIndexedHandleBase = {}
 
+---@return FIndexedHandleBase
+function FIndexedHandleBase:get() end
+
 
 ---@class FIntervalCountdown
 ---@field Interval float
 FIntervalCountdown = {}
+
+---@return FIntervalCountdown
+function FIntervalCountdown:get() end
 
 
 
@@ -460,11 +595,17 @@ FIntervalCountdown = {}
 ---@field action UPawnAction
 FPawnActionEvent = {}
 
+---@return FPawnActionEvent
+function FPawnActionEvent:get() end
+
 
 
 ---@class FPawnActionStack
 ---@field TopAction UPawnAction
 FPawnActionStack = {}
+
+---@return FPawnActionStack
+function FPawnActionStack:get() end
 
 
 
@@ -472,32 +613,53 @@ FPawnActionStack = {}
 ---@field RecastNavMeshActor ARecastNavMesh
 FRecastGraphWrapper = {}
 
+---@return FRecastGraphWrapper
+function FRecastGraphWrapper:get() end
+
 
 
 ---@class FSequentialIDBase
 ---@field Value uint32
 FSequentialIDBase = {}
 
+---@return FSequentialIDBase
+function FSequentialIDBase:get() end
+
 
 
 ---@class FSimpleIndexedHandleBase
 FSimpleIndexedHandleBase = {}
 
+---@return FSimpleIndexedHandleBase
+function FSimpleIndexedHandleBase:get() end
+
 
 ---@class IAIPerceptionListenerInterface : IInterface
 IAIPerceptionListenerInterface = {}
+
+---@return IAIPerceptionListenerInterface
+function IAIPerceptionListenerInterface:get() end
 
 
 ---@class IAIResourceInterface : IInterface
 IAIResourceInterface = {}
 
+---@return IAIResourceInterface
+function IAIResourceInterface:get() end
+
 
 ---@class IAISightTargetInterface : IInterface
 IAISightTargetInterface = {}
 
+---@return IAISightTargetInterface
+function IAISightTargetInterface:get() end
+
 
 ---@class IBlackboardAssetProvider : IInterface
 IBlackboardAssetProvider = {}
+
+---@return IBlackboardAssetProvider
+function IBlackboardAssetProvider:get() end
 
 ---@return UBlackboardData
 function IBlackboardAssetProvider:GetBlackboardAsset() end
@@ -506,19 +668,31 @@ function IBlackboardAssetProvider:GetBlackboardAsset() end
 ---@class ICrowdAgentInterface : IInterface
 ICrowdAgentInterface = {}
 
+---@return ICrowdAgentInterface
+function ICrowdAgentInterface:get() end
+
 
 ---@class IEQSQueryResultSourceInterface : IInterface
 IEQSQueryResultSourceInterface = {}
 
+---@return IEQSQueryResultSourceInterface
+function IEQSQueryResultSourceInterface:get() end
+
 
 ---@class IGenericTeamAgentInterface : IInterface
 IGenericTeamAgentInterface = {}
+
+---@return IGenericTeamAgentInterface
+function IGenericTeamAgentInterface:get() end
 
 
 ---@class UAIAsyncTaskBlueprintProxy : UObject
 ---@field OnSuccess FAIAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFail FAIAsyncTaskBlueprintProxyOnFail
 UAIAsyncTaskBlueprintProxy = {}
+
+---@return UAIAsyncTaskBlueprintProxy
+function UAIAsyncTaskBlueprintProxy:get() end
 
 ---@param RequestID FAIRequestID
 ---@param MovementResult EPathFollowingResult::Type
@@ -527,6 +701,9 @@ function UAIAsyncTaskBlueprintProxy:OnMoveCompleted(RequestID, MovementResult) e
 
 ---@class UAIBlueprintHelperLibrary : UBlueprintFunctionLibrary
 UAIBlueprintHelperLibrary = {}
+
+---@return UAIBlueprintHelperLibrary
+function UAIBlueprintHelperLibrary:get() end
 
 ---@param AnimInstance UAnimInstance
 ---@param bUnlockMovement boolean
@@ -596,6 +773,9 @@ function UAIBlueprintHelperLibrary:CreateMoveToProxyObject(WorldContextObject, P
 ---@class UAIDataProvider : UObject
 UAIDataProvider = {}
 
+---@return UAIDataProvider
+function UAIDataProvider:get() end
+
 
 ---@class UAIDataProvider_QueryParams : UAIDataProvider
 ---@field ParamName FName
@@ -603,6 +783,9 @@ UAIDataProvider = {}
 ---@field IntValue int32
 ---@field BoolValue boolean
 UAIDataProvider_QueryParams = {}
+
+---@return UAIDataProvider_QueryParams
+function UAIDataProvider_QueryParams:get() end
 
 
 
@@ -612,10 +795,16 @@ UAIDataProvider_QueryParams = {}
 ---@field bInteger boolean
 UAIDataProvider_Random = {}
 
+---@return UAIDataProvider_Random
+function UAIDataProvider_Random:get() end
+
 
 
 ---@class UAIHotSpotManager : UObject
 UAIHotSpotManager = {}
+
+---@return UAIHotSpotManager
+function UAIHotSpotManager:get() end
 
 
 ---@class UAIPerceptionComponent : UActorComponent
@@ -626,6 +815,9 @@ UAIHotSpotManager = {}
 ---@field OnTargetPerceptionUpdated FAIPerceptionComponentOnTargetPerceptionUpdated
 ---@field OnTargetPerceptionInfoUpdated FAIPerceptionComponentOnTargetPerceptionInfoUpdated
 UAIPerceptionComponent = {}
+
+---@return UAIPerceptionComponent
+function UAIPerceptionComponent:get() end
 
 ---@param SenseClass TSubclassOf<UAISense>
 ---@param bEnable boolean
@@ -660,6 +852,9 @@ function UAIPerceptionComponent:ForgetAll() end
 ---@field RegisterAsSourceForSenses TArray<TSubclassOf<UAISense>>
 UAIPerceptionStimuliSourceComponent = {}
 
+---@return UAIPerceptionStimuliSourceComponent
+function UAIPerceptionStimuliSourceComponent:get() end
+
 ---@param SenseClass TSubclassOf<UAISense>
 function UAIPerceptionStimuliSourceComponent:UnregisterFromSense(SenseClass) end
 function UAIPerceptionStimuliSourceComponent:UnregisterFromPerceptionSystem() end
@@ -672,6 +867,9 @@ function UAIPerceptionStimuliSourceComponent:RegisterForSense(SenseClass) end
 ---@field Senses TArray<UAISense>
 ---@field PerceptionAgingRate float
 UAIPerceptionSystem = {}
+
+---@return UAIPerceptionSystem
+function UAIPerceptionSystem:get() end
 
 ---@param WorldContextObject UObject
 ---@param PerceptionEvent UAISenseEvent
@@ -695,9 +893,15 @@ function UAIPerceptionSystem:GetSenseClassForStimulus(WorldContextObject, Stimul
 ---@class UAIResource_Logic : UGameplayTaskResource
 UAIResource_Logic = {}
 
+---@return UAIResource_Logic
+function UAIResource_Logic:get() end
+
 
 ---@class UAIResource_Movement : UGameplayTaskResource
 UAIResource_Movement = {}
+
+---@return UAIResource_Movement
+function UAIResource_Movement:get() end
 
 
 ---@class UAISense : UObject
@@ -708,10 +912,16 @@ UAIResource_Movement = {}
 ---@field PerceptionSystemInstance UAIPerceptionSystem
 UAISense = {}
 
+---@return UAISense
+function UAISense:get() end
+
 
 
 ---@class UAISenseBlueprintListener : UUserDefinedStruct
 UAISenseBlueprintListener = {}
+
+---@return UAISenseBlueprintListener
+function UAISenseBlueprintListener:get() end
 
 
 ---@class UAISenseConfig : UObject
@@ -720,17 +930,26 @@ UAISenseBlueprintListener = {}
 ---@field bStartsEnabled boolean
 UAISenseConfig = {}
 
+---@return UAISenseConfig
+function UAISenseConfig:get() end
+
 
 
 ---@class UAISenseConfig_Blueprint : UAISenseConfig
 ---@field Implementation TSubclassOf<UAISense_Blueprint>
 UAISenseConfig_Blueprint = {}
 
+---@return UAISenseConfig_Blueprint
+function UAISenseConfig_Blueprint:get() end
+
 
 
 ---@class UAISenseConfig_Damage : UAISenseConfig
 ---@field Implementation TSubclassOf<UAISense_Damage>
 UAISenseConfig_Damage = {}
+
+---@return UAISenseConfig_Damage
+function UAISenseConfig_Damage:get() end
 
 
 
@@ -742,10 +961,16 @@ UAISenseConfig_Damage = {}
 ---@field DetectionByAffiliation FAISenseAffiliationFilter
 UAISenseConfig_Hearing = {}
 
+---@return UAISenseConfig_Hearing
+function UAISenseConfig_Hearing:get() end
+
 
 
 ---@class UAISenseConfig_Prediction : UAISenseConfig
 UAISenseConfig_Prediction = {}
+
+---@return UAISenseConfig_Prediction
+function UAISenseConfig_Prediction:get() end
 
 
 ---@class UAISenseConfig_Sight : UAISenseConfig
@@ -759,29 +984,47 @@ UAISenseConfig_Prediction = {}
 ---@field NearClippingRadius float
 UAISenseConfig_Sight = {}
 
+---@return UAISenseConfig_Sight
+function UAISenseConfig_Sight:get() end
+
 
 
 ---@class UAISenseConfig_Team : UAISenseConfig
 UAISenseConfig_Team = {}
 
+---@return UAISenseConfig_Team
+function UAISenseConfig_Team:get() end
+
 
 ---@class UAISenseConfig_Touch : UAISenseConfig
 UAISenseConfig_Touch = {}
 
+---@return UAISenseConfig_Touch
+function UAISenseConfig_Touch:get() end
+
 
 ---@class UAISenseEvent : UObject
 UAISenseEvent = {}
+
+---@return UAISenseEvent
+function UAISenseEvent:get() end
 
 
 ---@class UAISenseEvent_Damage : UAISenseEvent
 ---@field Event FAIDamageEvent
 UAISenseEvent_Damage = {}
 
+---@return UAISenseEvent_Damage
+function UAISenseEvent_Damage:get() end
+
 
 
 ---@class UAISenseEvent_Hearing : UAISenseEvent
 ---@field Event FAINoiseEvent
 UAISenseEvent_Hearing = {}
+
+---@return UAISenseEvent_Hearing
+function UAISenseEvent_Hearing:get() end
 
 
 
@@ -790,6 +1033,9 @@ UAISenseEvent_Hearing = {}
 ---@field ListenerContainer TArray<UAIPerceptionComponent>
 ---@field UnprocessedEvents TArray<UAISenseEvent>
 UAISense_Blueprint = {}
+
+---@return UAISense_Blueprint
+function UAISense_Blueprint:get() end
 
 ---@param EventsToProcess TArray<UAISenseEvent>
 ---@return float
@@ -815,6 +1061,9 @@ function UAISense_Blueprint:GetAllListenerActors(ListenerActors) end
 ---@field RegisteredEvents TArray<FAIDamageEvent>
 UAISense_Damage = {}
 
+---@return UAISense_Damage
+function UAISense_Damage:get() end
+
 ---@param WorldContextObject UObject
 ---@param DamagedActor AActor
 ---@param Instigator AActor
@@ -830,6 +1079,9 @@ function UAISense_Damage:ReportDamageEvent(WorldContextObject, DamagedActor, Ins
 ---@field SpeedOfSoundSq float
 UAISense_Hearing = {}
 
+---@return UAISense_Hearing
+function UAISense_Hearing:get() end
+
 ---@param WorldContextObject UObject
 ---@param NoiseLocation FVector
 ---@param Loudness float
@@ -842,6 +1094,9 @@ function UAISense_Hearing:ReportNoiseEvent(WorldContextObject, NoiseLocation, Lo
 ---@class UAISense_Prediction : UAISense
 ---@field RegisteredEvents TArray<FAIPredictionEvent>
 UAISense_Prediction = {}
+
+---@return UAISense_Prediction
+function UAISense_Prediction:get() end
 
 ---@param Requestor APawn
 ---@param PredictedActor AActor
@@ -862,17 +1117,26 @@ function UAISense_Prediction:RequestControllerPredictionEvent(Requestor, Predict
 ---@field SightLimitQueryImportance float
 UAISense_Sight = {}
 
+---@return UAISense_Sight
+function UAISense_Sight:get() end
+
 
 
 ---@class UAISense_Team : UAISense
 ---@field RegisteredEvents TArray<FAITeamStimulusEvent>
 UAISense_Team = {}
 
+---@return UAISense_Team
+function UAISense_Team:get() end
+
 
 
 ---@class UAISense_Touch : UAISense
 ---@field RegisteredEvents TArray<FAITouchEvent>
 UAISense_Touch = {}
+
+---@return UAISense_Touch
+function UAISense_Touch:get() end
 
 ---@param WorldContextObject UObject
 ---@param TouchReceiver AActor
@@ -884,6 +1148,9 @@ function UAISense_Touch:ReportTouchEvent(WorldContextObject, TouchReceiver, Othe
 ---@class UAISubsystem : UObject
 ---@field AISystem UAISystem
 UAISubsystem = {}
+
+---@return UAISubsystem
+function UAISubsystem:get() end
 
 
 
@@ -912,6 +1179,9 @@ UAISubsystem = {}
 ---@field NavLocalGrids UNavLocalGridManager
 UAISystem = {}
 
+---@return UAISystem
+function UAISystem:get() end
+
 function UAISystem:AILoggingVerbose() end
 function UAISystem:AIIgnorePlayers() end
 
@@ -920,10 +1190,16 @@ function UAISystem:AIIgnorePlayers() end
 ---@field OwnerController AAIController
 UAITask = {}
 
+---@return UAITask
+function UAITask:get() end
+
 
 
 ---@class UAITask_LockLogic : UAITask
 UAITask_LockLogic = {}
+
+---@return UAITask_LockLogic
+function UAITask_LockLogic:get() end
 
 
 ---@class UAITask_MoveTo : UAITask
@@ -931,6 +1207,9 @@ UAITask_LockLogic = {}
 ---@field OnMoveFinished FAITask_MoveToOnMoveFinished
 ---@field MoveRequest FAIMoveRequest
 UAITask_MoveTo = {}
+
+---@return UAITask_MoveTo
+function UAITask_MoveTo:get() end
 
 ---@param Controller AAIController
 ---@param GoalLocation FVector
@@ -949,6 +1228,9 @@ function UAITask_MoveTo:AIMoveTo(Controller, GoalLocation, GoalActor, Acceptance
 ---@class UAITask_RunEQS : UAITask
 UAITask_RunEQS = {}
 
+---@return UAITask_RunEQS
+function UAITask_RunEQS:get() end
+
 ---@param Controller AAIController
 ---@param QueryTemplate UEnvQuery
 ---@return UAITask_RunEQS
@@ -958,6 +1240,9 @@ function UAITask_RunEQS:RunEQS(Controller, QueryTemplate) end
 ---@class UBTAuxiliaryNode : UBTNode
 UBTAuxiliaryNode = {}
 
+---@return UBTAuxiliaryNode
+function UBTAuxiliaryNode:get() end
+
 
 ---@class UBTCompositeNode : UBTNode
 ---@field Children TArray<FBTCompositeChild>
@@ -965,19 +1250,31 @@ UBTAuxiliaryNode = {}
 ---@field bApplyDecoratorScope boolean
 UBTCompositeNode = {}
 
+---@return UBTCompositeNode
+function UBTCompositeNode:get() end
+
 
 
 ---@class UBTComposite_Selector : UBTCompositeNode
 UBTComposite_Selector = {}
 
+---@return UBTComposite_Selector
+function UBTComposite_Selector:get() end
+
 
 ---@class UBTComposite_Sequence : UBTCompositeNode
 UBTComposite_Sequence = {}
+
+---@return UBTComposite_Sequence
+function UBTComposite_Sequence:get() end
 
 
 ---@class UBTComposite_SimpleParallel : UBTCompositeNode
 ---@field FinishMode EBTParallelMode::Type
 UBTComposite_SimpleParallel = {}
+
+---@return UBTComposite_SimpleParallel
+function UBTComposite_SimpleParallel:get() end
 
 
 
@@ -985,6 +1282,9 @@ UBTComposite_SimpleParallel = {}
 ---@field bInverseCondition boolean
 ---@field FlowAbortMode EBTFlowAbortMode::Type
 UBTDecorator = {}
+
+---@return UBTDecorator
+function UBTDecorator:get() end
 
 
 
@@ -997,11 +1297,17 @@ UBTDecorator = {}
 ---@field NotifyObserver EBTBlackboardRestart::Type
 UBTDecorator_Blackboard = {}
 
+---@return UBTDecorator_Blackboard
+function UBTDecorator_Blackboard:get() end
+
 
 
 ---@class UBTDecorator_BlackboardBase : UBTDecorator
 ---@field BlackboardKey FBlackboardKeySelector
 UBTDecorator_BlackboardBase = {}
+
+---@return UBTDecorator_BlackboardBase
+function UBTDecorator_BlackboardBase:get() end
 
 
 
@@ -1013,6 +1319,9 @@ UBTDecorator_BlackboardBase = {}
 ---@field bCheckConditionOnlyBlackBoardChanges boolean
 ---@field bIsObservingBB boolean
 UBTDecorator_BlueprintBase = {}
+
+---@return UBTDecorator_BlueprintBase
+function UBTDecorator_BlueprintBase:get() end
 
 ---@param OwnerController AAIController
 ---@param ControlledPawn APawn
@@ -1063,6 +1372,9 @@ function UBTDecorator_BlueprintBase:IsDecoratorExecutionActive() end
 ---@field CachedDescription FString
 UBTDecorator_CheckGameplayTagsOnActor = {}
 
+---@return UBTDecorator_CheckGameplayTagsOnActor
+function UBTDecorator_CheckGameplayTagsOnActor:get() end
+
 
 
 ---@class UBTDecorator_CompareBBEntries : UBTDecorator
@@ -1071,10 +1383,16 @@ UBTDecorator_CheckGameplayTagsOnActor = {}
 ---@field BlackboardKeyB FBlackboardKeySelector
 UBTDecorator_CompareBBEntries = {}
 
+---@return UBTDecorator_CompareBBEntries
+function UBTDecorator_CompareBBEntries:get() end
+
 
 
 ---@class UBTDecorator_ConditionalLoop : UBTDecorator_Blackboard
 UBTDecorator_ConditionalLoop = {}
+
+---@return UBTDecorator_ConditionalLoop
+function UBTDecorator_ConditionalLoop:get() end
 
 
 ---@class UBTDecorator_ConeCheck : UBTDecorator
@@ -1084,11 +1402,17 @@ UBTDecorator_ConditionalLoop = {}
 ---@field Observed FBlackboardKeySelector
 UBTDecorator_ConeCheck = {}
 
+---@return UBTDecorator_ConeCheck
+function UBTDecorator_ConeCheck:get() end
+
 
 
 ---@class UBTDecorator_Cooldown : UBTDecorator
 ---@field CoolDownTime float
 UBTDecorator_Cooldown = {}
+
+---@return UBTDecorator_Cooldown
+function UBTDecorator_Cooldown:get() end
 
 
 
@@ -1100,10 +1424,16 @@ UBTDecorator_Cooldown = {}
 ---@field FilterClass TSubclassOf<UNavigationQueryFilter>
 UBTDecorator_DoesPathExist = {}
 
+---@return UBTDecorator_DoesPathExist
+function UBTDecorator_DoesPathExist:get() end
+
 
 
 ---@class UBTDecorator_ForceSuccess : UBTDecorator
 UBTDecorator_ForceSuccess = {}
+
+---@return UBTDecorator_ForceSuccess
+function UBTDecorator_ForceSuccess:get() end
 
 
 ---@class UBTDecorator_IsAtLocation : UBTDecorator_BlackboardBase
@@ -1115,11 +1445,17 @@ UBTDecorator_ForceSuccess = {}
 ---@field bPathFindingBasedTest boolean
 UBTDecorator_IsAtLocation = {}
 
+---@return UBTDecorator_IsAtLocation
+function UBTDecorator_IsAtLocation:get() end
+
 
 
 ---@class UBTDecorator_IsBBEntryOfClass : UBTDecorator_BlackboardBase
 ---@field TestClass UClass
 UBTDecorator_IsBBEntryOfClass = {}
+
+---@return UBTDecorator_IsBBEntryOfClass
+function UBTDecorator_IsBBEntryOfClass:get() end
 
 
 
@@ -1131,6 +1467,9 @@ UBTDecorator_IsBBEntryOfClass = {}
 ---@field bUseSelfAsObserved boolean
 UBTDecorator_KeepInCone = {}
 
+---@return UBTDecorator_KeepInCone
+function UBTDecorator_KeepInCone:get() end
+
 
 
 ---@class UBTDecorator_Loop : UBTDecorator
@@ -1139,10 +1478,16 @@ UBTDecorator_KeepInCone = {}
 ---@field InfiniteLoopTimeoutTime float
 UBTDecorator_Loop = {}
 
+---@return UBTDecorator_Loop
+function UBTDecorator_Loop:get() end
+
 
 
 ---@class UBTDecorator_ReachedMoveGoal : UBTDecorator
 UBTDecorator_ReachedMoveGoal = {}
+
+---@return UBTDecorator_ReachedMoveGoal
+function UBTDecorator_ReachedMoveGoal:get() end
 
 
 ---@class UBTDecorator_SetTagCooldown : UBTDecorator
@@ -1150,6 +1495,9 @@ UBTDecorator_ReachedMoveGoal = {}
 ---@field CooldownDuration float
 ---@field bAddToExistingDuration boolean
 UBTDecorator_SetTagCooldown = {}
+
+---@return UBTDecorator_SetTagCooldown
+function UBTDecorator_SetTagCooldown:get() end
 
 
 
@@ -1160,16 +1508,25 @@ UBTDecorator_SetTagCooldown = {}
 ---@field bActivatesCooldown boolean
 UBTDecorator_TagCooldown = {}
 
+---@return UBTDecorator_TagCooldown
+function UBTDecorator_TagCooldown:get() end
+
 
 
 ---@class UBTDecorator_TimeLimit : UBTDecorator
 ---@field TimeLimit float
 UBTDecorator_TimeLimit = {}
 
+---@return UBTDecorator_TimeLimit
+function UBTDecorator_TimeLimit:get() end
+
 
 
 ---@class UBTFunctionLibrary : UBlueprintFunctionLibrary
 UBTFunctionLibrary = {}
+
+---@return UBTFunctionLibrary
+function UBTFunctionLibrary:get() end
 
 ---@param NodeOwner UBTNode
 function UBTFunctionLibrary:StopUsingExternalEvent(NodeOwner) end
@@ -1280,6 +1637,9 @@ function UBTFunctionLibrary:ClearBlackboardValue(NodeOwner, Key) end
 ---@field ParentNode UBTCompositeNode
 UBTNode = {}
 
+---@return UBTNode
+function UBTNode:get() end
+
 
 
 ---@class UBTService : UBTAuxiliaryNode
@@ -1289,11 +1649,17 @@ UBTNode = {}
 ---@field bRestartTimerOnEachActivation boolean
 UBTService = {}
 
+---@return UBTService
+function UBTService:get() end
+
 
 
 ---@class UBTService_BlackboardBase : UBTService
 ---@field BlackboardKey FBlackboardKeySelector
 UBTService_BlackboardBase = {}
+
+---@return UBTService_BlackboardBase
+function UBTService_BlackboardBase:get() end
 
 
 
@@ -1303,6 +1669,9 @@ UBTService_BlackboardBase = {}
 ---@field bShowPropertyDetails boolean
 ---@field bShowEventDetails boolean
 UBTService_BlueprintBase = {}
+
+---@return UBTService_BlueprintBase
+function UBTService_BlueprintBase:get() end
 
 ---@param OwnerController AAIController
 ---@param ControlledPawn APawn
@@ -1334,12 +1703,18 @@ function UBTService_BlueprintBase:IsServiceActive() end
 ---@field FocusPriority uint8
 UBTService_DefaultFocus = {}
 
+---@return UBTService_DefaultFocus
+function UBTService_DefaultFocus:get() end
+
 
 
 ---@class UBTService_RunEQS : UBTService_BlackboardBase
 ---@field EQSRequest FEQSParametrizedQueryExecutionRequest
 ---@field bUpdateBBOnFail boolean
 UBTService_RunEQS = {}
+
+---@return UBTService_RunEQS
+function UBTService_RunEQS:get() end
 
 
 
@@ -1348,11 +1723,17 @@ UBTService_RunEQS = {}
 ---@field bIgnoreRestartSelf boolean
 UBTTaskNode = {}
 
+---@return UBTTaskNode
+function UBTTaskNode:get() end
+
 
 
 ---@class UBTTask_BlackboardBase : UBTTaskNode
 ---@field BlackboardKey FBlackboardKeySelector
 UBTTask_BlackboardBase = {}
+
+---@return UBTTask_BlackboardBase
+function UBTTask_BlackboardBase:get() end
 
 
 
@@ -1362,6 +1743,9 @@ UBTTask_BlackboardBase = {}
 ---@field TickInterval FIntervalCountdown
 ---@field bShowPropertyDetails boolean
 UBTTask_BlueprintBase = {}
+
+---@return UBTTask_BlueprintBase
+function UBTTask_BlueprintBase:get() end
 
 ---@param MessageName FName
 ---@param RequestID int32
@@ -1398,17 +1782,26 @@ function UBTTask_BlueprintBase:FinishAbort() end
 ---@field Result EBTNodeResult::Type
 UBTTask_FinishWithResult = {}
 
+---@return UBTTask_FinishWithResult
+function UBTTask_FinishWithResult:get() end
+
 
 
 ---@class UBTTask_GameplayTaskBase : UBTTaskNode
 ---@field bWaitForGameplayTask boolean
 UBTTask_GameplayTaskBase = {}
 
+---@return UBTTask_GameplayTaskBase
+function UBTTask_GameplayTaskBase:get() end
+
 
 
 ---@class UBTTask_MakeNoise : UBTTaskNode
 ---@field Loudnes float
 UBTTask_MakeNoise = {}
+
+---@return UBTTask_MakeNoise
+function UBTTask_MakeNoise:get() end
 
 
 
@@ -1417,6 +1810,9 @@ UBTTask_MakeNoise = {}
 ---@field bProjectVectorGoalToNavigation boolean
 ---@field bUpdatedDeprecatedProperties boolean
 UBTTask_MoveDirectlyToward = {}
+
+---@return UBTTask_MoveDirectlyToward
+function UBTTask_MoveDirectlyToward:get() end
 
 
 
@@ -1435,10 +1831,16 @@ UBTTask_MoveDirectlyToward = {}
 ---@field bStopOnOverlapNeedsUpdate boolean
 UBTTask_MoveTo = {}
 
+---@return UBTTask_MoveTo
+function UBTTask_MoveTo:get() end
+
 
 
 ---@class UBTTask_PawnActionBase : UBTTaskNode
 UBTTask_PawnActionBase = {}
+
+---@return UBTTask_PawnActionBase
+function UBTTask_PawnActionBase:get() end
 
 
 ---@class UBTTask_PlayAnimation : UBTTaskNode
@@ -1449,11 +1851,17 @@ UBTTask_PawnActionBase = {}
 ---@field CachedSkelMesh USkeletalMeshComponent
 UBTTask_PlayAnimation = {}
 
+---@return UBTTask_PlayAnimation
+function UBTTask_PlayAnimation:get() end
+
 
 
 ---@class UBTTask_PlaySound : UBTTaskNode
 ---@field SoundToPlay USoundCue
 UBTTask_PlaySound = {}
+
+---@return UBTTask_PlaySound
+function UBTTask_PlaySound:get() end
 
 
 
@@ -1461,17 +1869,26 @@ UBTTask_PlaySound = {}
 ---@field action UPawnAction
 UBTTask_PushPawnAction = {}
 
+---@return UBTTask_PushPawnAction
+function UBTTask_PushPawnAction:get() end
+
 
 
 ---@class UBTTask_RotateToFaceBBEntry : UBTTask_BlackboardBase
 ---@field Precision float
 UBTTask_RotateToFaceBBEntry = {}
 
+---@return UBTTask_RotateToFaceBBEntry
+function UBTTask_RotateToFaceBBEntry:get() end
+
 
 
 ---@class UBTTask_RunBehavior : UBTTaskNode
 ---@field BehaviorAsset UBehaviorTree
 UBTTask_RunBehavior = {}
+
+---@return UBTTask_RunBehavior
+function UBTTask_RunBehavior:get() end
 
 
 
@@ -1480,6 +1897,9 @@ UBTTask_RunBehavior = {}
 ---@field DefaultBehaviorAsset UBehaviorTree
 ---@field BehaviorAsset UBehaviorTree
 UBTTask_RunBehaviorDynamic = {}
+
+---@return UBTTask_RunBehaviorDynamic
+function UBTTask_RunBehaviorDynamic:get() end
 
 
 
@@ -1494,6 +1914,9 @@ UBTTask_RunBehaviorDynamic = {}
 ---@field bUpdateBBOnFail boolean
 UBTTask_RunEQSQuery = {}
 
+---@return UBTTask_RunEQSQuery
+function UBTTask_RunEQSQuery:get() end
+
 
 
 ---@class UBTTask_SetTagCooldown : UBTTaskNode
@@ -1502,6 +1925,9 @@ UBTTask_RunEQSQuery = {}
 ---@field CooldownDuration float
 UBTTask_SetTagCooldown = {}
 
+---@return UBTTask_SetTagCooldown
+function UBTTask_SetTagCooldown:get() end
+
 
 
 ---@class UBTTask_Wait : UBTTaskNode
@@ -1509,11 +1935,17 @@ UBTTask_SetTagCooldown = {}
 ---@field RandomDeviation float
 UBTTask_Wait = {}
 
+---@return UBTTask_Wait
+function UBTTask_Wait:get() end
+
 
 
 ---@class UBTTask_WaitBlackboardTime : UBTTask_Wait
 ---@field BlackboardKey FBlackboardKeySelector
 UBTTask_WaitBlackboardTime = {}
+
+---@return UBTTask_WaitBlackboardTime
+function UBTTask_WaitBlackboardTime:get() end
 
 
 
@@ -1524,12 +1956,18 @@ UBTTask_WaitBlackboardTime = {}
 ---@field RootDecoratorOps TArray<FBTDecoratorLogic>
 UBehaviorTree = {}
 
+---@return UBehaviorTree
+function UBehaviorTree:get() end
+
 
 
 ---@class UBehaviorTreeComponent : UBrainComponent
 ---@field NodeInstances TArray<UBTNode>
 ---@field DefaultBehaviorTreeAsset UBehaviorTree
 UBehaviorTreeComponent = {}
+
+---@return UBehaviorTreeComponent
+function UBehaviorTreeComponent:get() end
 
 ---@param InjectTag FGameplayTag
 ---@param BehaviorAsset UBehaviorTree
@@ -1549,10 +1987,16 @@ function UBehaviorTreeComponent:AddCooldownTagDuration(CooldownTag, CooldownDura
 ---@field ActiveComponents TArray<UBehaviorTreeComponent>
 UBehaviorTreeManager = {}
 
+---@return UBehaviorTreeManager
+function UBehaviorTreeManager:get() end
+
 
 
 ---@class UBehaviorTreeTypes : UObject
 UBehaviorTreeTypes = {}
+
+---@return UBehaviorTreeTypes
+function UBehaviorTreeTypes:get() end
 
 
 ---@class UBlackboardComponent : UActorComponent
@@ -1561,6 +2005,9 @@ UBehaviorTreeTypes = {}
 ---@field BlackboardAsset UBlackboardData
 ---@field KeyInstances TArray<UBlackboardKeyType>
 UBlackboardComponent = {}
+
+---@return UBlackboardComponent
+function UBlackboardComponent:get() end
 
 ---@param KeyName FName
 ---@param VectorValue FVector
@@ -1643,19 +2090,31 @@ function UBlackboardComponent:ClearValue(KeyName) end
 ---@field bHasSynchronizedKeys boolean
 UBlackboardData = {}
 
+---@return UBlackboardData
+function UBlackboardData:get() end
+
 
 
 ---@class UBlackboardKeyType : UObject
 UBlackboardKeyType = {}
 
+---@return UBlackboardKeyType
+function UBlackboardKeyType:get() end
+
 
 ---@class UBlackboardKeyType_Bool : UBlackboardKeyType
 UBlackboardKeyType_Bool = {}
+
+---@return UBlackboardKeyType_Bool
+function UBlackboardKeyType_Bool:get() end
 
 
 ---@class UBlackboardKeyType_Class : UBlackboardKeyType
 ---@field BaseClass TObjectPtr<UClass>
 UBlackboardKeyType_Class = {}
+
+---@return UBlackboardKeyType_Class
+function UBlackboardKeyType_Class:get() end
 
 
 
@@ -1665,18 +2124,30 @@ UBlackboardKeyType_Class = {}
 ---@field bIsEnumNameValid boolean
 UBlackboardKeyType_Enum = {}
 
+---@return UBlackboardKeyType_Enum
+function UBlackboardKeyType_Enum:get() end
+
 
 
 ---@class UBlackboardKeyType_Float : UBlackboardKeyType
 UBlackboardKeyType_Float = {}
 
+---@return UBlackboardKeyType_Float
+function UBlackboardKeyType_Float:get() end
+
 
 ---@class UBlackboardKeyType_Int : UBlackboardKeyType
 UBlackboardKeyType_Int = {}
 
+---@return UBlackboardKeyType_Int
+function UBlackboardKeyType_Int:get() end
+
 
 ---@class UBlackboardKeyType_Name : UBlackboardKeyType
 UBlackboardKeyType_Name = {}
+
+---@return UBlackboardKeyType_Name
+function UBlackboardKeyType_Name:get() end
 
 
 ---@class UBlackboardKeyType_NativeEnum : UBlackboardKeyType
@@ -1684,32 +2155,50 @@ UBlackboardKeyType_Name = {}
 ---@field EnumType UEnum
 UBlackboardKeyType_NativeEnum = {}
 
+---@return UBlackboardKeyType_NativeEnum
+function UBlackboardKeyType_NativeEnum:get() end
+
 
 
 ---@class UBlackboardKeyType_Object : UBlackboardKeyType
 ---@field BaseClass TObjectPtr<UClass>
 UBlackboardKeyType_Object = {}
 
+---@return UBlackboardKeyType_Object
+function UBlackboardKeyType_Object:get() end
+
 
 
 ---@class UBlackboardKeyType_Rotator : UBlackboardKeyType
 UBlackboardKeyType_Rotator = {}
+
+---@return UBlackboardKeyType_Rotator
+function UBlackboardKeyType_Rotator:get() end
 
 
 ---@class UBlackboardKeyType_String : UBlackboardKeyType
 ---@field StringValue FString
 UBlackboardKeyType_String = {}
 
+---@return UBlackboardKeyType_String
+function UBlackboardKeyType_String:get() end
+
 
 
 ---@class UBlackboardKeyType_Vector : UBlackboardKeyType
 UBlackboardKeyType_Vector = {}
+
+---@return UBlackboardKeyType_Vector
+function UBlackboardKeyType_Vector:get() end
 
 
 ---@class UBrainComponent : UActorComponent
 ---@field BlackboardComp UBlackboardComponent
 ---@field AIOwner AAIController
 UBrainComponent = {}
+
+---@return UBrainComponent
+function UBrainComponent:get() end
 
 ---@param Reason FString
 function UBrainComponent:StopLogic(Reason) end
@@ -1724,6 +2213,9 @@ function UBrainComponent:IsPaused() end
 ---@class UCrowdFollowingComponent : UPathFollowingComponent
 ---@field CrowdAgentMoveDirection FVector
 UCrowdFollowingComponent = {}
+
+---@return UCrowdFollowingComponent
+function UCrowdFollowingComponent:get() end
 
 ---@param bSuspend boolean
 function UCrowdFollowingComponent:SuspendCrowdSteering(bSuspend) end
@@ -1744,10 +2236,16 @@ function UCrowdFollowingComponent:SuspendCrowdSteering(bSuspend) end
 ---@field bResolveCollisions boolean
 UCrowdManager = {}
 
+---@return UCrowdManager
+function UCrowdManager:get() end
+
 
 
 ---@class UEQSRenderingComponent : UDebugDrawComponent
 UEQSRenderingComponent = {}
+
+---@return UEQSRenderingComponent
+function UEQSRenderingComponent:get() end
 
 
 ---@class UEnvQuery : UDataAsset
@@ -1755,14 +2253,23 @@ UEQSRenderingComponent = {}
 ---@field Options TArray<UEnvQueryOption>
 UEnvQuery = {}
 
+---@return UEnvQuery
+function UEnvQuery:get() end
+
 
 
 ---@class UEnvQueryContext : UObject
 UEnvQueryContext = {}
 
+---@return UEnvQueryContext
+function UEnvQueryContext:get() end
+
 
 ---@class UEnvQueryContext_BlueprintBase : UEnvQueryContext
 UEnvQueryContext_BlueprintBase = {}
+
+---@return UEnvQueryContext_BlueprintBase
+function UEnvQueryContext_BlueprintBase:get() end
 
 ---@param QuerierObject UObject
 ---@param QuerierActor AActor
@@ -1785,13 +2292,22 @@ function UEnvQueryContext_BlueprintBase:ProvideActorsSet(QuerierObject, QuerierA
 ---@class UEnvQueryContext_Item : UEnvQueryContext
 UEnvQueryContext_Item = {}
 
+---@return UEnvQueryContext_Item
+function UEnvQueryContext_Item:get() end
+
 
 ---@class UEnvQueryContext_Querier : UEnvQueryContext
 UEnvQueryContext_Querier = {}
 
+---@return UEnvQueryContext_Querier
+function UEnvQueryContext_Querier:get() end
+
 
 ---@class UEnvQueryDebugHelpers : UObject
 UEnvQueryDebugHelpers = {}
+
+---@return UEnvQueryDebugHelpers
+function UEnvQueryDebugHelpers:get() end
 
 
 ---@class UEnvQueryGenerator : UEnvQueryNode
@@ -1799,6 +2315,9 @@ UEnvQueryDebugHelpers = {}
 ---@field ItemType TSubclassOf<UEnvQueryItemType>
 ---@field bAutoSortTests boolean
 UEnvQueryGenerator = {}
+
+---@return UEnvQueryGenerator
+function UEnvQueryGenerator:get() end
 
 
 
@@ -1809,6 +2328,9 @@ UEnvQueryGenerator = {}
 ---@field SearchCenter TSubclassOf<UEnvQueryContext>
 UEnvQueryGenerator_ActorsOfClass = {}
 
+---@return UEnvQueryGenerator_ActorsOfClass
+function UEnvQueryGenerator_ActorsOfClass:get() end
+
 
 
 ---@class UEnvQueryGenerator_BlueprintBase : UEnvQueryGenerator
@@ -1816,6 +2338,9 @@ UEnvQueryGenerator_ActorsOfClass = {}
 ---@field Context TSubclassOf<UEnvQueryContext>
 ---@field GeneratedItemType TSubclassOf<UEnvQueryItemType>
 UEnvQueryGenerator_BlueprintBase = {}
+
+---@return UEnvQueryGenerator_BlueprintBase
+function UEnvQueryGenerator_BlueprintBase:get() end
 
 ---@return UObject
 function UEnvQueryGenerator_BlueprintBase:GetQuerier() end
@@ -1836,6 +2361,9 @@ function UEnvQueryGenerator_BlueprintBase:AddGeneratedActor(GeneratedActor) end
 ---@field ForcedItemType TSubclassOf<UEnvQueryItemType>
 UEnvQueryGenerator_Composite = {}
 
+---@return UEnvQueryGenerator_Composite
+function UEnvQueryGenerator_Composite:get() end
+
 
 
 ---@class UEnvQueryGenerator_Cone : UEnvQueryGenerator_ProjectedPoints
@@ -1847,11 +2375,17 @@ UEnvQueryGenerator_Composite = {}
 ---@field bIncludeContextLocation boolean
 UEnvQueryGenerator_Cone = {}
 
+---@return UEnvQueryGenerator_Cone
+function UEnvQueryGenerator_Cone:get() end
+
 
 
 ---@class UEnvQueryGenerator_CurrentLocation : UEnvQueryGenerator
 ---@field QueryContext TSubclassOf<UEnvQueryContext>
 UEnvQueryGenerator_CurrentLocation = {}
+
+---@return UEnvQueryGenerator_CurrentLocation
+function UEnvQueryGenerator_CurrentLocation:get() end
 
 
 
@@ -1866,6 +2400,9 @@ UEnvQueryGenerator_CurrentLocation = {}
 ---@field Center TSubclassOf<UEnvQueryContext>
 ---@field bDefineArc boolean
 UEnvQueryGenerator_Donut = {}
+
+---@return UEnvQueryGenerator_Donut
+function UEnvQueryGenerator_Donut:get() end
 
 
 
@@ -1884,6 +2421,9 @@ UEnvQueryGenerator_Donut = {}
 ---@field bDefineArc boolean
 UEnvQueryGenerator_OnCircle = {}
 
+---@return UEnvQueryGenerator_OnCircle
+function UEnvQueryGenerator_OnCircle:get() end
+
 
 
 ---@class UEnvQueryGenerator_PathingGrid : UEnvQueryGenerator_SimpleGrid
@@ -1891,6 +2431,9 @@ UEnvQueryGenerator_OnCircle = {}
 ---@field NavigationFilter TSubclassOf<UNavigationQueryFilter>
 ---@field ScanRangeMultiplier FAIDataProviderFloatValue
 UEnvQueryGenerator_PathingGrid = {}
+
+---@return UEnvQueryGenerator_PathingGrid
+function UEnvQueryGenerator_PathingGrid:get() end
 
 
 
@@ -1902,11 +2445,17 @@ UEnvQueryGenerator_PathingGrid = {}
 ---@field bIncludeKnownActors boolean
 UEnvQueryGenerator_PerceivedActors = {}
 
+---@return UEnvQueryGenerator_PerceivedActors
+function UEnvQueryGenerator_PerceivedActors:get() end
+
 
 
 ---@class UEnvQueryGenerator_ProjectedPoints : UEnvQueryGenerator
 ---@field ProjectionData FEnvTraceData
 UEnvQueryGenerator_ProjectedPoints = {}
+
+---@return UEnvQueryGenerator_ProjectedPoints
+function UEnvQueryGenerator_ProjectedPoints:get() end
 
 
 
@@ -1916,6 +2465,9 @@ UEnvQueryGenerator_ProjectedPoints = {}
 ---@field GenerateAround TSubclassOf<UEnvQueryContext>
 UEnvQueryGenerator_SimpleGrid = {}
 
+---@return UEnvQueryGenerator_SimpleGrid
+function UEnvQueryGenerator_SimpleGrid:get() end
+
 
 
 ---@class UEnvQueryInstanceBlueprintWrapper : UObject
@@ -1924,6 +2476,9 @@ UEnvQueryGenerator_SimpleGrid = {}
 ---@field OptionIndex int32
 ---@field OnQueryFinishedEvent FEnvQueryInstanceBlueprintWrapperOnQueryFinishedEvent
 UEnvQueryInstanceBlueprintWrapper = {}
+
+---@return UEnvQueryInstanceBlueprintWrapper
+function UEnvQueryInstanceBlueprintWrapper:get() end
 
 ---@param ParamName FName
 ---@param Value float
@@ -1949,25 +2504,43 @@ function UEnvQueryInstanceBlueprintWrapper:EQSQueryDoneSignature__DelegateSignat
 ---@class UEnvQueryItemType : UObject
 UEnvQueryItemType = {}
 
+---@return UEnvQueryItemType
+function UEnvQueryItemType:get() end
+
 
 ---@class UEnvQueryItemType_Actor : UEnvQueryItemType_ActorBase
 UEnvQueryItemType_Actor = {}
+
+---@return UEnvQueryItemType_Actor
+function UEnvQueryItemType_Actor:get() end
 
 
 ---@class UEnvQueryItemType_ActorBase : UEnvQueryItemType_VectorBase
 UEnvQueryItemType_ActorBase = {}
 
+---@return UEnvQueryItemType_ActorBase
+function UEnvQueryItemType_ActorBase:get() end
+
 
 ---@class UEnvQueryItemType_Direction : UEnvQueryItemType_VectorBase
 UEnvQueryItemType_Direction = {}
+
+---@return UEnvQueryItemType_Direction
+function UEnvQueryItemType_Direction:get() end
 
 
 ---@class UEnvQueryItemType_Point : UEnvQueryItemType_VectorBase
 UEnvQueryItemType_Point = {}
 
+---@return UEnvQueryItemType_Point
+function UEnvQueryItemType_Point:get() end
+
 
 ---@class UEnvQueryItemType_VectorBase : UEnvQueryItemType
 UEnvQueryItemType_VectorBase = {}
+
+---@return UEnvQueryItemType_VectorBase
+function UEnvQueryItemType_VectorBase:get() end
 
 
 ---@class UEnvQueryManager : UAISubsystem
@@ -1983,6 +2556,9 @@ UEnvQueryItemType_VectorBase = {}
 ---@field GenerationTimeWarningSeconds double
 UEnvQueryManager = {}
 
+---@return UEnvQueryManager
+function UEnvQueryManager:get() end
+
 ---@param WorldContextObject UObject
 ---@param QueryTemplate UEnvQuery
 ---@param Querier UObject
@@ -1996,12 +2572,18 @@ function UEnvQueryManager:RunEQSQuery(WorldContextObject, QueryTemplate, Querier
 ---@field VerNum int32
 UEnvQueryNode = {}
 
+---@return UEnvQueryNode
+function UEnvQueryNode:get() end
+
 
 
 ---@class UEnvQueryOption : UObject
 ---@field Generator UEnvQueryGenerator
 ---@field Tests TArray<UEnvQueryTest>
 UEnvQueryOption = {}
+
+---@return UEnvQueryOption
+function UEnvQueryOption:get() end
 
 
 
@@ -2027,12 +2609,18 @@ UEnvQueryOption = {}
 ---@field bWorkOnFloatValues boolean
 UEnvQueryTest = {}
 
+---@return UEnvQueryTest
+function UEnvQueryTest:get() end
+
 
 
 ---@class UEnvQueryTest_Distance : UEnvQueryTest
 ---@field TestMode EEnvTestDistance::Type
 ---@field DistanceTo TSubclassOf<UEnvQueryContext>
 UEnvQueryTest_Distance = {}
+
+---@return UEnvQueryTest_Distance
+function UEnvQueryTest_Distance:get() end
 
 
 
@@ -2042,6 +2630,9 @@ UEnvQueryTest_Distance = {}
 ---@field TestMode EEnvTestDot
 ---@field bAbsoluteValue boolean
 UEnvQueryTest_Dot = {}
+
+---@return UEnvQueryTest_Dot
+function UEnvQueryTest_Dot:get() end
 
 
 
@@ -2053,11 +2644,17 @@ UEnvQueryTest_Dot = {}
 ---@field GameplayTags FGameplayTagContainer
 UEnvQueryTest_GameplayTags = {}
 
+---@return UEnvQueryTest_GameplayTags
+function UEnvQueryTest_GameplayTags:get() end
+
 
 
 ---@class UEnvQueryTest_Overlap : UEnvQueryTest
 ---@field OverlapData FEnvOverlapData
 UEnvQueryTest_Overlap = {}
+
+---@return UEnvQueryTest_Overlap
+function UEnvQueryTest_Overlap:get() end
 
 
 
@@ -2069,11 +2666,17 @@ UEnvQueryTest_Overlap = {}
 ---@field FilterClass TSubclassOf<UNavigationQueryFilter>
 UEnvQueryTest_Pathfinding = {}
 
+---@return UEnvQueryTest_Pathfinding
+function UEnvQueryTest_Pathfinding:get() end
+
 
 
 ---@class UEnvQueryTest_PathfindingBatch : UEnvQueryTest_Pathfinding
 ---@field ScanRangeMultiplier FAIDataProviderFloatValue
 UEnvQueryTest_PathfindingBatch = {}
+
+---@return UEnvQueryTest_PathfindingBatch
+function UEnvQueryTest_PathfindingBatch:get() end
 
 
 
@@ -2081,10 +2684,16 @@ UEnvQueryTest_PathfindingBatch = {}
 ---@field ProjectionData FEnvTraceData
 UEnvQueryTest_Project = {}
 
+---@return UEnvQueryTest_Project
+function UEnvQueryTest_Project:get() end
+
 
 
 ---@class UEnvQueryTest_Random : UEnvQueryTest
 UEnvQueryTest_Random = {}
+
+---@return UEnvQueryTest_Random
+function UEnvQueryTest_Random:get() end
 
 
 ---@class UEnvQueryTest_Trace : UEnvQueryTest
@@ -2095,6 +2704,9 @@ UEnvQueryTest_Random = {}
 ---@field Context TSubclassOf<UEnvQueryContext>
 UEnvQueryTest_Trace = {}
 
+---@return UEnvQueryTest_Trace
+function UEnvQueryTest_Trace:get() end
+
 
 
 ---@class UEnvQueryTest_Volume : UEnvQueryTest
@@ -2103,24 +2715,39 @@ UEnvQueryTest_Trace = {}
 ---@field bDoComplexVolumeTest boolean
 UEnvQueryTest_Volume = {}
 
+---@return UEnvQueryTest_Volume
+function UEnvQueryTest_Volume:get() end
+
 
 
 ---@class UEnvQueryTypes : UObject
 UEnvQueryTypes = {}
+
+---@return UEnvQueryTypes
+function UEnvQueryTypes:get() end
 
 
 ---@class UGridPathFollowingComponent : UPathFollowingComponent
 ---@field GridManager UNavLocalGridManager
 UGridPathFollowingComponent = {}
 
+---@return UGridPathFollowingComponent
+function UGridPathFollowingComponent:get() end
+
 
 
 ---@class UNavFilter_AIControllerDefault : UNavigationQueryFilter
 UNavFilter_AIControllerDefault = {}
 
+---@return UNavFilter_AIControllerDefault
+function UNavFilter_AIControllerDefault:get() end
+
 
 ---@class UNavLocalGridManager : UObject
 UNavLocalGridManager = {}
+
+---@return UNavLocalGridManager
+function UNavLocalGridManager:get() end
 
 ---@param WorldContextObject UObject
 ---@param CellSize float
@@ -2175,6 +2802,9 @@ function UNavLocalGridManager:AddLocalNavigationGridForBox(WorldContextObject, L
 ---@field MyNavData ANavigationData
 UPathFollowingComponent = {}
 
+---@return UPathFollowingComponent
+function UPathFollowingComponent:get() end
+
 ---@param NavData ANavigationData
 function UPathFollowingComponent:OnNavDataRegistered(NavData) end
 ---@param SelfActor AActor
@@ -2191,6 +2821,9 @@ function UPathFollowingComponent:GetPathActionType() end
 ---@class UPathFollowingManager : UObject
 UPathFollowingManager = {}
 
+---@return UPathFollowingManager
+function UPathFollowingManager:get() end
+
 
 ---@class UPawnAction : UObject
 ---@field ChildAction UPawnAction
@@ -2205,6 +2838,9 @@ UPathFollowingManager = {}
 ---@field bDoParallelTick boolean
 UPawnAction = {}
 
+---@return UPawnAction
+function UPawnAction:get() end
+
 ---@return EAIRequestPriority::Type
 function UPawnAction:GetActionPriority() end
 ---@param WithResult EPawnActionResult::Type
@@ -2217,6 +2853,9 @@ function UPawnAction:CreateActionInstance(WorldContextObject, actionClass) end
 
 ---@class UPawnAction_BlueprintBase : UPawnAction
 UPawnAction_BlueprintBase = {}
+
+---@return UPawnAction_BlueprintBase
+function UPawnAction_BlueprintBase:get() end
 
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
@@ -2252,6 +2891,9 @@ function UPawnAction_BlueprintBase:ActionFinished(ControlledPawn, WithResult) en
 ---@field bAbortSubActionOnPathChange boolean
 UPawnAction_Move = {}
 
+---@return UPawnAction_Move
+function UPawnAction_Move:get() end
+
 
 
 ---@class UPawnAction_Repeat : UPawnAction
@@ -2259,6 +2901,9 @@ UPawnAction_Move = {}
 ---@field RecentActionCopy UPawnAction
 ---@field ChildFailureHandlingMode EPawnActionFailHandling::Type
 UPawnAction_Repeat = {}
+
+---@return UPawnAction_Repeat
+function UPawnAction_Repeat:get() end
 
 
 
@@ -2268,11 +2913,17 @@ UPawnAction_Repeat = {}
 ---@field RecentActionCopy UPawnAction
 UPawnAction_Sequence = {}
 
+---@return UPawnAction_Sequence
+function UPawnAction_Sequence:get() end
+
 
 
 ---@class UPawnAction_Wait : UPawnAction
 ---@field TimeToWait float
 UPawnAction_Wait = {}
+
+---@return UPawnAction_Wait
+function UPawnAction_Wait:get() end
 
 
 
@@ -2282,6 +2933,9 @@ UPawnAction_Wait = {}
 ---@field ActionEvents TArray<FPawnActionEvent>
 ---@field CurrentAction UPawnAction
 UPawnActionsComponent = {}
+
+---@return UPawnActionsComponent
+function UPawnActionsComponent:get() end
 
 ---@param NewAction UPawnAction
 ---@param Priority EAIRequestPriority::Type
@@ -2317,6 +2971,9 @@ function UPawnActionsComponent:K2_AbortAction(ActionToAbort) end
 ---@field PeripheralVisionCosine float
 UPawnSensingComponent = {}
 
+---@return UPawnSensingComponent
+function UPawnSensingComponent:get() end
+
 ---@param bEnabled boolean
 function UPawnSensingComponent:SetSensingUpdatesEnabled(bEnabled) end
 ---@param NewSensingInterval float
@@ -2337,5 +2994,8 @@ function UPawnSensingComponent:GetPeripheralVisionAngle() end
 
 ---@class UVisualLoggerExtension : UObject
 UVisualLoggerExtension = {}
+
+---@return UVisualLoggerExtension
+function UVisualLoggerExtension:get() end
 
 

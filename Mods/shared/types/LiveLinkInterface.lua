@@ -3,15 +3,24 @@
 ---@class FCachedSubjectFrame
 FCachedSubjectFrame = {}
 
+---@return FCachedSubjectFrame
+function FCachedSubjectFrame:get() end
+
 
 ---@class FLiveLinkAnimationFrameData : FLiveLinkBaseFrameData
 ---@field Transforms TArray<FTransform>
 FLiveLinkAnimationFrameData = {}
 
+---@return FLiveLinkAnimationFrameData
+function FLiveLinkAnimationFrameData:get() end
+
 
 
 ---@class FLiveLinkBaseBlueprintData
 FLiveLinkBaseBlueprintData = {}
+
+---@return FLiveLinkBaseBlueprintData
+function FLiveLinkBaseBlueprintData:get() end
 
 
 ---@class FLiveLinkBaseFrameData
@@ -20,11 +29,17 @@ FLiveLinkBaseBlueprintData = {}
 ---@field PropertyValues TArray<float>
 FLiveLinkBaseFrameData = {}
 
+---@return FLiveLinkBaseFrameData
+function FLiveLinkBaseFrameData:get() end
+
 
 
 ---@class FLiveLinkBaseStaticData
 ---@field PropertyNames TArray<FName>
 FLiveLinkBaseStaticData = {}
+
+---@return FLiveLinkBaseStaticData
+function FLiveLinkBaseStaticData:get() end
 
 
 
@@ -33,12 +48,18 @@ FLiveLinkBaseStaticData = {}
 ---@field FrameData FLiveLinkBaseFrameData
 FLiveLinkBasicBlueprintData = {}
 
+---@return FLiveLinkBasicBlueprintData
+function FLiveLinkBasicBlueprintData:get() end
+
 
 
 ---@class FLiveLinkCameraBlueprintData : FLiveLinkBaseBlueprintData
 ---@field StaticData FLiveLinkCameraStaticData
 ---@field FrameData FLiveLinkCameraFrameData
 FLiveLinkCameraBlueprintData = {}
+
+---@return FLiveLinkCameraBlueprintData
+function FLiveLinkCameraBlueprintData:get() end
 
 
 
@@ -50,6 +71,9 @@ FLiveLinkCameraBlueprintData = {}
 ---@field FocusDistance float
 ---@field ProjectionMode ELiveLinkCameraProjectionMode
 FLiveLinkCameraFrameData = {}
+
+---@return FLiveLinkCameraFrameData
+function FLiveLinkCameraFrameData:get() end
 
 
 
@@ -65,11 +89,17 @@ FLiveLinkCameraFrameData = {}
 ---@field bIsDepthOfFieldSupported boolean
 FLiveLinkCameraStaticData = {}
 
+---@return FLiveLinkCameraStaticData
+function FLiveLinkCameraStaticData:get() end
+
 
 
 ---@class FLiveLinkCurveConversionSettings
 ---@field CurveConversionAssetMap TMap<FString, FSoftObjectPath>
 FLiveLinkCurveConversionSettings = {}
+
+---@return FLiveLinkCurveConversionSettings
+function FLiveLinkCurveConversionSettings:get() end
 
 
 
@@ -77,6 +107,9 @@ FLiveLinkCurveConversionSettings = {}
 ---@field CurveName FName
 ---@field CurveValue float
 FLiveLinkCurveElement = {}
+
+---@return FLiveLinkCurveElement
+function FLiveLinkCurveElement:get() end
 
 
 
@@ -87,10 +120,16 @@ FLiveLinkCurveElement = {}
 ---@field MetaData FLiveLinkMetaData
 FLiveLinkFrameData = {}
 
+---@return FLiveLinkFrameData
+function FLiveLinkFrameData:get() end
+
 
 
 ---@class FLiveLinkFrameRate : FFrameRate
 FLiveLinkFrameRate = {}
+
+---@return FLiveLinkFrameRate
+function FLiveLinkFrameRate:get() end
 
 
 ---@class FLiveLinkInterpolationSettings
@@ -98,12 +137,18 @@ FLiveLinkFrameRate = {}
 ---@field InterpolationOffset float
 FLiveLinkInterpolationSettings = {}
 
+---@return FLiveLinkInterpolationSettings
+function FLiveLinkInterpolationSettings:get() end
+
 
 
 ---@class FLiveLinkLightBlueprintData : FLiveLinkBaseBlueprintData
 ---@field StaticData FLiveLinkLightStaticData
 ---@field FrameData FLiveLinkLightFrameData
 FLiveLinkLightBlueprintData = {}
+
+---@return FLiveLinkLightBlueprintData
+function FLiveLinkLightBlueprintData:get() end
 
 
 
@@ -119,6 +164,9 @@ FLiveLinkLightBlueprintData = {}
 ---@field SourceLength float
 FLiveLinkLightFrameData = {}
 
+---@return FLiveLinkLightFrameData
+function FLiveLinkLightFrameData:get() end
+
 
 
 ---@class FLiveLinkLightStaticData : FLiveLinkTransformStaticData
@@ -133,12 +181,18 @@ FLiveLinkLightFrameData = {}
 ---@field bIsSoftSourceRadiusSupported boolean
 FLiveLinkLightStaticData = {}
 
+---@return FLiveLinkLightStaticData
+function FLiveLinkLightStaticData:get() end
+
 
 
 ---@class FLiveLinkMetaData
 ---@field StringMetaData TMap<FName, FString>
 ---@field SceneTime FQualifiedFrameTime
 FLiveLinkMetaData = {}
+
+---@return FLiveLinkMetaData
+function FLiveLinkMetaData:get() end
 
 
 
@@ -147,12 +201,18 @@ FLiveLinkMetaData = {}
 ---@field BoneParents TArray<int32>
 FLiveLinkRefSkeleton = {}
 
+---@return FLiveLinkRefSkeleton
+function FLiveLinkRefSkeleton:get() end
+
 
 
 ---@class FLiveLinkSkeletonStaticData : FLiveLinkBaseStaticData
 ---@field BoneNames TArray<FName>
 ---@field BoneParents TArray<int32>
 FLiveLinkSkeletonStaticData = {}
+
+---@return FLiveLinkSkeletonStaticData
+function FLiveLinkSkeletonStaticData:get() end
 
 
 
@@ -175,6 +235,9 @@ FLiveLinkSkeletonStaticData = {}
 ---@field bKeepAtLeastOneFrame boolean
 FLiveLinkSourceBufferManagementSettings = {}
 
+---@return FLiveLinkSourceBufferManagementSettings
+function FLiveLinkSourceBufferManagementSettings:get() end
+
 
 
 ---@class FLiveLinkSourceDebugInfo
@@ -183,10 +246,16 @@ FLiveLinkSourceBufferManagementSettings = {}
 ---@field NumberOfBufferAtSnapshot int32
 FLiveLinkSourceDebugInfo = {}
 
+---@return FLiveLinkSourceDebugInfo
+function FLiveLinkSourceDebugInfo:get() end
+
 
 
 ---@class FLiveLinkSourceHandle
 FLiveLinkSourceHandle = {}
+
+---@return FLiveLinkSourceHandle
+function FLiveLinkSourceHandle:get() end
 
 
 ---@class FLiveLinkSourcePreset
@@ -195,6 +264,9 @@ FLiveLinkSourceHandle = {}
 ---@field SourceType FText
 FLiveLinkSourcePreset = {}
 
+---@return FLiveLinkSourcePreset
+function FLiveLinkSourcePreset:get() end
+
 
 
 ---@class FLiveLinkSubjectKey
@@ -202,11 +274,17 @@ FLiveLinkSourcePreset = {}
 ---@field SubjectName FLiveLinkSubjectName
 FLiveLinkSubjectKey = {}
 
+---@return FLiveLinkSubjectKey
+function FLiveLinkSubjectKey:get() end
+
 
 
 ---@class FLiveLinkSubjectName
 ---@field Name FName
 FLiveLinkSubjectName = {}
+
+---@return FLiveLinkSubjectName
+function FLiveLinkSubjectName:get() end
 
 
 
@@ -218,12 +296,18 @@ FLiveLinkSubjectName = {}
 ---@field bEnabled boolean
 FLiveLinkSubjectPreset = {}
 
+---@return FLiveLinkSubjectPreset
+function FLiveLinkSubjectPreset:get() end
+
 
 
 ---@class FLiveLinkSubjectRepresentation
 ---@field Subject FLiveLinkSubjectName
 ---@field Role TSubclassOf<ULiveLinkRole>
 FLiveLinkSubjectRepresentation = {}
+
+---@return FLiveLinkSubjectRepresentation
+function FLiveLinkSubjectRepresentation:get() end
 
 
 
@@ -232,10 +316,16 @@ FLiveLinkSubjectRepresentation = {}
 ---@field SceneTime FQualifiedFrameTime
 FLiveLinkTime = {}
 
+---@return FLiveLinkTime
+function FLiveLinkTime:get() end
+
 
 
 ---@class FLiveLinkTimeCode : FLiveLinkTimeCode_Base_DEPRECATED
 FLiveLinkTimeCode = {}
+
+---@return FLiveLinkTimeCode
+function FLiveLinkTimeCode:get() end
 
 
 ---@class FLiveLinkTimeCode_Base_DEPRECATED
@@ -244,6 +334,9 @@ FLiveLinkTimeCode = {}
 ---@field FrameRate FLiveLinkFrameRate
 FLiveLinkTimeCode_Base_DEPRECATED = {}
 
+---@return FLiveLinkTimeCode_Base_DEPRECATED
+function FLiveLinkTimeCode_Base_DEPRECATED:get() end
+
 
 
 ---@class FLiveLinkTimeSynchronizationSettings
@@ -251,10 +344,16 @@ FLiveLinkTimeCode_Base_DEPRECATED = {}
 ---@field FrameOffset FFrameNumber
 FLiveLinkTimeSynchronizationSettings = {}
 
+---@return FLiveLinkTimeSynchronizationSettings
+function FLiveLinkTimeSynchronizationSettings:get() end
+
 
 
 ---@class FLiveLinkTransform
 FLiveLinkTransform = {}
+
+---@return FLiveLinkTransform
+function FLiveLinkTransform:get() end
 
 
 ---@class FLiveLinkTransformBlueprintData : FLiveLinkBaseBlueprintData
@@ -262,11 +361,17 @@ FLiveLinkTransform = {}
 ---@field FrameData FLiveLinkTransformFrameData
 FLiveLinkTransformBlueprintData = {}
 
+---@return FLiveLinkTransformBlueprintData
+function FLiveLinkTransformBlueprintData:get() end
+
 
 
 ---@class FLiveLinkTransformFrameData : FLiveLinkBaseFrameData
 ---@field Transform FTransform
 FLiveLinkTransformFrameData = {}
+
+---@return FLiveLinkTransformFrameData
+function FLiveLinkTransformFrameData:get() end
 
 
 
@@ -276,6 +381,9 @@ FLiveLinkTransformFrameData = {}
 ---@field bIsScaleSupported boolean
 FLiveLinkTransformStaticData = {}
 
+---@return FLiveLinkTransformStaticData
+function FLiveLinkTransformStaticData:get() end
+
 
 
 ---@class FLiveLinkWorldTime
@@ -283,10 +391,16 @@ FLiveLinkTransformStaticData = {}
 ---@field Offset double
 FLiveLinkWorldTime = {}
 
+---@return FLiveLinkWorldTime
+function FLiveLinkWorldTime:get() end
+
 
 
 ---@class FSubjectFrameHandle : FLiveLinkBaseBlueprintData
 FSubjectFrameHandle = {}
+
+---@return FSubjectFrameHandle
+function FSubjectFrameHandle:get() end
 
 
 ---@class FSubjectMetadata
@@ -295,52 +409,88 @@ FSubjectFrameHandle = {}
 ---@field SceneFramerate FFrameRate
 FSubjectMetadata = {}
 
+---@return FSubjectMetadata
+function FSubjectMetadata:get() end
+
 
 
 ---@class ULiveLinkAnimationRole : ULiveLinkBasicRole
 ULiveLinkAnimationRole = {}
 
+---@return ULiveLinkAnimationRole
+function ULiveLinkAnimationRole:get() end
+
 
 ---@class ULiveLinkBasicRole : ULiveLinkRole
 ULiveLinkBasicRole = {}
+
+---@return ULiveLinkBasicRole
+function ULiveLinkBasicRole:get() end
 
 
 ---@class ULiveLinkCameraRole : ULiveLinkTransformRole
 ULiveLinkCameraRole = {}
 
+---@return ULiveLinkCameraRole
+function ULiveLinkCameraRole:get() end
+
 
 ---@class ULiveLinkController : UObject
 ULiveLinkController = {}
+
+---@return ULiveLinkController
+function ULiveLinkController:get() end
 
 
 ---@class ULiveLinkCurveRemapSettings : ULiveLinkSourceSettings
 ---@field CurveConversionSettings FLiveLinkCurveConversionSettings
 ULiveLinkCurveRemapSettings = {}
 
+---@return ULiveLinkCurveRemapSettings
+function ULiveLinkCurveRemapSettings:get() end
+
 
 
 ---@class ULiveLinkFrameInterpolationProcessor : UObject
 ULiveLinkFrameInterpolationProcessor = {}
 
+---@return ULiveLinkFrameInterpolationProcessor
+function ULiveLinkFrameInterpolationProcessor:get() end
+
 
 ---@class ULiveLinkFramePreProcessor : UObject
 ULiveLinkFramePreProcessor = {}
+
+---@return ULiveLinkFramePreProcessor
+function ULiveLinkFramePreProcessor:get() end
 
 
 ---@class ULiveLinkFrameTranslator : UObject
 ULiveLinkFrameTranslator = {}
 
+---@return ULiveLinkFrameTranslator
+function ULiveLinkFrameTranslator:get() end
+
 
 ---@class ULiveLinkLightRole : ULiveLinkTransformRole
 ULiveLinkLightRole = {}
+
+---@return ULiveLinkLightRole
+function ULiveLinkLightRole:get() end
 
 
 ---@class ULiveLinkRole : UObject
 ULiveLinkRole = {}
 
+---@return ULiveLinkRole
+function ULiveLinkRole:get() end
+
 
 ---@class ULiveLinkSourceFactory : UObject
 ULiveLinkSourceFactory = {}
+
+---@return ULiveLinkSourceFactory
+function ULiveLinkSourceFactory:get() end
 
 
 ---@class ULiveLinkSourceSettings : UObject
@@ -349,6 +499,9 @@ ULiveLinkSourceFactory = {}
 ---@field ConnectionString FString
 ---@field Factory TSubclassOf<ULiveLinkSourceFactory>
 ULiveLinkSourceSettings = {}
+
+---@return ULiveLinkSourceSettings
+function ULiveLinkSourceSettings:get() end
 
 
 
@@ -361,10 +514,16 @@ ULiveLinkSourceSettings = {}
 ---@field bRebroadcastSubject boolean
 ULiveLinkSubjectSettings = {}
 
+---@return ULiveLinkSubjectSettings
+function ULiveLinkSubjectSettings:get() end
+
 
 
 ---@class ULiveLinkTransformRole : ULiveLinkBasicRole
 ULiveLinkTransformRole = {}
+
+---@return ULiveLinkTransformRole
+function ULiveLinkTransformRole:get() end
 
 
 ---@class ULiveLinkVirtualSubject : UObject
@@ -373,6 +532,9 @@ ULiveLinkTransformRole = {}
 ---@field FrameTranslators TArray<ULiveLinkFrameTranslator>
 ---@field bRebroadcastSubject boolean
 ULiveLinkVirtualSubject = {}
+
+---@return ULiveLinkVirtualSubject
+function ULiveLinkVirtualSubject:get() end
 
 
 

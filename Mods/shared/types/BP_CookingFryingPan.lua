@@ -11,6 +11,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_CookingFryingPan_C = {}
 
+---@return ABP_CookingFryingPan_C
+function ABP_CookingFryingPan_C:get() end
+
 function ABP_CookingFryingPan_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32
 function ABP_CookingFryingPan_C:ExecuteUbergraph_BP_CookingFryingPan(EntryPoint) end

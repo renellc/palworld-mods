@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionPairBehavior_FeedItem_C = {}
 
+---@return UBP_ActionPairBehavior_FeedItem_C
+function UBP_ActionPairBehavior_FeedItem_C:get() end
+
 ---@param Human AActor
 ---@param Monster AActor
 function UBP_ActionPairBehavior_FeedItem_C:OnCompleted(Human, Monster) end

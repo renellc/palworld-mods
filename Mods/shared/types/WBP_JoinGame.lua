@@ -15,6 +15,9 @@
 ---@field RegionStrings TArray<FString>
 UWBP_JoinGame_C = {}
 
+---@return UWBP_JoinGame_C
+function UWBP_JoinGame_C:get() end
+
 ---@param Type EPalUIServerListFilterType
 ---@param Region FString
 ---@param PageOffset int32

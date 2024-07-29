@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_CombatHeliRpidWeaponComponent_FrontMG_C = {}
 
+---@return UBP_CombatHeliRpidWeaponComponent_FrontMG_C
+function UBP_CombatHeliRpidWeaponComponent_FrontMG_C:get() end
+
 ---@param DeltaSeconds float
 function UBP_CombatHeliRpidWeaponComponent_FrontMG_C:ReceiveTick(DeltaSeconds) end
 ---@param EntryPoint int32

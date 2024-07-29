@@ -3,13 +3,22 @@
 ---@class FScriptTypedElementHandle
 FScriptTypedElementHandle = {}
 
+---@return FScriptTypedElementHandle
+function FScriptTypedElementHandle:get() end
+
 
 ---@class FScriptTypedElementListProxy
 FScriptTypedElementListProxy = {}
 
+---@return FScriptTypedElementListProxy
+function FScriptTypedElementListProxy:get() end
+
 
 ---@class ITestTypedElementInterfaceA : IInterface
 ITestTypedElementInterfaceA = {}
+
+---@return ITestTypedElementInterfaceA
+function ITestTypedElementInterfaceA:get() end
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InNewName FText
@@ -24,6 +33,9 @@ function ITestTypedElementInterfaceA:GetDisplayName(InElementHandle) end
 ---@class ITestTypedElementInterfaceB : IInterface
 ITestTypedElementInterfaceB = {}
 
+---@return ITestTypedElementInterfaceB
+function ITestTypedElementInterfaceB:get() end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
 function ITestTypedElementInterfaceB:MarkAsTested(InElementHandle) end
@@ -31,6 +43,9 @@ function ITestTypedElementInterfaceB:MarkAsTested(InElementHandle) end
 
 ---@class ITestTypedElementInterfaceC : IInterface
 ITestTypedElementInterfaceC = {}
+
+---@return ITestTypedElementInterfaceC
+function ITestTypedElementInterfaceC:get() end
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
@@ -40,21 +55,36 @@ function ITestTypedElementInterfaceC:GetIsTested(InElementHandle) end
 ---@class ITypedElementCounterInterface : IInterface
 ITypedElementCounterInterface = {}
 
+---@return ITypedElementCounterInterface
+function ITypedElementCounterInterface:get() end
+
 
 ---@class UTestTypedElementInterfaceA_ImplTyped : UObject
 UTestTypedElementInterfaceA_ImplTyped = {}
+
+---@return UTestTypedElementInterfaceA_ImplTyped
+function UTestTypedElementInterfaceA_ImplTyped:get() end
 
 
 ---@class UTestTypedElementInterfaceA_ImplUntyped : UObject
 UTestTypedElementInterfaceA_ImplUntyped = {}
 
+---@return UTestTypedElementInterfaceA_ImplUntyped
+function UTestTypedElementInterfaceA_ImplUntyped:get() end
+
 
 ---@class UTestTypedElementInterfaceBAndC_Typed : UObject
 UTestTypedElementInterfaceBAndC_Typed = {}
 
+---@return UTestTypedElementInterfaceBAndC_Typed
+function UTestTypedElementInterfaceBAndC_Typed:get() end
+
 
 ---@class UTypedElementHandleLibrary : UObject
 UTypedElementHandleLibrary = {}
+
+---@return UTypedElementHandleLibrary
+function UTypedElementHandleLibrary:get() end
 
 ---@param ElementHandle FScriptTypedElementHandle
 function UTypedElementHandleLibrary:Release(ElementHandle) end
@@ -73,6 +103,9 @@ function UTypedElementHandleLibrary:Equal(LHS, RHS) end
 
 ---@class UTypedElementListLibrary : UObject
 UTypedElementListLibrary = {}
+
+---@return UTypedElementListLibrary
+function UTypedElementListLibrary:get() end
 
 ---@param ElementList FScriptTypedElementListProxy
 function UTypedElementListLibrary:Shrink(ElementList) end
@@ -148,6 +181,9 @@ function UTypedElementListLibrary:Add(ElementList, ElementHandle) end
 
 ---@class UTypedElementRegistry : UObject
 UTypedElementRegistry = {}
+
+---@return UTypedElementRegistry
+function UTypedElementRegistry:get() end
 
 ---@return UTypedElementRegistry
 function UTypedElementRegistry:GetInstance() end

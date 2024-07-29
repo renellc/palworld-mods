@@ -10,6 +10,9 @@
 ---@field PlayerNotTargetCounter int32
 UBP_AIAction_CombatPal_RaidBoss_C = {}
 
+---@return UBP_AIAction_CombatPal_RaidBoss_C
+function UBP_AIAction_CombatPal_RaidBoss_C:get() end
+
 ---@param ModuleRaidBoss UPalAICombatModule_RaidBoss
 function UBP_AIAction_CombatPal_RaidBoss_C:GetCombatModuleRaid(ModuleRaidBoss) end
 ---@param Dead FPalDeadInfo

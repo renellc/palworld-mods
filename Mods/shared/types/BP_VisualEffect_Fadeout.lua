@@ -6,6 +6,9 @@
 ---@field FadeTimer double
 UBP_VisualEffect_Fadeout_C = {}
 
+---@return UBP_VisualEffect_Fadeout_C
+function UBP_VisualEffect_Fadeout_C:get() end
+
 ---@param DeltaTime float
 function UBP_VisualEffect_Fadeout_C:TickVisualEffect(DeltaTime) end
 function UBP_VisualEffect_Fadeout_C:OnBeginVisualEffect() end

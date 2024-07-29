@@ -8,6 +8,9 @@
 ---@field interpolationRate double
 UWBP_LoupeBase_C = {}
 
+---@return UWBP_LoupeBase_C
+function UWBP_LoupeBase_C:get() end
+
 ---@param finalScreenPos FVector2D
 ---@param Alpha double
 function UWBP_LoupeBase_C:AdjustAlpha(finalScreenPos, Alpha) end

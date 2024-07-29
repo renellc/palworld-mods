@@ -6,6 +6,9 @@
 ---@field Alignment FVector2D
 FAnchorData = {}
 
+---@return FAnchorData
+function FAnchorData:get() end
+
 
 
 ---@class FAnimationEventBinding
@@ -15,6 +18,9 @@ FAnchorData = {}
 ---@field UserTag FName
 FAnimationEventBinding = {}
 
+---@return FAnimationEventBinding
+function FAnimationEventBinding:get() end
+
 
 
 ---@class FBlueprintWidgetAnimationDelegateBinding
@@ -23,6 +29,9 @@ FAnimationEventBinding = {}
 ---@field FunctionNameToBind FName
 ---@field UserTag FName
 FBlueprintWidgetAnimationDelegateBinding = {}
+
+---@return FBlueprintWidgetAnimationDelegateBinding
+function FBlueprintWidgetAnimationDelegateBinding:get() end
 
 
 
@@ -34,19 +43,31 @@ FBlueprintWidgetAnimationDelegateBinding = {}
 ---@field Kind EBindingKind
 FDelegateRuntimeBinding = {}
 
+---@return FDelegateRuntimeBinding
+function FDelegateRuntimeBinding:get() end
+
 
 
 ---@class FDynamicPropertyPath : FCachedPropertyPath
 FDynamicPropertyPath = {}
 
+---@return FDynamicPropertyPath
+function FDynamicPropertyPath:get() end
+
 
 ---@class FEventReply
 FEventReply = {}
+
+---@return FEventReply
+function FEventReply:get() end
 
 
 ---@class FFieldNotificationId
 ---@field FieldName FName
 FFieldNotificationId = {}
+
+---@return FFieldNotificationId
+function FFieldNotificationId:get() end
 
 
 
@@ -57,11 +78,17 @@ FFieldNotificationId = {}
 ---@field ZOrder int32
 FGameViewportWidgetSlot = {}
 
+---@return FGameViewportWidgetSlot
+function FGameViewportWidgetSlot:get() end
+
 
 
 ---@class FMovieScene2DTransformMask
 ---@field mask uint32
 FMovieScene2DTransformMask = {}
+
+---@return FMovieScene2DTransformMask
+function FMovieScene2DTransformMask:get() end
 
 
 
@@ -70,10 +97,16 @@ FMovieScene2DTransformMask = {}
 ---@field Content UWidget
 FNamedSlotBinding = {}
 
+---@return FNamedSlotBinding
+function FNamedSlotBinding:get() end
+
 
 
 ---@class FPaintContext
 FPaintContext = {}
+
+---@return FPaintContext
+function FPaintContext:get() end
 
 
 ---@class FRadialBoxSettings
@@ -83,11 +116,17 @@ FPaintContext = {}
 ---@field SectorCentralAngle float
 FRadialBoxSettings = {}
 
+---@return FRadialBoxSettings
+function FRadialBoxSettings:get() end
+
 
 
 ---@class FRichImageRow : FTableRowBase
 ---@field Brush FSlateBrush
 FRichImageRow = {}
+
+---@return FRichImageRow
+function FRichImageRow:get() end
 
 
 
@@ -95,10 +134,16 @@ FRichImageRow = {}
 ---@field TextStyle FTextBlockStyle
 FRichTextStyleRow = {}
 
+---@return FRichTextStyleRow
+function FRichTextStyleRow:get() end
+
 
 
 ---@class FSequenceTickManagerWidgetData
 FSequenceTickManagerWidgetData = {}
+
+---@return FSequenceTickManagerWidgetData
+function FSequenceTickManagerWidgetData:get() end
 
 
 ---@class FShapedTextOptions
@@ -108,12 +153,18 @@ FSequenceTickManagerWidgetData = {}
 ---@field TextFlowDirection ETextFlowDirection
 FShapedTextOptions = {}
 
+---@return FShapedTextOptions
+function FShapedTextOptions:get() end
+
 
 
 ---@class FSlateChildSize
 ---@field Value float
 ---@field SizeRule ESlateSizeRule::Type
 FSlateChildSize = {}
+
+---@return FSlateChildSize
+function FSlateChildSize:get() end
 
 
 
@@ -128,12 +179,18 @@ FSlateChildSize = {}
 ---@field UV5 FVector2f
 FSlateMeshVertex = {}
 
+---@return FSlateMeshVertex
+function FSlateMeshVertex:get() end
+
 
 
 ---@class FUserWidgetPool
 ---@field ActiveWidgets TArray<UUserWidget>
 ---@field InactiveWidgets TArray<UUserWidget>
 FUserWidgetPool = {}
+
+---@return FUserWidgetPool
+function FUserWidgetPool:get() end
 
 
 
@@ -144,10 +201,16 @@ FUserWidgetPool = {}
 ---@field bIsRootWidget boolean
 FWidgetAnimationBinding = {}
 
+---@return FWidgetAnimationBinding
+function FWidgetAnimationBinding:get() end
+
 
 
 ---@class FWidgetComponentInstanceData : FSceneComponentInstanceData
 FWidgetComponentInstanceData = {}
+
+---@return FWidgetComponentInstanceData
+function FWidgetComponentInstanceData:get() end
 
 
 ---@class FWidgetNavigationData
@@ -156,6 +219,9 @@ FWidgetComponentInstanceData = {}
 ---@field Widget TWeakObjectPtr<UWidget>
 ---@field CustomDelegate FWidgetNavigationDataCustomDelegate
 FWidgetNavigationData = {}
+
+---@return FWidgetNavigationData
+function FWidgetNavigationData:get() end
 
 
 
@@ -166,18 +232,30 @@ FWidgetNavigationData = {}
 ---@field Angle float
 FWidgetTransform = {}
 
+---@return FWidgetTransform
+function FWidgetTransform:get() end
+
 
 
 ---@class INamedSlotInterface : IInterface
 INamedSlotInterface = {}
 
+---@return INamedSlotInterface
+function INamedSlotInterface:get() end
+
 
 ---@class INotifyFieldValueChanged : IInterface
 INotifyFieldValueChanged = {}
 
+---@return INotifyFieldValueChanged
+function INotifyFieldValueChanged:get() end
+
 
 ---@class IUserListEntry : IInterface
 IUserListEntry = {}
+
+---@return IUserListEntry
+function IUserListEntry:get() end
 
 ---@param bIsSelected boolean
 function IUserListEntry:BP_OnItemSelectionChanged(bIsSelected) end
@@ -189,6 +267,9 @@ function IUserListEntry:BP_OnEntryReleased() end
 ---@class IUserObjectListEntry : IUserListEntry
 IUserObjectListEntry = {}
 
+---@return IUserObjectListEntry
+function IUserObjectListEntry:get() end
+
 ---@param ListItemObject UObject
 function IUserObjectListEntry:OnListItemObjectSet(ListItemObject) end
 
@@ -197,6 +278,9 @@ function IUserObjectListEntry:OnListItemObjectSet(ListItemObject) end
 ---@field OnSuccess FAsyncTaskDownloadImageOnSuccess
 ---@field OnFail FAsyncTaskDownloadImageOnFail
 UAsyncTaskDownloadImage = {}
+
+---@return UAsyncTaskDownloadImage
+function UAsyncTaskDownloadImage:get() end
 
 ---@param URL FString
 ---@return UAsyncTaskDownloadImage
@@ -214,6 +298,9 @@ function UAsyncTaskDownloadImage:DownloadImage(URL) end
 ---@field CornerRadius FVector4
 ---@field LowQualityFallbackBrush FSlateBrush
 UBackgroundBlur = {}
+
+---@return UBackgroundBlur
+function UBackgroundBlur:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UBackgroundBlur:SetVerticalAlignment(InVerticalAlignment) end
@@ -239,6 +326,9 @@ function UBackgroundBlur:SetApplyAlphaToBlur(bInApplyAlphaToBlur) end
 ---@field VerticalAlignment EVerticalAlignment
 UBackgroundBlurSlot = {}
 
+---@return UBackgroundBlurSlot
+function UBackgroundBlurSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UBackgroundBlurSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InPadding FMargin
@@ -249,6 +339,9 @@ function UBackgroundBlurSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 
 ---@class UBoolBinding : UPropertyBinding
 UBoolBinding = {}
+
+---@return UBoolBinding
+function UBoolBinding:get() end
 
 ---@return boolean
 function UBoolBinding:GetValue() end
@@ -272,6 +365,9 @@ function UBoolBinding:GetValue() end
 ---@field OnMouseMoveEvent FBorderOnMouseMoveEvent
 ---@field OnMouseDoubleClickEvent FBorderOnMouseDoubleClickEvent
 UBorder = {}
+
+---@return UBorder
+function UBorder:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UBorder:SetVerticalAlignment(InVerticalAlignment) end
@@ -305,6 +401,9 @@ function UBorder:GetDynamicMaterial() end
 ---@field VerticalAlignment EVerticalAlignment
 UBorderSlot = {}
 
+---@return UBorderSlot
+function UBorderSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UBorderSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InPadding FMargin
@@ -315,6 +414,9 @@ function UBorderSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 
 ---@class UBrushBinding : UPropertyBinding
 UBrushBinding = {}
+
+---@return UBrushBinding
+function UBrushBinding:get() end
 
 ---@return FSlateBrush
 function UBrushBinding:GetValue() end
@@ -334,6 +436,9 @@ function UBrushBinding:GetValue() end
 ---@field OnHovered FButtonOnHovered
 ---@field OnUnhovered FButtonOnUnhovered
 UButton = {}
+
+---@return UButton
+function UButton:get() end
 
 ---@param InTouchMethod EButtonTouchMethod::Type
 function UButton:SetTouchMethod(InTouchMethod) end
@@ -357,6 +462,9 @@ function UButton:IsPressed() end
 ---@field VerticalAlignment EVerticalAlignment
 UButtonSlot = {}
 
+---@return UButtonSlot
+function UButtonSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UButtonSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InPadding FMargin
@@ -368,6 +476,9 @@ function UButtonSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@class UCanvasPanel : UPanelWidget
 UCanvasPanel = {}
 
+---@return UCanvasPanel
+function UCanvasPanel:get() end
+
 ---@param Content UWidget
 ---@return UCanvasPanelSlot
 function UCanvasPanel:AddChildToCanvas(Content) end
@@ -378,6 +489,9 @@ function UCanvasPanel:AddChildToCanvas(Content) end
 ---@field bAutoSize boolean
 ---@field ZOrder int32
 UCanvasPanelSlot = {}
+
+---@return UCanvasPanelSlot
+function UCanvasPanelSlot:get() end
 
 ---@param InZOrder int32
 function UCanvasPanelSlot:SetZOrder(InZOrder) end
@@ -429,6 +543,9 @@ function UCanvasPanelSlot:GetAlignment() end
 ---@field OnCheckStateChanged FCheckBoxOnCheckStateChanged
 UCheckBox = {}
 
+---@return UCheckBox
+function UCheckBox:get() end
+
 ---@param InTouchMethod EButtonTouchMethod::Type
 function UCheckBox:SetTouchMethod(InTouchMethod) end
 ---@param InPressMethod EButtonPressMethod::Type
@@ -450,6 +567,9 @@ function UCheckBox:GetCheckedState() end
 ---@class UCheckedStateBinding : UPropertyBinding
 UCheckedStateBinding = {}
 
+---@return UCheckedStateBinding
+function UCheckedStateBinding:get() end
+
 ---@return ECheckBoxState
 function UCheckedStateBinding:GetValue() end
 
@@ -462,6 +582,9 @@ function UCheckedStateBinding:GetValue() end
 ---@field bEnableRadius boolean
 UCircularThrobber = {}
 
+---@return UCircularThrobber
+function UCircularThrobber:get() end
+
 ---@param InRadius float
 function UCircularThrobber:SetRadius(InRadius) end
 ---@param InPeriod float
@@ -472,6 +595,9 @@ function UCircularThrobber:SetNumberOfPieces(InNumberOfPieces) end
 
 ---@class UColorBinding : UPropertyBinding
 UColorBinding = {}
+
+---@return UColorBinding
+function UColorBinding:get() end
 
 ---@return FSlateColor
 function UColorBinding:GetSlateValue() end
@@ -484,6 +610,9 @@ function UColorBinding:GetLinearValue() end
 ---@field OnGenerateWidgetEvent FComboBoxOnGenerateWidgetEvent
 ---@field bIsFocusable boolean
 UComboBox = {}
+
+---@return UComboBox
+function UComboBox:get() end
 
 
 
@@ -503,6 +632,9 @@ UComboBox = {}
 ---@field OnSelectionChanged FComboBoxKeyOnSelectionChanged
 ---@field OnOpening FComboBoxKeyOnOpening
 UComboBoxKey = {}
+
+---@return UComboBoxKey
+function UComboBoxKey:get() end
 
 ---@param Option FName
 function UComboBoxKey:SetSelectedOption(Option) end
@@ -543,6 +675,9 @@ function UComboBoxKey:AddOption(Option) end
 ---@field OnOpening FComboBoxStringOnOpening
 UComboBoxString = {}
 
+---@return UComboBoxString
+function UComboBoxString:get() end
+
 ---@param Option FString
 function UComboBoxString:SetSelectedOption(Option) end
 ---@param Index int32
@@ -578,6 +713,9 @@ function UComboBoxString:AddOption(Option) end
 ---@class UContentWidget : UPanelWidget
 UContentWidget = {}
 
+---@return UContentWidget
+function UContentWidget:get() end
+
 ---@param Content UWidget
 ---@return UPanelSlot
 function UContentWidget:SetContent(Content) end
@@ -589,6 +727,9 @@ function UContentWidget:GetContent() end
 
 ---@class UDefault__WidgetBlueprintGeneratedClass
 UDefault__WidgetBlueprintGeneratedClass = {}
+
+---@return UDefault__WidgetBlueprintGeneratedClass
+function UDefault__WidgetBlueprintGeneratedClass:get() end
 
 
 ---@class UDragDropOperation : UObject
@@ -602,6 +743,9 @@ UDefault__WidgetBlueprintGeneratedClass = {}
 ---@field OnDragged FDragDropOperationOnDragged
 UDragDropOperation = {}
 
+---@return UDragDropOperation
+function UDragDropOperation:get() end
+
 ---@param PointerEvent FPointerEvent
 function UDragDropOperation:Drop(PointerEvent) end
 ---@param PointerEvent FPointerEvent
@@ -613,6 +757,9 @@ function UDragDropOperation:DragCancelled(PointerEvent) end
 ---@class UDynamicEntryBox : UDynamicEntryBoxBase
 ---@field EntryWidgetClass TSubclassOf<UUserWidget>
 UDynamicEntryBox = {}
+
+---@return UDynamicEntryBox
+function UDynamicEntryBox:get() end
 
 ---@param bDeleteWidgets boolean
 function UDynamicEntryBox:Reset(bDeleteWidgets) end
@@ -636,6 +783,9 @@ function UDynamicEntryBox:BP_CreateEntry() end
 ---@field RadialBoxSettings FRadialBoxSettings
 ---@field EntryWidgetPool FUserWidgetPool
 UDynamicEntryBoxBase = {}
+
+---@return UDynamicEntryBoxBase
+function UDynamicEntryBoxBase:get() end
 
 ---@param InSettings FRadialBoxSettings
 function UDynamicEntryBoxBase:SetRadialSettings(InSettings) end
@@ -672,6 +822,9 @@ function UDynamicEntryBoxBase:GetAllEntries() end
 ---@field OnTextChanged FEditableTextOnTextChanged
 ---@field OnTextCommitted FEditableTextOnTextCommitted
 UEditableText = {}
+
+---@return UEditableText
+function UEditableText:get() end
 
 ---@param InOverflowPolicy ETextOverflowPolicy
 function UEditableText:SetTextOverflowPolicy(InOverflowPolicy) end
@@ -734,6 +887,9 @@ function UEditableText:GetFont() end
 ---@field OnTextCommitted FEditableTextBoxOnTextCommitted
 UEditableTextBox = {}
 
+---@return UEditableTextBox
+function UEditableTextBox:get() end
+
 ---@param InOverflowPolicy ETextOverflowPolicy
 function UEditableTextBox:SetTextOverflowPolicy(InOverflowPolicy) end
 ---@param InText FText
@@ -775,6 +931,9 @@ function UEditableTextBox:ClearError() end
 ---@field BodyContent UWidget
 UExpandableArea = {}
 
+---@return UExpandableArea
+function UExpandableArea:get() end
+
 ---@param IsExpanded boolean
 function UExpandableArea:SetIsExpanded_Animated(IsExpanded) end
 ---@param IsExpanded boolean
@@ -786,12 +945,18 @@ function UExpandableArea:GetIsExpanded() end
 ---@class UFloatBinding : UPropertyBinding
 UFloatBinding = {}
 
+---@return UFloatBinding
+function UFloatBinding:get() end
+
 ---@return float
 function UFloatBinding:GetValue() end
 
 
 ---@class UGameViewportSubsystem : UGameInstanceSubsystem
 UGameViewportSubsystem = {}
+
+---@return UGameViewportSubsystem
+function UGameViewportSubsystem:get() end
 
 ---@param Slot FGameViewportWidgetSlot
 ---@param Widget UWidget
@@ -828,6 +993,9 @@ function UGameViewportSubsystem:AddWidget(Widget, Slot) end
 ---@field RowFill TArray<float>
 UGridPanel = {}
 
+---@return UGridPanel
+function UGridPanel:get() end
+
 ---@param RowIndex int32
 ---@param Coefficient float
 function UGridPanel:SetRowFill(RowIndex, Coefficient) end
@@ -853,6 +1021,9 @@ function UGridPanel:AddChildToGrid(Content, InRow, InColumn) end
 ---@field Nudge FVector2D
 UGridSlot = {}
 
+---@return UGridSlot
+function UGridSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UGridSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InRowSpan int32
@@ -876,6 +1047,9 @@ function UGridSlot:SetColumn(InColumn) end
 ---@class UHorizontalBox : UPanelWidget
 UHorizontalBox = {}
 
+---@return UHorizontalBox
+function UHorizontalBox:get() end
+
 ---@param Content UWidget
 ---@return UHorizontalBoxSlot
 function UHorizontalBox:AddChildToHorizontalBox(Content) end
@@ -887,6 +1061,9 @@ function UHorizontalBox:AddChildToHorizontalBox(Content) end
 ---@field HorizontalAlignment EHorizontalAlignment
 ---@field VerticalAlignment EVerticalAlignment
 UHorizontalBoxSlot = {}
+
+---@return UHorizontalBoxSlot
+function UHorizontalBoxSlot:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UHorizontalBoxSlot:SetVerticalAlignment(InVerticalAlignment) end
@@ -906,6 +1083,9 @@ function UHorizontalBoxSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@field bFlipForRightToLeftFlowDirection boolean
 ---@field OnMouseButtonDownEvent FImageOnMouseButtonDownEvent
 UImage = {}
+
+---@return UImage
+function UImage:get() end
 
 ---@param InOpacity float
 function UImage:SetOpacity(InOpacity) end
@@ -955,6 +1135,9 @@ function UImage:GetDynamicMaterial() end
 ---@field OnIsSelectingKeyChanged FInputKeySelectorOnIsSelectingKeyChanged
 UInputKeySelector = {}
 
+---@return UInputKeySelector
+function UInputKeySelector:get() end
+
 ---@param InVisibility ESlateVisibility
 function UInputKeySelector:SetTextBlockVisibility(InVisibility) end
 ---@param InSelectedKey FInputChord
@@ -979,6 +1162,9 @@ function UInputKeySelector:GetIsSelectingKey() end
 ---@class UInt32Binding : UPropertyBinding
 UInt32Binding = {}
 
+---@return UInt32Binding
+function UInt32Binding:get() end
+
 ---@return int32
 function UInt32Binding:GetValue() end
 
@@ -987,6 +1173,9 @@ function UInt32Binding:GetValue() end
 ---@field bCanCache boolean
 ---@field CacheRelativeTransforms boolean
 UInvalidationBox = {}
+
+---@return UInvalidationBox
+function UInvalidationBox:get() end
 
 ---@param CanCache boolean
 function UInvalidationBox:SetCanCache(CanCache) end
@@ -1013,6 +1202,9 @@ function UInvalidationBox:GetCanCache() end
 ---@field BP_OnItemSelectionChanged FListViewBP_OnItemSelectionChanged
 ---@field BP_OnItemScrolledIntoView FListViewBP_OnItemScrolledIntoView
 UListView = {}
+
+---@return UListView
+function UListView:get() end
 
 ---@param SelectionMode ESelectionMode::Type
 function UListView:SetSelectionMode(SelectionMode) end
@@ -1084,6 +1276,9 @@ function UListView:AddItem(Item) end
 ---@field EntryWidgetPool FUserWidgetPool
 UListViewBase = {}
 
+---@return UListViewBase
+function UListViewBase:get() end
+
 ---@param NewWheelScrollMultiplier float
 function UListViewBase:SetWheelScrollMultiplier(NewWheelScrollMultiplier) end
 ---@param InScrollOffset float
@@ -1103,6 +1298,9 @@ function UListViewBase:GetDisplayedEntryWidgets() end
 ---@class UListViewDesignerPreviewItem : UObject
 UListViewDesignerPreviewItem = {}
 
+---@return UListViewDesignerPreviewItem
+function UListViewDesignerPreviewItem:get() end
+
 
 ---@class UMenuAnchor : UContentWidget
 ---@field MenuClass TSubclassOf<UUserWidget>
@@ -1114,6 +1312,9 @@ UListViewDesignerPreviewItem = {}
 ---@field UseApplicationMenuStack boolean
 ---@field OnMenuOpenChanged FMenuAnchorOnMenuOpenChanged
 UMenuAnchor = {}
+
+---@return UMenuAnchor
+function UMenuAnchor:get() end
 
 ---@param bFocusOnOpen boolean
 function UMenuAnchor:ToggleOpen(bFocusOnOpen) end
@@ -1139,12 +1340,18 @@ function UMenuAnchor:Close() end
 ---@class UMouseCursorBinding : UPropertyBinding
 UMouseCursorBinding = {}
 
+---@return UMouseCursorBinding
+function UMouseCursorBinding:get() end
+
 ---@return EMouseCursor::Type
 function UMouseCursorBinding:GetValue() end
 
 
 ---@class UMovieScene2DTransformPropertySystem : UMovieScenePropertySystem
 UMovieScene2DTransformPropertySystem = {}
+
+---@return UMovieScene2DTransformPropertySystem
+function UMovieScene2DTransformPropertySystem:get() end
 
 
 ---@class UMovieScene2DTransformSection : UMovieSceneSection
@@ -1155,14 +1362,23 @@ UMovieScene2DTransformPropertySystem = {}
 ---@field Shear FMovieSceneFloatChannel
 UMovieScene2DTransformSection = {}
 
+---@return UMovieScene2DTransformSection
+function UMovieScene2DTransformSection:get() end
+
 
 
 ---@class UMovieScene2DTransformTrack : UMovieScenePropertyTrack
 UMovieScene2DTransformTrack = {}
 
+---@return UMovieScene2DTransformTrack
+function UMovieScene2DTransformTrack:get() end
+
 
 ---@class UMovieSceneMarginPropertySystem : UMovieScenePropertySystem
 UMovieSceneMarginPropertySystem = {}
+
+---@return UMovieSceneMarginPropertySystem
+function UMovieSceneMarginPropertySystem:get() end
 
 
 ---@class UMovieSceneMarginSection : UMovieSceneSection
@@ -1172,20 +1388,32 @@ UMovieSceneMarginPropertySystem = {}
 ---@field BottomCurve FMovieSceneFloatChannel
 UMovieSceneMarginSection = {}
 
+---@return UMovieSceneMarginSection
+function UMovieSceneMarginSection:get() end
+
 
 
 ---@class UMovieSceneMarginTrack : UMovieScenePropertyTrack
 UMovieSceneMarginTrack = {}
 
+---@return UMovieSceneMarginTrack
+function UMovieSceneMarginTrack:get() end
+
 
 ---@class UMovieSceneWidgetMaterialSystem : UMovieSceneEntitySystem
 UMovieSceneWidgetMaterialSystem = {}
+
+---@return UMovieSceneWidgetMaterialSystem
+function UMovieSceneWidgetMaterialSystem:get() end
 
 
 ---@class UMovieSceneWidgetMaterialTrack : UMovieSceneMaterialTrack
 ---@field BrushPropertyNamePath TArray<FName>
 ---@field TrackName FName
 UMovieSceneWidgetMaterialTrack = {}
+
+---@return UMovieSceneWidgetMaterialTrack
+function UMovieSceneWidgetMaterialTrack:get() end
 
 
 
@@ -1205,6 +1433,9 @@ UMovieSceneWidgetMaterialTrack = {}
 ---@field OnTextChanged FMultiLineEditableTextOnTextChanged
 ---@field OnTextCommitted FMultiLineEditableTextOnTextCommitted
 UMultiLineEditableText = {}
+
+---@return UMultiLineEditableText
+function UMultiLineEditableText:get() end
 
 ---@param InWidgetStyle FTextBlockStyle
 function UMultiLineEditableText:SetWidgetStyle(InWidgetStyle) end
@@ -1246,6 +1477,9 @@ function UMultiLineEditableText:GetFont() end
 ---@field OnTextCommitted FMultiLineEditableTextBoxOnTextCommitted
 UMultiLineEditableTextBox = {}
 
+---@return UMultiLineEditableTextBox
+function UMultiLineEditableTextBox:get() end
+
 ---@param InTextStyle FTextBlockStyle
 function UMultiLineEditableTextBox:SetTextStyle(InTextStyle) end
 ---@param InText FText
@@ -1272,13 +1506,22 @@ function UMultiLineEditableTextBox:GetHintText() end
 ---@class UNamedSlot : UContentWidget
 UNamedSlot = {}
 
+---@return UNamedSlot
+function UNamedSlot:get() end
+
 
 ---@class UNativeWidgetHost : UWidget
 UNativeWidgetHost = {}
 
+---@return UNativeWidgetHost
+function UNativeWidgetHost:get() end
+
 
 ---@class UOverlay : UPanelWidget
 UOverlay = {}
+
+---@return UOverlay
+function UOverlay:get() end
 
 ---@param Content UWidget
 ---@return UOverlaySlot
@@ -1290,6 +1533,9 @@ function UOverlay:AddChildToOverlay(Content) end
 ---@field HorizontalAlignment EHorizontalAlignment
 ---@field VerticalAlignment EVerticalAlignment
 UOverlaySlot = {}
+
+---@return UOverlaySlot
+function UOverlaySlot:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UOverlaySlot:SetVerticalAlignment(InVerticalAlignment) end
@@ -1304,11 +1550,17 @@ function UOverlaySlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@field Content UWidget
 UPanelSlot = {}
 
+---@return UPanelSlot
+function UPanelSlot:get() end
+
 
 
 ---@class UPanelWidget : UWidget
 ---@field Slots TArray<UPanelSlot>
 UPanelWidget = {}
+
+---@return UPanelWidget
+function UPanelWidget:get() end
 
 ---@param Index int32
 ---@return boolean
@@ -1349,6 +1601,9 @@ function UPanelWidget:AddChild(Content) end
 ---@field FillColorAndOpacityDelegate FProgressBarFillColorAndOpacityDelegate
 UProgressBar = {}
 
+---@return UProgressBar
+function UProgressBar:get() end
+
 ---@param InPercent float
 function UProgressBar:SetPercent(InPercent) end
 ---@param InbIsMarquee boolean
@@ -1363,6 +1618,9 @@ function UProgressBar:SetFillColorAndOpacity(inColor) end
 ---@field DestinationProperty FName
 UPropertyBinding = {}
 
+---@return UPropertyBinding
+function UPropertyBinding:get() end
+
 
 
 ---@class URetainerBox : UContentWidget
@@ -1374,6 +1632,9 @@ UPropertyBinding = {}
 ---@field EffectMaterial UMaterialInterface
 ---@field TextureParameter FName
 URetainerBox = {}
+
+---@return URetainerBox
+function URetainerBox:get() end
 
 ---@param TextureParameter FName
 function URetainerBox:SetTextureParameter(TextureParameter) end
@@ -1401,6 +1662,9 @@ function URetainerBox:GetEffectMaterial() end
 ---@field DefaultTextStyle FTextBlockStyle
 ---@field InstanceDecorators TArray<URichTextBlockDecorator>
 URichTextBlock = {}
+
+---@return URichTextBlock
+function URichTextBlock:get() end
 
 ---@param InTransformPolicy ETextTransformPolicy
 function URichTextBlock:SetTextTransformPolicy(InTransformPolicy) end
@@ -1446,10 +1710,16 @@ function URichTextBlock:ClearAllDefaultStyleOverrides() end
 ---@class URichTextBlockDecorator : UObject
 URichTextBlockDecorator = {}
 
+---@return URichTextBlockDecorator
+function URichTextBlockDecorator:get() end
+
 
 ---@class URichTextBlockImageDecorator : URichTextBlockDecorator
 ---@field ImageSet UDataTable
 URichTextBlockImageDecorator = {}
+
+---@return URichTextBlockImageDecorator
+function URichTextBlockImageDecorator:get() end
 
 
 
@@ -1459,6 +1729,9 @@ URichTextBlockImageDecorator = {}
 ---@field PadTop boolean
 ---@field PadBottom boolean
 USafeZone = {}
+
+---@return USafeZone
+function USafeZone:get() end
 
 ---@param InPadLeft boolean
 ---@param InPadRight boolean
@@ -1475,6 +1748,9 @@ function USafeZone:SetSidesToPad(InPadLeft, InPadRight, InPadTop, InPadBottom) e
 ---@field Padding FMargin
 USafeZoneSlot = {}
 
+---@return USafeZoneSlot
+function USafeZoneSlot:get() end
+
 
 
 ---@class UScaleBox : UContentWidget
@@ -1483,6 +1759,9 @@ USafeZoneSlot = {}
 ---@field UserSpecifiedScale float
 ---@field IgnoreInheritedScale boolean
 UScaleBox = {}
+
+---@return UScaleBox
+function UScaleBox:get() end
 
 ---@param InUserSpecifiedScale float
 function UScaleBox:SetUserSpecifiedScale(InUserSpecifiedScale) end
@@ -1498,6 +1777,9 @@ function UScaleBox:SetIgnoreInheritedScale(bInIgnoreInheritedScale) end
 ---@field HorizontalAlignment EHorizontalAlignment
 ---@field VerticalAlignment EVerticalAlignment
 UScaleBoxSlot = {}
+
+---@return UScaleBoxSlot
+function UScaleBoxSlot:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UScaleBoxSlot:SetVerticalAlignment(InVerticalAlignment) end
@@ -1515,6 +1797,9 @@ function UScaleBoxSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@field Thickness FVector2D
 ---@field Padding FMargin
 UScrollBar = {}
+
+---@return UScrollBar
+function UScrollBar:get() end
 
 ---@param InOffsetFraction float
 ---@param InThumbSizeFraction float
@@ -1542,6 +1827,9 @@ function UScrollBar:SetState(InOffsetFraction, InThumbSizeFraction) end
 ---@field WheelScrollMultiplier float
 ---@field OnUserScrolled FScrollBoxOnUserScrolled
 UScrollBox = {}
+
+---@return UScrollBox
+function UScrollBox:get() end
 
 ---@param NewWheelScrollMultiplier float
 function UScrollBox:SetWheelScrollMultiplier(NewWheelScrollMultiplier) end
@@ -1591,6 +1879,9 @@ function UScrollBox:EndInertialScrolling() end
 ---@field VerticalAlignment EVerticalAlignment
 UScrollBoxSlot = {}
 
+---@return UScrollBoxSlot
+function UScrollBoxSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UScrollBoxSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InPadding FMargin
@@ -1617,6 +1908,9 @@ function UScrollBoxSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@field bOverride_MinAspectRatio boolean
 ---@field bOverride_MaxAspectRatio boolean
 USizeBox = {}
+
+---@return USizeBox
+function USizeBox:get() end
 
 ---@param InWidthOverride float
 function USizeBox:SetWidthOverride(InWidthOverride) end
@@ -1650,6 +1944,9 @@ function USizeBox:ClearHeightOverride() end
 ---@field VerticalAlignment EVerticalAlignment
 USizeBoxSlot = {}
 
+---@return USizeBoxSlot
+function USizeBoxSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function USizeBoxSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InPadding FMargin
@@ -1668,10 +1965,16 @@ function USizeBoxSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@field AccessibleSummaryTextDelegate FSlateAccessibleWidgetDataAccessibleSummaryTextDelegate
 USlateAccessibleWidgetData = {}
 
+---@return USlateAccessibleWidgetData
+function USlateAccessibleWidgetData:get() end
+
 
 
 ---@class USlateBlueprintLibrary : UBlueprintFunctionLibrary
 USlateBlueprintLibrary = {}
+
+---@return USlateBlueprintLibrary
+function USlateBlueprintLibrary:get() end
 
 ---@param Geometry FGeometry
 ---@param LocalVector FVector2D
@@ -1750,6 +2053,9 @@ function USlateBlueprintLibrary:AbsoluteToLocal(Geometry, AbsoluteCoordinate) en
 ---@field ExtentMax FVector2D
 USlateVectorArtData = {}
 
+---@return USlateVectorArtData
+function USlateVectorArtData:get() end
+
 
 
 ---@class USlider : UWidget
@@ -1773,6 +2079,9 @@ USlateVectorArtData = {}
 ---@field OnControllerCaptureEnd FSliderOnControllerCaptureEnd
 ---@field OnValueChanged FSliderOnValueChanged
 USlider = {}
+
+---@return USlider
+function USlider:get() end
 
 ---@param InValue float
 function USlider:SetValue(InValue) end
@@ -1799,6 +2108,9 @@ function USlider:GetNormalizedValue() end
 ---@class USpacer : UWidget
 ---@field Size FVector2D
 USpacer = {}
+
+---@return USpacer
+function USpacer:get() end
 
 ---@param InSize FVector2D
 function USpacer:SetSize(InSize) end
@@ -1834,6 +2146,9 @@ function USpacer:SetSize(InSize) end
 ---@field MinSliderValue float
 ---@field MaxSliderValue float
 USpinBox = {}
+
+---@return USpinBox
+function USpinBox:get() end
 
 ---@param NewValue float
 function USpinBox:SetValue(NewValue) end
@@ -1889,6 +2204,9 @@ function USpinBox:ClearMaxSliderValue() end
 ---@field Orientation EOrientation
 UStackBox = {}
 
+---@return UStackBox
+function UStackBox:get() end
+
 ---@param Content UWidget
 ---@return UStackBoxSlot
 function UStackBox:AddChildToStackBox(Content) end
@@ -1901,10 +2219,16 @@ function UStackBox:AddChildToStackBox(Content) end
 ---@field VerticalAlignment EVerticalAlignment
 UStackBoxSlot = {}
 
+---@return UStackBoxSlot
+function UStackBoxSlot:get() end
+
 
 
 ---@class UTextBinding : UPropertyBinding
 UTextBinding = {}
+
+---@return UTextBinding
+function UTextBinding:get() end
 
 ---@return FText
 function UTextBinding:GetTextValue() end
@@ -1928,6 +2252,9 @@ function UTextBinding:GetStringValue() end
 ---@field TextOverflowPolicy ETextOverflowPolicy
 ---@field bSimpleTextMode boolean
 UTextBlock = {}
+
+---@return UTextBlock
+function UTextBlock:get() end
 
 ---@param InTransformPolicy ETextTransformPolicy
 function UTextBlock:SetTextTransformPolicy(InTransformPolicy) end
@@ -1973,6 +2300,9 @@ function UTextBlock:GetDynamicFontMaterial() end
 ---@field LineHeightPercentage float
 UTextLayoutWidget = {}
 
+---@return UTextLayoutWidget
+function UTextLayoutWidget:get() end
+
 ---@param InJustification ETextJustify::Type
 function UTextLayoutWidget:SetJustification(InJustification) end
 
@@ -1984,6 +2314,9 @@ function UTextLayoutWidget:SetJustification(InJustification) end
 ---@field bAnimateOpacity boolean
 ---@field Image FSlateBrush
 UThrobber = {}
+
+---@return UThrobber
+function UThrobber:get() end
 
 ---@param InNumberOfPieces int32
 function UThrobber:SetNumberOfPieces(InNumberOfPieces) end
@@ -2002,6 +2335,9 @@ function UThrobber:SetAnimateHorizontally(bInAnimateHorizontally) end
 ---@field bWrapHorizontalNavigation boolean
 UTileView = {}
 
+---@return UTileView
+function UTileView:get() end
+
 ---@param NewWidth float
 function UTileView:SetEntryWidth(NewWidth) end
 ---@param NewHeight float
@@ -2017,6 +2353,9 @@ function UTileView:GetEntryHeight() end
 ---@field BP_OnItemExpansionChanged FTreeViewBP_OnItemExpansionChanged
 UTreeView = {}
 
+---@return UTreeView
+function UTreeView:get() end
+
 ---@param Item UObject
 ---@param bExpandItem boolean
 function UTreeView:SetItemExpansion(Item, bExpandItem) end
@@ -2029,6 +2368,9 @@ function UTreeView:CollapseAll() end
 ---@field RootTemplateInstance FMovieSceneRootEvaluationTemplateInstance
 UUMGSequencePlayer = {}
 
+---@return UUMGSequencePlayer
+function UUMGSequencePlayer:get() end
+
 ---@param InUserTag FName
 function UUMGSequencePlayer:SetUserTag(InUserTag) end
 ---@return FName
@@ -2040,6 +2382,9 @@ function UUMGSequencePlayer:GetUserTag() end
 ---@field Linker UMovieSceneEntitySystemLinker
 UUMGSequenceTickManager = {}
 
+---@return UUMGSequenceTickManager
+function UUMGSequenceTickManager:get() end
+
 
 
 ---@class UUniformGridPanel : UPanelWidget
@@ -2047,6 +2392,9 @@ UUMGSequenceTickManager = {}
 ---@field MinDesiredSlotWidth float
 ---@field MinDesiredSlotHeight float
 UUniformGridPanel = {}
+
+---@return UUniformGridPanel
+function UUniformGridPanel:get() end
 
 ---@param InSlotPadding FMargin
 function UUniformGridPanel:SetSlotPadding(InSlotPadding) end
@@ -2068,6 +2416,9 @@ function UUniformGridPanel:AddChildToUniformGrid(Content, InRow, InColumn) end
 ---@field Column int32
 UUniformGridSlot = {}
 
+---@return UUniformGridSlot
+function UUniformGridSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UUniformGridSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InRow int32
@@ -2080,6 +2431,9 @@ function UUniformGridSlot:SetColumn(InColumn) end
 
 ---@class UUserListEntryLibrary : UBlueprintFunctionLibrary
 UUserListEntryLibrary = {}
+
+---@return UUserListEntryLibrary
+function UUserListEntryLibrary:get() end
 
 ---@param UserListEntry TScriptInterface<IUserListEntry>
 ---@return boolean
@@ -2094,6 +2448,9 @@ function UUserListEntryLibrary:GetOwningListView(UserListEntry) end
 
 ---@class UUserObjectListEntryLibrary : UBlueprintFunctionLibrary
 UUserObjectListEntryLibrary = {}
+
+---@return UUserObjectListEntryLibrary
+function UUserObjectListEntryLibrary:get() end
 
 ---@param UserObjectListEntry TScriptInterface<IUserObjectListEntry>
 ---@return UObject
@@ -2122,6 +2479,9 @@ function UUserObjectListEntryLibrary:GetListItemObject(UserObjectListEntry) end
 ---@field InputComponent UInputComponent
 ---@field AnimationCallbacks TArray<FAnimationEventBinding>
 UUserWidget = {}
+
+---@return UUserWidget
+function UUserWidget:get() end
 
 function UUserWidget:UnregisterInputComponent() end
 ---@param Animation UWidgetAnimation
@@ -2399,13 +2759,22 @@ function UUserWidget:AddExtension(InExtensionType) end
 ---@class UUserWidgetBlueprint : UBlueprint
 UUserWidgetBlueprint = {}
 
+---@return UUserWidgetBlueprint
+function UUserWidgetBlueprint:get() end
+
 
 ---@class UUserWidgetExtension : UObject
 UUserWidgetExtension = {}
 
+---@return UUserWidgetExtension
+function UUserWidgetExtension:get() end
+
 
 ---@class UVerticalBox : UPanelWidget
 UVerticalBox = {}
+
+---@return UVerticalBox
+function UVerticalBox:get() end
 
 ---@param Content UWidget
 ---@return UVerticalBoxSlot
@@ -2418,6 +2787,9 @@ function UVerticalBox:AddChildToVerticalBox(Content) end
 ---@field HorizontalAlignment EHorizontalAlignment
 ---@field VerticalAlignment EVerticalAlignment
 UVerticalBoxSlot = {}
+
+---@return UVerticalBoxSlot
+function UVerticalBoxSlot:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UVerticalBoxSlot:SetVerticalAlignment(InVerticalAlignment) end
@@ -2432,6 +2804,9 @@ function UVerticalBoxSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@class UViewport : UContentWidget
 ---@field BackgroundColor FLinearColor
 UViewport = {}
+
+---@return UViewport
+function UViewport:get() end
 
 ---@param actorClass TSubclassOf<AActor>
 ---@return AActor
@@ -2451,12 +2826,18 @@ function UViewport:GetViewLocation() end
 ---@class UVisibilityBinding : UPropertyBinding
 UVisibilityBinding = {}
 
+---@return UVisibilityBinding
+function UVisibilityBinding:get() end
+
 ---@return ESlateVisibility
 function UVisibilityBinding:GetValue() end
 
 
 ---@class UVisual : UObject
 UVisual = {}
+
+---@return UVisual
+function UVisual:get() end
 
 
 ---@class UWidget : UVisual
@@ -2483,6 +2864,9 @@ UVisual = {}
 ---@field Navigation UWidgetNavigation
 ---@field NativeBindings TArray<UPropertyBinding>
 UWidget = {}
+
+---@return UWidget
+function UWidget:get() end
 
 ---@param InVisibility ESlateVisibility
 function UWidget:SetVisibility(InVisibility) end
@@ -2646,6 +3030,9 @@ function UWidget:ForceLayoutPrepass() end
 ---@field DisplayLabel FString
 UWidgetAnimation = {}
 
+---@return UWidgetAnimation
+function UWidgetAnimation:get() end
+
 ---@param Widget UUserWidget
 ---@param Delegate FUnbindFromAnimationStartedDelegate
 function UWidgetAnimation:UnbindFromAnimationStarted(Widget, Delegate) end
@@ -2672,11 +3059,17 @@ function UWidgetAnimation:BindToAnimationFinished(Widget, Delegate) end
 ---@field WidgetAnimationDelegateBindings TArray<FBlueprintWidgetAnimationDelegateBinding>
 UWidgetAnimationDelegateBinding = {}
 
+---@return UWidgetAnimationDelegateBinding
+function UWidgetAnimationDelegateBinding:get() end
+
 
 
 ---@class UWidgetAnimationPlayCallbackProxy : UObject
 ---@field Finished FWidgetAnimationPlayCallbackProxyFinished
 UWidgetAnimationPlayCallbackProxy = {}
+
+---@return UWidgetAnimationPlayCallbackProxy
+function UWidgetAnimationPlayCallbackProxy:get() end
 
 ---@param Result UUMGSequencePlayer
 ---@param Widget UUserWidget
@@ -2702,6 +3095,9 @@ function UWidgetAnimationPlayCallbackProxy:CreatePlayAnimationProxyObject(Result
 ---@class UWidgetBinding : UPropertyBinding
 UWidgetBinding = {}
 
+---@return UWidgetBinding
+function UWidgetBinding:get() end
+
 ---@return UWidget
 function UWidgetBinding:GetValue() end
 
@@ -2718,14 +3114,23 @@ function UWidgetBinding:GetValue() end
 ---@field InstanceNamedSlots TArray<FName>
 UWidgetBlueprintGeneratedClass = {}
 
+---@return UWidgetBlueprintGeneratedClass
+function UWidgetBlueprintGeneratedClass:get() end
+
 
 
 ---@class UWidgetBlueprintGeneratedClassExtension : UObject
 UWidgetBlueprintGeneratedClassExtension = {}
 
+---@return UWidgetBlueprintGeneratedClassExtension
+function UWidgetBlueprintGeneratedClassExtension:get() end
+
 
 ---@class UWidgetBlueprintLibrary : UBlueprintFunctionLibrary
 UWidgetBlueprintLibrary = {}
+
+---@return UWidgetBlueprintLibrary
+function UWidgetBlueprintLibrary:get() end
 
 ---@param Reply FEventReply
 ---@return FEventReply
@@ -2978,6 +3383,9 @@ function UWidgetBlueprintLibrary:CancelDragDrop() end
 ---@field Widget UUserWidget
 UWidgetComponent = {}
 
+---@return UWidgetComponent
+function UWidgetComponent:get() end
+
 ---@param InVisibility EWindowVisibility
 function UWidgetComponent:SetWindowVisibility(InVisibility) end
 ---@param bInWindowFocusable boolean
@@ -3057,6 +3465,9 @@ function UWidgetComponent:GetCurrentDrawSize() end
 ---@class UWidgetFieldNotificationExtension : UUserWidgetExtension
 UWidgetFieldNotificationExtension = {}
 
+---@return UWidgetFieldNotificationExtension
+function UWidgetFieldNotificationExtension:get() end
+
 
 ---@class UWidgetInteractionComponent : USceneComponent
 ---@field OnHoveredWidgetChanged FWidgetInteractionComponentOnHoveredWidgetChanged
@@ -3079,6 +3490,9 @@ UWidgetFieldNotificationExtension = {}
 ---@field bIsHoveredWidgetFocusable boolean
 ---@field bIsHoveredWidgetHitTestVisible boolean
 UWidgetInteractionComponent = {}
+
+---@return UWidgetInteractionComponent
+function UWidgetInteractionComponent:get() end
 
 ---@param FocusWidget UWidget
 function UWidgetInteractionComponent:SetFocus(FocusWidget) end
@@ -3120,6 +3534,9 @@ function UWidgetInteractionComponent:Get2DHitLocation() end
 
 ---@class UWidgetLayoutLibrary : UBlueprintFunctionLibrary
 UWidgetLayoutLibrary = {}
+
+---@return UWidgetLayoutLibrary
+function UWidgetLayoutLibrary:get() end
 
 ---@param Widget UWidget
 ---@return UWrapBoxSlot
@@ -3201,11 +3618,17 @@ function UWidgetLayoutLibrary:GetMousePositionOnPlatform() end
 ---@field Previous FWidgetNavigationData
 UWidgetNavigation = {}
 
+---@return UWidgetNavigation
+function UWidgetNavigation:get() end
+
 
 
 ---@class UWidgetSwitcher : UPanelWidget
 ---@field ActiveWidgetIndex int32
 UWidgetSwitcher = {}
+
+---@return UWidgetSwitcher
+function UWidgetSwitcher:get() end
 
 ---@param Index int32
 function UWidgetSwitcher:SetActiveWidgetIndex(Index) end
@@ -3228,6 +3651,9 @@ function UWidgetSwitcher:GetActiveWidget() end
 ---@field VerticalAlignment EVerticalAlignment
 UWidgetSwitcherSlot = {}
 
+---@return UWidgetSwitcherSlot
+function UWidgetSwitcherSlot:get() end
+
 ---@param InVerticalAlignment EVerticalAlignment
 function UWidgetSwitcherSlot:SetVerticalAlignment(InVerticalAlignment) end
 ---@param InPadding FMargin
@@ -3241,12 +3667,18 @@ function UWidgetSwitcherSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@field NamedSlotBindings TMap<FName, UWidget>
 UWidgetTree = {}
 
+---@return UWidgetTree
+function UWidgetTree:get() end
+
 
 
 ---@class UWindowTitleBarArea : UContentWidget
 ---@field bWindowButtonsEnabled boolean
 ---@field bDoubleClickTogglesFullscreen boolean
 UWindowTitleBarArea = {}
+
+---@return UWindowTitleBarArea
+function UWindowTitleBarArea:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UWindowTitleBarArea:SetVerticalAlignment(InVerticalAlignment) end
@@ -3261,6 +3693,9 @@ function UWindowTitleBarArea:SetHorizontalAlignment(InHorizontalAlignment) end
 ---@field HorizontalAlignment EHorizontalAlignment
 ---@field VerticalAlignment EVerticalAlignment
 UWindowTitleBarAreaSlot = {}
+
+---@return UWindowTitleBarAreaSlot
+function UWindowTitleBarAreaSlot:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UWindowTitleBarAreaSlot:SetVerticalAlignment(InVerticalAlignment) end
@@ -3277,6 +3712,9 @@ function UWindowTitleBarAreaSlot:SetHorizontalAlignment(InHorizontalAlignment) e
 ---@field HorizontalAlignment EHorizontalAlignment
 ---@field Orientation EOrientation
 UWrapBox = {}
+
+---@return UWrapBox
+function UWrapBox:get() end
 
 ---@param InPadding FVector2D
 function UWrapBox:SetInnerSlotPadding(InPadding) end
@@ -3295,6 +3733,9 @@ function UWrapBox:AddChildToWrapBox(Content) end
 ---@field bFillEmptySpace boolean
 ---@field bForceNewLine boolean
 UWrapBoxSlot = {}
+
+---@return UWrapBoxSlot
+function UWrapBoxSlot:get() end
 
 ---@param InVerticalAlignment EVerticalAlignment
 function UWrapBoxSlot:SetVerticalAlignment(InVerticalAlignment) end

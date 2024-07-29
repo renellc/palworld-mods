@@ -3,6 +3,9 @@
 ---@class UAssetTagsSubsystem : UEngineSubsystem
 UAssetTagsSubsystem = {}
 
+---@return UAssetTagsSubsystem
+function UAssetTagsSubsystem:get() end
+
 ---@param AssetPath FSoftObjectPath
 ---@return TArray<FName>
 function UAssetTagsSubsystem:K2_GetCollectionsContainingAsset(AssetPath) end

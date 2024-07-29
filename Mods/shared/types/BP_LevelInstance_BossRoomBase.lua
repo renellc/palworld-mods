@@ -30,6 +30,9 @@
 ---@field IsLoaded boolean
 ABP_LevelInstance_BossRoomBase_C = {}
 
+---@return ABP_LevelInstance_BossRoomBase_C
+function ABP_LevelInstance_BossRoomBase_C:get() end
+
 ---@param BossSpawner ABP_BossBattle_BossCharacterSpawner_C
 function ABP_LevelInstance_BossRoomBase_C:GetBossSpawner(BossSpawner) end
 ---@return FTransform

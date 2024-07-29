@@ -5,12 +5,18 @@
 ---@field URL FString
 FMediaCaptureDevice = {}
 
+---@return FMediaCaptureDevice
+function FMediaCaptureDevice:get() end
+
 
 
 ---@class FMediaSoundComponentSpectralData
 ---@field FrequencyHz float
 ---@field Magnitude float
 FMediaSoundComponentSpectralData = {}
+
+---@return FMediaSoundComponentSpectralData
+function FMediaSoundComponentSpectralData:get() end
 
 
 
@@ -19,15 +25,24 @@ FMediaSoundComponentSpectralData = {}
 ---@field TimeToLookAhead float
 FMediaSourceCacheSettings = {}
 
+---@return FMediaSourceCacheSettings
+function FMediaSourceCacheSettings:get() end
+
 
 
 ---@class IMediaPlayerProxyInterface : IInterface
 IMediaPlayerProxyInterface = {}
 
+---@return IMediaPlayerProxyInterface
+function IMediaPlayerProxyInterface:get() end
+
 
 ---@class UBaseMediaSource : UMediaSource
 ---@field PlayerName FName
 UBaseMediaSource = {}
+
+---@return UBaseMediaSource
+function UBaseMediaSource:get() end
 
 
 
@@ -36,12 +51,18 @@ UBaseMediaSource = {}
 ---@field PrecacheFile boolean
 UFileMediaSource = {}
 
+---@return UFileMediaSource
+function UFileMediaSource:get() end
+
 ---@param Path FString
 function UFileMediaSource:SetFilePath(Path) end
 
 
 ---@class UMediaBlueprintFunctionLibrary : UBlueprintFunctionLibrary
 UMediaBlueprintFunctionLibrary = {}
+
+---@return UMediaBlueprintFunctionLibrary
+function UMediaBlueprintFunctionLibrary:get() end
 
 ---@param OutDevices TArray<FMediaCaptureDevice>
 ---@param Filter int32
@@ -58,6 +79,9 @@ function UMediaBlueprintFunctionLibrary:EnumerateAudioCaptureDevices(OutDevices,
 ---@field MediaTexture UMediaTexture
 ---@field MediaPlayer UMediaPlayer
 UMediaComponent = {}
+
+---@return UMediaComponent
+function UMediaComponent:get() end
 
 ---@return UMediaTexture
 function UMediaComponent:GetMediaTexture() end
@@ -89,6 +113,9 @@ function UMediaComponent:GetMediaPlayer() end
 ---@field ViewRotation FRotator
 ---@field PlayerGuid FGuid
 UMediaPlayer = {}
+
+---@return UMediaPlayer
+function UMediaPlayer:get() end
 
 ---@return boolean
 function UMediaPlayer:SupportsSeeking() end
@@ -298,6 +325,9 @@ function UMediaPlayer:CanPause() end
 ---@field Items TArray<UMediaSource>
 UMediaPlaylist = {}
 
+---@return UMediaPlaylist
+function UMediaPlaylist:get() end
+
 ---@param Index int32
 ---@param Replacement UMediaSource
 ---@return boolean
@@ -344,6 +374,9 @@ function UMediaPlaylist:Add(MediaSource) end
 ---@field MediaPlayer UMediaPlayer
 UMediaSoundComponent = {}
 
+---@return UMediaSoundComponent
+function UMediaSoundComponent:get() end
+
 ---@param InFrequenciesToAnalyze TArray<float>
 ---@param InFFTSize EMediaSoundComponentFFTSize
 function UMediaSoundComponent:SetSpectralAnalysisSettings(InFrequenciesToAnalyze, InFFTSize) end
@@ -371,6 +404,9 @@ function UMediaSoundComponent:BP_GetAttenuationSettingsToApply(OutAttenuationSet
 
 ---@class UMediaSource : UObject
 UMediaSource = {}
+
+---@return UMediaSource
+function UMediaSource:get() end
 
 ---@return boolean
 function UMediaSource:Validate() end
@@ -404,6 +440,9 @@ function UMediaSource:GetUrl() end
 ---@field MediaPlayer UMediaPlayer
 UMediaTexture = {}
 
+---@return UMediaTexture
+function UMediaTexture:get() end
+
 function UMediaTexture:UpdateResource() end
 ---@param NewMediaPlayer UMediaPlayer
 function UMediaTexture:SetMediaPlayer(NewMediaPlayer) end
@@ -424,17 +463,26 @@ function UMediaTexture:GetAspectRatio() end
 ---@field SequenceIndex int64
 UMediaTimeStampInfo = {}
 
+---@return UMediaTimeStampInfo
+function UMediaTimeStampInfo:get() end
+
 
 
 ---@class UPlatformMediaSource : UMediaSource
 ---@field MediaSource UMediaSource
 UPlatformMediaSource = {}
 
+---@return UPlatformMediaSource
+function UPlatformMediaSource:get() end
+
 
 
 ---@class UStreamMediaSource : UBaseMediaSource
 ---@field StreamUrl FString
 UStreamMediaSource = {}
+
+---@return UStreamMediaSource
+function UStreamMediaSource:get() end
 
 
 
@@ -444,6 +492,9 @@ UStreamMediaSource = {}
 ---@field TimeDelay double
 ---@field bAutoDetectInput boolean
 UTimeSynchronizableMediaSource = {}
+
+---@return UTimeSynchronizableMediaSource
+function UTimeSynchronizableMediaSource:get() end
 
 
 

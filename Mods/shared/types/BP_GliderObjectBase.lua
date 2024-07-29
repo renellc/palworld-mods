@@ -5,6 +5,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_GliderObjectBase_C = {}
 
+---@return ABP_GliderObjectBase_C
+function ABP_GliderObjectBase_C:get() end
+
 function ABP_GliderObjectBase_C:ReceiveBeginPlay() end
 function ABP_GliderObjectBase_C:OnStartGliding() end
 function ABP_GliderObjectBase_C:OnEndGliding() end

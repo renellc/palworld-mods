@@ -7,6 +7,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PalOilrigController_C = {}
 
+---@return ABP_PalOilrigController_C
+function ABP_PalOilrigController_C:get() end
+
 function ABP_PalOilrigController_C:SoundStop() end
 ---@param DeltaSeconds float
 function ABP_PalOilrigController_C:ReceiveTick(DeltaSeconds) end

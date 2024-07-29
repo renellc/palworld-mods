@@ -8,6 +8,9 @@
 ---@field DamageRate double
 UBP_Status_LavaDamage_C = {}
 
+---@return UBP_Status_LavaDamage_C
+function UBP_Status_LavaDamage_C:get() end
+
 function UBP_Status_LavaDamage_C:Setup() end
 function UBP_Status_LavaDamage_C:LavaDamage() end
 ---@return int32

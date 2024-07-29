@@ -6,6 +6,9 @@
 ---@field IsDeletePal boolean
 UBP_ActionCutPalMeat_Player_C = {}
 
+---@return UBP_ActionCutPalMeat_Player_C
+function UBP_ActionCutPalMeat_Player_C:get() end
+
 ---@param UseKnife boolean
 UBP_ActionCutPalMeat_Player_C['Use Meat Cut Knife'] = function(UseKnife) end
 ---@param IsValid boolean

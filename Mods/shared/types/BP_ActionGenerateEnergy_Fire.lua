@@ -7,6 +7,9 @@
 ---@field Effect UNiagaraComponent
 UBP_ActionGenerateEnergy_Fire_C = {}
 
+---@return UBP_ActionGenerateEnergy_Fire_C
+function UBP_ActionGenerateEnergy_Fire_C:get() end
+
 function UBP_ActionGenerateEnergy_Fire_C:SpawnEffect() end
 ---@param Montage UAnimMontage
 ---@param Exist boolean

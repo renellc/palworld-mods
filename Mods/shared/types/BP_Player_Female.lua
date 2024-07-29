@@ -25,6 +25,9 @@
 ---@field LocalPlayerSound UBP_PalLocalPlayerSystemSound_C
 ABP_Player_Female_C = {}
 
+---@return ABP_Player_Female_C
+function ABP_Player_Female_C:get() end
+
 ---@return USkeletalMeshComponent
 function ABP_Player_Female_C:GetHeadMesh() end
 ---@param OutComponent TArray<USceneComponent>

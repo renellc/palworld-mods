@@ -9,6 +9,9 @@
 ---@field AngryAction UPalActionBase
 UBP_AlertByKilledFriendState_SerachAround_C = {}
 
+---@return UBP_AlertByKilledFriendState_SerachAround_C
+function UBP_AlertByKilledFriendState_SerachAround_C:get() end
+
 ---@param AICon APalAIController
 function UBP_AlertByKilledFriendState_SerachAround_C:GetControllerRef(AICon) end
 ---@param Hit boolean

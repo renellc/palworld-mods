@@ -9,6 +9,9 @@
 ---@field WBP_BossBattle_BossCutBase01 UWBP_BossBattle_BossCutBase01_C
 UWBP_BossDemoForest_C = {}
 
+---@return UWBP_BossDemoForest_C
+function UWBP_BossDemoForest_C:get() end
+
 function UWBP_BossDemoForest_C:OnStartEvent() end
 function UWBP_BossDemoForest_C:SetupText() end
 function UWBP_BossDemoForest_C:Finished_5237A44149AAD13ADBE5C9A87856B8C4() end

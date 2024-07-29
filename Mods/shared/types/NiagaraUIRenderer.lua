@@ -3,6 +3,9 @@
 ---@class ANiagaraUIActor : AActor
 ANiagaraUIActor = {}
 
+---@return ANiagaraUIActor
+function ANiagaraUIActor:get() end
+
 
 ---@class UNiagaraSystemWidget : UWidget
 ---@field NiagaraSystemReference UNiagaraSystem
@@ -17,6 +20,9 @@ ANiagaraUIActor = {}
 ---@field NiagaraActor ANiagaraUIActor
 ---@field NiagaraComponent UNiagaraUIComponent
 UNiagaraSystemWidget = {}
+
+---@return UNiagaraSystemWidget
+function UNiagaraSystemWidget:get() end
 
 ---@param NewTickWhenPaused boolean
 function UNiagaraSystemWidget:UpdateTickWhenPaused(NewTickWhenPaused) end
@@ -39,5 +45,8 @@ function UNiagaraSystemWidget:ActivateSystem(Reset) end
 
 ---@class UNiagaraUIComponent : UNiagaraComponent
 UNiagaraUIComponent = {}
+
+---@return UNiagaraUIComponent
+function UNiagaraUIComponent:get() end
 
 

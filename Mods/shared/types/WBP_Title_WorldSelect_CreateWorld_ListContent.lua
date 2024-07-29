@@ -12,6 +12,9 @@
 ---@field MsgId FDataTableRowHandle
 UWBP_Title_WorldSelect_CreateWorld_ListContent_C = {}
 
+---@return UWBP_Title_WorldSelect_CreateWorld_ListContent_C
+function UWBP_Title_WorldSelect_CreateWorld_ListContent_C:get() end
+
 function UWBP_Title_WorldSelect_CreateWorld_ListContent_C:ToMaxSaveDataMode() end
 ---@param DirectoryName FString
 function UWBP_Title_WorldSelect_CreateWorld_ListContent_C:GetBindedSaveDirectoryName(DirectoryName) end

@@ -7,6 +7,9 @@
 ---@field OnClicked FWBP_InventoryArrow_COnClicked
 UWBP_InventoryArrow_C = {}
 
+---@return UWBP_InventoryArrow_C
+function UWBP_InventoryArrow_C:get() end
+
 function UWBP_InventoryArrow_C:AnmEvent_Cursor() end
 ---@param EntryPoint int32
 function UWBP_InventoryArrow_C:ExecuteUbergraph_WBP_InventoryArrow(EntryPoint) end

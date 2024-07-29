@@ -28,6 +28,9 @@
 ---@field OverrideSliderStepValue double
 UWBP_Title_WorldSettings_ListContent_C = {}
 
+---@return UWBP_Title_WorldSettings_ListContent_C
+function UWBP_Title_WorldSettings_ListContent_C:get() end
+
 ---@param Text FText
 function UWBP_Title_WorldSettings_ListContent_C:GetButtonText(Text) end
 ---@param Text FText

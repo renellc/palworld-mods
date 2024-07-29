@@ -7,6 +7,9 @@
 ---@field Model UPalUILiftSlotModel
 UWBP_PalLiftItem_C = {}
 
+---@return UWBP_PalLiftItem_C
+function UWBP_PalLiftItem_C:get() end
+
 function UWBP_PalLiftItem_C:ShowSetup() end
 ---@param TargetHandleSlot UPalIndividualCharacterSlot
 function UWBP_PalLiftItem_C:OnUpdateHandleSlot(TargetHandleSlot) end

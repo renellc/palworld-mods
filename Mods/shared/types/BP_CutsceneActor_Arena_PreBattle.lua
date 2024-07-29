@@ -5,6 +5,9 @@
 ---@field PreBattleBindParameter UPalCutsceneArenaPreBattleBindParameter
 ABP_CutsceneActor_Arena_PreBattle_C = {}
 
+---@return ABP_CutsceneActor_Arena_PreBattle_C
+function ABP_CutsceneActor_Arena_PreBattle_C:get() end
+
 ---@param BindParameter UPalCutsceneBindParameter
 function ABP_CutsceneActor_Arena_PreBattle_C:SetBindParameter(BindParameter) end
 function ABP_CutsceneActor_Arena_PreBattle_C:OnPrePlayCutscene() end

@@ -8,6 +8,9 @@
 ---@field FadeOutCurve UCurveFloat
 UBP_VisualEffect_Status_Mud_C = {}
 
+---@return UBP_VisualEffect_Status_Mud_C
+function UBP_VisualEffect_Status_Mud_C:get() end
+
 function UBP_VisualEffect_Status_Mud_C:OnBeginVisualEffect() end
 function UBP_VisualEffect_Status_Mud_C:OnEndVisualEffect() end
 ---@param DeltaTime float

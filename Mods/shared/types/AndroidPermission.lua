@@ -4,10 +4,16 @@
 ---@field OnPermissionsGrantedDynamicDelegate FAndroidPermissionCallbackProxyOnPermissionsGrantedDynamicDelegate
 UAndroidPermissionCallbackProxy = {}
 
+---@return UAndroidPermissionCallbackProxy
+function UAndroidPermissionCallbackProxy:get() end
+
 
 
 ---@class UAndroidPermissionFunctionLibrary : UBlueprintFunctionLibrary
 UAndroidPermissionFunctionLibrary = {}
+
+---@return UAndroidPermissionFunctionLibrary
+function UAndroidPermissionFunctionLibrary:get() end
 
 ---@param Permission FString
 ---@return boolean

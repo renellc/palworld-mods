@@ -7,6 +7,9 @@
 ---@field PairBehaviorActionClass TSubclassOf<UBP_ActionPairBehaviorBase_C>
 UBP_AIActionPairCallBase_C = {}
 
+---@return UBP_AIActionPairCallBase_C
+function UBP_AIActionPairCallBase_C:get() end
+
 function UBP_AIActionPairCallBase_C:OnStartPair() end
 ---@param DynamicParameter FActionDynamicParameter
 function UBP_AIActionPairCallBase_C:CreatePairBehaviorActionDynamicParameter(DynamicParameter) end

@@ -13,6 +13,9 @@
 ---@field ShootTimer double
 UBP_DebugMissWaza_C = {}
 
+---@return UBP_DebugMissWaza_C
+function UBP_DebugMissWaza_C:get() end
+
 function UBP_DebugMissWaza_C:Shoot() end
 function UBP_DebugMissWaza_C:SetTransform() end
 function UBP_DebugMissWaza_C:OnBeginAction() end

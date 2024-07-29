@@ -3,6 +3,9 @@
 ---@class ILoadingProcessInterface : IInterface
 ILoadingProcessInterface = {}
 
+---@return ILoadingProcessInterface
+function ILoadingProcessInterface:get() end
+
 
 ---@class UCommonLoadingScreenSettings : UDeveloperSettingsBackedByCVars
 ---@field LoadingScreenWidget FSoftClassPath
@@ -16,10 +19,16 @@ ILoadingProcessInterface = {}
 ---@field ForceTickLoadingScreenEvenInEditor boolean
 UCommonLoadingScreenSettings = {}
 
+---@return UCommonLoadingScreenSettings
+function UCommonLoadingScreenSettings:get() end
+
 
 
 ---@class ULoadingProcessTask : UObject
 ULoadingProcessTask = {}
+
+---@return ULoadingProcessTask
+function ULoadingProcessTask:get() end
 
 function ULoadingProcessTask:Unregister() end
 ---@param InReason FString
@@ -32,6 +41,9 @@ function ULoadingProcessTask:CreateLoadingScreenProcessTask(WorldContextObject, 
 
 ---@class ULoadingScreenManager : UGameInstanceSubsystem
 ULoadingScreenManager = {}
+
+---@return ULoadingScreenManager
+function ULoadingScreenManager:get() end
 
 ---@return FString
 function ULoadingScreenManager:GetDebugReasonForShowingOrHidingLoadingScreen() end

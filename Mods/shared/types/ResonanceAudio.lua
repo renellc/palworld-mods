@@ -5,6 +5,9 @@
 ---@field Settings UResonanceAudioSpatializationSourceSettings
 AResonanceAudioDirectivityVisualizer = {}
 
+---@return AResonanceAudioDirectivityVisualizer
+function AResonanceAudioDirectivityVisualizer:get() end
+
 
 
 ---@class FResonanceAudioReverbPluginSettings
@@ -25,10 +28,16 @@ AResonanceAudioDirectivityVisualizer = {}
 ---@field ReverbBrightness float
 FResonanceAudioReverbPluginSettings = {}
 
+---@return FResonanceAudioReverbPluginSettings
+function FResonanceAudioReverbPluginSettings:get() end
+
 
 
 ---@class UResonanceAudioBlueprintFunctionLibrary : UBlueprintFunctionLibrary
 UResonanceAudioBlueprintFunctionLibrary = {}
+
+---@return UResonanceAudioBlueprintFunctionLibrary
+function UResonanceAudioBlueprintFunctionLibrary:get() end
 
 ---@param InPreset UResonanceAudioReverbPluginPreset
 function UResonanceAudioBlueprintFunctionLibrary:SetGlobalReverbPreset(InPreset) end
@@ -39,6 +48,9 @@ function UResonanceAudioBlueprintFunctionLibrary:GetGlobalReverbPreset() end
 ---@class UResonanceAudioReverbPluginPreset : USoundEffectSubmixPreset
 ---@field Settings FResonanceAudioReverbPluginSettings
 UResonanceAudioReverbPluginPreset = {}
+
+---@return UResonanceAudioReverbPluginPreset
+function UResonanceAudioReverbPluginPreset:get() end
 
 ---@param InRotation FQuat
 function UResonanceAudioReverbPluginPreset:SetRoomRotation(InRotation) end
@@ -67,11 +79,17 @@ function UResonanceAudioReverbPluginPreset:SetEnableRoomEffects(bInEnableRoomEff
 ---@field GlobalSourcePreset FSoftObjectPath
 UResonanceAudioSettings = {}
 
+---@return UResonanceAudioSettings
+function UResonanceAudioSettings:get() end
+
 
 
 ---@class UResonanceAudioSoundfieldSettings : USoundfieldEncodingSettingsBase
 ---@field RenderMode EResonanceRenderMode
 UResonanceAudioSoundfieldSettings = {}
+
+---@return UResonanceAudioSoundfieldSettings
+function UResonanceAudioSoundfieldSettings:get() end
 
 
 
@@ -86,6 +104,9 @@ UResonanceAudioSoundfieldSettings = {}
 ---@field minDistance float
 ---@field MaxDistance float
 UResonanceAudioSpatializationSourceSettings = {}
+
+---@return UResonanceAudioSpatializationSourceSettings
+function UResonanceAudioSpatializationSourceSettings:get() end
 
 ---@param InSpread float
 function UResonanceAudioSpatializationSourceSettings:SetSoundSourceSpread(InSpread) end

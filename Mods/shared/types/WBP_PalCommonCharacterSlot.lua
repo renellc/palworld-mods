@@ -32,6 +32,9 @@
 ---@field chachedLastHPPercent double
 UWBP_PalCommonCharacterSlot_C = {}
 
+---@return UWBP_PalCommonCharacterSlot_C
+function UWBP_PalCommonCharacterSlot_C:get() end
+
 function UWBP_PalCommonCharacterSlot_C:OnUpdateFavorite_Binded() end
 ---@param NowTimer double
 function UWBP_PalCommonCharacterSlot_C:OnUpdateReviveTimer_Binded(NowTimer) end

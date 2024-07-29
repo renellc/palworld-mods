@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ABP_AIController_CombatHeli_C = {}
 
+---@return ABP_AIController_CombatHeli_C
+function ABP_AIController_CombatHeli_C:get() end
+
 ---@param DeadInfo FPalDeadInfo
 ABP_AIController_CombatHeli_C['On Dead'] = function(DeadInfo) end
 ---@param PossessedPawn APawn

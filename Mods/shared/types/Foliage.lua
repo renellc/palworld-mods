@@ -3,6 +3,9 @@
 ---@class AInstancedFoliageActor : AISMPartitionActor
 AInstancedFoliageActor = {}
 
+---@return AInstancedFoliageActor
+function AInstancedFoliageActor:get() end
+
 
 ---@class AInteractiveFoliageActor : AStaticMeshActor
 ---@field CapsuleComponent UCapsuleComponent
@@ -21,6 +24,9 @@ AInstancedFoliageActor = {}
 ---@field Mass float
 AInteractiveFoliageActor = {}
 
+---@return AInteractiveFoliageActor
+function AInteractiveFoliageActor:get() end
+
 ---@param OverlappedComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
@@ -35,11 +41,17 @@ function AInteractiveFoliageActor:CapsuleTouched(OverlappedComp, Other, OtherCom
 ---@field DensityFalloff FFoliageDensityFalloff
 AProceduralFoliageBlockingVolume = {}
 
+---@return AProceduralFoliageBlockingVolume
+function AProceduralFoliageBlockingVolume:get() end
+
 
 
 ---@class AProceduralFoliageVolume : AVolume
 ---@field ProceduralComponent UProceduralFoliageComponent
 AProceduralFoliageVolume = {}
+
+---@return AProceduralFoliageVolume
+function AProceduralFoliageVolume:get() end
 
 
 
@@ -47,6 +59,9 @@ AProceduralFoliageVolume = {}
 ---@field bUseFalloffCurve boolean
 ---@field FalloffCurve FRuntimeFloatCurve
 FFoliageDensityFalloff = {}
+
+---@return FFoliageDensityFalloff
+function FFoliageDensityFalloff:get() end
 
 
 
@@ -57,6 +72,9 @@ FFoliageDensityFalloff = {}
 ---@field Type TSubclassOf<UFoliageType_InstancedStaticMesh>
 FFoliageTypeObject = {}
 
+---@return FFoliageTypeObject
+function FFoliageTypeObject:get() end
+
 
 
 ---@class FFoliageVertexColorChannelMask
@@ -64,6 +82,9 @@ FFoliageTypeObject = {}
 ---@field MaskThreshold float
 ---@field InvertMask boolean
 FFoliageVertexColorChannelMask = {}
+
+---@return FFoliageVertexColorChannelMask
+function FFoliageVertexColorChannelMask:get() end
 
 
 
@@ -75,6 +96,9 @@ FFoliageVertexColorChannelMask = {}
 ---@field Scale float
 ---@field Type UFoliageType
 FProceduralFoliageInstance = {}
+
+---@return FProceduralFoliageInstance
+function FProceduralFoliageInstance:get() end
 
 
 
@@ -90,6 +114,9 @@ FProceduralFoliageInstance = {}
 ---@field FoliageTypes TArray<UFoliageType>
 UFoliageEditPresetData = {}
 
+---@return UFoliageEditPresetData
+function UFoliageEditPresetData:get() end
+
 
 
 ---@class UFoliageInstancedStaticMeshComponent : UHierarchicalInstancedStaticMeshComponent
@@ -99,10 +126,16 @@ UFoliageEditPresetData = {}
 ---@field GenerationGuid FGuid
 UFoliageInstancedStaticMeshComponent = {}
 
+---@return UFoliageInstancedStaticMeshComponent
+function UFoliageInstancedStaticMeshComponent:get() end
+
 
 
 ---@class UFoliageStatistics : UBlueprintFunctionLibrary
 UFoliageStatistics = {}
+
+---@return UFoliageStatistics
+function UFoliageStatistics:get() end
 
 ---@param WorldContextObject UObject
 ---@param StaticMesh UStaticMesh
@@ -221,6 +254,9 @@ function UFoliageStatistics:FoliageOverlappingBoxCount(WorldContextObject, Stati
 ---@field VirtualTextureRenderPassType ERuntimeVirtualTextureMainPassType
 UFoliageType = {}
 
+---@return UFoliageType
+function UFoliageType:get() end
+
 
 
 ---@class UFoliageType_Actor : UFoliageType
@@ -229,6 +265,9 @@ UFoliageType = {}
 ---@field bStaticMeshOnly boolean
 ---@field StaticMeshOnlyComponentClass TSubclassOf<UFoliageInstancedStaticMeshComponent>
 UFoliageType_Actor = {}
+
+---@return UFoliageType_Actor
+function UFoliageType_Actor:get() end
 
 
 
@@ -239,14 +278,23 @@ UFoliageType_Actor = {}
 ---@field ComponentClass TSubclassOf<UFoliageInstancedStaticMeshComponent>
 UFoliageType_InstancedStaticMesh = {}
 
+---@return UFoliageType_InstancedStaticMesh
+function UFoliageType_InstancedStaticMesh:get() end
+
 
 
 ---@class UGrassInstancedStaticMeshComponent : UHierarchicalInstancedStaticMeshComponent
 UGrassInstancedStaticMeshComponent = {}
 
+---@return UGrassInstancedStaticMeshComponent
+function UGrassInstancedStaticMeshComponent:get() end
+
 
 ---@class UInteractiveFoliageComponent : UStaticMeshComponent
 UInteractiveFoliageComponent = {}
+
+---@return UInteractiveFoliageComponent
+function UInteractiveFoliageComponent:get() end
 
 
 ---@class UProceduralFoliageComponent : UActorComponent
@@ -255,6 +303,9 @@ UInteractiveFoliageComponent = {}
 ---@field SpawningVolume AVolume
 ---@field ProceduralGuid FGuid
 UProceduralFoliageComponent = {}
+
+---@return UProceduralFoliageComponent
+function UProceduralFoliageComponent:get() end
 
 
 
@@ -266,6 +317,9 @@ UProceduralFoliageComponent = {}
 ---@field FoliageTypes TArray<FFoliageTypeObject>
 UProceduralFoliageSpawner = {}
 
+---@return UProceduralFoliageSpawner
+function UProceduralFoliageSpawner:get() end
+
 ---@param NumSteps int32
 function UProceduralFoliageSpawner:Simulate(NumSteps) end
 
@@ -274,6 +328,9 @@ function UProceduralFoliageSpawner:Simulate(NumSteps) end
 ---@field FoliageSpawner UProceduralFoliageSpawner
 ---@field InstancesArray TArray<FProceduralFoliageInstance>
 UProceduralFoliageTile = {}
+
+---@return UProceduralFoliageTile
+function UProceduralFoliageTile:get() end
 
 
 

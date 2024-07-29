@@ -7,6 +7,9 @@
 ---@field VisitorNPCIncidentId FName
 UBP_PalInvaderManager_C = {}
 
+---@return UBP_PalInvaderManager_C
+function UBP_PalInvaderManager_C:get() end
+
 ---@param OccuredBaseCamp UObject
 ---@param Parameter UPalIncidentDynamicParameterInvader
 ---@return UPalInvaderIncidentBase

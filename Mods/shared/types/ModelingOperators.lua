@@ -4,6 +4,9 @@
 ---@field Settings URecomputeUVsToolProperties
 URecomputeUVsOpFactory = {}
 
+---@return URecomputeUVsOpFactory
+function URecomputeUVsOpFactory:get() end
+
 
 
 ---@class URecomputeUVsToolProperties : UInteractiveToolPropertySet
@@ -21,11 +24,17 @@ URecomputeUVsOpFactory = {}
 ---@field NormalizeScale float
 URecomputeUVsToolProperties = {}
 
+---@return URecomputeUVsToolProperties
+function URecomputeUVsToolProperties:get() end
+
 
 
 ---@class UUVLayoutOperatorFactory : UObject
 ---@field Settings UUVLayoutProperties
 UUVLayoutOperatorFactory = {}
+
+---@return UUVLayoutOperatorFactory
+function UUVLayoutOperatorFactory:get() end
 
 
 
@@ -36,6 +45,9 @@ UUVLayoutOperatorFactory = {}
 ---@field Translation FVector2D
 ---@field bAllowFlips boolean
 UUVLayoutProperties = {}
+
+---@return UUVLayoutProperties
+function UUVLayoutProperties:get() end
 
 
 

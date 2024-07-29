@@ -5,6 +5,9 @@
 ---@field DebugName FName
 FWwiseExternalSourceCookedData = {}
 
+---@return FWwiseExternalSourceCookedData
+function FWwiseExternalSourceCookedData:get() end
+
 
 
 ---@class FWwiseLanguageCookedData
@@ -12,6 +15,9 @@ FWwiseExternalSourceCookedData = {}
 ---@field LanguageName FName
 ---@field LanguageRequirement EWwiseLanguageRequirement
 FWwiseLanguageCookedData = {}
+
+---@return FWwiseLanguageCookedData
+function FWwiseLanguageCookedData:get() end
 
 
 
@@ -25,6 +31,9 @@ FWwiseLanguageCookedData = {}
 ---@field DebugName FName
 FWwiseMediaCookedData = {}
 
+---@return FWwiseMediaCookedData
+function FWwiseMediaCookedData:get() end
+
 
 
 ---@class FWwiseSoundBankCookedData
@@ -37,10 +46,16 @@ FWwiseMediaCookedData = {}
 ---@field DebugName FName
 FWwiseSoundBankCookedData = {}
 
+---@return FWwiseSoundBankCookedData
+function FWwiseSoundBankCookedData:get() end
+
 
 
 ---@class UWwiseExternalSourceStatics : UBlueprintFunctionLibrary
 UWwiseExternalSourceStatics = {}
+
+---@return UWwiseExternalSourceStatics
+function UWwiseExternalSourceStatics:get() end
 
 ---@param ExternalSourceCookie FAkUniqueID
 ---@param MediaId int32

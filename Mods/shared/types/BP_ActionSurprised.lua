@@ -6,6 +6,9 @@
 ---@field Timer double
 UBP_ActionSurprised_C = {}
 
+---@return UBP_ActionSurprised_C
+function UBP_ActionSurprised_C:get() end
+
 ---@param Angry boolean
 function UBP_ActionSurprised_C:ChangeFace(Angry) end
 function UBP_ActionSurprised_C:OnBeginAction() end

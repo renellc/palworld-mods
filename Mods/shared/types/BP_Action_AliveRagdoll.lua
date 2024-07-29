@@ -15,6 +15,9 @@
 ---@field StartHeight double
 UBP_Action_AliveRagdoll_C = {}
 
+---@return UBP_Action_AliveRagdoll_C
+function UBP_Action_AliveRagdoll_C:get() end
+
 function UBP_Action_AliveRagdoll_C:SetDefaultMeshTF() end
 ---@param SafeHeight boolean
 function UBP_Action_AliveRagdoll_C:ResetActorTransform(SafeHeight) end

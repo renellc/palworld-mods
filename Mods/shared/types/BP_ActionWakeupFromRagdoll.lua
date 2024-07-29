@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionWakeupFromRagdoll_C = {}
 
+---@return UBP_ActionWakeupFromRagdoll_C
+function UBP_ActionWakeupFromRagdoll_C:get() end
+
 function UBP_ActionWakeupFromRagdoll_C:GroundCheckAdjust() end
 ---@param NotifyName FName
 function UBP_ActionWakeupFromRagdoll_C:OnNotifyEnd_A0FD85AB4B6F54D9353E768175ABF7B9(NotifyName) end

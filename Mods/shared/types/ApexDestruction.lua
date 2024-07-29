@@ -5,6 +5,9 @@
 ---@field OnActorFracture FDestructibleActorOnActorFracture
 ADestructibleActor = {}
 
+---@return ADestructibleActor
+function ADestructibleActor:get() end
+
 
 
 ---@class FDestructibleAdvancedParameters
@@ -14,6 +17,9 @@ ADestructibleActor = {}
 ---@field FractureImpulseScale float
 FDestructibleAdvancedParameters = {}
 
+---@return FDestructibleAdvancedParameters
+function FDestructibleAdvancedParameters:get() end
+
 
 
 ---@class FDestructibleChunkParameters
@@ -22,6 +28,9 @@ FDestructibleAdvancedParameters = {}
 ---@field bDoNotDamage boolean
 ---@field bDoNotCrumble boolean
 FDestructibleChunkParameters = {}
+
+---@return FDestructibleChunkParameters
+function FDestructibleChunkParameters:get() end
 
 
 
@@ -35,6 +44,9 @@ FDestructibleChunkParameters = {}
 ---@field ImpactResistance float
 FDestructibleDamageParameters = {}
 
+---@return FDestructibleDamageParameters
+function FDestructibleDamageParameters:get() end
+
 
 
 ---@class FDestructibleDebrisParameters
@@ -45,11 +57,17 @@ FDestructibleDamageParameters = {}
 ---@field ValidBounds FBox
 FDestructibleDebrisParameters = {}
 
+---@return FDestructibleDebrisParameters
+function FDestructibleDebrisParameters:get() end
+
 
 
 ---@class FDestructibleDepthParameters
 ---@field ImpactDamageOverride EImpactDamageOverride
 FDestructibleDepthParameters = {}
+
+---@return FDestructibleDepthParameters
+function FDestructibleDepthParameters:get() end
 
 
 
@@ -61,6 +79,9 @@ FDestructibleDepthParameters = {}
 ---@field DepthParameters TArray<FDestructibleDepthParameters>
 ---@field Flags FDestructibleParametersFlag
 FDestructibleParameters = {}
+
+---@return FDestructibleParameters
+function FDestructibleParameters:get() end
 
 
 
@@ -76,6 +97,9 @@ FDestructibleParameters = {}
 ---@field bFormExtendedStructures boolean
 FDestructibleParametersFlag = {}
 
+---@return FDestructibleParametersFlag
+function FDestructibleParametersFlag:get() end
+
 
 
 ---@class FDestructibleSpecialHierarchyDepths
@@ -85,6 +109,9 @@ FDestructibleParametersFlag = {}
 ---@field DebrisDepth int32
 ---@field EssentialDepth int32
 FDestructibleSpecialHierarchyDepths = {}
+
+---@return FDestructibleSpecialHierarchyDepths
+function FDestructibleSpecialHierarchyDepths:get() end
 
 
 
@@ -96,6 +123,9 @@ FDestructibleSpecialHierarchyDepths = {}
 ---@field InteriorElementIndex int32
 FFractureMaterial = {}
 
+---@return FFractureMaterial
+function FFractureMaterial:get() end
+
 
 
 ---@class UDestructibleComponent : USkinnedMeshComponent
@@ -105,6 +135,9 @@ FFractureMaterial = {}
 ---@field LargeChunkThreshold float
 ---@field OnComponentFracture FDestructibleComponentOnComponentFracture
 UDestructibleComponent = {}
+
+---@return UDestructibleComponent
+function UDestructibleComponent:get() end
 
 ---@param NewMesh UDestructibleMesh
 function UDestructibleComponent:SetDestructibleMesh(NewMesh) end
@@ -133,12 +166,18 @@ function UDestructibleComponent:ApplyDamage(DamageAmount, HitLocation, ImpulseDi
 ---@field ChunkParameters TArray<FDestructibleChunkParameters>
 UDestructibleFractureSettings = {}
 
+---@return UDestructibleFractureSettings
+function UDestructibleFractureSettings:get() end
+
 
 
 ---@class UDestructibleMesh : USkeletalMesh
 ---@field DefaultDestructibleParameters FDestructibleParameters
 ---@field FractureEffects TArray<FFractureEffect>
 UDestructibleMesh = {}
+
+---@return UDestructibleMesh
+function UDestructibleMesh:get() end
 
 
 

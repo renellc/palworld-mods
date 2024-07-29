@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AINPC_CombatGunState_Reload_C = {}
 
+---@return UBP_AINPC_CombatGunState_Reload_C
+function UBP_AINPC_CombatGunState_Reload_C:get() end
+
 function UBP_AINPC_CombatGunState_Reload_C:StateEnter() end
 function UBP_AINPC_CombatGunState_Reload_C:StateExit() end
 ---@param EntryPoint int32

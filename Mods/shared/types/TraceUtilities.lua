@@ -3,6 +3,9 @@
 ---@class UTraceUtilLibrary : UBlueprintFunctionLibrary
 UTraceUtilLibrary = {}
 
+---@return UTraceUtilLibrary
+function UTraceUtilLibrary:get() end
+
 ---@param Name FString
 function UTraceUtilLibrary:TraceMarkRegionStart(Name) end
 ---@param Name FString

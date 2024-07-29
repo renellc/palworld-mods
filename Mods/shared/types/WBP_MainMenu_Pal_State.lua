@@ -14,6 +14,9 @@
 ---@field CurrentCondition EPalUIConditionType
 UWBP_MainMenu_Pal_State_C = {}
 
+---@return UWBP_MainMenu_Pal_State_C
+function UWBP_MainMenu_Pal_State_C:get() end
+
 function UWBP_MainMenu_Pal_State_C:Clear() end
 ---@param displayCondition EPalUIConditionType
 UWBP_MainMenu_Pal_State_C['Set Condition'] = function(displayCondition) end

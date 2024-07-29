@@ -10,9 +10,15 @@
 ---@field MaxPartySize int32
 FJoinabilitySettings = {}
 
+---@return FJoinabilitySettings
+function FJoinabilitySettings:get() end
+
 
 
 ---@class FUniqueNetIdWrapper
 FUniqueNetIdWrapper = {}
+
+---@return FUniqueNetIdWrapper
+function FUniqueNetIdWrapper:get() end
 
 

@@ -9,6 +9,9 @@
 ---@field Temp_DeltaTime double
 UBP_AINPC_CombatGunState_FireMove_C = {}
 
+---@return UBP_AINPC_CombatGunState_FireMove_C
+function UBP_AINPC_CombatGunState_FireMove_C:get() end
+
 function UBP_AINPC_CombatGunState_FireMove_C:AddShootTimer() end
 function UBP_AINPC_CombatGunState_FireMove_C:StateEnter() end
 ---@param DeltaTime float

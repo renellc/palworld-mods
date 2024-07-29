@@ -8,6 +8,9 @@
 ---@field OtomoHolder UBP_OtomoPalHolderComponent_C
 UBP_AIAction_NPC_Encount_C = {}
 
+---@return UBP_AIAction_NPC_Encount_C
+function UBP_AIAction_NPC_Encount_C:get() end
+
 ---@param ShooterComponent UPalShooterComponent
 function UBP_AIAction_NPC_Encount_C:GetShooter(ShooterComponent) end
 ---@param ControlledPawn APawn

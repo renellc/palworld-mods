@@ -8,6 +8,9 @@
 ---@field IsExploded boolean
 ABP_RocketBullet_C = {}
 
+---@return ABP_RocketBullet_C
+function ABP_RocketBullet_C:get() end
+
 ---@param ExplosionClass TSubclassOf<ABP_ExplosionAttackBase_C>
 function ABP_RocketBullet_C:GetExplosionClass(ExplosionClass) end
 ---@param HitComp UPrimitiveComponent

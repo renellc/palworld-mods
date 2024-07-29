@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Action_NPC_MeleeAttackWithGun_C = {}
 
+---@return UBP_Action_NPC_MeleeAttackWithGun_C
+function UBP_Action_NPC_MeleeAttackWithGun_C:get() end
+
 ---@param NotifyName FName
 function UBP_Action_NPC_MeleeAttackWithGun_C:OnNotifyEnd_18F6DF3D47B5756AF6D31082F414DE7D(NotifyName) end
 ---@param NotifyName FName

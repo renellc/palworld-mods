@@ -9,5 +9,8 @@
 ---@field Line_2 UImage
 UWBP_BossBattle_CutTri_C = {}
 
+---@return UWBP_BossBattle_CutTri_C
+function UWBP_BossBattle_CutTri_C:get() end
+
 
 

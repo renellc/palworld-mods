@@ -15,6 +15,9 @@
 ---@field TickInterval double
 UBP_VisualEffect_SpawnFromBallEmissive_C = {}
 
+---@return UBP_VisualEffect_SpawnFromBallEmissive_C
+function UBP_VisualEffect_SpawnFromBallEmissive_C:get() end
+
 ---@param Effect UNiagaraComponent
 ---@param Size EPalSizeType
 function UBP_VisualEffect_SpawnFromBallEmissive_C:ModifyEffectBySize(Effect, Size) end

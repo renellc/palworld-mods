@@ -8,10 +8,16 @@
 ---@field InternalRate FFrameRate
 FSequencerScriptingRange = {}
 
+---@return FSequencerScriptingRange
+function FSequencerScriptingRange:get() end
+
 
 
 ---@class UMovieSceneBindingExtensions : UBlueprintFunctionLibrary
 UMovieSceneBindingExtensions = {}
+
+---@return UMovieSceneBindingExtensions
+function UMovieSceneBindingExtensions:get() end
 
 ---@param InBinding FMovieSceneBindingProxy
 ---@param InParentBinding FMovieSceneBindingProxy
@@ -74,6 +80,9 @@ function UMovieSceneBindingExtensions:AddTrack(InBinding, TrackType) end
 ---@class UMovieSceneDoubleVectorTrackExtensions : UBlueprintFunctionLibrary
 UMovieSceneDoubleVectorTrackExtensions = {}
 
+---@return UMovieSceneDoubleVectorTrackExtensions
+function UMovieSceneDoubleVectorTrackExtensions:get() end
+
 ---@param Track UMovieSceneDoubleVectorTrack
 ---@param InNumChannelsUsed int32
 function UMovieSceneDoubleVectorTrackExtensions:SetNumChannelsUsed(Track, InNumChannelsUsed) end
@@ -84,6 +93,9 @@ function UMovieSceneDoubleVectorTrackExtensions:GetNumChannelsUsed(Track) end
 
 ---@class UMovieSceneEventTrackExtensions : UBlueprintFunctionLibrary
 UMovieSceneEventTrackExtensions = {}
+
+---@return UMovieSceneEventTrackExtensions
+function UMovieSceneEventTrackExtensions:get() end
 
 ---@param EventKey FMovieSceneEvent
 ---@return UClass
@@ -99,6 +111,9 @@ function UMovieSceneEventTrackExtensions:AddEventRepeaterSection(InTrack) end
 ---@class UMovieSceneFloatVectorTrackExtensions : UBlueprintFunctionLibrary
 UMovieSceneFloatVectorTrackExtensions = {}
 
+---@return UMovieSceneFloatVectorTrackExtensions
+function UMovieSceneFloatVectorTrackExtensions:get() end
+
 ---@param Track UMovieSceneFloatVectorTrack
 ---@param InNumChannelsUsed int32
 function UMovieSceneFloatVectorTrackExtensions:SetNumChannelsUsed(Track, InNumChannelsUsed) end
@@ -109,6 +124,9 @@ function UMovieSceneFloatVectorTrackExtensions:GetNumChannelsUsed(Track) end
 
 ---@class UMovieSceneFolderExtensions : UBlueprintFunctionLibrary
 UMovieSceneFolderExtensions = {}
+
+---@return UMovieSceneFolderExtensions
+function UMovieSceneFolderExtensions:get() end
 
 ---@param Folder UMovieSceneFolder
 ---@param InFolderName FName
@@ -162,6 +180,9 @@ function UMovieSceneFolderExtensions:AddChildFolder(TargetFolder, FolderToAdd) e
 ---@class UMovieSceneMaterialTrackExtensions : UBlueprintFunctionLibrary
 UMovieSceneMaterialTrackExtensions = {}
 
+---@return UMovieSceneMaterialTrackExtensions
+function UMovieSceneMaterialTrackExtensions:get() end
+
 ---@param Track UMovieSceneComponentMaterialTrack
 ---@param MaterialIndex int32
 function UMovieSceneMaterialTrackExtensions:SetMaterialIndex(Track, MaterialIndex) end
@@ -173,6 +194,9 @@ function UMovieSceneMaterialTrackExtensions:GetMaterialIndex(Track) end
 ---@class UMovieScenePrimitiveMaterialTrackExtensions : UBlueprintFunctionLibrary
 UMovieScenePrimitiveMaterialTrackExtensions = {}
 
+---@return UMovieScenePrimitiveMaterialTrackExtensions
+function UMovieScenePrimitiveMaterialTrackExtensions:get() end
+
 ---@param Track UMovieScenePrimitiveMaterialTrack
 ---@param MaterialIndex int32
 function UMovieScenePrimitiveMaterialTrackExtensions:SetMaterialIndex(Track, MaterialIndex) end
@@ -183,6 +207,9 @@ function UMovieScenePrimitiveMaterialTrackExtensions:GetMaterialIndex(Track) end
 
 ---@class UMovieScenePropertyTrackExtensions : UBlueprintFunctionLibrary
 UMovieScenePropertyTrackExtensions = {}
+
+---@return UMovieScenePropertyTrackExtensions
+function UMovieScenePropertyTrackExtensions:get() end
 
 ---@param Track UMovieScenePropertyTrack
 ---@param InPropertyName FName
@@ -214,6 +241,9 @@ function UMovieScenePropertyTrackExtensions:GetByteTrackEnum(Track) end
 ---@class UMovieSceneScriptingActorReferenceChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingActorReferenceChannel = {}
 
+---@return UMovieSceneScriptingActorReferenceChannel
+function UMovieSceneScriptingActorReferenceChannel:get() end
+
 ---@param InDefaultValue FMovieSceneObjectBindingID
 function UMovieSceneScriptingActorReferenceChannel:SetDefault(InDefaultValue) end
 ---@param Key UMovieSceneScriptingKey
@@ -236,6 +266,9 @@ function UMovieSceneScriptingActorReferenceChannel:AddKey(InTime, NewValue, SubF
 ---@class UMovieSceneScriptingActorReferenceKey : UMovieSceneScriptingKey
 UMovieSceneScriptingActorReferenceKey = {}
 
+---@return UMovieSceneScriptingActorReferenceKey
+function UMovieSceneScriptingActorReferenceKey:get() end
+
 ---@param InNewValue FMovieSceneObjectBindingID
 function UMovieSceneScriptingActorReferenceKey:SetValue(InNewValue) end
 ---@param NewFrameNumber FFrameNumber
@@ -252,9 +285,15 @@ function UMovieSceneScriptingActorReferenceKey:GetTime(TimeUnit) end
 ---@class UMovieSceneScriptingActualFloatKey : UMovieSceneScriptingFloatKey
 UMovieSceneScriptingActualFloatKey = {}
 
+---@return UMovieSceneScriptingActualFloatKey
+function UMovieSceneScriptingActualFloatKey:get() end
+
 
 ---@class UMovieSceneScriptingBoolChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingBoolChannel = {}
+
+---@return UMovieSceneScriptingBoolChannel
+function UMovieSceneScriptingBoolChannel:get() end
 
 ---@param InDefaultValue boolean
 function UMovieSceneScriptingBoolChannel:SetDefault(InDefaultValue) end
@@ -286,6 +325,9 @@ function UMovieSceneScriptingBoolChannel:AddKey(InTime, NewValue, SubFrame, Time
 ---@class UMovieSceneScriptingBoolKey : UMovieSceneScriptingKey
 UMovieSceneScriptingBoolKey = {}
 
+---@return UMovieSceneScriptingBoolKey
+function UMovieSceneScriptingBoolKey:get() end
+
 ---@param InNewValue boolean
 function UMovieSceneScriptingBoolKey:SetValue(InNewValue) end
 ---@param NewFrameNumber FFrameNumber
@@ -301,6 +343,9 @@ function UMovieSceneScriptingBoolKey:GetTime(TimeUnit) end
 
 ---@class UMovieSceneScriptingByteChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingByteChannel = {}
+
+---@return UMovieSceneScriptingByteChannel
+function UMovieSceneScriptingByteChannel:get() end
 
 ---@param InDefaultValue uint8
 function UMovieSceneScriptingByteChannel:SetDefault(InDefaultValue) end
@@ -325,6 +370,9 @@ function UMovieSceneScriptingByteChannel:AddKey(InTime, NewValue, SubFrame, Time
 ---@class UMovieSceneScriptingByteKey : UMovieSceneScriptingKey
 UMovieSceneScriptingByteKey = {}
 
+---@return UMovieSceneScriptingByteKey
+function UMovieSceneScriptingByteKey:get() end
+
 ---@param InNewValue uint8
 function UMovieSceneScriptingByteKey:SetValue(InNewValue) end
 ---@param NewFrameNumber FFrameNumber
@@ -342,14 +390,23 @@ function UMovieSceneScriptingByteKey:GetTime(TimeUnit) end
 ---@field ChannelName FName
 UMovieSceneScriptingChannel = {}
 
+---@return UMovieSceneScriptingChannel
+function UMovieSceneScriptingChannel:get() end
+
 
 
 ---@class UMovieSceneScriptingDoubleAsFloatKey : UMovieSceneScriptingFloatKey
 UMovieSceneScriptingDoubleAsFloatKey = {}
 
+---@return UMovieSceneScriptingDoubleAsFloatKey
+function UMovieSceneScriptingDoubleAsFloatKey:get() end
+
 
 ---@class UMovieSceneScriptingDoubleChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingDoubleChannel = {}
+
+---@return UMovieSceneScriptingDoubleChannel
+function UMovieSceneScriptingDoubleChannel:get() end
 
 ---@param InExtrapolation ERichCurveExtrapolation
 function UMovieSceneScriptingDoubleChannel:SetPreInfinityExtrapolation(InExtrapolation) end
@@ -389,6 +446,9 @@ function UMovieSceneScriptingDoubleChannel:AddKey(InTime, NewValue, SubFrame, Ti
 
 ---@class UMovieSceneScriptingDoubleKey : UMovieSceneScriptingKey
 UMovieSceneScriptingDoubleKey = {}
+
+---@return UMovieSceneScriptingDoubleKey
+function UMovieSceneScriptingDoubleKey:get() end
 
 ---@param InNewValue double
 function UMovieSceneScriptingDoubleKey:SetValue(InNewValue) end
@@ -434,6 +494,9 @@ function UMovieSceneScriptingDoubleKey:GetArriveTangent() end
 ---@class UMovieSceneScriptingEventChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingEventChannel = {}
 
+---@return UMovieSceneScriptingEventChannel
+function UMovieSceneScriptingEventChannel:get() end
+
 ---@param Key UMovieSceneScriptingKey
 function UMovieSceneScriptingEventChannel:RemoveKey(Key) end
 ---@return TArray<UMovieSceneScriptingKey>
@@ -448,6 +511,9 @@ function UMovieSceneScriptingEventChannel:AddKey(InTime, NewValue, SubFrame, Tim
 
 ---@class UMovieSceneScriptingEventKey : UMovieSceneScriptingKey
 UMovieSceneScriptingEventKey = {}
+
+---@return UMovieSceneScriptingEventKey
+function UMovieSceneScriptingEventKey:get() end
 
 ---@param InNewValue FMovieSceneEvent
 function UMovieSceneScriptingEventKey:SetValue(InNewValue) end
@@ -464,6 +530,9 @@ function UMovieSceneScriptingEventKey:GetTime(TimeUnit) end
 
 ---@class UMovieSceneScriptingFloatChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingFloatChannel = {}
+
+---@return UMovieSceneScriptingFloatChannel
+function UMovieSceneScriptingFloatChannel:get() end
 
 ---@param InExtrapolation ERichCurveExtrapolation
 function UMovieSceneScriptingFloatChannel:SetPreInfinityExtrapolation(InExtrapolation) end
@@ -503,6 +572,9 @@ function UMovieSceneScriptingFloatChannel:AddKey(InTime, NewValue, SubFrame, Tim
 
 ---@class UMovieSceneScriptingFloatKey : UMovieSceneScriptingKey
 UMovieSceneScriptingFloatKey = {}
+
+---@return UMovieSceneScriptingFloatKey
+function UMovieSceneScriptingFloatKey:get() end
 
 ---@param InNewValue float
 function UMovieSceneScriptingFloatKey:SetValue(InNewValue) end
@@ -548,6 +620,9 @@ function UMovieSceneScriptingFloatKey:GetArriveTangent() end
 ---@class UMovieSceneScriptingIntegerChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingIntegerChannel = {}
 
+---@return UMovieSceneScriptingIntegerChannel
+function UMovieSceneScriptingIntegerChannel:get() end
+
 ---@param InDefaultValue int32
 function UMovieSceneScriptingIntegerChannel:SetDefault(InDefaultValue) end
 ---@param Key UMovieSceneScriptingKey
@@ -570,6 +645,9 @@ function UMovieSceneScriptingIntegerChannel:AddKey(InTime, NewValue, SubFrame, T
 ---@class UMovieSceneScriptingIntegerKey : UMovieSceneScriptingKey
 UMovieSceneScriptingIntegerKey = {}
 
+---@return UMovieSceneScriptingIntegerKey
+function UMovieSceneScriptingIntegerKey:get() end
+
 ---@param InNewValue int32
 function UMovieSceneScriptingIntegerKey:SetValue(InNewValue) end
 ---@param NewFrameNumber FFrameNumber
@@ -586,9 +664,15 @@ function UMovieSceneScriptingIntegerKey:GetTime(TimeUnit) end
 ---@class UMovieSceneScriptingKey : UObject
 UMovieSceneScriptingKey = {}
 
+---@return UMovieSceneScriptingKey
+function UMovieSceneScriptingKey:get() end
+
 
 ---@class UMovieSceneScriptingObjectPathChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingObjectPathChannel = {}
+
+---@return UMovieSceneScriptingObjectPathChannel
+function UMovieSceneScriptingObjectPathChannel:get() end
 
 ---@param InDefaultValue UObject
 function UMovieSceneScriptingObjectPathChannel:SetDefault(InDefaultValue) end
@@ -612,6 +696,9 @@ function UMovieSceneScriptingObjectPathChannel:AddKey(InTime, NewValue, SubFrame
 ---@class UMovieSceneScriptingObjectPathKey : UMovieSceneScriptingKey
 UMovieSceneScriptingObjectPathKey = {}
 
+---@return UMovieSceneScriptingObjectPathKey
+function UMovieSceneScriptingObjectPathKey:get() end
+
 ---@param InNewValue UObject
 function UMovieSceneScriptingObjectPathKey:SetValue(InNewValue) end
 ---@param NewFrameNumber FFrameNumber
@@ -627,6 +714,9 @@ function UMovieSceneScriptingObjectPathKey:GetTime(TimeUnit) end
 
 ---@class UMovieSceneScriptingStringChannel : UMovieSceneScriptingChannel
 UMovieSceneScriptingStringChannel = {}
+
+---@return UMovieSceneScriptingStringChannel
+function UMovieSceneScriptingStringChannel:get() end
 
 ---@param InDefaultValue FString
 function UMovieSceneScriptingStringChannel:SetDefault(InDefaultValue) end
@@ -650,6 +740,9 @@ function UMovieSceneScriptingStringChannel:AddKey(InTime, NewValue, SubFrame, Ti
 ---@class UMovieSceneScriptingStringKey : UMovieSceneScriptingKey
 UMovieSceneScriptingStringKey = {}
 
+---@return UMovieSceneScriptingStringKey
+function UMovieSceneScriptingStringKey:get() end
+
 ---@param InNewValue FString
 function UMovieSceneScriptingStringKey:SetValue(InNewValue) end
 ---@param NewFrameNumber FFrameNumber
@@ -665,6 +758,9 @@ function UMovieSceneScriptingStringKey:GetTime(TimeUnit) end
 
 ---@class UMovieSceneSectionExtensions : UBlueprintFunctionLibrary
 UMovieSceneSectionExtensions = {}
+
+---@return UMovieSceneSectionExtensions
+function UMovieSceneSectionExtensions:get() end
 
 ---@param Section UMovieSceneSection
 ---@param StartTime float
@@ -751,6 +847,9 @@ function UMovieSceneSectionExtensions:FindChannelsByType(Section, ChannelType) e
 
 ---@class UMovieSceneSequenceExtensions : UBlueprintFunctionLibrary
 UMovieSceneSequenceExtensions = {}
+
+---@return UMovieSceneSequenceExtensions
+function UMovieSceneSequenceExtensions:get() end
 
 ---@param Sequence UMovieSceneSequence
 function UMovieSceneSequenceExtensions:SortMarkedFrames(Sequence) end
@@ -968,6 +1067,9 @@ function UMovieSceneSequenceExtensions:AddMarkedFrame(Sequence, InMarkedFrame) e
 ---@class UMovieSceneTrackExtensions : UBlueprintFunctionLibrary
 UMovieSceneTrackExtensions = {}
 
+---@return UMovieSceneTrackExtensions
+function UMovieSceneTrackExtensions:get() end
+
 ---@param Track UMovieSceneTrack
 ---@param InName FText
 ---@param RowIndex int32
@@ -1013,6 +1115,9 @@ function UMovieSceneTrackExtensions:AddSection(Track) end
 
 ---@class USequencerScriptingRangeExtensions : UBlueprintFunctionLibrary
 USequencerScriptingRangeExtensions = {}
+
+---@return USequencerScriptingRangeExtensions
+function USequencerScriptingRangeExtensions:get() end
 
 ---@param Range FSequencerScriptingRange
 ---@param Start float

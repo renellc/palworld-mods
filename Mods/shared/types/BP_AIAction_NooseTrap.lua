@@ -7,6 +7,9 @@
 ---@field PlayedAction UPalActionBase
 UBP_AIAction_NooseTrap_C = {}
 
+---@return UBP_AIAction_NooseTrap_C
+function UBP_AIAction_NooseTrap_C:get() end
+
 ---@param ControlledPawn APawn
 function UBP_AIAction_NooseTrap_C:ActionStart(ControlledPawn) end
 ---@param ControlledPawn APawn

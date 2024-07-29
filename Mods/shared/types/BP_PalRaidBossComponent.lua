@@ -5,6 +5,9 @@
 ---@field VolumeActor AActor
 UBP_PalRaidBossComponent_C = {}
 
+---@return UBP_PalRaidBossComponent_C
+function UBP_PalRaidBossComponent_C:get() end
+
 function UBP_PalRaidBossComponent_C:DespawnVolume() end
 UBP_PalRaidBossComponent_C['Spawn Volume'] = function() end
 ---@param ID FPalInstanceID

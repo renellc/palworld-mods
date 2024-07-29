@@ -4,6 +4,9 @@
 ---@field FieldSystemComponent UFieldSystemComponent
 AFieldSystemActor = {}
 
+---@return AFieldSystemActor
+function AFieldSystemActor:get() end
+
 
 
 ---@class FFieldObjectCommands
@@ -11,6 +14,9 @@ AFieldSystemActor = {}
 ---@field RootNodes TArray<UFieldNodeBase>
 ---@field MetaDatas TArray<UFieldSystemMetaData>
 FFieldObjectCommands = {}
+
+---@return FFieldObjectCommands
+function FFieldObjectCommands:get() end
 
 
 
@@ -22,6 +28,9 @@ FFieldObjectCommands = {}
 ---@field Transform FTransform
 ---@field Falloff EFieldFalloffType
 UBoxFalloff = {}
+
+---@return UBoxFalloff
+function UBoxFalloff:get() end
 
 ---@param Magnitude float
 ---@param MinRange float
@@ -39,6 +48,9 @@ function UBoxFalloff:SetBoxFalloff(Magnitude, MinRange, MaxRange, Default, Trans
 ---@field Operation EFieldCullingOperationType
 UCullingField = {}
 
+---@return UCullingField
+function UCullingField:get() end
+
 ---@param Culling UFieldNodeBase
 ---@param Field UFieldNodeBase
 ---@param Operation EFieldCullingOperationType
@@ -49,21 +61,36 @@ function UCullingField:SetCullingField(Culling, Field, Operation) end
 ---@class UFieldNodeBase : UActorComponent
 UFieldNodeBase = {}
 
+---@return UFieldNodeBase
+function UFieldNodeBase:get() end
+
 
 ---@class UFieldNodeFloat : UFieldNodeBase
 UFieldNodeFloat = {}
+
+---@return UFieldNodeFloat
+function UFieldNodeFloat:get() end
 
 
 ---@class UFieldNodeInt : UFieldNodeBase
 UFieldNodeInt = {}
 
+---@return UFieldNodeInt
+function UFieldNodeInt:get() end
+
 
 ---@class UFieldNodeVector : UFieldNodeBase
 UFieldNodeVector = {}
 
+---@return UFieldNodeVector
+function UFieldNodeVector:get() end
+
 
 ---@class UFieldSystem : UObject
 UFieldSystem = {}
+
+---@return UFieldSystem
+function UFieldSystem:get() end
 
 
 ---@class UFieldSystemComponent : UPrimitiveComponent
@@ -74,6 +101,9 @@ UFieldSystem = {}
 ---@field ConstructionCommands FFieldObjectCommands
 ---@field BufferCommands FFieldObjectCommands
 UFieldSystemComponent = {}
+
+---@return UFieldSystemComponent
+function UFieldSystemComponent:get() end
 
 function UFieldSystemComponent:ResetFieldSystem() end
 function UFieldSystemComponent:RemovePersistentFields() end
@@ -126,12 +156,18 @@ function UFieldSystemComponent:AddFieldCommand(Enabled, Target, MetaData, Field)
 ---@class UFieldSystemMetaData : UActorComponent
 UFieldSystemMetaData = {}
 
+---@return UFieldSystemMetaData
+function UFieldSystemMetaData:get() end
+
 
 ---@class UFieldSystemMetaDataFilter : UFieldSystemMetaData
 ---@field FilterType EFieldFilterType
 ---@field ObjectType EFieldObjectType
 ---@field PositionType EFieldPositionType
 UFieldSystemMetaDataFilter = {}
+
+---@return UFieldSystemMetaDataFilter
+function UFieldSystemMetaDataFilter:get() end
 
 ---@param FilterType EFieldFilterType
 ---@param ObjectType EFieldObjectType
@@ -144,6 +180,9 @@ function UFieldSystemMetaDataFilter:SetMetaDataFilterType(FilterType, ObjectType
 ---@field Iterations int32
 UFieldSystemMetaDataIteration = {}
 
+---@return UFieldSystemMetaDataIteration
+function UFieldSystemMetaDataIteration:get() end
+
 ---@param Iterations int32
 ---@return UFieldSystemMetaDataIteration
 function UFieldSystemMetaDataIteration:SetMetaDataIteration(Iterations) end
@@ -152,6 +191,9 @@ function UFieldSystemMetaDataIteration:SetMetaDataIteration(Iterations) end
 ---@class UFieldSystemMetaDataProcessingResolution : UFieldSystemMetaData
 ---@field ResolutionType EFieldResolutionType
 UFieldSystemMetaDataProcessingResolution = {}
+
+---@return UFieldSystemMetaDataProcessingResolution
+function UFieldSystemMetaDataProcessingResolution:get() end
 
 ---@param ResolutionType EFieldResolutionType
 ---@return UFieldSystemMetaDataProcessingResolution
@@ -163,6 +205,9 @@ function UFieldSystemMetaDataProcessingResolution:SetMetaDataaProcessingResoluti
 ---@field MaxRange float
 ---@field Transform FTransform
 UNoiseField = {}
+
+---@return UNoiseField
+function UNoiseField:get() end
 
 ---@param MinRange float
 ---@param MaxRange float
@@ -177,6 +222,9 @@ function UNoiseField:SetNoiseField(MinRange, MaxRange, Transform) end
 ---@field LeftField UFieldNodeBase
 ---@field Operation EFieldOperationType
 UOperatorField = {}
+
+---@return UOperatorField
+function UOperatorField:get() end
 
 ---@param Magnitude float
 ---@param LeftField UFieldNodeBase
@@ -196,6 +244,9 @@ function UOperatorField:SetOperatorField(Magnitude, LeftField, RightField, Opera
 ---@field Normal FVector
 ---@field Falloff EFieldFalloffType
 UPlaneFalloff = {}
+
+---@return UPlaneFalloff
+function UPlaneFalloff:get() end
 
 ---@param Magnitude float
 ---@param MinRange float
@@ -219,6 +270,9 @@ function UPlaneFalloff:SetPlaneFalloff(Magnitude, MinRange, MaxRange, Default, D
 ---@field Falloff EFieldFalloffType
 URadialFalloff = {}
 
+---@return URadialFalloff
+function URadialFalloff:get() end
+
 ---@param Magnitude float
 ---@param MinRange float
 ---@param MaxRange float
@@ -238,6 +292,9 @@ function URadialFalloff:SetRadialFalloff(Magnitude, MinRange, MaxRange, Default,
 ---@field SetMaskCondition ESetMaskConditionType
 URadialIntMask = {}
 
+---@return URadialIntMask
+function URadialIntMask:get() end
+
 ---@param Radius float
 ---@param Position FVector
 ---@param InteriorValue int32
@@ -252,6 +309,9 @@ function URadialIntMask:SetRadialIntMask(Radius, Position, InteriorValue, Exteri
 ---@field Position FVector
 URadialVector = {}
 
+---@return URadialVector
+function URadialVector:get() end
+
 ---@param Magnitude float
 ---@param Position FVector
 ---@return URadialVector
@@ -262,6 +322,9 @@ function URadialVector:SetRadialVector(Magnitude, Position) end
 ---@field Magnitude float
 URandomVector = {}
 
+---@return URandomVector
+function URandomVector:get() end
+
 ---@param Magnitude float
 ---@return URandomVector
 function URandomVector:SetRandomVector(Magnitude) end
@@ -271,12 +334,18 @@ function URandomVector:SetRandomVector(Magnitude) end
 UReturnResultsTerminal = {}
 
 ---@return UReturnResultsTerminal
+function UReturnResultsTerminal:get() end
+
+---@return UReturnResultsTerminal
 function UReturnResultsTerminal:SetReturnResultsTerminal() end
 
 
 ---@class UToFloatField : UFieldNodeFloat
 ---@field IntField UFieldNodeInt
 UToFloatField = {}
+
+---@return UToFloatField
+function UToFloatField:get() end
 
 ---@param IntegerField UFieldNodeInt
 ---@return UToFloatField
@@ -287,6 +356,9 @@ function UToFloatField:SetToFloatField(IntegerField) end
 ---@field FloatField UFieldNodeFloat
 UToIntegerField = {}
 
+---@return UToIntegerField
+function UToIntegerField:get() end
+
 ---@param FloatField UFieldNodeFloat
 ---@return UToIntegerField
 function UToIntegerField:SetToIntegerField(FloatField) end
@@ -295,6 +367,9 @@ function UToIntegerField:SetToIntegerField(FloatField) end
 ---@class UUniformInteger : UFieldNodeInt
 ---@field Magnitude int32
 UUniformInteger = {}
+
+---@return UUniformInteger
+function UUniformInteger:get() end
 
 ---@param Magnitude int32
 ---@return UUniformInteger
@@ -305,6 +380,9 @@ function UUniformInteger:SetUniformInteger(Magnitude) end
 ---@field Magnitude float
 UUniformScalar = {}
 
+---@return UUniformScalar
+function UUniformScalar:get() end
+
 ---@param Magnitude float
 ---@return UUniformScalar
 function UUniformScalar:SetUniformScalar(Magnitude) end
@@ -314,6 +392,9 @@ function UUniformScalar:SetUniformScalar(Magnitude) end
 ---@field Magnitude float
 ---@field Direction FVector
 UUniformVector = {}
+
+---@return UUniformVector
+function UUniformVector:get() end
 
 ---@param Magnitude float
 ---@param Direction FVector
@@ -329,6 +410,9 @@ function UUniformVector:SetUniformVector(Magnitude, Direction) end
 ---@field Function EWaveFunctionType
 ---@field Falloff EFieldFalloffType
 UWaveScalar = {}
+
+---@return UWaveScalar
+function UWaveScalar:get() end
 
 ---@param Magnitude float
 ---@param Position FVector

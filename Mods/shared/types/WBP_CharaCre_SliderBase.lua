@@ -8,6 +8,9 @@
 ---@field MsgId FDataTableRowHandle
 UWBP_CharaCre_SliderBase_C = {}
 
+---@return UWBP_CharaCre_SliderBase_C
+function UWBP_CharaCre_SliderBase_C:get() end
+
 ---@param NewValue int32
 function UWBP_CharaCre_SliderBase_C:SetValue(NewValue) end
 function UWBP_CharaCre_SliderBase_C:OnInitialized() end

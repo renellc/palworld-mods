@@ -12,6 +12,9 @@
 ---@field Type int32
 FChaosDestructionEvent = {}
 
+---@return FChaosDestructionEvent
+function FChaosDestructionEvent:get() end
+
 
 
 ---@class UNiagaraDataInterfaceChaosDestruction : UNiagaraDataInterface
@@ -65,15 +68,24 @@ FChaosDestructionEvent = {}
 ---@field TimeStampOfLastProcessedData float
 UNiagaraDataInterfaceChaosDestruction = {}
 
+---@return UNiagaraDataInterfaceChaosDestruction
+function UNiagaraDataInterfaceChaosDestruction:get() end
+
 
 
 ---@class UNiagaraDataInterfaceGeometryCollection : UNiagaraDataInterface
 ---@field GeometryCollectionActor AGeometryCollectionActor
 UNiagaraDataInterfaceGeometryCollection = {}
 
+---@return UNiagaraDataInterfaceGeometryCollection
+function UNiagaraDataInterfaceGeometryCollection:get() end
+
 
 
 ---@class UNiagaraDataInterfacePhysicsField : UNiagaraDataInterface
 UNiagaraDataInterfacePhysicsField = {}
+
+---@return UNiagaraDataInterfacePhysicsField
+function UNiagaraDataInterfacePhysicsField:get() end
 
 

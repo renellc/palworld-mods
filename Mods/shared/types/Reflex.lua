@@ -3,6 +3,9 @@
 ---@class UReflexBlueprintLibrary : UBlueprintFunctionLibrary
 UReflexBlueprintLibrary = {}
 
+---@return UReflexBlueprintLibrary
+function UReflexBlueprintLibrary:get() end
+
 ---@param Mode EReflexMode
 function UReflexBlueprintLibrary:SetReflexMode(Mode) end
 ---@param bEnabled boolean

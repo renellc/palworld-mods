@@ -11,12 +11,18 @@
 ---@field OutputGainDb float
 FDynamicsBandSettings = {}
 
+---@return FDynamicsBandSettings
+function FDynamicsBandSettings:get() end
+
 
 
 ---@class FEpicSynth1Patch
 ---@field PatchSource ESynth1PatchSource
 ---@field PatchCables TArray<FSynth1PatchCable>
 FEpicSynth1Patch = {}
+
+---@return FEpicSynth1Patch
+function FEpicSynth1Patch:get() end
 
 
 
@@ -82,6 +88,9 @@ FEpicSynth1Patch = {}
 ---@field Patches TArray<FEpicSynth1Patch>
 FModularSynthPreset = {}
 
+---@return FModularSynthPreset
+function FModularSynthPreset:get() end
+
 
 
 ---@class FModularSynthPresetBankEntry
@@ -89,11 +98,17 @@ FModularSynthPreset = {}
 ---@field Preset FModularSynthPreset
 FModularSynthPresetBankEntry = {}
 
+---@return FModularSynthPresetBankEntry
+function FModularSynthPresetBankEntry:get() end
+
 
 
 ---@class FPatchId
 ---@field ID int32
 FPatchId = {}
+
+---@return FPatchId
+function FPatchId:get() end
 
 
 
@@ -101,6 +116,9 @@ FPatchId = {}
 ---@field SampleRate float
 ---@field BitDepth float
 FSourceEffectBitCrusherBaseSettings = {}
+
+---@return FSourceEffectBitCrusherBaseSettings
+function FSourceEffectBitCrusherBaseSettings:get() end
 
 
 
@@ -110,6 +128,9 @@ FSourceEffectBitCrusherBaseSettings = {}
 ---@field CrushedBits float
 ---@field BitModulation FSoundModulationDestinationSettings
 FSourceEffectBitCrusherSettings = {}
+
+---@return FSourceEffectBitCrusherSettings
+function FSourceEffectBitCrusherSettings:get() end
 
 
 
@@ -121,6 +142,9 @@ FSourceEffectBitCrusherSettings = {}
 ---@field DryLevel float
 ---@field Spread float
 FSourceEffectChorusBaseSettings = {}
+
+---@return FSourceEffectChorusBaseSettings
+function FSourceEffectChorusBaseSettings:get() end
 
 
 
@@ -139,6 +163,9 @@ FSourceEffectChorusBaseSettings = {}
 ---@field SpreadModulation FSoundModulationDestinationSettings
 FSourceEffectChorusSettings = {}
 
+---@return FSourceEffectChorusSettings
+function FSourceEffectChorusSettings:get() end
+
 
 
 ---@class FSourceEffectConvolutionReverbSettings
@@ -147,6 +174,9 @@ FSourceEffectChorusSettings = {}
 ---@field DryVolumeDb float
 ---@field bBypass boolean
 FSourceEffectConvolutionReverbSettings = {}
+
+---@return FSourceEffectConvolutionReverbSettings
+function FSourceEffectConvolutionReverbSettings:get() end
 
 
 
@@ -165,6 +195,9 @@ FSourceEffectConvolutionReverbSettings = {}
 ---@field bAnalogMode boolean
 FSourceEffectDynamicsProcessorSettings = {}
 
+---@return FSourceEffectDynamicsProcessorSettings
+function FSourceEffectDynamicsProcessorSettings:get() end
+
 
 
 ---@class FSourceEffectEQBand
@@ -174,11 +207,17 @@ FSourceEffectDynamicsProcessorSettings = {}
 ---@field bEnabled boolean
 FSourceEffectEQBand = {}
 
+---@return FSourceEffectEQBand
+function FSourceEffectEQBand:get() end
+
 
 
 ---@class FSourceEffectEQSettings
 ---@field EQBands TArray<FSourceEffectEQBand>
 FSourceEffectEQSettings = {}
+
+---@return FSourceEffectEQSettings
+function FSourceEffectEQSettings:get() end
 
 
 
@@ -188,6 +227,9 @@ FSourceEffectEQSettings = {}
 ---@field PeakMode EEnvelopeFollowerPeakMode
 ---@field bIsAnalogMode boolean
 FSourceEffectEnvelopeFollowerSettings = {}
+
+---@return FSourceEffectEnvelopeFollowerSettings
+function FSourceEffectEnvelopeFollowerSettings:get() end
 
 
 
@@ -203,6 +245,9 @@ FSourceEffectEnvelopeFollowerSettings = {}
 ---@field MaxResonanceModulation float
 FSourceEffectFilterAudioBusModulationSettings = {}
 
+---@return FSourceEffectFilterAudioBusModulationSettings
+function FSourceEffectFilterAudioBusModulationSettings:get() end
+
 
 
 ---@class FSourceEffectFilterSettings
@@ -213,6 +258,9 @@ FSourceEffectFilterAudioBusModulationSettings = {}
 ---@field AudioBusModulation TArray<FSourceEffectFilterAudioBusModulationSettings>
 FSourceEffectFilterSettings = {}
 
+---@return FSourceEffectFilterSettings
+function FSourceEffectFilterSettings:get() end
+
 
 
 ---@class FSourceEffectFoldbackDistortionSettings
@@ -220,6 +268,9 @@ FSourceEffectFilterSettings = {}
 ---@field ThresholdDb float
 ---@field OutputGainDb float
 FSourceEffectFoldbackDistortionSettings = {}
+
+---@return FSourceEffectFoldbackDistortionSettings
+function FSourceEffectFoldbackDistortionSettings:get() end
 
 
 
@@ -230,6 +281,9 @@ FSourceEffectFoldbackDistortionSettings = {}
 ---@field FilterQ float
 FSourceEffectIndividualFilterSettings = {}
 
+---@return FSourceEffectIndividualFilterSettings
+function FSourceEffectIndividualFilterSettings:get() end
+
 
 
 ---@class FSourceEffectMidSideSpreaderSettings
@@ -238,6 +292,9 @@ FSourceEffectIndividualFilterSettings = {}
 ---@field OutputMode EStereoChannelMode
 ---@field bEqualPower boolean
 FSourceEffectMidSideSpreaderSettings = {}
+
+---@return FSourceEffectMidSideSpreaderSettings
+function FSourceEffectMidSideSpreaderSettings:get() end
 
 
 
@@ -248,6 +305,9 @@ FSourceEffectMidSideSpreaderSettings = {}
 ---@field ModulationOutputMaximumRange FVector2D
 ---@field UpdateEaseMS float
 FSourceEffectMotionFilterModulationSettings = {}
+
+---@return FSourceEffectMotionFilterModulationSettings
+function FSourceEffectMotionFilterModulationSettings:get() end
 
 
 
@@ -260,12 +320,18 @@ FSourceEffectMotionFilterModulationSettings = {}
 ---@field DryVolumeDb float
 FSourceEffectMotionFilterSettings = {}
 
+---@return FSourceEffectMotionFilterSettings
+function FSourceEffectMotionFilterSettings:get() end
+
 
 
 ---@class FSourceEffectPannerSettings
 ---@field Spread float
 ---@field Pan float
 FSourceEffectPannerSettings = {}
+
+---@return FSourceEffectPannerSettings
+function FSourceEffectPannerSettings:get() end
 
 
 
@@ -276,6 +342,9 @@ FSourceEffectPannerSettings = {}
 ---@field LFOType EPhaserLFOType
 ---@field UseQuadraturePhase boolean
 FSourceEffectPhaserSettings = {}
+
+---@return FSourceEffectPhaserSettings
+function FSourceEffectPhaserSettings:get() end
 
 
 
@@ -288,6 +357,9 @@ FSourceEffectPhaserSettings = {}
 ---@field AudioBusModulator UAudioBus
 FSourceEffectRingModulationSettings = {}
 
+---@return FSourceEffectRingModulationSettings
+function FSourceEffectRingModulationSettings:get() end
+
 
 
 ---@class FSourceEffectSimpleDelaySettings
@@ -299,6 +371,9 @@ FSourceEffectRingModulationSettings = {}
 ---@field bDelayBasedOnDistance boolean
 ---@field bUseDistanceOverride boolean
 FSourceEffectSimpleDelaySettings = {}
+
+---@return FSourceEffectSimpleDelaySettings
+function FSourceEffectSimpleDelaySettings:get() end
 
 
 
@@ -315,12 +390,18 @@ FSourceEffectSimpleDelaySettings = {}
 ---@field FilterQ float
 FSourceEffectStereoDelaySettings = {}
 
+---@return FSourceEffectStereoDelaySettings
+function FSourceEffectStereoDelaySettings:get() end
+
 
 
 ---@class FSourceEffectWaveShaperSettings
 ---@field Amount float
 ---@field OutputGainDb float
 FSourceEffectWaveShaperSettings = {}
+
+---@return FSourceEffectWaveShaperSettings
+function FSourceEffectWaveShaperSettings:get() end
 
 
 
@@ -339,6 +420,9 @@ FSourceEffectWaveShaperSettings = {}
 ---@field AllowHardwareAcceleration boolean
 FSubmixEffectConvolutionReverbSettings = {}
 
+---@return FSubmixEffectConvolutionReverbSettings
+function FSubmixEffectConvolutionReverbSettings:get() end
+
 
 
 ---@class FSubmixEffectDelaySettings
@@ -346,6 +430,9 @@ FSubmixEffectConvolutionReverbSettings = {}
 ---@field InterpolationTime float
 ---@field DelayLength float
 FSubmixEffectDelaySettings = {}
+
+---@return FSubmixEffectDelaySettings
+function FSubmixEffectDelaySettings:get() end
 
 
 
@@ -356,6 +443,9 @@ FSubmixEffectDelaySettings = {}
 ---@field FilterQ float
 FSubmixEffectFilterSettings = {}
 
+---@return FSubmixEffectFilterSettings
+function FSubmixEffectFilterSettings:get() end
+
 
 
 ---@class FSubmixEffectFlexiverbSettings
@@ -364,6 +454,9 @@ FSubmixEffectFilterSettings = {}
 ---@field RoomDampening float
 ---@field Complexity int32
 FSubmixEffectFlexiverbSettings = {}
+
+---@return FSubmixEffectFlexiverbSettings
+function FSubmixEffectFlexiverbSettings:get() end
 
 
 
@@ -383,6 +476,9 @@ FSubmixEffectFlexiverbSettings = {}
 ---@field Bands TArray<FDynamicsBandSettings>
 FSubmixEffectMultibandCompressorSettings = {}
 
+---@return FSubmixEffectMultibandCompressorSettings
+function FSubmixEffectMultibandCompressorSettings:get() end
+
 
 
 ---@class FSubmixEffectStereoDelaySettings
@@ -398,6 +494,9 @@ FSubmixEffectMultibandCompressorSettings = {}
 ---@field FilterQ float
 FSubmixEffectStereoDelaySettings = {}
 
+---@return FSubmixEffectStereoDelaySettings
+function FSubmixEffectStereoDelaySettings:get() end
+
 
 
 ---@class FSubmixEffectTapDelaySettings
@@ -406,12 +505,18 @@ FSubmixEffectStereoDelaySettings = {}
 ---@field Taps TArray<FTapDelayInfo>
 FSubmixEffectTapDelaySettings = {}
 
+---@return FSubmixEffectTapDelaySettings
+function FSubmixEffectTapDelaySettings:get() end
+
 
 
 ---@class FSynth1PatchCable
 ---@field Depth float
 ---@field Destination ESynth1PatchDestination
 FSynth1PatchCable = {}
+
+---@return FSynth1PatchCable
+function FSynth1PatchCable:get() end
 
 
 
@@ -423,6 +528,9 @@ FSynth1PatchCable = {}
 ---@field BackgroundImage FSlateBrush
 ---@field BarThickness float
 FSynth2DSliderStyle = {}
+
+---@return FSynth2DSliderStyle
+function FSynth2DSliderStyle:get() end
 
 
 
@@ -436,12 +544,18 @@ FSynth2DSliderStyle = {}
 ---@field KnobSize ESynthKnobSize
 FSynthKnobStyle = {}
 
+---@return FSynthKnobStyle
+function FSynthKnobStyle:get() end
+
 
 
 ---@class FSynthSlateStyle : FSlateWidgetStyle
 ---@field SizeType ESynthSlateSizeType
 ---@field ColorStyle ESynthSlateColorStyle
 FSynthSlateStyle = {}
+
+---@return FSynthSlateStyle
+function FSynthSlateStyle:get() end
 
 
 
@@ -454,6 +568,9 @@ FSynthSlateStyle = {}
 ---@field TapId int32
 FTapDelayInfo = {}
 
+---@return FTapDelayInfo
+function FTapDelayInfo:get() end
+
 
 
 ---@class UAudioImpulseResponse : UObject
@@ -465,17 +582,26 @@ FTapDelayInfo = {}
 ---@field IRData TArray<float>
 UAudioImpulseResponse = {}
 
+---@return UAudioImpulseResponse
+function UAudioImpulseResponse:get() end
+
 
 
 ---@class UEnvelopeFollowerListener : UActorComponent
 ---@field OnEnvelopeFollowerUpdate FEnvelopeFollowerListenerOnEnvelopeFollowerUpdate
 UEnvelopeFollowerListener = {}
 
+---@return UEnvelopeFollowerListener
+function UEnvelopeFollowerListener:get() end
+
 
 
 ---@class UGranularSynth : USynthComponent
 ---@field GranulatedSoundWave USoundWave
 UGranularSynth = {}
+
+---@return UGranularSynth
+function UGranularSynth:get() end
 
 ---@param SustainGain float
 function UGranularSynth:SetSustainGain(SustainGain) end
@@ -531,6 +657,9 @@ function UGranularSynth:GetCurrentPlayheadTime() end
 ---@class UModularSynthComponent : USynthComponent
 ---@field VoiceCount int32
 UModularSynthComponent = {}
+
+---@return UModularSynthComponent
+function UModularSynthComponent:get() end
 
 ---@param SynthPreset FModularSynthPreset
 function UModularSynthComponent:SetSynthPreset(SynthPreset) end
@@ -679,6 +808,9 @@ function UModularSynthComponent:CreatePatch(PatchSource, PatchCables, bEnableByD
 ---@class UModularSynthLibrary : UBlueprintFunctionLibrary
 UModularSynthLibrary = {}
 
+---@return UModularSynthLibrary
+function UModularSynthLibrary:get() end
+
 ---@param InBank UModularSynthPresetBank
 ---@param Preset FModularSynthPreset
 ---@param PresetName FString
@@ -688,6 +820,9 @@ function UModularSynthLibrary:AddModularSynthPresetToBankAsset(InBank, Preset, P
 ---@class UModularSynthPresetBank : UObject
 ---@field Presets TArray<FModularSynthPresetBankEntry>
 UModularSynthPresetBank = {}
+
+---@return UModularSynthPresetBank
+function UModularSynthPresetBank:get() end
 
 
 
@@ -700,11 +835,17 @@ UModularSynthPresetBank = {}
 ---@field bNormalizeWaveTables boolean
 UMonoWaveTableSynthPreset = {}
 
+---@return UMonoWaveTableSynthPreset
+function UMonoWaveTableSynthPreset:get() end
+
 
 
 ---@class USourceEffectBitCrusherPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectBitCrusherSettings
 USourceEffectBitCrusherPreset = {}
+
+---@return USourceEffectBitCrusherPreset
+function USourceEffectBitCrusherPreset:get() end
 
 ---@param Settings FSourceEffectBitCrusherBaseSettings
 function USourceEffectBitCrusherPreset:SetSettings(Settings) end
@@ -727,6 +868,9 @@ function USourceEffectBitCrusherPreset:SetBitModulator(Modulator) end
 ---@class USourceEffectChorusPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectChorusSettings
 USourceEffectChorusPreset = {}
+
+---@return USourceEffectChorusPreset
+function USourceEffectChorusPreset:get() end
 
 ---@param Modulators TSet<USoundModulatorBase>
 function USourceEffectChorusPreset:SetWetModulators(Modulators) end
@@ -777,6 +921,9 @@ function USourceEffectChorusPreset:SetDepth(Depth) end
 ---@field bEnableHardwareAcceleration boolean
 USourceEffectConvolutionReverbPreset = {}
 
+---@return USourceEffectConvolutionReverbPreset
+function USourceEffectConvolutionReverbPreset:get() end
+
 ---@param InSettings FSourceEffectConvolutionReverbSettings
 function USourceEffectConvolutionReverbPreset:SetSettings(InSettings) end
 ---@param InImpulseResponse UAudioImpulseResponse
@@ -787,6 +934,9 @@ function USourceEffectConvolutionReverbPreset:SetImpulseResponse(InImpulseRespon
 ---@field Settings FSourceEffectDynamicsProcessorSettings
 USourceEffectDynamicsProcessorPreset = {}
 
+---@return USourceEffectDynamicsProcessorPreset
+function USourceEffectDynamicsProcessorPreset:get() end
+
 ---@param InSettings FSourceEffectDynamicsProcessorSettings
 function USourceEffectDynamicsProcessorPreset:SetSettings(InSettings) end
 
@@ -795,6 +945,9 @@ function USourceEffectDynamicsProcessorPreset:SetSettings(InSettings) end
 ---@field Settings FSourceEffectEQSettings
 USourceEffectEQPreset = {}
 
+---@return USourceEffectEQPreset
+function USourceEffectEQPreset:get() end
+
 ---@param InSettings FSourceEffectEQSettings
 function USourceEffectEQPreset:SetSettings(InSettings) end
 
@@ -802,6 +955,9 @@ function USourceEffectEQPreset:SetSettings(InSettings) end
 ---@class USourceEffectEnvelopeFollowerPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectEnvelopeFollowerSettings
 USourceEffectEnvelopeFollowerPreset = {}
+
+---@return USourceEffectEnvelopeFollowerPreset
+function USourceEffectEnvelopeFollowerPreset:get() end
 
 ---@param EnvelopeFollowerListener UEnvelopeFollowerListener
 function USourceEffectEnvelopeFollowerPreset:UnregisterEnvelopeFollowerListener(EnvelopeFollowerListener) end
@@ -815,6 +971,9 @@ function USourceEffectEnvelopeFollowerPreset:RegisterEnvelopeFollowerListener(En
 ---@field Settings FSourceEffectFilterSettings
 USourceEffectFilterPreset = {}
 
+---@return USourceEffectFilterPreset
+function USourceEffectFilterPreset:get() end
+
 ---@param InSettings FSourceEffectFilterSettings
 function USourceEffectFilterPreset:SetSettings(InSettings) end
 
@@ -822,6 +981,9 @@ function USourceEffectFilterPreset:SetSettings(InSettings) end
 ---@class USourceEffectFoldbackDistortionPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectFoldbackDistortionSettings
 USourceEffectFoldbackDistortionPreset = {}
+
+---@return USourceEffectFoldbackDistortionPreset
+function USourceEffectFoldbackDistortionPreset:get() end
 
 ---@param InSettings FSourceEffectFoldbackDistortionSettings
 function USourceEffectFoldbackDistortionPreset:SetSettings(InSettings) end
@@ -831,6 +993,9 @@ function USourceEffectFoldbackDistortionPreset:SetSettings(InSettings) end
 ---@field Settings FSourceEffectMidSideSpreaderSettings
 USourceEffectMidSideSpreaderPreset = {}
 
+---@return USourceEffectMidSideSpreaderPreset
+function USourceEffectMidSideSpreaderPreset:get() end
+
 ---@param InSettings FSourceEffectMidSideSpreaderSettings
 function USourceEffectMidSideSpreaderPreset:SetSettings(InSettings) end
 
@@ -838,6 +1003,9 @@ function USourceEffectMidSideSpreaderPreset:SetSettings(InSettings) end
 ---@class USourceEffectMotionFilterPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectMotionFilterSettings
 USourceEffectMotionFilterPreset = {}
+
+---@return USourceEffectMotionFilterPreset
+function USourceEffectMotionFilterPreset:get() end
 
 ---@param InSettings FSourceEffectMotionFilterSettings
 function USourceEffectMotionFilterPreset:SetSettings(InSettings) end
@@ -847,6 +1015,9 @@ function USourceEffectMotionFilterPreset:SetSettings(InSettings) end
 ---@field Settings FSourceEffectPannerSettings
 USourceEffectPannerPreset = {}
 
+---@return USourceEffectPannerPreset
+function USourceEffectPannerPreset:get() end
+
 ---@param InSettings FSourceEffectPannerSettings
 function USourceEffectPannerPreset:SetSettings(InSettings) end
 
@@ -854,6 +1025,9 @@ function USourceEffectPannerPreset:SetSettings(InSettings) end
 ---@class USourceEffectPhaserPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectPhaserSettings
 USourceEffectPhaserPreset = {}
+
+---@return USourceEffectPhaserPreset
+function USourceEffectPhaserPreset:get() end
 
 ---@param InSettings FSourceEffectPhaserSettings
 function USourceEffectPhaserPreset:SetSettings(InSettings) end
@@ -863,6 +1037,9 @@ function USourceEffectPhaserPreset:SetSettings(InSettings) end
 ---@field Settings FSourceEffectRingModulationSettings
 USourceEffectRingModulationPreset = {}
 
+---@return USourceEffectRingModulationPreset
+function USourceEffectRingModulationPreset:get() end
+
 ---@param InSettings FSourceEffectRingModulationSettings
 function USourceEffectRingModulationPreset:SetSettings(InSettings) end
 
@@ -870,6 +1047,9 @@ function USourceEffectRingModulationPreset:SetSettings(InSettings) end
 ---@class USourceEffectSimpleDelayPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectSimpleDelaySettings
 USourceEffectSimpleDelayPreset = {}
+
+---@return USourceEffectSimpleDelayPreset
+function USourceEffectSimpleDelayPreset:get() end
 
 ---@param InSettings FSourceEffectSimpleDelaySettings
 function USourceEffectSimpleDelayPreset:SetSettings(InSettings) end
@@ -879,6 +1059,9 @@ function USourceEffectSimpleDelayPreset:SetSettings(InSettings) end
 ---@field Settings FSourceEffectStereoDelaySettings
 USourceEffectStereoDelayPreset = {}
 
+---@return USourceEffectStereoDelayPreset
+function USourceEffectStereoDelayPreset:get() end
+
 ---@param InSettings FSourceEffectStereoDelaySettings
 function USourceEffectStereoDelayPreset:SetSettings(InSettings) end
 
@@ -886,6 +1069,9 @@ function USourceEffectStereoDelayPreset:SetSettings(InSettings) end
 ---@class USourceEffectWaveShaperPreset : USoundEffectSourcePreset
 ---@field Settings FSourceEffectWaveShaperSettings
 USourceEffectWaveShaperPreset = {}
+
+---@return USourceEffectWaveShaperPreset
+function USourceEffectWaveShaperPreset:get() end
 
 ---@param InSettings FSourceEffectWaveShaperSettings
 function USourceEffectWaveShaperPreset:SetSettings(InSettings) end
@@ -898,6 +1084,9 @@ function USourceEffectWaveShaperPreset:SetSettings(InSettings) end
 ---@field bEnableHardwareAcceleration boolean
 USubmixEffectConvolutionReverbPreset = {}
 
+---@return USubmixEffectConvolutionReverbPreset
+function USubmixEffectConvolutionReverbPreset:get() end
+
 ---@param InSettings FSubmixEffectConvolutionReverbSettings
 function USubmixEffectConvolutionReverbPreset:SetSettings(InSettings) end
 ---@param InImpulseResponse UAudioImpulseResponse
@@ -908,6 +1097,9 @@ function USubmixEffectConvolutionReverbPreset:SetImpulseResponse(InImpulseRespon
 ---@field Settings FSubmixEffectDelaySettings
 ---@field DynamicSettings FSubmixEffectDelaySettings
 USubmixEffectDelayPreset = {}
+
+---@return USubmixEffectDelayPreset
+function USubmixEffectDelayPreset:get() end
 
 ---@param InSettings FSubmixEffectDelaySettings
 function USubmixEffectDelayPreset:SetSettings(InSettings) end
@@ -923,6 +1115,9 @@ function USubmixEffectDelayPreset:GetMaxDelayInMilliseconds() end
 
 ---@class USubmixEffectDelayStatics : UBlueprintFunctionLibrary
 USubmixEffectDelayStatics = {}
+
+---@return USubmixEffectDelayStatics
+function USubmixEffectDelayStatics:get() end
 
 ---@param DelaySettings FSubmixEffectDelaySettings
 ---@param MaximumDelayLength float
@@ -941,6 +1136,9 @@ function USubmixEffectDelayStatics:SetDelayLength(DelaySettings, DelayLength) en
 ---@class USubmixEffectFilterPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectFilterSettings
 USubmixEffectFilterPreset = {}
+
+---@return USubmixEffectFilterPreset
+function USubmixEffectFilterPreset:get() end
 
 ---@param InSettings FSubmixEffectFilterSettings
 function USubmixEffectFilterPreset:SetSettings(InSettings) end
@@ -962,6 +1160,9 @@ function USubmixEffectFilterPreset:SetFilterAlgorithm(InAlgorithm) end
 ---@field Settings FSubmixEffectFlexiverbSettings
 USubmixEffectFlexiverbPreset = {}
 
+---@return USubmixEffectFlexiverbPreset
+function USubmixEffectFlexiverbPreset:get() end
+
 ---@param InSettings FSubmixEffectFlexiverbSettings
 function USubmixEffectFlexiverbPreset:SetSettings(InSettings) end
 
@@ -969,6 +1170,9 @@ function USubmixEffectFlexiverbPreset:SetSettings(InSettings) end
 ---@class USubmixEffectMultibandCompressorPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectMultibandCompressorSettings
 USubmixEffectMultibandCompressorPreset = {}
+
+---@return USubmixEffectMultibandCompressorPreset
+function USubmixEffectMultibandCompressorPreset:get() end
 
 ---@param InSettings FSubmixEffectMultibandCompressorSettings
 function USubmixEffectMultibandCompressorPreset:SetSettings(InSettings) end
@@ -983,6 +1187,9 @@ function USubmixEffectMultibandCompressorPreset:ResetKey() end
 ---@field Settings FSubmixEffectStereoDelaySettings
 USubmixEffectStereoDelayPreset = {}
 
+---@return USubmixEffectStereoDelayPreset
+function USubmixEffectStereoDelayPreset:get() end
+
 ---@param InSettings FSubmixEffectStereoDelaySettings
 function USubmixEffectStereoDelayPreset:SetSettings(InSettings) end
 
@@ -990,6 +1197,9 @@ function USubmixEffectStereoDelayPreset:SetSettings(InSettings) end
 ---@class USubmixEffectTapDelayPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectTapDelaySettings
 USubmixEffectTapDelayPreset = {}
+
+---@return USubmixEffectTapDelayPreset
+function USubmixEffectTapDelayPreset:get() end
 
 ---@param TapId int32
 ---@param TapInfo FTapDelayInfo
@@ -1030,6 +1240,9 @@ function USubmixEffectTapDelayPreset:AddTap(TapId) end
 ---@field OnValueChangedY FSynth2DSliderOnValueChangedY
 USynth2DSlider = {}
 
+---@return USynth2DSlider
+function USynth2DSlider:get() end
+
 ---@param InValue FVector2D
 function USynth2DSlider:SetValue(InValue) end
 ---@param InValue float
@@ -1049,6 +1262,9 @@ function USynth2DSlider:GetValue() end
 ---@field OnNumTablesChanged FSynthComponentMonoWaveTableOnNumTablesChanged
 ---@field CurrentPreset UMonoWaveTableSynthPreset
 USynthComponentMonoWaveTable = {}
+
+---@return USynthComponentMonoWaveTable
+function USynthComponentMonoWaveTable:get() end
 
 ---@param InPosition float
 function USynthComponentMonoWaveTable:SetWaveTablePosition(InPosition) end
@@ -1157,6 +1373,9 @@ function USynthComponentMonoWaveTable:GetCurveTangent(TableIndex) end
 ---@field AttenuationDbAtMaxRange float
 USynthComponentToneGenerator = {}
 
+---@return USynthComponentToneGenerator
+function USynthComponentToneGenerator:get() end
+
 ---@param InVolume float
 function USynthComponentToneGenerator:SetVolume(InVolume) end
 ---@param InFrequency float
@@ -1182,6 +1401,9 @@ function USynthComponentToneGenerator:SetFrequency(InFrequency) end
 ---@field OnValueChanged FSynthKnobOnValueChanged
 USynthKnob = {}
 
+---@return USynthKnob
+function USynthKnob:get() end
+
 ---@param InValue float
 function USynthKnob:SetValue(InValue) end
 ---@param InValue float
@@ -1197,6 +1419,9 @@ function USynthKnob:GetValue() end
 ---@field OnSampleLoaded FSynthSamplePlayerOnSampleLoaded
 ---@field OnSamplePlaybackProgress FSynthSamplePlayerOnSamplePlaybackProgress
 USynthSamplePlayer = {}
+
+---@return USynthSamplePlayer
+function USynthSamplePlayer:get() end
 
 ---@param InSoundWave USoundWave
 function USynthSamplePlayer:SetSoundWave(InSoundWave) end
@@ -1223,6 +1448,9 @@ function USynthSamplePlayer:GetCurrentPlaybackProgressPercent() end
 
 ---@class USynthesisUtilitiesBlueprintFunctionLibrary : UBlueprintFunctionLibrary
 USynthesisUtilitiesBlueprintFunctionLibrary = {}
+
+---@return USynthesisUtilitiesBlueprintFunctionLibrary
+function USynthesisUtilitiesBlueprintFunctionLibrary:get() end
 
 ---@param InLinearValue float
 ---@param InDomainMin float

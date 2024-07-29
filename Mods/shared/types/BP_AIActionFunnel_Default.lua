@@ -5,6 +5,9 @@
 ---@field SkillModule UPalFunnelSkillModule
 UBP_AIActionFunnel_Default_C = {}
 
+---@return UBP_AIActionFunnel_Default_C
+function UBP_AIActionFunnel_Default_C:get() end
+
 ---@param FunnelSkillModuleClass TSubclassOf<UPalFunnelSkillModule>
 function UBP_AIActionFunnel_Default_C:CreateSkillActionModule(FunnelSkillModuleClass) end
 ---@return boolean

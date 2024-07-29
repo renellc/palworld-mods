@@ -7,6 +7,9 @@
 ---@field ChangeEffectAsset UNiagaraSystem
 UBP_VisualEffect_ChangeElementBase_C = {}
 
+---@return UBP_VisualEffect_ChangeElementBase_C
+function UBP_VisualEffect_ChangeElementBase_C:get() end
+
 function UBP_VisualEffect_ChangeElementBase_C:DeleteEffect() end
 function UBP_VisualEffect_ChangeElementBase_C:SpawnhEffect() end
 ---@param Intensity double

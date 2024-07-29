@@ -11,6 +11,9 @@
 ---@field MouseSensitivityScale_Yaw float
 AArchVisCharacter = {}
 
+---@return AArchVisCharacter
+function AArchVisCharacter:get() end
+
 
 
 ---@class UArchVisCharMovementComponent : UCharacterMovementComponent
@@ -23,6 +26,9 @@ AArchVisCharacter = {}
 ---@field WalkingSpeed float
 ---@field WalkingAcceleration float
 UArchVisCharMovementComponent = {}
+
+---@return UArchVisCharMovementComponent
+function UArchVisCharMovementComponent:get() end
 
 
 

@@ -8,6 +8,9 @@
 ---@field DisplayViewDirection EOpenColorIOViewTransformDirection
 FOpenColorIOColorConversionSettings = {}
 
+---@return FOpenColorIOColorConversionSettings
+function FOpenColorIOColorConversionSettings:get() end
+
 
 
 ---@class FOpenColorIOColorSpace
@@ -16,12 +19,18 @@ FOpenColorIOColorConversionSettings = {}
 ---@field FamilyName FString
 FOpenColorIOColorSpace = {}
 
+---@return FOpenColorIOColorSpace
+function FOpenColorIOColorSpace:get() end
+
 
 
 ---@class FOpenColorIODisplayConfiguration
 ---@field bIsEnabled boolean
 ---@field ColorConfiguration FOpenColorIOColorConversionSettings
 FOpenColorIODisplayConfiguration = {}
+
+---@return FOpenColorIODisplayConfiguration
+function FOpenColorIODisplayConfiguration:get() end
 
 
 
@@ -30,10 +39,16 @@ FOpenColorIODisplayConfiguration = {}
 ---@field View FString
 FOpenColorIODisplayView = {}
 
+---@return FOpenColorIODisplayView
+function FOpenColorIODisplayView:get() end
+
 
 
 ---@class UOpenColorIOBlueprintLibrary : UBlueprintFunctionLibrary
 UOpenColorIOBlueprintLibrary = {}
+
+---@return UOpenColorIOBlueprintLibrary
+function UOpenColorIOBlueprintLibrary:get() end
 
 ---@param WorldContextObject UObject
 ---@param ConversionSettings FOpenColorIOColorConversionSettings
@@ -54,6 +69,9 @@ function UOpenColorIOBlueprintLibrary:ApplyColorSpaceTransform(WorldContextObjec
 ---@field Textures TMap<int32, UTexture>
 UOpenColorIOColorTransform = {}
 
+---@return UOpenColorIOColorTransform
+function UOpenColorIOColorTransform:get() end
+
 
 
 ---@class UOpenColorIOConfiguration : UObject
@@ -63,10 +81,16 @@ UOpenColorIOColorTransform = {}
 ---@field ColorTransforms TArray<UOpenColorIOColorTransform>
 UOpenColorIOConfiguration = {}
 
+---@return UOpenColorIOConfiguration
+function UOpenColorIOConfiguration:get() end
+
 
 
 ---@class UOpenColorIODisplayExtensionWrapper : UObject
 UOpenColorIODisplayExtensionWrapper = {}
+
+---@return UOpenColorIODisplayExtensionWrapper
+function UOpenColorIODisplayExtensionWrapper:get() end
 
 ---@param IsActiveFunctions TArray<FSceneViewExtensionIsActiveFunctor>
 function UOpenColorIODisplayExtensionWrapper:SetSceneExtensionIsActiveFunctions(IsActiveFunctions) end
@@ -88,6 +112,9 @@ function UOpenColorIODisplayExtensionWrapper:CreateInGameOpenColorIODisplayExten
 ---@field bUseLegacyProcessor boolean
 ---@field bUse32fLUT boolean
 UOpenColorIOSettings = {}
+
+---@return UOpenColorIOSettings
+function UOpenColorIOSettings:get() end
 
 
 

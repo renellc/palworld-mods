@@ -5,6 +5,9 @@
 ---@field Sequencer UPalBossBattleSequencer
 UPalBossBattleSequence_Ending_C = {}
 
+---@return UPalBossBattleSequence_Ending_C
+function UPalBossBattleSequence_Ending_C:get() end
+
 function UPalBossBattleSequence_Ending_C:Gift() end
 function UPalBossBattleSequence_Ending_C:OnBeginSequence() end
 ---@param EntryPoint int32

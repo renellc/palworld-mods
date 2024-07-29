@@ -15,6 +15,9 @@
 ---@field IsShortRayLength boolean
 UBP_Action_WaitLoadingWorldPartition_C = {}
 
+---@return UBP_Action_WaitLoadingWorldPartition_C
+function UBP_Action_WaitLoadingWorldPartition_C:get() end
+
 ---@param DeltaTime double
 ---@param IsEnd boolean
 function UBP_Action_WaitLoadingWorldPartition_C:CheckEndAction(DeltaTime, IsEnd) end

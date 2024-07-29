@@ -3,6 +3,9 @@
 ---@class UAutomationUtilsBlueprintLibrary : UBlueprintFunctionLibrary
 UAutomationUtilsBlueprintLibrary = {}
 
+---@return UAutomationUtilsBlueprintLibrary
+function UAutomationUtilsBlueprintLibrary:get() end
+
 ---@param ScreenshotName FString
 ---@param MaxGlobalError float
 ---@param MaxLocalError float

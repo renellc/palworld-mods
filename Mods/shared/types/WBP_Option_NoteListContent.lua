@@ -11,6 +11,9 @@
 ---@field Title FName
 UWBP_Option_NoteListContent_C = {}
 
+---@return UWBP_Option_NoteListContent_C
+function UWBP_Option_NoteListContent_C:get() end
+
 ---@param Title FName
 ---@param IsChecked boolean
 ---@param Desc FText

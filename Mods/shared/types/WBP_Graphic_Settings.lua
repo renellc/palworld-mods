@@ -38,6 +38,9 @@
 ---@field DLSSMap TMap<int32, UDLSSMode>
 UWBP_Graphic_Settings_C = {}
 
+---@return UWBP_Graphic_Settings_C
+function UWBP_Graphic_Settings_C:get() end
+
 ---@param GraphicLevel FPalOptionGraphicsSettings
 ---@param Graphics___ EPalOptionGraphicsLevel
 function UWBP_Graphic_Settings_C:GetDisplayGraphicLevel(GraphicLevel, Graphics___) end

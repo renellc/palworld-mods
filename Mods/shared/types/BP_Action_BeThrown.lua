@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Action_BeThrown_C = {}
 
+---@return UBP_Action_BeThrown_C
+function UBP_Action_BeThrown_C:get() end
+
 function UBP_Action_BeThrown_C:PlayThrownFX() end
 function UBP_Action_BeThrown_C:PlayThrownMontage() end
 ---@param EntryPoint int32

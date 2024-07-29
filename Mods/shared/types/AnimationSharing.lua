@@ -7,6 +7,9 @@
 ---@field Enabled FPerPlatformBool
 FAnimationSetup = {}
 
+---@return FAnimationSetup
+function FAnimationSetup:get() end
+
 
 
 ---@class FAnimationSharingScalability
@@ -15,6 +18,9 @@ FAnimationSetup = {}
 ---@field MaximumNumberConcurrentBlends FPerPlatformInt
 ---@field TickSignificanceValue FPerPlatformFloat
 FAnimationSharingScalability = {}
+
+---@return FAnimationSharingScalability
+function FAnimationSharingScalability:get() end
 
 
 
@@ -32,6 +38,9 @@ FAnimationSharingScalability = {}
 ---@field bRequiresCurves boolean
 FAnimationStateEntry = {}
 
+---@return FAnimationStateEntry
+function FAnimationStateEntry:get() end
+
 
 
 ---@class FPerSkeletonAnimationSharingSetup
@@ -43,10 +52,16 @@ FAnimationStateEntry = {}
 ---@field AnimationStates TArray<FAnimationStateEntry>
 FPerSkeletonAnimationSharingSetup = {}
 
+---@return FPerSkeletonAnimationSharingSetup
+function FPerSkeletonAnimationSharingSetup:get() end
+
 
 
 ---@class FTickAnimationSharingFunction : FTickFunction
 FTickAnimationSharingFunction = {}
+
+---@return FTickAnimationSharingFunction
+function FTickAnimationSharingFunction:get() end
 
 
 ---@class UAnimSharingAdditiveInstance : UAnimInstance
@@ -55,6 +70,9 @@ FTickAnimationSharingFunction = {}
 ---@field Alpha float
 ---@field bStateBool boolean
 UAnimSharingAdditiveInstance = {}
+
+---@return UAnimSharingAdditiveInstance
+function UAnimSharingAdditiveInstance:get() end
 
 
 
@@ -66,6 +84,9 @@ UAnimSharingAdditiveInstance = {}
 ---@field SharingActor AActor
 UAnimSharingInstance = {}
 
+---@return UAnimSharingInstance
+function UAnimSharingInstance:get() end
+
 
 
 ---@class UAnimSharingStateInstance : UAnimInstance
@@ -75,6 +96,9 @@ UAnimSharingInstance = {}
 ---@field bStateBool boolean
 ---@field Instance UAnimSharingInstance
 UAnimSharingStateInstance = {}
+
+---@return UAnimSharingStateInstance
+function UAnimSharingStateInstance:get() end
 
 ---@param Actors TArray<AActor>
 function UAnimSharingStateInstance:GetInstancedActors(Actors) end
@@ -87,12 +111,18 @@ function UAnimSharingStateInstance:GetInstancedActors(Actors) end
 ---@field bBlendBool boolean
 UAnimSharingTransitionInstance = {}
 
+---@return UAnimSharingTransitionInstance
+function UAnimSharingTransitionInstance:get() end
+
 
 
 ---@class UAnimationSharingManager : UObject
 ---@field Skeletons TArray<USkeleton>
 ---@field PerSkeletonData TArray<UAnimSharingInstance>
 UAnimationSharingManager = {}
+
+---@return UAnimationSharingManager
+function UAnimationSharingManager:get() end
 
 ---@param InActor AActor
 ---@param SharingSkeleton USkeleton
@@ -113,11 +143,17 @@ function UAnimationSharingManager:AnimationSharingEnabled() end
 ---@field ScalabilitySettings FAnimationSharingScalability
 UAnimationSharingSetup = {}
 
+---@return UAnimationSharingSetup
+function UAnimationSharingSetup:get() end
+
 
 
 ---@class UAnimationSharingStateProcessor : UObject
 ---@field AnimationStateEnum TSoftObjectPtr<UEnum>
 UAnimationSharingStateProcessor = {}
+
+---@return UAnimationSharingStateProcessor
+function UAnimationSharingStateProcessor:get() end
 
 ---@param OutState int32
 ---@param InActor AActor

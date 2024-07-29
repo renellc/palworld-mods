@@ -31,6 +31,9 @@
 ---@field OnValueChanged FRadialSliderOnValueChanged
 URadialSlider = {}
 
+---@return URadialSlider
+function URadialSlider:get() end
+
 ---@param InValueTags TArray<float>
 function URadialSlider:SetValueTags(InValueTags) end
 ---@param InValue float

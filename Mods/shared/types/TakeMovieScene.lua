@@ -9,6 +9,9 @@
 ---@field Slate FMovieSceneStringChannel
 UMovieSceneTakeSection = {}
 
+---@return UMovieSceneTakeSection
+function UMovieSceneTakeSection:get() end
+
 
 
 ---@class UMovieSceneTakeSettings : UObject
@@ -20,11 +23,17 @@ UMovieSceneTakeSection = {}
 ---@field SlateName FString
 UMovieSceneTakeSettings = {}
 
+---@return UMovieSceneTakeSettings
+function UMovieSceneTakeSettings:get() end
+
 
 
 ---@class UMovieSceneTakeTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
 UMovieSceneTakeTrack = {}
+
+---@return UMovieSceneTakeTrack
+function UMovieSceneTakeTrack:get() end
 
 
 

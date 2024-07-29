@@ -13,5 +13,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PalRandomIncidentObjectPlacement_PalNest_NegativeKoala_C = {}
 
+---@return ABP_PalRandomIncidentObjectPlacement_PalNest_NegativeKoala_C
+function ABP_PalRandomIncidentObjectPlacement_PalNest_NegativeKoala_C:get() end
+
 
 

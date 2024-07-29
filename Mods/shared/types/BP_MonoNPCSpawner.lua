@@ -27,6 +27,9 @@
 ---@field DespawnWaitCounter int32
 ABP_MonoNPCSpawner_C = {}
 
+---@return ABP_MonoNPCSpawner_C
+function ABP_MonoNPCSpawner_C:get() end
+
 ---@param DestroyedActor AActor
 function ABP_MonoNPCSpawner_C:SetNullHandleWhenDestoryOtomo(DestroyedActor) end
 ---@param HolderController AController

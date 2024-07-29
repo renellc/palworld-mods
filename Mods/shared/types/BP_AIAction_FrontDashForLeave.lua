@@ -8,6 +8,9 @@
 ---@field RandomRight double
 UBP_AIAction_FrontDashForLeave_C = {}
 
+---@return UBP_AIAction_FrontDashForLeave_C
+function UBP_AIAction_FrontDashForLeave_C:get() end
+
 ---@param Right double
 ---@param DistanceRate double
 ---@param FrontVector FVector

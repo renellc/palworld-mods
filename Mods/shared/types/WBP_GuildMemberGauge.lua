@@ -8,6 +8,9 @@
 ---@field Loupe_Angle UImage
 UWBP_GuildMemberGauge_C = {}
 
+---@return UWBP_GuildMemberGauge_C
+function UWBP_GuildMemberGauge_C:get() end
+
 ---@param IsEnable boolean
 function UWBP_GuildMemberGauge_C:EnableAdditionalWidget(IsEnable) end
 ---@param Remain double

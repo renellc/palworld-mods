@@ -15,6 +15,9 @@
 ---@field CombatAIActionClass TSubclassOf<UPalAIActionBase>
 UBP_AIAction_TurnAndEncount_C = {}
 
+---@return UBP_AIAction_TurnAndEncount_C
+function UBP_AIAction_TurnAndEncount_C:get() end
+
 ---@param ControlledPawn APawn
 function UBP_AIAction_TurnAndEncount_C:ActionStart(ControlledPawn) end
 ---@param ControlledPawn APawn

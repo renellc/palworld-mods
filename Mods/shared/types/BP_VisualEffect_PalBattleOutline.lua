@@ -8,6 +8,9 @@
 ---@field IsFadeInComplete boolean
 UBP_VisualEffect_PalBattleOutline_C = {}
 
+---@return UBP_VisualEffect_PalBattleOutline_C
+function UBP_VisualEffect_PalBattleOutline_C:get() end
+
 ---@param Alpha double
 function UBP_VisualEffect_PalBattleOutline_C:SetFadeAlpha(Alpha) end
 function UBP_VisualEffect_PalBattleOutline_C:OnBeginVisualEffect() end

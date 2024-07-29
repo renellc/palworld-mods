@@ -8,6 +8,9 @@
 ---@field flagName FName
 ABP_FunnelCharacterAIController_C = {}
 
+---@return ABP_FunnelCharacterAIController_C
+function ABP_FunnelCharacterAIController_C:get() end
+
 ---@param Enable boolean
 function ABP_FunnelCharacterAIController_C:SetEnableReticleTargetFlag(Enable) end
 function ABP_FunnelCharacterAIController_C:OnInactive() end

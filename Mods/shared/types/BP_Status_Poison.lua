@@ -6,6 +6,9 @@
 ---@field Rate double
 UBP_Status_Poison_C = {}
 
+---@return UBP_Status_Poison_C
+function UBP_Status_Poison_C:get() end
+
 ---@param NewParam double
 function UBP_Status_Poison_C:GetDamageRate(NewParam) end
 function UBP_Status_Poison_C:OnBeginStatus() end

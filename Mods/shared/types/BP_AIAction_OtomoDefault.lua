@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AIAction_OtomoDefault_C = {}
 
+---@return UBP_AIAction_OtomoDefault_C
+function UBP_AIAction_OtomoDefault_C:get() end
+
 ---@param Target AActor
 UBP_AIAction_OtomoDefault_C['Set Action Berserker'] = function(Target) end
 ---@param Class TSubclassOf<UPalAIActionCompositeBase>

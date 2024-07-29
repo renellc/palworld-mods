@@ -7,6 +7,9 @@
 ---@field TargetCharacter APalCharacter
 ABP_RaidBossModeChangeEffect_C = {}
 
+---@return ABP_RaidBossModeChangeEffect_C
+function ABP_RaidBossModeChangeEffect_C:get() end
+
 ---@param Pal APalCharacter
 ABP_RaidBossModeChangeEffect_C['Set Target Pal'] = function(Pal) end
 ---@param DeltaSeconds float

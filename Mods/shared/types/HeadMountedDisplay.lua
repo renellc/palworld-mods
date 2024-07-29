@@ -5,6 +5,9 @@
 ---@field DeviceID int32
 FXRDeviceId = {}
 
+---@return FXRDeviceId
+function FXRDeviceId:get() end
+
 
 
 ---@class FXRGestureConfig
@@ -16,6 +19,9 @@ FXRDeviceId = {}
 ---@field bNavigationAxisZ boolean
 FXRGestureConfig = {}
 
+---@return FXRGestureConfig
+function FXRGestureConfig:get() end
+
 
 
 ---@class FXRHMDData
@@ -26,6 +32,9 @@ FXRGestureConfig = {}
 ---@field Position FVector
 ---@field Rotation FQuat
 FXRHMDData = {}
+
+---@return FXRHMDData
+function FXRHMDData:get() end
 
 
 
@@ -46,6 +55,9 @@ FXRHMDData = {}
 ---@field bIsGrasped boolean
 FXRMotionControllerData = {}
 
+---@return FXRMotionControllerData
+function FXRMotionControllerData:get() end
+
 
 
 ---@class UAsyncTask_LoadXRDeviceVisComponent : UBlueprintAsyncActionBase
@@ -53,6 +65,9 @@ FXRMotionControllerData = {}
 ---@field OnLoadFailure FAsyncTask_LoadXRDeviceVisComponentOnLoadFailure
 ---@field SpawnedComponent UPrimitiveComponent
 UAsyncTask_LoadXRDeviceVisComponent = {}
+
+---@return UAsyncTask_LoadXRDeviceVisComponent
+function UAsyncTask_LoadXRDeviceVisComponent:get() end
 
 ---@param Target AActor
 ---@param SystemName FName
@@ -75,6 +90,9 @@ function UAsyncTask_LoadXRDeviceVisComponent:AddDeviceVisualizationComponentAsyn
 ---@class UHandKeypointConversion : UBlueprintFunctionLibrary
 UHandKeypointConversion = {}
 
+---@return UHandKeypointConversion
+function UHandKeypointConversion:get() end
+
 ---@param Input EHandKeypoint
 ---@return int32
 function UHandKeypointConversion:Conv_HandKeypointToInt32(Input) end
@@ -82,6 +100,9 @@ function UHandKeypointConversion:Conv_HandKeypointToInt32(Input) end
 
 ---@class UHeadMountedDisplayFunctionLibrary : UBlueprintFunctionLibrary
 UHeadMountedDisplayFunctionLibrary = {}
+
+---@return UHeadMountedDisplayFunctionLibrary
+function UHeadMountedDisplayFunctionLibrary:get() end
 
 ---@param ExternalTrackingTransform FTransform
 function UHeadMountedDisplayFunctionLibrary:UpdateExternalTrackingHMDPosition(ExternalTrackingTransform) end
@@ -265,6 +286,9 @@ function UHeadMountedDisplayFunctionLibrary:BreakKey(InKey, InteractionProfile, 
 ---@field DisplayComponent UPrimitiveComponent
 UMotionControllerComponent = {}
 
+---@return UMotionControllerComponent
+function UMotionControllerComponent:get() end
+
 ---@param NewSource EControllerHand
 function UMotionControllerComponent:SetTrackingSource(NewSource) end
 ---@param NewSource FName
@@ -294,6 +318,9 @@ function UMotionControllerComponent:GetHandJointPosition(jointIndex, bValueFound
 
 ---@class UMotionTrackedDeviceFunctionLibrary : UBlueprintFunctionLibrary
 UMotionTrackedDeviceFunctionLibrary = {}
+
+---@return UMotionTrackedDeviceFunctionLibrary
+function UMotionTrackedDeviceFunctionLibrary:get() end
 
 ---@param Enable boolean
 function UMotionTrackedDeviceFunctionLibrary:SetIsControllerMotionTrackingEnabledByDefault(Enable) end
@@ -360,10 +387,16 @@ function UMotionTrackedDeviceFunctionLibrary:DisableMotionTrackingForComponent(M
 ---@field XRPlayAreaChangedDelegate FVRNotificationsComponentXRPlayAreaChangedDelegate
 UVRNotificationsComponent = {}
 
+---@return UVRNotificationsComponent
+function UVRNotificationsComponent:get() end
+
 
 
 ---@class UXRAssetFunctionLibrary : UBlueprintFunctionLibrary
 UXRAssetFunctionLibrary = {}
+
+---@return UXRAssetFunctionLibrary
+function UXRAssetFunctionLibrary:get() end
 
 ---@param Target AActor
 ---@param SystemName FName
@@ -383,6 +416,9 @@ function UXRAssetFunctionLibrary:AddDeviceVisualizationComponentBlocking(Target,
 
 ---@class UXRLoadingScreenFunctionLibrary : UBlueprintFunctionLibrary
 UXRLoadingScreenFunctionLibrary = {}
+
+---@return UXRLoadingScreenFunctionLibrary
+function UXRLoadingScreenFunctionLibrary:get() end
 
 function UXRLoadingScreenFunctionLibrary:ShowLoadingScreen() end
 ---@param Texture UTexture

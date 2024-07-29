@@ -13,5 +13,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PalRandomIncidentObjectPlacement_PalNest_ThunderDog_C = {}
 
+---@return ABP_PalRandomIncidentObjectPlacement_PalNest_ThunderDog_C
+function ABP_PalRandomIncidentObjectPlacement_PalNest_ThunderDog_C:get() end
+
 
 

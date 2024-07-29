@@ -9,6 +9,9 @@
 ---@field BusVolumes_0 TMap<EPalAudioBus, FFloatContainer_FloatPair>
 UBP_AudioSetting_C = {}
 
+---@return UBP_AudioSetting_C
+function UBP_AudioSetting_C:get() end
+
 ---@param AudioBus EPalAudioBus
 ---@return boolean
 function UBP_AudioSetting_C:IsAudioBusMute(AudioBus) end

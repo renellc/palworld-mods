@@ -10,6 +10,9 @@
 ---@field ExtentZ float
 FOrientedBoxFloat = {}
 
+---@return FOrientedBoxFloat
+function FOrientedBoxFloat:get() end
+
 
 
 ---@class FStructSerializerArrayTestStruct
@@ -21,6 +24,9 @@ FOrientedBoxFloat = {}
 ---@field VectorArray TArray<FVector>
 ---@field StructArray TArray<FStructSerializerBuiltinTestStruct>
 FStructSerializerArrayTestStruct = {}
+
+---@return FStructSerializerArrayTestStruct
+function FStructSerializerArrayTestStruct:get() end
 
 
 
@@ -37,6 +43,9 @@ FStructSerializerArrayTestStruct = {}
 ---@field Bitfield7Set boolean
 FStructSerializerBooleanTestStruct = {}
 
+---@return FStructSerializerBooleanTestStruct
+function FStructSerializerBooleanTestStruct:get() end
+
 
 
 ---@class FStructSerializerBuiltinTestStruct
@@ -51,6 +60,9 @@ FStructSerializerBooleanTestStruct = {}
 ---@field Color FColor
 FStructSerializerBuiltinTestStruct = {}
 
+---@return FStructSerializerBuiltinTestStruct
+function FStructSerializerBuiltinTestStruct:get() end
+
 
 
 ---@class FStructSerializerByteArray
@@ -60,6 +72,9 @@ FStructSerializerBuiltinTestStruct = {}
 ---@field Int8Array TArray<int8>
 ---@field Dummy3 int32
 FStructSerializerByteArray = {}
+
+---@return FStructSerializerByteArray
+function FStructSerializerByteArray:get() end
 
 
 
@@ -83,6 +98,9 @@ FStructSerializerByteArray = {}
 ---@field VectorSet TSet<FVector>
 FStructSerializerLWCTypesTest = {}
 
+---@return FStructSerializerLWCTypesTest
+function FStructSerializerLWCTypesTest:get() end
+
 
 
 ---@class FStructSerializerMapTestStruct
@@ -91,6 +109,9 @@ FStructSerializerLWCTypesTest = {}
 ---@field StrToVec TMap<FString, FVector>
 ---@field StrToStruct TMap<FString, FStructSerializerBuiltinTestStruct>
 FStructSerializerMapTestStruct = {}
+
+---@return FStructSerializerMapTestStruct
+function FStructSerializerMapTestStruct:get() end
 
 
 
@@ -114,6 +135,9 @@ FStructSerializerMapTestStruct = {}
 ---@field VectorSet TSet<FVector3f>
 FStructSerializerNonLWCTypesTest = {}
 
+---@return FStructSerializerNonLWCTypesTest
+function FStructSerializerNonLWCTypesTest:get() end
+
 
 
 ---@class FStructSerializerNumericTestStruct
@@ -128,6 +152,9 @@ FStructSerializerNonLWCTypesTest = {}
 ---@field float float
 ---@field Double double
 FStructSerializerNumericTestStruct = {}
+
+---@return FStructSerializerNumericTestStruct
+function FStructSerializerNumericTestStruct:get() end
 
 
 
@@ -144,6 +171,9 @@ FStructSerializerNumericTestStruct = {}
 ---@field ObjectPath FSoftObjectPath
 FStructSerializerObjectTestStruct = {}
 
+---@return FStructSerializerObjectTestStruct
+function FStructSerializerObjectTestStruct:get() end
+
 
 
 ---@class FStructSerializerSetTestStruct
@@ -152,6 +182,9 @@ FStructSerializerObjectTestStruct = {}
 ---@field NameSet TSet<FName>
 ---@field StructSet TSet<FStructSerializerBuiltinTestStruct>
 FStructSerializerSetTestStruct = {}
+
+---@return FStructSerializerSetTestStruct
+function FStructSerializerSetTestStruct:get() end
 
 
 
@@ -165,6 +198,9 @@ FStructSerializerSetTestStruct = {}
 ---@field Sets FStructSerializerSetTestStruct
 ---@field LWCTypes FStructSerializerLWCTypesTest
 FStructSerializerTestStruct = {}
+
+---@return FStructSerializerTestStruct
+function FStructSerializerTestStruct:get() end
 
 
 

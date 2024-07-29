@@ -8,6 +8,9 @@
 ---@field RecoverTimer double
 UBP_AIAction_EatDeadBody_C = {}
 
+---@return UBP_AIAction_EatDeadBody_C
+function UBP_AIAction_EatDeadBody_C:get() end
+
 function UBP_AIAction_EatDeadBody_C:RecoverHP() end
 ---@param SelfPawn AActor
 function UBP_AIAction_EatDeadBody_C:SelfPawn(SelfPawn) end

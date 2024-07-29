@@ -13,6 +13,9 @@
 ---@field NiagaraEffect UNiagaraComponent
 UBP_VisualEffect_SelfDestructEmissive_C = {}
 
+---@return UBP_VisualEffect_SelfDestructEmissive_C
+function UBP_VisualEffect_SelfDestructEmissive_C:get() end
+
 UBP_VisualEffect_SelfDestructEmissive_C['Initialize Float Parameters'] = function() end
 ---@param DeltaTime double
 function UBP_VisualEffect_SelfDestructEmissive_C:FlashWithAcceleration(DeltaTime) end

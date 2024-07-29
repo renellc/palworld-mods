@@ -3,6 +3,9 @@
 ---@class FLiveLinkRetargetAssetReference
 FLiveLinkRetargetAssetReference = {}
 
+---@return FLiveLinkRetargetAssetReference
+function FLiveLinkRetargetAssetReference:get() end
+
 
 ---@class FLiveLinkRoleProjectSetting
 ---@field Role TSubclassOf<ULiveLinkRole>
@@ -10,6 +13,9 @@ FLiveLinkRetargetAssetReference = {}
 ---@field FrameInterpolationProcessor TSubclassOf<ULiveLinkFrameInterpolationProcessor>
 ---@field FramePreProcessors TArray<TSubclassOf<ULiveLinkFramePreProcessor>>
 FLiveLinkRoleProjectSetting = {}
+
+---@return FLiveLinkRoleProjectSetting
+function FLiveLinkRoleProjectSetting:get() end
 
 
 
@@ -20,6 +26,9 @@ FLiveLinkRoleProjectSetting = {}
 ---@field bIsValidProvider boolean
 FProviderPollResult = {}
 
+---@return FProviderPollResult
+function FProviderPollResult:get() end
+
 
 
 ---@class UDEPRECATED_LiveLinkDrivenComponent : UActorComponent
@@ -29,19 +38,31 @@ FProviderPollResult = {}
 ---@field bSetRelativeLocation boolean
 UDEPRECATED_LiveLinkDrivenComponent = {}
 
+---@return UDEPRECATED_LiveLinkDrivenComponent
+function UDEPRECATED_LiveLinkDrivenComponent:get() end
+
 
 
 ---@class ULiveLinkAnimationAxisSwitchPreProcessor : ULiveLinkTransformAxisSwitchPreProcessor
 ULiveLinkAnimationAxisSwitchPreProcessor = {}
 
+---@return ULiveLinkAnimationAxisSwitchPreProcessor
+function ULiveLinkAnimationAxisSwitchPreProcessor:get() end
+
 
 ---@class ULiveLinkAnimationFrameInterpolationProcessor : ULiveLinkBasicFrameInterpolationProcessor
 ULiveLinkAnimationFrameInterpolationProcessor = {}
+
+---@return ULiveLinkAnimationFrameInterpolationProcessor
+function ULiveLinkAnimationFrameInterpolationProcessor:get() end
 
 
 ---@class ULiveLinkAnimationRoleToTransform : ULiveLinkFrameTranslator
 ---@field BoneName FName
 ULiveLinkAnimationRoleToTransform = {}
+
+---@return ULiveLinkAnimationRoleToTransform
+function ULiveLinkAnimationRoleToTransform:get() end
 
 
 
@@ -49,16 +70,25 @@ ULiveLinkAnimationRoleToTransform = {}
 ---@field bAppendSubjectNameToBones boolean
 ULiveLinkAnimationVirtualSubject = {}
 
+---@return ULiveLinkAnimationVirtualSubject
+function ULiveLinkAnimationVirtualSubject:get() end
+
 
 
 ---@class ULiveLinkBasicFrameInterpolationProcessor : ULiveLinkFrameInterpolationProcessor
 ---@field bInterpolatePropertyValues boolean
 ULiveLinkBasicFrameInterpolationProcessor = {}
 
+---@return ULiveLinkBasicFrameInterpolationProcessor
+function ULiveLinkBasicFrameInterpolationProcessor:get() end
+
 
 
 ---@class ULiveLinkBlueprintLibrary : UBlueprintFunctionLibrary
 ULiveLinkBlueprintLibrary = {}
+
+---@return ULiveLinkBlueprintLibrary
+function ULiveLinkBlueprintLibrary:get() end
 
 ---@param SubjectFrameHandle FSubjectFrameHandle
 ---@param TransformNames TArray<FName>
@@ -187,6 +217,9 @@ function ULiveLinkBlueprintLibrary:ChildCount(LiveLinkTransform) end
 ---@class ULiveLinkBlueprintVirtualSubject : ULiveLinkVirtualSubject
 ULiveLinkBlueprintVirtualSubject = {}
 
+---@return ULiveLinkBlueprintVirtualSubject
+function ULiveLinkBlueprintVirtualSubject:get() end
+
 ---@param InStruct FLiveLinkBaseStaticData
 ---@return boolean
 function ULiveLinkBlueprintVirtualSubject:UpdateVirtualSubjectStaticData_Internal(InStruct) end
@@ -201,6 +234,9 @@ function ULiveLinkBlueprintVirtualSubject:OnInitialize() end
 ---@class ULiveLinkComponent : UActorComponent
 ---@field OnLiveLinkUpdated FLiveLinkComponentOnLiveLinkUpdated
 ULiveLinkComponent = {}
+
+---@return ULiveLinkComponent
+function ULiveLinkComponent:get() end
 
 ---@param SubjectName FName
 ---@param WorldTime float
@@ -223,6 +259,9 @@ function ULiveLinkComponent:GetAvailableSubjectNames(SubjectNames) end
 ---@class ULiveLinkMessageBusFinder : UObject
 ULiveLinkMessageBusFinder = {}
 
+---@return ULiveLinkMessageBusFinder
+function ULiveLinkMessageBusFinder:get() end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Duration float
@@ -238,15 +277,24 @@ function ULiveLinkMessageBusFinder:ConnectToProvider(Provider, SourceHandle) end
 ---@class ULiveLinkMessageBusSourceFactory : ULiveLinkSourceFactory
 ULiveLinkMessageBusSourceFactory = {}
 
+---@return ULiveLinkMessageBusSourceFactory
+function ULiveLinkMessageBusSourceFactory:get() end
+
 
 ---@class ULiveLinkMessageBusSourceSettings : ULiveLinkSourceSettings
 ULiveLinkMessageBusSourceSettings = {}
+
+---@return ULiveLinkMessageBusSourceSettings
+function ULiveLinkMessageBusSourceSettings:get() end
 
 
 ---@class ULiveLinkPreset : UObject
 ---@field Sources TArray<FLiveLinkSourcePreset>
 ---@field Subjects TArray<FLiveLinkSubjectPreset>
 ULiveLinkPreset = {}
+
+---@return ULiveLinkPreset
+function ULiveLinkPreset:get() end
 
 function ULiveLinkPreset:BuildFromClient() end
 ---@param WorldContextObject UObject
@@ -276,11 +324,17 @@ function ULiveLinkPreset:AddToClient(bRecreatePresets) end
 ---@field TextSizeSubject uint8
 ULiveLinkSettings = {}
 
+---@return ULiveLinkSettings
+function ULiveLinkSettings:get() end
+
 
 
 ---@class ULiveLinkTimeSynchronizationSource : UTimeSynchronizationSource
 ---@field SubjectName FLiveLinkSubjectName
 ULiveLinkTimeSynchronizationSource = {}
+
+---@return ULiveLinkTimeSynchronizationSource
+function ULiveLinkTimeSynchronizationSource:get() end
 
 
 
@@ -291,6 +345,9 @@ ULiveLinkTimeSynchronizationSource = {}
 ---@field OverrideFrameRate FFrameRate
 ---@field BufferSize int32
 ULiveLinkTimecodeProvider = {}
+
+---@return ULiveLinkTimecodeProvider
+function ULiveLinkTimecodeProvider:get() end
 
 
 
@@ -304,17 +361,26 @@ ULiveLinkTimecodeProvider = {}
 ---@field OffsetOrientation FRotator
 ULiveLinkTransformAxisSwitchPreProcessor = {}
 
+---@return ULiveLinkTransformAxisSwitchPreProcessor
+function ULiveLinkTransformAxisSwitchPreProcessor:get() end
+
 
 
 ---@class ULiveLinkUserSettings : UObject
 ---@field PresetSaveDir FDirectoryPath
 ULiveLinkUserSettings = {}
 
+---@return ULiveLinkUserSettings
+function ULiveLinkUserSettings:get() end
+
 
 
 ---@class ULiveLinkVirtualSubjectSourceSettings : ULiveLinkSourceSettings
 ---@field SourceName FName
 ULiveLinkVirtualSubjectSourceSettings = {}
+
+---@return ULiveLinkVirtualSubjectSourceSettings
+function ULiveLinkVirtualSubjectSourceSettings:get() end
 
 
 

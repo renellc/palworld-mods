@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ULS_Arena_PreBattle_Cutscene_C = {}
 
+---@return ULS_Arena_PreBattle_Cutscene_C
+function ULS_Arena_PreBattle_Cutscene_C:get() end
+
 ---@param PreBattleEvent APalArenaPreBattleCutsceneEvent
 function ULS_Arena_PreBattle_Cutscene_C:SequenceEvent_ENTRYPOINTLS_Arena_PreBattle_Cutscene_0(PreBattleEvent) end
 

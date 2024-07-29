@@ -12,6 +12,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_SupplyDropActor_Capsule_C = {}
 
+---@return ABP_SupplyDropActor_Capsule_C
+function ABP_SupplyDropActor_Capsule_C:get() end
+
 function ABP_SupplyDropActor_Capsule_C:ReceiveBeginPlay() end
 function ABP_SupplyDropActor_Capsule_C:OnLanded_BP() end
 ---@param EntryPoint int32

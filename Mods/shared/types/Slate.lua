@@ -5,6 +5,9 @@
 ---@field Maximum FVector2D
 FAnchors = {}
 
+---@return FAnchors
+function FAnchors:get() end
+
 
 
 ---@class FCustomizedToolMenu
@@ -15,11 +18,17 @@ FAnchors = {}
 ---@field SectionOrder TArray<FName>
 FCustomizedToolMenu = {}
 
+---@return FCustomizedToolMenu
+function FCustomizedToolMenu:get() end
+
 
 
 ---@class FCustomizedToolMenuEntry
 ---@field Visibility ECustomizedToolMenuVisibility
 FCustomizedToolMenuEntry = {}
+
+---@return FCustomizedToolMenuEntry
+function FCustomizedToolMenuEntry:get() end
 
 
 
@@ -27,11 +36,17 @@ FCustomizedToolMenuEntry = {}
 ---@field Names TArray<FName>
 FCustomizedToolMenuNameArray = {}
 
+---@return FCustomizedToolMenuNameArray
+function FCustomizedToolMenuNameArray:get() end
+
 
 
 ---@class FCustomizedToolMenuSection
 ---@field Visibility ECustomizedToolMenuVisibility
 FCustomizedToolMenuSection = {}
+
+---@return FCustomizedToolMenuSection
+function FCustomizedToolMenuSection:get() end
 
 
 
@@ -43,11 +58,17 @@ FCustomizedToolMenuSection = {}
 ---@field bCmd boolean
 FInputChord = {}
 
+---@return FInputChord
+function FInputChord:get() end
+
 
 
 ---@class FVirtualKeyboardOptions
 ---@field bEnableAutocorrect boolean
 FVirtualKeyboardOptions = {}
+
+---@return FVirtualKeyboardOptions
+function FVirtualKeyboardOptions:get() end
 
 
 
@@ -55,11 +76,17 @@ FVirtualKeyboardOptions = {}
 ---@field ButtonStyle FButtonStyle
 UButtonWidgetStyle = {}
 
+---@return UButtonWidgetStyle
+function UButtonWidgetStyle:get() end
+
 
 
 ---@class UCheckBoxWidgetStyle : USlateWidgetStyleContainerBase
 ---@field CheckBoxStyle FCheckBoxStyle
 UCheckBoxWidgetStyle = {}
+
+---@return UCheckBoxWidgetStyle
+function UCheckBoxWidgetStyle:get() end
 
 
 
@@ -67,11 +94,17 @@ UCheckBoxWidgetStyle = {}
 ---@field ComboBoxStyle FComboBoxStyle
 UComboBoxWidgetStyle = {}
 
+---@return UComboBoxWidgetStyle
+function UComboBoxWidgetStyle:get() end
+
 
 
 ---@class UComboButtonWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ComboButtonStyle FComboButtonStyle
 UComboButtonWidgetStyle = {}
+
+---@return UComboButtonWidgetStyle
+function UComboButtonWidgetStyle:get() end
 
 
 
@@ -79,11 +112,17 @@ UComboButtonWidgetStyle = {}
 ---@field EditableTextBoxStyle FEditableTextBoxStyle
 UEditableTextBoxWidgetStyle = {}
 
+---@return UEditableTextBoxWidgetStyle
+function UEditableTextBoxWidgetStyle:get() end
+
 
 
 ---@class UEditableTextWidgetStyle : USlateWidgetStyleContainerBase
 ---@field EditableTextStyle FEditableTextStyle
 UEditableTextWidgetStyle = {}
+
+---@return UEditableTextWidgetStyle
+function UEditableTextWidgetStyle:get() end
 
 
 
@@ -91,11 +130,17 @@ UEditableTextWidgetStyle = {}
 ---@field ProgressBarStyle FProgressBarStyle
 UProgressWidgetStyle = {}
 
+---@return UProgressWidgetStyle
+function UProgressWidgetStyle:get() end
+
 
 
 ---@class UScrollBarWidgetStyle : USlateWidgetStyleContainerBase
 ---@field ScrollBarStyle FScrollBarStyle
 UScrollBarWidgetStyle = {}
+
+---@return UScrollBarWidgetStyle
+function UScrollBarWidgetStyle:get() end
 
 
 
@@ -103,11 +148,17 @@ UScrollBarWidgetStyle = {}
 ---@field ScrollBoxStyle FScrollBoxStyle
 UScrollBoxWidgetStyle = {}
 
+---@return UScrollBoxWidgetStyle
+function UScrollBoxWidgetStyle:get() end
+
 
 
 ---@class USlateSettings : UObject
 ---@field bExplicitCanvasChildZOrder boolean
 USlateSettings = {}
+
+---@return USlateSettings
+function USlateSettings:get() end
 
 
 
@@ -115,15 +166,24 @@ USlateSettings = {}
 ---@field SpinBoxStyle FSpinBoxStyle
 USpinBoxWidgetStyle = {}
 
+---@return USpinBoxWidgetStyle
+function USpinBoxWidgetStyle:get() end
+
 
 
 ---@class UTextBlockWidgetStyle : USlateWidgetStyleContainerBase
 ---@field TextBlockStyle FTextBlockStyle
 UTextBlockWidgetStyle = {}
 
+---@return UTextBlockWidgetStyle
+function UTextBlockWidgetStyle:get() end
+
 
 
 ---@class UToolMenuBase : UObject
 UToolMenuBase = {}
+
+---@return UToolMenuBase
+function UToolMenuBase:get() end
 
 

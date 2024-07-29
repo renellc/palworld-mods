@@ -18,6 +18,9 @@
 ---@field TitleMsgID_Pal FDataTableRowHandle
 UWBP_CharaCre_PlayerNameEdit_C = {}
 
+---@return UWBP_CharaCre_PlayerNameEdit_C
+function UWBP_CharaCre_PlayerNameEdit_C:get() end
+
 ---@param InText FText
 ---@param clampedNickName FText
 function UWBP_CharaCre_PlayerNameEdit_C:ClampInputName(InText, clampedNickName) end

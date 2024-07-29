@@ -3,6 +3,9 @@
 ---@class UJsonBlueprintFunctionLibrary : UBlueprintFunctionLibrary
 UJsonBlueprintFunctionLibrary = {}
 
+---@return UJsonBlueprintFunctionLibrary
+function UJsonBlueprintFunctionLibrary:get() end
+
 ---@param JsonObject FJsonObjectWrapper
 ---@param OutJsonString FString
 ---@return boolean

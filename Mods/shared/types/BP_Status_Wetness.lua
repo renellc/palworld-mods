@@ -5,6 +5,9 @@
 ---@field DurationTimer_BP double
 UBP_Status_Wetness_C = {}
 
+---@return UBP_Status_Wetness_C
+function UBP_Status_Wetness_C:get() end
+
 ---@param IsActivate boolean
 function UBP_Status_Wetness_C:IsOwnerActivate(IsActivate) end
 function UBP_Status_Wetness_C:OnBeginStatus() end

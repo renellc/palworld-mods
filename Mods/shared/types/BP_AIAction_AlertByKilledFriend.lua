@@ -12,6 +12,9 @@
 ---@field tempDeltaTime double
 UBP_AIAction_AlertByKilledFriend_C = {}
 
+---@return UBP_AIAction_AlertByKilledFriend_C
+function UBP_AIAction_AlertByKilledFriend_C:get() end
+
 ---@param CenterPos FVector
 ---@param IsHit boolean
 ---@param HitPos FVector

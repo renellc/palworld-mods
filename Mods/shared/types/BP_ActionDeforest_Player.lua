@@ -5,6 +5,9 @@
 ---@field flagName FName
 UBP_ActionDeforest_Player_C = {}
 
+---@return UBP_ActionDeforest_Player_C
+function UBP_ActionDeforest_Player_C:get() end
+
 function UBP_ActionDeforest_Player_C:OnBeginAction() end
 function UBP_ActionDeforest_Player_C:OnEndAction() end
 ---@param EntryPoint int32

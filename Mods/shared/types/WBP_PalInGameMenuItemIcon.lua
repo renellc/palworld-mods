@@ -7,6 +7,9 @@
 ---@field EmptySet boolean
 UWBP_PalInGameMenuItemIcon_C = {}
 
+---@return UWBP_PalInGameMenuItemIcon_C
+function UWBP_PalInGameMenuItemIcon_C:get() end
+
 function UWBP_PalInGameMenuItemIcon_C:OnInitialized() end
 function UWBP_PalInGameMenuItemIcon_C:StartLoadEvent() end
 ---@param loadedTexture UTexture2D

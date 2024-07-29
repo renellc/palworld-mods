@@ -6,6 +6,9 @@
 ---@field OneDay_Second int32
 UBP_Status_UNKOTimer_C = {}
 
+---@return UBP_Status_UNKOTimer_C
+function UBP_Status_UNKOTimer_C:get() end
+
 function UBP_Status_UNKOTimer_C:OnBeginStatus() end
 function UBP_Status_UNKOTimer_C:OnEndStatus() end
 UBP_Status_UNKOTimer_C['カスタムイベント_0'] = function() end

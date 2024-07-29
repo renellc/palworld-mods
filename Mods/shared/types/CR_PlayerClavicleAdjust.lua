@@ -5,6 +5,9 @@
 ---@field RigUnit_GetTransform_1_Transform_Rotation FQuat
 UCR_PlayerClavicleAdjust_C = {}
 
+---@return UCR_PlayerClavicleAdjust_C
+function UCR_PlayerClavicleAdjust_C:get() end
+
 
 
 ---@class URigVMMemory_Literal : URigVMMemoryStorage
@@ -22,6 +25,9 @@ UCR_PlayerClavicleAdjust_C = {}
 ---@field RigVMModel___CollapseNode_1_RigUnit_SetTransform_Item__Const FRigElementKey
 ---@field RigVMModel___CollapseNode_1_MathFloatMul_B__Const float
 URigVMMemory_Literal = {}
+
+---@return URigVMMemory_Literal
+function URigVMMemory_Literal:get() end
 
 
 
@@ -71,6 +77,9 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___CollapseNode_1_RigUnit_SetTransform_1_Value__IO FTransform
 ---@field RigVMModel___CollapseNode_1_RigUnit_SetTransform_1_CachedIndex TArray<FCachedRigElement>
 URigVMMemory_Work = {}
+
+---@return URigVMMemory_Work
+function URigVMMemory_Work:get() end
 
 
 

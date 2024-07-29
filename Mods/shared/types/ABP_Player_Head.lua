@@ -15,11 +15,17 @@
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
 FAnimBlueprintGeneratedConstantData = {}
 
+---@return FAnimBlueprintGeneratedConstantData
+function FAnimBlueprintGeneratedConstantData:get() end
+
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __BoolProperty boolean
 FAnimBlueprintGeneratedMutableData = {}
+
+---@return FAnimBlueprintGeneratedMutableData
+function FAnimBlueprintGeneratedMutableData:get() end
 
 
 
@@ -44,6 +50,9 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field InitEnd boolean
 ---@field IsDedicatedServer boolean
 UABP_Player_Head_C = {}
+
+---@return UABP_Player_Head_C
+function UABP_Player_Head_C:get() end
 
 ---@param InPose FPoseLink
 ---@param EyeLocationFix FPoseLink

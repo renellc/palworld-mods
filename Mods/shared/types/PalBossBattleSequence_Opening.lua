@@ -24,6 +24,9 @@
 ---@field flagName FName
 UPalBossBattleSequence_Opening_C = {}
 
+---@return UPalBossBattleSequence_Opening_C
+function UPalBossBattleSequence_Opening_C:get() end
+
 ---@param IsLoadingAction boolean
 function UPalBossBattleSequence_Opening_C:IsLoadingAction(IsLoadingAction) end
 function UPalBossBattleSequence_Opening_C:TryEventInitialize() end

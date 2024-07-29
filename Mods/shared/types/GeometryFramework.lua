@@ -6,6 +6,9 @@
 ---@field DynamicMeshPool UDynamicMeshPool
 ADynamicMeshActor = {}
 
+---@return ADynamicMeshActor
+function ADynamicMeshActor:get() end
+
 ---@param Mesh UDynamicMesh
 ---@return boolean
 function ADynamicMeshActor:ReleaseComputeMesh(Mesh) end
@@ -25,18 +28,30 @@ function ADynamicMeshActor:AllocateComputeMesh() end
 ---@field bIsRevertChange boolean
 FDynamicMeshChangeInfo = {}
 
+---@return FDynamicMeshChangeInfo
+function FDynamicMeshChangeInfo:get() end
+
 
 
 ---@class IMeshCommandChangeTarget : IInterface
 IMeshCommandChangeTarget = {}
 
+---@return IMeshCommandChangeTarget
+function IMeshCommandChangeTarget:get() end
+
 
 ---@class IMeshReplacementCommandChangeTarget : IInterface
 IMeshReplacementCommandChangeTarget = {}
 
+---@return IMeshReplacementCommandChangeTarget
+function IMeshReplacementCommandChangeTarget:get() end
+
 
 ---@class IMeshVertexCommandChangeTarget : IInterface
 IMeshVertexCommandChangeTarget = {}
+
+---@return IMeshVertexCommandChangeTarget
+function IMeshVertexCommandChangeTarget:get() end
 
 
 ---@class UBaseDynamicMeshComponent : UMeshComponent
@@ -51,6 +66,9 @@ IMeshVertexCommandChangeTarget = {}
 ---@field bEnableRayTracing boolean
 ---@field BaseMaterials TArray<UMaterialInterface>
 UBaseDynamicMeshComponent = {}
+
+---@return UBaseDynamicMeshComponent
+function UBaseDynamicMeshComponent:get() end
 
 ---@param bEnabled boolean
 function UBaseDynamicMeshComponent:SetViewModeOverridesEnabled(bEnabled) end
@@ -109,6 +127,9 @@ function UBaseDynamicMeshComponent:ClearOverrideRenderMaterial() end
 UDynamicMesh = {}
 
 ---@return UDynamicMesh
+function UDynamicMesh:get() end
+
+---@return UDynamicMesh
 function UDynamicMesh:ResetToCube() end
 ---@return UDynamicMesh
 function UDynamicMesh:Reset() end
@@ -129,6 +150,9 @@ function UDynamicMesh:GetTriangleCount() end
 ---@field AggGeom FKAggregateGeom
 ---@field AsyncBodySetupQueue TArray<UBodySetup>
 UDynamicMeshComponent = {}
+
+---@return UDynamicMeshComponent
+function UDynamicMeshComponent:get() end
 
 ---@param bCreateIfMissing boolean
 ---@param bDeleteExtraSlots boolean
@@ -156,11 +180,17 @@ function UDynamicMeshComponent:ConfigureMaterialSet(NewMaterialSet) end
 ---@class UDynamicMeshGenerator : UObject
 UDynamicMeshGenerator = {}
 
+---@return UDynamicMeshGenerator
+function UDynamicMeshGenerator:get() end
+
 
 ---@class UDynamicMeshPool : UObject
 ---@field CachedMeshes TArray<UDynamicMesh>
 ---@field AllCreatedMeshes TArray<UDynamicMesh>
 UDynamicMeshPool = {}
+
+---@return UDynamicMeshPool
+function UDynamicMeshPool:get() end
 
 ---@param Mesh UDynamicMesh
 function UDynamicMeshPool:ReturnMesh(Mesh) end

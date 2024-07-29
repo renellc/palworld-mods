@@ -4,12 +4,18 @@
 ---@field bAllowIndirect boolean
 FTypedElementIsSelectedOptions = {}
 
+---@return FTypedElementIsSelectedOptions
+function FTypedElementIsSelectedOptions:get() end
+
 
 
 ---@class FTypedElementSelectionNormalizationOptions
 ---@field bExpandGroups boolean
 ---@field bFollowAttachment boolean
 FTypedElementSelectionNormalizationOptions = {}
+
+---@return FTypedElementSelectionNormalizationOptions
+function FTypedElementSelectionNormalizationOptions:get() end
 
 
 
@@ -21,16 +27,25 @@ FTypedElementSelectionNormalizationOptions = {}
 ---@field ChildElementInclusionMethod ETypedElementChildInclusionMethod
 FTypedElementSelectionOptions = {}
 
+---@return FTypedElementSelectionOptions
+function FTypedElementSelectionOptions:get() end
+
 
 
 ---@class FTypedElementSelectionSetState
 ---@field CreatedFromSelectionSet TWeakObjectPtr<UTypedElementSelectionSet>
 FTypedElementSelectionSetState = {}
 
+---@return FTypedElementSelectionSetState
+function FTypedElementSelectionSetState:get() end
+
 
 
 ---@class ITypedElementAssetDataInterface : IInterface
 ITypedElementAssetDataInterface = {}
+
+---@return ITypedElementAssetDataInterface
+function ITypedElementAssetDataInterface:get() end
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return FAssetData
@@ -42,6 +57,9 @@ function ITypedElementAssetDataInterface:GetAllReferencedAssetDatas(InElementHan
 
 ---@class ITypedElementHierarchyInterface : IInterface
 ITypedElementHierarchyInterface = {}
+
+---@return ITypedElementHierarchyInterface
+function ITypedElementHierarchyInterface:get() end
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param bAllowCreate boolean
@@ -56,6 +74,9 @@ function ITypedElementHierarchyInterface:GetChildElements(InElementHandle, OutEl
 ---@class ITypedElementObjectInterface : IInterface
 ITypedElementObjectInterface = {}
 
+---@return ITypedElementObjectInterface
+function ITypedElementObjectInterface:get() end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return UClass
 function ITypedElementObjectInterface:GetObjectClass(InElementHandle) end
@@ -66,6 +87,9 @@ function ITypedElementObjectInterface:GetObject(InElementHandle) end
 
 ---@class ITypedElementSelectionInterface : IInterface
 ITypedElementSelectionInterface = {}
+
+---@return ITypedElementSelectionInterface
+function ITypedElementSelectionInterface:get() end
 
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InSelectionSet FScriptTypedElementListProxy
@@ -105,6 +129,9 @@ function ITypedElementSelectionInterface:AllowSelectionModifiers(InElementHandle
 ---@field OnPreSelectionChange FTypedElementSelectionSetOnPreSelectionChange
 ---@field OnSelectionChange FTypedElementSelectionSetOnSelectionChange
 UTypedElementSelectionSet = {}
+
+---@return UTypedElementSelectionSet
+function UTypedElementSelectionSet:get() end
 
 ---@param InElementHandles TArray<FScriptTypedElementHandle>
 ---@param InSelectionOptions FTypedElementSelectionOptions
@@ -186,6 +213,9 @@ function UTypedElementSelectionSet:AllowSelectionModifiers(InElementHandle) end
 
 ---@class UTypedElementSelectionSetLibrary : UObject
 UTypedElementSelectionSetLibrary = {}
+
+---@return UTypedElementSelectionSetLibrary
+function UTypedElementSelectionSetLibrary:get() end
 
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param ElementList FScriptTypedElementListProxy

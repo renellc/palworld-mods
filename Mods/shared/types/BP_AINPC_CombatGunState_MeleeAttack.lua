@@ -5,6 +5,9 @@
 ---@field action UPalActionBase
 UBP_AINPC_CombatGunState_MeleeAttack_C = {}
 
+---@return UBP_AINPC_CombatGunState_MeleeAttack_C
+function UBP_AINPC_CombatGunState_MeleeAttack_C:get() end
+
 function UBP_AINPC_CombatGunState_MeleeAttack_C:StateEnter() end
 ---@param DeltaTime float
 function UBP_AINPC_CombatGunState_MeleeAttack_C:StateTick(DeltaTime) end

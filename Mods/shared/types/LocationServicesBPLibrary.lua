@@ -9,10 +9,16 @@
 ---@field Altitude float
 FLocationServicesData = {}
 
+---@return FLocationServicesData
+function FLocationServicesData:get() end
+
 
 
 ---@class ULocationServices : UBlueprintFunctionLibrary
 ULocationServices = {}
+
+---@return ULocationServices
+function ULocationServices:get() end
 
 ---@return boolean
 function ULocationServices:StopLocationServices() end
@@ -37,6 +43,9 @@ function ULocationServices:AreLocationServicesEnabled() end
 ---@class ULocationServicesImpl : UObject
 ---@field OnLocationChanged FLocationServicesImplOnLocationChanged
 ULocationServicesImpl = {}
+
+---@return ULocationServicesImpl
+function ULocationServicesImpl:get() end
 
 
 

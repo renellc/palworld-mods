@@ -9,6 +9,9 @@
 ---@field SphereMaskRadius double
 UWBP_PalCommonCharacterIcon_C = {}
 
+---@return UWBP_PalCommonCharacterIcon_C
+function UWBP_PalCommonCharacterIcon_C:get() end
+
 ---@param Fraction double
 function UWBP_PalCommonCharacterIcon_C:SetFraction(Fraction) end
 function UWBP_PalCommonCharacterIcon_C:OnEmpty() end

@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AISightResponsePreset_Citizen_C = {}
 
+---@return UBP_AISightResponsePreset_Citizen_C
+function UBP_AISightResponsePreset_Citizen_C:get() end
+
 function UBP_AISightResponsePreset_Citizen_C:BlueprintDelegateSetup() end
 ---@param SelfCharacter APalCharacter
 ---@param FoundCharacter APalCharacter

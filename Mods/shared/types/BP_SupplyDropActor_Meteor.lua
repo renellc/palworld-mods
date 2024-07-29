@@ -7,6 +7,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_SupplyDropActor_Meteor_C = {}
 
+---@return ABP_SupplyDropActor_Meteor_C
+function ABP_SupplyDropActor_Meteor_C:get() end
+
 function ABP_SupplyDropActor_Meteor_C:ReceiveBeginPlay() end
 function ABP_SupplyDropActor_Meteor_C:OnLanded_BP() end
 ---@param EntryPoint int32

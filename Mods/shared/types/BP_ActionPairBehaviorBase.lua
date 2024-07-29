@@ -24,6 +24,9 @@
 ---@field EndActionType EPalActionType
 UBP_ActionPairBehaviorBase_C = {}
 
+---@return UBP_ActionPairBehaviorBase_C
+function UBP_ActionPairBehaviorBase_C:get() end
+
 ---@param IsValid boolean
 UBP_ActionPairBehaviorBase_C['Is Valid Target'] = function(IsValid) end
 ---@param Location FVector

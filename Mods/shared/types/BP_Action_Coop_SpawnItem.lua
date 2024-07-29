@@ -13,6 +13,9 @@
 ---@field FunFacialEye EPalFacialEyeType
 UBP_Action_Coop_SpawnItem_C = {}
 
+---@return UBP_Action_Coop_SpawnItem_C
+function UBP_Action_Coop_SpawnItem_C:get() end
+
 function UBP_Action_Coop_SpawnItem_C:EndProc() end
 function UBP_Action_Coop_SpawnItem_C:StopFunMontage() end
 function UBP_Action_Coop_SpawnItem_C:StopChargeMontage() end

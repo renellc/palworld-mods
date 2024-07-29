@@ -22,6 +22,9 @@
 ---@field CustomFunctionNames TArray<FName>
 UBP_PalIncidentNPCTalk_C = {}
 
+---@return UBP_PalIncidentNPCTalk_C
+function UBP_PalIncidentNPCTalk_C:get() end
+
 ---@param CustomEventName FName
 ---@return boolean
 function UBP_PalIncidentNPCTalk_C:IsExistCustomEvent(CustomEventName) end

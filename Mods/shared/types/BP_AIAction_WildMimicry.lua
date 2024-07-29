@@ -5,6 +5,9 @@
 ---@field MimicAction UPalActionBase
 UBP_AIAction_WildMimicry_C = {}
 
+---@return UBP_AIAction_WildMimicry_C
+function UBP_AIAction_WildMimicry_C:get() end
+
 ---@param DamageResult FPalDamageResult
 UBP_AIAction_WildMimicry_C['On Damage Mimicry'] = function(DamageResult) end
 ---@param ControlledPawn APawn

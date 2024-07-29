@@ -4,10 +4,16 @@
 ---@field ControlPointMeshComponent UControlPointMeshComponent
 AControlPointMeshActor = {}
 
+---@return AControlPointMeshActor
+function AControlPointMeshActor:get() end
+
 
 
 ---@class ALandscape : ALandscapeProxy
 ALandscape = {}
+
+---@return ALandscape
+function ALandscape:get() end
 
 ---@param InWorldTransform FTransform
 ---@param InExtents FBox2D
@@ -17,6 +23,9 @@ function ALandscape:RenderHeightmap(InWorldTransform, InExtents, OutRenderTarget
 
 ---@class ALandscapeBlueprintBrushBase : AActor
 ALandscapeBlueprintBrushBase = {}
+
+---@return ALandscapeBlueprintBrushBase
+function ALandscapeBlueprintBrushBase:get() end
 
 function ALandscapeBlueprintBrushBase:RequestLandscapeUpdate() end
 ---@param InIsHeightmap boolean
@@ -35,14 +44,23 @@ function ALandscapeBlueprintBrushBase:GetBlueprintRenderDependencies(OutStreamab
 ---@class ALandscapeGizmoActiveActor : ALandscapeGizmoActor
 ALandscapeGizmoActiveActor = {}
 
+---@return ALandscapeGizmoActiveActor
+function ALandscapeGizmoActiveActor:get() end
+
 
 ---@class ALandscapeGizmoActor : AActor
 ALandscapeGizmoActor = {}
+
+---@return ALandscapeGizmoActor
+function ALandscapeGizmoActor:get() end
 
 
 ---@class ALandscapeMeshProxyActor : AActor
 ---@field LandscapeMeshProxyComponent ULandscapeMeshProxyComponent
 ALandscapeMeshProxyActor = {}
+
+---@return ALandscapeMeshProxyActor
+function ALandscapeMeshProxyActor:get() end
 
 
 
@@ -106,6 +124,9 @@ ALandscapeMeshProxyActor = {}
 ---@field bHasLayersContent boolean
 ALandscapeProxy = {}
 
+---@return ALandscapeProxy
+function ALandscapeProxy:get() end
+
 ---@param InType ERuntimeVirtualTextureMainPassType
 function ALandscapeProxy:SetVirtualTextureRenderPassType(InType) end
 ---@param ParameterName FName
@@ -149,11 +170,17 @@ function ALandscapeProxy:ChangeComponentScreenSizeToUseSubSections(InComponentSc
 ---@field LandscapeGuid FGuid
 ALandscapeSplineActor = {}
 
+---@return ALandscapeSplineActor
+function ALandscapeSplineActor:get() end
+
 
 
 ---@class ALandscapeSplineMeshesActor : APartitionActor
 ---@field StaticMeshComponents TArray<UStaticMeshComponent>
 ALandscapeSplineMeshesActor = {}
+
+---@return ALandscapeSplineMeshesActor
+function ALandscapeSplineMeshesActor:get() end
 
 
 
@@ -161,22 +188,37 @@ ALandscapeSplineMeshesActor = {}
 ---@field LandscapeActor TLazyObjectPtr<ALandscape>
 ALandscapeStreamingProxy = {}
 
+---@return ALandscapeStreamingProxy
+function ALandscapeStreamingProxy:get() end
+
 
 
 ---@class FForeignControlPointData
 FForeignControlPointData = {}
 
+---@return FForeignControlPointData
+function FForeignControlPointData:get() end
+
 
 ---@class FForeignSplineSegmentData
 FForeignSplineSegmentData = {}
+
+---@return FForeignSplineSegmentData
+function FForeignSplineSegmentData:get() end
 
 
 ---@class FForeignWorldSplineData
 FForeignWorldSplineData = {}
 
+---@return FForeignWorldSplineData
+function FForeignWorldSplineData:get() end
+
 
 ---@class FGizmoSelectData
 FGizmoSelectData = {}
+
+---@return FGizmoSelectData
+function FGizmoSelectData:get() end
 
 
 ---@class FGrassInput
@@ -184,6 +226,9 @@ FGizmoSelectData = {}
 ---@field GrassType ULandscapeGrassType
 ---@field Input FExpressionInput
 FGrassInput = {}
+
+---@return FGrassInput
+function FGrassInput:get() end
 
 
 
@@ -211,11 +256,17 @@ FGrassInput = {}
 ---@field InstanceWorldPositionOffsetDisableDistance uint32
 FGrassVariety = {}
 
+---@return FGrassVariety
+function FGrassVariety:get() end
+
 
 
 ---@class FHeightmapData
 ---@field Texture UTexture2D
 FHeightmapData = {}
+
+---@return FHeightmapData
+function FHeightmapData:get() end
 
 
 
@@ -223,6 +274,9 @@ FHeightmapData = {}
 ---@field LODIndex FPerPlatformInt
 ---@field Material UMaterialInterface
 FLandscapeComponentMaterialOverride = {}
+
+---@return FLandscapeComponentMaterialOverride
+function FLandscapeComponentMaterialOverride:get() end
 
 
 
@@ -238,20 +292,32 @@ FLandscapeComponentMaterialOverride = {}
 ---@field DirtyTexture UTexture2D
 FLandscapeEditToolRenderData = {}
 
+---@return FLandscapeEditToolRenderData
+function FLandscapeEditToolRenderData:get() end
+
 
 
 ---@class FLandscapeEditorLayerSettings
 FLandscapeEditorLayerSettings = {}
 
+---@return FLandscapeEditorLayerSettings
+function FLandscapeEditorLayerSettings:get() end
+
 
 ---@class FLandscapeImportLayerInfo
 FLandscapeImportLayerInfo = {}
+
+---@return FLandscapeImportLayerInfo
+function FLandscapeImportLayerInfo:get() end
 
 
 ---@class FLandscapeInfoLayerSettings
 ---@field LayerInfoObj ULandscapeLayerInfoObject
 ---@field LayerName FName
 FLandscapeInfoLayerSettings = {}
+
+---@return FLandscapeInfoLayerSettings
+function FLandscapeInfoLayerSettings:get() end
 
 
 
@@ -267,10 +333,16 @@ FLandscapeInfoLayerSettings = {}
 ---@field WeightmapLayerAllocationBlend TMap<ULandscapeLayerInfoObject, boolean>
 FLandscapeLayer = {}
 
+---@return FLandscapeLayer
+function FLandscapeLayer:get() end
+
 
 
 ---@class FLandscapeLayerBrush
 FLandscapeLayerBrush = {}
+
+---@return FLandscapeLayerBrush
+function FLandscapeLayerBrush:get() end
 
 
 ---@class FLandscapeLayerComponentData
@@ -278,11 +350,17 @@ FLandscapeLayerBrush = {}
 ---@field WeightmapData FWeightmapData
 FLandscapeLayerComponentData = {}
 
+---@return FLandscapeLayerComponentData
+function FLandscapeLayerComponentData:get() end
+
 
 
 ---@class FLandscapeLayerStruct
 ---@field LayerInfoObj ULandscapeLayerInfoObject
 FLandscapeLayerStruct = {}
+
+---@return FLandscapeLayerStruct
+function FLandscapeLayerStruct:get() end
 
 
 
@@ -291,12 +369,18 @@ FLandscapeLayerStruct = {}
 ---@field TexelFactor float
 FLandscapeMaterialTextureStreamingInfo = {}
 
+---@return FLandscapeMaterialTextureStreamingInfo
+function FLandscapeMaterialTextureStreamingInfo:get() end
+
 
 
 ---@class FLandscapePerLODMaterialOverride
 ---@field LODIndex int32
 ---@field Material UMaterialInterface
 FLandscapePerLODMaterialOverride = {}
+
+---@return FLandscapePerLODMaterialOverride
+function FLandscapePerLODMaterialOverride:get() end
 
 
 
@@ -305,12 +389,18 @@ FLandscapePerLODMaterialOverride = {}
 ---@field Material UMaterialInterface
 FLandscapeProxyMaterialOverride = {}
 
+---@return FLandscapeProxyMaterialOverride
+function FLandscapeProxyMaterialOverride:get() end
+
 
 
 ---@class FLandscapeSplineConnection
 ---@field Segment ULandscapeSplineSegment
 ---@field End boolean
 FLandscapeSplineConnection = {}
+
+---@return FLandscapeSplineConnection
+function FLandscapeSplineConnection:get() end
 
 
 
@@ -327,6 +417,9 @@ FLandscapeSplineConnection = {}
 ---@field StartEndFalloff float
 FLandscapeSplineInterpPoint = {}
 
+---@return FLandscapeSplineInterpPoint
+function FLandscapeSplineInterpPoint:get() end
+
 
 
 ---@class FLandscapeSplineMeshEntry
@@ -341,6 +434,9 @@ FLandscapeSplineInterpPoint = {}
 ---@field UpAxis ESplineMeshAxis::Type
 FLandscapeSplineMeshEntry = {}
 
+---@return FLandscapeSplineMeshEntry
+function FLandscapeSplineMeshEntry:get() end
+
 
 
 ---@class FLandscapeSplineSegmentConnection
@@ -348,6 +444,9 @@ FLandscapeSplineMeshEntry = {}
 ---@field TangentLen float
 ---@field SocketName FName
 FLandscapeSplineSegmentConnection = {}
+
+---@return FLandscapeSplineSegmentConnection
+function FLandscapeSplineSegmentConnection:get() end
 
 
 
@@ -361,12 +460,18 @@ FLandscapeSplineSegmentConnection = {}
 ---@field ConstHeightInput float
 FLayerBlendInput = {}
 
+---@return FLayerBlendInput
+function FLayerBlendInput:get() end
+
 
 
 ---@class FPhysicalMaterialInput
 ---@field PhysicalMaterial UPhysicalMaterial
 ---@field Input FExpressionInput
 FPhysicalMaterialInput = {}
+
+---@return FPhysicalMaterialInput
+function FPhysicalMaterialInput:get() end
 
 
 
@@ -376,6 +481,9 @@ FPhysicalMaterialInput = {}
 ---@field TextureUsages TArray<ULandscapeWeightmapUsage>
 FWeightmapData = {}
 
+---@return FWeightmapData
+function FWeightmapData:get() end
+
 
 
 ---@class FWeightmapLayerAllocationInfo
@@ -384,15 +492,24 @@ FWeightmapData = {}
 ---@field WeightmapTextureChannel uint8
 FWeightmapLayerAllocationInfo = {}
 
+---@return FWeightmapLayerAllocationInfo
+function FWeightmapLayerAllocationInfo:get() end
+
 
 
 ---@class ILandscapeSplineInterface : IInterface
 ILandscapeSplineInterface = {}
 
+---@return ILandscapeSplineInterface
+function ILandscapeSplineInterface:get() end
+
 
 ---@class UControlPointMeshComponent : UStaticMeshComponent
 ---@field VirtualTextureMainPassMaxDrawDistance float
 UControlPointMeshComponent = {}
+
+---@return UControlPointMeshComponent
+function UControlPointMeshComponent:get() end
 
 
 
@@ -436,6 +553,9 @@ UControlPointMeshComponent = {}
 ---@field MobileWeightmapTextures TArray<UTexture2D>
 ULandscapeComponent = {}
 
+---@return ULandscapeComponent
+function ULandscapeComponent:get() end
+
 ---@param InLODBias int32
 function ULandscapeComponent:SetLODBias(InLODBias) end
 ---@param InForcedLOD int32
@@ -456,6 +576,9 @@ function ULandscapeComponent:EditorGetPaintLayerWeightAtLocation(InLocation, Pai
 ---@class ULandscapeGizmoRenderComponent : UPrimitiveComponent
 ULandscapeGizmoRenderComponent = {}
 
+---@return ULandscapeGizmoRenderComponent
+function ULandscapeGizmoRenderComponent:get() end
+
 
 ---@class ULandscapeGrassType : UObject
 ---@field GrassVarieties TArray<FGrassVariety>
@@ -469,10 +592,16 @@ ULandscapeGizmoRenderComponent = {}
 ---@field AlignToSurface boolean
 ULandscapeGrassType = {}
 
+---@return ULandscapeGrassType
+function ULandscapeGrassType:get() end
+
 
 
 ---@class ULandscapeHLODBuilder : UHLODBuilder
 ULandscapeHLODBuilder = {}
+
+---@return ULandscapeHLODBuilder
+function ULandscapeHLODBuilder:get() end
 
 
 ---@class ULandscapeHeightfieldCollisionComponent : UPrimitiveComponent
@@ -489,6 +618,9 @@ ULandscapeHLODBuilder = {}
 ---@field CookedPhysicalMaterials TArray<UPhysicalMaterial>
 ULandscapeHeightfieldCollisionComponent = {}
 
+---@return ULandscapeHeightfieldCollisionComponent
+function ULandscapeHeightfieldCollisionComponent:get() end
+
 ---@return ULandscapeComponent
 function ULandscapeHeightfieldCollisionComponent:GetRenderComponent() end
 
@@ -503,14 +635,23 @@ function ULandscapeHeightfieldCollisionComponent:GetRenderComponent() end
 ---@field StreamingProxies TArray<TWeakObjectPtr<ALandscapeStreamingProxy>>
 ULandscapeInfo = {}
 
+---@return ULandscapeInfo
+function ULandscapeInfo:get() end
+
 
 
 ---@class ULandscapeInfoMap : UObject
 ULandscapeInfoMap = {}
 
+---@return ULandscapeInfoMap
+function ULandscapeInfoMap:get() end
+
 
 ---@class ULandscapeLODStreamingProxy_DEPRECATED : UStreamableRenderAsset
 ULandscapeLODStreamingProxy_DEPRECATED = {}
+
+---@return ULandscapeLODStreamingProxy_DEPRECATED
+function ULandscapeLODStreamingProxy_DEPRECATED:get() end
 
 
 ---@class ULandscapeLayerInfoObject : UObject
@@ -519,6 +660,9 @@ ULandscapeLODStreamingProxy_DEPRECATED = {}
 ---@field Hardness float
 ---@field LayerUsageDebugColor FLinearColor
 ULandscapeLayerInfoObject = {}
+
+---@return ULandscapeLayerInfoObject
+function ULandscapeLayerInfoObject:get() end
 
 
 
@@ -530,11 +674,17 @@ ULandscapeLayerInfoObject = {}
 ---@field bEditorToolUsage boolean
 ULandscapeMaterialInstanceConstant = {}
 
+---@return ULandscapeMaterialInstanceConstant
+function ULandscapeMaterialInstanceConstant:get() end
+
 
 
 ---@class ULandscapeMeshCollisionComponent : ULandscapeHeightfieldCollisionComponent
 ---@field MeshGuid FGuid
 ULandscapeMeshCollisionComponent = {}
+
+---@return ULandscapeMeshCollisionComponent
+function ULandscapeMeshCollisionComponent:get() end
 
 
 
@@ -544,12 +694,18 @@ ULandscapeMeshCollisionComponent = {}
 ---@field ProxyLOD int8
 ULandscapeMeshProxyComponent = {}
 
+---@return ULandscapeMeshProxyComponent
+function ULandscapeMeshProxyComponent:get() end
+
 
 
 ---@class ULandscapeNaniteComponent : UStaticMeshComponent
 ---@field ProxyContentId FGuid
 ---@field bEnabled boolean
 ULandscapeNaniteComponent = {}
+
+---@return ULandscapeNaniteComponent
+function ULandscapeNaniteComponent:get() end
 
 
 
@@ -560,6 +716,9 @@ ULandscapeNaniteComponent = {}
 ---@field DefaultLayerInfoObject TSoftObjectPtr<ULandscapeLayerInfoObject>
 ---@field bRestrictiveMode boolean
 ULandscapeSettings = {}
+
+---@return ULandscapeSettings
+function ULandscapeSettings:get() end
 
 
 
@@ -580,6 +739,9 @@ ULandscapeSettings = {}
 ---@field LocalMeshComponent UControlPointMeshComponent
 ULandscapeSplineControlPoint = {}
 
+---@return ULandscapeSplineControlPoint
+function ULandscapeSplineControlPoint:get() end
+
 
 
 ---@class ULandscapeSplineSegment : UObject
@@ -590,6 +752,9 @@ ULandscapeSplineControlPoint = {}
 ---@field LocalMeshComponents TArray<USplineMeshComponent>
 ULandscapeSplineSegment = {}
 
+---@return ULandscapeSplineSegment
+function ULandscapeSplineSegment:get() end
+
 
 
 ---@class ULandscapeSplinesComponent : UPrimitiveComponent
@@ -598,6 +763,9 @@ ULandscapeSplineSegment = {}
 ---@field CookedForeignMeshComponents TArray<UMeshComponent>
 ULandscapeSplinesComponent = {}
 
+---@return ULandscapeSplinesComponent
+function ULandscapeSplinesComponent:get() end
+
 ---@return TArray<USplineMeshComponent>
 function ULandscapeSplinesComponent:GetSplineMeshComponents() end
 
@@ -605,11 +773,17 @@ function ULandscapeSplinesComponent:GetSplineMeshComponents() end
 ---@class ULandscapeSubsystem : UTickableWorldSubsystem
 ULandscapeSubsystem = {}
 
+---@return ULandscapeSubsystem
+function ULandscapeSubsystem:get() end
+
 
 ---@class ULandscapeWeightmapUsage : UObject
 ---@field ChannelUsage ULandscapeComponent
 ---@field LayerGuid FGuid
 ULandscapeWeightmapUsage = {}
+
+---@return ULandscapeWeightmapUsage
+function ULandscapeWeightmapUsage:get() end
 
 
 
@@ -617,11 +791,17 @@ ULandscapeWeightmapUsage = {}
 ---@field GrassTypes TArray<FGrassInput>
 UMaterialExpressionLandscapeGrassOutput = {}
 
+---@return UMaterialExpressionLandscapeGrassOutput
+function UMaterialExpressionLandscapeGrassOutput:get() end
+
 
 
 ---@class UMaterialExpressionLandscapeLayerBlend : UMaterialExpression
 ---@field Layers TArray<FLayerBlendInput>
 UMaterialExpressionLandscapeLayerBlend = {}
+
+---@return UMaterialExpressionLandscapeLayerBlend
+function UMaterialExpressionLandscapeLayerBlend:get() end
 
 
 
@@ -634,12 +814,18 @@ UMaterialExpressionLandscapeLayerBlend = {}
 ---@field MappingPanV float
 UMaterialExpressionLandscapeLayerCoords = {}
 
+---@return UMaterialExpressionLandscapeLayerCoords
+function UMaterialExpressionLandscapeLayerCoords:get() end
+
 
 
 ---@class UMaterialExpressionLandscapeLayerSample : UMaterialExpression
 ---@field ParameterName FName
 ---@field PreviewWeight float
 UMaterialExpressionLandscapeLayerSample = {}
+
+---@return UMaterialExpressionLandscapeLayerSample
+function UMaterialExpressionLandscapeLayerSample:get() end
 
 
 
@@ -649,6 +835,9 @@ UMaterialExpressionLandscapeLayerSample = {}
 ---@field ParameterName FName
 ---@field PreviewUsed boolean
 UMaterialExpressionLandscapeLayerSwitch = {}
+
+---@return UMaterialExpressionLandscapeLayerSwitch
+function UMaterialExpressionLandscapeLayerSwitch:get() end
 
 
 
@@ -660,15 +849,24 @@ UMaterialExpressionLandscapeLayerSwitch = {}
 ---@field ConstBase FVector
 UMaterialExpressionLandscapeLayerWeight = {}
 
+---@return UMaterialExpressionLandscapeLayerWeight
+function UMaterialExpressionLandscapeLayerWeight:get() end
+
 
 
 ---@class UMaterialExpressionLandscapePhysicalMaterialOutput : UMaterialExpressionCustomOutput
 ---@field Inputs TArray<FPhysicalMaterialInput>
 UMaterialExpressionLandscapePhysicalMaterialOutput = {}
 
+---@return UMaterialExpressionLandscapePhysicalMaterialOutput
+function UMaterialExpressionLandscapePhysicalMaterialOutput:get() end
+
 
 
 ---@class UMaterialExpressionLandscapeVisibilityMask : UMaterialExpression
 UMaterialExpressionLandscapeVisibilityMask = {}
+
+---@return UMaterialExpressionLandscapeVisibilityMask
+function UMaterialExpressionLandscapeVisibilityMask:get() end
 
 

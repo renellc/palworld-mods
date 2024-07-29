@@ -8,6 +8,9 @@
 ---@field IsStopByDelay boolean
 UBP_AIAction_TurnAndEscape_C = {}
 
+---@return UBP_AIAction_TurnAndEscape_C
+function UBP_AIAction_TurnAndEscape_C:get() end
+
 ---@param DeadInbfo FPalDeadInfo
 function UBP_AIAction_TurnAndEscape_C:OnSquadMemberDeadEvent(DeadInbfo) end
 ---@param EmitLocation FVector

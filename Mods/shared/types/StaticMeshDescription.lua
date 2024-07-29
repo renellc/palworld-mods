@@ -8,10 +8,16 @@
 ---@field Scale FVector
 FUVMapSettings = {}
 
+---@return FUVMapSettings
+function FUVMapSettings:get() end
+
 
 
 ---@class UStaticMeshDescription : UMeshDescriptionBase
 UStaticMeshDescription = {}
+
+---@return UStaticMeshDescription
+function UStaticMeshDescription:get() end
 
 ---@param VertexInstanceID FVertexInstanceID
 ---@param UV FVector2D

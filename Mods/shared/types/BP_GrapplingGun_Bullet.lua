@@ -7,6 +7,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_GrapplingGun_Bullet_C = {}
 
+---@return ABP_GrapplingGun_Bullet_C
+function ABP_GrapplingGun_Bullet_C:get() end
+
 ---@param Start FVector
 ---@param End FVector
 ---@param IsHit boolean

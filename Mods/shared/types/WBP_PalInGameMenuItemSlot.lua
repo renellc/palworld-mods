@@ -6,6 +6,9 @@
 ---@field WBP_PalInGameMenuItemIcon UWBP_PalInGameMenuItemIcon_C
 UWBP_PalInGameMenuItemSlot_C = {}
 
+---@return UWBP_PalInGameMenuItemSlot_C
+function UWBP_PalInGameMenuItemSlot_C:get() end
+
 ---@param iconWidget UWBP_PalItemIconBase_C
 function UWBP_PalInGameMenuItemSlot_C:RegisterItemIconWidget(iconWidget) end
 function UWBP_PalInGameMenuItemSlot_C:OnInitialized() end

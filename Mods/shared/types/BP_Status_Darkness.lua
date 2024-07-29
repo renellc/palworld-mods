@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Status_Darkness_C = {}
 
+---@return UBP_Status_Darkness_C
+function UBP_Status_Darkness_C:get() end
+
 ---@param Disable boolean
 function UBP_Status_Darkness_C:DisableDebugSetting(Disable) end
 function UBP_Status_Darkness_C:OnBeginStatus() end

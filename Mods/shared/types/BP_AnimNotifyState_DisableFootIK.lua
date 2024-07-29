@@ -3,6 +3,9 @@
 ---@class UBP_AnimNotifyState_DisableFootIK_C : UAnimNotifyState
 UBP_AnimNotifyState_DisableFootIK_C = {}
 
+---@return UBP_AnimNotifyState_DisableFootIK_C
+function UBP_AnimNotifyState_DisableFootIK_C:get() end
+
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
 ---@param EventReference FAnimNotifyEventReference

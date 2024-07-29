@@ -18,6 +18,9 @@
 ---@field MsgIDMap TMap<E_PalUITitleMenuButtonType, FDataTableRowHandle>
 UWBP_Title_MenuButton_C = {}
 
+---@return UWBP_Title_MenuButton_C
+function UWBP_Title_MenuButton_C:get() end
+
 ---@param BindedMenuType E_PalUITitleMenuButtonType::Type
 function UWBP_Title_MenuButton_C:GetMenuType(BindedMenuType) end
 ---@param Button UCommonButtonBase

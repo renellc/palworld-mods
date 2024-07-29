@@ -5,12 +5,18 @@
 ---@field Desc FString
 FAutoCompleteCommand = {}
 
+---@return FAutoCompleteCommand
+function FAutoCompleteCommand:get() end
+
 
 
 ---@class FGameModeName
 ---@field Name FString
 ---@field GameMode FSoftClassPath
 FGameModeName = {}
+
+---@return FGameModeName
+function FGameModeName:get() end
 
 
 
@@ -19,6 +25,9 @@ FGameModeName = {}
 ---@field Map FSoftObjectPath
 ---@field DisplayName FText
 FTemplateMapInfoOverride = {}
+
+---@return FTemplateMapInfoOverride
+function FTemplateMapInfoOverride:get() end
 
 
 
@@ -35,6 +44,9 @@ FTemplateMapInfoOverride = {}
 ---@field AutoCompleteCVarColor FColor
 ---@field AutoCompleteFadedColor FColor
 UConsoleSettings = {}
+
+---@return UConsoleSettings
+function UConsoleSettings:get() end
 
 
 
@@ -54,6 +66,9 @@ UConsoleSettings = {}
 ---@field GameModeMapPrefixes TArray<FGameModeName>
 ---@field GameModeClassAliases TArray<FGameModeName>
 UGameMapsSettings = {}
+
+---@return UGameMapsSettings
+function UGameMapsSettings:get() end
 
 ---@param bSkipFirstPlayer boolean
 function UGameMapsSettings:SetSkipAssigningGamepadToPlayer1(bSkipFirstPlayer) end
@@ -77,6 +92,9 @@ function UGameMapsSettings:GetGameMapsSettings() end
 ---@field JoinInProgressStandbyWaitTime float
 UGameNetworkManagerSettings = {}
 
+---@return UGameNetworkManagerSettings
+function UGameNetworkManagerSettings:get() end
+
 
 
 ---@class UGameSessionSettings : UObject
@@ -85,10 +103,16 @@ UGameNetworkManagerSettings = {}
 ---@field bRequiresPushToTalk boolean
 UGameSessionSettings = {}
 
+---@return UGameSessionSettings
+function UGameSessionSettings:get() end
+
 
 
 ---@class UGeneralEngineSettings : UObject
 UGeneralEngineSettings = {}
+
+---@return UGeneralEngineSettings
+function UGeneralEngineSettings:get() end
 
 
 ---@class UGeneralProjectSettings : UObject
@@ -116,12 +140,18 @@ UGeneralEngineSettings = {}
 ---@field FOVForFakeStereoRenderingDevice float
 UGeneralProjectSettings = {}
 
+---@return UGeneralProjectSettings
+function UGeneralProjectSettings:get() end
+
 
 
 ---@class UHudSettings : UObject
 ---@field bShowHUD boolean
 ---@field DebugDisplay TArray<FName>
 UHudSettings = {}
+
+---@return UHudSettings
+function UHudSettings:get() end
 
 
 

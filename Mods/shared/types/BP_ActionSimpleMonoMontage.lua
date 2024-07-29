@@ -7,6 +7,9 @@
 ---@field AnimPlayRate double
 UBP_ActionSimpleMonoMontage_C = {}
 
+---@return UBP_ActionSimpleMonoMontage_C
+function UBP_ActionSimpleMonoMontage_C:get() end
+
 ---@param Montage UAnimMontage
 ---@param Exist boolean
 function UBP_ActionSimpleMonoMontage_C:FindMontage(Montage, Exist) end

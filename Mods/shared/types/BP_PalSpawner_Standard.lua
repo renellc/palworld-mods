@@ -24,6 +24,9 @@
 ---@field SpawnerType EPalSpawnedCharacterType
 ABP_PalSpawner_Standard_C = {}
 
+---@return ABP_PalSpawner_Standard_C
+function ABP_PalSpawner_Standard_C:get() end
+
 ---@return EPalSpawnedCharacterType
 function ABP_PalSpawner_Standard_C:GetSpawnerType() end
 ---@return FName

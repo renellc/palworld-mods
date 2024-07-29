@@ -9,6 +9,9 @@
 ---@field WBP_MainMenu_Pal_WorkIcon UWBP_MainMenu_Pal_WorkIcon_C
 UWBP_MainMenu_Pal_WorkIconText_C = {}
 
+---@return UWBP_MainMenu_Pal_WorkIconText_C
+function UWBP_MainMenu_Pal_WorkIconText_C:get() end
+
 ---@param Suitability EPalWorkSuitability
 ---@param Rank int32
 function UWBP_MainMenu_Pal_WorkIconText_C:SetSuitability(Suitability, Rank) end

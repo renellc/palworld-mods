@@ -5,6 +5,9 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_MeleeWeaponBase_C = {}
 
+---@return ABP_MeleeWeaponBase_C
+function ABP_MeleeWeaponBase_C:get() end
+
 ---@return boolean
 function ABP_MeleeWeaponBase_C:SeekRightHandOpen() end
 ---@return boolean

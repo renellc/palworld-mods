@@ -8,10 +8,16 @@
 ---@field bAsync boolean
 FImageWriteOptions = {}
 
+---@return FImageWriteOptions
+function FImageWriteOptions:get() end
+
 
 
 ---@class UImageWriteBlueprintLibrary : UBlueprintFunctionLibrary
 UImageWriteBlueprintLibrary = {}
+
+---@return UImageWriteBlueprintLibrary
+function UImageWriteBlueprintLibrary:get() end
 
 ---@param Texture UTexture
 ---@param Filename FString

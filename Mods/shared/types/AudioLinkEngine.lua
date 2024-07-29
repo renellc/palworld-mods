@@ -3,6 +3,9 @@
 ---@class IAudioLinkBlueprintInterface : IInterface
 IAudioLinkBlueprintInterface = {}
 
+---@return IAudioLinkBlueprintInterface
+function IAudioLinkBlueprintInterface:get() end
+
 function IAudioLinkBlueprintInterface:StopLink() end
 ---@param NewSound USoundBase
 function IAudioLinkBlueprintInterface:SetLinkSound(NewSound) end

@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AIAction_Sleep_InNightWildPal_C = {}
 
+---@return UBP_AIAction_Sleep_InNightWildPal_C
+function UBP_AIAction_Sleep_InNightWildPal_C:get() end
+
 ---@param DeadInbfo FPalDeadInfo
 function UBP_AIAction_Sleep_InNightWildPal_C:OnSquadMemberDeadEvent(DeadInbfo) end
 ---@param ControlledPawn APawn

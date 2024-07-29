@@ -18,6 +18,9 @@
 ---@field RotateInterpolationRate double
 ABP_PalPlayerCaptureSet_C = {}
 
+---@return ABP_PalPlayerCaptureSet_C
+function ABP_PalPlayerCaptureSet_C:get() end
+
 function ABP_PalPlayerCaptureSet_C:ResetCameraLocation() end
 function ABP_PalPlayerCaptureSet_C:UpdateShowOnlyActors() end
 ---@param AddLocation FVector

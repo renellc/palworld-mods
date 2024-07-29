@@ -10,6 +10,9 @@
 ---@field IsAutoPlayDefaultAction boolean
 ABP_MonsterAIControllerBase_C = {}
 
+---@return ABP_MonsterAIControllerBase_C
+function ABP_MonsterAIControllerBase_C:get() end
+
 ---@param LogType EPalMonsterControllerBaseCampLogType
 ---@param StyleName FName
 function ABP_MonsterAIControllerBase_C:ToLogFontStyleName(LogType, StyleName) end

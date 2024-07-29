@@ -12,6 +12,9 @@
 ---@field PreSideMove boolean
 UBP_AIAction_NPC_Combat_Gun_C = {}
 
+---@return UBP_AIAction_NPC_Combat_Gun_C
+function UBP_AIAction_NPC_Combat_Gun_C:get() end
+
 function UBP_AIAction_NPC_Combat_Gun_C:SwitchTickState() end
 function UBP_AIAction_NPC_Combat_Gun_C:AddAllState() end
 ---@param InRange boolean

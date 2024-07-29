@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AIActionPairCall_Petting_C = {}
 
+---@return UBP_AIActionPairCall_Petting_C
+function UBP_AIActionPairCall_Petting_C:get() end
+
 ---@return boolean
 function UBP_AIActionPairCall_Petting_C:IsMomoChyo() end
 function UBP_AIActionPairCall_Petting_C:OnStartPair() end

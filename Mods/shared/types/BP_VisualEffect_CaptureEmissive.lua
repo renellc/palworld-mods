@@ -8,6 +8,9 @@
 ---@field EmissionMax double
 UBP_VisualEffect_CaptureEmissive_C = {}
 
+---@return UBP_VisualEffect_CaptureEmissive_C
+function UBP_VisualEffect_CaptureEmissive_C:get() end
+
 function UBP_VisualEffect_CaptureEmissive_C:OnBeginVisualEffect() end
 ---@param DeltaTime float
 function UBP_VisualEffect_CaptureEmissive_C:TickVisualEffect(DeltaTime) end

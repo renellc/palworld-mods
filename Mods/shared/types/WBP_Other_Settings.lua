@@ -11,6 +11,9 @@
 ---@field LangMap TMap<FString, FDataTableRowHandle>
 UWBP_Other_Settings_C = {}
 
+---@return UWBP_Other_Settings_C
+function UWBP_Other_Settings_C:get() end
+
 function UWBP_Other_Settings_C:Construct() end
 ---@param Value int32
 function UWBP_Other_Settings_C:OnLanguageChanged(Value) end

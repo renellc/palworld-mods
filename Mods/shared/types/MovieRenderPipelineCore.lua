@@ -3,9 +3,15 @@
 ---@class AMoviePipelineGameMode : AGameModeBase
 AMoviePipelineGameMode = {}
 
+---@return AMoviePipelineGameMode
+function AMoviePipelineGameMode:get() end
+
 
 ---@class FMoviePipelineCameraCutInfo
 FMoviePipelineCameraCutInfo = {}
+
+---@return FMoviePipelineCameraCutInfo
+function FMoviePipelineCameraCutInfo:get() end
 
 
 ---@class FMoviePipelineFilenameResolveParams
@@ -27,6 +33,9 @@ FMoviePipelineCameraCutInfo = {}
 ---@field AdditionalFrameNumberOffset int32
 FMoviePipelineFilenameResolveParams = {}
 
+---@return FMoviePipelineFilenameResolveParams
+function FMoviePipelineFilenameResolveParams:get() end
+
 
 
 ---@class FMoviePipelineFormatArgs
@@ -34,6 +43,9 @@ FMoviePipelineFilenameResolveParams = {}
 ---@field FileMetadata TMap<FString, FString>
 ---@field InJob UMoviePipelineExecutorJob
 FMoviePipelineFormatArgs = {}
+
+---@return FMoviePipelineFormatArgs
+function FMoviePipelineFormatArgs:get() end
 
 
 
@@ -44,6 +56,9 @@ FMoviePipelineFormatArgs = {}
 ---@field ShotData TArray<FMoviePipelineShotOutputData>
 FMoviePipelineOutputData = {}
 
+---@return FMoviePipelineOutputData
+function FMoviePipelineOutputData:get() end
+
 
 
 ---@class FMoviePipelinePassIdentifier
@@ -51,11 +66,17 @@ FMoviePipelineOutputData = {}
 ---@field CameraName FString
 FMoviePipelinePassIdentifier = {}
 
+---@return FMoviePipelinePassIdentifier
+function FMoviePipelinePassIdentifier:get() end
+
 
 
 ---@class FMoviePipelineRenderPassOutputData
 ---@field FilePaths TArray<FString>
 FMoviePipelineRenderPassOutputData = {}
+
+---@return FMoviePipelineRenderPassOutputData
+function FMoviePipelineRenderPassOutputData:get() end
 
 
 
@@ -69,6 +90,9 @@ FMoviePipelineRenderPassOutputData = {}
 ---@field TotalEngineWarmUpFrameCount int32
 FMoviePipelineSegmentWorkMetrics = {}
 
+---@return FMoviePipelineSegmentWorkMetrics
+function FMoviePipelineSegmentWorkMetrics:get() end
+
 
 
 ---@class FMoviePipelineShotOutputData
@@ -76,12 +100,18 @@ FMoviePipelineSegmentWorkMetrics = {}
 ---@field RenderPassData TMap<FMoviePipelinePassIdentifier, FMoviePipelineRenderPassOutputData>
 FMoviePipelineShotOutputData = {}
 
+---@return FMoviePipelineShotOutputData
+function FMoviePipelineShotOutputData:get() end
+
 
 
 ---@class FMoviePipelineSidecarCamera
 ---@field BindingId FGuid
 ---@field Name FString
 FMoviePipelineSidecarCamera = {}
+
+---@return FMoviePipelineSidecarCamera
+function FMoviePipelineSidecarCamera:get() end
 
 
 
@@ -98,6 +128,9 @@ FMoviePipelineSidecarCamera = {}
 ---@field DebugWidgetClass TSubclassOf<UMovieRenderDebugWidget>
 ---@field CurrentJob UMoviePipelineExecutorJob
 UMoviePipeline = {}
+
+---@return UMoviePipeline
+function UMoviePipeline:get() end
 
 ---@param bError boolean
 function UMoviePipeline:Shutdown(bError) end
@@ -131,10 +164,16 @@ function UMoviePipeline:GetCurrentJob() end
 ---@field bRenderWarmUpFrames boolean
 UMoviePipelineAntiAliasingSetting = {}
 
+---@return UMoviePipelineAntiAliasingSetting
+function UMoviePipelineAntiAliasingSetting:get() end
+
 
 
 ---@class UMoviePipelineBlueprintLibrary : UBlueprintFunctionLibrary
 UMoviePipelineBlueprintLibrary = {}
+
+---@return UMoviePipelineBlueprintLibrary
+function UMoviePipelineBlueprintLibrary:get() end
 
 ---@param InSequence ULevelSequence
 ---@param InJob UMoviePipelineExecutorJob
@@ -242,12 +281,18 @@ function UMoviePipelineBlueprintLibrary:DuplicateSequence(Outer, InSequence) end
 ---@field bRenderAllCameras boolean
 UMoviePipelineCameraSetting = {}
 
+---@return UMoviePipelineCameraSetting
+function UMoviePipelineCameraSetting:get() end
+
 
 
 ---@class UMoviePipelineColorSetting : UMoviePipelineSetting
 ---@field OCIOConfiguration FOpenColorIODisplayConfiguration
 ---@field bDisableToneCurve boolean
 UMoviePipelineColorSetting = {}
+
+---@return UMoviePipelineColorSetting
+function UMoviePipelineColorSetting:get() end
 
 
 
@@ -259,6 +304,9 @@ UMoviePipelineColorSetting = {}
 ---@field bSkipEncodeOnRenderCanceled boolean
 ---@field bWriteEachFrameDuration boolean
 UMoviePipelineCommandLineEncoder = {}
+
+---@return UMoviePipelineCommandLineEncoder
+function UMoviePipelineCommandLineEncoder:get() end
 
 
 
@@ -277,12 +325,18 @@ UMoviePipelineCommandLineEncoder = {}
 ---@field EncodeSettings_Epic FString
 UMoviePipelineCommandLineEncoderSettings = {}
 
+---@return UMoviePipelineCommandLineEncoderSettings
+function UMoviePipelineCommandLineEncoderSettings:get() end
+
 
 
 ---@class UMoviePipelineConfigBase : UObject
 ---@field DisplayName FString
 ---@field Settings TArray<UMoviePipelineSetting>
 UMoviePipelineConfigBase = {}
+
+---@return UMoviePipelineConfigBase
+function UMoviePipelineConfigBase:get() end
 
 ---@param InSetting UMoviePipelineSetting
 function UMoviePipelineConfigBase:RemoveSetting(InSetting) end
@@ -307,6 +361,9 @@ function UMoviePipelineConfigBase:CopyFrom(InConfig) end
 ---@class UMoviePipelineCustomTimeStep : UEngineCustomTimeStep
 UMoviePipelineCustomTimeStep = {}
 
+---@return UMoviePipelineCustomTimeStep
+function UMoviePipelineCustomTimeStep:get() end
+
 
 ---@class UMoviePipelineDebugSettings : UMoviePipelineSetting
 ---@field bWriteAllSamples boolean
@@ -314,6 +371,9 @@ UMoviePipelineCustomTimeStep = {}
 ---@field CaptureFrame int32
 ---@field bCaptureUnrealInsightsTrace boolean
 UMoviePipelineDebugSettings = {}
+
+---@return UMoviePipelineDebugSettings
+function UMoviePipelineDebugSettings:get() end
 
 
 
@@ -326,6 +386,9 @@ UMoviePipelineDebugSettings = {}
 ---@field UserData FString
 ---@field TargetPipelineClass TSubclassOf<UMoviePipeline>
 UMoviePipelineExecutorBase = {}
+
+---@return UMoviePipelineExecutorBase
+function UMoviePipelineExecutorBase:get() end
 
 ---@param InProgress float
 function UMoviePipelineExecutorBase:SetStatusProgress(InProgress) end
@@ -383,6 +446,9 @@ function UMoviePipelineExecutorBase:CancelAllJobs() end
 ---@field bEnabled boolean
 UMoviePipelineExecutorJob = {}
 
+---@return UMoviePipelineExecutorJob
+function UMoviePipelineExecutorJob:get() end
+
 ---@param InProgress float
 function UMoviePipelineExecutorJob:SetStatusProgress(InProgress) end
 ---@param InStatus FString
@@ -423,6 +489,9 @@ function UMoviePipelineExecutorJob:GetConfiguration() end
 ---@field ShotOverridePresetOrigin TSoftObjectPtr<UMoviePipelineShotConfig>
 UMoviePipelineExecutorShot = {}
 
+---@return UMoviePipelineExecutorShot
+function UMoviePipelineExecutorShot:get() end
+
 ---@return boolean
 function UMoviePipelineExecutorShot:ShouldRender() end
 ---@param InProgress float
@@ -454,6 +523,9 @@ function UMoviePipelineExecutorShot:AllocateNewShotOverrideConfig(InConfigType) 
 ---@field DataSource FCPXMLExportDataSource
 UMoviePipelineFCPXMLExporter = {}
 
+---@return UMoviePipelineFCPXMLExporter
+function UMoviePipelineFCPXMLExporter:get() end
+
 
 
 ---@class UMoviePipelineGameOverrideSetting : UMoviePipelineSetting
@@ -473,6 +545,9 @@ UMoviePipelineFCPXMLExporter = {}
 ---@field VirtualTextureFeedbackFactor int32
 UMoviePipelineGameOverrideSetting = {}
 
+---@return UMoviePipelineGameOverrideSetting
+function UMoviePipelineGameOverrideSetting:get() end
+
 
 
 ---@class UMoviePipelineHighResSetting : UMoviePipelineSetting
@@ -484,11 +559,17 @@ UMoviePipelineGameOverrideSetting = {}
 ---@field bAllocateHistoryPerTile boolean
 UMoviePipelineHighResSetting = {}
 
+---@return UMoviePipelineHighResSetting
+function UMoviePipelineHighResSetting:get() end
+
 
 
 ---@class UMoviePipelineInProcessExecutor : UMoviePipelineLinearExecutorBase
 ---@field bUseCurrentLevel boolean
 UMoviePipelineInProcessExecutor = {}
+
+---@return UMoviePipelineInProcessExecutor
+function UMoviePipelineInProcessExecutor:get() end
 
 
 
@@ -499,12 +580,18 @@ UMoviePipelineInProcessExecutor = {}
 ---@field InitialDelayFrameCount int32
 UMoviePipelineInProcessExecutorSettings = {}
 
+---@return UMoviePipelineInProcessExecutorSettings
+function UMoviePipelineInProcessExecutorSettings:get() end
+
 
 
 ---@class UMoviePipelineLinearExecutorBase : UMoviePipelineExecutorBase
 ---@field Queue UMoviePipelineQueue
 ---@field ActiveMoviePipeline UMoviePipeline
 UMoviePipelineLinearExecutorBase = {}
+
+---@return UMoviePipelineLinearExecutorBase
+function UMoviePipelineLinearExecutorBase:get() end
 
 
 
@@ -513,6 +600,9 @@ UMoviePipelineLinearExecutorBase = {}
 ---@field OutputSetting UMoviePipelineOutputSetting
 ---@field TransientSettings TArray<UMoviePipelineSetting>
 UMoviePipelineMasterConfig = {}
+
+---@return UMoviePipelineMasterConfig
+function UMoviePipelineMasterConfig:get() end
 
 function UMoviePipelineMasterConfig:InitializeTransientSettings() end
 ---@return TArray<UMoviePipelineSetting>
@@ -528,6 +618,9 @@ function UMoviePipelineMasterConfig:GetAllSettings(bIncludeDisabledSettings, bIn
 
 ---@class UMoviePipelineOutputBase : UMoviePipelineSetting
 UMoviePipelineOutputBase = {}
+
+---@return UMoviePipelineOutputBase
+function UMoviePipelineOutputBase:get() end
 
 
 ---@class UMoviePipelineOutputSetting : UMoviePipelineSetting
@@ -549,6 +642,9 @@ UMoviePipelineOutputBase = {}
 ---@field bFlushDiskWritesPerShot boolean
 UMoviePipelineOutputSetting = {}
 
+---@return UMoviePipelineOutputSetting
+function UMoviePipelineOutputSetting:get() end
+
 
 
 ---@class UMoviePipelinePythonHostExecutor : UMoviePipelineExecutorBase
@@ -556,6 +652,9 @@ UMoviePipelineOutputSetting = {}
 ---@field PipelineQueue UMoviePipelineQueue
 ---@field LastLoadedWorld UWorld
 UMoviePipelinePythonHostExecutor = {}
+
+---@return UMoviePipelinePythonHostExecutor
+function UMoviePipelinePythonHostExecutor:get() end
 
 ---@param InWorld UWorld
 function UMoviePipelinePythonHostExecutor:OnMapLoad(InWorld) end
@@ -568,6 +667,9 @@ function UMoviePipelinePythonHostExecutor:ExecuteDelayed(InPipelineQueue) end
 ---@class UMoviePipelineQueue : UObject
 ---@field Jobs TArray<UMoviePipelineExecutorJob>
 UMoviePipelineQueue = {}
+
+---@return UMoviePipelineQueue
+function UMoviePipelineQueue:get() end
 
 ---@param InJob UMoviePipelineExecutorJob
 ---@param Index int32
@@ -593,6 +695,9 @@ function UMoviePipelineQueue:AllocateNewJob(InJobType) end
 ---@field CurrentQueue UMoviePipelineQueue
 UMoviePipelineQueueEngineSubsystem = {}
 
+---@return UMoviePipelineQueueEngineSubsystem
+function UMoviePipelineQueueEngineSubsystem:get() end
+
 ---@param InProgressWidgetClass TSubclassOf<UMovieRenderDebugWidget>
 ---@param bRenderPlayerViewport boolean
 function UMoviePipelineQueueEngineSubsystem:SetConfiguration(InProgressWidgetClass, bRenderPlayerViewport) end
@@ -617,11 +722,17 @@ function UMoviePipelineQueueEngineSubsystem:AllocateJob(InSequence) end
 ---@class UMoviePipelineRenderPass : UMoviePipelineSetting
 UMoviePipelineRenderPass = {}
 
+---@return UMoviePipelineRenderPass
+function UMoviePipelineRenderPass:get() end
+
 
 ---@class UMoviePipelineSetting : UObject
 ---@field CachedPipeline TWeakObjectPtr<UMoviePipeline>
 ---@field bEnabled boolean
 UMoviePipelineSetting = {}
+
+---@return UMoviePipelineSetting
+function UMoviePipelineSetting:get() end
 
 ---@param bInEnabled boolean
 function UMoviePipelineSetting:SetIsEnabled(bInEnabled) end
@@ -644,6 +755,9 @@ function UMoviePipelineSetting:BuildNewProcessCommandLine(InOutUnrealURLParams, 
 ---@field bCanBeDisabled boolean
 UMoviePipelineSetting_BlueprintBase = {}
 
+---@return UMoviePipelineSetting_BlueprintBase
+function UMoviePipelineSetting_BlueprintBase:get() end
+
 ---@param InPipeline UMoviePipeline
 function UMoviePipelineSetting_BlueprintBase:ReceiveTeardownForPipelineImpl(InPipeline) end
 ---@param InPipeline UMoviePipeline
@@ -657,17 +771,29 @@ function UMoviePipelineSetting_BlueprintBase:OnEngineTickBeginFrame() end
 ---@class UMoviePipelineShotConfig : UMoviePipelineConfigBase
 UMoviePipelineShotConfig = {}
 
+---@return UMoviePipelineShotConfig
+function UMoviePipelineShotConfig:get() end
+
 
 ---@class UMoviePipelineVideoOutputBase : UMoviePipelineOutputBase
 UMoviePipelineVideoOutputBase = {}
+
+---@return UMoviePipelineVideoOutputBase
+function UMoviePipelineVideoOutputBase:get() end
 
 
 ---@class UMoviePipelineViewFamilySetting : UMoviePipelineSetting
 UMoviePipelineViewFamilySetting = {}
 
+---@return UMoviePipelineViewFamilySetting
+function UMoviePipelineViewFamilySetting:get() end
+
 
 ---@class UMovieRenderDebugWidget : UUserWidget
 UMovieRenderDebugWidget = {}
+
+---@return UMovieRenderDebugWidget
+function UMovieRenderDebugWidget:get() end
 
 ---@param ForPipeline UMoviePipeline
 function UMovieRenderDebugWidget:OnInitializedForPipeline(ForPipeline) end

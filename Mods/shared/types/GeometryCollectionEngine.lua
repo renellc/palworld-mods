@@ -5,6 +5,9 @@
 ---@field GeometryCollectionDebugDrawComponent UGeometryCollectionDebugDrawComponent
 AGeometryCollectionActor = {}
 
+---@return AGeometryCollectionActor
+function AGeometryCollectionActor:get() end
+
 ---@param Start FVector
 ---@param End FVector
 ---@param OutHit FHitResult
@@ -76,11 +79,17 @@ function AGeometryCollectionActor:RaycastSingle(Start, End, OutHit) end
 ---@field SpriteComponent UBillboardComponent
 AGeometryCollectionDebugDrawActor = {}
 
+---@return AGeometryCollectionDebugDrawActor
+function AGeometryCollectionDebugDrawActor:get() end
+
 
 
 ---@class AGeometryCollectionISMPoolActor : AActor
 ---@field ISMPoolComp UGeometryCollectionISMPoolComponent
 AGeometryCollectionISMPoolActor = {}
+
+---@return AGeometryCollectionISMPoolActor
+function AGeometryCollectionISMPoolActor:get() end
 
 
 
@@ -93,6 +102,9 @@ AGeometryCollectionISMPoolActor = {}
 ---@field RenderVolumeBoundingBox boolean
 AGeometryCollectionRenderLevelSetActor = {}
 
+---@return AGeometryCollectionRenderLevelSetActor
+function AGeometryCollectionRenderLevelSetActor:get() end
+
 
 
 ---@class FChaosBreakingEventData
@@ -100,6 +112,9 @@ AGeometryCollectionRenderLevelSetActor = {}
 ---@field Velocity FVector
 ---@field Mass float
 FChaosBreakingEventData = {}
+
+---@return FChaosBreakingEventData
+function FChaosBreakingEventData:get() end
 
 
 
@@ -111,6 +126,9 @@ FChaosBreakingEventData = {}
 ---@field MaxDistance float
 ---@field SortMethod EChaosBreakingSortMethod
 FChaosBreakingEventRequestSettings = {}
+
+---@return FChaosBreakingEventRequestSettings
+function FChaosBreakingEventRequestSettings:get() end
 
 
 
@@ -124,6 +142,9 @@ FChaosBreakingEventRequestSettings = {}
 ---@field Impulse FVector
 FChaosCollisionEventData = {}
 
+---@return FChaosCollisionEventData
+function FChaosCollisionEventData:get() end
+
 
 
 ---@class FChaosCollisionEventRequestSettings
@@ -135,6 +156,9 @@ FChaosCollisionEventData = {}
 ---@field SortMethod EChaosCollisionSortMethod
 FChaosCollisionEventRequestSettings = {}
 
+---@return FChaosCollisionEventRequestSettings
+function FChaosCollisionEventRequestSettings:get() end
+
 
 
 ---@class FChaosRemovalEventData
@@ -142,6 +166,9 @@ FChaosCollisionEventRequestSettings = {}
 ---@field Mass float
 ---@field ParticleIndex int32
 FChaosRemovalEventData = {}
+
+---@return FChaosRemovalEventData
+function FChaosRemovalEventData:get() end
 
 
 
@@ -151,6 +178,9 @@ FChaosRemovalEventData = {}
 ---@field MaxDistance float
 ---@field SortMethod EChaosRemovalSortMethod
 FChaosRemovalEventRequestSettings = {}
+
+---@return FChaosRemovalEventRequestSettings
+function FChaosRemovalEventRequestSettings:get() end
 
 
 
@@ -162,6 +192,9 @@ FChaosRemovalEventRequestSettings = {}
 ---@field ParticleIndex int32
 FChaosTrailingEventData = {}
 
+---@return FChaosTrailingEventData
+function FChaosTrailingEventData:get() end
+
 
 
 ---@class FChaosTrailingEventRequestSettings
@@ -172,6 +205,9 @@ FChaosTrailingEventData = {}
 ---@field MaxDistance float
 ---@field SortMethod EChaosTrailingSortMethod
 FChaosTrailingEventRequestSettings = {}
+
+---@return FChaosTrailingEventRequestSettings
+function FChaosTrailingEventRequestSettings:get() end
 
 
 
@@ -198,6 +234,9 @@ FChaosTrailingEventRequestSettings = {}
 ---@field TrailingMinVolumeThreshold float
 FGeomComponentCacheParameters = {}
 
+---@return FGeomComponentCacheParameters
+function FGeomComponentCacheParameters:get() end
+
 
 
 ---@class FGeometryCollectionAutoInstanceMesh
@@ -205,12 +244,18 @@ FGeomComponentCacheParameters = {}
 ---@field Materials TArray<UMaterialInterface>
 FGeometryCollectionAutoInstanceMesh = {}
 
+---@return FGeometryCollectionAutoInstanceMesh
+function FGeometryCollectionAutoInstanceMesh:get() end
+
 
 
 ---@class FGeometryCollectionCollisionParticleData
 ---@field CollisionParticlesFraction float
 ---@field MaximumCollisionParticles int32
 FGeometryCollectionCollisionParticleData = {}
+
+---@return FGeometryCollectionCollisionParticleData
+function FGeometryCollectionCollisionParticleData:get() end
 
 
 
@@ -223,6 +268,9 @@ FGeometryCollectionCollisionParticleData = {}
 ---@field CollisionMarginFraction float
 FGeometryCollectionCollisionTypeData = {}
 
+---@return FGeometryCollectionCollisionTypeData
+function FGeometryCollectionCollisionTypeData:get() end
+
 
 
 ---@class FGeometryCollectionDamagePropagationData
@@ -230,6 +278,9 @@ FGeometryCollectionCollisionTypeData = {}
 ---@field BreakDamagePropagationFactor float
 ---@field ShockDamagePropagationFactor float
 FGeometryCollectionDamagePropagationData = {}
+
+---@return FGeometryCollectionDamagePropagationData
+function FGeometryCollectionDamagePropagationData:get() end
 
 
 
@@ -239,10 +290,16 @@ FGeometryCollectionDamagePropagationData = {}
 ---@field GeometryCollection AGeometryCollectionActor
 FGeometryCollectionDebugDrawActorSelectedRigidBody = {}
 
+---@return FGeometryCollectionDebugDrawActorSelectedRigidBody
+function FGeometryCollectionDebugDrawActorSelectedRigidBody:get() end
+
 
 
 ---@class FGeometryCollectionDebugDrawWarningMessage
 FGeometryCollectionDebugDrawWarningMessage = {}
+
+---@return FGeometryCollectionDebugDrawWarningMessage
+function FGeometryCollectionDebugDrawWarningMessage:get() end
 
 
 ---@class FGeometryCollectionEmbeddedExemplar
@@ -251,6 +308,9 @@ FGeometryCollectionDebugDrawWarningMessage = {}
 ---@field EndCullDistance float
 ---@field InstanceCount int32
 FGeometryCollectionEmbeddedExemplar = {}
+
+---@return FGeometryCollectionEmbeddedExemplar
+function FGeometryCollectionEmbeddedExemplar:get() end
 
 
 
@@ -261,10 +321,16 @@ FGeometryCollectionEmbeddedExemplar = {}
 ---@field MaxClusterLevelSetResolution int32
 FGeometryCollectionLevelSetData = {}
 
+---@return FGeometryCollectionLevelSetData
+function FGeometryCollectionLevelSetData:get() end
+
 
 
 ---@class FGeometryCollectionRepData
 FGeometryCollectionRepData = {}
+
+---@return FGeometryCollectionRepData
+function FGeometryCollectionRepData:get() end
 
 
 ---@class FGeometryCollectionSizeSpecificData
@@ -272,6 +338,9 @@ FGeometryCollectionRepData = {}
 ---@field CollisionShapes TArray<FGeometryCollectionCollisionTypeData>
 ---@field DamageThreshold int32
 FGeometryCollectionSizeSpecificData = {}
+
+---@return FGeometryCollectionSizeSpecificData
+function FGeometryCollectionSizeSpecificData:get() end
 
 
 
@@ -282,6 +351,9 @@ FGeometryCollectionSizeSpecificData = {}
 ---@field bAddInternalMaterials boolean
 ---@field bSplitComponents boolean
 FGeometryCollectionSource = {}
+
+---@return FGeometryCollectionSource
+function FGeometryCollectionSource:get() end
 
 
 
@@ -301,6 +373,9 @@ FGeometryCollectionSource = {}
 ---@field OnTrailingEvents FChaosDestructionListenerOnTrailingEvents
 ---@field OnRemovalEvents FChaosDestructionListenerOnRemovalEvents
 UChaosDestructionListener = {}
+
+---@return UChaosDestructionListener
+function UChaosDestructionListener:get() end
 
 ---@param TrailingEvents TArray<FChaosTrailingEventData>
 ---@param SortMethod EChaosTrailingSortMethod
@@ -377,6 +452,9 @@ function UChaosDestructionListener:AddChaosSolverActor(ChaosSolverActor) end
 ---@field BoneSelectedMaterialIndex int32
 UGeometryCollection = {}
 
+---@return UGeometryCollection
+function UGeometryCollection:get() end
+
 
 
 ---@class UGeometryCollectionCache : UObject
@@ -384,6 +462,9 @@ UGeometryCollection = {}
 ---@field SupportedCollection UGeometryCollection
 ---@field CompatibleCollectionState FGuid
 UGeometryCollectionCache = {}
+
+---@return UGeometryCollectionCache
+function UGeometryCollectionCache:get() end
 
 
 
@@ -439,6 +520,9 @@ UGeometryCollectionCache = {}
 ---@field DummyBodySetup UBodySetup
 ---@field EmbeddedGeometryComponents TArray<UInstancedStaticMeshComponent>
 UGeometryCollectionComponent = {}
+
+---@return UGeometryCollectionComponent
+function UGeometryCollectionComponent:get() end
 
 ---@param RestCollectionIn UGeometryCollection
 function UGeometryCollectionComponent:SetRestCollection(RestCollectionIn) end
@@ -506,9 +590,15 @@ function UGeometryCollectionComponent:ApplyAngularVelocity(ItemIndex, AngularVel
 ---@field GeometryCollectionRenderLevelSetActor AGeometryCollectionRenderLevelSetActor
 UGeometryCollectionDebugDrawComponent = {}
 
+---@return UGeometryCollectionDebugDrawComponent
+function UGeometryCollectionDebugDrawComponent:get() end
+
 
 
 ---@class UGeometryCollectionISMPoolComponent : USceneComponent
 UGeometryCollectionISMPoolComponent = {}
+
+---@return UGeometryCollectionISMPoolComponent
+function UGeometryCollectionISMPoolComponent:get() end
 
 

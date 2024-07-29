@@ -5,6 +5,9 @@
 ---@field IsAllNpcSpawned boolean
 UBP_PalSupplyIncidentAction_C = {}
 
+---@return UBP_PalSupplyIncidentAction_C
+function UBP_PalSupplyIncidentAction_C:get() end
+
 ---@param bIsPalSpawner boolean
 ---@param Result APalRandomIncidentNPCSpawner
 function UBP_PalSupplyIncidentAction_C:GetNPCSpawner(bIsPalSpawner, Result) end

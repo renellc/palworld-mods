@@ -5,5 +5,8 @@
 ---@field SplineElement_27_62D4534842033DB22DB70AA009FACCF8 FRiverSplineElement
 FSplineObject = {}
 
+---@return FSplineObject
+function FSplineObject:get() end
+
 
 

@@ -5,6 +5,9 @@
 ---@field String FString
 FBoolToStringDataflowNode = {}
 
+---@return FBoolToStringDataflowNode
+function FBoolToStringDataflowNode:get() end
+
 
 
 ---@class FBoundingBoxDataflowNode : FDataflowNode
@@ -12,11 +15,17 @@ FBoolToStringDataflowNode = {}
 ---@field BoundingBox FBox
 FBoundingBoxDataflowNode = {}
 
+---@return FBoundingBoxDataflowNode
+function FBoundingBoxDataflowNode:get() end
+
 
 
 ---@class FCloseGeometryOnCollectionDataflowNode : FDataflowNode
 ---@field Collection FManagedArrayCollection
 FCloseGeometryOnCollectionDataflowNode = {}
+
+---@return FCloseGeometryOnCollectionDataflowNode
+function FCloseGeometryOnCollectionDataflowNode:get() end
 
 
 
@@ -27,6 +36,9 @@ FCloseGeometryOnCollectionDataflowNode = {}
 ---@field SimplificationDistanceThreshold float
 FCreateNonOverlappingConvexHullsDataflowNode = {}
 
+---@return FCreateNonOverlappingConvexHullsDataflowNode
+function FCreateNonOverlappingConvexHullsDataflowNode:get() end
+
 
 
 ---@class FDegreesToRadiansDataflowNode : FDataflowNode
@@ -34,12 +46,18 @@ FCreateNonOverlappingConvexHullsDataflowNode = {}
 ---@field Radians float
 FDegreesToRadiansDataflowNode = {}
 
+---@return FDegreesToRadiansDataflowNode
+function FDegreesToRadiansDataflowNode:get() end
+
 
 
 ---@class FExampleCollectionEditDataflowNode : FDataflowNode
 ---@field Scale float
 ---@field Collection FManagedArrayCollection
 FExampleCollectionEditDataflowNode = {}
+
+---@return FExampleCollectionEditDataflowNode
+function FExampleCollectionEditDataflowNode:get() end
 
 
 
@@ -52,6 +70,9 @@ FExampleCollectionEditDataflowNode = {}
 ---@field Volume float
 FExpandBoundingBoxDataflowNode = {}
 
+---@return FExpandBoundingBoxDataflowNode
+function FExpandBoundingBoxDataflowNode:get() end
+
 
 
 ---@class FExpandVectorDataflowNode : FDataflowNode
@@ -61,6 +82,9 @@ FExpandBoundingBoxDataflowNode = {}
 ---@field Z float
 FExpandVectorDataflowNode = {}
 
+---@return FExpandVectorDataflowNode
+function FExpandVectorDataflowNode:get() end
+
 
 
 ---@class FExplodedViewDataflowNode : FDataflowNode
@@ -68,6 +92,9 @@ FExpandVectorDataflowNode = {}
 ---@field UniformScale float
 ---@field Scale FVector
 FExplodedViewDataflowNode = {}
+
+---@return FExplodedViewDataflowNode
+function FExplodedViewDataflowNode:get() end
 
 
 
@@ -77,6 +104,9 @@ FExplodedViewDataflowNode = {}
 ---@field Int int32
 FFloatToIntDataflowNode = {}
 
+---@return FFloatToIntDataflowNode
+function FFloatToIntDataflowNode:get() end
+
 
 
 ---@class FFloatToStringDataflowNode : FDataflowNode
@@ -84,17 +114,26 @@ FFloatToIntDataflowNode = {}
 ---@field String FString
 FFloatToStringDataflowNode = {}
 
+---@return FFloatToStringDataflowNode
+function FFloatToStringDataflowNode:get() end
+
 
 
 ---@class FGenerateTetrahedralCollectionDataflowNodes : FDataflowNode
 ---@field Collection FManagedArrayCollection
 FGenerateTetrahedralCollectionDataflowNodes = {}
 
+---@return FGenerateTetrahedralCollectionDataflowNodes
+function FGenerateTetrahedralCollectionDataflowNodes:get() end
+
 
 
 ---@class FGetCollectionAssetDataflowNode : FDataflowNode
 ---@field Output FManagedArrayCollection
 FGetCollectionAssetDataflowNode = {}
+
+---@return FGetCollectionAssetDataflowNode
+function FGetCollectionAssetDataflowNode:get() end
 
 
 
@@ -103,12 +142,18 @@ FGetCollectionAssetDataflowNode = {}
 ---@field Hash int32
 FHashStringDataflowNode = {}
 
+---@return FHashStringDataflowNode
+function FHashStringDataflowNode:get() end
+
 
 
 ---@class FHashVectorDataflowNode : FDataflowNode
 ---@field Vector FVector
 ---@field Hash int32
 FHashVectorDataflowNode = {}
+
+---@return FHashVectorDataflowNode
+function FHashVectorDataflowNode:get() end
 
 
 
@@ -117,6 +162,9 @@ FHashVectorDataflowNode = {}
 ---@field float float
 FIntToFloatDataflowNode = {}
 
+---@return FIntToFloatDataflowNode
+function FIntToFloatDataflowNode:get() end
+
 
 
 ---@class FIntToStringDataflowNode : FDataflowNode
@@ -124,12 +172,18 @@ FIntToFloatDataflowNode = {}
 ---@field String FString
 FIntToStringDataflowNode = {}
 
+---@return FIntToStringDataflowNode
+function FIntToStringDataflowNode:get() end
+
 
 
 ---@class FLogStringDataflowNode : FDataflowNode
 ---@field PrintToLog boolean
 ---@field String FString
 FLogStringDataflowNode = {}
+
+---@return FLogStringDataflowNode
+function FLogStringDataflowNode:get() end
 
 
 
@@ -142,12 +196,18 @@ FLogStringDataflowNode = {}
 ---@field Box FBox
 FMakeBoxDataflowNode = {}
 
+---@return FMakeBoxDataflowNode
+function FMakeBoxDataflowNode:get() end
+
 
 
 ---@class FMakeLiteralBoolDataflowNode : FDataflowNode
 ---@field Value boolean
 ---@field bool boolean
 FMakeLiteralBoolDataflowNode = {}
+
+---@return FMakeLiteralBoolDataflowNode
+function FMakeLiteralBoolDataflowNode:get() end
 
 
 
@@ -156,12 +216,18 @@ FMakeLiteralBoolDataflowNode = {}
 ---@field float float
 FMakeLiteralFloatDataflowNode = {}
 
+---@return FMakeLiteralFloatDataflowNode
+function FMakeLiteralFloatDataflowNode:get() end
+
 
 
 ---@class FMakeLiteralIntDataflowNode : FDataflowNode
 ---@field Value int32
 ---@field Int int32
 FMakeLiteralIntDataflowNode = {}
+
+---@return FMakeLiteralIntDataflowNode
+function FMakeLiteralIntDataflowNode:get() end
 
 
 
@@ -170,12 +236,18 @@ FMakeLiteralIntDataflowNode = {}
 ---@field String FString
 FMakeLiteralStringDataflowNode = {}
 
+---@return FMakeLiteralStringDataflowNode
+function FMakeLiteralStringDataflowNode:get() end
+
 
 
 ---@class FMakeLiteralVectorDataflowNode : FDataflowNode
 ---@field Value FVector
 ---@field Vector FVector
 FMakeLiteralVectorDataflowNode = {}
+
+---@return FMakeLiteralVectorDataflowNode
+function FMakeLiteralVectorDataflowNode:get() end
 
 
 
@@ -184,12 +256,18 @@ FMakeLiteralVectorDataflowNode = {}
 ---@field Points TArray<FVector>
 FMakePointsDataflowNode = {}
 
+---@return FMakePointsDataflowNode
+function FMakePointsDataflowNode:get() end
+
 
 
 ---@class FMathConstantsDataflowNode : FDataflowNode
 ---@field Constant EMathConstantsEnum
 ---@field float float
 FMathConstantsDataflowNode = {}
+
+---@return FMathConstantsDataflowNode
+function FMathConstantsDataflowNode:get() end
 
 
 
@@ -209,6 +287,9 @@ FMathConstantsDataflowNode = {}
 ---@field CollisionSampleSpacing float
 FPlaneCutterDataflowNode = {}
 
+---@return FPlaneCutterDataflowNode
+function FPlaneCutterDataflowNode:get() end
+
 
 
 ---@class FPrintStringDataflowNode : FDataflowNode
@@ -218,6 +299,9 @@ FPlaneCutterDataflowNode = {}
 ---@field Duration float
 ---@field String FString
 FPrintStringDataflowNode = {}
+
+---@return FPrintStringDataflowNode
+function FPrintStringDataflowNode:get() end
 
 
 
@@ -233,12 +317,18 @@ FPrintStringDataflowNode = {}
 ---@field Points TArray<FVector>
 FRadialScatterPointsDataflowNode = {}
 
+---@return FRadialScatterPointsDataflowNode
+function FRadialScatterPointsDataflowNode:get() end
+
 
 
 ---@class FRadiansToDegreesDataflowNode : FDataflowNode
 ---@field Radians float
 ---@field Degrees float
 FRadiansToDegreesDataflowNode = {}
+
+---@return FRadiansToDegreesDataflowNode
+function FRadiansToDegreesDataflowNode:get() end
 
 
 
@@ -247,6 +337,9 @@ FRadiansToDegreesDataflowNode = {}
 ---@field RandomSeed float
 ---@field float float
 FRandomFloatDataflowNode = {}
+
+---@return FRandomFloatDataflowNode
+function FRandomFloatDataflowNode:get() end
 
 
 
@@ -258,6 +351,9 @@ FRandomFloatDataflowNode = {}
 ---@field float float
 FRandomFloatInRangeDataflowNode = {}
 
+---@return FRandomFloatInRangeDataflowNode
+function FRandomFloatInRangeDataflowNode:get() end
+
 
 
 ---@class FRandomUnitVectorDataflowNode : FDataflowNode
@@ -265,6 +361,9 @@ FRandomFloatInRangeDataflowNode = {}
 ---@field RandomSeed float
 ---@field Vector FVector
 FRandomUnitVectorDataflowNode = {}
+
+---@return FRandomUnitVectorDataflowNode
+function FRandomUnitVectorDataflowNode:get() end
 
 
 
@@ -276,17 +375,26 @@ FRandomUnitVectorDataflowNode = {}
 ---@field Vector FVector
 FRandomUnitVectorInConeDataflowNode = {}
 
+---@return FRandomUnitVectorInConeDataflowNode
+function FRandomUnitVectorInConeDataflowNode:get() end
+
 
 
 ---@class FResetGeometryCollectionDataflowNode : FDataflowNode
 ---@field Collection FManagedArrayCollection
 FResetGeometryCollectionDataflowNode = {}
 
+---@return FResetGeometryCollectionDataflowNode
+function FResetGeometryCollectionDataflowNode:get() end
+
 
 
 ---@class FSetCollectionAssetDataflowNode : FDataflowNode
 ---@field Collection FManagedArrayCollection
 FSetCollectionAssetDataflowNode = {}
+
+---@return FSetCollectionAssetDataflowNode
+function FSetCollectionAssetDataflowNode:get() end
 
 
 
@@ -295,6 +403,9 @@ FSetCollectionAssetDataflowNode = {}
 ---@field Collection FManagedArrayCollection
 FSkeletalMeshToCollectionDataflowNode = {}
 
+---@return FSkeletalMeshToCollectionDataflowNode
+function FSkeletalMeshToCollectionDataflowNode:get() end
+
 
 
 ---@class FStringAppendDataflowNode : FDataflowNode
@@ -302,6 +413,9 @@ FSkeletalMeshToCollectionDataflowNode = {}
 ---@field String2 FString
 ---@field String FString
 FStringAppendDataflowNode = {}
+
+---@return FStringAppendDataflowNode
+function FStringAppendDataflowNode:get() end
 
 
 
@@ -313,12 +427,18 @@ FStringAppendDataflowNode = {}
 ---@field Points TArray<FVector>
 FUniformScatterPointsDataflowNode = {}
 
+---@return FUniformScatterPointsDataflowNode
+function FUniformScatterPointsDataflowNode:get() end
+
 
 
 ---@class FVectorToStringDataflowNode : FDataflowNode
 ---@field Vector FVector
 ---@field String FString
 FVectorToStringDataflowNode = {}
+
+---@return FVectorToStringDataflowNode
+function FVectorToStringDataflowNode:get() end
 
 
 
@@ -338,6 +458,9 @@ FVectorToStringDataflowNode = {}
 ---@field AddSamplesForCollision boolean
 ---@field CollisionSampleSpacing float
 FVoronoiFractureDataflowNode = {}
+
+---@return FVoronoiFractureDataflowNode
+function FVoronoiFractureDataflowNode:get() end
 
 
 

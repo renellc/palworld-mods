@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionPalLiftup_Player_C = {}
 
+---@return UBP_ActionPalLiftup_Player_C
+function UBP_ActionPalLiftup_Player_C:get() end
+
 ---@return UAnimMontage
 function UBP_ActionPalLiftup_Player_C:FindLiftupMontage() end
 ---@param Disable boolean

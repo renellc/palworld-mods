@@ -17,12 +17,18 @@
 ---@field PreferredAngles FVector
 FPBIKBoneSetting = {}
 
+---@return FPBIKBoneSetting
+function FPBIKBoneSetting:get() end
+
 
 
 ---@class FPBIKDebug
 ---@field DrawScale float
 ---@field bDrawDebug boolean
 FPBIKDebug = {}
+
+---@return FPBIKDebug
+function FPBIKDebug:get() end
 
 
 
@@ -36,10 +42,16 @@ FPBIKDebug = {}
 ---@field PinRotation float
 FPBIKEffector = {}
 
+---@return FPBIKEffector
+function FPBIKEffector:get() end
+
 
 
 ---@class FPBIKSolver
 FPBIKSolver = {}
+
+---@return FPBIKSolver
+function FPBIKSolver:get() end
 
 
 ---@class FPBIKSolverSettings
@@ -50,6 +62,9 @@ FPBIKSolver = {}
 ---@field RootBehavior EPBIKRootBehavior
 ---@field bStartSolveFromInputPose boolean
 FPBIKSolverSettings = {}
+
+---@return FPBIKSolverSettings
+function FPBIKSolverSettings:get() end
 
 
 
@@ -66,6 +81,9 @@ FPBIKSolverSettings = {}
 ---@field Solver FPBIKSolver
 ---@field bNeedsInit boolean
 FRigUnit_PBIK = {}
+
+---@return FRigUnit_PBIK
+function FRigUnit_PBIK:get() end
 
 
 

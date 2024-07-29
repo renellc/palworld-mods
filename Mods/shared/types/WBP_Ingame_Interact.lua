@@ -24,6 +24,9 @@
 ---@field actionInputMap TMap<EPalInteractiveObjectActionType, FDataTableRowHandle>
 UWBP_Ingame_Interact_C = {}
 
+---@return UWBP_Ingame_Interact_C
+function UWBP_Ingame_Interact_C:get() end
+
 ---@param IsValidFlag boolean
 function UWBP_Ingame_Interact_C:SetIsValidInteract(IsValidFlag) end
 ---@param NewVisibility ESlateVisibility

@@ -10,6 +10,9 @@
 ---@field DisplayTime double
 UWBP_PalDamageCanvas_StackDamage_C = {}
 
+---@return UWBP_PalDamageCanvas_StackDamage_C
+function UWBP_PalDamageCanvas_StackDamage_C:get() end
+
 ---@param DamageInfo FPalDamageInfo
 ---@param Defender AActor
 ---@param Location FVector

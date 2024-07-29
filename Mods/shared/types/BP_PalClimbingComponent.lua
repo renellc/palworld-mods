@@ -22,6 +22,9 @@
 ---@field IsEnding boolean
 UBP_PalClimbingComponent_C = {}
 
+---@return UBP_PalClimbingComponent_C
+function UBP_PalClimbingComponent_C:get() end
+
 ---@param Result boolean
 function UBP_PalClimbingComponent_C:CanClimbingStart(Result) end
 ---@return boolean

@@ -5,6 +5,9 @@
 ---@field Goal FVector
 UBP_AIAction_Invader_ReturnSpawnedPoint_C = {}
 
+---@return UBP_AIAction_Invader_ReturnSpawnedPoint_C
+function UBP_AIAction_Invader_ReturnSpawnedPoint_C:get() end
+
 ---@param ControlledPawn APawn
 function UBP_AIAction_Invader_ReturnSpawnedPoint_C:ActionStart(ControlledPawn) end
 ---@param ControlledPawn APawn

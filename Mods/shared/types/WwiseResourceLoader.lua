@@ -9,6 +9,9 @@
 ---@field DebugName FName
 FWwiseAcousticTextureCookedData = {}
 
+---@return FWwiseAcousticTextureCookedData
+function FWwiseAcousticTextureCookedData:get() end
+
 
 
 ---@class FWwiseAuxBusCookedData
@@ -17,6 +20,9 @@ FWwiseAcousticTextureCookedData = {}
 ---@field Media TArray<FWwiseMediaCookedData>
 ---@field DebugName FName
 FWwiseAuxBusCookedData = {}
+
+---@return FWwiseAuxBusCookedData
+function FWwiseAuxBusCookedData:get() end
 
 
 
@@ -31,6 +37,9 @@ FWwiseAuxBusCookedData = {}
 ---@field DebugName FName
 FWwiseEventCookedData = {}
 
+---@return FWwiseEventCookedData
+function FWwiseEventCookedData:get() end
+
 
 
 ---@class FWwiseEventInfo : FWwiseObjectInfo
@@ -38,12 +47,18 @@ FWwiseEventCookedData = {}
 ---@field DestroyOptions EWwiseEventDestroyOptions
 FWwiseEventInfo = {}
 
+---@return FWwiseEventInfo
+function FWwiseEventInfo:get() end
+
 
 
 ---@class FWwiseGameParameterCookedData
 ---@field ShortId int32
 ---@field DebugName FName
 FWwiseGameParameterCookedData = {}
+
+---@return FWwiseGameParameterCookedData
+function FWwiseGameParameterCookedData:get() end
 
 
 
@@ -54,11 +69,17 @@ FWwiseGameParameterCookedData = {}
 ---@field DebugName FName
 FWwiseGroupValueCookedData = {}
 
+---@return FWwiseGroupValueCookedData
+function FWwiseGroupValueCookedData:get() end
+
 
 
 ---@class FWwiseGroupValueInfo : FWwiseObjectInfo
 ---@field GroupShortId uint32
 FWwiseGroupValueInfo = {}
+
+---@return FWwiseGroupValueInfo
+function FWwiseGroupValueInfo:get() end
 
 
 
@@ -68,12 +89,18 @@ FWwiseGroupValueInfo = {}
 ---@field Language TArray<FWwiseLanguageCookedData>
 FWwiseInitBankCookedData = {}
 
+---@return FWwiseInitBankCookedData
+function FWwiseInitBankCookedData:get() end
+
 
 
 ---@class FWwiseLanguageId
 ---@field LanguageId int32
 ---@field LanguageName FName
 FWwiseLanguageId = {}
+
+---@return FWwiseLanguageId
+function FWwiseLanguageId:get() end
 
 
 
@@ -83,6 +110,9 @@ FWwiseLanguageId = {}
 ---@field AuxBusId int32
 FWwiseLocalizedAuxBusCookedData = {}
 
+---@return FWwiseLocalizedAuxBusCookedData
+function FWwiseLocalizedAuxBusCookedData:get() end
+
 
 
 ---@class FWwiseLocalizedEventCookedData
@@ -90,6 +120,9 @@ FWwiseLocalizedAuxBusCookedData = {}
 ---@field DebugName FName
 ---@field EventId int32
 FWwiseLocalizedEventCookedData = {}
+
+---@return FWwiseLocalizedEventCookedData
+function FWwiseLocalizedEventCookedData:get() end
 
 
 
@@ -99,6 +132,9 @@ FWwiseLocalizedEventCookedData = {}
 ---@field ShareSetId int32
 FWwiseLocalizedShareSetCookedData = {}
 
+---@return FWwiseLocalizedShareSetCookedData
+function FWwiseLocalizedShareSetCookedData:get() end
+
 
 
 ---@class FWwiseLocalizedSoundBankCookedData
@@ -106,6 +142,9 @@ FWwiseLocalizedShareSetCookedData = {}
 ---@field DebugName FName
 ---@field SoundBankId int32
 FWwiseLocalizedSoundBankCookedData = {}
+
+---@return FWwiseLocalizedSoundBankCookedData
+function FWwiseLocalizedSoundBankCookedData:get() end
 
 
 
@@ -116,12 +155,18 @@ FWwiseLocalizedSoundBankCookedData = {}
 ---@field HardCodedSoundBankShortId uint32
 FWwiseObjectInfo = {}
 
+---@return FWwiseObjectInfo
+function FWwiseObjectInfo:get() end
+
 
 
 ---@class FWwisePlatformId
 ---@field PlatformGuid FGuid
 ---@field PlatformName FName
 FWwisePlatformId = {}
+
+---@return FWwisePlatformId
+function FWwisePlatformId:get() end
 
 
 
@@ -132,20 +177,32 @@ FWwisePlatformId = {}
 ---@field DebugName FName
 FWwiseShareSetCookedData = {}
 
+---@return FWwiseShareSetCookedData
+function FWwiseShareSetCookedData:get() end
+
 
 
 ---@class FWwiseSharedGroupValueKey
 FWwiseSharedGroupValueKey = {}
+
+---@return FWwiseSharedGroupValueKey
+function FWwiseSharedGroupValueKey:get() end
 
 
 ---@class FWwiseSharedLanguageId
 ---@field LanguageRequirement EWwiseLanguageRequirement
 FWwiseSharedLanguageId = {}
 
+---@return FWwiseSharedLanguageId
+function FWwiseSharedLanguageId:get() end
+
 
 
 ---@class FWwiseSharedPlatformId
 FWwiseSharedPlatformId = {}
+
+---@return FWwiseSharedPlatformId
+function FWwiseSharedPlatformId:get() end
 
 
 ---@class FWwiseSwitchContainerLeafCookedData
@@ -155,6 +212,9 @@ FWwiseSharedPlatformId = {}
 ---@field ExternalSources TArray<FWwiseExternalSourceCookedData>
 FWwiseSwitchContainerLeafCookedData = {}
 
+---@return FWwiseSwitchContainerLeafCookedData
+function FWwiseSwitchContainerLeafCookedData:get() end
+
 
 
 ---@class FWwiseTriggerCookedData
@@ -162,10 +222,16 @@ FWwiseSwitchContainerLeafCookedData = {}
 ---@field DebugName FName
 FWwiseTriggerCookedData = {}
 
+---@return FWwiseTriggerCookedData
+function FWwiseTriggerCookedData:get() end
+
 
 
 ---@class UWwiseEventInfoLibrary : UBlueprintFunctionLibrary
 UWwiseEventInfoLibrary = {}
+
+---@return UWwiseEventInfoLibrary
+function UWwiseEventInfoLibrary:get() end
 
 ---@param Ref FWwiseEventInfo
 ---@param WwiseShortId int32
@@ -230,6 +296,9 @@ function UWwiseEventInfoLibrary:BreakStruct(Ref, OutWwiseGuid, OutWwiseShortId, 
 ---@class UWwiseGroupValueInfoLibrary : UBlueprintFunctionLibrary
 UWwiseGroupValueInfoLibrary = {}
 
+---@return UWwiseGroupValueInfoLibrary
+function UWwiseGroupValueInfoLibrary:get() end
+
 ---@param Ref FWwiseGroupValueInfo
 ---@param WwiseShortId int32
 ---@return FWwiseGroupValueInfo
@@ -274,6 +343,9 @@ function UWwiseGroupValueInfoLibrary:BreakStruct(Ref, OutAssetGuid, OutGroupShor
 
 ---@class UWwiseObjectInfoLibrary : UBlueprintFunctionLibrary
 UWwiseObjectInfoLibrary = {}
+
+---@return UWwiseObjectInfoLibrary
+function UWwiseObjectInfoLibrary:get() end
 
 ---@param Ref FWwiseObjectInfo
 ---@param WwiseShortId int32

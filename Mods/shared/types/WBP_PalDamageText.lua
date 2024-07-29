@@ -18,6 +18,9 @@
 ---@field randomizeOffset FVector2D
 UWBP_PalDamageText_C = {}
 
+---@return UWBP_PalDamageText_C
+function UWBP_PalDamageText_C:get() end
+
 ---@param Padding double
 function UWBP_PalDamageText_C:GetPadding(Padding) end
 ---@param textType EPalDamageTextType

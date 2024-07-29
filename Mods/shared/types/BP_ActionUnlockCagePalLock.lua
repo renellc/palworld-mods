@@ -6,6 +6,9 @@
 ---@field AkEventUnlockCage UAkAudioEvent
 UBP_ActionUnlockCagePalLock_C = {}
 
+---@return UBP_ActionUnlockCagePalLock_C
+function UBP_ActionUnlockCagePalLock_C:get() end
+
 function UBP_ActionUnlockCagePalLock_C:RotateToLockModel() end
 function UBP_ActionUnlockCagePalLock_C:OnEndAction() end
 function UBP_ActionUnlockCagePalLock_C:OnBeginAction() end

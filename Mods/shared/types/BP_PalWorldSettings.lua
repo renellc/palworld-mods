@@ -4,5 +4,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_PalWorldSettings_C = {}
 
+---@return ABP_PalWorldSettings_C
+function ABP_PalWorldSettings_C:get() end
+
 
 

@@ -11,6 +11,9 @@
 ---@field CameraShakeClass TSubclassOf<UPalCameraShakeBase>
 ABP_ExplosionAttackBase_C = {}
 
+---@return ABP_ExplosionAttackBase_C
+function ABP_ExplosionAttackBase_C:get() end
+
 ---@param Attacker AActor
 ---@param HitActor AActor
 ---@param HitComponent UPrimitiveComponent

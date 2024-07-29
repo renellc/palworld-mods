@@ -45,6 +45,9 @@
 ---@field CurrentWantedStateInfo FPalWorldSecurityWantedStateInfo
 ABP_WantedPolice_NPCSpawner_C = {}
 
+---@return ABP_WantedPolice_NPCSpawner_C
+function ABP_WantedPolice_NPCSpawner_C:get() end
+
 function ABP_WantedPolice_NPCSpawner_C:TrySpawnPolices() end
 function ABP_WantedPolice_NPCSpawner_C:CheckSpawnFailed() end
 ---@param Start FVector

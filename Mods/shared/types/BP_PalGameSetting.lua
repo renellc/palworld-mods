@@ -3,6 +3,9 @@
 ---@class UBP_PalGameSetting_C : UPalGameSetting
 UBP_PalGameSetting_C = {}
 
+---@return UBP_PalGameSetting_C
+function UBP_PalGameSetting_C:get() end
+
 ---@param weakCount int32
 ---@return float
 function UBP_PalGameSetting_C:GetWeakScale(weakCount) end

@@ -10,6 +10,9 @@
 ---@field Const_VibGainMap TMap<EPalSizeType, double>
 UBP_ActionReaction_ElectricShock_C = {}
 
+---@return UBP_ActionReaction_ElectricShock_C
+function UBP_ActionReaction_ElectricShock_C:get() end
+
 function UBP_ActionReaction_ElectricShock_C:ResetMeshLocation() end
 ---@param Eye EPalFacialEyeType
 function UBP_ActionReaction_ElectricShock_C:ChangeFacial(Eye) end

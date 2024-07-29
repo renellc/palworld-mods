@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AINPC_Combat_CommonState_BackStep_C = {}
 
+---@return UBP_AINPC_Combat_CommonState_BackStep_C
+function UBP_AINPC_Combat_CommonState_BackStep_C:get() end
+
 function UBP_AINPC_Combat_CommonState_BackStep_C:StateEnter() end
 ---@param DeltaTime float
 function UBP_AINPC_Combat_CommonState_BackStep_C:StateTick(DeltaTime) end

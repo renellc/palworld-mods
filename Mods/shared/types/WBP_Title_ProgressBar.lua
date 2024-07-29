@@ -7,6 +7,9 @@
 ---@field TargetProgressValue double
 UWBP_Title_ProgressBar_C = {}
 
+---@return UWBP_Title_ProgressBar_C
+function UWBP_Title_ProgressBar_C:get() end
+
 function UWBP_Title_ProgressBar_C:SetProgressBar() end
 ---@param NewValue double
 function UWBP_Title_ProgressBar_C:SetProgressValue(NewValue) end

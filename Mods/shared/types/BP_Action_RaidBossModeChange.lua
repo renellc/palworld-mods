@@ -5,6 +5,9 @@
 ---@field AddStatusEventDispatcher FBP_Action_RaidBossModeChange_CAddStatusEventDispatcher
 UBP_Action_RaidBossModeChange_C = {}
 
+---@return UBP_Action_RaidBossModeChange_C
+function UBP_Action_RaidBossModeChange_C:get() end
+
 ---@param Element EPalElementType
 ---@param VisualEffect EPalVisualEffectID
 ---@param Value TSoftClassPtr<UPalVisualEffectBase>

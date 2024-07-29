@@ -14,6 +14,9 @@
 ---@field OtomoDespawnable boolean
 UBP_OtomoPalHolderComponent_C = {}
 
+---@return UBP_OtomoPalHolderComponent_C
+function UBP_OtomoPalHolderComponent_C:get() end
+
 function UBP_OtomoPalHolderComponent_C:InactivateAllOtomo() end
 ---@param Handle UPalIndividualCharacterHandle
 ---@param Transform FTransform

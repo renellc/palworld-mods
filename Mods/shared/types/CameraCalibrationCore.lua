@@ -16,16 +16,25 @@
 ---@field EvenCubeMaterial UMaterialInterface
 ACameraCalibrationCheckerboard = {}
 
+---@return ACameraCalibrationCheckerboard
+function ACameraCalibrationCheckerboard:get() end
+
 function ACameraCalibrationCheckerboard:Rebuild() end
 
 
 ---@class FBaseFocusPoint
 FBaseFocusPoint = {}
 
+---@return FBaseFocusPoint
+function FBaseFocusPoint:get() end
+
 
 ---@class FBaseLensTable
 ---@field LensFile TWeakObjectPtr<ULensFile>
 FBaseLensTable = {}
+
+---@return FBaseLensTable
+function FBaseLensTable:get() end
 
 
 
@@ -35,12 +44,18 @@ FBaseLensTable = {}
 ---@field DistortionChannels ECalibratedMapChannels
 FCalibratedMapFormat = {}
 
+---@return FCalibratedMapFormat
+function FCalibratedMapFormat:get() end
+
 
 
 ---@class FDataTablePointInfoBase
 ---@field Focus float
 ---@field Zoom float
 FDataTablePointInfoBase = {}
+
+---@return FDataTablePointInfoBase
+function FDataTablePointInfoBase:get() end
 
 
 
@@ -50,12 +65,18 @@ FDataTablePointInfoBase = {}
 ---@field DistortionDisplacementMap UTextureRenderTarget2D
 FDerivedDistortionData = {}
 
+---@return FDerivedDistortionData
+function FDerivedDistortionData:get() end
+
 
 
 ---@class FDistortionData
 ---@field DistortedUVs TArray<FVector2D>
 ---@field OverscanFactor float
 FDistortionData = {}
+
+---@return FDistortionData
+function FDistortionData:get() end
 
 
 
@@ -65,6 +86,9 @@ FDistortionData = {}
 ---@field ZoomPoints TArray<FDistortionZoomPoint>
 FDistortionFocusPoint = {}
 
+---@return FDistortionFocusPoint
+function FDistortionFocusPoint:get() end
+
 
 
 ---@class FDistortionHandlerPicker
@@ -73,11 +97,17 @@ FDistortionFocusPoint = {}
 ---@field HandlerDisplayName FString
 FDistortionHandlerPicker = {}
 
+---@return FDistortionHandlerPicker
+function FDistortionHandlerPicker:get() end
+
 
 
 ---@class FDistortionInfo
 ---@field Parameters TArray<float>
 FDistortionInfo = {}
+
+---@return FDistortionInfo
+function FDistortionInfo:get() end
 
 
 
@@ -85,11 +115,17 @@ FDistortionInfo = {}
 ---@field DistortionInfo FDistortionInfo
 FDistortionPointInfo = {}
 
+---@return FDistortionPointInfo
+function FDistortionPointInfo:get() end
+
 
 
 ---@class FDistortionTable : FBaseLensTable
 ---@field FocusPoints TArray<FDistortionFocusPoint>
 FDistortionTable = {}
+
+---@return FDistortionTable
+function FDistortionTable:get() end
 
 
 
@@ -98,12 +134,18 @@ FDistortionTable = {}
 ---@field DistortionInfo FDistortionInfo
 FDistortionZoomPoint = {}
 
+---@return FDistortionZoomPoint
+function FDistortionZoomPoint:get() end
+
 
 
 ---@class FEncodersTable
 ---@field Focus FRichCurve
 ---@field Iris FRichCurve
 FEncodersTable = {}
+
+---@return FEncodersTable
+function FEncodersTable:get() end
 
 
 
@@ -114,11 +156,17 @@ FEncodersTable = {}
 ---@field ZoomPoints TArray<FFocalLengthZoomPoint>
 FFocalLengthFocusPoint = {}
 
+---@return FFocalLengthFocusPoint
+function FFocalLengthFocusPoint:get() end
+
 
 
 ---@class FFocalLengthInfo
 ---@field FxFy FVector2D
 FFocalLengthInfo = {}
+
+---@return FFocalLengthInfo
+function FFocalLengthInfo:get() end
 
 
 
@@ -126,11 +174,17 @@ FFocalLengthInfo = {}
 ---@field FocalLengthInfo FFocalLengthInfo
 FFocalLengthPointInfo = {}
 
+---@return FFocalLengthPointInfo
+function FFocalLengthPointInfo:get() end
+
 
 
 ---@class FFocalLengthTable : FBaseLensTable
 ---@field FocusPoints TArray<FFocalLengthFocusPoint>
 FFocalLengthTable = {}
+
+---@return FFocalLengthTable
+function FFocalLengthTable:get() end
 
 
 
@@ -140,6 +194,9 @@ FFocalLengthTable = {}
 ---@field bIsCalibrationPoint boolean
 FFocalLengthZoomPoint = {}
 
+---@return FFocalLengthZoomPoint
+function FFocalLengthZoomPoint:get() end
+
 
 
 ---@class FImageCenterFocusPoint : FBaseFocusPoint
@@ -148,11 +205,17 @@ FFocalLengthZoomPoint = {}
 ---@field Cy FRichCurve
 FImageCenterFocusPoint = {}
 
+---@return FImageCenterFocusPoint
+function FImageCenterFocusPoint:get() end
+
 
 
 ---@class FImageCenterInfo
 ---@field PrincipalPoint FVector2D
 FImageCenterInfo = {}
+
+---@return FImageCenterInfo
+function FImageCenterInfo:get() end
 
 
 
@@ -160,11 +223,17 @@ FImageCenterInfo = {}
 ---@field ImageCenterInfo FImageCenterInfo
 FImageCenterPointInfo = {}
 
+---@return FImageCenterPointInfo
+function FImageCenterPointInfo:get() end
+
 
 
 ---@class FImageCenterTable : FBaseLensTable
 ---@field FocusPoints TArray<FImageCenterFocusPoint>
 FImageCenterTable = {}
+
+---@return FImageCenterTable
+function FImageCenterTable:get() end
 
 
 
@@ -178,6 +247,9 @@ FImageCenterTable = {}
 ---@field NodalOffset FColor
 FLensDataCategoryEditorColor = {}
 
+---@return FLensDataCategoryEditorColor
+function FLensDataCategoryEditorColor:get() end
+
 
 
 ---@class FLensDistortionState
@@ -185,6 +257,9 @@ FLensDataCategoryEditorColor = {}
 ---@field FocalLengthInfo FFocalLengthInfo
 ---@field ImageCenter FImageCenterInfo
 FLensDistortionState = {}
+
+---@return FLensDistortionState
+function FLensDistortionState:get() end
 
 
 
@@ -196,12 +271,18 @@ FLensDistortionState = {}
 ---@field bIsValid boolean
 FLensFileEvaluationInputs = {}
 
+---@return FLensFileEvaluationInputs
+function FLensFileEvaluationInputs:get() end
+
 
 
 ---@class FLensFilePicker
 ---@field bUseDefaultLensFile boolean
 ---@field LensFile ULensFile
 FLensFilePicker = {}
+
+---@return FLensFilePicker
+function FLensFilePicker:get() end
 
 
 
@@ -213,6 +294,9 @@ FLensFilePicker = {}
 ---@field ImageDimensions FIntPoint
 FLensInfo = {}
 
+---@return FLensInfo
+function FLensInfo:get() end
+
 
 
 ---@class FNodalOffsetFocusPoint : FBaseFocusPoint
@@ -221,11 +305,17 @@ FLensInfo = {}
 ---@field RotationOffset FRichCurve
 FNodalOffsetFocusPoint = {}
 
+---@return FNodalOffsetFocusPoint
+function FNodalOffsetFocusPoint:get() end
+
 
 
 ---@class FNodalOffsetPointInfo : FDataTablePointInfoBase
 ---@field NodalPointOffset FNodalPointOffset
 FNodalOffsetPointInfo = {}
+
+---@return FNodalOffsetPointInfo
+function FNodalOffsetPointInfo:get() end
 
 
 
@@ -233,12 +323,18 @@ FNodalOffsetPointInfo = {}
 ---@field FocusPoints TArray<FNodalOffsetFocusPoint>
 FNodalOffsetTable = {}
 
+---@return FNodalOffsetTable
+function FNodalOffsetTable:get() end
+
 
 
 ---@class FNodalPointOffset
 ---@field LocationOffset FVector
 ---@field RotationOffset FQuat
 FNodalPointOffset = {}
+
+---@return FNodalPointOffset
+function FNodalPointOffset:get() end
 
 
 
@@ -248,6 +344,9 @@ FNodalPointOffset = {}
 ---@field ZoomPoints TArray<FSTMapZoomPoint>
 FSTMapFocusPoint = {}
 
+---@return FSTMapFocusPoint
+function FSTMapFocusPoint:get() end
+
 
 
 ---@class FSTMapInfo
@@ -255,17 +354,26 @@ FSTMapFocusPoint = {}
 ---@field MapFormat FCalibratedMapFormat
 FSTMapInfo = {}
 
+---@return FSTMapInfo
+function FSTMapInfo:get() end
+
 
 
 ---@class FSTMapPointInfo : FDataTablePointInfoBase
 ---@field STMapInfo FSTMapInfo
 FSTMapPointInfo = {}
 
+---@return FSTMapPointInfo
+function FSTMapPointInfo:get() end
+
 
 
 ---@class FSTMapTable : FBaseLensTable
 ---@field FocusPoints TArray<FSTMapFocusPoint>
 FSTMapTable = {}
+
+---@return FSTMapTable
+function FSTMapTable:get() end
 
 
 
@@ -275,6 +383,9 @@ FSTMapTable = {}
 ---@field DerivedDistortionData FDerivedDistortionData
 ---@field bIsCalibrationPoint boolean
 FSTMapZoomPoint = {}
+
+---@return FSTMapZoomPoint
+function FSTMapZoomPoint:get() end
 
 
 
@@ -286,6 +397,9 @@ FSTMapZoomPoint = {}
 ---@field P2 float
 FSphericalDistortionParameters = {}
 
+---@return FSphericalDistortionParameters
+function FSphericalDistortionParameters:get() end
+
 
 
 ---@class UCalibrationPointComponent : UProceduralMeshComponent
@@ -294,6 +408,9 @@ FSphericalDistortionParameters = {}
 ---@field PointVisualizationScale float
 ---@field VisualizationShape ECalibrationPointVisualization
 UCalibrationPointComponent = {}
+
+---@return UCalibrationPointComponent
+function UCalibrationPointComponent:get() end
 
 function UCalibrationPointComponent:RebuildVertices() end
 ---@param InSubpointName FString
@@ -311,6 +428,9 @@ function UCalibrationPointComponent:GetNamespacedPointNames(OutNamespacedNames) 
 ---@class UCameraCalibrationEditorSettings : UDeveloperSettings
 UCameraCalibrationEditorSettings = {}
 
+---@return UCameraCalibrationEditorSettings
+function UCameraCalibrationEditorSettings:get() end
+
 
 ---@class UCameraCalibrationSettings : UDeveloperSettings
 ---@field StartupLensFile TSoftObjectPtr<ULensFile>
@@ -322,10 +442,16 @@ UCameraCalibrationEditorSettings = {}
 ---@field bEnableCalibrationDatasetImportExport boolean
 UCameraCalibrationSettings = {}
 
+---@return UCameraCalibrationSettings
+function UCameraCalibrationSettings:get() end
+
 
 
 ---@class UCameraCalibrationStep : UObject
 UCameraCalibrationStep = {}
+
+---@return UCameraCalibrationStep
+function UCameraCalibrationStep:get() end
 
 
 ---@class UCameraCalibrationSubsystem : UEngineSubsystem
@@ -335,6 +461,9 @@ UCameraCalibrationStep = {}
 ---@field CameraImageCenterAlgosMap TMap<FName, TSubclassOf<UCameraImageCenterAlgo>>
 ---@field CameraCalibrationStepsMap TMap<FName, TSubclassOf<UCameraCalibrationStep>>
 UCameraCalibrationSubsystem = {}
+
+---@return UCameraCalibrationSubsystem
+function UCameraCalibrationSubsystem:get() end
 
 ---@param Component UCineCameraComponent
 ---@param Handler ULensDistortionModelHandlerBase
@@ -385,13 +514,22 @@ function UCameraCalibrationSubsystem:FindDistortionModelHandler(DistortionHandle
 ---@class UCameraImageCenterAlgo : UObject
 UCameraImageCenterAlgo = {}
 
+---@return UCameraImageCenterAlgo
+function UCameraImageCenterAlgo:get() end
+
 
 ---@class UCameraLensDistortionAlgo : UObject
 UCameraLensDistortionAlgo = {}
 
+---@return UCameraLensDistortionAlgo
+function UCameraLensDistortionAlgo:get() end
+
 
 ---@class UCameraNodalOffsetAlgo : UObject
 UCameraNodalOffsetAlgo = {}
+
+---@return UCameraNodalOffsetAlgo
+function UCameraNodalOffsetAlgo:get() end
 
 
 ---@class ULensComponent : UActorComponent
@@ -417,6 +555,9 @@ UCameraNodalOffsetAlgo = {}
 ---@field TrackedComponent TWeakObjectPtr<USceneComponent>
 ---@field TrackedComponentName FString
 ULensComponent = {}
+
+---@return ULensComponent
+function ULensComponent:get() end
 
 ---@return boolean
 function ULensComponent:WasNodalOffsetAppliedThisTick() end
@@ -491,6 +632,9 @@ function ULensComponent:ApplyNodalOffset(ComponentToOffset, bUseManualInputs, Ma
 ---@field DistortionProducerID FGuid
 ULensDistortionModelHandlerBase = {}
 
+---@return ULensDistortionModelHandlerBase
+function ULensDistortionModelHandlerBase:get() end
+
 ---@param InNewState FLensDistortionState
 function ULensDistortionModelHandlerBase:SetDistortionState(InNewState) end
 ---@param ModelToSupport TSubclassOf<ULensModel>
@@ -515,6 +659,9 @@ function ULensDistortionModelHandlerBase:GetDistortionDisplacementMap() end
 ---@field UndistortionDisplacementMapHolders TArray<UTextureRenderTarget2D>
 ---@field DistortionDisplacementMapHolders TArray<UTextureRenderTarget2D>
 ULensFile = {}
+
+---@return ULensFile
+function ULensFile:get() end
 
 ---@param InDataCategory ELensDataCategory
 ---@param InFocus float
@@ -629,12 +776,21 @@ function ULensFile:AddDistortionPoint(NewFocus, NewZoom, newPoint, NewFocalLengt
 ---@class ULensModel : UObject
 ULensModel = {}
 
+---@return ULensModel
+function ULensModel:get() end
+
 
 ---@class USphericalLensDistortionModelHandler : ULensDistortionModelHandlerBase
 USphericalLensDistortionModelHandler = {}
 
+---@return USphericalLensDistortionModelHandler
+function USphericalLensDistortionModelHandler:get() end
+
 
 ---@class USphericalLensModel : ULensModel
 USphericalLensModel = {}
+
+---@return USphericalLensModel
+function USphericalLensModel:get() end
 
 

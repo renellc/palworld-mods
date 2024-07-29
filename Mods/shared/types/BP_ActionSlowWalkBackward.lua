@@ -5,6 +5,9 @@
 ---@field PlayRate double
 UBP_ActionSlowWalkBackward_C = {}
 
+---@return UBP_ActionSlowWalkBackward_C
+function UBP_ActionSlowWalkBackward_C:get() end
+
 function UBP_ActionSlowWalkBackward_C:FindGoalPosition() end
 ---@param NotifyName FName
 function UBP_ActionSlowWalkBackward_C:OnNotifyEnd_990D050E4901A391C8C8F78879A92A4F(NotifyName) end

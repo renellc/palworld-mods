@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionSlowWalkForward_C = {}
 
+---@return UBP_ActionSlowWalkForward_C
+function UBP_ActionSlowWalkForward_C:get() end
+
 function UBP_ActionSlowWalkForward_C:OnEndAction() end
 ---@param DeltaTime float
 function UBP_ActionSlowWalkForward_C:TickAction(DeltaTime) end

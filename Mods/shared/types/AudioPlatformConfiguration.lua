@@ -7,5 +7,8 @@
 ---@field SoundCueQualityIndex int32
 FPlatformRuntimeAudioCompressionOverrides = {}
 
+---@return FPlatformRuntimeAudioCompressionOverrides
+function FPlatformRuntimeAudioCompressionOverrides:get() end
+
 
 

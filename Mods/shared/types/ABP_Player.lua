@@ -56,6 +56,9 @@
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
 FAnimBlueprintGeneratedConstantData = {}
 
+---@return FAnimBlueprintGeneratedConstantData
+function FAnimBlueprintGeneratedConstantData:get() end
+
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
@@ -115,6 +118,9 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __BoolProperty_52 boolean
 ---@field __BoolProperty_53 boolean
 FAnimBlueprintGeneratedMutableData = {}
+
+---@return FAnimBlueprintGeneratedMutableData
+function FAnimBlueprintGeneratedMutableData:get() end
 
 
 
@@ -498,6 +504,9 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field TSCached_SkeletalMeshComponent UPalSkeletalMeshComponent
 ---@field TSCache_CameraRotator FRotator
 UABP_Player_C = {}
+
+---@return UABP_Player_C
+function UABP_Player_C:get() end
 
 ---@param InPose FPoseLink
 ---@param ClothLayer FPoseLink

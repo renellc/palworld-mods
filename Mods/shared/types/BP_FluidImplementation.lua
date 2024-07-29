@@ -22,6 +22,9 @@
 ---@field DrawMaterialInstanceDynamic UMaterialInstanceDynamic
 UBP_FluidImplementation_C = {}
 
+---@return UBP_FluidImplementation_C
+function UBP_FluidImplementation_C:get() end
+
 ---@param Bone_Name FName
 ---@param Mesh_Component UMeshComponent
 function UBP_FluidImplementation_C:PerBoneDraw(Bone_Name, Mesh_Component) end

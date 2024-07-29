@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Action_Trap_MovingPanel_C = {}
 
+---@return UBP_Action_Trap_MovingPanel_C
+function UBP_Action_Trap_MovingPanel_C:get() end
+
 ---@param Facial EPalFacialEyeType
 ---@param WalkSpeed double
 function UBP_Action_Trap_MovingPanel_C:ChangeParam(Facial, WalkSpeed) end

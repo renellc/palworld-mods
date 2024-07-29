@@ -113,6 +113,9 @@
 ---@field Emitter_In UParticleSystem
 ABP_UltimateRiverTool_C = {}
 
+---@return ABP_UltimateRiverTool_C
+function ABP_UltimateRiverTool_C:get() end
+
 ---@param SplineMesh USplineMeshComponent
 function ABP_UltimateRiverTool_C:SetupCollision(SplineMesh) end
 ---@param Collision ECollisionEnabled::Type

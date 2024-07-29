@@ -12,6 +12,9 @@
 ---@field CloseActionName FName
 UWBP_Option_HelpGuide_C = {}
 
+---@return UWBP_Option_HelpGuide_C
+function UWBP_Option_HelpGuide_C:get() end
+
 ---@param MyGeometry FGeometry
 ---@param InAnalogInputEvent FAnalogInputEvent
 ---@return FEventReply

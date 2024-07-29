@@ -16,6 +16,9 @@
 ---@field BigSleepSound TSoftObjectPtr<UAkAudioEvent>
 UBP_ActionSleep_C = {}
 
+---@return UBP_ActionSleep_C
+function UBP_ActionSleep_C:get() end
+
 ---@param Montage UAnimMontage
 function UBP_ActionSleep_C:StartSleepSound(Montage) end
 ---@param Disable boolean

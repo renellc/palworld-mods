@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionStun_C = {}
 
+---@return UBP_ActionStun_C
+function UBP_ActionStun_C:get() end
+
 ---@param NotifyName FName
 function UBP_ActionStun_C:OnNotifyEnd_CFCF4E784389F348A3D5D6B73F7082BC(NotifyName) end
 ---@param NotifyName FName

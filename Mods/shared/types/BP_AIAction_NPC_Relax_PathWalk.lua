@@ -14,6 +14,9 @@
 ---@field IsAlreadyStuck boolean
 UBP_AIAction_NPC_Relax_PathWalk_C = {}
 
+---@return UBP_AIAction_NPC_Relax_PathWalk_C
+function UBP_AIAction_NPC_Relax_PathWalk_C:get() end
+
 function UBP_AIAction_NPC_Relax_PathWalk_C:OnStuck() end
 function UBP_AIAction_NPC_Relax_PathWalk_C:OnTargetPointUpdateStart() end
 function UBP_AIAction_NPC_Relax_PathWalk_C:PlayWaitAction() end

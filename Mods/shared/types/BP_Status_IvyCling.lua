@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Status_IvyCling_C = {}
 
+---@return UBP_Status_IvyCling_C
+function UBP_Status_IvyCling_C:get() end
+
 function UBP_Status_IvyCling_C:OnBeginStatus() end
 function UBP_Status_IvyCling_C:OnEndStatus() end
 ---@param EntryPoint int32

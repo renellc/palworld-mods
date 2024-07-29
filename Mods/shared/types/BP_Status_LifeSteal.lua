@@ -7,6 +7,9 @@
 ---@field SpawnEffectWaitTimer double
 UBP_Status_LifeSteal_C = {}
 
+---@return UBP_Status_LifeSteal_C
+function UBP_Status_LifeSteal_C:get() end
+
 function UBP_Status_LifeSteal_C:OnBeginStatus() end
 function UBP_Status_LifeSteal_C:OnEndStatus() end
 ---@param Damage int32

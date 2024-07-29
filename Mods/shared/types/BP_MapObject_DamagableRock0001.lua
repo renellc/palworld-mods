@@ -12,5 +12,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_MapObject_DamagableRock0001_C = {}
 
+---@return ABP_MapObject_DamagableRock0001_C
+function ABP_MapObject_DamagableRock0001_C:get() end
+
 
 

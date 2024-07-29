@@ -6,6 +6,9 @@
 ---@field MoveEndRange double
 UBP_AIAction_ReturnToDefaultPosition_C = {}
 
+---@return UBP_AIAction_ReturnToDefaultPosition_C
+function UBP_AIAction_ReturnToDefaultPosition_C:get() end
+
 ---@param DefaultPos FVector
 ---@param MoveEndDistance double
 function UBP_AIAction_ReturnToDefaultPosition_C:Setup(DefaultPos, MoveEndDistance) end

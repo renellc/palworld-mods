@@ -6,6 +6,9 @@
 ---@field flagName FName
 UBP_ActionMining_C = {}
 
+---@return UBP_ActionMining_C
+function UBP_ActionMining_C:get() end
+
 function UBP_ActionMining_C:OnEndAction() end
 function UBP_ActionMining_C:OnBeginAction() end
 ---@param Montage UAnimMontage

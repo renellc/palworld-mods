@@ -11,6 +11,9 @@
 ---@field Velocity FVector
 UBP_ActionDeath_C = {}
 
+---@return UBP_ActionDeath_C
+function UBP_ActionDeath_C:get() end
+
 function UBP_ActionDeath_C:InWaterFloat() end
 function UBP_ActionDeath_C:SetLiftUpAble() end
 ---@param Scale double

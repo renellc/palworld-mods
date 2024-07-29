@@ -5,6 +5,9 @@
 ---@field Explosive UNiagaraComponent
 ABP_Explosion_Low_C = {}
 
+---@return ABP_Explosion_Low_C
+function ABP_Explosion_Low_C:get() end
+
 ---@param PSystem UNiagaraComponent
 function ABP_Explosion_Low_C:BndEvt__BP_Explosion_Low_Explosive_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature(PSystem) end
 ---@param EntryPoint int32

@@ -6,6 +6,9 @@
 ---@field SelfPawn APawn
 UBP_AIAction_NPCOtomoFollow_C = {}
 
+---@return UBP_AIAction_NPCOtomoFollow_C
+function UBP_AIAction_NPCOtomoFollow_C:get() end
+
 ---@param Enemy AActor
 function UBP_AIAction_NPCOtomoFollow_C:FindTrainerKillEnemy(Enemy) end
 ---@param MovementResult EPathFollowingResult::Type

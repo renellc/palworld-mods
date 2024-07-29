@@ -8,6 +8,9 @@
 ---@field ObservedComponents TArray<FObservedComponent>
 AChaosCacheManager = {}
 
+---@return AChaosCacheManager
+function AChaosCacheManager:get() end
+
 ---@param InCacheName FName
 function AChaosCacheManager:TriggerComponentByCache(InCacheName) end
 ---@param InComponent UPrimitiveComponent
@@ -23,6 +26,9 @@ function AChaosCacheManager:ResetAllComponentTransforms() end
 ---@class AChaosCachePlayer : AChaosCacheManager
 AChaosCachePlayer = {}
 
+---@return AChaosCachePlayer
+function AChaosCachePlayer:get() end
+
 
 ---@class FBreakingEvent : FCacheEventBase
 ---@field Index int32
@@ -34,10 +40,16 @@ AChaosCachePlayer = {}
 ---@field BoundingBoxMax FVector
 FBreakingEvent = {}
 
+---@return FBreakingEvent
+function FBreakingEvent:get() end
+
 
 
 ---@class FCacheEventBase
 FCacheEventBase = {}
+
+---@return FCacheEventBase
+function FCacheEventBase:get() end
 
 
 ---@class FCacheEventTrack
@@ -46,6 +58,9 @@ FCacheEventBase = {}
 ---@field TimeStamps TArray<float>
 FCacheEventTrack = {}
 
+---@return FCacheEventTrack
+function FCacheEventTrack:get() end
+
 
 
 ---@class FCacheSpawnableTemplate
@@ -53,6 +68,9 @@ FCacheEventTrack = {}
 ---@field InitialTransform FTransform
 ---@field ComponentTransform FTransform
 FCacheSpawnableTemplate = {}
+
+---@return FCacheSpawnableTemplate
+function FCacheSpawnableTemplate:get() end
 
 
 
@@ -71,6 +89,9 @@ FCacheSpawnableTemplate = {}
 ---@field PenetrationDepth float
 FCollisionEvent = {}
 
+---@return FCollisionEvent
+function FCollisionEvent:get() end
+
 
 
 ---@class FEnableStateEvent : FCacheEventBase
@@ -78,11 +99,17 @@ FCollisionEvent = {}
 ---@field bEnable boolean
 FEnableStateEvent = {}
 
+---@return FEnableStateEvent
+function FEnableStateEvent:get() end
+
 
 
 ---@class FMovieSceneChaosCacheParams : FMovieSceneBaseCacheParams
 ---@field CacheCollection UChaosCacheCollection
 FMovieSceneChaosCacheParams = {}
+
+---@return FMovieSceneChaosCacheParams
+function FMovieSceneChaosCacheParams:get() end
 
 
 
@@ -90,11 +117,17 @@ FMovieSceneChaosCacheParams = {}
 ---@field Params FMovieSceneChaosCacheSectionTemplateParameters
 FMovieSceneChaosCacheSectionTemplate = {}
 
+---@return FMovieSceneChaosCacheSectionTemplate
+function FMovieSceneChaosCacheSectionTemplate:get() end
+
 
 
 ---@class FMovieSceneChaosCacheSectionTemplateParameters : FMovieSceneBaseCacheSectionTemplateParameters
 ---@field ChaosCacheParams FMovieSceneChaosCacheParams
 FMovieSceneChaosCacheSectionTemplateParameters = {}
+
+---@return FMovieSceneChaosCacheSectionTemplateParameters
+function FMovieSceneChaosCacheSectionTemplateParameters:get() end
 
 
 
@@ -105,6 +138,9 @@ FMovieSceneChaosCacheSectionTemplateParameters = {}
 ---@field bIsSimulating boolean
 FObservedComponent = {}
 
+---@return FObservedComponent
+function FObservedComponent:get() end
+
 
 
 ---@class FParticleTransformTrack
@@ -114,6 +150,9 @@ FObservedComponent = {}
 ---@field KeyTimestamps TArray<float>
 FParticleTransformTrack = {}
 
+---@return FParticleTransformTrack
+function FParticleTransformTrack:get() end
+
 
 
 ---@class FPerParticleCacheData
@@ -121,11 +160,17 @@ FParticleTransformTrack = {}
 ---@field CurveData TMap<FName, FRichCurve>
 FPerParticleCacheData = {}
 
+---@return FPerParticleCacheData
+function FPerParticleCacheData:get() end
+
 
 
 ---@class FRichCurves
 ---@field RichCurves TArray<FRichCurve>
 FRichCurves = {}
+
+---@return FRichCurves
+function FRichCurves:get() end
 
 
 
@@ -137,6 +182,9 @@ FRichCurves = {}
 ---@field BoundingBoxMin FVector
 ---@field BoundingBoxMax FVector
 FTrailingEvent = {}
+
+---@return FTrailingEvent
+function FTrailingEvent:get() end
 
 
 
@@ -153,11 +201,17 @@ FTrailingEvent = {}
 ---@field Version int32
 UChaosCache = {}
 
+---@return UChaosCache
+function UChaosCache:get() end
+
 
 
 ---@class UChaosCacheCollection : UObject
 ---@field Caches TArray<UChaosCache>
 UChaosCacheCollection = {}
+
+---@return UChaosCacheCollection
+function UChaosCacheCollection:get() end
 
 
 
@@ -165,11 +219,17 @@ UChaosCacheCollection = {}
 ---@field Params FMovieSceneChaosCacheParams
 UMovieSceneChaosCacheSection = {}
 
+---@return UMovieSceneChaosCacheSection
+function UMovieSceneChaosCacheSection:get() end
+
 
 
 ---@class UMovieSceneChaosCacheTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
 UMovieSceneChaosCacheTrack = {}
+
+---@return UMovieSceneChaosCacheTrack
+function UMovieSceneChaosCacheTrack:get() end
 
 
 

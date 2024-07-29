@@ -5,6 +5,9 @@
 ---@field ActivateReadyUI FBP_ArenaSequence_PreBattle_CActivateReadyUI
 UBP_ArenaSequence_PreBattle_C = {}
 
+---@return UBP_ArenaSequence_PreBattle_C
+function UBP_ArenaSequence_PreBattle_C:get() end
+
 ---@param DisableCrying boolean
 function UBP_ArenaSequence_PreBattle_C:ToggleMutePals(DisableCrying) end
 ---@param isDisable boolean

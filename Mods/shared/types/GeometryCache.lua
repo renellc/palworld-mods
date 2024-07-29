@@ -4,6 +4,9 @@
 ---@field GeometryCacheComponent UGeometryCacheComponent
 AGeometryCacheActor = {}
 
+---@return AGeometryCacheActor
+function AGeometryCacheActor:get() end
+
 ---@return UGeometryCacheComponent
 function AGeometryCacheActor:GetGeometryCacheComponent() end
 
@@ -11,13 +14,22 @@ function AGeometryCacheActor:GetGeometryCacheComponent() end
 ---@class FGeometryCacheMeshBatchInfo
 FGeometryCacheMeshBatchInfo = {}
 
+---@return FGeometryCacheMeshBatchInfo
+function FGeometryCacheMeshBatchInfo:get() end
+
 
 ---@class FGeometryCacheMeshData
 FGeometryCacheMeshData = {}
 
+---@return FGeometryCacheMeshData
+function FGeometryCacheMeshData:get() end
+
 
 ---@class FGeometryCacheVertexInfo
 FGeometryCacheVertexInfo = {}
+
+---@return FGeometryCacheVertexInfo
+function FGeometryCacheVertexInfo:get() end
 
 
 ---@class FNiagaraGeometryCacheReference
@@ -26,15 +38,24 @@ FGeometryCacheVertexInfo = {}
 ---@field OverrideMaterials TArray<UMaterialInterface>
 FNiagaraGeometryCacheReference = {}
 
+---@return FNiagaraGeometryCacheReference
+function FNiagaraGeometryCacheReference:get() end
+
 
 
 ---@class FTrackRenderData
 FTrackRenderData = {}
 
+---@return FTrackRenderData
+function FTrackRenderData:get() end
+
 
 ---@class UDEPRECATED_GeometryCacheTrack_FlipbookAnimation : UGeometryCacheTrack
 ---@field NumMeshSamples uint32
 UDEPRECATED_GeometryCacheTrack_FlipbookAnimation = {}
+
+---@return UDEPRECATED_GeometryCacheTrack_FlipbookAnimation
+function UDEPRECATED_GeometryCacheTrack_FlipbookAnimation:get() end
 
 ---@param MeshData FGeometryCacheMeshData
 ---@param SampleTime float
@@ -44,12 +65,18 @@ function UDEPRECATED_GeometryCacheTrack_FlipbookAnimation:AddMeshSample(MeshData
 ---@class UDEPRECATED_GeometryCacheTrack_TransformAnimation : UGeometryCacheTrack
 UDEPRECATED_GeometryCacheTrack_TransformAnimation = {}
 
+---@return UDEPRECATED_GeometryCacheTrack_TransformAnimation
+function UDEPRECATED_GeometryCacheTrack_TransformAnimation:get() end
+
 ---@param NewMeshData FGeometryCacheMeshData
 function UDEPRECATED_GeometryCacheTrack_TransformAnimation:SetMesh(NewMeshData) end
 
 
 ---@class UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation : UGeometryCacheTrack
 UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation = {}
+
+---@return UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation
+function UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation:get() end
 
 ---@param NewMeshData FGeometryCacheMeshData
 function UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation:SetMesh(NewMeshData) end
@@ -63,11 +90,17 @@ function UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation:SetMesh(NewMeshD
 ---@field Hash uint64
 UGeometryCache = {}
 
+---@return UGeometryCache
+function UGeometryCache:get() end
+
 
 
 ---@class UGeometryCacheCodecBase : UObject
 ---@field TopologyRanges TArray<int32>
 UGeometryCacheCodecBase = {}
+
+---@return UGeometryCacheCodecBase
+function UGeometryCacheCodecBase:get() end
 
 
 
@@ -75,10 +108,16 @@ UGeometryCacheCodecBase = {}
 ---@field DummyProperty int32
 UGeometryCacheCodecRaw = {}
 
+---@return UGeometryCacheCodecRaw
+function UGeometryCacheCodecRaw:get() end
+
 
 
 ---@class UGeometryCacheCodecV1 : UGeometryCacheCodecBase
 UGeometryCacheCodecV1 = {}
+
+---@return UGeometryCacheCodecV1
+function UGeometryCacheCodecV1:get() end
 
 
 ---@class UGeometryCacheComponent : UMeshComponent
@@ -96,6 +135,9 @@ UGeometryCacheCodecV1 = {}
 ---@field bOverrideWireframeColor boolean
 ---@field WireframeOverrideColor FLinearColor
 UGeometryCacheComponent = {}
+
+---@return UGeometryCacheComponent
+function UGeometryCacheComponent:get() end
 
 ---@param Time float
 ---@param bInIsRunning boolean
@@ -157,12 +199,18 @@ function UGeometryCacheComponent:GetAnimationTime() end
 ---@field Duration float
 UGeometryCacheTrack = {}
 
+---@return UGeometryCacheTrack
+function UGeometryCacheTrack:get() end
+
 
 
 ---@class UGeometryCacheTrackStreamable : UGeometryCacheTrack
 ---@field Codec UGeometryCacheCodecBase
 ---@field StartSampleTime float
 UGeometryCacheTrackStreamable = {}
+
+---@return UGeometryCacheTrackStreamable
+function UGeometryCacheTrackStreamable:get() end
 
 
 
@@ -180,6 +228,9 @@ UGeometryCacheTrackStreamable = {}
 ---@field RendererVisibility int32
 ---@field bAssignComponentsOnParticleID boolean
 UNiagaraGeometryCacheRendererProperties = {}
+
+---@return UNiagaraGeometryCacheRendererProperties
+function UNiagaraGeometryCacheRendererProperties:get() end
 
 
 

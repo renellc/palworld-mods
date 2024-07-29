@@ -16,6 +16,9 @@
 ---@field OtomoNames TMap<UPalIndividualCharacterHandle, FName>
 ABP_PalRandomIncidentNPCSpawner_C = {}
 
+---@return ABP_PalRandomIncidentNPCSpawner_C
+function ABP_PalRandomIncidentNPCSpawner_C:get() end
+
 ---@param HolderController AController
 ---@param OtomoPal APalCharacter
 function ABP_PalRandomIncidentNPCSpawner_C:OnOtomoSpawned(HolderController, OtomoPal) end

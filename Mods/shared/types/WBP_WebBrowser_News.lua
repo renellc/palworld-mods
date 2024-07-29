@@ -7,6 +7,9 @@
 ---@field WebBrowser UWebBrowser
 UWBP_WebBrowser_News_C = {}
 
+---@return UWBP_WebBrowser_News_C
+function UWBP_WebBrowser_News_C:get() end
+
 ---@return UWidget
 function UWBP_WebBrowser_News_C:BP_GetDesiredFocusTarget() end
 function UWBP_WebBrowser_News_C:BndEvt__WBP_WebBrowserTest_WBP_Menu_btn_K2Node_ComponentBoundEvent_0_OnButtonClicked__DelegateSignature() end

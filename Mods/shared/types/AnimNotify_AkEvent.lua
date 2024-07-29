@@ -7,6 +7,9 @@
 ---@field EventName FString
 UAnimNotify_AkEvent_C = {}
 
+---@return UAnimNotify_AkEvent_C
+function UAnimNotify_AkEvent_C:get() end
+
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
 ---@param EventReference FAnimNotifyEventReference

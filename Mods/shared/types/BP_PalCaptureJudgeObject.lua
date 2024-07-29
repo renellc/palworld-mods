@@ -8,6 +8,9 @@
 ---@field ReturnSpeed double
 ABP_PalCaptureJudgeObject_C = {}
 
+---@return ABP_PalCaptureJudgeObject_C
+function ABP_PalCaptureJudgeObject_C:get() end
+
 ---@param DeltaTime double
 function ABP_PalCaptureJudgeObject_C:ReturnOwnerMovement(DeltaTime) end
 function ABP_PalCaptureJudgeObject_C:ReceiveBeginPlay() end

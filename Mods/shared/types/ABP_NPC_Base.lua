@@ -38,6 +38,9 @@
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
 FAnimBlueprintGeneratedConstantData = {}
 
+---@return FAnimBlueprintGeneratedConstantData
+function FAnimBlueprintGeneratedConstantData:get() end
+
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
@@ -55,6 +58,9 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@field __FloatProperty_10 float
 ---@field __FloatProperty_11 float
 FAnimBlueprintGeneratedMutableData = {}
+
+---@return FAnimBlueprintGeneratedMutableData
+function FAnimBlueprintGeneratedMutableData:get() end
 
 
 
@@ -187,6 +193,9 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field TSCache_ShooterComponent UPalShooterComponent
 ---@field TSCache_OwnerPalCharacter APalCharacter
 UABP_NPC_Base_C = {}
+
+---@return UABP_NPC_Base_C
+function UABP_NPC_Base_C:get() end
 
 ---@param InPose FPoseLink
 ---@param NPC_HairClothLayer FPoseLink

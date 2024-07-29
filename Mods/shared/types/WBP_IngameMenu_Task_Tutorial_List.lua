@@ -15,6 +15,9 @@
 ---@field MyQuest UPalQuestData
 UWBP_IngameMenu_Task_Tutorial_List_C = {}
 
+---@return UWBP_IngameMenu_Task_Tutorial_List_C
+function UWBP_IngameMenu_Task_Tutorial_List_C:get() end
+
 ---@param CompletedQuest UPalQuestData
 function UWBP_IngameMenu_Task_Tutorial_List_C:OnCompleteQuest(CompletedQuest) end
 ---@param UpdatedQuest UPalQuestData

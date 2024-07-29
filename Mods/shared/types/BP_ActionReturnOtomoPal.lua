@@ -10,6 +10,9 @@
 ---@field PreHandle UPalIndividualCharacterHandle
 UBP_ActionReturnOtomoPal_C = {}
 
+---@return UBP_ActionReturnOtomoPal_C
+function UBP_ActionReturnOtomoPal_C:get() end
+
 function UBP_ActionReturnOtomoPal_C:CompleteDeactivateOtomo() end
 function UBP_ActionReturnOtomoPal_C:DeleteBallModel() end
 function UBP_ActionReturnOtomoPal_C:AttachBallModel() end

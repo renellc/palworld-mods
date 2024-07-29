@@ -11,6 +11,9 @@
 ---@field OnSwitcherChanged FWBP_OptionSettings_ListContentSwitch_COnSwitcherChanged
 UWBP_OptionSettings_ListContentSwitch_C = {}
 
+---@return UWBP_OptionSettings_ListContentSwitch_C
+function UWBP_OptionSettings_ListContentSwitch_C:get() end
+
 ---@param IsOn boolean
 function UWBP_OptionSettings_ListContentSwitch_C:IsOn(IsOn) end
 ---@param IsOn boolean

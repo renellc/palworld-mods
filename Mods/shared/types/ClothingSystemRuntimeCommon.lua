@@ -30,6 +30,9 @@
 ---@field AnimDriveDamperStiffness float
 FClothConfig_Legacy = {}
 
+---@return FClothConfig_Legacy
+function FClothConfig_Legacy:get() end
+
 
 
 ---@class FClothConstraintSetup_Legacy
@@ -38,6 +41,9 @@ FClothConfig_Legacy = {}
 ---@field StretchLimit float
 ---@field CompressionLimit float
 FClothConstraintSetup_Legacy = {}
+
+---@return FClothConstraintSetup_Legacy
+function FClothConstraintSetup_Legacy:get() end
 
 
 
@@ -49,6 +55,9 @@ FClothConstraintSetup_Legacy = {}
 ---@field bSmoothTransition boolean
 FClothLODDataCommon = {}
 
+---@return FClothLODDataCommon
+function FClothLODDataCommon:get() end
+
 
 
 ---@class FClothParameterMask_Legacy
@@ -59,6 +68,9 @@ FClothLODDataCommon = {}
 ---@field Values TArray<float>
 ---@field bEnabled boolean
 FClothParameterMask_Legacy = {}
+
+---@return FClothParameterMask_Legacy
+function FClothParameterMask_Legacy:get() end
 
 
 
@@ -76,20 +88,32 @@ FClothParameterMask_Legacy = {}
 ---@field NumFixedVerts int32
 FClothPhysicalMeshData = {}
 
+---@return FClothPhysicalMeshData
+function FClothPhysicalMeshData:get() end
+
 
 
 ---@class FClothTetherData
 FClothTetherData = {}
+
+---@return FClothTetherData
+function FClothTetherData:get() end
 
 
 ---@class FPointWeightMap
 ---@field Values TArray<float>
 FPointWeightMap = {}
 
+---@return FPointWeightMap
+function FPointWeightMap:get() end
+
 
 
 ---@class UClothConfigCommon : UClothConfigBase
 UClothConfigCommon = {}
+
+---@return UClothConfigCommon
+function UClothConfigCommon:get() end
 
 
 ---@class UClothLODDataCommon_Legacy : UObject
@@ -98,10 +122,16 @@ UClothConfigCommon = {}
 ---@field CollisionData FClothCollisionData
 UClothLODDataCommon_Legacy = {}
 
+---@return UClothLODDataCommon_Legacy
+function UClothLODDataCommon_Legacy:get() end
+
 
 
 ---@class UClothSharedConfigCommon : UClothConfigCommon
 UClothSharedConfigCommon = {}
+
+---@return UClothSharedConfigCommon
+function UClothSharedConfigCommon:get() end
 
 
 ---@class UClothingAssetCommon : UClothingAssetBase
@@ -115,9 +145,15 @@ UClothSharedConfigCommon = {}
 ---@field CustomData UClothingAssetCustomData
 UClothingAssetCommon = {}
 
+---@return UClothingAssetCommon
+function UClothingAssetCommon:get() end
+
 
 
 ---@class UClothingAssetCustomData : UObject
 UClothingAssetCustomData = {}
+
+---@return UClothingAssetCustomData
+function UClothingAssetCustomData:get() end
 
 

@@ -5,6 +5,9 @@
 ---@field flagName FName
 UBP_ActionReturnToBaseCamp_C = {}
 
+---@return UBP_ActionReturnToBaseCamp_C
+function UBP_ActionReturnToBaseCamp_C:get() end
+
 function UBP_ActionReturnToBaseCamp_C:OnBeginAction() end
 ---@param DeltaTime float
 function UBP_ActionReturnToBaseCamp_C:TickAction(DeltaTime) end

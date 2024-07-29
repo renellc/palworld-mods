@@ -4,12 +4,18 @@
 ---@field TagName FName
 FGameplayTag = {}
 
+---@return FGameplayTag
+function FGameplayTag:get() end
+
 
 
 ---@class FGameplayTagCategoryRemap
 ---@field BaseCategory FString
 ---@field RemapCategories TArray<FString>
 FGameplayTagCategoryRemap = {}
+
+---@return FGameplayTagCategoryRemap
+function FGameplayTagCategoryRemap:get() end
 
 
 
@@ -18,28 +24,46 @@ FGameplayTagCategoryRemap = {}
 ---@field ParentTags TArray<FGameplayTag>
 FGameplayTagContainer = {}
 
+---@return FGameplayTagContainer
+function FGameplayTagContainer:get() end
+
 
 
 ---@class FGameplayTagContainerNetSerializerConfig : FNetSerializerConfig
 FGameplayTagContainerNetSerializerConfig = {}
+
+---@return FGameplayTagContainerNetSerializerConfig
+function FGameplayTagContainerNetSerializerConfig:get() end
 
 
 ---@class FGameplayTagContainerNetSerializerSerializationHelper
 ---@field GameplayTags TArray<FGameplayTag>
 FGameplayTagContainerNetSerializerSerializationHelper = {}
 
+---@return FGameplayTagContainerNetSerializerSerializationHelper
+function FGameplayTagContainerNetSerializerSerializationHelper:get() end
+
 
 
 ---@class FGameplayTagCreationWidgetHelper
 FGameplayTagCreationWidgetHelper = {}
 
+---@return FGameplayTagCreationWidgetHelper
+function FGameplayTagCreationWidgetHelper:get() end
+
 
 ---@class FGameplayTagNetSerializerConfig : FNetSerializerConfig
 FGameplayTagNetSerializerConfig = {}
 
+---@return FGameplayTagNetSerializerConfig
+function FGameplayTagNetSerializerConfig:get() end
+
 
 ---@class FGameplayTagNode
 FGameplayTagNode = {}
+
+---@return FGameplayTagNode
+function FGameplayTagNode:get() end
 
 
 ---@class FGameplayTagQuery
@@ -50,6 +74,9 @@ FGameplayTagNode = {}
 ---@field AutoDescription FString
 FGameplayTagQuery = {}
 
+---@return FGameplayTagQuery
+function FGameplayTagQuery:get() end
+
 
 
 ---@class FGameplayTagRedirect
@@ -57,10 +84,16 @@ FGameplayTagQuery = {}
 ---@field NewTagName FName
 FGameplayTagRedirect = {}
 
+---@return FGameplayTagRedirect
+function FGameplayTagRedirect:get() end
+
 
 
 ---@class FGameplayTagReferenceHelper
 FGameplayTagReferenceHelper = {}
+
+---@return FGameplayTagReferenceHelper
+function FGameplayTagReferenceHelper:get() end
 
 
 ---@class FGameplayTagSource
@@ -70,12 +103,18 @@ FGameplayTagReferenceHelper = {}
 ---@field SourceRestrictedTagList URestrictedGameplayTagsList
 FGameplayTagSource = {}
 
+---@return FGameplayTagSource
+function FGameplayTagSource:get() end
+
 
 
 ---@class FGameplayTagTableRow : FTableRowBase
 ---@field Tag FName
 ---@field DevComment FString
 FGameplayTagTableRow = {}
+
+---@return FGameplayTagTableRow
+function FGameplayTagTableRow:get() end
 
 
 
@@ -84,16 +123,25 @@ FGameplayTagTableRow = {}
 ---@field Owners TArray<FString>
 FRestrictedConfigInfo = {}
 
+---@return FRestrictedConfigInfo
+function FRestrictedConfigInfo:get() end
+
 
 
 ---@class FRestrictedGameplayTagTableRow : FGameplayTagTableRow
 ---@field bAllowNonRestrictedChildren boolean
 FRestrictedGameplayTagTableRow = {}
 
+---@return FRestrictedGameplayTagTableRow
+function FRestrictedGameplayTagTableRow:get() end
+
 
 
 ---@class IGameplayTagAssetInterface : IInterface
 IGameplayTagAssetInterface = {}
+
+---@return IGameplayTagAssetInterface
+function IGameplayTagAssetInterface:get() end
 
 ---@param TagToCheck FGameplayTag
 ---@return boolean
@@ -110,6 +158,9 @@ function IGameplayTagAssetInterface:GetOwnedGameplayTags(TagContainer) end
 
 ---@class UBlueprintGameplayTagLibrary : UBlueprintFunctionLibrary
 UBlueprintGameplayTagLibrary = {}
+
+---@return UBlueprintGameplayTagLibrary
+function UBlueprintGameplayTagLibrary:get() end
 
 ---@param TagContainer FGameplayTagContainer
 ---@param Tag FGameplayTag
@@ -231,15 +282,24 @@ function UBlueprintGameplayTagLibrary:AddGameplayTag(TagContainer, Tag) end
 ---@field TagQueryExportText_Helper FGameplayTagQuery
 UEditableGameplayTagQuery = {}
 
+---@return UEditableGameplayTagQuery
+function UEditableGameplayTagQuery:get() end
+
 
 
 ---@class UEditableGameplayTagQueryExpression : UObject
 UEditableGameplayTagQueryExpression = {}
 
+---@return UEditableGameplayTagQueryExpression
+function UEditableGameplayTagQueryExpression:get() end
+
 
 ---@class UEditableGameplayTagQueryExpression_AllExprMatch : UEditableGameplayTagQueryExpression
 ---@field Expressions TArray<UEditableGameplayTagQueryExpression>
 UEditableGameplayTagQueryExpression_AllExprMatch = {}
+
+---@return UEditableGameplayTagQueryExpression_AllExprMatch
+function UEditableGameplayTagQueryExpression_AllExprMatch:get() end
 
 
 
@@ -247,11 +307,17 @@ UEditableGameplayTagQueryExpression_AllExprMatch = {}
 ---@field Tags FGameplayTagContainer
 UEditableGameplayTagQueryExpression_AllTagsMatch = {}
 
+---@return UEditableGameplayTagQueryExpression_AllTagsMatch
+function UEditableGameplayTagQueryExpression_AllTagsMatch:get() end
+
 
 
 ---@class UEditableGameplayTagQueryExpression_AnyExprMatch : UEditableGameplayTagQueryExpression
 ---@field Expressions TArray<UEditableGameplayTagQueryExpression>
 UEditableGameplayTagQueryExpression_AnyExprMatch = {}
+
+---@return UEditableGameplayTagQueryExpression_AnyExprMatch
+function UEditableGameplayTagQueryExpression_AnyExprMatch:get() end
 
 
 
@@ -259,17 +325,26 @@ UEditableGameplayTagQueryExpression_AnyExprMatch = {}
 ---@field Tags FGameplayTagContainer
 UEditableGameplayTagQueryExpression_AnyTagsMatch = {}
 
+---@return UEditableGameplayTagQueryExpression_AnyTagsMatch
+function UEditableGameplayTagQueryExpression_AnyTagsMatch:get() end
+
 
 
 ---@class UEditableGameplayTagQueryExpression_NoExprMatch : UEditableGameplayTagQueryExpression
 ---@field Expressions TArray<UEditableGameplayTagQueryExpression>
 UEditableGameplayTagQueryExpression_NoExprMatch = {}
 
+---@return UEditableGameplayTagQueryExpression_NoExprMatch
+function UEditableGameplayTagQueryExpression_NoExprMatch:get() end
+
 
 
 ---@class UEditableGameplayTagQueryExpression_NoTagsMatch : UEditableGameplayTagQueryExpression
 ---@field Tags FGameplayTagContainer
 UEditableGameplayTagQueryExpression_NoTagsMatch = {}
+
+---@return UEditableGameplayTagQueryExpression_NoTagsMatch
+function UEditableGameplayTagQueryExpression_NoTagsMatch:get() end
 
 
 
@@ -278,6 +353,9 @@ UEditableGameplayTagQueryExpression_NoTagsMatch = {}
 ---@field FavoriteTagSource FName
 UGameplayTagsDeveloperSettings = {}
 
+---@return UGameplayTagsDeveloperSettings
+function UGameplayTagsDeveloperSettings:get() end
+
 
 
 ---@class UGameplayTagsList : UObject
@@ -285,12 +363,18 @@ UGameplayTagsDeveloperSettings = {}
 ---@field GameplayTagList TArray<FGameplayTagTableRow>
 UGameplayTagsList = {}
 
+---@return UGameplayTagsList
+function UGameplayTagsList:get() end
+
 
 
 ---@class UGameplayTagsManager : UObject
 ---@field TagSources TMap<FName, FGameplayTagSource>
 ---@field GameplayTagTables TArray<UDataTable>
 UGameplayTagsManager = {}
+
+---@return UGameplayTagsManager
+function UGameplayTagsManager:get() end
 
 
 
@@ -311,12 +395,18 @@ UGameplayTagsManager = {}
 ---@field RestrictedConfigFiles TArray<FRestrictedConfigInfo>
 UGameplayTagsSettings = {}
 
+---@return UGameplayTagsSettings
+function UGameplayTagsSettings:get() end
+
 
 
 ---@class URestrictedGameplayTagsList : UObject
 ---@field ConfigFileName FString
 ---@field RestrictedGameplayTagList TArray<FRestrictedGameplayTagTableRow>
 URestrictedGameplayTagsList = {}
+
+---@return URestrictedGameplayTagsList
+function URestrictedGameplayTagsList:get() end
 
 
 

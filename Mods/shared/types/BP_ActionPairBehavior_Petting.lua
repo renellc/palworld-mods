@@ -3,6 +3,9 @@
 ---@class UBP_ActionPairBehavior_Petting_C : UBP_ActionPairBehaviorBase_C
 UBP_ActionPairBehavior_Petting_C = {}
 
+---@return UBP_ActionPairBehavior_Petting_C
+function UBP_ActionPairBehavior_Petting_C:get() end
+
 ---@param Location FVector
 ---@param Object UObject
 ---@return UNiagaraComponent

@@ -7,6 +7,9 @@
 ---@field CheckGroupTimer FTimerHandle
 UWBP_PalHungerHud_C = {}
 
+---@return UWBP_PalHungerHud_C
+function UWBP_PalHungerHud_C:get() end
+
 ---@param GroupId FGuid
 function UWBP_PalHungerHud_C:GetLocalPlayerGroupID(GroupId) end
 function UWBP_PalHungerHud_C:RemoveSelf_In() end

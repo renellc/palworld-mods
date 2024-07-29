@@ -45,6 +45,9 @@
 ---@field flagName FName
 UWBP_CharacterMake_C = {}
 
+---@return UWBP_CharacterMake_C
+function UWBP_CharacterMake_C:get() end
+
 function UWBP_CharacterMake_C:OnTriggerCompleteMake() end
 function UWBP_CharacterMake_C:OnTriggerPlaySampleVoice() end
 ---@param VoiceID int32

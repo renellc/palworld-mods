@@ -6,6 +6,9 @@
 ---@field IsAllNpcSpawned boolean
 UBP_PalIncidentRandomActionHunterVsPal_C = {}
 
+---@return UBP_PalIncidentRandomActionHunterVsPal_C
+function UBP_PalIncidentRandomActionHunterVsPal_C:get() end
+
 ---@param Array TArray<APalCharacter>
 ---@param NewParam boolean
 function UBP_PalIncidentRandomActionHunterVsPal_C:ExistsAliveCharacter(Array, NewParam) end

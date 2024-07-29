@@ -8,5 +8,8 @@
 ---@field bStopWhenComponentIsDestroyed boolean
 UNiagaraDataInterfaceWwiseEvent = {}
 
+---@return UNiagaraDataInterfaceWwiseEvent
+function UNiagaraDataInterfaceWwiseEvent:get() end
+
 
 

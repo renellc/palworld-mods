@@ -5,5 +5,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_WateringCan_C = {}
 
+---@return ABP_WateringCan_C
+function ABP_WateringCan_C:get() end
+
 
 

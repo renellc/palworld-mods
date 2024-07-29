@@ -15,6 +15,9 @@
 ---@field OnClicked FWBP_CharaCre_PresetButton_COnClicked
 UWBP_CharaCre_PresetButton_C = {}
 
+---@return UWBP_CharaCre_PresetButton_C
+function UWBP_CharaCre_PresetButton_C:get() end
+
 ---@param PresetName FName
 function UWBP_CharaCre_PresetButton_C:GetBindedPresetName(PresetName) end
 ---@param BindPresetName FName

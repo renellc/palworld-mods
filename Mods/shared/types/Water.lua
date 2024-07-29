@@ -4,6 +4,9 @@
 ---@field BuoyancyComponents TArray<UBuoyancyComponent>
 ABuoyancyManager = {}
 
+---@return ABuoyancyManager
+function ABuoyancyManager:get() end
+
 ---@param WorldContextObject UObject
 ---@param Manager ABuoyancyManager
 ---@return boolean
@@ -18,6 +21,9 @@ function ABuoyancyManager:GetBuoyancyComponentManager(WorldContextObject, Manage
 ---@field WaterBodyType EWaterBodyType
 ---@field WaterWaves UWaterWavesBase
 AWaterBody = {}
+
+---@return AWaterBody
+function AWaterBody:get() end
 
 ---@param InWaterWaves UWaterWavesBase
 function AWaterBody:SetWaterWaves(InWaterWaves) end
@@ -56,17 +62,26 @@ function AWaterBody:GetAudioIntensityAtSplineInputKey(InKey) end
 ---@class AWaterBodyCustom : AWaterBody
 AWaterBodyCustom = {}
 
+---@return AWaterBodyCustom
+function AWaterBodyCustom:get() end
+
 
 ---@class AWaterBodyExclusionVolume : APhysicsVolume
 ---@field bExcludeAllOverlappingWaterBodies boolean
 ---@field WaterBodiesToExclude TArray<AWaterBody>
 AWaterBodyExclusionVolume = {}
 
+---@return AWaterBodyExclusionVolume
+function AWaterBodyExclusionVolume:get() end
+
 
 
 ---@class AWaterBodyIsland : AActor
 ---@field SplineComp UWaterSplineComponent
 AWaterBodyIsland = {}
+
+---@return AWaterBodyIsland
+function AWaterBodyIsland:get() end
 
 ---@return UWaterSplineComponent
 function AWaterBodyIsland:GetWaterSpline() end
@@ -75,13 +90,22 @@ function AWaterBodyIsland:GetWaterSpline() end
 ---@class AWaterBodyLake : AWaterBody
 AWaterBodyLake = {}
 
+---@return AWaterBodyLake
+function AWaterBodyLake:get() end
+
 
 ---@class AWaterBodyOcean : AWaterBody
 AWaterBodyOcean = {}
 
+---@return AWaterBodyOcean
+function AWaterBodyOcean:get() end
+
 
 ---@class AWaterBodyRiver : AWaterBody
 AWaterBodyRiver = {}
+
+---@return AWaterBodyRiver
+function AWaterBodyRiver:get() end
 
 
 ---@class AWaterZone : AActor
@@ -98,6 +122,9 @@ AWaterBodyRiver = {}
 ---@field OverlapPriority int32
 ---@field bEnableNonTessellatedLODMesh boolean
 AWaterZone = {}
+
+---@return AWaterZone
+function AWaterZone:get() end
 
 
 
@@ -133,6 +160,9 @@ AWaterZone = {}
 ---@field DownstreamMaxAcceleration float
 FBuoyancyData = {}
 
+---@return FBuoyancyData
+function FBuoyancyData:get() end
+
 
 
 ---@class FGerstnerWave
@@ -147,6 +177,9 @@ FBuoyancyData = {}
 ---@field PhaseOffset float
 FGerstnerWave = {}
 
+---@return FGerstnerWave
+function FGerstnerWave:get() end
+
 
 
 ---@class FGerstnerWaveOctave
@@ -156,6 +189,9 @@ FGerstnerWave = {}
 ---@field SpreadAngle float
 ---@field bUniformSpread boolean
 FGerstnerWaveOctave = {}
+
+---@return FGerstnerWaveOctave
+function FGerstnerWaveOctave:get() end
 
 
 
@@ -180,6 +216,9 @@ FGerstnerWaveOctave = {}
 ---@field CurrentWaterBodyComponent UWaterBodyComponent
 FSphericalPontoon = {}
 
+---@return FSphericalPontoon
+function FSphericalPontoon:get() end
+
 
 
 ---@class FUnderwaterPostProcessSettings
@@ -191,6 +230,9 @@ FSphericalPontoon = {}
 ---@field UnderwaterPostProcessMaterial UMaterialInterface
 FUnderwaterPostProcessSettings = {}
 
+---@return FUnderwaterPostProcessSettings
+function FUnderwaterPostProcessSettings:get() end
+
 
 
 ---@class FWaterBodyHeightmapSettings
@@ -200,6 +242,9 @@ FUnderwaterPostProcessSettings = {}
 ---@field Effects FWaterBrushEffects
 ---@field Priority int32
 FWaterBodyHeightmapSettings = {}
+
+---@return FWaterBodyHeightmapSettings
+function FWaterBodyHeightmapSettings:get() end
 
 
 
@@ -213,12 +258,18 @@ FWaterBodyHeightmapSettings = {}
 ---@field FinalOpacity float
 FWaterBodyWeightmapSettings = {}
 
+---@return FWaterBodyWeightmapSettings
+function FWaterBodyWeightmapSettings:get() end
+
 
 
 ---@class FWaterBrushEffectBlurring
 ---@field bBlurShape boolean
 ---@field Radius int32
 FWaterBrushEffectBlurring = {}
+
+---@return FWaterBrushEffectBlurring
+function FWaterBrushEffectBlurring:get() end
 
 
 
@@ -229,6 +280,9 @@ FWaterBrushEffectBlurring = {}
 ---@field Curl2Tiling float
 FWaterBrushEffectCurlNoise = {}
 
+---@return FWaterBrushEffectCurlNoise
+function FWaterBrushEffectCurlNoise:get() end
+
 
 
 ---@class FWaterBrushEffectCurves
@@ -238,6 +292,9 @@ FWaterBrushEffectCurlNoise = {}
 ---@field ChannelDepth float
 ---@field CurveRampWidth float
 FWaterBrushEffectCurves = {}
+
+---@return FWaterBrushEffectCurves
+function FWaterBrushEffectCurves:get() end
 
 
 
@@ -250,12 +307,18 @@ FWaterBrushEffectCurves = {}
 ---@field WeightmapInfluence float
 FWaterBrushEffectDisplacement = {}
 
+---@return FWaterBrushEffectDisplacement
+function FWaterBrushEffectDisplacement:get() end
+
 
 
 ---@class FWaterBrushEffectSmoothBlending
 ---@field InnerSmoothDistance float
 ---@field OuterSmoothDistance float
 FWaterBrushEffectSmoothBlending = {}
+
+---@return FWaterBrushEffectSmoothBlending
+function FWaterBrushEffectSmoothBlending:get() end
 
 
 
@@ -267,6 +330,9 @@ FWaterBrushEffectSmoothBlending = {}
 ---@field MaskStartOffset float
 FWaterBrushEffectTerracing = {}
 
+---@return FWaterBrushEffectTerracing
+function FWaterBrushEffectTerracing:get() end
+
 
 
 ---@class FWaterBrushEffects
@@ -276,6 +342,9 @@ FWaterBrushEffectTerracing = {}
 ---@field SmoothBlending FWaterBrushEffectSmoothBlending
 ---@field Terracing FWaterBrushEffectTerracing
 FWaterBrushEffects = {}
+
+---@return FWaterBrushEffects
+function FWaterBrushEffects:get() end
 
 
 
@@ -287,6 +356,9 @@ FWaterBrushEffects = {}
 ---@field CurveRampWidth float
 FWaterCurveSettings = {}
 
+---@return FWaterCurveSettings
+function FWaterCurveSettings:get() end
+
 
 
 ---@class FWaterFalloffSettings
@@ -297,6 +369,9 @@ FWaterCurveSettings = {}
 ---@field ZOffset float
 FWaterFalloffSettings = {}
 
+---@return FWaterFalloffSettings
+function FWaterFalloffSettings:get() end
+
 
 
 ---@class FWaterSplineCurveDefaults
@@ -306,10 +381,16 @@ FWaterFalloffSettings = {}
 ---@field DefaultAudioIntensity float
 FWaterSplineCurveDefaults = {}
 
+---@return FWaterSplineCurveDefaults
+function FWaterSplineCurveDefaults:get() end
+
 
 
 ---@class IWaterBrushActorInterface : IInterface
 IWaterBrushActorInterface = {}
+
+---@return IWaterBrushActorInterface
+function IWaterBrushActorInterface:get() end
 
 
 ---@class UBuoyancyComponent : UActorComponent
@@ -320,6 +401,9 @@ IWaterBrushActorInterface = {}
 ---@field CurrentWaterBodyComponents TArray<UWaterBodyComponent>
 ---@field SimulatingComponent UPrimitiveComponent
 UBuoyancyComponent = {}
+
+---@return UBuoyancyComponent
+function UBuoyancyComponent:get() end
 
 ---@param Pontoon FSphericalPontoon
 function UBuoyancyComponent:OnPontoonExitedWater(Pontoon) end
@@ -344,6 +428,9 @@ function UBuoyancyComponent:GetCurrentWaterBodyComponents() end
 ---@field MeshComp UStaticMeshComponent
 UDEPRECATED_CustomMeshGenerator = {}
 
+---@return UDEPRECATED_CustomMeshGenerator
+function UDEPRECATED_CustomMeshGenerator:get() end
+
 
 
 ---@class UDEPRECATED_LakeGenerator : UDEPRECATED_WaterBodyGenerator
@@ -352,6 +439,9 @@ UDEPRECATED_CustomMeshGenerator = {}
 ---@field LakeCollision ULakeCollisionComponent
 UDEPRECATED_LakeGenerator = {}
 
+---@return UDEPRECATED_LakeGenerator
+function UDEPRECATED_LakeGenerator:get() end
+
 
 
 ---@class UDEPRECATED_OceanGenerator : UDEPRECATED_WaterBodyGenerator
@@ -359,16 +449,25 @@ UDEPRECATED_LakeGenerator = {}
 ---@field CollisionHullSets TArray<UOceanCollisionComponent>
 UDEPRECATED_OceanGenerator = {}
 
+---@return UDEPRECATED_OceanGenerator
+function UDEPRECATED_OceanGenerator:get() end
+
 
 
 ---@class UDEPRECATED_RiverGenerator : UDEPRECATED_WaterBodyGenerator
 ---@field SplineMeshComponents TArray<USplineMeshComponent>
 UDEPRECATED_RiverGenerator = {}
 
+---@return UDEPRECATED_RiverGenerator
+function UDEPRECATED_RiverGenerator:get() end
+
 
 
 ---@class UDEPRECATED_WaterBodyGenerator : UObject
 UDEPRECATED_WaterBodyGenerator = {}
+
+---@return UDEPRECATED_WaterBodyGenerator
+function UDEPRECATED_WaterBodyGenerator:get() end
 
 
 ---@class UEnvQueryTest_InsideWaterBody : UEnvQueryTest
@@ -377,10 +476,16 @@ UDEPRECATED_WaterBodyGenerator = {}
 ---@field bIgnoreExclusionVolumes boolean
 UEnvQueryTest_InsideWaterBody = {}
 
+---@return UEnvQueryTest_InsideWaterBody
+function UEnvQueryTest_InsideWaterBody:get() end
+
 
 
 ---@class UGerstnerWaterWaveGeneratorBase : UObject
 UGerstnerWaterWaveGeneratorBase = {}
+
+---@return UGerstnerWaterWaveGeneratorBase
+function UGerstnerWaterWaveGeneratorBase:get() end
 
 ---@param OutWaves TArray<FGerstnerWave>
 function UGerstnerWaterWaveGeneratorBase:GenerateGerstnerWaves(OutWaves) end
@@ -403,6 +508,9 @@ function UGerstnerWaterWaveGeneratorBase:GenerateGerstnerWaves(OutWaves) end
 ---@field SteepnessFalloff float
 UGerstnerWaterWaveGeneratorSimple = {}
 
+---@return UGerstnerWaterWaveGeneratorSimple
+function UGerstnerWaterWaveGeneratorSimple:get() end
+
 
 
 ---@class UGerstnerWaterWaveGeneratorSpectrum : UGerstnerWaterWaveGeneratorBase
@@ -410,10 +518,16 @@ UGerstnerWaterWaveGeneratorSimple = {}
 ---@field Octaves TArray<FGerstnerWaveOctave>
 UGerstnerWaterWaveGeneratorSpectrum = {}
 
+---@return UGerstnerWaterWaveGeneratorSpectrum
+function UGerstnerWaterWaveGeneratorSpectrum:get() end
+
 
 
 ---@class UGerstnerWaterWaveSubsystem : UEngineSubsystem
 UGerstnerWaterWaveSubsystem = {}
+
+---@return UGerstnerWaterWaveSubsystem
+function UGerstnerWaterWaveSubsystem:get() end
 
 
 ---@class UGerstnerWaterWaves : UWaterWaves
@@ -422,6 +536,9 @@ UGerstnerWaterWaveSubsystem = {}
 ---@field MaxWaveHeight float
 UGerstnerWaterWaves = {}
 
+---@return UGerstnerWaterWaves
+function UGerstnerWaterWaves:get() end
+
 
 
 ---@class ULakeCollisionComponent : UPrimitiveComponent
@@ -429,16 +546,25 @@ UGerstnerWaterWaves = {}
 ---@field BoxExtent FVector
 ULakeCollisionComponent = {}
 
+---@return ULakeCollisionComponent
+function ULakeCollisionComponent:get() end
+
 
 
 ---@class UNiagaraDataInterfaceWater : UNiagaraDataInterface
 ---@field SourceBodyComponent UWaterBodyComponent
 UNiagaraDataInterfaceWater = {}
 
+---@return UNiagaraDataInterfaceWater
+function UNiagaraDataInterfaceWater:get() end
+
 
 
 ---@class UNiagaraWaterFunctionLibrary : UBlueprintFunctionLibrary
 UNiagaraWaterFunctionLibrary = {}
+
+---@return UNiagaraWaterFunctionLibrary
+function UNiagaraWaterFunctionLibrary:get() end
 
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
@@ -453,10 +579,16 @@ function UNiagaraWaterFunctionLibrary:SetWaterBody(NiagaraSystem, OverrideName, 
 ---@class UOceanBoxCollisionComponent : UBoxComponent
 UOceanBoxCollisionComponent = {}
 
+---@return UOceanBoxCollisionComponent
+function UOceanBoxCollisionComponent:get() end
+
 
 ---@class UOceanCollisionComponent : UPrimitiveComponent
 ---@field CachedBodySetup UBodySetup
 UOceanCollisionComponent = {}
+
+---@return UOceanCollisionComponent
+function UOceanCollisionComponent:get() end
 
 
 
@@ -493,6 +625,9 @@ UOceanCollisionComponent = {}
 ---@field WaterNavAreaClass TSubclassOf<UNavAreaBase>
 ---@field FixedWaterDepth double
 UWaterBodyComponent = {}
+
+---@return UWaterBodyComponent
+function UWaterBodyComponent:get() end
 
 ---@param InWaterMaterial UMaterialInterface
 ---@param InUnderWaterPostProcessMaterial UMaterialInterface
@@ -547,16 +682,25 @@ function UWaterBodyComponent:GetCollisionComponents(bInOnlyEnabledComponents) en
 ---@field MeshComp UStaticMeshComponent
 UWaterBodyCustomComponent = {}
 
+---@return UWaterBodyCustomComponent
+function UWaterBodyCustomComponent:get() end
+
 
 
 ---@class UWaterBodyHLODBuilder : UHLODBuilder
 UWaterBodyHLODBuilder = {}
+
+---@return UWaterBodyHLODBuilder
+function UWaterBodyHLODBuilder:get() end
 
 
 ---@class UWaterBodyLakeComponent : UWaterBodyComponent
 ---@field LakeMeshComp UStaticMeshComponent
 ---@field LakeCollision ULakeCollisionComponent
 UWaterBodyLakeComponent = {}
+
+---@return UWaterBodyLakeComponent
+function UWaterBodyLakeComponent:get() end
 
 
 
@@ -568,6 +712,9 @@ UWaterBodyLakeComponent = {}
 ---@field HeightOffset float
 UWaterBodyOceanComponent = {}
 
+---@return UWaterBodyOceanComponent
+function UWaterBodyOceanComponent:get() end
+
 
 
 ---@class UWaterBodyRiverComponent : UWaterBodyComponent
@@ -577,6 +724,9 @@ UWaterBodyOceanComponent = {}
 ---@field OceanTransitionMaterial UMaterialInterface
 ---@field OceanTransitionMID UMaterialInstanceDynamic
 UWaterBodyRiverComponent = {}
+
+---@return UWaterBodyRiverComponent
+function UWaterBodyRiverComponent:get() end
 
 
 
@@ -590,6 +740,9 @@ UWaterBodyRiverComponent = {}
 ---@field TessellationFactor int32
 ---@field LODScale float
 UWaterMeshComponent = {}
+
+---@return UWaterMeshComponent
+function UWaterMeshComponent:get() end
 
 ---@return boolean
 function UWaterMeshComponent:IsEnabled() end
@@ -607,12 +760,18 @@ function UWaterMeshComponent:IsEnabled() end
 ---@field WaterBodyCustomComponentClass TSubclassOf<UWaterBodyCustomComponent>
 UWaterRuntimeSettings = {}
 
+---@return UWaterRuntimeSettings
+function UWaterRuntimeSettings:get() end
+
 
 
 ---@class UWaterSplineComponent : USplineComponent
 ---@field WaterSplineDefaults FWaterSplineCurveDefaults
 ---@field PreviousWaterSplineDefaults FWaterSplineCurveDefaults
 UWaterSplineComponent = {}
+
+---@return UWaterSplineComponent
+function UWaterSplineComponent:get() end
 
 
 
@@ -624,6 +783,9 @@ UWaterSplineComponent = {}
 ---@field WaterVelocity FInterpCurveVector
 UWaterSplineMetadata = {}
 
+---@return UWaterSplineMetadata
+function UWaterSplineMetadata:get() end
+
 
 
 ---@class UWaterSubsystem : UTickableWorldSubsystem
@@ -634,6 +796,9 @@ UWaterSplineMetadata = {}
 ---@field DefaultLakeMesh UStaticMesh
 ---@field MaterialParameterCollection UMaterialParameterCollection
 UWaterSubsystem = {}
+
+---@return UWaterSubsystem
+function UWaterSubsystem:get() end
 
 ---@param InFloodHeight float
 function UWaterSubsystem:SetOceanFloodHeight(InFloodHeight) end
@@ -669,10 +834,16 @@ function UWaterSubsystem:GetCameraUnderwaterDepth() end
 ---@class UWaterWaves : UWaterWavesBase
 UWaterWaves = {}
 
+---@return UWaterWaves
+function UWaterWaves:get() end
+
 
 ---@class UWaterWavesAsset : UObject
 ---@field WaterWaves UWaterWaves
 UWaterWavesAsset = {}
+
+---@return UWaterWavesAsset
+function UWaterWavesAsset:get() end
 
 
 
@@ -680,9 +851,15 @@ UWaterWavesAsset = {}
 ---@field WaterWavesAsset UWaterWavesAsset
 UWaterWavesAssetReference = {}
 
+---@return UWaterWavesAssetReference
+function UWaterWavesAssetReference:get() end
+
 
 
 ---@class UWaterWavesBase : UObject
 UWaterWavesBase = {}
+
+---@return UWaterWavesBase
+function UWaterWavesBase:get() end
 
 

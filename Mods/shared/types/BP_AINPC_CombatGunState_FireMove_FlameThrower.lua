@@ -5,6 +5,9 @@
 ---@field Timer double
 UBP_AINPC_CombatGunState_FireMove_FlameThrower_C = {}
 
+---@return UBP_AINPC_CombatGunState_FireMove_FlameThrower_C
+function UBP_AINPC_CombatGunState_FireMove_FlameThrower_C:get() end
+
 function UBP_AINPC_CombatGunState_FireMove_FlameThrower_C:StateEnter() end
 function UBP_AINPC_CombatGunState_FireMove_FlameThrower_C:StateExit() end
 ---@param EntryPoint int32

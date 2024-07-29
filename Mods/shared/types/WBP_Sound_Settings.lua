@@ -15,6 +15,9 @@
 ---@field OriginalSettingCache FPalOptionAudioSettings
 UWBP_Sound_Settings_C = {}
 
+---@return UWBP_Sound_Settings_C
+function UWBP_Sound_Settings_C:get() end
+
 function UWBP_Sound_Settings_C:Construct() end
 ---@param Value double
 function UWBP_Sound_Settings_C:OnMasterChanged(Value) end

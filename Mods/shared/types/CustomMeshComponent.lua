@@ -6,10 +6,16 @@
 ---@field Vertex2 FVector
 FCustomMeshTriangle = {}
 
+---@return FCustomMeshTriangle
+function FCustomMeshTriangle:get() end
+
 
 
 ---@class UCustomMeshComponent : UMeshComponent
 UCustomMeshComponent = {}
+
+---@return UCustomMeshComponent
+function UCustomMeshComponent:get() end
 
 ---@param Triangles TArray<FCustomMeshTriangle>
 ---@return boolean

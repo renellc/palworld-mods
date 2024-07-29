@@ -5,6 +5,9 @@
 ---@field Niagara UNiagaraComponent
 UBP_VisualEffect_Status_Poisoned_C = {}
 
+---@return UBP_VisualEffect_Status_Poisoned_C
+function UBP_VisualEffect_Status_Poisoned_C:get() end
+
 function UBP_VisualEffect_Status_Poisoned_C:OnBeginVisualEffect() end
 function UBP_VisualEffect_Status_Poisoned_C:OnEndVisualEffect() end
 ---@param EntryPoint int32

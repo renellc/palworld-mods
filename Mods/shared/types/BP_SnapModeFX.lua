@@ -14,6 +14,9 @@
 ---@field IsSnapMode boolean
 ABP_SnapModeFX_C = {}
 
+---@return ABP_SnapModeFX_C
+function ABP_SnapModeFX_C:get() end
+
 function ABP_SnapModeFX_C:Hide() end
 ---@param Location FVector
 ---@param Rotation FRotator

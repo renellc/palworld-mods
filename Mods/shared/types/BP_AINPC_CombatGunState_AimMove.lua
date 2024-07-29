@@ -5,6 +5,9 @@
 ---@field MoveDIrection FVector
 UBP_AINPC_CombatGunState_AimMove_C = {}
 
+---@return UBP_AINPC_CombatGunState_AimMove_C
+function UBP_AINPC_CombatGunState_AimMove_C:get() end
+
 ---@param CanMove boolean
 function UBP_AINPC_CombatGunState_AimMove_C:CanMove(CanMove) end
 ---@param Success boolean

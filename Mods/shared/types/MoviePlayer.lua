@@ -6,5 +6,8 @@
 ---@field StartupMovies TArray<FString>
 UMoviePlayerSettings = {}
 
+---@return UMoviePlayerSettings
+function UMoviePlayerSettings:get() end
+
 
 

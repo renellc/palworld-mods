@@ -73,6 +73,9 @@
 ---@field OnClickedRandomizerSeedInputButton FWBP_Title_WorldSettings_COnClickedRandomizerSeedInputButton
 UWBP_Title_WorldSettings_C = {}
 
+---@return UWBP_Title_WorldSettings_C
+function UWBP_Title_WorldSettings_C:get() end
+
 ---@param Index int32
 ---@param Time double
 function UWBP_Title_WorldSettings_C:ConvertIndexToAutoSaveTime(Index, Time) end

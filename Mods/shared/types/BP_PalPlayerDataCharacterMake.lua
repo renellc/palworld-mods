@@ -3,6 +3,9 @@
 ---@class UBP_PalPlayerDataCharacterMake_C : UPalPlayerDataCharacterMake
 UBP_PalPlayerDataCharacterMake_C = {}
 
+---@return UBP_PalPlayerDataCharacterMake_C
+function UBP_PalPlayerDataCharacterMake_C:get() end
+
 ---@param MakeInfo FPalPlayerDataCharacterMakeInfo
 ---@param SVLimit double
 ---@param ConvertedMakeInfo FPalPlayerDataCharacterMakeInfo

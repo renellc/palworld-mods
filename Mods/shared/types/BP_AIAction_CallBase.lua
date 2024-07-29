@@ -10,6 +10,9 @@
 ---@field PrevTargetLocation FVector
 UBP_AIAction_CallBase_C = {}
 
+---@return UBP_AIAction_CallBase_C
+function UBP_AIAction_CallBase_C:get() end
+
 ---@param IsInteracting boolean
 function UBP_AIAction_CallBase_C:IsInteractingPlayer(IsInteracting) end
 ---@param CameraRotate FRotator

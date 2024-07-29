@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_VisualEffect_DebugRefresh_C = {}
 
+---@return UBP_VisualEffect_DebugRefresh_C
+function UBP_VisualEffect_DebugRefresh_C:get() end
+
 function UBP_VisualEffect_DebugRefresh_C:OnBeginVisualEffect() end
 ---@param EntryPoint int32
 function UBP_VisualEffect_DebugRefresh_C:ExecuteUbergraph_BP_VisualEffect_DebugRefresh(EntryPoint) end

@@ -3,4 +3,7 @@
 ---@class UBP_ActionGrowupPromotion_C : UBP_ActionSimpleMonoMontage_C
 UBP_ActionGrowupPromotion_C = {}
 
+---@return UBP_ActionGrowupPromotion_C
+function UBP_ActionGrowupPromotion_C:get() end
+
 

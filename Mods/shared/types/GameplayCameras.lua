@@ -12,10 +12,16 @@
 ---@field bIsEasingOut boolean
 FActiveCameraAnimationInfo = {}
 
+---@return FActiveCameraAnimationInfo
+function FActiveCameraAnimationInfo:get() end
+
 
 
 ---@class FCameraAnimationHandle
 FCameraAnimationHandle = {}
+
+---@return FCameraAnimationHandle
+function FCameraAnimationHandle:get() end
 
 
 ---@class FCameraAnimationParams
@@ -32,6 +38,9 @@ FCameraAnimationHandle = {}
 ---@field UserPlaySpaceRot FRotator
 FCameraAnimationParams = {}
 
+---@return FCameraAnimationParams
+function FCameraAnimationParams:get() end
+
 
 
 ---@class FFOscillator
@@ -41,12 +50,18 @@ FCameraAnimationParams = {}
 ---@field Waveform EOscillatorWaveform
 FFOscillator = {}
 
+---@return FFOscillator
+function FFOscillator:get() end
+
 
 
 ---@class FPerlinNoiseShaker
 ---@field Amplitude float
 ---@field Frequency float
 FPerlinNoiseShaker = {}
+
+---@return FPerlinNoiseShaker
+function FPerlinNoiseShaker:get() end
 
 
 
@@ -56,6 +71,9 @@ FPerlinNoiseShaker = {}
 ---@field Roll FFOscillator
 FROscillator = {}
 
+---@return FROscillator
+function FROscillator:get() end
+
 
 
 ---@class FVOscillator
@@ -63,6 +81,9 @@ FROscillator = {}
 ---@field Y FFOscillator
 ---@field Z FFOscillator
 FVOscillator = {}
+
+---@return FVOscillator
+function FVOscillator:get() end
 
 
 
@@ -72,12 +93,18 @@ FVOscillator = {}
 ---@field InitialOffsetType EInitialWaveOscillatorOffsetType
 FWaveOscillator = {}
 
+---@return FWaveOscillator
+function FWaveOscillator:get() end
+
 
 
 ---@class UCameraAnimationCameraModifier : UCameraModifier
 ---@field ActiveAnimations TArray<FActiveCameraAnimationInfo>
 ---@field NextInstanceSerialNumber uint16
 UCameraAnimationCameraModifier = {}
+
+---@return UCameraAnimationCameraModifier
+function UCameraAnimationCameraModifier:get() end
 
 ---@param Handle FCameraAnimationHandle
 ---@param bImmediate boolean
@@ -111,6 +138,9 @@ function UCameraAnimationCameraModifier:GetCameraAnimationCameraModifier(WorldCo
 ---@field ChildPatterns TArray<UCameraShakePattern>
 UCompositeCameraShakePattern = {}
 
+---@return UCompositeCameraShakePattern
+function UCompositeCameraShakePattern:get() end
+
 
 
 ---@class UConstantCameraShakePattern : USimpleCameraShakePattern
@@ -118,14 +148,23 @@ UCompositeCameraShakePattern = {}
 ---@field RotationOffset FRotator
 UConstantCameraShakePattern = {}
 
+---@return UConstantCameraShakePattern
+function UConstantCameraShakePattern:get() end
+
 
 
 ---@class UDefaultCameraShakeBase : UCameraShakeBase
 UDefaultCameraShakeBase = {}
 
+---@return UDefaultCameraShakeBase
+function UDefaultCameraShakeBase:get() end
+
 
 ---@class UGameplayCamerasFunctionLibrary : UBlueprintFunctionLibrary
 UGameplayCamerasFunctionLibrary = {}
+
+---@return UGameplayCamerasFunctionLibrary
+function UGameplayCamerasFunctionLibrary:get() end
 
 ---@param CameraAnimationPlaySpace ECameraAnimationPlaySpace
 ---@return ECameraShakePlaySpace
@@ -140,6 +179,9 @@ function UGameplayCamerasFunctionLibrary:Conv_CameraAnimationCameraModifier(Play
 
 ---@class UGameplayCamerasSubsystem : UWorldSubsystem
 UGameplayCamerasSubsystem = {}
+
+---@return UGameplayCamerasSubsystem
+function UGameplayCamerasSubsystem:get() end
 
 ---@param PlayerController APlayerController
 ---@param Handle FCameraAnimationHandle
@@ -181,6 +223,9 @@ function UGameplayCamerasSubsystem:IsCameraAnimationActive(PlayerController, Han
 ---@field SequenceShakePattern USequenceCameraShakePattern
 ULegacyCameraShake = {}
 
+---@return ULegacyCameraShake
+function ULegacyCameraShake:get() end
+
 ---@param PlayerCameraManager APlayerCameraManager
 ---@param ShakeClass TSubclassOf<ULegacyCameraShake>
 ---@param SourceComponent UCameraShakeSourceComponent
@@ -212,6 +257,9 @@ function ULegacyCameraShake:BlueprintUpdateCameraShake(DeltaTime, Alpha, POV, Mo
 ---@class ULegacyCameraShakeFunctionLibrary : UBlueprintFunctionLibrary
 ULegacyCameraShakeFunctionLibrary = {}
 
+---@return ULegacyCameraShakeFunctionLibrary
+function ULegacyCameraShakeFunctionLibrary:get() end
+
 ---@param CameraShake UCameraShakeBase
 ---@return ULegacyCameraShake
 function ULegacyCameraShakeFunctionLibrary:Conv_LegacyCameraShake(CameraShake) end
@@ -219,6 +267,9 @@ function ULegacyCameraShakeFunctionLibrary:Conv_LegacyCameraShake(CameraShake) e
 
 ---@class ULegacyCameraShakePattern : UCameraShakePattern
 ULegacyCameraShakePattern = {}
+
+---@return ULegacyCameraShakePattern
+function ULegacyCameraShakePattern:get() end
 
 
 ---@class UPerlinNoiseCameraShakePattern : USimpleCameraShakePattern
@@ -235,6 +286,9 @@ ULegacyCameraShakePattern = {}
 ---@field FOV FPerlinNoiseShaker
 UPerlinNoiseCameraShakePattern = {}
 
+---@return UPerlinNoiseCameraShakePattern
+function UPerlinNoiseCameraShakePattern:get() end
+
 
 
 ---@class USimpleCameraShakePattern : UCameraShakePattern
@@ -243,10 +297,16 @@ UPerlinNoiseCameraShakePattern = {}
 ---@field BlendOutTime float
 USimpleCameraShakePattern = {}
 
+---@return USimpleCameraShakePattern
+function USimpleCameraShakePattern:get() end
+
 
 
 ---@class UTestCameraShake : UCameraShakeBase
 UTestCameraShake = {}
+
+---@return UTestCameraShake
+function UTestCameraShake:get() end
 
 
 ---@class UWaveOscillatorCameraShakePattern : USimpleCameraShakePattern
@@ -262,6 +322,9 @@ UTestCameraShake = {}
 ---@field Roll FWaveOscillator
 ---@field FOV FWaveOscillator
 UWaveOscillatorCameraShakePattern = {}
+
+---@return UWaveOscillatorCameraShakePattern
+function UWaveOscillatorCameraShakePattern:get() end
 
 
 

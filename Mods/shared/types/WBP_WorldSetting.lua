@@ -12,6 +12,9 @@
 ---@field RandomizerSeedInputDispatchParameter UBP_HUDDispatchParameter_RandomizerSeedInput_C
 UWBP_WorldSetting_C = {}
 
+---@return UWBP_WorldSetting_C
+function UWBP_WorldSetting_C:get() end
+
 ---@param Param UPalHUDDispatchParameterBase
 function UWBP_WorldSetting_C:OnClosedRandomizerSeedInputWindow(Param) end
 function UWBP_WorldSetting_C:OpenRandomizerSeedInputWindow() end

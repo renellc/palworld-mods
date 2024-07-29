@@ -15,6 +15,9 @@
 ---@field tempDeltaTime double
 UBP_AIActionCombatHeli_BattleMode_C = {}
 
+---@return UBP_AIActionCombatHeli_BattleMode_C
+function UBP_AIActionCombatHeli_BattleMode_C:get() end
+
 ---@param Distance double
 ---@param Near boolean
 function UBP_AIActionCombatHeli_BattleMode_C:IsNearTarget2D(Distance, Near) end

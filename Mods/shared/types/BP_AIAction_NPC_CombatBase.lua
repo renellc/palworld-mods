@@ -12,6 +12,9 @@
 ---@field IsMeleeWeapon boolean
 UBP_AIAction_NPC_CombatBase_C = {}
 
+---@return UBP_AIAction_NPC_CombatBase_C
+function UBP_AIAction_NPC_CombatBase_C:get() end
+
 ---@param Alive boolean
 UBP_AIAction_NPC_CombatBase_C['Is Alive Target Actor'] = function(Alive) end
 ---@param IsEnd boolean

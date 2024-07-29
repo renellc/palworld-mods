@@ -16,6 +16,9 @@
 ---@field ActualAlpha float
 FAnimNode_IKRig = {}
 
+---@return FAnimNode_IKRig
+function FAnimNode_IKRig:get() end
+
 
 
 ---@class FAnimNode_RetargetPoseFromMesh : FAnimNode_Base
@@ -28,6 +31,9 @@ FAnimNode_IKRig = {}
 ---@field Processor UIKRetargetProcessor
 FAnimNode_RetargetPoseFromMesh = {}
 
+---@return FAnimNode_RetargetPoseFromMesh
+function FAnimNode_RetargetPoseFromMesh:get() end
+
 
 
 ---@class FBoneChain
@@ -37,16 +43,25 @@ FAnimNode_RetargetPoseFromMesh = {}
 ---@field IKGoalName FName
 FBoneChain = {}
 
+---@return FBoneChain
+function FBoneChain:get() end
+
 
 
 ---@class FGoalBone
 FGoalBone = {}
+
+---@return FGoalBone
+function FGoalBone:get() end
 
 
 ---@class FIKRetargetPose
 ---@field RootTranslationOffset FVector
 ---@field BoneRotationOffsets TMap<FName, FQuat>
 FIKRetargetPose = {}
+
+---@return FIKRetargetPose
+function FIKRetargetPose:get() end
 
 
 
@@ -64,14 +79,23 @@ FIKRetargetPose = {}
 ---@field FinalBlendedRotation FQuat
 FIKRigGoal = {}
 
+---@return FIKRigGoal
+function FIKRigGoal:get() end
+
 
 
 ---@class FIKRigGoalContainer
 FIKRigGoalContainer = {}
 
+---@return FIKRigGoalContainer
+function FIKRigGoalContainer:get() end
+
 
 ---@class FIKRigInputSkeleton
 FIKRigInputSkeleton = {}
+
+---@return FIKRigInputSkeleton
+function FIKRigInputSkeleton:get() end
 
 
 ---@class FIKRigSkeleton
@@ -83,14 +107,23 @@ FIKRigInputSkeleton = {}
 ---@field RefPoseGlobal TArray<FTransform>
 FIKRigSkeleton = {}
 
+---@return FIKRigSkeleton
+function FIKRigSkeleton:get() end
+
 
 
 ---@class FLimbLink
 FLimbLink = {}
 
+---@return FLimbLink
+function FLimbLink:get() end
+
 
 ---@class FLimbSolver
 FLimbSolver = {}
+
+---@return FLimbSolver
+function FLimbSolver:get() end
 
 
 ---@class FLimbSolverSettings
@@ -106,6 +139,9 @@ FLimbSolver = {}
 ---@field EndBoneForwardAxis EAxis::Type
 FLimbSolverSettings = {}
 
+---@return FLimbSolverSettings
+function FLimbSolverSettings:get() end
+
 
 
 ---@class FRetargetChainMap
@@ -113,12 +149,18 @@ FLimbSolverSettings = {}
 ---@field TargetChain FName
 FRetargetChainMap = {}
 
+---@return FRetargetChainMap
+function FRetargetChainMap:get() end
+
 
 
 ---@class FRetargetDefinition
 ---@field RootBone FName
 ---@field BoneChains TArray<FBoneChain>
 FRetargetDefinition = {}
+
+---@return FRetargetDefinition
+function FRetargetDefinition:get() end
 
 
 
@@ -135,6 +177,9 @@ FRetargetDefinition = {}
 ---@field WarpSplay float
 FRetargetGlobalSettings = {}
 
+---@return FRetargetGlobalSettings
+function FRetargetGlobalSettings:get() end
+
 
 
 ---@class FRetargetProfile
@@ -150,6 +195,9 @@ FRetargetGlobalSettings = {}
 ---@field GlobalSettings FRetargetGlobalSettings
 FRetargetProfile = {}
 
+---@return FRetargetProfile
+function FRetargetProfile:get() end
+
 
 
 ---@class FTargetChainFKSettings
@@ -161,6 +209,9 @@ FRetargetProfile = {}
 ---@field PoleVectorMatching float
 ---@field PoleVectorOffset float
 FTargetChainFKSettings = {}
+
+---@return FTargetChainFKSettings
+function FTargetChainFKSettings:get() end
 
 
 
@@ -175,6 +226,9 @@ FTargetChainFKSettings = {}
 ---@field bAffectedByIKWarping boolean
 FTargetChainIKSettings = {}
 
+---@return FTargetChainIKSettings
+function FTargetChainIKSettings:get() end
+
 
 
 ---@class FTargetChainSettings
@@ -182,6 +236,9 @@ FTargetChainIKSettings = {}
 ---@field IK FTargetChainIKSettings
 ---@field SpeedPlanting FTargetChainSpeedPlantSettings
 FTargetChainSettings = {}
+
+---@return FTargetChainSettings
+function FTargetChainSettings:get() end
 
 
 
@@ -192,6 +249,9 @@ FTargetChainSettings = {}
 ---@field UnplantStiffness float
 ---@field UnplantCriticalDamping float
 FTargetChainSpeedPlantSettings = {}
+
+---@return FTargetChainSpeedPlantSettings
+function FTargetChainSpeedPlantSettings:get() end
 
 
 
@@ -208,10 +268,16 @@ FTargetChainSpeedPlantSettings = {}
 ---@field AffectIKVertical float
 FTargetRootSettings = {}
 
+---@return FTargetRootSettings
+function FTargetRootSettings:get() end
+
 
 
 ---@class IIKGoalCreatorInterface : IInterface
 IIKGoalCreatorInterface = {}
+
+---@return IIKGoalCreatorInterface
+function IIKGoalCreatorInterface:get() end
 
 ---@param OutGoals TMap<FName, FIKRigGoal>
 function IIKGoalCreatorInterface:AddIKGoals(OutGoals) end
@@ -221,11 +287,17 @@ function IIKGoalCreatorInterface:AddIKGoals(OutGoals) end
 ---@field Settings FRetargetGlobalSettings
 UIKRetargetGlobalSettings = {}
 
+---@return UIKRetargetGlobalSettings
+function UIKRetargetGlobalSettings:get() end
+
 
 
 ---@class UIKRetargetProcessor : UObject
 ---@field IKRigProcessor UIKRigProcessor
 UIKRetargetProcessor = {}
+
+---@return UIKRetargetProcessor
+function UIKRetargetProcessor:get() end
 
 
 
@@ -245,6 +317,9 @@ UIKRetargetProcessor = {}
 ---@field RetargetPoses TMap<FName, FIKRetargetPose>
 ---@field CurrentRetargetPose FName
 UIKRetargeter = {}
+
+---@return UIKRetargeter
+function UIKRetargeter:get() end
 
 ---@param RetargetProfile FRetargetProfile
 ---@param RootSettings FTargetRootSettings
@@ -300,6 +375,9 @@ function UIKRetargeter:GetChainSettingsFromRetargetAsset(RetargetAsset, TargetCh
 ---@class UIKRigComponent : UActorComponent
 UIKRigComponent = {}
 
+---@return UIKRigComponent
+function UIKRigComponent:get() end
+
 ---@param GoalName FName
 ---@param Transform FTransform
 ---@param PositionAlpha float
@@ -324,6 +402,9 @@ function UIKRigComponent:ClearAllGoals() end
 ---@field RetargetDefinition FRetargetDefinition
 UIKRigDefinition = {}
 
+---@return UIKRigDefinition
+function UIKRigDefinition:get() end
+
 
 
 ---@class UIKRigEffectorGoal : UObject
@@ -334,6 +415,9 @@ UIKRigDefinition = {}
 ---@field CurrentTransform FTransform
 ---@field InitialTransform FTransform
 UIKRigEffectorGoal = {}
+
+---@return UIKRigEffectorGoal
+function UIKRigEffectorGoal:get() end
 
 
 
@@ -349,17 +433,26 @@ UIKRigEffectorGoal = {}
 ---@field BoneSettings TArray<UIKRig_PBIKBoneSettings>
 UIKRigPBIKSolver = {}
 
+---@return UIKRigPBIKSolver
+function UIKRigPBIKSolver:get() end
+
 
 
 ---@class UIKRigProcessor : UObject
 ---@field Solvers TArray<UIKRigSolver>
 UIKRigProcessor = {}
 
+---@return UIKRigProcessor
+function UIKRigProcessor:get() end
+
 
 
 ---@class UIKRigSolver : UObject
 ---@field bIsEnabled boolean
 UIKRigSolver = {}
+
+---@return UIKRigSolver
+function UIKRigSolver:get() end
 
 
 
@@ -379,6 +472,9 @@ UIKRigSolver = {}
 ---@field Effectors TArray<UIKRig_BodyMoverEffector>
 UIKRig_BodyMover = {}
 
+---@return UIKRig_BodyMover
+function UIKRig_BodyMover:get() end
+
 
 
 ---@class UIKRig_BodyMoverEffector : UObject
@@ -386,6 +482,9 @@ UIKRig_BodyMover = {}
 ---@field BoneName FName
 ---@field InfluenceMultiplier float
 UIKRig_BodyMoverEffector = {}
+
+---@return UIKRig_BodyMoverEffector
+function UIKRig_BodyMoverEffector:get() end
 
 
 
@@ -398,12 +497,18 @@ UIKRig_BodyMoverEffector = {}
 ---@field IndexInSolver int32
 UIKRig_FBIKEffector = {}
 
+---@return UIKRig_FBIKEffector
+function UIKRig_FBIKEffector:get() end
+
 
 
 ---@class UIKRig_LimbEffector : UObject
 ---@field GoalName FName
 ---@field BoneName FName
 UIKRig_LimbEffector = {}
+
+---@return UIKRig_LimbEffector
+function UIKRig_LimbEffector:get() end
 
 
 
@@ -421,6 +526,9 @@ UIKRig_LimbEffector = {}
 ---@field EndBoneForwardAxis EAxis::Type
 ---@field Effector UIKRig_LimbEffector
 UIKRig_LimbSolver = {}
+
+---@return UIKRig_LimbSolver
+function UIKRig_LimbSolver:get() end
 
 
 
@@ -441,6 +549,9 @@ UIKRig_LimbSolver = {}
 ---@field PreferredAngles FVector
 UIKRig_PBIKBoneSettings = {}
 
+---@return UIKRig_PBIKBoneSettings
+function UIKRig_PBIKBoneSettings:get() end
+
 
 
 ---@class UIKRig_PoleSolver : UIKRigSolver
@@ -448,6 +559,9 @@ UIKRig_PBIKBoneSettings = {}
 ---@field EndName FName
 ---@field Effector UIKRig_PoleSolverEffector
 UIKRig_PoleSolver = {}
+
+---@return UIKRig_PoleSolver
+function UIKRig_PoleSolver:get() end
 
 
 
@@ -457,6 +571,9 @@ UIKRig_PoleSolver = {}
 ---@field Alpha float
 UIKRig_PoleSolverEffector = {}
 
+---@return UIKRig_PoleSolverEffector
+function UIKRig_PoleSolverEffector:get() end
+
 
 
 ---@class UIKRig_SetTransform : UIKRigSolver
@@ -465,6 +582,9 @@ UIKRig_PoleSolverEffector = {}
 ---@field Effector UIKRig_SetTransformEffector
 UIKRig_SetTransform = {}
 
+---@return UIKRig_SetTransform
+function UIKRig_SetTransform:get() end
+
 
 
 ---@class UIKRig_SetTransformEffector : UObject
@@ -472,6 +592,9 @@ UIKRig_SetTransform = {}
 ---@field bEnableRotation boolean
 ---@field Alpha float
 UIKRig_SetTransformEffector = {}
+
+---@return UIKRig_SetTransformEffector
+function UIKRig_SetTransformEffector:get() end
 
 
 
@@ -498,6 +621,9 @@ UIKRig_SetTransformEffector = {}
 ---@field UnplantCriticalDamping float
 URetargetChainSettings = {}
 
+---@return URetargetChainSettings
+function URetargetChainSettings:get() end
+
 
 
 ---@class URetargetRootSettings : UObject
@@ -509,6 +635,9 @@ URetargetChainSettings = {}
 ---@field StaticOffset FVector
 ---@field StaticRotationOffset FRotator
 URetargetRootSettings = {}
+
+---@return URetargetRootSettings
+function URetargetRootSettings:get() end
 
 
 

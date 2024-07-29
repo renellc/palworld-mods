@@ -5,6 +5,9 @@
 ---@field Niagara UNiagaraComponent
 UBP_VisualEffect_Status_Darkness_C = {}
 
+---@return UBP_VisualEffect_Status_Darkness_C
+function UBP_VisualEffect_Status_Darkness_C:get() end
+
 function UBP_VisualEffect_Status_Darkness_C:OnBeginVisualEffect() end
 function UBP_VisualEffect_Status_Darkness_C:OnEndVisualEffect() end
 ---@param DeltaTime float

@@ -24,6 +24,9 @@
 ---@field bShowInviteCode boolean
 UWBP_Title_WorldSelect_OverlayWindow_InputCode_C = {}
 
+---@return UWBP_Title_WorldSelect_OverlayWindow_InputCode_C
+function UWBP_Title_WorldSelect_OverlayWindow_InputCode_C:get() end
+
 function UWBP_Title_WorldSelect_OverlayWindow_InputCode_C:ShowHideInputText() end
 ---@param Navigation EUINavigation
 ---@return UWidget

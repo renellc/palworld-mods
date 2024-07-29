@@ -21,5 +21,8 @@
 ---@field WBP_BossBattle_CutTri_2 UWBP_BossBattle_CutTri_C
 UWBP_BossBattle_BossCutBase05_C = {}
 
+---@return UWBP_BossBattle_BossCutBase05_C
+function UWBP_BossBattle_BossCutBase05_C:get() end
+
 
 

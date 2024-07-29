@@ -8,6 +8,9 @@
 ---@field BindParameter TSoftObjectPtr<UPalIndividualCharacterParameter>
 UWBP_PalCharacterIconBase_C = {}
 
+---@return UWBP_PalCharacterIconBase_C
+function UWBP_PalCharacterIconBase_C:get() end
+
 ---@param NewSkinName FName
 function UWBP_PalCharacterIconBase_C:OnUpdateSkinName(NewSkinName) end
 function UWBP_PalCharacterIconBase_C:UnbindEvent() end

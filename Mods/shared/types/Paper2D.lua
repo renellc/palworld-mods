@@ -4,11 +4,17 @@
 ---@field Sprite UPaperFlipbookComponent
 APaperCharacter = {}
 
+---@return APaperCharacter
+function APaperCharacter:get() end
+
 
 
 ---@class APaperFlipbookActor : AActor
 ---@field RenderComponent UPaperFlipbookComponent
 APaperFlipbookActor = {}
+
+---@return APaperFlipbookActor
+function APaperFlipbookActor:get() end
 
 
 
@@ -16,11 +22,17 @@ APaperFlipbookActor = {}
 ---@field RenderComponent UPaperGroupedSpriteComponent
 APaperGroupedSpriteActor = {}
 
+---@return APaperGroupedSpriteActor
+function APaperGroupedSpriteActor:get() end
+
 
 
 ---@class APaperSpriteActor : AActor
 ---@field RenderComponent UPaperSpriteComponent
 APaperSpriteActor = {}
+
+---@return APaperSpriteActor
+function APaperSpriteActor:get() end
 
 
 
@@ -30,11 +42,17 @@ APaperSpriteActor = {}
 ---@field RenderComponent UPaperTerrainComponent
 APaperTerrainActor = {}
 
+---@return APaperTerrainActor
+function APaperTerrainActor:get() end
+
 
 
 ---@class APaperTileMapActor : AActor
 ---@field RenderComponent UPaperTileMapComponent
 APaperTileMapActor = {}
+
+---@return APaperTileMapActor
+function APaperTileMapActor:get() end
 
 
 
@@ -45,12 +63,18 @@ APaperTileMapActor = {}
 ---@field Bottom int32
 FIntMargin = {}
 
+---@return FIntMargin
+function FIntMargin:get() end
+
 
 
 ---@class FPaperFlipbookKeyFrame
 ---@field Sprite UPaperSprite
 ---@field FrameRun int32
 FPaperFlipbookKeyFrame = {}
+
+---@return FPaperFlipbookKeyFrame
+function FPaperFlipbookKeyFrame:get() end
 
 
 
@@ -63,12 +87,18 @@ FPaperFlipbookKeyFrame = {}
 ---@field Height int32
 FPaperSpriteAtlasSlot = {}
 
+---@return FPaperSpriteAtlasSlot
+function FPaperSpriteAtlasSlot:get() end
+
 
 
 ---@class FPaperSpriteSocket
 ---@field LocalTransform FTransform
 ---@field SocketName FName
 FPaperSpriteSocket = {}
+
+---@return FPaperSpriteSocket
+function FPaperSpriteSocket:get() end
 
 
 
@@ -83,12 +113,18 @@ FPaperSpriteSocket = {}
 ---@field DrawOrder int32
 FPaperTerrainMaterialRule = {}
 
+---@return FPaperTerrainMaterialRule
+function FPaperTerrainMaterialRule:get() end
+
 
 
 ---@class FPaperTileInfo
 ---@field TileSet UPaperTileSet
 ---@field PackedTileIndex int32
 FPaperTileInfo = {}
+
+---@return FPaperTileInfo
+function FPaperTileInfo:get() end
 
 
 
@@ -98,6 +134,9 @@ FPaperTileInfo = {}
 ---@field TerrainMembership uint8
 FPaperTileMetadata = {}
 
+---@return FPaperTileMetadata
+function FPaperTileMetadata:get() end
+
 
 
 ---@class FPaperTileSetTerrain
@@ -105,10 +144,16 @@ FPaperTileMetadata = {}
 ---@field CenterTileIndex int32
 FPaperTileSetTerrain = {}
 
+---@return FPaperTileSetTerrain
+function FPaperTileSetTerrain:get() end
+
 
 
 ---@class FSpriteAssetInitParameters
 FSpriteAssetInitParameters = {}
+
+---@return FSpriteAssetInitParameters
+function FSpriteAssetInitParameters:get() end
 
 
 ---@class FSpriteDrawCallRecord
@@ -116,6 +161,9 @@ FSpriteAssetInitParameters = {}
 ---@field BaseTexture UTexture
 ---@field Color FColor
 FSpriteDrawCallRecord = {}
+
+---@return FSpriteDrawCallRecord
+function FSpriteDrawCallRecord:get() end
 
 
 
@@ -130,6 +178,9 @@ FSpriteDrawCallRecord = {}
 ---@field SimplifyEpsilon float
 FSpriteGeometryCollection = {}
 
+---@return FSpriteGeometryCollection
+function FSpriteGeometryCollection:get() end
+
 
 
 ---@class FSpriteGeometryShape
@@ -141,6 +192,9 @@ FSpriteGeometryCollection = {}
 ---@field bNegativeWinding boolean
 FSpriteGeometryShape = {}
 
+---@return FSpriteGeometryShape
+function FSpriteGeometryShape:get() end
+
 
 
 ---@class FSpriteInstanceData
@@ -150,6 +204,9 @@ FSpriteGeometryShape = {}
 ---@field MaterialIndex int32
 FSpriteInstanceData = {}
 
+---@return FSpriteInstanceData
+function FSpriteInstanceData:get() end
+
 
 
 ---@class UMaterialExpressionSpriteTextureSampler : UMaterialExpressionTextureSampleParameter2D
@@ -157,6 +214,9 @@ FSpriteInstanceData = {}
 ---@field AdditionalSlotIndex int32
 ---@field SlotDisplayName FText
 UMaterialExpressionSpriteTextureSampler = {}
+
+---@return UMaterialExpressionSpriteTextureSampler
+function UMaterialExpressionSpriteTextureSampler:get() end
 
 
 
@@ -166,6 +226,9 @@ UMaterialExpressionSpriteTextureSampler = {}
 ---@field DefaultMaterial UMaterialInterface
 ---@field CollisionSource EFlipbookCollisionMode::Type
 UPaperFlipbook = {}
+
+---@return UPaperFlipbook
+function UPaperFlipbook:get() end
 
 ---@param Index int32
 ---@return boolean
@@ -202,6 +265,9 @@ function UPaperFlipbook:GetKeyFrameIndexAtTime(Time, bClampToEnds) end
 ---@field CachedBodySetup UBodySetup
 ---@field OnFinishedPlaying FPaperFlipbookComponentOnFinishedPlaying
 UPaperFlipbookComponent = {}
+
+---@return UPaperFlipbookComponent
+function UPaperFlipbookComponent:get() end
 
 function UPaperFlipbookComponent:Stop() end
 ---@param NewColor FLinearColor
@@ -256,6 +322,9 @@ function UPaperFlipbookComponent:GetFlipbook() end
 ---@field PerInstanceSpriteData TArray<FSpriteInstanceData>
 UPaperGroupedSpriteComponent = {}
 
+---@return UPaperGroupedSpriteComponent
+function UPaperGroupedSpriteComponent:get() end
+
 ---@param InstanceIndex int32
 ---@param NewInstanceTransform FTransform
 ---@param bWorldSpace boolean
@@ -295,6 +364,9 @@ function UPaperGroupedSpriteComponent:AddInstance(Transform, Sprite, bWorldSpace
 ---@field bResizeSpriteDataToMatchTextures boolean
 UPaperRuntimeSettings = {}
 
+---@return UPaperRuntimeSettings
+function UPaperRuntimeSettings:get() end
+
 
 
 ---@class UPaperSprite : UObject
@@ -312,14 +384,23 @@ UPaperRuntimeSettings = {}
 ---@field BakedRenderData TArray<FVector4>
 UPaperSprite = {}
 
+---@return UPaperSprite
+function UPaperSprite:get() end
+
 
 
 ---@class UPaperSpriteAtlas : UObject
 UPaperSpriteAtlas = {}
 
+---@return UPaperSpriteAtlas
+function UPaperSpriteAtlas:get() end
+
 
 ---@class UPaperSpriteBlueprintLibrary : UBlueprintFunctionLibrary
 UPaperSpriteBlueprintLibrary = {}
+
+---@return UPaperSpriteBlueprintLibrary
+function UPaperSpriteBlueprintLibrary:get() end
 
 ---@param Sprite UPaperSprite
 ---@param Width int32
@@ -333,6 +414,9 @@ function UPaperSpriteBlueprintLibrary:MakeBrushFromSprite(Sprite, Width, Height)
 ---@field MaterialOverride UMaterialInterface
 ---@field SpriteColor FLinearColor
 UPaperSpriteComponent = {}
+
+---@return UPaperSpriteComponent
+function UPaperSpriteComponent:get() end
 
 ---@param NewColor FLinearColor
 function UPaperSpriteComponent:SetSpriteColor(NewColor) end
@@ -357,6 +441,9 @@ function UPaperSpriteComponent:GetSprite() end
 ---@field CachedBodySetup UBodySetup
 UPaperTerrainComponent = {}
 
+---@return UPaperTerrainComponent
+function UPaperTerrainComponent:get() end
+
 ---@param NewColor FLinearColor
 function UPaperTerrainComponent:SetTerrainColor(NewColor) end
 
@@ -366,10 +453,16 @@ function UPaperTerrainComponent:SetTerrainColor(NewColor) end
 ---@field InteriorFill UPaperSprite
 UPaperTerrainMaterial = {}
 
+---@return UPaperTerrainMaterial
+function UPaperTerrainMaterial:get() end
+
 
 
 ---@class UPaperTerrainSplineComponent : USplineComponent
 UPaperTerrainSplineComponent = {}
+
+---@return UPaperTerrainSplineComponent
+function UPaperTerrainSplineComponent:get() end
 
 
 ---@class UPaperTileLayer : UObject
@@ -389,6 +482,9 @@ UPaperTerrainSplineComponent = {}
 ---@field TileSet UPaperTileSet
 ---@field AllocatedGrid TArray<int32>
 UPaperTileLayer = {}
+
+---@return UPaperTileLayer
+function UPaperTileLayer:get() end
 
 
 
@@ -412,6 +508,9 @@ UPaperTileLayer = {}
 ---@field LayerNameIndex int32
 UPaperTileMap = {}
 
+---@return UPaperTileMap
+function UPaperTileMap:get() end
+
 
 
 ---@class UPaperTileMapComponent : UMeshComponent
@@ -427,6 +526,9 @@ UPaperTileMap = {}
 ---@field bUseSingleLayer boolean
 ---@field TileMap UPaperTileMap
 UPaperTileMapComponent = {}
+
+---@return UPaperTileMapComponent
+function UPaperTileMapComponent:get() end
 
 ---@param NewColor FLinearColor
 function UPaperTileMapComponent:SetTileMapColor(NewColor) end
@@ -521,10 +623,16 @@ function UPaperTileMapComponent:AddNewLayer() end
 ---@field Spacing int32
 UPaperTileSet = {}
 
+---@return UPaperTileSet
+function UPaperTileSet:get() end
+
 
 
 ---@class UTileMapBlueprintLibrary : UBlueprintFunctionLibrary
 UTileMapBlueprintLibrary = {}
+
+---@return UTileMapBlueprintLibrary
+function UTileMapBlueprintLibrary:get() end
 
 ---@param TileIndex int32
 ---@param TileSet UPaperTileSet

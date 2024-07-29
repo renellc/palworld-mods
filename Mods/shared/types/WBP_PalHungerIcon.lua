@@ -20,6 +20,9 @@
 ---@field LowHungerMsgID FDataTableRowHandle
 UWBP_PalHungerIcon_C = {}
 
+---@return UWBP_PalHungerIcon_C
+function UWBP_PalHungerIcon_C:get() end
+
 ---@param IsExistFood boolean
 function UWBP_PalHungerIcon_C:SetExistFoodFlag(IsExistFood) end
 function UWBP_PalHungerIcon_C:Finished_52B2C4554CC22DF82B22ECB5253B6180() end

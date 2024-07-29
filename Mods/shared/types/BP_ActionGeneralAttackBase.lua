@@ -37,6 +37,9 @@
 ---@field OnProcess FBP_ActionGeneralAttackBase_COnProcess
 UBP_ActionGeneralAttackBase_C = {}
 
+---@return UBP_ActionGeneralAttackBase_C
+function UBP_ActionGeneralAttackBase_C:get() end
+
 ---@param ownerActor AActor
 UBP_ActionGeneralAttackBase_C['Get Attack Owner'] = function(ownerActor) end
 ---@param IsSlow boolean

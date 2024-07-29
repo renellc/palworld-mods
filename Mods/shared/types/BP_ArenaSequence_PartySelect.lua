@@ -11,6 +11,9 @@
 ---@field Breaked boolean
 UBP_ArenaSequence_PartySelect_C = {}
 
+---@return UBP_ArenaSequence_PartySelect_C
+function UBP_ArenaSequence_PartySelect_C:get() end
+
 function UBP_ArenaSequence_PartySelect_C:EndProcess() end
 function UBP_ArenaSequence_PartySelect_C:PrintPartySelectLog() end
 function UBP_ArenaSequence_PartySelect_C:SendParty() end

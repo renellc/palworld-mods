@@ -6,6 +6,9 @@
 ---@field Scale double
 UBP_VisualEffect_RarePal_C = {}
 
+---@return UBP_VisualEffect_RarePal_C
+function UBP_VisualEffect_RarePal_C:get() end
+
 ---@return boolean
 function UBP_VisualEffect_RarePal_C:IsEndVisualEffect() end
 function UBP_VisualEffect_RarePal_C:OnBeginVisualEffect() end

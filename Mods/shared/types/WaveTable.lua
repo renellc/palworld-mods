@@ -4,6 +4,9 @@
 ---@field Transform FWaveTableTransform
 FWaveTableBankEntry = {}
 
+---@return FWaveTableBankEntry
+function FWaveTableBankEntry:get() end
+
 
 
 ---@class FWaveTableSettings
@@ -19,6 +22,9 @@ FWaveTableBankEntry = {}
 ---@field SourcePCMData TArray<float>
 FWaveTableSettings = {}
 
+---@return FWaveTableSettings
+function FWaveTableSettings:get() end
+
 
 
 ---@class FWaveTableTransform
@@ -29,6 +35,9 @@ FWaveTableSettings = {}
 ---@field WaveTable TArray<float>
 FWaveTableTransform = {}
 
+---@return FWaveTableTransform
+function FWaveTableTransform:get() end
+
 
 
 ---@class UWaveTableBank : UObject
@@ -36,6 +45,9 @@ FWaveTableTransform = {}
 ---@field bBipolar boolean
 ---@field Entries TArray<FWaveTableBankEntry>
 UWaveTableBank = {}
+
+---@return UWaveTableBank
+function UWaveTableBank:get() end
 
 
 

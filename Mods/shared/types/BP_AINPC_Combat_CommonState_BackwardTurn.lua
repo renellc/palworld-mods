@@ -6,6 +6,9 @@
 ---@field flagName FName
 UBP_AINPC_Combat_CommonState_BackwardTurn_C = {}
 
+---@return UBP_AINPC_Combat_CommonState_BackwardTurn_C
+function UBP_AINPC_Combat_CommonState_BackwardTurn_C:get() end
+
 ---@param DeltaTime float
 function UBP_AINPC_Combat_CommonState_BackwardTurn_C:StateTick(DeltaTime) end
 function UBP_AINPC_Combat_CommonState_BackwardTurn_C:StateEnter() end

@@ -5,5 +5,8 @@
 ---@field DefaultSceneRoot USceneComponent
 ABP_MiningPickel_C = {}
 
+---@return ABP_MiningPickel_C
+function ABP_MiningPickel_C:get() end
+
 
 

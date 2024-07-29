@@ -6,5 +6,8 @@
 ---@field Rate_7_919E446648F253D9B9351FAD51539CB8 int32
 FFPassiveSkillCollectItemLotteryData = {}
 
+---@return FFPassiveSkillCollectItemLotteryData
+function FFPassiveSkillCollectItemLotteryData:get() end
+
 
 

@@ -5,6 +5,9 @@
 ---@field High float
 FChaosClothWeightedValue = {}
 
+---@return FChaosClothWeightedValue
+function FChaosClothWeightedValue:get() end
+
 
 
 ---@class UChaosClothConfig : UClothConfigCommon
@@ -51,6 +54,9 @@ FChaosClothWeightedValue = {}
 ---@field bUseContinuousCollisionDetection boolean
 UChaosClothConfig = {}
 
+---@return UChaosClothConfig
+function UChaosClothConfig:get() end
+
 
 
 ---@class UChaosClothSharedSimConfig : UClothSharedConfigCommon
@@ -61,10 +67,16 @@ UChaosClothConfig = {}
 ---@field bUseXPBDConstraints boolean
 UChaosClothSharedSimConfig = {}
 
+---@return UChaosClothSharedSimConfig
+function UChaosClothSharedSimConfig:get() end
+
 
 
 ---@class UChaosClothingInteractor : UClothingInteractor
 UChaosClothingInteractor = {}
+
+---@return UChaosClothingInteractor
+function UChaosClothingInteractor:get() end
 
 ---@param Drag FVector2D
 ---@param Lift FVector2D
@@ -122,8 +134,14 @@ function UChaosClothingInteractor:ResetAndTeleport(bReset, bTeleport) end
 ---@class UChaosClothingSimulationFactory : UClothingSimulationFactory
 UChaosClothingSimulationFactory = {}
 
+---@return UChaosClothingSimulationFactory
+function UChaosClothingSimulationFactory:get() end
+
 
 ---@class UChaosClothingSimulationInteractor : UClothingSimulationInteractor
 UChaosClothingSimulationInteractor = {}
+
+---@return UChaosClothingSimulationInteractor
+function UChaosClothingSimulationInteractor:get() end
 
 

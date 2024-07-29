@@ -36,6 +36,9 @@
 ---@field ['Filter Type'] EPalKeyConfigAxisFilterType
 UWBP_OptionSettings_ListContent_C = {}
 
+---@return UWBP_OptionSettings_ListContent_C
+function UWBP_OptionSettings_ListContent_C:get() end
+
 ---@param InputType ECommonInputType
 function UWBP_OptionSettings_ListContent_C:InputMethodChanged(InputType) end
 function UWBP_OptionSettings_ListContent_C:Construct() end

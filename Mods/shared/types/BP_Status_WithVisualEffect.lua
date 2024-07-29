@@ -10,6 +10,9 @@
 ---@field IsHideEffect boolean
 UBP_Status_WithVisualEffect_C = {}
 
+---@return UBP_Status_WithVisualEffect_C
+function UBP_Status_WithVisualEffect_C:get() end
+
 function UBP_Status_WithVisualEffect_C:HideReAddEffectWhenInActiveOtomo() end
 ---@param AddEffect EPalAdditionalEffectType
 ---@param Ignore boolean

@@ -8,6 +8,9 @@
 ---@field Rate double
 UBP_Status_Burn_C = {}
 
+---@return UBP_Status_Burn_C
+function UBP_Status_Burn_C:get() end
+
 function UBP_Status_Burn_C:OnBeginStatus() end
 function UBP_Status_Burn_C:OnEndStatus() end
 UBP_Status_Burn_C['カスタムイベント_SlipDamage'] = function() end

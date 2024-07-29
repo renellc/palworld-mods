@@ -10,6 +10,9 @@
 ---@field OnClickedBackup FWBP_Title_BackupSelect_COnClickedBackup
 UWBP_Title_BackupSelect_C = {}
 
+---@return UWBP_Title_BackupSelect_C
+function UWBP_Title_BackupSelect_C:get() end
+
 ---@param Navigation EUINavigation
 ---@return UWidget
 function UWBP_Title_BackupSelect_C:CustomNavi_ToListTop(Navigation) end

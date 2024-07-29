@@ -15,6 +15,9 @@
 ---@field OnClickedRightButton FWBP_CommonPopupWindow_COnClickedRightButton
 UWBP_CommonPopupWindow_C = {}
 
+---@return UWBP_CommonPopupWindow_C
+function UWBP_CommonPopupWindow_C:get() end
+
 ---@param IsOneButton boolean
 function UWBP_CommonPopupWindow_C:SetOneButton(IsOneButton) end
 ---@param Button UCommonButtonBase

@@ -5,6 +5,9 @@
 ---@field InterfaceObject UObject
 FNamedInterface = {}
 
+---@return FNamedInterface
+function FNamedInterface:get() end
+
 
 
 ---@class FNamedInterfaceDef
@@ -12,10 +15,16 @@ FNamedInterface = {}
 ---@field InterfaceClassName FString
 FNamedInterfaceDef = {}
 
+---@return FNamedInterfaceDef
+function FNamedInterfaceDef:get() end
+
 
 
 ---@class ITurnBasedMatchInterface : IInterface
 ITurnBasedMatchInterface = {}
+
+---@return ITurnBasedMatchInterface
+function ITurnBasedMatchInterface:get() end
 
 ---@param Match FString
 ---@param bDidBecomeActive boolean
@@ -28,6 +37,9 @@ function ITurnBasedMatchInterface:OnMatchEnded(Match) end
 ---@field NamedInterfaces TArray<FNamedInterface>
 ---@field NamedInterfaceDefs TArray<FNamedInterfaceDef>
 UNamedInterfaces = {}
+
+---@return UNamedInterfaces
+function UNamedInterfaces:get() end
 
 
 

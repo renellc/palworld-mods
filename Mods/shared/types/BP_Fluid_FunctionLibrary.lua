@@ -3,6 +3,9 @@
 ---@class UBP_Fluid_FunctionLibrary_C : UBlueprintFunctionLibrary
 UBP_Fluid_FunctionLibrary_C = {}
 
+---@return UBP_Fluid_FunctionLibrary_C
+function UBP_Fluid_FunctionLibrary_C:get() end
+
 ---@param Fluid_Controller ABP_FluidController_C
 ---@param Draw_Material UMaterialInstanceDynamic
 ---@param Draw_Location FVector

@@ -5,6 +5,9 @@
 ---@field Timer FTimerHandle
 UBP_Status_Electrical_C = {}
 
+---@return UBP_Status_Electrical_C
+function UBP_Status_Electrical_C:get() end
+
 function UBP_Status_Electrical_C:PlayElecShockAction() end
 function UBP_Status_Electrical_C:OnBeginStatus() end
 function UBP_Status_Electrical_C:OnBeginSomeStatus() end

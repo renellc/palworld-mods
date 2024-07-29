@@ -6,10 +6,16 @@
 ---@field bone FBoneReference
 FAngularRangeLimit = {}
 
+---@return FAngularRangeLimit
+function FAngularRangeLimit:get() end
+
 
 
 ---@class FAnimLegIKData
 FAnimLegIKData = {}
+
+---@return FAnimLegIKData
+function FAnimLegIKData:get() end
 
 
 ---@class FAnimLegIKDefinition
@@ -23,6 +29,9 @@ FAnimLegIKData = {}
 ---@field bEnableKneeTwistCorrection boolean
 FAnimLegIKDefinition = {}
 
+---@return FAnimLegIKDefinition
+function FAnimLegIKDefinition:get() end
+
 
 
 ---@class FAnimNode_AimOffsetLookAt : FAnimNode_BlendSpacePlayer
@@ -34,6 +43,9 @@ FAnimLegIKDefinition = {}
 ---@field SocketAxis FVector
 ---@field Alpha float
 FAnimNode_AimOffsetLookAt = {}
+
+---@return FAnimNode_AimOffsetLookAt
+function FAnimNode_AimOffsetLookAt:get() end
 
 
 
@@ -75,6 +87,9 @@ FAnimNode_AimOffsetLookAt = {}
 ---@field RetargetingSettings FRotationRetargetingInfo
 FAnimNode_AnimDynamics = {}
 
+---@return FAnimNode_AnimDynamics
+function FAnimNode_AnimDynamics:get() end
+
 
 
 ---@class FAnimNode_ApplyAdditive : FAnimNode_Base
@@ -90,12 +105,18 @@ FAnimNode_AnimDynamics = {}
 ---@field bAlphaBoolEnabled boolean
 FAnimNode_ApplyAdditive = {}
 
+---@return FAnimNode_ApplyAdditive
+function FAnimNode_ApplyAdditive:get() end
+
 
 
 ---@class FAnimNode_ApplyLimits : FAnimNode_SkeletalControlBase
 ---@field AngularRangeLimits TArray<FAngularRangeLimit>
 ---@field AngularOffsets TArray<FVector>
 FAnimNode_ApplyLimits = {}
+
+---@return FAnimNode_ApplyLimits
+function FAnimNode_ApplyLimits:get() end
 
 
 
@@ -108,24 +129,39 @@ FAnimNode_ApplyLimits = {}
 ---@field TransformsSpace EBoneControlSpace
 FAnimNode_BlendBoneByChannel = {}
 
+---@return FAnimNode_BlendBoneByChannel
+function FAnimNode_BlendBoneByChannel:get() end
+
 
 
 ---@class FAnimNode_BlendListBase : FAnimNode_Base
 ---@field BlendPose TArray<FPoseLink>
 FAnimNode_BlendListBase = {}
 
+---@return FAnimNode_BlendListBase
+function FAnimNode_BlendListBase:get() end
+
 
 
 ---@class FAnimNode_BlendListByBool : FAnimNode_BlendListBase
 FAnimNode_BlendListByBool = {}
 
+---@return FAnimNode_BlendListByBool
+function FAnimNode_BlendListByBool:get() end
+
 
 ---@class FAnimNode_BlendListByEnum : FAnimNode_BlendListBase
 FAnimNode_BlendListByEnum = {}
 
+---@return FAnimNode_BlendListByEnum
+function FAnimNode_BlendListByEnum:get() end
+
 
 ---@class FAnimNode_BlendListByInt : FAnimNode_BlendListBase
 FAnimNode_BlendListByInt = {}
+
+---@return FAnimNode_BlendListByInt
+function FAnimNode_BlendListByInt:get() end
 
 
 ---@class FAnimNode_BlendSpaceEvaluator : FAnimNode_BlendSpacePlayer
@@ -133,10 +169,16 @@ FAnimNode_BlendListByInt = {}
 ---@field bTeleportToNormalizedTime boolean
 FAnimNode_BlendSpaceEvaluator = {}
 
+---@return FAnimNode_BlendSpaceEvaluator
+function FAnimNode_BlendSpaceEvaluator:get() end
+
 
 
 ---@class FAnimNode_BlendSpaceGraph : FAnimNode_BlendSpaceGraphBase
 FAnimNode_BlendSpaceGraph = {}
+
+---@return FAnimNode_BlendSpaceGraph
+function FAnimNode_BlendSpaceGraph:get() end
 
 
 ---@class FAnimNode_BlendSpaceGraphBase : FAnimNode_Base
@@ -148,17 +190,26 @@ FAnimNode_BlendSpaceGraph = {}
 ---@field SamplePoseLinks TArray<FPoseLink>
 FAnimNode_BlendSpaceGraphBase = {}
 
+---@return FAnimNode_BlendSpaceGraphBase
+function FAnimNode_BlendSpaceGraphBase:get() end
+
 
 
 ---@class FAnimNode_BlendSpacePlayer : FAnimNode_BlendSpacePlayerBase
 ---@field BlendSpace UBlendSpace
 FAnimNode_BlendSpacePlayer = {}
 
+---@return FAnimNode_BlendSpacePlayer
+function FAnimNode_BlendSpacePlayer:get() end
+
 
 
 ---@class FAnimNode_BlendSpacePlayerBase : FAnimNode_AssetPlayerBase
 ---@field PreviousBlendSpace UBlendSpace
 FAnimNode_BlendSpacePlayerBase = {}
+
+---@return FAnimNode_BlendSpacePlayerBase
+function FAnimNode_BlendSpacePlayerBase:get() end
 
 
 
@@ -176,10 +227,16 @@ FAnimNode_BlendSpacePlayerBase = {}
 ---@field BlendSpace UBlendSpace
 FAnimNode_BlendSpacePlayer_Standalone = {}
 
+---@return FAnimNode_BlendSpacePlayer_Standalone
+function FAnimNode_BlendSpacePlayer_Standalone:get() end
+
 
 
 ---@class FAnimNode_BlendSpaceSampleResult : FAnimNode_Root
 FAnimNode_BlendSpaceSampleResult = {}
+
+---@return FAnimNode_BlendSpaceSampleResult
+function FAnimNode_BlendSpaceSampleResult:get() end
 
 
 ---@class FAnimNode_BoneDrivenController : FAnimNode_SkeletalControlBase
@@ -207,6 +264,9 @@ FAnimNode_BlendSpaceSampleResult = {}
 ---@field bAffectTargetScaleZ boolean
 FAnimNode_BoneDrivenController = {}
 
+---@return FAnimNode_BoneDrivenController
+function FAnimNode_BoneDrivenController:get() end
+
 
 
 ---@class FAnimNode_CCDIK : FAnimNode_SkeletalControlBase
@@ -222,12 +282,18 @@ FAnimNode_BoneDrivenController = {}
 ---@field RotationLimitPerJoints TArray<float>
 FAnimNode_CCDIK = {}
 
+---@return FAnimNode_CCDIK
+function FAnimNode_CCDIK:get() end
+
 
 
 ---@class FAnimNode_CallFunction : FAnimNode_Base
 ---@field Source FPoseLink
 ---@field CallSite EAnimFunctionCallSite
 FAnimNode_CallFunction = {}
+
+---@return FAnimNode_CallFunction
+function FAnimNode_CallFunction:get() end
 
 
 
@@ -236,6 +302,9 @@ FAnimNode_CallFunction = {}
 ---@field ConstraintSetup TArray<FConstraint>
 ---@field ConstraintWeights TArray<float>
 FAnimNode_Constraint = {}
+
+---@return FAnimNode_Constraint
+function FAnimNode_Constraint:get() end
 
 
 
@@ -247,6 +316,9 @@ FAnimNode_Constraint = {}
 ---@field bCopyScale boolean
 ---@field ControlSpace EBoneControlSpace
 FAnimNode_CopyBone = {}
+
+---@return FAnimNode_CopyBone
+function FAnimNode_CopyBone:get() end
 
 
 
@@ -262,6 +334,9 @@ FAnimNode_CopyBone = {}
 ---@field ScaleMultiplier float
 FAnimNode_CopyBoneDelta = {}
 
+---@return FAnimNode_CopyBoneDelta
+function FAnimNode_CopyBoneDelta:get() end
+
 
 
 ---@class FAnimNode_CopyPoseFromMesh : FAnimNode_Base
@@ -273,6 +348,9 @@ FAnimNode_CopyBoneDelta = {}
 ---@field RootBoneToCopy FName
 FAnimNode_CopyPoseFromMesh = {}
 
+---@return FAnimNode_CopyPoseFromMesh
+function FAnimNode_CopyPoseFromMesh:get() end
+
 
 
 ---@class FAnimNode_CurveSource : FAnimNode_Base
@@ -281,6 +359,9 @@ FAnimNode_CopyPoseFromMesh = {}
 ---@field Alpha float
 ---@field CurveSource TScriptInterface<ICurveSourceInterface>
 FAnimNode_CurveSource = {}
+
+---@return FAnimNode_CurveSource
+function FAnimNode_CurveSource:get() end
 
 
 
@@ -295,6 +376,9 @@ FAnimNode_CurveSource = {}
 ---@field EffectorRotationSource EBoneRotationSource
 FAnimNode_Fabrik = {}
 
+---@return FAnimNode_Fabrik
+function FAnimNode_Fabrik:get() end
+
 
 
 ---@class FAnimNode_HandIKRetargeting : FAnimNode_SkeletalControlBase
@@ -305,6 +389,9 @@ FAnimNode_Fabrik = {}
 ---@field IKBonesToMove TArray<FBoneReference>
 ---@field HandFKWeight float
 FAnimNode_HandIKRetargeting = {}
+
+---@return FAnimNode_HandIKRetargeting
+function FAnimNode_HandIKRetargeting:get() end
 
 
 
@@ -325,6 +412,9 @@ FAnimNode_HandIKRetargeting = {}
 ---@field VirtualBoneGuid FGuid
 FAnimNode_LayeredBoneBlend = {}
 
+---@return FAnimNode_LayeredBoneBlend
+function FAnimNode_LayeredBoneBlend:get() end
+
 
 
 ---@class FAnimNode_LegIK : FAnimNode_SkeletalControlBase
@@ -332,6 +422,9 @@ FAnimNode_LayeredBoneBlend = {}
 ---@field MaxIterations int32
 ---@field LegsDefinition TArray<FAnimLegIKDefinition>
 FAnimNode_LegIK = {}
+
+---@return FAnimNode_LegIK
+function FAnimNode_LegIK:get() end
 
 
 
@@ -348,6 +441,9 @@ FAnimNode_LegIK = {}
 ---@field InterpolationTriggerThreashold float
 FAnimNode_LookAt = {}
 
+---@return FAnimNode_LookAt
+function FAnimNode_LookAt:get() end
+
 
 
 ---@class FAnimNode_MakeDynamicAdditive : FAnimNode_Base
@@ -356,19 +452,31 @@ FAnimNode_LookAt = {}
 ---@field bMeshSpaceAdditive boolean
 FAnimNode_MakeDynamicAdditive = {}
 
+---@return FAnimNode_MakeDynamicAdditive
+function FAnimNode_MakeDynamicAdditive:get() end
+
 
 
 ---@class FAnimNode_MeshSpaceRefPose : FAnimNode_Base
 FAnimNode_MeshSpaceRefPose = {}
 
+---@return FAnimNode_MeshSpaceRefPose
+function FAnimNode_MeshSpaceRefPose:get() end
+
 
 ---@class FAnimNode_Mirror : FAnimNode_MirrorBase
 FAnimNode_Mirror = {}
+
+---@return FAnimNode_Mirror
+function FAnimNode_Mirror:get() end
 
 
 ---@class FAnimNode_MirrorBase : FAnimNode_Base
 ---@field Source FPoseLink
 FAnimNode_MirrorBase = {}
+
+---@return FAnimNode_MirrorBase
+function FAnimNode_MirrorBase:get() end
 
 
 
@@ -381,6 +489,9 @@ FAnimNode_MirrorBase = {}
 ---@field bCurveMirroring boolean
 ---@field bAttributeMirroring boolean
 FAnimNode_Mirror_Standalone = {}
+
+---@return FAnimNode_Mirror_Standalone
+function FAnimNode_Mirror_Standalone:get() end
 
 
 
@@ -397,6 +508,9 @@ FAnimNode_Mirror_Standalone = {}
 ---@field ScaleSpace EBoneControlSpace
 FAnimNode_ModifyBone = {}
 
+---@return FAnimNode_ModifyBone
+function FAnimNode_ModifyBone:get() end
+
 
 
 ---@class FAnimNode_ModifyCurve : FAnimNode_Base
@@ -408,6 +522,9 @@ FAnimNode_ModifyBone = {}
 ---@field ApplyMode EModifyCurveApplyMode
 FAnimNode_ModifyCurve = {}
 
+---@return FAnimNode_ModifyCurve
+function FAnimNode_ModifyCurve:get() end
+
 
 
 ---@class FAnimNode_MultiWayBlend : FAnimNode_Base
@@ -417,6 +534,9 @@ FAnimNode_ModifyCurve = {}
 ---@field bAdditiveNode boolean
 ---@field bNormalizeAlpha boolean
 FAnimNode_MultiWayBlend = {}
+
+---@return FAnimNode_MultiWayBlend
+function FAnimNode_MultiWayBlend:get() end
 
 
 
@@ -429,6 +549,9 @@ FAnimNode_MultiWayBlend = {}
 ---@field Scale FVector
 FAnimNode_ObserveBone = {}
 
+---@return FAnimNode_ObserveBone
+function FAnimNode_ObserveBone:get() end
+
 
 
 ---@class FAnimNode_PoseBlendNode : FAnimNode_PoseHandler
@@ -437,12 +560,18 @@ FAnimNode_ObserveBone = {}
 ---@field CustomCurve UCurveFloat
 FAnimNode_PoseBlendNode = {}
 
+---@return FAnimNode_PoseBlendNode
+function FAnimNode_PoseBlendNode:get() end
+
 
 
 ---@class FAnimNode_PoseByName : FAnimNode_PoseHandler
 ---@field PoseName FName
 ---@field PoseWeight float
 FAnimNode_PoseByName = {}
+
+---@return FAnimNode_PoseByName
+function FAnimNode_PoseByName:get() end
 
 
 
@@ -460,11 +589,17 @@ FAnimNode_PoseByName = {}
 ---@field LODThreshold int32
 FAnimNode_PoseDriver = {}
 
+---@return FAnimNode_PoseDriver
+function FAnimNode_PoseDriver:get() end
+
 
 
 ---@class FAnimNode_PoseHandler : FAnimNode_AssetPlayerBase
 ---@field PoseAsset UPoseAsset
 FAnimNode_PoseHandler = {}
+
+---@return FAnimNode_PoseHandler
+function FAnimNode_PoseHandler:get() end
 
 
 
@@ -474,6 +609,9 @@ FAnimNode_PoseHandler = {}
 ---@field Mode ESnapshotSourceMode
 FAnimNode_PoseSnapshot = {}
 
+---@return FAnimNode_PoseSnapshot
+function FAnimNode_PoseSnapshot:get() end
+
 
 
 ---@class FAnimNode_RandomPlayer : FAnimNode_AssetPlayerRelevancyBase
@@ -482,14 +620,23 @@ FAnimNode_PoseSnapshot = {}
 ---@field bShuffleMode boolean
 FAnimNode_RandomPlayer = {}
 
+---@return FAnimNode_RandomPlayer
+function FAnimNode_RandomPlayer:get() end
+
 
 
 ---@class FAnimNode_RefPose : FAnimNode_Base
 FAnimNode_RefPose = {}
 
+---@return FAnimNode_RefPose
+function FAnimNode_RefPose:get() end
+
 
 ---@class FAnimNode_ResetRoot : FAnimNode_SkeletalControlBase
 FAnimNode_ResetRoot = {}
+
+---@return FAnimNode_ResetRoot
+function FAnimNode_ResetRoot:get() end
 
 
 ---@class FAnimNode_RigidBody : FAnimNode_SkeletalControlBase
@@ -516,6 +663,9 @@ FAnimNode_ResetRoot = {}
 ---@field SimulationTiming ESimulationTiming
 FAnimNode_RigidBody = {}
 
+---@return FAnimNode_RigidBody
+function FAnimNode_RigidBody:get() end
+
 
 
 ---@class FAnimNode_RotateRootBone : FAnimNode_Base
@@ -527,6 +677,9 @@ FAnimNode_RigidBody = {}
 ---@field MeshToComponent FRotator
 FAnimNode_RotateRootBone = {}
 
+---@return FAnimNode_RotateRootBone
+function FAnimNode_RotateRootBone:get() end
+
 
 
 ---@class FAnimNode_RotationMultiplier : FAnimNode_SkeletalControlBase
@@ -536,6 +689,9 @@ FAnimNode_RotateRootBone = {}
 ---@field RotationAxisToRefer EBoneAxis
 ---@field bIsAdditive boolean
 FAnimNode_RotationMultiplier = {}
+
+---@return FAnimNode_RotationMultiplier
+function FAnimNode_RotationMultiplier:get() end
 
 
 
@@ -551,6 +707,9 @@ FAnimNode_RotationMultiplier = {}
 ---@field bAlphaBoolEnabled boolean
 FAnimNode_RotationOffsetBlendSpace = {}
 
+---@return FAnimNode_RotationOffsetBlendSpace
+function FAnimNode_RotationOffsetBlendSpace:get() end
+
 
 
 ---@class FAnimNode_RotationOffsetBlendSpaceGraph : FAnimNode_BlendSpaceGraphBase
@@ -565,6 +724,9 @@ FAnimNode_RotationOffsetBlendSpace = {}
 ---@field bAlphaBoolEnabled boolean
 FAnimNode_RotationOffsetBlendSpaceGraph = {}
 
+---@return FAnimNode_RotationOffsetBlendSpaceGraph
+function FAnimNode_RotationOffsetBlendSpaceGraph:get() end
+
 
 
 ---@class FAnimNode_ScaleChainLength : FAnimNode_Base
@@ -578,14 +740,23 @@ FAnimNode_RotationOffsetBlendSpaceGraph = {}
 ---@field ChainInitialLength EScaleChainInitialLength
 FAnimNode_ScaleChainLength = {}
 
+---@return FAnimNode_ScaleChainLength
+function FAnimNode_ScaleChainLength:get() end
+
 
 
 ---@class FAnimNode_SequenceEvaluator : FAnimNode_SequenceEvaluatorBase
 FAnimNode_SequenceEvaluator = {}
 
+---@return FAnimNode_SequenceEvaluator
+function FAnimNode_SequenceEvaluator:get() end
+
 
 ---@class FAnimNode_SequenceEvaluatorBase : FAnimNode_AssetPlayerBase
 FAnimNode_SequenceEvaluatorBase = {}
+
+---@return FAnimNode_SequenceEvaluatorBase
+function FAnimNode_SequenceEvaluatorBase:get() end
 
 
 ---@class FAnimNode_SequenceEvaluator_Standalone : FAnimNode_SequenceEvaluatorBase
@@ -600,6 +771,9 @@ FAnimNode_SequenceEvaluatorBase = {}
 ---@field ReinitializationBehavior ESequenceEvalReinit::Type
 ---@field StartPosition float
 FAnimNode_SequenceEvaluator_Standalone = {}
+
+---@return FAnimNode_SequenceEvaluator_Standalone
+function FAnimNode_SequenceEvaluator_Standalone:get() end
 
 
 
@@ -616,6 +790,9 @@ FAnimNode_SequenceEvaluator_Standalone = {}
 ---@field AlphaScaleBiasClamp FInputScaleBiasClamp
 FAnimNode_SkeletalControlBase = {}
 
+---@return FAnimNode_SkeletalControlBase
+function FAnimNode_SkeletalControlBase:get() end
+
 
 
 ---@class FAnimNode_Slot : FAnimNode_Base
@@ -623,6 +800,9 @@ FAnimNode_SkeletalControlBase = {}
 ---@field SlotName FName
 ---@field bAlwaysUpdateSourcePose boolean
 FAnimNode_Slot = {}
+
+---@return FAnimNode_Slot
+function FAnimNode_Slot:get() end
 
 
 
@@ -641,6 +821,9 @@ FAnimNode_Slot = {}
 ---@field Offset float
 FAnimNode_SplineIK = {}
 
+---@return FAnimNode_SplineIK
+function FAnimNode_SplineIK:get() end
+
 
 
 ---@class FAnimNode_SpringBone : FAnimNode_SkeletalControlBase
@@ -658,10 +841,16 @@ FAnimNode_SplineIK = {}
 ---@field bRotateZ boolean
 FAnimNode_SpringBone = {}
 
+---@return FAnimNode_SpringBone
+function FAnimNode_SpringBone:get() end
+
 
 
 ---@class FAnimNode_StateResult : FAnimNode_Root
 FAnimNode_StateResult = {}
+
+---@return FAnimNode_StateResult
+function FAnimNode_StateResult:get() end
 
 
 ---@class FAnimNode_Sync : FAnimNode_Base
@@ -669,6 +858,9 @@ FAnimNode_StateResult = {}
 ---@field GroupName FName
 ---@field GroupRole EAnimGroupRole::Type
 FAnimNode_Sync = {}
+
+---@return FAnimNode_Sync
+function FAnimNode_Sync:get() end
 
 
 
@@ -695,6 +887,9 @@ FAnimNode_Sync = {}
 ---@field LastBoneRotationAnimAlphaBlend float
 FAnimNode_Trail = {}
 
+---@return FAnimNode_Trail
+function FAnimNode_Trail:get() end
+
 
 
 ---@class FAnimNode_TwistCorrectiveNode : FAnimNode_SkeletalControlBase
@@ -706,6 +901,9 @@ FAnimNode_Trail = {}
 ---@field RemappedMax float
 ---@field Curve FAnimCurveParam
 FAnimNode_TwistCorrectiveNode = {}
+
+---@return FAnimNode_TwistCorrectiveNode
+function FAnimNode_TwistCorrectiveNode:get() end
 
 
 
@@ -726,6 +924,9 @@ FAnimNode_TwistCorrectiveNode = {}
 ---@field bAllowTwist boolean
 FAnimNode_TwoBoneIK = {}
 
+---@return FAnimNode_TwoBoneIK
+function FAnimNode_TwoBoneIK:get() end
+
 
 
 ---@class FAnimNode_TwoWayBlend : FAnimNode_Base
@@ -741,6 +942,9 @@ FAnimNode_TwoBoneIK = {}
 ---@field AlphaScaleBiasClamp FInputScaleBiasClamp
 FAnimNode_TwoWayBlend = {}
 
+---@return FAnimNode_TwoWayBlend
+function FAnimNode_TwoWayBlend:get() end
+
 
 
 ---@class FAnimPhysBodyDefinition
@@ -751,6 +955,9 @@ FAnimNode_TwoWayBlend = {}
 ---@field CollisionType AnimPhysCollisionType
 ---@field SphereCollisionRadius float
 FAnimPhysBodyDefinition = {}
+
+---@return FAnimPhysBodyDefinition
+function FAnimPhysBodyDefinition:get() end
 
 
 
@@ -769,12 +976,18 @@ FAnimPhysBodyDefinition = {}
 ---@field AngularTarget FVector
 FAnimPhysConstraintSetup = {}
 
+---@return FAnimPhysConstraintSetup
+function FAnimPhysConstraintSetup:get() end
+
 
 
 ---@class FAnimPhysPlanarLimit
 ---@field DrivingBone FBoneReference
 ---@field PlaneTransform FTransform
 FAnimPhysPlanarLimit = {}
+
+---@return FAnimPhysPlanarLimit
+function FAnimPhysPlanarLimit:get() end
 
 
 
@@ -785,18 +998,30 @@ FAnimPhysPlanarLimit = {}
 ---@field LimitType ESphericalLimitType
 FAnimPhysSphericalLimit = {}
 
+---@return FAnimPhysSphericalLimit
+function FAnimPhysSphericalLimit:get() end
+
 
 
 ---@class FAnimSequencerInstanceProxy : FAnimInstanceProxy
 FAnimSequencerInstanceProxy = {}
 
+---@return FAnimSequencerInstanceProxy
+function FAnimSequencerInstanceProxy:get() end
+
 
 ---@class FAnimationStateMachineReference : FAnimNodeReference
 FAnimationStateMachineReference = {}
 
+---@return FAnimationStateMachineReference
+function FAnimationStateMachineReference:get() end
+
 
 ---@class FAnimationStateResultReference : FAnimNodeReference
 FAnimationStateResultReference = {}
+
+---@return FAnimationStateResultReference
+function FAnimationStateResultReference:get() end
 
 
 ---@class FBlendBoneByChannelEntry
@@ -807,10 +1032,16 @@ FAnimationStateResultReference = {}
 ---@field bBlendScale boolean
 FBlendBoneByChannelEntry = {}
 
+---@return FBlendBoneByChannelEntry
+function FBlendBoneByChannelEntry:get() end
+
 
 
 ---@class FBlendSpacePlayerReference : FAnimNodeReference
 FBlendSpacePlayerReference = {}
+
+---@return FBlendSpacePlayerReference
+function FBlendSpacePlayerReference:get() end
 
 
 ---@class FConstraint
@@ -820,14 +1051,23 @@ FBlendSpacePlayerReference = {}
 ---@field PerAxis FFilterOptionPerAxis
 FConstraint = {}
 
+---@return FConstraint
+function FConstraint:get() end
+
 
 
 ---@class FIKChain
 FIKChain = {}
 
+---@return FIKChain
+function FIKChain:get() end
+
 
 ---@class FIKChainLink
 FIKChainLink = {}
+
+---@return FIKChainLink
+function FIKChainLink:get() end
 
 
 ---@class FIKFootPelvisPullDownSolver
@@ -838,14 +1078,23 @@ FIKChainLink = {}
 ---@field PelvisAdjustmentMaxIter int32
 FIKFootPelvisPullDownSolver = {}
 
+---@return FIKFootPelvisPullDownSolver
+function FIKFootPelvisPullDownSolver:get() end
+
 
 
 ---@class FLayeredBoneBlendReference : FAnimNodeReference
 FLayeredBoneBlendReference = {}
 
+---@return FLayeredBoneBlendReference
+function FLayeredBoneBlendReference:get() end
+
 
 ---@class FLinkedAnimGraphReference : FAnimNodeReference
 FLinkedAnimGraphReference = {}
+
+---@return FLinkedAnimGraphReference
+function FLinkedAnimGraphReference:get() end
 
 
 ---@class FPoseDriverTarget
@@ -860,12 +1109,18 @@ FLinkedAnimGraphReference = {}
 ---@field bIsHidden boolean
 FPoseDriverTarget = {}
 
+---@return FPoseDriverTarget
+function FPoseDriverTarget:get() end
+
 
 
 ---@class FPoseDriverTransform
 ---@field TargetTranslation FVector
 ---@field TargetRotation FRotator
 FPoseDriverTransform = {}
+
+---@return FPoseDriverTransform
+function FPoseDriverTransform:get() end
 
 
 
@@ -874,11 +1129,17 @@ FPoseDriverTransform = {}
 ---@field Range float
 FPositionHistory = {}
 
+---@return FPositionHistory
+function FPositionHistory:get() end
+
 
 
 ---@class FRBFEntry
 ---@field Values TArray<float>
 FRBFEntry = {}
+
+---@return FRBFEntry
+function FRBFEntry:get() end
 
 
 
@@ -897,6 +1158,9 @@ FRBFEntry = {}
 ---@field MedianMax float
 FRBFParams = {}
 
+---@return FRBFParams
+function FRBFParams:get() end
+
 
 
 ---@class FRBFTarget : FRBFEntry
@@ -906,6 +1170,9 @@ FRBFParams = {}
 ---@field DistanceMethod ERBFDistanceMethod
 ---@field FunctionType ERBFFunctionType
 FRBFTarget = {}
+
+---@return FRBFTarget
+function FRBFTarget:get() end
 
 
 
@@ -919,6 +1186,9 @@ FRBFTarget = {}
 ---@field BlendIn FAlphaBlend
 FRandomPlayerSequenceEntry = {}
 
+---@return FRandomPlayerSequenceEntry
+function FRandomPlayerSequenceEntry:get() end
+
 
 
 ---@class FReferenceBoneFrame
@@ -926,12 +1196,18 @@ FRandomPlayerSequenceEntry = {}
 ---@field Axis FAxis
 FReferenceBoneFrame = {}
 
+---@return FReferenceBoneFrame
+function FReferenceBoneFrame:get() end
+
 
 
 ---@class FRotationLimit
 ---@field LimitMin FVector
 ---@field LimitMax FVector
 FRotationLimit = {}
+
+---@return FRotationLimit
+function FRotationLimit:get() end
 
 
 
@@ -953,14 +1229,23 @@ FRotationLimit = {}
 ---@field bClamp boolean
 FRotationRetargetingInfo = {}
 
+---@return FRotationRetargetingInfo
+function FRotationRetargetingInfo:get() end
+
 
 
 ---@class FSequenceEvaluatorReference : FAnimNodeReference
 FSequenceEvaluatorReference = {}
 
+---@return FSequenceEvaluatorReference
+function FSequenceEvaluatorReference:get() end
+
 
 ---@class FSequencePlayerReference : FAnimNodeReference
 FSequencePlayerReference = {}
+
+---@return FSequencePlayerReference
+function FSequencePlayerReference:get() end
 
 
 ---@class FSimSpaceSettings
@@ -976,16 +1261,25 @@ FSequencePlayerReference = {}
 ---@field ExternalAngularVelocity FVector
 FSimSpaceSettings = {}
 
+---@return FSimSpaceSettings
+function FSimSpaceSettings:get() end
+
 
 
 ---@class FSkeletalControlReference : FAnimNodeReference
 FSkeletalControlReference = {}
+
+---@return FSkeletalControlReference
+function FSkeletalControlReference:get() end
 
 
 ---@class FSplineIKCachedBoneData
 ---@field bone FBoneReference
 ---@field RefSkeletonIndex int32
 FSplineIKCachedBoneData = {}
+
+---@return FSplineIKCachedBoneData
+function FSplineIKCachedBoneData:get() end
 
 
 
@@ -994,14 +1288,23 @@ FSplineIKCachedBoneData = {}
 ---@field Value FVector
 FWarpingVectorValue = {}
 
+---@return FWarpingVectorValue
+function FWarpingVectorValue:get() end
+
 
 
 ---@class ISequencerAnimationSupport : IInterface
 ISequencerAnimationSupport = {}
 
+---@return ISequencerAnimationSupport
+function ISequencerAnimationSupport:get() end
+
 
 ---@class UAnimExecutionContextLibrary : UBlueprintFunctionLibrary
 UAnimExecutionContextLibrary = {}
+
+---@return UAnimExecutionContextLibrary
+function UAnimExecutionContextLibrary:get() end
 
 ---@param Context FAnimUpdateContext
 ---@return float
@@ -1038,20 +1341,32 @@ function UAnimExecutionContextLibrary:ConvertToComponentSpacePoseContext(Context
 ---@field NotifyName FName
 UAnimNotify_PlayMontageNotify = {}
 
+---@return UAnimNotify_PlayMontageNotify
+function UAnimNotify_PlayMontageNotify:get() end
+
 
 
 ---@class UAnimNotify_PlayMontageNotifyWindow : UAnimNotifyState
 ---@field NotifyName FName
 UAnimNotify_PlayMontageNotifyWindow = {}
 
+---@return UAnimNotify_PlayMontageNotifyWindow
+function UAnimNotify_PlayMontageNotifyWindow:get() end
+
 
 
 ---@class UAnimSequencerInstance : UAnimInstance
 UAnimSequencerInstance = {}
 
+---@return UAnimSequencerInstance
+function UAnimSequencerInstance:get() end
+
 
 ---@class UAnimationStateMachineLibrary : UBlueprintFunctionLibrary
 UAnimationStateMachineLibrary = {}
+
+---@return UAnimationStateMachineLibrary
+function UAnimationStateMachineLibrary:get() end
 
 ---@param UpdateContext FAnimUpdateContext
 ---@param Node FAnimationStateMachineReference
@@ -1102,6 +1417,9 @@ function UAnimationStateMachineLibrary:ConvertToAnimationStateMachine(Node, Anim
 
 ---@class UBlendSpacePlayerLibrary : UBlueprintFunctionLibrary
 UBlendSpacePlayerLibrary = {}
+
+---@return UBlendSpacePlayerLibrary
+function UBlendSpacePlayerLibrary:get() end
 
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@return boolean
@@ -1155,6 +1473,9 @@ function UBlendSpacePlayerLibrary:ConvertToBlendSpacePlayer(Node, Result) end
 
 ---@class UKismetAnimationLibrary : UBlueprintFunctionLibrary
 UKismetAnimationLibrary = {}
+
+---@return UKismetAnimationLibrary
+function UKismetAnimationLibrary:get() end
 
 ---@param RootPos FVector
 ---@param JointPos FVector
@@ -1244,6 +1565,9 @@ function UKismetAnimationLibrary:CalculateDirection(Velocity, BaseRotation) end
 ---@class ULayeredBoneBlendLibrary : UBlueprintFunctionLibrary
 ULayeredBoneBlendLibrary = {}
 
+---@return ULayeredBoneBlendLibrary
+function ULayeredBoneBlendLibrary:get() end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param LayeredBoneBlend FLayeredBoneBlendReference
 ---@param PoseIndex int32
@@ -1265,6 +1589,9 @@ function ULayeredBoneBlendLibrary:ConvertToLayeredBlendPerBonePure(Node, Layered
 
 ---@class ULinkedAnimGraphLibrary : UBlueprintFunctionLibrary
 ULinkedAnimGraphLibrary = {}
+
+---@return ULinkedAnimGraphLibrary
+function ULinkedAnimGraphLibrary:get() end
 
 ---@param Node FLinkedAnimGraphReference
 ---@return boolean
@@ -1290,6 +1617,9 @@ function ULinkedAnimGraphLibrary:ConvertToLinkedAnimGraph(Node, Result) end
 ---@field OnNotifyEnd FPlayMontageCallbackProxyOnNotifyEnd
 UPlayMontageCallbackProxy = {}
 
+---@return UPlayMontageCallbackProxy
+function UPlayMontageCallbackProxy:get() end
+
 ---@param NotifyName FName
 ---@param BranchingPointNotifyPayload FBranchingPointNotifyPayload
 function UPlayMontageCallbackProxy:OnNotifyEndReceived(NotifyName, BranchingPointNotifyPayload) end
@@ -1313,6 +1643,9 @@ function UPlayMontageCallbackProxy:CreateProxyObjectForPlayMontage(InSkeletalMes
 
 ---@class USequenceEvaluatorLibrary : UBlueprintFunctionLibrary
 USequenceEvaluatorLibrary = {}
+
+---@return USequenceEvaluatorLibrary
+function USequenceEvaluatorLibrary:get() end
 
 ---@param UpdateContext FAnimUpdateContext
 ---@param SequenceEvaluator FSequenceEvaluatorReference
@@ -1351,6 +1684,9 @@ function USequenceEvaluatorLibrary:AdvanceTime(UpdateContext, SequenceEvaluator,
 
 ---@class USequencePlayerLibrary : UBlueprintFunctionLibrary
 USequencePlayerLibrary = {}
+
+---@return USequencePlayerLibrary
+function USequencePlayerLibrary:get() end
 
 ---@param SequencePlayer FSequencePlayerReference
 ---@param StartPosition float
@@ -1409,6 +1745,9 @@ function USequencePlayerLibrary:ComputePlayRateFromDuration(SequencePlayer, Dura
 
 ---@class USkeletalControlLibrary : UBlueprintFunctionLibrary
 USkeletalControlLibrary = {}
+
+---@return USkeletalControlLibrary
+function USkeletalControlLibrary:get() end
 
 ---@param SkeletalControl FSkeletalControlReference
 ---@param Alpha float

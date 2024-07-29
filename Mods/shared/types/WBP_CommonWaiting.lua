@@ -6,6 +6,9 @@
 ---@field Image_14 UImage
 UWBP_CommonWaiting_C = {}
 
+---@return UWBP_CommonWaiting_C
+function UWBP_CommonWaiting_C:get() end
+
 ---@param Text FText
 function UWBP_CommonWaiting_C:SetText(Text) end
 

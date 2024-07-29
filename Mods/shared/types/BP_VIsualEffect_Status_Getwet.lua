@@ -9,6 +9,9 @@
 ---@field fadeoutmax double
 UBP_VIsualEffect_Status_Getwet_C = {}
 
+---@return UBP_VIsualEffect_Status_Getwet_C
+function UBP_VIsualEffect_Status_Getwet_C:get() end
+
 ---@param Value double
 UBP_VIsualEffect_Status_Getwet_C['Set Wet'] = function(Value) end
 function UBP_VIsualEffect_Status_Getwet_C:OnBeginVisualEffect() end

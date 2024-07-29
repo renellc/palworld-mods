@@ -10,6 +10,9 @@
 ---@field EndCollisionTime double
 ABP_SkillEffect_GeneralWork_C = {}
 
+---@return ABP_SkillEffect_GeneralWork_C
+function ABP_SkillEffect_GeneralWork_C:get() end
+
 ---@param TargetLocationPoint FVector
 ---@param ImpactPoint FVector
 function ABP_SkillEffect_GeneralWork_C:SetupCollision(TargetLocationPoint, ImpactPoint) end

@@ -5,6 +5,9 @@
 ---@field OnInvaderArrivedDelegate FBP_NPCAIController_Invader_COnInvaderArrivedDelegate
 ABP_NPCAIController_Invader_C = {}
 
+---@return ABP_NPCAIController_Invader_C
+function ABP_NPCAIController_Invader_C:get() end
+
 ---@param ReturnPos FVector
 function ABP_NPCAIController_Invader_C:ReturnSpawnedPoint(ReturnPos) end
 ---@param GoalPos FVector

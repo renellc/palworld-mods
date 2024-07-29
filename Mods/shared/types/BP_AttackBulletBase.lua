@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ABP_AttackBulletBase_C = {}
 
+---@return ABP_AttackBulletBase_C
+function ABP_AttackBulletBase_C:get() end
+
 ---@param Hit FHitResult
 ---@param LifeSpan float
 ---@param FadeTime float

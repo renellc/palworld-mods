@@ -4,6 +4,9 @@
 ---@field FadeParameter UPalHUDDispatchParameter_FadeWidget
 UWBP_PalFadeWidgetBase_C = {}
 
+---@return UWBP_PalFadeWidgetBase_C
+function UWBP_PalFadeWidgetBase_C:get() end
+
 function UWBP_PalFadeWidgetBase_C:NotifyEndFadeOut() end
 function UWBP_PalFadeWidgetBase_C:NotifyStartFadeOut() end
 function UWBP_PalFadeWidgetBase_C:NotifyEndFadeIn() end

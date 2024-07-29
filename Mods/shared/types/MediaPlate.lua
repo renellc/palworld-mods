@@ -5,10 +5,16 @@
 ---@field StaticMeshComponent UStaticMeshComponent
 AMediaPlate = {}
 
+---@return AMediaPlate
+function AMediaPlate:get() end
+
 
 
 ---@class UMediaPlateAssetUserData : UAssetUserData
 UMediaPlateAssetUserData = {}
+
+---@return UMediaPlateAssetUserData
+function UMediaPlateAssetUserData:get() end
 
 
 ---@class UMediaPlateComponent : UActorComponent
@@ -33,6 +39,9 @@ UMediaPlateAssetUserData = {}
 ---@field MediaTexture UMediaTexture
 ---@field MediaPlayer UMediaPlayer
 UMediaPlateComponent = {}
+
+---@return UMediaPlateComponent
+function UMediaPlateComponent:get() end
 
 ---@param bInPlayOnlyWhenVisible boolean
 function UMediaPlateComponent:SetPlayOnlyWhenVisible(bInPlayOnlyWhenVisible) end

@@ -6,6 +6,9 @@
 ---@field IsResultCompleted boolean
 UPalBossBattleSequence_Combat_C = {}
 
+---@return UPalBossBattleSequence_Combat_C
+function UPalBossBattleSequence_Combat_C:get() end
+
 function UPalBossBattleSequence_Combat_C:CheckCombatFinish() end
 ---@param IsEnable boolean
 function UPalBossBattleSequence_Combat_C:SetTimerEnable(IsEnable) end

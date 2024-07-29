@@ -11,6 +11,9 @@
 ---@field LastClickedVoiceTypeButton UWBP_CharaCre_BodyTypeButton_C
 UWBP_CharaCre_ScrollBoxContent_Voice_C = {}
 
+---@return UWBP_CharaCre_ScrollBoxContent_Voice_C
+function UWBP_CharaCre_ScrollBoxContent_Voice_C:get() end
+
 ---@param Widget UWBP_CharaCre_BodyTypeButton_C
 function UWBP_CharaCre_ScrollBoxContent_Voice_C:OnClickedVoiceTypeButton(Widget) end
 ---@param VoiceID int32

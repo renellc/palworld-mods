@@ -13,6 +13,9 @@
 ---@field ['Bind Name'] FName
 UWBP_CharaCre_PartsSelect_sq_C = {}
 
+---@return UWBP_CharaCre_PartsSelect_sq_C
+function UWBP_CharaCre_PartsSelect_sq_C:get() end
+
 ---@param BindName FName
 ---@param SoftTexture TSoftObjectPtr<UTexture2D>
 function UWBP_CharaCre_PartsSelect_sq_C:Setup(BindName, SoftTexture) end

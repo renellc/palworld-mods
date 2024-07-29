@@ -10,6 +10,9 @@
 ---@field Current int32
 UWBP_OptionSettings_Tab_C = {}
 
+---@return UWBP_OptionSettings_Tab_C
+function UWBP_OptionSettings_Tab_C:get() end
+
 ---@param Next boolean
 function UWBP_OptionSettings_Tab_C:SwitchTab(Next) end
 ---@param Names TArray<FDataTableRowHandle>

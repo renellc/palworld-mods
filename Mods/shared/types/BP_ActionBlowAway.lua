@@ -7,6 +7,9 @@
 ---@field CanTickCheck boolean
 UBP_ActionBlowAway_C = {}
 
+---@return UBP_ActionBlowAway_C
+function UBP_ActionBlowAway_C:get() end
+
 ---@return boolean
 function UBP_ActionBlowAway_C:CanStepCancel() end
 ---@param NotifyName FName

@@ -6,6 +6,9 @@
 ---@field MovableTimer FTimerHandle
 UBP_ActionInteractBase_C = {}
 
+---@return UBP_ActionInteractBase_C
+function UBP_ActionInteractBase_C:get() end
+
 ---@param Component UPalCharacterMovementComponent
 function UBP_ActionInteractBase_C:OnJumpDelegate(Component) end
 function UBP_ActionInteractBase_C:EnableMove() end

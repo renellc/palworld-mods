@@ -3,16 +3,25 @@
 ---@class ACommonPlayerController : AModularPlayerController
 ACommonPlayerController = {}
 
+---@return ACommonPlayerController
+function ACommonPlayerController:get() end
+
 
 ---@class FConfirmationDialogAction
 ---@field Result ECommonMessagingResult
 ---@field OptionalDisplayText FText
 FConfirmationDialogAction = {}
 
+---@return FConfirmationDialogAction
+function FConfirmationDialogAction:get() end
+
 
 
 ---@class FMeasuredText
 FMeasuredText = {}
+
+---@return FMeasuredText
+function FMeasuredText:get() end
 
 
 ---@class FRootViewportLayoutInfo
@@ -21,11 +30,17 @@ FMeasuredText = {}
 ---@field bAddedToViewport boolean
 FRootViewportLayoutInfo = {}
 
+---@return FRootViewportLayoutInfo
+function FRootViewportLayoutInfo:get() end
+
 
 
 ---@class UAsyncAction_CreateWidgetAsync : UCancellableAsyncAction
 ---@field OnComplete FAsyncAction_CreateWidgetAsyncOnComplete
 UAsyncAction_CreateWidgetAsync = {}
+
+---@return UAsyncAction_CreateWidgetAsync
+function UAsyncAction_CreateWidgetAsync:get() end
 
 ---@param WorldContextObject UObject
 ---@param UserWidgetSoftClass TSoftClassPtr<UUserWidget>
@@ -39,6 +54,9 @@ function UAsyncAction_CreateWidgetAsync:CreateWidgetAsync(WorldContextObject, Us
 ---@field BeforePush FAsyncAction_PushContentToLayerForPlayerBeforePush
 ---@field AfterPush FAsyncAction_PushContentToLayerForPlayerAfterPush
 UAsyncAction_PushContentToLayerForPlayer = {}
+
+---@return UAsyncAction_PushContentToLayerForPlayer
+function UAsyncAction_PushContentToLayerForPlayer:get() end
 
 ---@param OwningPlayer APlayerController
 ---@param WidgetClass TSoftClassPtr<UCommonActivatableWidget>
@@ -54,6 +72,9 @@ function UAsyncAction_PushContentToLayerForPlayer:PushContentToLayerForPlayer(Ow
 ---@field TargetLocalPlayer ULocalPlayer
 ---@field Descriptor UCommonGameDialogDescriptor
 UAsyncAction_ShowConfirmation = {}
+
+---@return UAsyncAction_ShowConfirmation
+function UAsyncAction_ShowConfirmation:get() end
 
 ---@param InWorldContextObject UObject
 ---@param Title FText
@@ -74,6 +95,9 @@ function UAsyncAction_ShowConfirmation:ShowConfirmationCustom(InWorldContextObje
 ---@class UCommonGameDialog : UCommonActivatableWidget
 UCommonGameDialog = {}
 
+---@return UCommonGameDialog
+function UCommonGameDialog:get() end
+
 
 ---@class UCommonGameDialogDescriptor : UObject
 ---@field Header FText
@@ -81,11 +105,17 @@ UCommonGameDialog = {}
 ---@field ButtonActions TArray<FConfirmationDialogAction>
 UCommonGameDialogDescriptor = {}
 
+---@return UCommonGameDialogDescriptor
+function UCommonGameDialogDescriptor:get() end
+
 
 
 ---@class UCommonGameInstance : UGameInstance
 ---@field RequestedSession UCommonSession_SearchResult
 UCommonGameInstance = {}
+
+---@return UCommonGameInstance
+function UCommonGameInstance:get() end
 
 ---@param MessageType FGameplayTag
 ---@param Title FText
@@ -101,9 +131,15 @@ function UCommonGameInstance:HandlePrivilegeChanged(UserInfo, Privilege, OldAvai
 ---@class UCommonLocalPlayer : ULocalPlayer
 UCommonLocalPlayer = {}
 
+---@return UCommonLocalPlayer
+function UCommonLocalPlayer:get() end
+
 
 ---@class UCommonMessagingSubsystem : ULocalPlayerSubsystem
 UCommonMessagingSubsystem = {}
+
+---@return UCommonMessagingSubsystem
+function UCommonMessagingSubsystem:get() end
 
 
 ---@class UCommonPlayerInputKey : UCommonUserWidget
@@ -131,6 +167,9 @@ UCommonMessagingSubsystem = {}
 ---@field ProgressPercentageMID UMaterialInstanceDynamic
 ---@field CachedKeyBrush FSlateBrush
 UCommonPlayerInputKey = {}
+
+---@return UCommonPlayerInputKey
+function UCommonPlayerInputKey:get() end
 
 function UCommonPlayerInputKey:UpdateKeybindWidget() end
 ---@param HoldActionName FName
@@ -161,6 +200,9 @@ function UCommonPlayerInputKey:IsBoundKeyValid() end
 
 ---@class UCommonUIExtensions : UBlueprintFunctionLibrary
 UCommonUIExtensions = {}
+
+---@return UCommonUIExtensions
+function UCommonUIExtensions:get() end
 
 ---@param PlayerController APlayerController
 ---@param SuspendReason FName
@@ -199,6 +241,9 @@ function UCommonUIExtensions:GetLocalPlayerFromController(PlayerController) end
 ---@field DefaultUIPolicyClass TSoftClassPtr<UGameUIPolicy>
 UGameUIManagerSubsystem = {}
 
+---@return UGameUIManagerSubsystem
+function UGameUIManagerSubsystem:get() end
+
 
 
 ---@class UGameUIPolicy : UObject
@@ -206,11 +251,17 @@ UGameUIManagerSubsystem = {}
 ---@field RootViewportLayouts TArray<FRootViewportLayoutInfo>
 UGameUIPolicy = {}
 
+---@return UGameUIPolicy
+function UGameUIPolicy:get() end
+
 
 
 ---@class UPrimaryGameLayout : UCommonUserWidget
 ---@field Layers TMap<FGameplayTag, UCommonActivatableWidgetContainerBase>
 UPrimaryGameLayout = {}
+
+---@return UPrimaryGameLayout
+function UPrimaryGameLayout:get() end
 
 ---@param LayerTag FGameplayTag
 ---@param LayerWidget UCommonActivatableWidgetContainerBase

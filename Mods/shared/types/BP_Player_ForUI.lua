@@ -11,6 +11,9 @@
 ---@field OnAppliedHairMesh FBP_Player_ForUI_COnAppliedHairMesh
 ABP_Player_ForUI_C = {}
 
+---@return ABP_Player_ForUI_C
+function ABP_Player_ForUI_C:get() end
+
 ---@param SkeletalMeshComponent UPalSkeletalMeshComponent
 function ABP_Player_ForUI_C:OnAppliedHairMesh_Binded(SkeletalMeshComponent) end
 ---@param SkeletalMeshComponent UPalSkeletalMeshComponent

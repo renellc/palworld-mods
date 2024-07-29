@@ -5,6 +5,9 @@
 ---@field ActionComp UPalActionComponent
 UBP_AIAction_BlowAway_C = {}
 
+---@return UBP_AIAction_BlowAway_C
+function UBP_AIAction_BlowAway_C:get() end
+
 ---@param ControlledPawn APawn
 function UBP_AIAction_BlowAway_C:ActionStart(ControlledPawn) end
 ---@param EntryPoint int32

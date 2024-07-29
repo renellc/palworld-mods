@@ -3,9 +3,15 @@
 ---@class APreviewGeometryActor : AInternalToolFrameworkActor
 APreviewGeometryActor = {}
 
+---@return APreviewGeometryActor
+function APreviewGeometryActor:get() end
+
 
 ---@class APreviewMeshActor : AInternalToolFrameworkActor
 APreviewMeshActor = {}
+
+---@return APreviewMeshActor
+function APreviewMeshActor:get() end
 
 
 ---@class FCreateMeshObjectParams
@@ -28,6 +34,9 @@ APreviewMeshActor = {}
 ---@field NaniteSettings FMeshNaniteSettings
 FCreateMeshObjectParams = {}
 
+---@return FCreateMeshObjectParams
+function FCreateMeshObjectParams:get() end
+
 
 
 ---@class FCreateMeshObjectResult
@@ -36,6 +45,9 @@ FCreateMeshObjectParams = {}
 ---@field NewComponent UPrimitiveComponent
 ---@field NewAsset UObject
 FCreateMeshObjectResult = {}
+
+---@return FCreateMeshObjectResult
+function FCreateMeshObjectResult:get() end
 
 
 
@@ -47,12 +59,18 @@ FCreateMeshObjectResult = {}
 ---@field GeneratedTransientTexture UTexture2D
 FCreateTextureObjectParams = {}
 
+---@return FCreateTextureObjectParams
+function FCreateTextureObjectParams:get() end
+
 
 
 ---@class FCreateTextureObjectResult
 ---@field ResultCode ECreateModelingObjectResult
 ---@field NewAsset UObject
 FCreateTextureObjectResult = {}
+
+---@return FCreateTextureObjectResult
+function FCreateTextureObjectResult:get() end
 
 
 
@@ -61,6 +79,9 @@ FCreateTextureObjectResult = {}
 ---@field bAxisY boolean
 ---@field bAxisZ boolean
 FModelingToolsAxisFilter = {}
+
+---@return FModelingToolsAxisFilter
+function FModelingToolsAxisFilter:get() end
 
 
 
@@ -71,6 +92,9 @@ FModelingToolsAxisFilter = {}
 ---@field Vertex2 FRenderableTriangleVertex
 FRenderableTriangle = {}
 
+---@return FRenderableTriangle
+function FRenderableTriangle:get() end
+
 
 
 ---@class FRenderableTriangleVertex
@@ -80,22 +104,37 @@ FRenderableTriangle = {}
 ---@field Color FColor
 FRenderableTriangleVertex = {}
 
+---@return FRenderableTriangleVertex
+function FRenderableTriangleVertex:get() end
+
 
 
 ---@class IDynamicMeshCommitter : IInterface
 IDynamicMeshCommitter = {}
 
+---@return IDynamicMeshCommitter
+function IDynamicMeshCommitter:get() end
+
 
 ---@class IDynamicMeshProvider : IInterface
 IDynamicMeshProvider = {}
+
+---@return IDynamicMeshProvider
+function IDynamicMeshProvider:get() end
 
 
 ---@class IPersistentDynamicMeshSource : IInterface
 IPersistentDynamicMeshSource = {}
 
+---@return IPersistentDynamicMeshSource
+function IPersistentDynamicMeshSource:get() end
+
 
 ---@class IToolActivityHost : IInterface
 IToolActivityHost = {}
+
+---@return IToolActivityHost
+function IToolActivityHost:get() end
 
 
 ---@class UBaseCreateFromSelectedHandleSourceProperties : UOnAcceptHandleSourcesProperties
@@ -103,6 +142,9 @@ IToolActivityHost = {}
 ---@field OutputNewName FString
 ---@field OutputExistingName FString
 UBaseCreateFromSelectedHandleSourceProperties = {}
+
+---@return UBaseCreateFromSelectedHandleSourceProperties
+function UBaseCreateFromSelectedHandleSourceProperties:get() end
 
 
 
@@ -115,30 +157,48 @@ UBaseCreateFromSelectedHandleSourceProperties = {}
 ---@field TransformGizmos TArray<UCombinedTransformGizmo>
 UBaseCreateFromSelectedTool = {}
 
+---@return UBaseCreateFromSelectedTool
+function UBaseCreateFromSelectedTool:get() end
+
 
 
 ---@class UBaseCreateFromSelectedToolBuilder : UMultiSelectionMeshEditingToolBuilder
 UBaseCreateFromSelectedToolBuilder = {}
+
+---@return UBaseCreateFromSelectedToolBuilder
+function UBaseCreateFromSelectedToolBuilder:get() end
 
 
 ---@class UBaseMeshProcessingTool : USingleSelectionTool
 ---@field Preview UMeshOpPreviewWithBackgroundCompute
 UBaseMeshProcessingTool = {}
 
+---@return UBaseMeshProcessingTool
+function UBaseMeshProcessingTool:get() end
+
 
 
 ---@class UBaseMeshProcessingToolBuilder : UInteractiveToolWithToolTargetsBuilder
 UBaseMeshProcessingToolBuilder = {}
+
+---@return UBaseMeshProcessingToolBuilder
+function UBaseMeshProcessingToolBuilder:get() end
 
 
 ---@class UBaseVoxelTool : UBaseCreateFromSelectedTool
 ---@field VoxProperties UVoxelProperties
 UBaseVoxelTool = {}
 
+---@return UBaseVoxelTool
+function UBaseVoxelTool:get() end
+
 
 
 ---@class UCollectSurfacePathMechanic : UInteractionMechanic
 UCollectSurfacePathMechanic = {}
+
+---@return UCollectSurfacePathMechanic
+function UCollectSurfacePathMechanic:get() end
 
 
 ---@class UConstructionPlaneMechanic : UInteractionMechanic
@@ -146,6 +206,9 @@ UCollectSurfacePathMechanic = {}
 ---@field PlaneTransformProxy UTransformProxy
 ---@field ClickToSetPlaneBehavior USingleClickInputBehavior
 UConstructionPlaneMechanic = {}
+
+---@return UConstructionPlaneMechanic
+function UConstructionPlaneMechanic:get() end
 
 
 
@@ -155,6 +218,9 @@ UConstructionPlaneMechanic = {}
 ---@field OutputTypeNamesList TArray<FString>
 ---@field bShowVolumeList boolean
 UCreateMeshObjectTypeProperties = {}
+
+---@return UCreateMeshObjectTypeProperties
+function UCreateMeshObjectTypeProperties:get() end
 
 ---@return boolean
 function UCreateMeshObjectTypeProperties:ShouldShowPropertySet() end
@@ -176,6 +242,9 @@ function UCreateMeshObjectTypeProperties:GetCurrentCreateMeshType() end
 ---@field PointTransformGizmo UCombinedTransformGizmo
 UCurveControlPointsMechanic = {}
 
+---@return UCurveControlPointsMechanic
+function UCurveControlPointsMechanic:get() end
+
 
 
 ---@class UDEPRECATED_PersistentMeshSelectionManager : UObject
@@ -184,22 +253,37 @@ UCurveControlPointsMechanic = {}
 ---@field SelectionDisplay UPreviewGeometry
 UDEPRECATED_PersistentMeshSelectionManager = {}
 
+---@return UDEPRECATED_PersistentMeshSelectionManager
+function UDEPRECATED_PersistentMeshSelectionManager:get() end
+
 
 
 ---@class UDragAlignmentMechanic : UInteractionMechanic
 UDragAlignmentMechanic = {}
 
+---@return UDragAlignmentMechanic
+function UDragAlignmentMechanic:get() end
+
 
 ---@class UDynamicMeshReplacementChangeTarget : UObject
 UDynamicMeshReplacementChangeTarget = {}
+
+---@return UDynamicMeshReplacementChangeTarget
+function UDynamicMeshReplacementChangeTarget:get() end
 
 
 ---@class UGeometrySelectionEditCommand : UInteractiveCommand
 UGeometrySelectionEditCommand = {}
 
+---@return UGeometrySelectionEditCommand
+function UGeometrySelectionEditCommand:get() end
+
 
 ---@class UGeometrySelectionEditCommandArguments : UInteractiveCommandArguments
 UGeometrySelectionEditCommandArguments = {}
+
+---@return UGeometrySelectionEditCommandArguments
+function UGeometrySelectionEditCommandArguments:get() end
 
 
 ---@class UGeometrySelectionManager : UObject
@@ -208,10 +292,16 @@ UGeometrySelectionEditCommandArguments = {}
 ---@field OldSelection UPersistentMeshSelection
 UGeometrySelectionManager = {}
 
+---@return UGeometrySelectionManager
+function UGeometrySelectionManager:get() end
+
 
 
 ---@class UInteractiveToolActivity : UInteractionMechanic
 UInteractiveToolActivity = {}
+
+---@return UInteractiveToolActivity
+function UInteractiveToolActivity:get() end
 
 
 ---@class ULatticeControlPointsMechanic : UInteractionMechanic
@@ -223,6 +313,9 @@ UInteractiveToolActivity = {}
 ---@field MarqueeMechanic URectangleMarqueeMechanic
 ULatticeControlPointsMechanic = {}
 
+---@return ULatticeControlPointsMechanic
+function ULatticeControlPointsMechanic:get() end
+
 
 
 ---@class ULineSetComponent : UMeshComponent
@@ -231,12 +324,18 @@ ULatticeControlPointsMechanic = {}
 ---@field bBoundsDirty boolean
 ULineSetComponent = {}
 
+---@return ULineSetComponent
+function ULineSetComponent:get() end
+
 
 
 ---@class UMeshElementsVisualizer : UPreviewGeometry
 ---@field Settings UMeshElementsVisualizerProperties
 ---@field WireframeComponent UMeshWireframeComponent
 UMeshElementsVisualizer = {}
+
+---@return UMeshElementsVisualizer
+function UMeshElementsVisualizer:get() end
 
 
 
@@ -257,6 +356,9 @@ UMeshElementsVisualizer = {}
 ---@field bAdjustDepthBiasUsingMeshSize boolean
 UMeshElementsVisualizerProperties = {}
 
+---@return UMeshElementsVisualizerProperties
+function UMeshElementsVisualizerProperties:get() end
+
 
 
 ---@class UMeshOpPreviewWithBackgroundCompute : UObject
@@ -268,10 +370,16 @@ UMeshElementsVisualizerProperties = {}
 ---@field PreviewWorld TWeakObjectPtr<UWorld>
 UMeshOpPreviewWithBackgroundCompute = {}
 
+---@return UMeshOpPreviewWithBackgroundCompute
+function UMeshOpPreviewWithBackgroundCompute:get() end
+
 
 
 ---@class UMeshSurfacePointMeshEditingToolBuilder : UMeshSurfacePointToolBuilder
 UMeshSurfacePointMeshEditingToolBuilder = {}
+
+---@return UMeshSurfacePointMeshEditingToolBuilder
+function UMeshSurfacePointMeshEditingToolBuilder:get() end
 
 
 ---@class UMeshWireframeComponent : UMeshComponent
@@ -297,6 +405,9 @@ UMeshSurfacePointMeshEditingToolBuilder = {}
 ---@field LocalBounds FBoxSphereBounds
 UMeshWireframeComponent = {}
 
+---@return UMeshWireframeComponent
+function UMeshWireframeComponent:get() end
+
 
 
 ---@class UModelingComponentsSettings : UDeveloperSettings
@@ -306,10 +417,16 @@ UMeshWireframeComponent = {}
 ---@field CollisionMode ECollisionTraceFlag
 UModelingComponentsSettings = {}
 
+---@return UModelingComponentsSettings
+function UModelingComponentsSettings:get() end
+
 
 
 ---@class UModelingObjectsCreationAPI : UObject
 UModelingObjectsCreationAPI = {}
+
+---@return UModelingObjectsCreationAPI
+function UModelingObjectsCreationAPI:get() end
 
 ---@param CreateTexParams FCreateTextureObjectParams
 ---@return FCreateTextureObjectResult
@@ -323,16 +440,25 @@ function UModelingObjectsCreationAPI:CreateMeshObject(CreateMeshParams) end
 ---@field ParentContext UInteractiveToolsContext
 UModelingSceneSnappingManager = {}
 
+---@return UModelingSceneSnappingManager
+function UModelingSceneSnappingManager:get() end
+
 
 
 ---@class UMultiSelectionMeshEditingTool : UMultiSelectionTool
 ---@field TargetWorld TWeakObjectPtr<UWorld>
 UMultiSelectionMeshEditingTool = {}
 
+---@return UMultiSelectionMeshEditingTool
+function UMultiSelectionMeshEditingTool:get() end
+
 
 
 ---@class UMultiSelectionMeshEditingToolBuilder : UInteractiveToolWithToolTargetsBuilder
 UMultiSelectionMeshEditingToolBuilder = {}
+
+---@return UMultiSelectionMeshEditingToolBuilder
+function UMultiSelectionMeshEditingToolBuilder:get() end
 
 
 ---@class UMultiTransformer : UObject
@@ -342,11 +468,17 @@ UMultiSelectionMeshEditingToolBuilder = {}
 ---@field DragAlignmentMechanic UDragAlignmentMechanic
 UMultiTransformer = {}
 
+---@return UMultiTransformer
+function UMultiTransformer:get() end
+
 
 
 ---@class UOctreeDynamicMeshComponent : UBaseDynamicMeshComponent
 ---@field MeshObject UDynamicMesh
 UOctreeDynamicMeshComponent = {}
+
+---@return UOctreeDynamicMeshComponent
+function UOctreeDynamicMeshComponent:get() end
 
 ---@param NewMesh UDynamicMesh
 function UOctreeDynamicMeshComponent:SetDynamicMesh(NewMesh) end
@@ -356,24 +488,39 @@ function UOctreeDynamicMeshComponent:SetDynamicMesh(NewMesh) end
 ---@field HandleInputs EHandleSourcesMethod
 UOnAcceptHandleSourcesProperties = {}
 
+---@return UOnAcceptHandleSourcesProperties
+function UOnAcceptHandleSourcesProperties:get() end
+
 
 
 ---@class UOnAcceptHandleSourcesPropertiesBase : UInteractiveToolPropertySet
 UOnAcceptHandleSourcesPropertiesBase = {}
+
+---@return UOnAcceptHandleSourcesPropertiesBase
+function UOnAcceptHandleSourcesPropertiesBase:get() end
 
 
 ---@class UOnAcceptHandleSourcesPropertiesSingle : UOnAcceptHandleSourcesPropertiesBase
 ---@field HandleInputs EHandleSourcesMethod
 UOnAcceptHandleSourcesPropertiesSingle = {}
 
+---@return UOnAcceptHandleSourcesPropertiesSingle
+function UOnAcceptHandleSourcesPropertiesSingle:get() end
+
 
 
 ---@class UPersistentMeshSelection : UObject
 UPersistentMeshSelection = {}
 
+---@return UPersistentMeshSelection
+function UPersistentMeshSelection:get() end
+
 
 ---@class UPlaneDistanceFromHitMechanic : UInteractionMechanic
 UPlaneDistanceFromHitMechanic = {}
+
+---@return UPlaneDistanceFromHitMechanic
+function UPlaneDistanceFromHitMechanic:get() end
 
 
 ---@class UPointSetComponent : UMeshComponent
@@ -382,10 +529,16 @@ UPlaneDistanceFromHitMechanic = {}
 ---@field bBoundsDirty boolean
 UPointSetComponent = {}
 
+---@return UPointSetComponent
+function UPointSetComponent:get() end
+
 
 
 ---@class UPolyEditPreviewMesh : UPreviewMesh
 UPolyEditPreviewMesh = {}
+
+---@return UPolyEditPreviewMesh
+function UPolyEditPreviewMesh:get() end
 
 
 ---@class UPolyLassoMarqueeMechanic : UInteractionMechanic
@@ -399,6 +552,9 @@ UPolyEditPreviewMesh = {}
 ---@field HoverBehavior UMouseHoverBehavior
 UPolyLassoMarqueeMechanic = {}
 
+---@return UPolyLassoMarqueeMechanic
+function UPolyLassoMarqueeMechanic:get() end
+
 
 
 ---@class UPolygonSelectionMechanic : UInteractionMechanic
@@ -410,6 +566,9 @@ UPolyLassoMarqueeMechanic = {}
 ---@field DrawnTriangleSetComponent UTriangleSetComponent
 ---@field HighlightedFaceMaterial UMaterialInterface
 UPolygonSelectionMechanic = {}
+
+---@return UPolygonSelectionMechanic
+function UPolygonSelectionMechanic:get() end
 
 
 
@@ -427,6 +586,9 @@ UPolygonSelectionMechanic = {}
 ---@field bIgnoreOcclusion boolean
 UPolygonSelectionMechanicProperties = {}
 
+---@return UPolygonSelectionMechanicProperties
+function UPolygonSelectionMechanicProperties:get() end
+
 function UPolygonSelectionMechanicProperties:SelectAll() end
 function UPolygonSelectionMechanicProperties:InvertSelection() end
 
@@ -435,6 +597,9 @@ function UPolygonSelectionMechanicProperties:InvertSelection() end
 ---@field ActiveGroupLayer FName
 ---@field GroupLayersList TArray<FString>
 UPolygroupLayersProperties = {}
+
+---@return UPolygroupLayersProperties
+function UPolygroupLayersProperties:get() end
 
 ---@return TArray<FString>
 function UPolygroupLayersProperties:GetGroupLayersFunc() end
@@ -445,6 +610,9 @@ function UPolygroupLayersProperties:GetGroupLayersFunc() end
 ---@field LineSets TMap<FString, ULineSetComponent>
 ---@field PointSets TMap<FString, UPointSetComponent>
 UPreviewGeometry = {}
+
+---@return UPreviewGeometry
+function UPreviewGeometry:get() end
 
 ---@param PointSetIdentifier FString
 ---@param bVisible boolean
@@ -503,6 +671,9 @@ function UPreviewGeometry:AddLineSet(LineSetIdentifier) end
 ---@field DynamicMeshComponent UDynamicMeshComponent
 UPreviewMesh = {}
 
+---@return UPreviewMesh
+function UPreviewMesh:get() end
+
 
 
 ---@class URectangleMarqueeMechanic : UInteractionMechanic
@@ -512,6 +683,9 @@ UPreviewMesh = {}
 ---@field ClickDragBehavior UClickDragInputBehavior
 URectangleMarqueeMechanic = {}
 
+---@return URectangleMarqueeMechanic
+function URectangleMarqueeMechanic:get() end
+
 
 
 ---@class USingleSelectionMeshEditingTool : USingleSelectionTool
@@ -519,10 +693,16 @@ URectangleMarqueeMechanic = {}
 ---@field InputSelection UPersistentMeshSelection
 USingleSelectionMeshEditingTool = {}
 
+---@return USingleSelectionMeshEditingTool
+function USingleSelectionMeshEditingTool:get() end
+
 
 
 ---@class USingleSelectionMeshEditingToolBuilder : UInteractiveToolWithToolTargetsBuilder
 USingleSelectionMeshEditingToolBuilder = {}
+
+---@return USingleSelectionMeshEditingToolBuilder
+function USingleSelectionMeshEditingToolBuilder:get() end
 
 
 ---@class USpaceCurveDeformationMechanic : UInteractionMechanic
@@ -536,6 +716,9 @@ USingleSelectionMeshEditingToolBuilder = {}
 ---@field PointTransformGizmo UCombinedTransformGizmo
 USpaceCurveDeformationMechanic = {}
 
+---@return USpaceCurveDeformationMechanic
+function USpaceCurveDeformationMechanic:get() end
+
 
 
 ---@class USpaceCurveDeformationMechanicPropertySet : UInteractiveToolPropertySet
@@ -545,15 +728,24 @@ USpaceCurveDeformationMechanic = {}
 ---@field SoftFalloff ESpaceCurveControlPointFalloffType
 USpaceCurveDeformationMechanicPropertySet = {}
 
+---@return USpaceCurveDeformationMechanicPropertySet
+function USpaceCurveDeformationMechanicPropertySet:get() end
+
 
 
 ---@class USpatialCurveDistanceMechanic : UInteractionMechanic
 USpatialCurveDistanceMechanic = {}
 
+---@return USpatialCurveDistanceMechanic
+function USpatialCurveDistanceMechanic:get() end
+
 
 ---@class UTransformInputsToolProperties : UInteractiveToolPropertySet
 ---@field bShowTransformGizmo boolean
 UTransformInputsToolProperties = {}
+
+---@return UTransformInputsToolProperties
+function UTransformInputsToolProperties:get() end
 
 
 
@@ -561,6 +753,9 @@ UTransformInputsToolProperties = {}
 ---@field Bounds FBoxSphereBounds
 ---@field bBoundsDirty boolean
 UTriangleSetComponent = {}
+
+---@return UTriangleSetComponent
+function UTriangleSetComponent:get() end
 
 
 
@@ -572,6 +767,9 @@ UTriangleSetComponent = {}
 ---@field BackingRectangleMaterial UMaterialInterface
 UUVLayoutPreview = {}
 
+---@return UUVLayoutPreview
+function UUVLayoutPreview:get() end
+
 
 
 ---@class UUVLayoutPreviewProperties : UInteractiveToolPropertySet
@@ -581,6 +779,9 @@ UUVLayoutPreview = {}
 ---@field Offset FVector2D
 ---@field bShowWireframe boolean
 UUVLayoutPreviewProperties = {}
+
+---@return UUVLayoutPreviewProperties
+function UUVLayoutPreviewProperties:get() end
 
 
 
@@ -592,6 +793,9 @@ UUVLayoutPreviewProperties = {}
 ---@field CubeRootMinComponentVolume double
 UVoxelProperties = {}
 
+---@return UVoxelProperties
+function UVoxelProperties:get() end
+
 
 
 ---@class UWeightMapSetProperties : UInteractiveToolPropertySet
@@ -599,6 +803,9 @@ UVoxelProperties = {}
 ---@field WeightMapsList TArray<FString>
 ---@field bInvertWeightMap boolean
 UWeightMapSetProperties = {}
+
+---@return UWeightMapSetProperties
+function UWeightMapSetProperties:get() end
 
 ---@return TArray<FString>
 function UWeightMapSetProperties:GetWeightMapsFunc() end

@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Action_MimicryEncounter_C = {}
 
+---@return UBP_Action_MimicryEncounter_C
+function UBP_Action_MimicryEncounter_C:get() end
+
 ---@param NotifyName FName
 function UBP_Action_MimicryEncounter_C:OnNotifyEnd_41F883F24346AC8EA3076F98EE10BE03(NotifyName) end
 ---@param NotifyName FName

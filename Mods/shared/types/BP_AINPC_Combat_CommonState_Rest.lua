@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_AINPC_Combat_CommonState_Rest_C = {}
 
+---@return UBP_AINPC_Combat_CommonState_Rest_C
+function UBP_AINPC_Combat_CommonState_Rest_C:get() end
+
 ---@param DeltaTime float
 function UBP_AINPC_Combat_CommonState_Rest_C:StateTick(DeltaTime) end
 ---@param EntryPoint int32

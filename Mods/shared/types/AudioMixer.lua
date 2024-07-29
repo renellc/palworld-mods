@@ -11,6 +11,9 @@
 ---@field bIsCurrentDevice boolean
 FAudioOutputDeviceInfo = {}
 
+---@return FAudioOutputDeviceInfo
+function FAudioOutputDeviceInfo:get() end
+
 
 
 ---@class FSubmixEffectDynamicProcessorFilterSettings
@@ -18,6 +21,9 @@ FAudioOutputDeviceInfo = {}
 ---@field Cutoff float
 ---@field GainDb float
 FSubmixEffectDynamicProcessorFilterSettings = {}
+
+---@return FSubmixEffectDynamicProcessorFilterSettings
+function FSubmixEffectDynamicProcessorFilterSettings:get() end
 
 
 
@@ -45,6 +51,9 @@ FSubmixEffectDynamicProcessorFilterSettings = {}
 ---@field KeyLowshelf FSubmixEffectDynamicProcessorFilterSettings
 FSubmixEffectDynamicsProcessorSettings = {}
 
+---@return FSubmixEffectDynamicsProcessorSettings
+function FSubmixEffectDynamicsProcessorSettings:get() end
+
 
 
 ---@class FSubmixEffectEQBand
@@ -53,6 +62,9 @@ FSubmixEffectDynamicsProcessorSettings = {}
 ---@field GainDb float
 ---@field bEnabled boolean
 FSubmixEffectEQBand = {}
+
+---@return FSubmixEffectEQBand
+function FSubmixEffectEQBand:get() end
 
 
 
@@ -75,11 +87,17 @@ FSubmixEffectEQBand = {}
 ---@field bBypass boolean
 FSubmixEffectReverbSettings = {}
 
+---@return FSubmixEffectReverbSettings
+function FSubmixEffectReverbSettings:get() end
+
 
 
 ---@class FSubmixEffectSubmixEQSettings
 ---@field EQBands TArray<FSubmixEffectEQBand>
 FSubmixEffectSubmixEQSettings = {}
+
+---@return FSubmixEffectSubmixEQSettings
+function FSubmixEffectSubmixEQSettings:get() end
 
 
 
@@ -88,6 +106,9 @@ FSubmixEffectSubmixEQSettings = {}
 ---@field RequestedDeviceId FString
 ---@field Result ESwapAudioOutputDeviceResultState
 FSwapAudioOutputResult = {}
+
+---@return FSwapAudioOutputResult
+function FSwapAudioOutputResult:get() end
 
 
 
@@ -100,14 +121,23 @@ FSwapAudioOutputResult = {}
 ---@field DeviceSwitched FAudioDeviceNotificationSubsystemDeviceSwitched
 UAudioDeviceNotificationSubsystem = {}
 
+---@return UAudioDeviceNotificationSubsystem
+function UAudioDeviceNotificationSubsystem:get() end
+
 
 
 ---@class UAudioGenerator : UObject
 UAudioGenerator = {}
 
+---@return UAudioGenerator
+function UAudioGenerator:get() end
+
 
 ---@class UAudioMixerBlueprintLibrary : UBlueprintFunctionLibrary
 UAudioMixerBlueprintLibrary = {}
+
+---@return UAudioMixerBlueprintLibrary
+function UAudioMixerBlueprintLibrary:get() end
 
 ---@param InMegabytesToFree float
 ---@return float
@@ -272,6 +302,9 @@ function UAudioMixerBlueprintLibrary:AddMasterSubmixEffect(WorldContextObject, S
 ---@class UQuartzClockHandle : UObject
 UQuartzClockHandle = {}
 
+---@return UQuartzClockHandle
+function UQuartzClockHandle:get() end
+
 ---@param WorldContextObject UObject
 ---@param InQuantizationBoundary EQuartzCommandQuantization
 ---@param ClockHandle UQuartzClockHandle
@@ -378,6 +411,9 @@ function UQuartzClockHandle:GetBeatsPerMinute(WorldContextObject) end
 ---@class UQuartzSubsystem : UTickableWorldSubsystem
 UQuartzSubsystem = {}
 
+---@return UQuartzSubsystem
+function UQuartzSubsystem:get() end
+
 ---@return boolean
 function UQuartzSubsystem:IsQuartzEnabled() end
 ---@param WorldContextObject UObject
@@ -449,6 +485,9 @@ function UQuartzSubsystem:CreateNewClock(WorldContextObject, ClockName, InSettin
 ---@field Settings FSubmixEffectDynamicsProcessorSettings
 USubmixEffectDynamicsProcessorPreset = {}
 
+---@return USubmixEffectDynamicsProcessorPreset
+function USubmixEffectDynamicsProcessorPreset:get() end
+
 ---@param Settings FSubmixEffectDynamicsProcessorSettings
 function USubmixEffectDynamicsProcessorPreset:SetSettings(Settings) end
 ---@param Submix USoundSubmix
@@ -462,6 +501,9 @@ function USubmixEffectDynamicsProcessorPreset:ResetKey() end
 ---@field Settings FSubmixEffectReverbSettings
 USubmixEffectReverbPreset = {}
 
+---@return USubmixEffectReverbPreset
+function USubmixEffectReverbPreset:get() end
+
 ---@param InReverbEffect UReverbEffect
 ---@param WetLevel float
 ---@param DryLevel float
@@ -473,6 +515,9 @@ function USubmixEffectReverbPreset:SetSettings(InSettings) end
 ---@class USubmixEffectSubmixEQPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectSubmixEQSettings
 USubmixEffectSubmixEQPreset = {}
+
+---@return USubmixEffectSubmixEQPreset
+function USubmixEffectSubmixEQPreset:get() end
 
 ---@param InSettings FSubmixEffectSubmixEQSettings
 function USubmixEffectSubmixEQPreset:SetSettings(InSettings) end
@@ -504,6 +549,9 @@ function USubmixEffectSubmixEQPreset:SetSettings(InSettings) end
 ---@field Synth USynthSound
 ---@field AudioComponent UAudioComponent
 USynthComponent = {}
+
+---@return USynthComponent
+function USynthComponent:get() end
 
 function USynthComponent:Stop() end
 function USynthComponent:Start() end
@@ -538,6 +586,9 @@ function USynthComponent:AdjustVolume(AdjustVolumeDuration, AdjustVolumeLevel, F
 ---@class USynthSound : USoundWaveProcedural
 ---@field OwningSynthComponent TWeakObjectPtr<USynthComponent>
 USynthSound = {}
+
+---@return USynthSound
+function USynthSound:get() end
 
 
 

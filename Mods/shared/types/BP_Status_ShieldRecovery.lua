@@ -11,6 +11,9 @@
 ---@field flagName FName
 UBP_Status_ShieldRecovery_C = {}
 
+---@return UBP_Status_ShieldRecovery_C
+function UBP_Status_ShieldRecovery_C:get() end
+
 function UBP_Status_ShieldRecovery_C:CreateDynamicMaterial() end
 function UBP_Status_ShieldRecovery_C:ChangeSheildDamageMaterial() end
 ---@param ip UPalIndividualCharacterParameter

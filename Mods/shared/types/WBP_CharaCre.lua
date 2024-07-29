@@ -45,6 +45,9 @@
 ---@field OnClickedInGameCompleteButton FWBP_CharaCre_COnClickedInGameCompleteButton
 UWBP_CharaCre_C = {}
 
+---@return UWBP_CharaCre_C
+function UWBP_CharaCre_C:get() end
+
 ---@param IsNewGame boolean
 function UWBP_CharaCre_C:SetIsNewGame(IsNewGame) end
 ---@param VoiceID int32

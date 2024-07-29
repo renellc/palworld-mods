@@ -9,6 +9,9 @@
 ---@field ElapsedTime double
 ABP_PalIncidentCamera_C = {}
 
+---@return ABP_PalIncidentCamera_C
+function ABP_PalIncidentCamera_C:get() end
+
 ---@param Transform FTransform
 function ABP_PalIncidentCamera_C:SetCameraTransform(Transform) end
 

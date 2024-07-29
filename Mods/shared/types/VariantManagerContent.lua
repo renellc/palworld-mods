@@ -5,6 +5,9 @@
 ---@field DirectorInstances TMap<TObjectPtr<UClass>, ULevelVariantSetsFunctionDirector>
 ALevelVariantSetsActor = {}
 
+---@return ALevelVariantSetsActor
+function ALevelVariantSetsActor:get() end
+
 ---@param VariantSetName FString
 ---@param VariantName FString
 ---@return boolean
@@ -25,6 +28,9 @@ function ALevelVariantSetsActor:GetLevelVariantSets(bLoad) end
 ---@field LastSelectedOption int32
 ASwitchActor = {}
 
+---@return ASwitchActor
+function ASwitchActor:get() end
+
 ---@param OptionIndex int32
 function ASwitchActor:SelectOption(OptionIndex) end
 ---@return int32
@@ -39,11 +45,17 @@ function ASwitchActor:GetOptions() end
 ---@field ComponentName FString
 FCapturedPropSegment = {}
 
+---@return FCapturedPropSegment
+function FCapturedPropSegment:get() end
+
 
 
 ---@class FFunctionCaller
 ---@field FunctionName FName
 FFunctionCaller = {}
+
+---@return FFunctionCaller
+function FFunctionCaller:get() end
 
 
 
@@ -53,12 +65,18 @@ FFunctionCaller = {}
 ---@field bEnabled boolean
 FVariantDependency = {}
 
+---@return FVariantDependency
+function FVariantDependency:get() end
+
 
 
 ---@class ULevelVariantSets : UObject
 ---@field DirectorClass TObjectPtr<UClass>
 ---@field VariantSets TArray<UVariantSet>
 ULevelVariantSets = {}
+
+---@return ULevelVariantSets
+function ULevelVariantSets:get() end
 
 ---@param VariantSetName FString
 ---@return UVariantSet
@@ -72,6 +90,9 @@ function ULevelVariantSets:GetNumVariantSets() end
 
 ---@class ULevelVariantSetsFunctionDirector : UObject
 ULevelVariantSetsFunctionDirector = {}
+
+---@return ULevelVariantSetsFunctionDirector
+function ULevelVariantSetsFunctionDirector:get() end
 
 
 ---@class UPropertyValue : UObject
@@ -87,6 +108,9 @@ ULevelVariantSetsFunctionDirector = {}
 ---@field PropCategory EPropertyValueCategory
 UPropertyValue = {}
 
+---@return UPropertyValue
+function UPropertyValue:get() end
+
 ---@return boolean
 function UPropertyValue:HasRecordedData() end
 ---@return FText
@@ -98,25 +122,43 @@ function UPropertyValue:GetFullDisplayString() end
 ---@class UPropertyValueColor : UPropertyValue
 UPropertyValueColor = {}
 
+---@return UPropertyValueColor
+function UPropertyValueColor:get() end
+
 
 ---@class UPropertyValueMaterial : UPropertyValue
 UPropertyValueMaterial = {}
+
+---@return UPropertyValueMaterial
+function UPropertyValueMaterial:get() end
 
 
 ---@class UPropertyValueOption : UPropertyValue
 UPropertyValueOption = {}
 
+---@return UPropertyValueOption
+function UPropertyValueOption:get() end
+
 
 ---@class UPropertyValueSoftObject : UPropertyValue
 UPropertyValueSoftObject = {}
+
+---@return UPropertyValueSoftObject
+function UPropertyValueSoftObject:get() end
 
 
 ---@class UPropertyValueTransform : UPropertyValue
 UPropertyValueTransform = {}
 
+---@return UPropertyValueTransform
+function UPropertyValueTransform:get() end
+
 
 ---@class UPropertyValueVisibility : UPropertyValue
 UPropertyValueVisibility = {}
+
+---@return UPropertyValueVisibility
+function UPropertyValueVisibility:get() end
 
 
 ---@class UVariant : UObject
@@ -125,6 +167,9 @@ UPropertyValueVisibility = {}
 ---@field ObjectBindings TArray<UVariantObjectBinding>
 ---@field Thumbnail UTexture2D
 UVariant = {}
+
+---@return UVariant
+function UVariant:get() end
 
 function UVariant:SwitchOn() end
 ---@param NewThumbnail UTexture2D
@@ -180,6 +225,9 @@ function UVariant:AddDependency(Dependency) end
 ---@field FunctionCallers TArray<FFunctionCaller>
 UVariantObjectBinding = {}
 
+---@return UVariantObjectBinding
+function UVariantObjectBinding:get() end
+
 
 
 ---@class UVariantSet : UObject
@@ -188,6 +236,9 @@ UVariantObjectBinding = {}
 ---@field Variants TArray<UVariant>
 ---@field Thumbnail UTexture2D
 UVariantSet = {}
+
+---@return UVariantSet
+function UVariantSet:get() end
 
 ---@param NewThumbnail UTexture2D
 function UVariantSet:SetThumbnailFromTexture(NewThumbnail) end

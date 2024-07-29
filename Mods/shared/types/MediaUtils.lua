@@ -7,6 +7,9 @@
 ---@field Loop EMediaPlayerOptionBooleanOverride
 FMediaPlayerOptions = {}
 
+---@return FMediaPlayerOptions
+function FMediaPlayerOptions:get() end
+
 
 
 ---@class FMediaPlayerTrackOptions
@@ -18,6 +21,9 @@ FMediaPlayerOptions = {}
 ---@field Text int32
 ---@field Video int32
 FMediaPlayerTrackOptions = {}
+
+---@return FMediaPlayerTrackOptions
+function FMediaPlayerTrackOptions:get() end
 
 
 

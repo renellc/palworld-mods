@@ -13,6 +13,9 @@
 ---@field OnUserInitializeComplete FCommonUserInitializeParamsOnUserInitializeComplete
 FCommonUserInitializeParams = {}
 
+---@return FCommonUserInitializeParams
+function FCommonUserInitializeParams:get() end
+
 
 
 ---@class FOnlineResultInformation
@@ -21,11 +24,17 @@ FCommonUserInitializeParams = {}
 ---@field ErrorText FText
 FOnlineResultInformation = {}
 
+---@return FOnlineResultInformation
+function FOnlineResultInformation:get() end
+
 
 
 ---@class UAsyncAction_CommonUserInitialize : UCancellableAsyncAction
 ---@field OnInitializationComplete FAsyncAction_CommonUserInitializeOnInitializationComplete
 UAsyncAction_CommonUserInitialize = {}
+
+---@return UAsyncAction_CommonUserInitialize
+function UAsyncAction_CommonUserInitialize:get() end
 
 ---@param Target UCommonUserSubsystem
 ---@param LocalPlayerIndex int32
@@ -50,6 +59,9 @@ function UAsyncAction_CommonUserInitialize:HandleInitializationComplete(UserInfo
 ---@field K2_OnJoinSessionCompleteEvent FCommonSessionSubsystemK2_OnJoinSessionCompleteEvent
 ---@field K2_OnCreateSessionCompleteEvent FCommonSessionSubsystemK2_OnCreateSessionCompleteEvent
 UCommonSessionSubsystem = {}
+
+---@return UCommonSessionSubsystem
+function UCommonSessionSubsystem:get() end
 
 ---@param JoiningOrHostingPlayer APlayerController
 ---@param Request UCommonSession_HostSessionRequest
@@ -80,10 +92,16 @@ function UCommonSessionSubsystem:CleanUpSessions() end
 ---@field MaxPlayerCount int32
 UCommonSession_HostSessionRequest = {}
 
+---@return UCommonSession_HostSessionRequest
+function UCommonSession_HostSessionRequest:get() end
+
 
 
 ---@class UCommonSession_SearchResult : UObject
 UCommonSession_SearchResult = {}
+
+---@return UCommonSession_SearchResult
+function UCommonSession_SearchResult:get() end
 
 ---@param Key FName
 ---@param Value FString
@@ -112,6 +130,9 @@ function UCommonSession_SearchResult:GetDescription() end
 ---@field K2_OnSearchFinished FCommonSession_SearchSessionRequestK2_OnSearchFinished
 UCommonSession_SearchSessionRequest = {}
 
+---@return UCommonSession_SearchSessionRequest
+function UCommonSession_SearchSessionRequest:get() end
+
 
 
 ---@class UCommonUserInfo : UObject
@@ -122,6 +143,9 @@ UCommonSession_SearchSessionRequest = {}
 ---@field bIsGuest boolean
 ---@field InitializationState ECommonUserInitializationState
 UCommonUserInfo = {}
+
+---@return UCommonUserInfo
+function UCommonUserInfo:get() end
 
 ---@param Privilege ECommonUserPrivilege
 ---@return ECommonUserAvailability
@@ -145,6 +169,9 @@ function UCommonUserInfo:GetCachedPrivilegeResult(Privilege, Context) end
 ---@field OnUserPrivilegeChanged FCommonUserSubsystemOnUserPrivilegeChanged
 ---@field LocalUserInfos TMap<int32, UCommonUserInfo>
 UCommonUserSubsystem = {}
+
+---@return UCommonUserSubsystem
+function UCommonUserSubsystem:get() end
 
 ---@param LocalPlayerIndex int32
 ---@return boolean

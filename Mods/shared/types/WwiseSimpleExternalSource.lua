@@ -7,6 +7,9 @@
 ---@field MediaName FString
 FWwiseExternalSourceCookieDefaultMedia = {}
 
+---@return FWwiseExternalSourceCookieDefaultMedia
+function FWwiseExternalSourceCookieDefaultMedia:get() end
+
 
 
 ---@class FWwiseExternalSourceMediaInfo : FTableRowBase
@@ -19,6 +22,9 @@ FWwiseExternalSourceCookieDefaultMedia = {}
 ---@field PrefetchSize int32
 FWwiseExternalSourceMediaInfo = {}
 
+---@return FWwiseExternalSourceMediaInfo
+function FWwiseExternalSourceMediaInfo:get() end
+
 
 
 ---@class UWwiseExternalSourceSettings : UObject
@@ -26,6 +32,9 @@ FWwiseExternalSourceMediaInfo = {}
 ---@field ExternalSourceDefaultMedia FSoftObjectPath
 ---@field ExternalSourceStagingDirectory FDirectoryPath
 UWwiseExternalSourceSettings = {}
+
+---@return UWwiseExternalSourceSettings
+function UWwiseExternalSourceSettings:get() end
 
 
 

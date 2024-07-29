@@ -11,6 +11,9 @@
 ---@field TargetActor AActor
 ABP_CombatHeli_C = {}
 
+---@return ABP_CombatHeli_C
+function ABP_CombatHeli_C:get() end
+
 function ABP_CombatHeli_C:SetHideAll() end
 function ABP_CombatHeli_C:ShootMGBullet() end
 function ABP_CombatHeli_C:ReceiveBeginPlay() end

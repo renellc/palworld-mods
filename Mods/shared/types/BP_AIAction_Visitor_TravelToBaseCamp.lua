@@ -11,6 +11,9 @@
 ---@field IsStuck boolean
 UBP_AIAction_Visitor_TravelToBaseCamp_C = {}
 
+---@return UBP_AIAction_Visitor_TravelToBaseCamp_C
+function UBP_AIAction_Visitor_TravelToBaseCamp_C:get() end
+
 ---@param ControlledPawn AActor
 ---@param DeltaTime float
 UBP_AIAction_Visitor_TravelToBaseCamp_C['Tick Move to Base Camp'] = function(ControlledPawn, DeltaTime) end

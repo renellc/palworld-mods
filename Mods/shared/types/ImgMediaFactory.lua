@@ -13,5 +13,8 @@
 ---@field UseDefaultProxy boolean
 UImgMediaSettings = {}
 
+---@return UImgMediaSettings
+function UImgMediaSettings:get() end
+
 
 

@@ -15,11 +15,17 @@
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
 FAnimBlueprintGeneratedConstantData = {}
 
+---@return FAnimBlueprintGeneratedConstantData
+function FAnimBlueprintGeneratedConstantData:get() end
+
 
 
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __BoolProperty boolean
 FAnimBlueprintGeneratedMutableData = {}
+
+---@return FAnimBlueprintGeneratedMutableData
+function FAnimBlueprintGeneratedMutableData:get() end
 
 
 
@@ -37,6 +43,9 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_CopyPoseFromMesh FAnimNode_CopyPoseFromMesh
 ---@field IsDedicatedServer boolean
 UABP_Player_Hair_C = {}
+
+---@return UABP_Player_Hair_C
+function UABP_Player_Hair_C:get() end
 
 ---@param InPose FPoseLink
 ---@param HairLayer FPoseLink

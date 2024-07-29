@@ -11,6 +11,9 @@
 ---@field EffectAsset_End TMap<EPalSizeType, UNiagaraSystem>
 UBP_VisualEffect_Status_Freeze_C = {}
 
+---@return UBP_VisualEffect_Status_Freeze_C
+function UBP_VisualEffect_Status_Freeze_C:get() end
+
 ---@param Value double
 UBP_VisualEffect_Status_Freeze_C['Set Frostbite'] = function(Value) end
 function UBP_VisualEffect_Status_Freeze_C:OnBeginVisualEffect() end

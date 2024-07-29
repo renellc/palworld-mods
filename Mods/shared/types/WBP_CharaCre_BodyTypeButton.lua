@@ -14,6 +14,9 @@
 ---@field VoiceMsgID FDataTableRowHandle
 UWBP_CharaCre_BodyTypeButton_C = {}
 
+---@return UWBP_CharaCre_BodyTypeButton_C
+function UWBP_CharaCre_BodyTypeButton_C:get() end
+
 ---@param ButtonIndex int32
 function UWBP_CharaCre_BodyTypeButton_C:SetupAsVoice(ButtonIndex) end
 ---@param PresetName FName

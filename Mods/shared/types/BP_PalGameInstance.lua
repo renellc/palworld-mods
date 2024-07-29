@@ -14,6 +14,9 @@
 ---@field CreateSessionErrorMsgId FDataTableRowHandle
 UBP_PalGameInstance_C = {}
 
+---@return UBP_PalGameInstance_C
+function UBP_PalGameInstance_C:get() end
+
 ---@param Active boolean
 function UBP_PalGameInstance_C:SetActivePlayerActor(Active) end
 ---@param bResult boolean

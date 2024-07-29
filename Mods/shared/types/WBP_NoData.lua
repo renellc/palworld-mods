@@ -13,6 +13,9 @@
 ---@field Image_142 UImage
 UWBP_NoData_C = {}
 
+---@return UWBP_NoData_C
+function UWBP_NoData_C:get() end
+
 ---@param Text FText
 function UWBP_NoData_C:SetText(Text) end
 

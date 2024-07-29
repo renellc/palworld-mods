@@ -28,6 +28,9 @@
 ---@field BrokenWorldNameMsgID FDataTableRowHandle
 UWBP_Title_WorldSelect_ListContent_C = {}
 
+---@return UWBP_Title_WorldSelect_ListContent_C
+function UWBP_Title_WorldSelect_ListContent_C:get() end
+
 ---@param PingOperation UPingIP
 ---@param HostName FString
 function UWBP_Title_WorldSelect_ListContent_C:OnPingFailure(PingOperation, HostName) end

@@ -5,6 +5,9 @@
 ---@field Niagra UNiagaraComponent
 UBP_ActionDiscoveryLookat_C = {}
 
+---@return UBP_ActionDiscoveryLookat_C
+function UBP_ActionDiscoveryLookat_C:get() end
+
 function UBP_ActionDiscoveryLookat_C:TurnToTargetOneFrame() end
 ---@param PSystem UNiagaraComponent
 function UBP_ActionDiscoveryLookat_C:OnFinishedFX(PSystem) end

@@ -27,6 +27,9 @@
 ---@field TargetLocationDistanceRight float
 UBP_AIAction_OtomoFollow_C = {}
 
+---@return UBP_AIAction_OtomoFollow_C
+function UBP_AIAction_OtomoFollow_C:get() end
+
 ---@param IsTurn boolean
 function UBP_AIAction_OtomoFollow_C:IsTurnInBuildingMode(IsTurn) end
 ---@param IsBuilding boolean

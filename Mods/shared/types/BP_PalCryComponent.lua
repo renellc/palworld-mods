@@ -20,6 +20,9 @@
 ---@field DisableCrying boolean
 UBP_PalCryComponent_C = {}
 
+---@return UBP_PalCryComponent_C
+function UBP_PalCryComponent_C:get() end
+
 function UBP_PalCryComponent_C:CheckWorkerEvent() end
 ---@param bIsActive boolean
 function UBP_PalCryComponent_C:OnSpawnPal(bIsActive) end

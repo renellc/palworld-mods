@@ -5,6 +5,9 @@
 ---@field CreatedPlayerInputKeyGuideWidgets TMap<FName, UWidget>
 UBP_PalRichTextDecorator_KeyGuideIcon_C = {}
 
+---@return UBP_PalRichTextDecorator_KeyGuideIcon_C
+function UBP_PalRichTextDecorator_KeyGuideIcon_C:get() end
+
 ---@param KeyGuideActionName FName
 ---@param IconScale float
 ---@param OverrideType int32

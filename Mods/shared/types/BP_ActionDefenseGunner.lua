@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_ActionDefenseGunner_C = {}
 
+---@return UBP_ActionDefenseGunner_C
+function UBP_ActionDefenseGunner_C:get() end
+
 ---@param Montage UAnimMontage
 ---@param Exist boolean
 function UBP_ActionDefenseGunner_C:FindMontage(Montage, Exist) end

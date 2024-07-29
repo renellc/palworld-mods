@@ -4,10 +4,16 @@
 ---@field Name FName
 FActorLayer = {}
 
+---@return FActorLayer
+function FActorLayer:get() end
+
 
 
 ---@class ULayersBlueprintLibrary : UBlueprintFunctionLibrary
 ULayersBlueprintLibrary = {}
+
+---@return ULayersBlueprintLibrary
+function ULayersBlueprintLibrary:get() end
 
 ---@param InActor AActor
 ---@param Layer FActorLayer

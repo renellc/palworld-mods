@@ -5,6 +5,9 @@
 ---@field ['14_5_x_114_mm_Bullet'] UStaticMeshComponent
 ABP_NormalBullet_C = {}
 
+---@return ABP_NormalBullet_C
+function ABP_NormalBullet_C:get() end
+
 ---@param NiagaraEffect UNiagaraSystem
 function ABP_NormalBullet_C:GetHitEffect(NiagaraEffect) end
 ---@param ImpactPoint FVector

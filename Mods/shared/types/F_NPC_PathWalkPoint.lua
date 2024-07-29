@@ -7,5 +7,8 @@
 ---@field Yaw_13_9634CB3043B1505237E811853806822B double
 FF_NPC_PathWalkPoint = {}
 
+---@return FF_NPC_PathWalkPoint
+function FF_NPC_PathWalkPoint:get() end
+
 
 

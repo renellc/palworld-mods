@@ -6,6 +6,9 @@
 ---@field RecordKey FName
 UBP_MultiTalk_OrderByName_C = {}
 
+---@return UBP_MultiTalk_OrderByName_C
+function UBP_MultiTalk_OrderByName_C:get() end
+
 ---@param MaxTalkCount int32
 function UBP_MultiTalk_OrderByName_C:GetMaxTalkCount(MaxTalkCount) end
 ---@param Sequence FString

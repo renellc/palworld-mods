@@ -21,6 +21,9 @@
 ---@field NormalIntensity double
 ABP_FluidController_C = {}
 
+---@return ABP_FluidController_C
+function ABP_FluidController_C:get() end
+
 ---@param Index int32
 ---@param RenderTarget UTextureRenderTarget2D
 function ABP_FluidController_C:GetRT_Height(Index, RenderTarget) end

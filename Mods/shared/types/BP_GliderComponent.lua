@@ -10,6 +10,9 @@
 ---@field TimerHandle FTimerHandle
 UBP_GliderComponent_C = {}
 
+---@return UBP_GliderComponent_C
+function UBP_GliderComponent_C:get() end
+
 function UBP_GliderComponent_C:CheckReturnSpawnedOtomo() end
 function UBP_GliderComponent_C:SpawnGlidingEffect() end
 function UBP_GliderComponent_C:Setup() end

@@ -3,6 +3,9 @@
 ---@class FAnalogInputEvent : FKeyEvent
 FAnalogInputEvent = {}
 
+---@return FAnalogInputEvent
+function FAnalogInputEvent:get() end
+
 
 ---@class FButtonStyle : FSlateWidgetStyle
 ---@field Normal FSlateBrush
@@ -19,14 +22,23 @@ FAnalogInputEvent = {}
 ---@field HoveredSlateSound FSlateSound
 FButtonStyle = {}
 
+---@return FButtonStyle
+function FButtonStyle:get() end
+
 
 
 ---@class FCaptureLostEvent
 FCaptureLostEvent = {}
 
+---@return FCaptureLostEvent
+function FCaptureLostEvent:get() end
+
 
 ---@class FCharacterEvent : FInputEvent
 FCharacterEvent = {}
+
+---@return FCharacterEvent
+function FCharacterEvent:get() end
 
 
 ---@class FCheckBoxStyle : FSlateWidgetStyle
@@ -57,6 +69,9 @@ FCharacterEvent = {}
 ---@field HoveredSlateSound FSlateSound
 FCheckBoxStyle = {}
 
+---@return FCheckBoxStyle
+function FCheckBoxStyle:get() end
+
 
 
 ---@class FComboBoxStyle : FSlateWidgetStyle
@@ -66,6 +81,9 @@ FCheckBoxStyle = {}
 ---@field ContentPadding FMargin
 ---@field MenuRowPadding FMargin
 FComboBoxStyle = {}
+
+---@return FComboBoxStyle
+function FComboBoxStyle:get() end
 
 
 
@@ -81,12 +99,18 @@ FComboBoxStyle = {}
 ---@field DownArrowAlign EVerticalAlignment
 FComboButtonStyle = {}
 
+---@return FComboButtonStyle
+function FComboButtonStyle:get() end
+
 
 
 ---@class FCompositeFallbackFont
 ---@field Typeface FTypeface
 ---@field ScalingFactor float
 FCompositeFallbackFont = {}
+
+---@return FCompositeFallbackFont
+function FCompositeFallbackFont:get() end
 
 
 
@@ -96,12 +120,18 @@ FCompositeFallbackFont = {}
 ---@field SubTypefaces TArray<FCompositeSubFont>
 FCompositeFont = {}
 
+---@return FCompositeFont
+function FCompositeFont:get() end
+
 
 
 ---@class FCompositeSubFont : FCompositeFallbackFont
 ---@field CharacterRanges TArray<FInt32Range>
 ---@field Cultures FString
 FCompositeSubFont = {}
+
+---@return FCompositeSubFont
+function FCompositeSubFont:get() end
 
 
 
@@ -126,6 +156,9 @@ FCompositeSubFont = {}
 ---@field IconBorderPadding float
 FDockTabStyle = {}
 
+---@return FDockTabStyle
+function FDockTabStyle:get() end
+
 
 
 ---@class FEditableTextBoxStyle : FSlateWidgetStyle
@@ -144,6 +177,9 @@ FDockTabStyle = {}
 ---@field ScrollBarStyle FScrollBarStyle
 FEditableTextBoxStyle = {}
 
+---@return FEditableTextBoxStyle
+function FEditableTextBoxStyle:get() end
+
 
 
 ---@class FEditableTextStyle : FSlateWidgetStyle
@@ -154,6 +190,9 @@ FEditableTextBoxStyle = {}
 ---@field CaretImage FSlateBrush
 FEditableTextStyle = {}
 
+---@return FEditableTextStyle
+function FEditableTextStyle:get() end
+
 
 
 ---@class FExpandableAreaStyle : FSlateWidgetStyle
@@ -162,10 +201,16 @@ FEditableTextStyle = {}
 ---@field RolloutAnimationSeconds float
 FExpandableAreaStyle = {}
 
+---@return FExpandableAreaStyle
+function FExpandableAreaStyle:get() end
+
 
 
 ---@class FFocusEvent
 FFocusEvent = {}
+
+---@return FFocusEvent
+function FFocusEvent:get() end
 
 
 ---@class FFontData
@@ -175,6 +220,9 @@ FFocusEvent = {}
 ---@field SubFaceIndex int32
 ---@field FontFaceAsset UObject
 FFontData = {}
+
+---@return FFontData
+function FFontData:get() end
 
 
 
@@ -187,10 +235,16 @@ FFontData = {}
 ---@field OutlineColor FLinearColor
 FFontOutlineSettings = {}
 
+---@return FFontOutlineSettings
+function FFontOutlineSettings:get() end
+
 
 
 ---@class FGeometry
 FGeometry = {}
+
+---@return FGeometry
+function FGeometry:get() end
 
 
 ---@class FHeaderRowStyle : FSlateWidgetStyle
@@ -204,6 +258,9 @@ FGeometry = {}
 ---@field HorizontalSeparatorThickness float
 FHeaderRowStyle = {}
 
+---@return FHeaderRowStyle
+function FHeaderRowStyle:get() end
+
 
 
 ---@class FHyperlinkStyle : FSlateWidgetStyle
@@ -212,12 +269,18 @@ FHeaderRowStyle = {}
 ---@field Padding FMargin
 FHyperlinkStyle = {}
 
+---@return FHyperlinkStyle
+function FHyperlinkStyle:get() end
+
 
 
 ---@class FInlineEditableTextBlockStyle : FSlateWidgetStyle
 ---@field EditableTextBoxStyle FEditableTextBoxStyle
 ---@field TextStyle FTextBlockStyle
 FInlineEditableTextBlockStyle = {}
+
+---@return FInlineEditableTextBlockStyle
+function FInlineEditableTextBlockStyle:get() end
 
 
 
@@ -226,14 +289,23 @@ FInlineEditableTextBlockStyle = {}
 ---@field Baseline int16
 FInlineTextImageStyle = {}
 
+---@return FInlineTextImageStyle
+function FInlineTextImageStyle:get() end
+
 
 
 ---@class FInputEvent
 FInputEvent = {}
 
+---@return FInputEvent
+function FInputEvent:get() end
+
 
 ---@class FKeyEvent : FInputEvent
 FKeyEvent = {}
+
+---@return FKeyEvent
+function FKeyEvent:get() end
 
 
 ---@class FMargin
@@ -243,18 +315,30 @@ FKeyEvent = {}
 ---@field Bottom float
 FMargin = {}
 
+---@return FMargin
+function FMargin:get() end
+
 
 
 ---@class FMotionEvent : FInputEvent
 FMotionEvent = {}
 
+---@return FMotionEvent
+function FMotionEvent:get() end
+
 
 ---@class FNavigationEvent : FInputEvent
 FNavigationEvent = {}
 
+---@return FNavigationEvent
+function FNavigationEvent:get() end
+
 
 ---@class FPointerEvent : FInputEvent
 FPointerEvent = {}
+
+---@return FPointerEvent
+function FPointerEvent:get() end
 
 
 ---@class FProgressBarStyle : FSlateWidgetStyle
@@ -263,6 +347,9 @@ FPointerEvent = {}
 ---@field MarqueeImage FSlateBrush
 ---@field EnableFillAnimation boolean
 FProgressBarStyle = {}
+
+---@return FProgressBarStyle
+function FProgressBarStyle:get() end
 
 
 
@@ -279,12 +366,18 @@ FProgressBarStyle = {}
 ---@field Thickness float
 FScrollBarStyle = {}
 
+---@return FScrollBarStyle
+function FScrollBarStyle:get() end
+
 
 
 ---@class FScrollBorderStyle : FSlateWidgetStyle
 ---@field TopShadowBrush FSlateBrush
 ---@field BottomShadowBrush FSlateBrush
 FScrollBorderStyle = {}
+
+---@return FScrollBorderStyle
+function FScrollBorderStyle:get() end
 
 
 
@@ -295,6 +388,9 @@ FScrollBorderStyle = {}
 ---@field LeftShadowBrush FSlateBrush
 ---@field RightShadowBrush FSlateBrush
 FScrollBoxStyle = {}
+
+---@return FScrollBoxStyle
+function FScrollBoxStyle:get() end
 
 
 
@@ -311,6 +407,9 @@ FScrollBoxStyle = {}
 ---@field bLeftAlignGlassImageAndClearButton boolean
 FSearchBoxStyle = {}
 
+---@return FSearchBoxStyle
+function FSearchBoxStyle:get() end
+
 
 
 ---@class FSegmentedControlStyle : FSlateWidgetStyle
@@ -320,6 +419,9 @@ FSearchBoxStyle = {}
 ---@field BackgroundBrush FSlateBrush
 ---@field UniformPadding FMargin
 FSegmentedControlStyle = {}
+
+---@return FSegmentedControlStyle
+function FSegmentedControlStyle:get() end
 
 
 
@@ -339,6 +441,9 @@ FSegmentedControlStyle = {}
 ---@field UVRegion FBox2f
 FSlateBrush = {}
 
+---@return FSlateBrush
+function FSlateBrush:get() end
+
 
 
 ---@class FSlateBrushOutlineSettings
@@ -349,12 +454,18 @@ FSlateBrush = {}
 ---@field bUseBrushTransparency boolean
 FSlateBrushOutlineSettings = {}
 
+---@return FSlateBrushOutlineSettings
+function FSlateBrushOutlineSettings:get() end
+
 
 
 ---@class FSlateColor
 ---@field SpecifiedColor FLinearColor
 ---@field ColorUseRule ESlateColorStylingMode
 FSlateColor = {}
+
+---@return FSlateColor
+function FSlateColor:get() end
 
 
 
@@ -368,16 +479,25 @@ FSlateColor = {}
 ---@field SkewAmount float
 FSlateFontInfo = {}
 
+---@return FSlateFontInfo
+function FSlateFontInfo:get() end
+
 
 
 ---@class FSlateSound
 ---@field ResourceObject UObject
 FSlateSound = {}
 
+---@return FSlateSound
+function FSlateSound:get() end
+
 
 
 ---@class FSlateWidgetStyle
 FSlateWidgetStyle = {}
+
+---@return FSlateWidgetStyle
+function FSlateWidgetStyle:get() end
 
 
 ---@class FSliderStyle : FSlateWidgetStyle
@@ -389,6 +509,9 @@ FSlateWidgetStyle = {}
 ---@field DisabledThumbImage FSlateBrush
 ---@field BarThickness float
 FSliderStyle = {}
+
+---@return FSliderStyle
+function FSliderStyle:get() end
 
 
 
@@ -405,6 +528,9 @@ FSliderStyle = {}
 ---@field InsetPadding FMargin
 FSpinBoxStyle = {}
 
+---@return FSpinBoxStyle
+function FSpinBoxStyle:get() end
+
 
 
 ---@class FSplitterStyle : FSlateWidgetStyle
@@ -412,16 +538,25 @@ FSpinBoxStyle = {}
 ---@field HandleHighlightBrush FSlateBrush
 FSplitterStyle = {}
 
+---@return FSplitterStyle
+function FSplitterStyle:get() end
+
 
 
 ---@class FStyleColorList
 ---@field StyleColors FLinearColor
 FStyleColorList = {}
 
+---@return FStyleColorList
+function FStyleColorList:get() end
+
 
 
 ---@class FStyleTheme
 FStyleTheme = {}
+
+---@return FStyleTheme
+function FStyleTheme:get() end
 
 
 ---@class FTableColumnHeaderStyle : FSlateWidgetStyle
@@ -435,6 +570,9 @@ FStyleTheme = {}
 ---@field MenuDropdownNormalBorderBrush FSlateBrush
 ---@field MenuDropdownHoveredBorderBrush FSlateBrush
 FTableColumnHeaderStyle = {}
+
+---@return FTableColumnHeaderStyle
+function FTableColumnHeaderStyle:get() end
 
 
 
@@ -460,11 +598,17 @@ FTableColumnHeaderStyle = {}
 ---@field InactiveHighlightedBrush FSlateBrush
 FTableRowStyle = {}
 
+---@return FTableRowStyle
+function FTableRowStyle:get() end
+
 
 
 ---@class FTableViewStyle : FSlateWidgetStyle
 ---@field BackgroundBrush FSlateBrush
 FTableViewStyle = {}
+
+---@return FTableViewStyle
+function FTableViewStyle:get() end
 
 
 
@@ -481,6 +625,9 @@ FTableViewStyle = {}
 ---@field TransformPolicy ETextTransformPolicy
 ---@field OverflowPolicy ETextOverflowPolicy
 FTextBlockStyle = {}
+
+---@return FTextBlockStyle
+function FTextBlockStyle:get() end
 
 
 
@@ -508,11 +655,17 @@ FTextBlockStyle = {}
 ---@field bShowLabels boolean
 FToolBarStyle = {}
 
+---@return FToolBarStyle
+function FToolBarStyle:get() end
+
 
 
 ---@class FTypeface
 ---@field Fonts TArray<FTypefaceEntry>
 FTypeface = {}
+
+---@return FTypeface
+function FTypeface:get() end
 
 
 
@@ -520,6 +673,9 @@ FTypeface = {}
 ---@field Name FName
 ---@field Font FFontData
 FTypefaceEntry = {}
+
+---@return FTypefaceEntry
+function FTypefaceEntry:get() end
 
 
 
@@ -531,6 +687,9 @@ FTypefaceEntry = {}
 ---@field NoVolumeImage FSlateBrush
 ---@field MutedImage FSlateBrush
 FVolumeControlStyle = {}
+
+---@return FVolumeControlStyle
+function FVolumeControlStyle:get() end
 
 
 
@@ -554,22 +713,37 @@ FVolumeControlStyle = {}
 ---@field BorderPadding FMargin
 FWindowStyle = {}
 
+---@return FWindowStyle
+function FWindowStyle:get() end
+
 
 
 ---@class IFontFaceInterface : IInterface
 IFontFaceInterface = {}
 
+---@return IFontFaceInterface
+function IFontFaceInterface:get() end
+
 
 ---@class IFontProviderInterface : IInterface
 IFontProviderInterface = {}
+
+---@return IFontProviderInterface
+function IFontProviderInterface:get() end
 
 
 ---@class ISlateWidgetStyleContainerInterface : IInterface
 ISlateWidgetStyleContainerInterface = {}
 
+---@return ISlateWidgetStyleContainerInterface
+function ISlateWidgetStyleContainerInterface:get() end
+
 
 ---@class UFontBulkData : UObject
 UFontBulkData = {}
+
+---@return UFontBulkData
+function UFontBulkData:get() end
 
 
 ---@class USlateThemeManager : UObject
@@ -577,19 +751,31 @@ UFontBulkData = {}
 ---@field ActiveColors FStyleColorList
 USlateThemeManager = {}
 
+---@return USlateThemeManager
+function USlateThemeManager:get() end
+
 
 
 ---@class USlateTypes : UObject
 USlateTypes = {}
+
+---@return USlateTypes
+function USlateTypes:get() end
 
 
 ---@class USlateWidgetStyleAsset : UObject
 ---@field CustomStyle USlateWidgetStyleContainerBase
 USlateWidgetStyleAsset = {}
 
+---@return USlateWidgetStyleAsset
+function USlateWidgetStyleAsset:get() end
+
 
 
 ---@class USlateWidgetStyleContainerBase : UObject
 USlateWidgetStyleContainerBase = {}
+
+---@return USlateWidgetStyleContainerBase
+function USlateWidgetStyleContainerBase:get() end
 
 

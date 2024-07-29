@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Action_NPC_SpawnOtomo_C = {}
 
+---@return UBP_Action_NPC_SpawnOtomo_C
+function UBP_Action_NPC_SpawnOtomo_C:get() end
+
 ---@param Success boolean
 function UBP_Action_NPC_SpawnOtomo_C:RequestSpawnPal(Success) end
 ---@param NotifyName FName

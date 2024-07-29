@@ -7,6 +7,9 @@
 ---@field OnSetEmpty FWBP_PalItemIconBase_COnSetEmpty
 UWBP_PalItemIconBase_C = {}
 
+---@return UWBP_PalItemIconBase_C
+function UWBP_PalItemIconBase_C:get() end
+
 function UWBP_PalItemIconBase_C:SetEmpty() end
 ---@param StaticItemId FName
 function UWBP_PalItemIconBase_C:Setup(StaticItemId) end

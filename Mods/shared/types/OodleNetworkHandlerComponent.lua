@@ -11,5 +11,8 @@
 ---@field bNoTrials boolean
 UOodleNetworkTrainerCommandlet = {}
 
+---@return UOodleNetworkTrainerCommandlet
+function UOodleNetworkTrainerCommandlet:get() end
+
 
 

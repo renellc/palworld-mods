@@ -19,6 +19,9 @@
 ---@field SimpleLeaveAIAction UBP_AIAction_SimpleLeave_C
 ABP_CaptureWire_C = {}
 
+---@return ABP_CaptureWire_C
+function ABP_CaptureWire_C:get() end
+
 function ABP_CaptureWire_C:RagDollStart() end
 ---@param TargetPal APalCharacter
 function ABP_CaptureWire_C:Setup(TargetPal) end

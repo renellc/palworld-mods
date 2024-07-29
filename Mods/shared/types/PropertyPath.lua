@@ -5,6 +5,9 @@
 ---@field CachedFunction UFunction
 FCachedPropertyPath = {}
 
+---@return FCachedPropertyPath
+function FCachedPropertyPath:get() end
+
 
 
 ---@class FPropertyPathSegment
@@ -12,6 +15,9 @@ FCachedPropertyPath = {}
 ---@field ArrayIndex int32
 ---@field Struct UStruct
 FPropertyPathSegment = {}
+
+---@return FPropertyPathSegment
+function FPropertyPathSegment:get() end
 
 
 

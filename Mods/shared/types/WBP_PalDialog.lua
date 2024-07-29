@@ -14,6 +14,9 @@
 ---@field ShortcutConfirmInputAction FPalDataTableRowName_UIInputAction
 UWBP_PalDialog_C = {}
 
+---@return UWBP_PalDialog_C
+function UWBP_PalDialog_C:get() end
+
 function UWBP_PalDialog_C:OnShortcutConfirm() end
 ---@return UWidget
 function UWBP_PalDialog_C:BP_GetDesiredFocusTarget() end

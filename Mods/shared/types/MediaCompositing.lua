@@ -6,6 +6,9 @@
 ---@field bLoop boolean
 FMovieSceneMediaPlayerPropertySectionTemplate = {}
 
+---@return FMovieSceneMediaPlayerPropertySectionTemplate
+function FMovieSceneMediaPlayerPropertySectionTemplate:get() end
+
 
 
 ---@class FMovieSceneMediaSectionParams
@@ -19,11 +22,17 @@ FMovieSceneMediaPlayerPropertySectionTemplate = {}
 ---@field StartFrameOffset FFrameNumber
 FMovieSceneMediaSectionParams = {}
 
+---@return FMovieSceneMediaSectionParams
+function FMovieSceneMediaSectionParams:get() end
+
 
 
 ---@class FMovieSceneMediaSectionTemplate : FMovieSceneEvalTemplate
 ---@field Params FMovieSceneMediaSectionParams
 FMovieSceneMediaSectionTemplate = {}
+
+---@return FMovieSceneMediaSectionTemplate
+function FMovieSceneMediaSectionTemplate:get() end
 
 
 
@@ -32,10 +41,16 @@ FMovieSceneMediaSectionTemplate = {}
 ---@field bLoop boolean
 UMovieSceneMediaPlayerPropertySection = {}
 
+---@return UMovieSceneMediaPlayerPropertySection
+function UMovieSceneMediaPlayerPropertySection:get() end
+
 
 
 ---@class UMovieSceneMediaPlayerPropertyTrack : UMovieScenePropertyTrack
 UMovieSceneMediaPlayerPropertyTrack = {}
+
+---@return UMovieSceneMediaPlayerPropertyTrack
+function UMovieSceneMediaPlayerPropertyTrack:get() end
 
 
 ---@class UMovieSceneMediaSection : UMovieSceneSection
@@ -50,11 +65,17 @@ UMovieSceneMediaPlayerPropertyTrack = {}
 ---@field bHasMediaPlayerProxy boolean
 UMovieSceneMediaSection = {}
 
+---@return UMovieSceneMediaSection
+function UMovieSceneMediaSection:get() end
+
 
 
 ---@class UMovieSceneMediaTrack : UMovieSceneNameableTrack
 ---@field MediaSections TArray<UMovieSceneSection>
 UMovieSceneMediaTrack = {}
+
+---@return UMovieSceneMediaTrack
+function UMovieSceneMediaTrack:get() end
 
 
 

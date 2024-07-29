@@ -7,6 +7,9 @@
 ---@field WorkSpaceInfo UImage
 UWBP_InventoryEquipment_ItemInfo_Tecnology_C = {}
 
+---@return UWBP_InventoryEquipment_ItemInfo_Tecnology_C
+function UWBP_InventoryEquipment_ItemInfo_Tecnology_C:get() end
+
 ---@param StaticItemId FName
 ---@param WithStock boolean
 ---@param Stock int32

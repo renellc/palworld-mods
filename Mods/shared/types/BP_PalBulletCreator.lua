@@ -4,6 +4,9 @@
 ---@field ModifierMap TMap<EPalPassiveSkillEffectType, TSubclassOf<UPalBulletModifierComponent>>
 UBP_PalBulletCreator_C = {}
 
+---@return UBP_PalBulletCreator_C
+function UBP_PalBulletCreator_C:get() end
+
 ---@param WorldContextObject UObject
 ---@param Weapon APalWeaponBase
 ---@param BulletClass TSubclassOf<APalBullet>

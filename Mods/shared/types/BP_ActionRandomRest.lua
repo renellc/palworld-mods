@@ -9,6 +9,9 @@
 ---@field tempRand double
 UBP_ActionRandomRest_C = {}
 
+---@return UBP_ActionRandomRest_C
+function UBP_ActionRandomRest_C:get() end
+
 ---@return FPalRandomRestInfo
 function UBP_ActionRandomRest_C:GetRandomRestInfo() end
 ---@param NotifyName FName

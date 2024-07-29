@@ -6,6 +6,9 @@
 ---@field CallAIActionClass TSubclassOf<UBP_AIActionPairCallBase_C>
 UBP_ActionPairStandbyBase_C = {}
 
+---@return UBP_ActionPairStandbyBase_C
+function UBP_ActionPairStandbyBase_C:get() end
+
 ---@param IsValid boolean
 function UBP_ActionPairStandbyBase_C:IsValidTarget(IsValid) end
 ---@param CallAction UPalAIActionBase

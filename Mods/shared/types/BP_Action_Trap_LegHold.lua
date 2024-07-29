@@ -4,6 +4,9 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 UBP_Action_Trap_LegHold_C = {}
 
+---@return UBP_Action_Trap_LegHold_C
+function UBP_Action_Trap_LegHold_C:get() end
+
 ---@param Facial EPalFacialEyeType
 ---@param WalkSpeed double
 ---@param Disable boolean

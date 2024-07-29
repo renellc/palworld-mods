@@ -8,6 +8,9 @@
 ---@field ActionTimeLimit EPalIVisitorNPCAction
 ABP_NPCAIController_Visitor_C = {}
 
+---@return ABP_NPCAIController_Visitor_C
+function ABP_NPCAIController_Visitor_C:get() end
+
 ---@param TargetActor AActor
 function ABP_NPCAIController_Visitor_C:FindTargetPlayer(TargetActor) end
 function ABP_NPCAIController_Visitor_C:StartRaid() end

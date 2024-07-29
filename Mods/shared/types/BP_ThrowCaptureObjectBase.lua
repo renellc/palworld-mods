@@ -5,6 +5,9 @@
 ---@field CaptureLevel int32
 ABP_ThrowCaptureObjectBase_C = {}
 
+---@return ABP_ThrowCaptureObjectBase_C
+function ABP_ThrowCaptureObjectBase_C:get() end
+
 ---@param bodyClass TSubclassOf<ABP_PalCaptureBodyBase_C>
 function ABP_ThrowCaptureObjectBase_C:GetBodyClass(bodyClass) end
 ---@param Level int32

@@ -7,6 +7,9 @@
 ---@field MontageType EPalGeneralMontageType
 UBP_ActionDefenseWait_C = {}
 
+---@return UBP_ActionDefenseWait_C
+function UBP_ActionDefenseWait_C:get() end
+
 function UBP_ActionDefenseWait_C:SetupMontage() end
 function UBP_ActionDefenseWait_C:OnBeginAction() end
 function UBP_ActionDefenseWait_C:OnEndAction() end

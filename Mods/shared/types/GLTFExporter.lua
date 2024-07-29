@@ -6,6 +6,9 @@
 ---@field Errors TArray<FString>
 FGLTFExportMessages = {}
 
+---@return FGLTFExportMessages
+function FGLTFExportMessages:get() end
+
 
 
 ---@class FGLTFOverrideMaterialBakeSettings
@@ -17,10 +20,16 @@ FGLTFExportMessages = {}
 ---@field Tiling TextureAddress
 FGLTFOverrideMaterialBakeSettings = {}
 
+---@return FGLTFOverrideMaterialBakeSettings
+function FGLTFOverrideMaterialBakeSettings:get() end
+
 
 
 ---@class UGLTFAnimSequenceExporter : UGLTFExporter
 UGLTFAnimSequenceExporter = {}
+
+---@return UGLTFAnimSequenceExporter
+function UGLTFAnimSequenceExporter:get() end
 
 
 ---@class UGLTFExportOptions : UObject
@@ -63,11 +72,17 @@ UGLTFAnimSequenceExporter = {}
 ---@field bExportVisibilityVariants boolean
 UGLTFExportOptions = {}
 
+---@return UGLTFExportOptions
+function UGLTFExportOptions:get() end
+
 function UGLTFExportOptions:ResetToDefault() end
 
 
 ---@class UGLTFExporter : UExporter
 UGLTFExporter = {}
+
+---@return UGLTFExporter
+function UGLTFExporter:get() end
 
 ---@param Object UObject
 ---@param FilePath FString
@@ -81,13 +96,22 @@ function UGLTFExporter:ExportToGLTF(Object, FilePath, Options, SelectedActors, O
 ---@class UGLTFLevelExporter : UGLTFExporter
 UGLTFLevelExporter = {}
 
+---@return UGLTFLevelExporter
+function UGLTFLevelExporter:get() end
+
 
 ---@class UGLTFLevelSequenceExporter : UGLTFExporter
 UGLTFLevelSequenceExporter = {}
 
+---@return UGLTFLevelSequenceExporter
+function UGLTFLevelSequenceExporter:get() end
+
 
 ---@class UGLTFLevelVariantSetsExporter : UGLTFExporter
 UGLTFLevelVariantSetsExporter = {}
+
+---@return UGLTFLevelVariantSetsExporter
+function UGLTFLevelVariantSetsExporter:get() end
 
 
 ---@class UGLTFMaterialExportOptions : UAssetUserData
@@ -96,11 +120,17 @@ UGLTFLevelVariantSetsExporter = {}
 ---@field Inputs TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>
 UGLTFMaterialExportOptions = {}
 
+---@return UGLTFMaterialExportOptions
+function UGLTFMaterialExportOptions:get() end
+
 
 
 ---@class UGLTFMaterialExporter : UGLTFExporter
 ---@field DefaultPreviewMesh UStaticMesh
 UGLTFMaterialExporter = {}
+
+---@return UGLTFMaterialExporter
+function UGLTFMaterialExporter:get() end
 
 
 
@@ -112,14 +142,23 @@ UGLTFMaterialExporter = {}
 ---@field DefaultInputBakeSettings TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>
 UGLTFProxyOptions = {}
 
+---@return UGLTFProxyOptions
+function UGLTFProxyOptions:get() end
+
 function UGLTFProxyOptions:ResetToDefault() end
 
 
 ---@class UGLTFSkeletalMeshExporter : UGLTFExporter
 UGLTFSkeletalMeshExporter = {}
 
+---@return UGLTFSkeletalMeshExporter
+function UGLTFSkeletalMeshExporter:get() end
+
 
 ---@class UGLTFStaticMeshExporter : UGLTFExporter
 UGLTFStaticMeshExporter = {}
+
+---@return UGLTFStaticMeshExporter
+function UGLTFStaticMeshExporter:get() end
 
 

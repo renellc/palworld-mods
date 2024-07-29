@@ -3,6 +3,9 @@
 ---@class UAndroidFileServerBPLibrary : UBlueprintFunctionLibrary
 UAndroidFileServerBPLibrary = {}
 
+---@return UAndroidFileServerBPLibrary
+function UAndroidFileServerBPLibrary:get() end
+
 ---@param bUSB boolean
 ---@param bNetwork boolean
 ---@return boolean

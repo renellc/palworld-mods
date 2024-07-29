@@ -29,6 +29,9 @@
 ---@field IsTeleportFlag boolean
 UBP_ActionNooseTrap_C = {}
 
+---@return UBP_ActionNooseTrap_C
+function UBP_ActionNooseTrap_C:get() end
+
 ---@param DeadInfo FPalDeadInfo
 function UBP_ActionNooseTrap_C:OnDead(DeadInfo) end
 function UBP_ActionNooseTrap_C:ReturnDefaultFacial() end
