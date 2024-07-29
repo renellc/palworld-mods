@@ -49,4 +49,7 @@ luac.out
 Mods/CommunalGuildExp/Scripts/party.txt
 Mods/CommunalGuildExp/Scripts/known_players.txt
 
+enabled.txt
+Mods/SandboxMods/*
+
 *.code-workspace
