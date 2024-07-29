@@ -6,6 +6,7 @@ local PAL_UI_UTIL ---@class UPalUIUtility
 
 local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
+local UEHelpers = require("UEHelpers")
 
 local PAL_STORAGE_MAX_PAGES = 32
 local PAL_STORAGE_MAX_SLOTS_PER_PAGE = 30
@@ -85,7 +86,7 @@ end
 
 local PAL_CHAR_ID_TO_LOCALIZED_NAMES = {}
 
-local WORLD_CTX = nil ---@class UPalGetWorldUObject
+local WORLD_CTX = nil ---@class AActor
 local DB_CHAR_PARAM = nil
 
 RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, data)
@@ -94,12 +95,12 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		return
 	end
 
-
+	UTIL.log("Registered Chat message")
 	local is_successful, error = pcall(function()
 		if not WORLD_CTX then
-			WORLD_CTX = FindFirstOf("PalGetWorldUObject") ---@class UPalGetWorldUObject?
+			WORLD_CTX = UEHelpers.GetWorldContextObject() ---@class AActor?
 
-			if WORLD_CTX == nil then
+			if WORLD_CTX == nil or not WORLD_CTX:IsValid() then
 				UTIL.log("not found world ctx")
 				return
 			end
@@ -109,14 +110,15 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			
 			DB_CHAR_PARAM = PAL_UTIL:GetDatabaseCharacterParameter(WORLD_CTX)
 
-			if not DB_CHAR_PARAM:IsValid()  then
+			if DB_CHAR_PARAM == nil or not DB_CHAR_PARAM:IsValid()  then
 				UTIL.log("not found db")
+				return
 			end
 		end
 
 		local player_name = data:get().Sender:ToString()
 		local player = get_player_character(player_name)
-		if not player then
+		if player == nil or not player:IsValid() then
 			UTIL.log(string.format("Player %s does not exist", player_name))
 			return
 		end
@@ -130,13 +132,13 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		end
 
 		local player_state = PAL_UTIL:GetPlayerStateByPlayer(player)
-		if not player_state then
+		if player_state == nil or not player_state:IsValid() then
 			UTIL.log(string.format("Could not get player state for %s", data:get().Sender:ToString()))
 			return
 		end
 
 		local pal_storage = player_state:GetPalStorage()
-		if not pal_storage then
+		if pal_storage == nil or not pal_storage:IsValid() then
 			UTIL.log(string.format("Could not get pal storage for player %s", data:get().Sender:ToString()))
 			return
 		end
@@ -148,7 +150,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		local results = {}
 		for page, slot, pal_slot in pal_storage_ipairs(pal_storage) do
 			local pal = pal_slot:GetHandle():TryGetIndividualParameter()
-			if not pal then
+			if pal == nil or not pal:IsValid() then
 				UTIL.log(string.format("Could not get pal at page %d, slot %d for player %s", page, slot, player_name))
 				goto continue
 			end
