@@ -285,6 +285,6 @@ LoopAsync(1000, function()
 end)
 
 RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function()
-    print(_VERSION)
+    
 end)
 

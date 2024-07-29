@@ -1,6 +1,7 @@
 local MOD_NAME = "PalboxSearch"
 
 local PAL_UTIL ---@class UPalUtility
+
 local PAL_UI_UTIL ---@class UPalUIUtility
 
 local UTIL = require("palbox_search_util")
@@ -96,18 +97,21 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 
 	local is_successful, error = pcall(function()
 		if not WORLD_CTX then
-			UTIL.log("not found world ctx")
 			WORLD_CTX = FindFirstOf("PalGetWorldUObject") ---@class UPalGetWorldUObject?
 
 			if WORLD_CTX == nil then
-				UTIL.log("World context not found")
+				UTIL.log("not found world ctx")
 				return
 			end
 		end
 
-		if not DB_CHAR_PARAM then
-			UTIL.log("not found db")
+		if DB_CHAR_PARAM == nil then
+			
 			DB_CHAR_PARAM = PAL_UTIL:GetDatabaseCharacterParameter(WORLD_CTX)
+
+			if not DB_CHAR_PARAM:IsValid()  then
+				UTIL.log("not found db")
+			end
 		end
 
 		local player_name = data:get().Sender:ToString()
