@@ -47,6 +47,7 @@ local function get_player_character(player_name)
 	return nil
 end
 
+---@param pal_storage UPalPlayerDataPalStorage 
 local function pal_storage_ipairs(pal_storage)
 	local page_idx = 0
 	local slot_idx = 0
@@ -61,6 +62,7 @@ local function pal_storage_ipairs(pal_storage)
 			slot_idx = 0
 		end
 
+		-- TODO fix GetSlot not getting beyond first page
 		local curr_page_idx = page_idx
 		local curr_slot_idx = slot_idx
 		local pal_slot = pal_storage:GetSlot(curr_page_idx, curr_slot_idx)
@@ -95,7 +97,6 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		return
 	end
 
-	UTIL.log("Registered Chat message")
 	local is_successful, error = pcall(function()
 		if not WORLD_CTX then
 			WORLD_CTX = UEHelpers.GetWorldContextObject() ---@class AActor?
