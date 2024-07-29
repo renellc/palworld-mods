@@ -194,6 +194,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			table.insert(alert_message, string.format("%s Page %d Slot %d", result.name, result.page, result.slot))
 		end
 
+		local dialogues = FindAllOf("PalDialogParameterBase") ---@type UPalDialogParameterBase[]?
 		PAL_UTIL:Alert(WORLD_CTX, FText(table.concat(alert_message, "\n")))
 	end)
 
