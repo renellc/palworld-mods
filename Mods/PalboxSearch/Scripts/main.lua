@@ -1,5 +1,3 @@
-local MOD_NAME = "PalboxSearch"
-
 local PAL_UTIL ---@class UPalUtility
 
 local PAL_UI_UTIL ---@class UPalUIUtility
@@ -8,9 +6,6 @@ local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
 local UEHelpers = require("UEHelpers")
 local PalHelpers = require("PalHelpers")
-
-local PAL_STORAGE_MAX_PAGES = 32
-local PAL_STORAGE_MAX_SLOTS_PER_PAGE = 30
 
 local function init()
 	local pal_util_success, pal_util_ret_val = pcall(PalHelpers.GetPalUtility)
@@ -50,37 +45,6 @@ local function get_player_character(player_name)
 	end
 
 	return nil
-end
-
----@param pal_storage UPalPlayerDataPalStorage
-local function pal_storage_ipairs(pal_storage)
-	local page_idx = 0
-	local slot_idx = 0
-
-	local function iterator()
-		if page_idx == PAL_STORAGE_MAX_PAGES then
-			return nil
-		end
-
-		if slot_idx == PAL_STORAGE_MAX_SLOTS_PER_PAGE then
-			page_idx = page_idx + 1
-			slot_idx = 0
-		end
-
-		-- TODO fix GetSlot not getting beyond first page
-		local curr_page_idx = page_idx
-		local curr_slot_idx = slot_idx
-		local pal_slot = pal_storage:GetSlot(curr_page_idx, curr_slot_idx)
-		if pal_slot:IsEmpty() then
-			return nil
-		end
-
-		slot_idx = slot_idx + 1
-
-		return curr_page_idx + 1, curr_slot_idx + 1, pal_slot
-	end
-
-	return iterator
 end
 
 IS_INITIALIZED = init()
@@ -148,11 +112,21 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			return
 		end
 
+		local results = {}
+
+		-- This is treated as a set
+		local passives_filters = nil
+		if ret.passives ~= nil then
+			passives_filters = {}
+			for _, word in ipairs(UTIL.split(ret.passives, ",")) do
+				passives_filters[string.lower(word)] = true
+			end
+		end
+
 		-- TODO: This for loop causes the game to lag for a split second when a command is registered. I suspect that it
 		-- has to do with getting a Pal's handle and retrieving the localized name for a Pal. This should be
 		-- updated if there's a better way to retrieve this data, or if caching is possible without incurring too much of a
 		-- memory hit
-		local results = {}
 		for page, slot, pal_slot in PalHelpers.pal_storage_ipairs(pal_storage) do
 			local pal = pal_slot:GetHandle():TryGetIndividualParameter()
 			if pal == nil or not pal:IsValid() then
@@ -170,32 +144,46 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 					DB_CHAR_PARAM, pal_char_id))
 			end
 
-			if PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] ~= ret.pal then
-				goto continue
+			local found = false
+
+			if passives_filters ~= nil then
+				local passives = pal:GetPassiveSkillList()
+				for _, passive in ipairs(passives) do
+					local passive_name = string.lower(PalHelpers.GetPassiveSkillNameFromId(PAL_UI_UTIL, WORLD_CTX, passive:get()))
+					passive_name = table.concat(UTIL.split(passive_name, " "), "")
+
+					if passives_filters[passive_name] then
+						found = true
+						break
+					end
+				end
 			end
 
-			local passives = pal:GetPassiveSkillList()
-			local passive_skill_names = {}
-			for _, passive in ipairs(passives) do
-				-- TODO: filter out passives based on player input
-				table.insert(passive_skill_names,
-					string.lower(PalHelpers.GetPassiveSkillNameFromId(PAL_UI_UTIL, WORLD_CTX, passive:get())))
+			if ret.pal ~= nil then
+				if passives_filters ~= nil then
+					found = found and PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] == ret.pal
+				else
+					found = PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str] == ret.pal
+				end
 			end
 
-			table.insert(results, {
-				name = PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
-				page = page,
-				slot = slot
-			})
+			if found then
+				table.insert(results, {
+					name = PAL_CHAR_ID_TO_LOCALIZED_NAMES[pal_char_id_as_str],
+					page = page,
+					slot = slot
+				})
+			end
 
 			::continue::
 		end
 
 		local alert_message = {}
 		for _, result in ipairs(results) do
-			table.insert(alert_message,
-				string.format("%s - Page %d, Row %d Slot %d", result.name, result.page, math.ceil(result.slot / 6),
-					result.slot % 6))
+			local row = math.ceil(result.slot / 6)
+			local slot = ((result.slot - 1) % 6) + 1
+
+			table.insert(alert_message, string.format("%s - Page %d, Row %d Slot %d", result.name, result.page, row, slot))
 		end
 
 		local dialogues = FindAllOf("PalDialogParameterBase") ---@type UPalDialogParameterBase[]?
