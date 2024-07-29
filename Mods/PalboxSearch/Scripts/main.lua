@@ -193,7 +193,9 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 
 		local alert_message = {}
 		for _, result in ipairs(results) do
-			table.insert(alert_message, string.format("%s Page %d Slot %d", result.name, result.page, result.slot))
+			table.insert(alert_message,
+				string.format("%s - Page %d, Row %d Slot %d", result.name, result.page, math.ceil(result.slot / 6),
+					result.slot % 6))
 		end
 
 		local dialogues = FindAllOf("PalDialogParameterBase") ---@type UPalDialogParameterBase[]?
