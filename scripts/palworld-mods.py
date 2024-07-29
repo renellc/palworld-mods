@@ -73,12 +73,17 @@ if __name__ == "__main__":
         create_mod(args.create)
 
     if args.sync:
+        repo_mods_dir = Path(f"{curr_dir}/Mods")
+        repo_shared_dir = Path(f"{repo_mods_dir.resolve()}/shared")
+
         if "PALWORLD_CLIENT_DIR" in env:
             dir = env["PALWORLD_CLIENT_DIR"]
             client_dir = Path(f"{dir}/Pal/Binaries/Win64/Mods")
             for mod in client_dir.iterdir():
                 if mod.is_symlink():
                     mod.rmdir()
+            client_shared_dir = Path(f"{client_dir.resolve()}/shared")
+            client_shared_dir.symlink_to(repo_shared_dir.resolve())
 
         if "PALWORLD_SERVER_DIR" in env:
             dir = env["PALWORLD_SERVER_DIR"]
@@ -86,8 +91,8 @@ if __name__ == "__main__":
             for mod in server_dir.iterdir():
                 if mod.is_symlink():
                     mod.rmdir()
-
-        repo_mods_dir = Path(f"{curr_dir}/Mods")
+            server_shared_dir = Path(f"{server_dir.resolve()}/shared")
+            server_shared_dir.symlink_to(repo_shared_dir.resolve())
 
         for mod in repo_mods_dir.iterdir():
             enabled_txt = Path(f"{mod.resolve()}/enabled.txt")
@@ -105,22 +110,26 @@ if __name__ == "__main__":
                 if is_server_mod:
                     if "PALWORLD_SERVER_DIR" not in env:
                         print(
-                            f"Cannot sink {mod.name}. Palworld server directory not specified"
+                            f"Cannot sync {mod.name}. Palworld server directory not specified"
                         )
                         continue
                     server_dir = env["PALWORLD_SERVER_DIR"]
-                    symlink_dir = Path(f"{server_dir}/Pal/Binaries/Win64/Mods/{mod.name}")
+                    symlink_dir = Path(
+                        f"{server_dir}/Pal/Binaries/Win64/Mods/{mod.name}"
+                    )
                     symlink_dir.symlink_to(mod)
                     print(f"Synced {mod.name} to Palworld server directory")
                 else:
                     if "PALWORLD_CLIENT_DIR" not in env:
                         print(
-                            f"Cannot sink {mod.name}. Palworld client directory not specified"
+                            f"Cannot sync {mod.name}. Palworld client directory not specified"
                         )
                         continue
 
                     client_dir = env["PALWORLD_CLIENT_DIR"]
-                    symlink_dir = Path(f"{client_dir}/Pal/Binaries/Win64/Mods/{mod.name}")
+                    symlink_dir = Path(
+                        f"{client_dir}/Pal/Binaries/Win64/Mods/{mod.name}"
+                    )
                     symlink_dir.symlink_to(mod)
                     print(f"Synced {mod.name} to Palworld client directory")
                 f.close()
