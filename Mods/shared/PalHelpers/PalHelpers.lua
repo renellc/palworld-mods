@@ -38,17 +38,38 @@ function PalHelpers.pal_storage_ipairs(pal_storage)
             slot_idx = 0
         end
 
-        -- TODO fix GetSlot not getting beyond first page
+        -- In a user's Pal storage, there can be gaps between Pal storage slots. This means that the next slot in the
+        -- page might not necessarily mean there are no more Pals in the user's storage. Because of this, we must loop
+        -- through every slot in the user's storage to ensure we aren't missing any Pals that might've been placed
+        -- on a later page manually.
+        --
+        -- If there is a way to first sort a user's storage and ensure there are no gaps between storage slots, then
+        -- this should be refactored to loop through the storage until it reaches an empty slot.
         local curr_page_idx = page_idx
         local curr_slot_idx = slot_idx
-        local pal_slot = pal_storage:GetSlot(curr_page_idx, curr_slot_idx)
-        if pal_slot:IsEmpty() then
-            return nil
+
+        while curr_page_idx < PalHelpers["PAL_STORAGE_MAX_PAGES"] do
+            local pal_slot = pal_storage:GetSlot(curr_page_idx, curr_slot_idx)
+            if pal_slot:IsEmpty() then
+                curr_slot_idx = curr_slot_idx + 1
+
+                if curr_slot_idx == PalHelpers["PAL_STORAGE_MAX_SLOTS_PER_PAGE"] then
+                    curr_page_idx = curr_page_idx + 1
+                    curr_slot_idx = 0
+                    goto continue
+                end
+            else
+                page_idx = curr_page_idx
+                slot_idx = curr_slot_idx + 1
+
+                -- We add one to these to follow 1-based indexing in Lua
+                return curr_page_idx + 1, curr_slot_idx + 1, pal_slot
+            end
+
+            ::continue::
         end
 
-        slot_idx = slot_idx + 1
-
-        return curr_page_idx + 1, curr_slot_idx + 1, pal_slot
+        return nil
     end
 
     return iterator
