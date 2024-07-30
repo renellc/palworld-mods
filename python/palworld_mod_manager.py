@@ -1,25 +1,15 @@
+import os
+
 import click
 
 from pathlib import Path
 from typing import Dict, Union
 
+from dotenv import load_dotenv
+
 
 REPO_MODS_DIR = Path("../Mods")
 PALWORLD_MODS_DIR_PATH = "/Pal/Binaries/Win64/Mods"
-
-
-def read_env_file(env_file_path: str):
-    env_vars = dict()
-
-    with open(env_file_path) as f:
-        lines = f.readlines()
-        for line in lines:
-            key, value = line.split("=")
-            env_vars[key] = value
-
-        f.close()
-
-    return env_vars
 
 
 @click.command()
@@ -46,13 +36,8 @@ def main(create: str, sync: bool):
 
     if sync:
         try:
-            env = read_env_file("./.env")
-            client_dir = (
-                env["PALWORLD_CLIENT_DIR"] if "PALWORLD_CLIENT_DIR" in env else None
-            )
-            server_dir = (
-                env["PALWORLD_SERVER_DIR"] if "PALWORLD_SERVER_DIR" in env else None
-            )
+            client_dir = os.environ.get("PALWORLD_CLIENT_DIR")
+            server_dir = os.environ.get("PALWORLD_SERVER_DIR")
 
             synced_mods = sync_mods(client_dir, server_dir)
 
@@ -178,4 +163,5 @@ def sync_mods(
 
 
 if __name__ == "__main__":
+    load_dotenv()
     main()
