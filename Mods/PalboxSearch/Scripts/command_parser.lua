@@ -1,4 +1,4 @@
-local UTILS = require("palbox_search_util")
+local strutil = require("strutil")
 
 local CommandParser = {}
 
@@ -15,7 +15,7 @@ CommandParser.ArgumentName = {
 
 ---@param str string
 function CommandParser.parse(str)
-	local input = string.lower(UTILS.trim(str))
+	local input = string.lower(strutil.trim(str))
 
 	local input_parts = {}
 	for w in string.gmatch(input, "%S+") do

@@ -6,10 +6,11 @@ local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
 local UEHelpers = require("UEHelpers")
 local PalHelpers = require("PalHelpers")
+local strutil = require("strutil")
 
 local function init()
 	local _, pal_util_ret_val = pcall(PalHelpers.GetPalUtility)
-	if type(pal_util_ret_val)=="string" then
+	if type(pal_util_ret_val) == "string" then
 		UTIL.log(pal_util_ret_val)
 		return false
 	else
@@ -17,7 +18,7 @@ local function init()
 	end
 
 	local _, pal_ui_util_ret_val = pcall(PalHelpers.GetPalUIUtility)
-	if type(pal_ui_util_ret_val)=="string" then
+	if type(pal_ui_util_ret_val) == "string" then
 		UTIL.log(pal_ui_util_ret_val)
 		return false
 	else
@@ -118,7 +119,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		local passives_filters = nil
 		if ret.passives ~= nil then
 			passives_filters = {}
-			for _, word in ipairs(UTIL.split(ret.passives, ",")) do
+			for _, word in ipairs(strutil.split(ret.passives, ",")) do
 				passives_filters[string.lower(word)] = true
 			end
 		end
@@ -150,7 +151,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 				local passives = pal:GetPassiveSkillList()
 				for _, passive in ipairs(passives) do
 					local passive_name = string.lower(PalHelpers.GetPassiveSkillNameFromId(PAL_UI_UTIL, WORLD_CTX, passive:get()))
-					passive_name = table.concat(UTIL.split(passive_name, " "), "")
+					passive_name = table.concat(strutil.split(passive_name, " "), "")
 
 					if passives_filters[passive_name] then
 						found = true
