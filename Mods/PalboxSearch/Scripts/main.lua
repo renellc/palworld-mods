@@ -93,8 +93,19 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 			return
 		end
 
-		---@type string
-		local message = data:get().Message:ToString()
+		local message = ""
+		local EditableTextInstances = FindAllOf("EditableText") ---@class UEditableText[]
+		if not EditableTextInstances then
+			print("No EditableTextInstances were found")
+			return
+		else
+			for _, EditableText in pairs(EditableTextInstances) do
+				if string.match(EditableText:GetFullName(), "EditableText /Engine/Transient.GameEngine(.-)EditableText_ChatInput") then
+					message = EditableText:GetText():ToString()
+				end
+			end
+		end
+
 		local parse_success, ret = pcall(command_parser.parse, message)
 		if not parse_success then
 			UTIL.log("Error: " .. ret)
