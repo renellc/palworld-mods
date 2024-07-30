@@ -10,7 +10,7 @@ function PalHelpers.GetPalUtility()
     return pal_util
 end
 
----@return UPalUIUtility
+---@return UPalUIUtility | string
 function PalHelpers.GetPalUIUtility()
     pal_ui_util = StaticFindObject("/Script/Pal.Default__PalUIUtility") ---@class UPalUIUtility?
     if not pal_ui_util:IsValid() then

@@ -8,16 +8,16 @@ local UEHelpers = require("UEHelpers")
 local PalHelpers = require("PalHelpers")
 
 local function init()
-	local pal_util_success, pal_util_ret_val = pcall(PalHelpers.GetPalUtility)
-	if not pal_util_success then
+	local _, pal_util_ret_val = pcall(PalHelpers.GetPalUtility)
+	if type(pal_util_ret_val)=="string" then
 		UTIL.log(pal_util_ret_val)
 		return false
 	else
 		PAL_UTIL = pal_util_ret_val
 	end
 
-	local pal_ui_util_success, pal_ui_util_ret_val = pcall(PalHelpers.GetPalUIUtility)
-	if not pal_ui_util_success then
+	local _, pal_ui_util_ret_val = pcall(PalHelpers.GetPalUIUtility)
+	if type(pal_ui_util_ret_val)=="string" then
 		UTIL.log(pal_ui_util_ret_val)
 		return false
 	else
