@@ -19,7 +19,7 @@ if not EditableTextInstances then
 else
     for _, EditableText in pairs(EditableTextInstances) do
         if string.match(EditableText:GetFullName(), "EditableText /Engine/Transient.GameEngine(.-)EditableText_ChatInput") then
-            EditableTextInstance = EditableText -- EditableText:GetText():ToString()
+            EditableTextInstance = EditableText
         end
     end
 end
@@ -29,11 +29,13 @@ if EditableTextInstance == nil then
 end
 
 for k,v in pairs(Key) do
-    RegisterKeyBind(v, function()
-        if chat_open then
-            current_message = EditableTextInstance:GetText():ToString()
-        end
-    end)
+    if not (tostring(k) == "RETURN") then
+        RegisterKeyBind(v, function()
+            if chat_open then
+                current_message = EditableTextInstance:GetText():ToString()
+            end
+        end)
+    end
 end
 
 RegisterHook("/Game/Pal/Blueprint/UI/UserInterface/InGame/Chat/WBP_Ingame_Chat.WBP_Ingame_Chat_C:ShowChatInputUI", function()
@@ -42,7 +44,7 @@ end)
 
 RegisterHook("/Game/Pal/Blueprint/UI/UserInterface/InGame/Chat/WBP_Ingame_Chat.WBP_Ingame_Chat_C:HideChatInputUI", function()
     if onCloseChatCallback and chat_open then
-        onCloseChatCallback()
+        onCloseChatCallback(current_message)
     end
     chat_open = false
 end)
