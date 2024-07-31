@@ -4,6 +4,7 @@ local ChatMessageGetter = {}
 local onCloseChatCallback = nil
 
 -- Function to set the callback
+---@param callback function
 function ChatMessageGetter.SetMessageCallback(callback)
     onCloseChatCallback = callback
 end
