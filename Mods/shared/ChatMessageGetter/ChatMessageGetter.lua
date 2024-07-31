@@ -19,7 +19,7 @@ if not EditableTextInstances then
 else
     for _, EditableText in pairs(EditableTextInstances) do
         if string.match(EditableText:GetFullName(), "EditableText /Engine/Transient.GameEngine(.-)EditableText_ChatInput") then
-            EditableTextInstance = EditableTextInstance -- EditableText:GetText():ToString()
+            EditableTextInstance = EditableText -- EditableText:GetText():ToString()
         end
     end
 end
