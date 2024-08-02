@@ -94,4 +94,57 @@ function PalHelpers.GetPassiveSkillNameFromId(pal_ui_utility, world_ctx, passive
     return out["outName"]:ToString()
 end
 
+--- Gets the appropriate functions for controlling Alert Dialogs. This function is meant for use only on a client
+--- instance. Running this on a server instance might result in unexpected behavior.
+---
+--- Example:
+---
+--- ```lua
+--- local UEHelpers = require("UEHelpers")
+--- local PalHelpers = require("PalHelpers")
+---
+--- local world_ctx = UEHelpers.GetWorldContextObject()
+--- local pal_util = PalHelpers.GetPalUtility()
+---
+--- ShowAlert, CloseAlert = PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
+---
+--- RegisterKeyBind(Key.I, { ModifierKey.CONTROL }, function()
+--- 	ShowAlert("My Alert Message!")
+--- end)
+---
+--- RegisterKeyBind(Key.U, { ModifierKey.CONTROL }, function()
+--- 	CloseAlert()
+--- end)
+---
+--- ```
+---@param world_ctx AActor
+---@param pal_util UPalUtility
+---@return fun(message: string) ShowAlert , fun() CloseAlert
+function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
+    local alert_dialog_widget = nil ---@type UWBP_PalDialog_C|nil
+
+    ---@param message string
+    local function show_alert(message)
+        if alert_dialog_widget == nil then
+            pal_util:Alert(world_ctx, FText(message))
+
+            local target_widget = FindFirstOf("WBP_PalDialog_C") ---@class UWBP_PalDialog_C?
+            if target_widget ~= nil and target_widget:IsValid() then
+                alert_dialog_widget = target_widget
+            end
+        end
+    end
+
+    local function close_alert()
+        if alert_dialog_widget == nil then
+            return
+        end
+
+        alert_dialog_widget:Close()
+        alert_dialog_widget = nil
+    end
+
+    return show_alert, close_alert
+end
+
 return PalHelpers
