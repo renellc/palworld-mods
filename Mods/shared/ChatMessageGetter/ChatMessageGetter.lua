@@ -1,12 +1,17 @@
 local ChatMessageGetter = {}
 
 -- Define a callback variable
-local onCloseChatCallback = nil
+local onCloseChatCallback = {} ---@type function[]
 
 -- Function to set the callback
 ---@param callback function
-function ChatMessageGetter.SetMessageCallback(callback)
-    onCloseChatCallback = callback
+function ChatMessageGetter.AddMessageCallback(callback)
+    table.insert(onCloseChatCallback, callback)
+end
+
+---@param callback function | string
+function ChatMessageGetter.RemoveMessageCallback(callback)
+    --TODO: Implemnt function to remove callbacks
 end
 
 local chat_open = false
@@ -44,8 +49,10 @@ RegisterHook("/Game/Pal/Blueprint/UI/UserInterface/InGame/Chat/WBP_Ingame_Chat.W
 end)
 
 RegisterHook("/Game/Pal/Blueprint/UI/UserInterface/InGame/Chat/WBP_Ingame_Chat.WBP_Ingame_Chat_C:HideChatInputUI", function()
-    if onCloseChatCallback and chat_open then
-        onCloseChatCallback(current_message)
+    if chat_open then
+        for _, callback in pairs(onCloseChatCallback or {}) do
+            callback(current_message)
+        end
     end
     chat_open = false
 end)
