@@ -384,8 +384,9 @@ function ForEachUObject(Callback) end
 ---Executes the provided Lua function whenever an instance of the provided class is constructed.
 ---Inheritance is taken into account, so if you provide "/Script/Engine.Actor" as the class then it will execute your
 ---Lua function when any object is constructed that's either an AActor or is derived from AActor.
+---The callback can return true to remove (unregister) that specific NotifyOnNewObject callback.
 ---@param UClassName string
----@param Callback fun()
+---@param Callback fun(object: UObject): boolean?
 function NotifyOnNewObject(UClassName, Callback) end
 
 ---Registers a callback that will get called when a BP function/event is called with the name 'EventName'.
