@@ -94,4 +94,61 @@ function PalHelpers.GetPassiveSkillNameFromId(pal_ui_utility, world_ctx, passive
     return out["outName"]:ToString()
 end
 
+--- Gets the appropriate functions for controlling Alert Dialogs. This function is meant for use only on a client
+--- instance. Running this on a server instance might result in unexpected behavior.
+---
+--- Example:
+---
+--- ```lua
+--- local UEHelpers = require("UEHelpers")
+--- local PalHelpers = require("PalHelpers")
+---
+--- local world_ctx = UEHelpers.GetWorldContextObject()
+--- local pal_util = PalHelpers.GetPalUtility()
+---
+--- ShowAlert, CloseAlert = PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
+---
+--- RegisterKeyBind(Key.I, { ModifierKey.CONTROL }, function()
+--- 	ShowAlert("My Alert Message!")
+--- end)
+---
+--- RegisterKeyBind(Key.U, { ModifierKey.CONTROL }, function()
+--- 	CloseAlert()
+--- end)
+---
+--- ```
+---@param world_ctx AActor
+---@param pal_util UPalUtility
+---@return fun(message: string) ShowAlert , fun() CloseAlert
+function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
+    local alert_dialog_widget = nil ---@type UWBP_PalDialog_C|nil
+
+    ---@param message string
+    local function show_alert(message)
+        if alert_dialog_widget == nil then -- Find alert widget
+            local pre_id, post_id
+            pre_id, post_id = RegisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup", function(target_dialog_widget) ---@param target_dialog_widget UWBP_PalDialog_C
+                alert_dialog_widget = target_dialog_widget:get()
+                alert_dialog_widget:SetupUI(alert_dialog_widget.Parameter.DialogType, FText(message))
+                UnregisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup", pre_id, post_id)
+            end)
+            pal_util:Alert(world_ctx, FText(""))
+        else
+            if not alert_dialog_widget:IsActivated() then
+                alert_dialog_widget:Push(alert_dialog_widget:GetClass(), alert_dialog_widget:GetParam())
+            end
+            alert_dialog_widget:SetupUI(alert_dialog_widget.Parameter.DialogType, FText(message))
+        end
+    end
+
+    local function close_alert()
+        if alert_dialog_widget == nil then
+            return
+        end
+        alert_dialog_widget:Close()
+    end
+
+    return show_alert, close_alert
+end
+
 return PalHelpers
