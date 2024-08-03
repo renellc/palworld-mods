@@ -125,13 +125,19 @@ function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
 
     ---@param message string
     local function show_alert(message)
-        if alert_dialog_widget == nil then
-            pal_util:Alert(world_ctx, FText(message))
-
-            local target_widget = FindFirstOf("WBP_PalDialog_C") ---@class UWBP_PalDialog_C?
-            if target_widget ~= nil and target_widget:IsValid() then
-                alert_dialog_widget = target_widget
+        if alert_dialog_widget == nil then -- Find alert widget
+            local pre_id, post_id
+            pre_id, post_id = RegisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup", function(target_dialog_widget) ---@param target_dialog_widget UWBP_PalDialog_C
+                alert_dialog_widget = target_dialog_widget:get()
+                alert_dialog_widget:SetupUI(alert_dialog_widget.Parameter.DialogType, FText(message))
+                UnregisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup", pre_id, post_id)
+            end)
+            pal_util:Alert(world_ctx, FText(""))
+        else
+            if not alert_dialog_widget:IsActivated() then
+                alert_dialog_widget:Push(alert_dialog_widget:GetClass(), alert_dialog_widget:GetParam())
             end
+            alert_dialog_widget:SetupUI(alert_dialog_widget.Parameter.DialogType, FText(message))
         end
     end
 
@@ -139,9 +145,7 @@ function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
         if alert_dialog_widget == nil then
             return
         end
-
         alert_dialog_widget:Close()
-        alert_dialog_widget = nil
     end
 
     return show_alert, close_alert
