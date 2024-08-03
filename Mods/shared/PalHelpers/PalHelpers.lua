@@ -151,4 +151,58 @@ function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
     return show_alert, close_alert
 end
 
+--- Safely initializes code given if the mod is running on a server or a client
+--- 
+--- Example:
+--- 
+--- ```Lua
+--- local PalHelpers = require("PalHelpers")
+--- 
+--- ---@return boolean?
+--- local function module_initializer()
+---     -- Initialize module
+---     return true
+--- end
+--- 
+--- PalHelpers.SafeInitialize(module_initializer, 'server' | 'client')
+--- 
+--- ```
+---@param initializer fun(): boolean?
+---@param platform_context 'server' | 'client'
+---@return boolean?
+function PalHelpers.SafeInitialize(initializer, platform_context)
+    local success_flag
+
+    if platform_context == 'server' then
+        if #(FindAllOf("PalPlayerController") or {}) ~= 0 then
+            success_flag = initializer()
+        else
+            local pre_id, post_id
+            pre_id, post_id = RegisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", function()
+                success_flag = initializer()
+                UnregisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", pre_id, post_id)
+            end)
+        end
+
+    elseif platform_context == 'client' then
+        if #(FindAllOf("PlayerController") or {}) ~= 0 then
+            print("Player controller found! Initializing")
+            success_flag = initializer()
+        else
+            print("No player controller found. Waiting for one to appear")
+            local hooked = false
+            NotifyOnNewObject("/Script/Engine.PlayerController", function()
+                if not hooked then
+                    print("-----------------A new player controller has appeared!")
+                    success_flag = initializer()
+                    hooked = true
+                end
+            end)
+        end
+    else
+        error("Platform context not given as client or server but as '" .. tostring(platform_context) .. "'")
+    end
+    return success_flag
+end
+
 return PalHelpers
