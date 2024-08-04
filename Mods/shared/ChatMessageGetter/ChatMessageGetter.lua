@@ -4,12 +4,12 @@ local ChatMessageGetter = {}
 local onCloseChatCallback = {} ---@type function[]
 
 -- Function to set the callback
----@param callback function
+---@param callback fun(message: string)
 function ChatMessageGetter.AddMessageCallback(callback)
     table.insert(onCloseChatCallback, callback)
 end
 
----@param callback function | string
+---@param callback fun(message: string) | string
 function ChatMessageGetter.RemoveMessageCallback(callback)
     --TODO: Implemnt function to remove callbacks
 end
@@ -34,9 +34,9 @@ if EditableTextInstance == nil then
     return
 end
 
-for k,v in pairs(Key) do
-    if not (tostring(k) == "RETURN") then
-        RegisterKeyBind(v, function()
+for key_name, key_value in pairs(Key) do
+    if (tostring(key_name) ~= "RETURN") and not (IsKeyBindRegistered(key_value)) then
+        RegisterKeyBind(key_value, function()
             if chat_open then
                 current_message = EditableTextInstance:GetText():ToString()
             end
