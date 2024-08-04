@@ -192,8 +192,6 @@ end
 ---@param initializer fun()
 ---@param platform_context 'server' | 'client'
 function PalHelpers.SafeInitialize(initializer, platform_context)
-    local success_flag
-
     if platform_context == 'server' then
         if #(FindAllOf("PalPlayerController") or {}) ~= 0 then
             initializer()
@@ -214,7 +212,7 @@ function PalHelpers.SafeInitialize(initializer, platform_context)
             end
         end
         LoopAsync(1000, function()
-            local PalPlayerControllers = FindAllOf("PalPlayerController") ---@type APalPlayerController[]?
+            PalPlayerControllers = FindAllOf("PalPlayerController") ---@type APalPlayerController[]?
             for _, PalPlayerController in pairs(PalPlayerControllers or {}) do
                 if PalPlayerController.Pawn:IsValid() and PalPlayerController.Pawn:IsPlayerControlled() then
                     initializer()
