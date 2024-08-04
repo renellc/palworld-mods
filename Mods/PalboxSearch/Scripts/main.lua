@@ -28,26 +28,6 @@ local function init()
 	return true
 end
 
-local function get_player_character(player_name)
-	local players = FindAllOf("PalPlayerCharacter") ---@type APalPlayerCharacter[]?
-	if not players then
-		error("Could not retrieve full list of players")
-	end
-
-	for _, player in pairs(players or {}) do
-		-- TODO: Accessing the player's name like this might be unsafe and might cause the game to dereference a null
-		-- pointer. This should be changed if there is another way to access this data.
-		local params = player.CharacterParameterComponent.IndividualParameter.SaveParameter
-		local curr_player_name = params.NickName:ToString()
-
-		if player_name == curr_player_name then
-			return player
-		end
-	end
-
-	return nil
-end
-
 IS_INITIALIZED = init()
 
 if IS_INITIALIZED then
@@ -87,7 +67,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		end
 
 		local player_name = data:get().Sender:ToString()
-		local player = get_player_character(player_name)
+		local player = PalHelpers.GetPlayerCharacterByNickName(player_name)
 		if player == nil or not player:IsValid() then
 			UTIL.log(string.format("Player %s does not exist", player_name))
 			return

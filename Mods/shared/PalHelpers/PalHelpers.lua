@@ -151,4 +151,29 @@ function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
     return show_alert, close_alert
 end
 
+
+--- Gets the PalPlayerCharacter by the player's nick name. If the player is not found then nil is returned
+--- 
+---@param player_nick_name string
+---@return APalPlayerCharacter?
+function PalHelpers.GetPlayerCharacterByNickName(player_nick_name)
+	local players = FindAllOf("PalPlayerCharacter") ---@type APalPlayerCharacter[]?
+	if not players then
+		error("Could not retrieve full list of players")
+	end
+
+	for _, player in pairs(players or {}) do
+		-- TODO: Accessing the player's name like this might be unsafe and might cause the game to dereference a null
+		-- pointer. This should be changed if there is another way to access this data.
+		local params = player.CharacterParameterComponent.IndividualParameter.SaveParameter
+		local curr_player_name = params.NickName:ToString()
+
+		if player_nick_name == curr_player_name then
+			return player
+		end
+	end
+
+	return nil
+end
+
 return PalHelpers
