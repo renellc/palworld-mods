@@ -28,3 +28,37 @@ Python 3.10+ and Poetry installed before running the following commands.
 2. Run `poetry install` to make sure all Python dependencies are installed
 3. Run `poetry run palworld_mod_manager.py -s` to sync the mods from this repo into your Palworld directories.
 
+## Code Style Conventions
+
+### Variables
+
+Variables are written in `snake_case`. If the variable is a global variable, then it is written in `SHOUTING_SNAKE_CASE`.
+
+### Functions
+
+Functions are written in `snake_case`.
+
+### Classes
+
+Classes are written in `PascalCase`. Variables within the class are written in `snake_case`. You can define a class by
+doing the following:
+
+```lua
+---@class MyClass
+---@field field_a string
+---@field field_b number
+local MyClass = {}
+
+function MyClass.new()
+    local self = {
+        field_a = "Field A",
+        field_b = 42,
+    }
+    setmetatable(self, { __index = MyClass })
+    return self
+end
+
+function MyClass:some_method()
+    -- method here...
+end
+```
