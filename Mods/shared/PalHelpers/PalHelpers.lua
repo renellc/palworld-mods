@@ -151,7 +151,6 @@ function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
     return show_alert, close_alert
 end
 
-
 --- Gets the PalPlayerCharacter by the player's nick name. If the player is not found then nil is returned
 --- 
 ---@param player_nick_name string
@@ -174,6 +173,57 @@ function PalHelpers.GetPlayerCharacterByNickName(player_nick_name)
 	end
 
 	return nil
+end
+
+--- Safely initializes code given if the mod is running on a server or a client
+--- 
+--- Example:
+--- 
+--- ```Lua
+--- local PalHelpers = require("PalHelpers")
+--- 
+--- local function module_initializer()
+---     -- Initialize module
+--- end
+--- 
+--- PalHelpers.SafeInitialize(module_initializer, 'server' | 'client')
+--- 
+--- ```
+---@param initializer fun()
+---@param platform_context 'server' | 'client'
+function PalHelpers.SafeInitialize(initializer, platform_context)
+    if platform_context == 'server' then
+        if #(FindAllOf("PalPlayerController") or {}) ~= 0 then
+            initializer()
+        else
+            local pre_id, post_id
+            pre_id, post_id = RegisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", function()
+                initializer()
+                UnregisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", pre_id, post_id)
+            end)
+        end
+
+    elseif platform_context == 'client' then
+        local PalPlayerControllers = FindAllOf("PalPlayerController") ---@type APalPlayerController[]?
+        for _, PalPlayerController in pairs(PalPlayerControllers or {}) do
+            if PalPlayerController.Pawn:IsValid() and PalPlayerController.Pawn:IsPlayerControlled() then
+                initializer()
+                return
+            end
+        end
+        LoopAsync(1000, function()
+            PalPlayerControllers = FindAllOf("PalPlayerController") ---@type APalPlayerController[]?
+            for _, PalPlayerController in pairs(PalPlayerControllers or {}) do
+                if PalPlayerController.Pawn:IsValid() and PalPlayerController.Pawn:IsPlayerControlled() then
+                    initializer()
+                    return true
+                end
+            end
+            return false -- keep looping
+        end)
+    else
+        error("Platform context not given as 'client' or 'server' but as '" .. tostring(platform_context) .. "'")
+    end
 end
 
 return PalHelpers
