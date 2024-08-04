@@ -62,3 +62,7 @@ function MyClass:some_method()
     -- method here...
 end
 ```
+
+### Filenames
+
+File names are written as one word in all lowercase. Example: `mymodule.lua`
