@@ -76,6 +76,10 @@ function PalStorageFilterer:add_filter(filter_fn)
     table.insert(self.filters, filter_fn)
 end
 
+function PalStorageFilterer:clear_filters()
+    self.filters = {}
+end
+
 ---@class PalStorageFilterResultItem
 ---@field pal_slot UPalIndividualCharacterSlot
 ---@field page integer
