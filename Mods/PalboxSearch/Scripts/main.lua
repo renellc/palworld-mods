@@ -6,6 +6,7 @@ local UTIL = require("palbox_search_util")
 local command_parser = require("command_parser")
 local UEHelpers = require("UEHelpers")
 local PalHelpers = require("PalHelpers")
+local palstorage = require("PalHelpers.palstorage")
 local strutil = require("strutil")
 
 local function init()
@@ -119,7 +120,7 @@ RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(_, 
 		-- has to do with getting a Pal's handle and retrieving the localized name for a Pal. This should be
 		-- updated if there's a better way to retrieve this data, or if caching is possible without incurring too much of a
 		-- memory hit
-		for page, slot, pal_slot in PalHelpers.pal_storage_ipairs(pal_storage) do
+		for page, slot, pal_slot in palstorage.pal_storage_ipairs(pal_storage) do
 			local pal = pal_slot:GetHandle():TryGetIndividualParameter()
 			if pal == nil or not pal:IsValid() then
 				UTIL.log(string.format("Could not get pal at page %d, slot %d for player %s", page, slot, player_name))
