@@ -59,7 +59,7 @@ end
 local PalStorageFilterer = {}
 
 ---@param pal_storage UPalPlayerDataPalStorage
-function PalStorageFilterer.from_pal_player_data_pal_storage(pal_storage)
+function PalStorageFilterer.new(pal_storage)
     ---@type PalStorageFilterer
     local self = {
         pal_storage = pal_storage,
