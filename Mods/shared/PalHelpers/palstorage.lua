@@ -1,8 +1,10 @@
+local palstorage = {}
+
 local PAL_STORAGE_MAX_PAGES = 32
 local PAL_STORAGE_MAX_SLOTS_PER_PAGE = 30
 
 ---@param pal_storage UPalPlayerDataPalStorage
-local function pal_storage_ipairs(pal_storage)
+function palstorage.pal_storage_ipairs(pal_storage)
     local page_idx = 0
     local slot_idx = 0
 
@@ -86,29 +88,32 @@ end
 ---@field slot integer
 local PalStorageFilterResultItem = {}
 
----@return PalStorageFilterResultItem
+---@return PalStorageFilterResultItem[]
 function PalStorageFilterer:filter()
     local filtered_pals = {} ---@type PalStorageFilterResultItem[]
 
-    for page, slot, pal_slot in pal_storage_ipairs(self.pal_storage) do
-        for _, filter_fn in ipairs(self.filters) do
-            if filter_fn(pal_slot) then
-                ---@type PalStorageFilterResultItem
-                local result = {
-                    pal_slot = pal_slot,
-                    page = page,
-                    slot = slot,
-                }
+    for page, slot, pal_slot in palstorage.pal_storage_ipairs(self.pal_storage) do
+        local found = false
 
-                table.insert(filtered_pals, result)
-            end
+        for _, filter_fn in ipairs(self.filters) do
+            found = filter_fn(pal_slot)
+        end
+
+        if found then
+            ---@type PalStorageFilterResultItem
+            local result = {
+                pal_slot = pal_slot,
+                page = page,
+                slot = slot,
+            }
+
+            table.insert(filtered_pals, result)
         end
     end
 
     return filtered_pals
 end
 
-return {
-    PalStorageFilterer,
-    pal_storage_ipairs,
-}
+palstorage.PalStorageFilterer = PalStorageFilterer
+
+return palstorage
