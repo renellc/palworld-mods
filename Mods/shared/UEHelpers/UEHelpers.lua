@@ -35,11 +35,10 @@ function UEHelpers.GetPlayerController()
     if PlayerController and PlayerController:IsValid() then return PlayerController end
     -- local PlayerControllers = jsb.simpleBench("findallof", FindAllOf, "Controller")
     -- Uncomment line above and comment line below to profile this function
-    local DefaultController = StaticFindObject("/Script/Engine.Default__Controller")
     local PlayerControllers = FindAllOf("PlayerController") or FindAllOf("Controller")
     if not PlayerControllers then error("No PlayerControllers found\n") end
     for _, Controller in pairs(PlayerControllers or {}) do
-        if Controller:GetClass():IsChildOf(DefaultController:GetClass()) then
+        if Controller.Pawn:IsValid() and Controller.Pawn:IsPlayerControlled() then
             PlayerController = Controller
             break
             -- else
