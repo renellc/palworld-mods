@@ -66,19 +66,28 @@ end
 ---@param pal_util UPalUtility
 ---@return fun(message: string) ShowAlert , fun() CloseAlert
 function PalHelpers.GetAlertDialogControls(world_ctx, pal_util)
-    local alert_dialog_widget = nil ---@type UWBP_PalDialog_C|nil
+    local alert_dialog_widget = nil ---@type UWBP_PalDialog_C
 
     ---@param message string
     local function show_alert(message)
         if alert_dialog_widget == nil then -- Find alert widget
-            local pre_id, post_id
-            pre_id, post_id = RegisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup",
-                function(target_dialog_widget) ---@param target_dialog_widget UWBP_PalDialog_C
-                    alert_dialog_widget = target_dialog_widget:get()
-                    alert_dialog_widget:SetupUI(alert_dialog_widget.Parameter.DialogType, FText(message))
-                    UnregisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup", pre_id, post_id)
-                end)
-            pal_util:Alert(world_ctx, FText(""))
+            alert_dialog_widget = FindObject("WBP_PalDialog_C", nil, EObjectFlags.RF_Transactional, EObjectFlags.RF_Public) ---@class UWBP_PalDialog_C
+            print(alert_dialog_widget:GetFullName())
+            if not alert_dialog_widget:IsValid() then
+                local pre_id, post_id
+                pre_id, post_id = RegisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup",
+                    function(target_dialog_widget) ---@param target_dialog_widget UWBP_PalDialog_C
+                        alert_dialog_widget = target_dialog_widget:get()
+                        alert_dialog_widget:SetupUI(alert_dialog_widget.Parameter.DialogType, FText(message))
+                        UnregisterHook("/Game/Pal/Blueprint/UI/Dialog/WBP_PalDialog.WBP_PalDialog_C:OnSetup", pre_id, post_id)
+                    end)
+                pal_util:Alert(world_ctx, FText(""))
+            else
+                if not alert_dialog_widget:IsActivated() then
+                    alert_dialog_widget:Push(alert_dialog_widget:GetClass(), alert_dialog_widget:GetParam())
+                end
+                alert_dialog_widget:SetupUI(alert_dialog_widget.Parameter.DialogType, FText(message))
+            end
         else
             if not alert_dialog_widget:IsActivated() then
                 alert_dialog_widget:Push(alert_dialog_widget:GetClass(), alert_dialog_widget:GetParam())
